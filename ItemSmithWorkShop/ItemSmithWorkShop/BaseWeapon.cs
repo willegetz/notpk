@@ -141,20 +141,39 @@ namespace ItemSmith
 
 //	Weapon - This is my base class
 //		Name
-	class Name
+	public class Weapon
 	{
 		public string weaponName;
 
-		public Name(string name)
+		public PreRequisites preRequisite;
+		public Cost cost;
+
+		public Weapon(string name)
 		{
 			weaponName = name;
+		}
+
+		public string DisplayWeaponName()
+		{
+			return String.Format("Weapon Name:\t{0}", weaponName);
+		}
+
+		public override string ToString()
+		{
+			string name = this.DisplayWeaponName();
+			string requisites = preRequisite.DisplayPreRequisites();
+			string weaponCost = cost.DisplayWeaponCost();
+
+			// exception is being thrown when testing. :(
+
+			return String.Format("{0}\r{1}\r{2}", name, requisites, weaponCost);
 		}
 	}
 //		Pre-requisites
 //			Proficiency
 //			Category
 //			Attack Type
-	class PreRequisites
+	public class PreRequisites
 	{
 		public string weaponProficiency;
 		public string weaponCategory;
@@ -167,12 +186,21 @@ namespace ItemSmith
 			attackType = type;
 		}
 
+		public string DisplayPreRequisites()
+		{
+			return String.Format("Weapon Proficiency:\t{0}\rWeapon Category:\t{1}\rWeapon Attack Type:\t{2}", weaponProficiency, weaponCategory, attackType); 
+		}
+
+		public override string ToString()
+		{
+			return String.Format("Weapon Proficiency:\t{0}\rWeapon Category:\t{1}\rWeapon Attack Type:\t{2}", weaponProficiency, weaponCategory, attackType); 
+		}
 		// Display the proficiency
 	}
 //		Cost
 //			Base Cost
 //			Currency Type
-	class Cost
+	public class Cost
 	{
 		public int weaponCost;
 		public string currencyType;
@@ -183,6 +211,15 @@ namespace ItemSmith
 			currencyType = currency;
 		}
 
+		public string DisplayWeaponCost()
+		{
+			return String.Format("Weapon Cost:\t{0} {1}", weaponCost.ToString(), currencyType);
+		}
+
+		public override string ToString()
+		{
+			return String.Format("Weapon Cost:\t{0} {1}", weaponCost.ToString(), currencyType);
+		}
 		// Operate on the cost
 		// Display the cost and currency
 	}
@@ -191,7 +228,7 @@ namespace ItemSmith
 //			Threat Range
 //			Critical Multiplier
 //			Damage Type
-	class Damage
+	public class Damage
 	{
 		public string baseDamage;
 		public string threatRange;
@@ -211,7 +248,7 @@ namespace ItemSmith
 //		Weight
 //			Hardness
 //			Hit Points
-	class Weight
+	public class Weight
 	{
 		public int hardness;
 		public int hitPoints;
@@ -224,7 +261,7 @@ namespace ItemSmith
 	}
 //		Material Type
 //			Cost adjustment
-	class MaterialType
+	public class MaterialType
 	{
 		public string materialType;
 		public int costAdjustment;

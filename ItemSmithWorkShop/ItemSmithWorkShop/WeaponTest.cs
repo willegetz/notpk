@@ -247,5 +247,31 @@ namespace ItemSmith
 
 			Approvals.Approve(baseWeapon);
 		}
+
+		[TestMethod]
+		public void TestDisplayPreRequisites()
+		{	
+			PreRequisites preRequisite = new PreRequisites("Simple", "Light", "Melee");
+
+			Approvals.Approve(preRequisite);
+		}
+
+		[TestMethod]
+		public void TestDisplayCost()
+		{
+			Cost cost = new Cost(2, "gold pieces");
+
+			Approvals.Approve(cost);
+		}
+
+		[TestMethod]
+		public void TestDisplayPreRequisiteAndCost()
+		{
+			PreRequisites preRequisite = new PreRequisites("Simple", "Light", "Melee");
+			Cost cost = new Cost(2, "gold pieces");
+			Weapon weapon = new Weapon("Dagger");
+
+			Approvals.Approve(weapon);
+		}
 	}
 }
