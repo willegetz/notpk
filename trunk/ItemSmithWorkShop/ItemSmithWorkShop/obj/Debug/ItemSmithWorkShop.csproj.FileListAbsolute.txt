@@ -10,3 +10,8 @@ C:\Users\William\Documents\Visual Studio 2010\GameRelated\ItemSmithWorkShop\Item
 C:\Users\William\Documents\Visual Studio 2010\GameRelated\ItemSmithWorkShop\ItemSmithWorkShop\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\William\Documents\Visual Studio 2010\GameRelated\ItemSmithWorkShop\ItemSmithWorkShop\obj\Debug\ItemSmithWorkShop.dll
 C:\Users\William\Documents\Visual Studio 2010\GameRelated\ItemSmithWorkShop\ItemSmithWorkShop\obj\Debug\ItemSmithWorkShop.pdb
+C:\Documents and Settings\wgetz\Experiments\ItemSmithWorkShop\ItemSmithWorkShop\bin\Debug\ItemSmithWorkShop.dll
+C:\Documents and Settings\wgetz\Experiments\ItemSmithWorkShop\ItemSmithWorkShop\bin\Debug\ItemSmithWorkShop.pdb
+C:\Documents and Settings\wgetz\Experiments\ItemSmithWorkShop\ItemSmithWorkShop\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\wgetz\Experiments\ItemSmithWorkShop\ItemSmithWorkShop\obj\Debug\ItemSmithWorkShop.dll
+C:\Documents and Settings\wgetz\Experiments\ItemSmithWorkShop\ItemSmithWorkShop\obj\Debug\ItemSmithWorkShop.pdb

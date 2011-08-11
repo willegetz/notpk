@@ -1,6 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ApprovalTests;
+﻿using System;
+using ApprovalTests.Core;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ApprovalTests.Reporters;
+using Approvals = ApprovalTests.Approvals;
 
 namespace ItemSmith
 {
@@ -265,13 +267,44 @@ namespace ItemSmith
 		}
 
 		[TestMethod]
-		public void TestDisplayPreRequisiteAndCost()
+		public void TestDisplayWeaponName()
 		{
-			PreRequisites preRequisite = new PreRequisites("Simple", "Light", "Melee");
-			Cost cost = new Cost(2, "gold pieces");
 			Weapon weapon = new Weapon("Dagger");
-
+			
 			Approvals.Approve(weapon);
 		}
+
+		[TestMethod]
+		public void TestDisplayPreRequisiteAndCost()
+		{
+			Weapon weapon = new Weapon("Dagger");
+			PreRequisites preRequisites =  new PreRequisites("Simple", "Light", "Melee");
+			Cost cost = new Cost(2, "gold pieces");
+
+			DisplayWeapon displayWeapon = new DisplayWeapon(weapon, preRequisites, cost);
+
+			Approvals.Approve(displayWeapon);
+		}
+	}
+
+	public class DisplayWeapon
+	{
+		public string weaponName;
+		public string weaponPreRequisites;
+		public string weaponCost;
+
+		public DisplayWeapon(Weapon weapon, PreRequisites preRequisites, Cost cost)
+		{
+			weaponName = weapon.DisplayWeaponName();
+			weaponPreRequisites = preRequisites.DisplayPreRequisites();
+			weaponCost = cost.DisplayWeaponCost();
+		}
+
+		public override string ToString()
+		{
+			return String.Format("{0}\r{1}\r{2}", weaponName, weaponPreRequisites, weaponCost);
+		}
+
+
 	}
 }
