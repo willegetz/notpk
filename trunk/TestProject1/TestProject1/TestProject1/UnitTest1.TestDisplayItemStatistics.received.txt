@@ -1,0 +1,1 @@
+Item Name:		DaggerItem Cost:		2 cpBase Damage:	1d4Damage Type(s):	Piercing or SlashingThreat Range:	20

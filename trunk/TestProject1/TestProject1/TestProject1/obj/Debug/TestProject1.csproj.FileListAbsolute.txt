@@ -1,0 +1,7 @@
+C:\Documents and Settings\wgetz\Experiments\TestProject1\TestProject1\bin\Debug\TestProject1.dll
+C:\Documents and Settings\wgetz\Experiments\TestProject1\TestProject1\bin\Debug\TestProject1.pdb
+C:\Documents and Settings\wgetz\Experiments\TestProject1\TestProject1\bin\Debug\ApprovalTests.dll
+C:\Documents and Settings\wgetz\Experiments\TestProject1\TestProject1\bin\Debug\ApprovalUtilities.dll
+C:\Documents and Settings\wgetz\Experiments\TestProject1\TestProject1\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\wgetz\Experiments\TestProject1\TestProject1\obj\Debug\TestProject1.dll
+C:\Documents and Settings\wgetz\Experiments\TestProject1\TestProject1\obj\Debug\TestProject1.pdb
