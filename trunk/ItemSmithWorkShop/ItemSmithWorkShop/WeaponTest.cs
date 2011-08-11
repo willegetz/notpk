@@ -33,7 +33,7 @@ namespace ItemSmith
 		[TestMethod]
 		public void TestItemName()
 		{
-			BaseWeapon baseWeapon = new BaseWeapon();
+			BaseWeapon baseWeapon = new MockWeapon();
 			MockWeapon mockWeapon = new MockWeapon();
 			baseWeapon = mockWeapon;
 
@@ -57,6 +57,8 @@ namespace ItemSmith
 			BaseWeapon baseWeapon = new BaseWeapon();
 			MockWeapon mockWeapon = new MockWeapon();
 			baseWeapon = mockWeapon;
+
+
 			baseWeapon.IsMasterworkQualifier(false);
 
 			Approvals.Approve(baseWeapon);
