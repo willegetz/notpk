@@ -4,11 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemSmithWorkShop", "ItemSmithWorkShop\ItemSmithWorkShop.csproj", "{9CCCBA02-1EE3-4694-854F-C3555092D7CD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5036B42A-2400-4612-BC7B-2AC9F43E9309}"
-	ProjectSection(SolutionItems) = preProject
-		ItemSmithWorkShop.vsmdi = ItemSmithWorkShop.vsmdi
-		Local.testsettings = Local.testsettings
-		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
