@@ -144,6 +144,7 @@ namespace ItemSmith
 	public class Weapon
 	{
 		public string weaponName;
+		public string requisite;
 
 		public PreRequisites preRequisite;
 		public Cost cost;
@@ -160,13 +161,9 @@ namespace ItemSmith
 
 		public override string ToString()
 		{
-			string name = this.DisplayWeaponName();
-			string requisites = preRequisite.DisplayPreRequisites();
-			string weaponCost = cost.DisplayWeaponCost();
-
 			// exception is being thrown when testing. :(
 
-			return String.Format("{0}\r{1}\r{2}", name, requisites, weaponCost);
+			return String.Format("Weapon Name:\t{0}", weaponName);
 		}
 	}
 //		Pre-requisites
