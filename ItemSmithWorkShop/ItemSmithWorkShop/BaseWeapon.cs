@@ -139,19 +139,100 @@ namespace ItemSmith
 
 	}
 
-//	Weapon
-//		Name:
+//	Weapon - This is my base class
+//		Name
+	class Name
+	{
+		public string weaponName;
+
+		public Name(string name)
+		{
+			weaponName = name;
+		}
+	}
 //		Pre-requisites
 //			Proficiency
 //			Category
 //			Attack Type
+	class PreRequisites
+	{
+		public string weaponProficiency;
+		public string weaponCategory;
+		public string attackType;
+
+		public PreRequisites(string proficiency, string category, string type)
+		{
+			weaponProficiency = proficiency;
+			weaponCategory = category;
+			attackType = type;
+		}
+
+		// Display the proficiency
+	}
 //		Cost
 //			Base Cost
 //			Currency Type
+	class Cost
+	{
+		public int weaponCost;
+		public string currencyType;
+
+		public Cost(int cost, string currency)
+		{
+			weaponCost = cost;
+			currencyType = currency;
+		}
+
+		// Operate on the cost
+		// Display the cost and currency
+	}
 //		Damage
 //			Base Damage
 //			Threat Range
 //			Critical Multiplier
 //			Damage Type
+	class Damage
+	{
+		public string baseDamage;
+		public string threatRange;
+		public string criticalMultiplier;
+		public string damageType;
+
+		public Damage(string damage, string threat, string critical, string type)
+		{
+			baseDamage = damage;
+			threatRange = threat;
+			criticalMultiplier = critical;
+			damageType = type;
+		}
+
+
+	}
 //		Weight
+//			Hardness
+//			Hit Points
+	class Weight
+	{
+		public int hardness;
+		public int hitPoints;
+
+		public Weight(int durability, int hits)
+		{
+			hardness = durability;
+			hitPoints = hits;
+		}
+	}
+//		Material Type
+//			Cost adjustment
+	class MaterialType
+	{
+		public string materialType;
+		public int costAdjustment;
+
+		public MaterialType(string material, int adjustment)
+		{
+			materialType = material;
+			costAdjustment = adjustment;
+		}
+	}
 }
