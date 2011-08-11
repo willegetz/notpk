@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="a73b3c87-8b58-411b-a3ab-60d3a880768e" name="wgetz@BACTESPC329 2011-08-08 16:23:02" runUser="BACTES\wgetz" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="ad2497b7-727c-4c61-863e-8e14207e0d8e">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="wgetz_BACTESPC329 2011-08-08 16_23_02" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-08-08T16:23:02.7982244-07:00" queuing="2011-08-08T16:23:03.0325694-07:00" start="2011-08-08T16:23:03.2356684-07:00" finish="2011-08-08T16:23:03.5012594-07:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestNotMasterworkWeapon" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="0941ecc6-892d-ef1d-852c-139d50879753">
+      <Execution timeOut="1800000" id="a4abc3b8-5013-4793-993e-476921b5e0b5" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestNotMasterworkWeapon" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0941ecc6-892d-ef1d-852c-139d50879753" executionId="a4abc3b8-5013-4793-993e-476921b5e0b5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="a4abc3b8-5013-4793-993e-476921b5e0b5" testId="0941ecc6-892d-ef1d-852c-139d50879753" testName="TestNotMasterworkWeapon" computerName="BACTESPC329" duration="00:00:00.0414228" startTime="2011-08-08T16:23:03.3294064-07:00" endTime="2011-08-08T16:23:03.4231444-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a4abc3b8-5013-4793-993e-476921b5e0b5">
+    </UnitTestResult>
+  </Results>
+</TestRun>

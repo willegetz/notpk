@@ -1,0 +1,1 @@
+Weapon Name:		+3 Magical DaggerWeapon Proficiency:	SimpleWeapon Category:	LightWeapon Attack Type:	MeleeWeapon Cost:		18,302 gold piecesTo Hit Modifier:	+3 EnhancementBase Damage:		1d4+3 EnhancementThreat Range:		19 - 20Critical Damage:	x2Weapon Weight:		1 lbDamage Type(s):		Piercing or Slashing, MagicMinimum Caster Level:	9Days To Create:			18 days

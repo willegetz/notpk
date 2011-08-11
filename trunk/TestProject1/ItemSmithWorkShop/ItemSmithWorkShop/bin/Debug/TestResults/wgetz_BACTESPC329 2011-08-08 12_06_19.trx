@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="23934f3f-f316-4c6f-958a-fcbe8a2cb2d9" name="wgetz@BACTESPC329 2011-08-08 12:06:19" runUser="BACTES\wgetz" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="ad2497b7-727c-4c61-863e-8e14207e0d8e">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="wgetz_BACTESPC329 2011-08-08 12_06_19" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-08-08T12:06:19.0219540-07:00" queuing="2011-08-08T12:06:19.2563140-07:00" start="2011-08-08T12:06:19.4750500-07:00" finish="2011-08-08T12:06:19.8031540-07:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="2" executed="2" passed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestMasterworkWeapon" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="efb1cb0c-6efd-e41e-a96f-89bffa7df209">
+      <Execution timeOut="1800000" id="f2faeac1-be49-4ee2-883c-f91b7e71dc9d" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMasterworkWeapon" />
+    </UnitTest>
+    <UnitTest name="TestNotMasterworkWeapon" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="0941ecc6-892d-ef1d-852c-139d50879753">
+      <Execution timeOut="1800000" id="40135b8c-05f0-463a-9b79-e36fad77dd59" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestNotMasterworkWeapon" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="efb1cb0c-6efd-e41e-a96f-89bffa7df209" executionId="f2faeac1-be49-4ee2-883c-f91b7e71dc9d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0941ecc6-892d-ef1d-852c-139d50879753" executionId="40135b8c-05f0-463a-9b79-e36fad77dd59" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="f2faeac1-be49-4ee2-883c-f91b7e71dc9d" testId="efb1cb0c-6efd-e41e-a96f-89bffa7df209" testName="TestMasterworkWeapon" computerName="BACTESPC329" duration="00:00:00.0397189" startTime="2011-08-08T12:06:19.5687940-07:00" endTime="2011-08-08T12:06:19.6469140-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f2faeac1-be49-4ee2-883c-f91b7e71dc9d">
+    </UnitTestResult>
+    <UnitTestResult executionId="40135b8c-05f0-463a-9b79-e36fad77dd59" testId="0941ecc6-892d-ef1d-852c-139d50879753" testName="TestNotMasterworkWeapon" computerName="BACTESPC329" duration="00:00:00.0654918" startTime="2011-08-08T12:06:19.6625380-07:00" endTime="2011-08-08T12:06:19.7250340-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="40135b8c-05f0-463a-9b79-e36fad77dd59">
+      <Output>
+        <StdOut>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestNotMasterworkWeapon.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestNotMasterworkWeapon.approved.txt"</StdOut>
+        <DebugTrace>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestNotMasterworkWeapon.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestNotMasterworkWeapon.approved.txt"
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method ItemSmith.WeaponTests.TestNotMasterworkWeapon threw exception: 
+ApprovalTests.Core.Exceptions.ApprovalMissingException: Failed Approval: Approval File "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestNotMasterworkWeapon.approved.txt" Not Found.</Message>
+          <StackTrace>    at ApprovalTests.Approvers.FileApprover.Fail()
+   at ApprovalTests.Core.Approvals.Approve(IApprovalApprover approver, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer, IApprovalNamer namer, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer)
+   at ApprovalTests.Approvals.Approve(Object text)
+   at ItemSmith.WeaponTests.TestNotMasterworkWeapon() in C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTest.cs:line 61
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

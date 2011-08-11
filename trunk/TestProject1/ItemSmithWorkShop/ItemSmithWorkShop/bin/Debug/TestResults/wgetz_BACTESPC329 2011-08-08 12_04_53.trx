@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="efd83d07-08cc-4e0d-b21c-61ef05d9b344" name="wgetz@BACTESPC329 2011-08-08 12:04:53" runUser="BACTES\wgetz" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="ad2497b7-727c-4c61-863e-8e14207e0d8e">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="wgetz_BACTESPC329 2011-08-08 12_04_53" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-08-08T12:04:53.6055460-07:00" queuing="2011-08-08T12:04:53.8555300-07:00" start="2011-08-08T12:04:54.0742660-07:00" finish="2011-08-08T12:04:54.4804900-07:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="2" executed="2" passed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestIsMagicIsNotMasterworkWeapon" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="0d9f71f5-22b7-78ca-3bb4-0ded159f8bd3">
+      <Execution timeOut="1800000" id="1d4a86a7-d0a5-41c2-b8f5-6c10742db2f4" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestIsMagicIsNotMasterworkWeapon" />
+    </UnitTest>
+    <UnitTest name="TestIsGenericMagicWeapon" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="8879c8c4-14cc-da5e-6a49-d167c1f959f7">
+      <Execution timeOut="1800000" id="ffed18e2-f747-4e93-ae43-d57f10163ecb" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestIsGenericMagicWeapon" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="8879c8c4-14cc-da5e-6a49-d167c1f959f7" executionId="ffed18e2-f747-4e93-ae43-d57f10163ecb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0d9f71f5-22b7-78ca-3bb4-0ded159f8bd3" executionId="1d4a86a7-d0a5-41c2-b8f5-6c10742db2f4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="ffed18e2-f747-4e93-ae43-d57f10163ecb" testId="8879c8c4-14cc-da5e-6a49-d167c1f959f7" testName="TestIsGenericMagicWeapon" computerName="BACTESPC329" duration="00:00:00.0443400" startTime="2011-08-08T12:04:54.2148820-07:00" endTime="2011-08-08T12:04:54.3086260-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ffed18e2-f747-4e93-ae43-d57f10163ecb">
+    </UnitTestResult>
+    <UnitTestResult executionId="1d4a86a7-d0a5-41c2-b8f5-6c10742db2f4" testId="0d9f71f5-22b7-78ca-3bb4-0ded159f8bd3" testName="TestIsMagicIsNotMasterworkWeapon" computerName="BACTESPC329" duration="00:00:00.0688126" startTime="2011-08-08T12:04:54.3242500-07:00" endTime="2011-08-08T12:04:54.3867460-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1d4a86a7-d0a5-41c2-b8f5-6c10742db2f4">
+      <Output>
+        <StdOut>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicIsNotMasterworkWeapon.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicIsNotMasterworkWeapon.approved.txt"</StdOut>
+        <DebugTrace>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicIsNotMasterworkWeapon.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicIsNotMasterworkWeapon.approved.txt"
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method ItemSmith.WeaponTests.TestIsMagicIsNotMasterworkWeapon threw exception: 
+ApprovalTests.Core.Exceptions.ApprovalMissingException: Failed Approval: Approval File "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicIsNotMasterworkWeapon.approved.txt" Not Found.</Message>
+          <StackTrace>    at ApprovalTests.Approvers.FileApprover.Fail()
+   at ApprovalTests.Core.Approvals.Approve(IApprovalApprover approver, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer, IApprovalNamer namer, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer)
+   at ApprovalTests.Approvals.Approve(Object text)
+   at ItemSmith.WeaponTests.TestIsMagicIsNotMasterworkWeapon() in C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTest.cs:line 89
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
