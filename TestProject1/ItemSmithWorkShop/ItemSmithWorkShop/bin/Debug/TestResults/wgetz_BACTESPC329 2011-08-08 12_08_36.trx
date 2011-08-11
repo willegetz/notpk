@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="1abcb788-134e-4a5d-9aa3-2b958596b883" name="wgetz@BACTESPC329 2011-08-08 12:08:36" runUser="BACTES\wgetz" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="ad2497b7-727c-4c61-863e-8e14207e0d8e">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="wgetz_BACTESPC329 2011-08-08 12_08_36" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-08-08T12:08:36.3725380-07:00" queuing="2011-08-08T12:08:36.6068980-07:00" start="2011-08-08T12:08:36.8100100-07:00" finish="2011-08-08T12:08:37.3099780-07:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="13" executed="13" passed="12" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestNotMasterworkWeapon" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="0941ecc6-892d-ef1d-852c-139d50879753">
+      <Execution timeOut="1800000" id="f548ba2f-a461-4b9e-be8d-ea0cc81c8591" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestNotMasterworkWeapon" />
+    </UnitTest>
+    <UnitTest name="TestPlus1WeaponWithSpecialAbility" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="b5096b41-7bb0-bb12-693c-aad117aaa7b1">
+      <Execution timeOut="1800000" id="6b8902f6-46ee-41e9-a690-8e4fa7eedaa8" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestPlus1WeaponWithSpecialAbility" />
+    </UnitTest>
+    <UnitTest name="TestCasterLevelToCreatePlus3Item" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="d4ddad11-1bc1-c1e8-60af-6fc4b047f596">
+      <Execution timeOut="1800000" id="649ba25c-131c-4d87-876c-8834f8821fc4" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestCasterLevelToCreatePlus3Item" />
+    </UnitTest>
+    <UnitTest name="TestMasterworkWeapon" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="efb1cb0c-6efd-e41e-a96f-89bffa7df209">
+      <Execution timeOut="1800000" id="106dc3ba-24bc-4cd1-a7f3-2791a7d1fad3" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMasterworkWeapon" />
+    </UnitTest>
+    <UnitTest name="TestIsMagicWeaponPlus2" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="d10d34d2-061d-c328-7dff-648ec1d98774">
+      <Execution timeOut="1800000" id="23d1e1a9-e88f-4245-bceb-8ae55ee98276" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestIsMagicWeaponPlus2" />
+    </UnitTest>
+    <UnitTest name="TestIsMagicWeaponPlus5" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="3d02fd7f-8d3f-94bd-4e09-0faab933d0ad">
+      <Execution timeOut="1800000" id="efa7ccaa-91f6-4e4a-b4ba-9278f075af21" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestIsMagicWeaponPlus5" />
+    </UnitTest>
+    <UnitTest name="TestIsGenericMagicWeapon" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="8879c8c4-14cc-da5e-6a49-d167c1f959f7">
+      <Execution timeOut="1800000" id="84588aad-5104-4793-a341-1246234a2bf6" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestIsGenericMagicWeapon" />
+    </UnitTest>
+    <UnitTest name="TestIsMagicWeaponPlus5TotalEnhancementIs10" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="e283cb07-da66-1879-0fe8-f2ab1121051d">
+      <Execution timeOut="1800000" id="29d95a74-bfae-4890-ae05-05773f28ea2d" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestIsMagicWeaponPlus5TotalEnhancementIs10" />
+    </UnitTest>
+    <UnitTest name="TestIsMagicIsNotMasterworkWeapon" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="0d9f71f5-22b7-78ca-3bb4-0ded159f8bd3">
+      <Execution timeOut="1800000" id="c990d85a-726a-4603-a0d0-140d83aa9887" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestIsMagicIsNotMasterworkWeapon" />
+    </UnitTest>
+    <UnitTest name="TestPlus3WeaponDaysToCreate" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="54739ee5-a958-3974-46b3-0f1f453bb85b">
+      <Execution timeOut="1800000" id="9d6b374d-478f-4082-a065-c049367e659c" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestPlus3WeaponDaysToCreate" />
+    </UnitTest>
+    <UnitTest name="TestIsMagicWeaponPlus3" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="872c6a5b-1abc-eb7b-33b6-6e8fce764164">
+      <Execution timeOut="1800000" id="9a96c04d-acfa-426a-8284-b0f4db9af2a7" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestIsMagicWeaponPlus3" />
+    </UnitTest>
+    <UnitTest name="TestItemName" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="2489d3dd-5ff4-d85f-bb90-6c0b54df9f6b">
+      <Execution timeOut="1800000" id="98094092-34b6-4781-a0da-2dcd94724639" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestItemName" />
+    </UnitTest>
+    <UnitTest name="TestDisplayWeaponStatistics" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="788701b4-3db0-dd01-e07a-c6f7afb82ead">
+      <Execution timeOut="1800000" id="dd738952-2b99-47f3-82ca-a37023a1a90e" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestDisplayWeaponStatistics" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="d4ddad11-1bc1-c1e8-60af-6fc4b047f596" executionId="649ba25c-131c-4d87-876c-8834f8821fc4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="788701b4-3db0-dd01-e07a-c6f7afb82ead" executionId="dd738952-2b99-47f3-82ca-a37023a1a90e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8879c8c4-14cc-da5e-6a49-d167c1f959f7" executionId="84588aad-5104-4793-a341-1246234a2bf6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0d9f71f5-22b7-78ca-3bb4-0ded159f8bd3" executionId="c990d85a-726a-4603-a0d0-140d83aa9887" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d10d34d2-061d-c328-7dff-648ec1d98774" executionId="23d1e1a9-e88f-4245-bceb-8ae55ee98276" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="872c6a5b-1abc-eb7b-33b6-6e8fce764164" executionId="9a96c04d-acfa-426a-8284-b0f4db9af2a7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3d02fd7f-8d3f-94bd-4e09-0faab933d0ad" executionId="efa7ccaa-91f6-4e4a-b4ba-9278f075af21" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e283cb07-da66-1879-0fe8-f2ab1121051d" executionId="29d95a74-bfae-4890-ae05-05773f28ea2d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2489d3dd-5ff4-d85f-bb90-6c0b54df9f6b" executionId="98094092-34b6-4781-a0da-2dcd94724639" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="efb1cb0c-6efd-e41e-a96f-89bffa7df209" executionId="106dc3ba-24bc-4cd1-a7f3-2791a7d1fad3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0941ecc6-892d-ef1d-852c-139d50879753" executionId="f548ba2f-a461-4b9e-be8d-ea0cc81c8591" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b5096b41-7bb0-bb12-693c-aad117aaa7b1" executionId="6b8902f6-46ee-41e9-a690-8e4fa7eedaa8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="54739ee5-a958-3974-46b3-0f1f453bb85b" executionId="9d6b374d-478f-4082-a065-c049367e659c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="649ba25c-131c-4d87-876c-8834f8821fc4" testId="d4ddad11-1bc1-c1e8-60af-6fc4b047f596" testName="TestCasterLevelToCreatePlus3Item" computerName="BACTESPC329" duration="00:00:00.0420432" startTime="2011-08-08T12:08:36.8881300-07:00" endTime="2011-08-08T12:08:36.9974980-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="649ba25c-131c-4d87-876c-8834f8821fc4">
+    </UnitTestResult>
+    <UnitTestResult executionId="dd738952-2b99-47f3-82ca-a37023a1a90e" testId="788701b4-3db0-dd01-e07a-c6f7afb82ead" testName="TestDisplayWeaponStatistics" computerName="BACTESPC329" duration="00:00:00.0170071" startTime="2011-08-08T12:08:36.9974980-07:00" endTime="2011-08-08T12:08:37.0131220-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dd738952-2b99-47f3-82ca-a37023a1a90e">
+    </UnitTestResult>
+    <UnitTestResult executionId="84588aad-5104-4793-a341-1246234a2bf6" testId="8879c8c4-14cc-da5e-6a49-d167c1f959f7" testName="TestIsGenericMagicWeapon" computerName="BACTESPC329" duration="00:00:00.0051322" startTime="2011-08-08T12:08:37.0131220-07:00" endTime="2011-08-08T12:08:37.0287460-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="84588aad-5104-4793-a341-1246234a2bf6">
+    </UnitTestResult>
+    <UnitTestResult executionId="c990d85a-726a-4603-a0d0-140d83aa9887" testId="0d9f71f5-22b7-78ca-3bb4-0ded159f8bd3" testName="TestIsMagicIsNotMasterworkWeapon" computerName="BACTESPC329" duration="00:00:00.0036799" startTime="2011-08-08T12:08:37.0287460-07:00" endTime="2011-08-08T12:08:37.0287460-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c990d85a-726a-4603-a0d0-140d83aa9887">
+    </UnitTestResult>
+    <UnitTestResult executionId="23d1e1a9-e88f-4245-bceb-8ae55ee98276" testId="d10d34d2-061d-c328-7dff-648ec1d98774" testName="TestIsMagicWeaponPlus2" computerName="BACTESPC329" duration="00:00:00.0043290" startTime="2011-08-08T12:08:37.0287460-07:00" endTime="2011-08-08T12:08:37.0443700-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="23d1e1a9-e88f-4245-bceb-8ae55ee98276">
+    </UnitTestResult>
+    <UnitTestResult executionId="9a96c04d-acfa-426a-8284-b0f4db9af2a7" testId="872c6a5b-1abc-eb7b-33b6-6e8fce764164" testName="TestIsMagicWeaponPlus3" computerName="BACTESPC329" duration="00:00:00.0040199" startTime="2011-08-08T12:08:37.0443700-07:00" endTime="2011-08-08T12:08:37.0443700-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9a96c04d-acfa-426a-8284-b0f4db9af2a7">
+    </UnitTestResult>
+    <UnitTestResult executionId="efa7ccaa-91f6-4e4a-b4ba-9278f075af21" testId="3d02fd7f-8d3f-94bd-4e09-0faab933d0ad" testName="TestIsMagicWeaponPlus5" computerName="BACTESPC329" duration="00:00:00.0039642" startTime="2011-08-08T12:08:37.0443700-07:00" endTime="2011-08-08T12:08:37.0599940-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="efa7ccaa-91f6-4e4a-b4ba-9278f075af21">
+    </UnitTestResult>
+    <UnitTestResult executionId="29d95a74-bfae-4890-ae05-05773f28ea2d" testId="e283cb07-da66-1879-0fe8-f2ab1121051d" testName="TestIsMagicWeaponPlus5TotalEnhancementIs10" computerName="BACTESPC329" duration="00:00:00.0036105" startTime="2011-08-08T12:08:37.0599940-07:00" endTime="2011-08-08T12:08:37.0599940-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="29d95a74-bfae-4890-ae05-05773f28ea2d">
+    </UnitTestResult>
+    <UnitTestResult executionId="98094092-34b6-4781-a0da-2dcd94724639" testId="2489d3dd-5ff4-d85f-bb90-6c0b54df9f6b" testName="TestItemName" computerName="BACTESPC329" duration="00:00:00.0045849" startTime="2011-08-08T12:08:37.0599940-07:00" endTime="2011-08-08T12:08:37.0756180-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="98094092-34b6-4781-a0da-2dcd94724639">
+    </UnitTestResult>
+    <UnitTestResult executionId="106dc3ba-24bc-4cd1-a7f3-2791a7d1fad3" testId="efb1cb0c-6efd-e41e-a96f-89bffa7df209" testName="TestMasterworkWeapon" computerName="BACTESPC329" duration="00:00:00.0157635" startTime="2011-08-08T12:08:37.0756180-07:00" endTime="2011-08-08T12:08:37.0912420-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="106dc3ba-24bc-4cd1-a7f3-2791a7d1fad3">
+    </UnitTestResult>
+    <UnitTestResult executionId="f548ba2f-a461-4b9e-be8d-ea0cc81c8591" testId="0941ecc6-892d-ef1d-852c-139d50879753" testName="TestNotMasterworkWeapon" computerName="BACTESPC329" duration="00:00:00.0037396" startTime="2011-08-08T12:08:37.0912420-07:00" endTime="2011-08-08T12:08:37.1068660-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f548ba2f-a461-4b9e-be8d-ea0cc81c8591">
+    </UnitTestResult>
+    <UnitTestResult executionId="6b8902f6-46ee-41e9-a690-8e4fa7eedaa8" testId="b5096b41-7bb0-bb12-693c-aad117aaa7b1" testName="TestPlus1WeaponWithSpecialAbility" computerName="BACTESPC329" duration="00:00:00.0981117" startTime="2011-08-08T12:08:37.1068660-07:00" endTime="2011-08-08T12:08:37.2006100-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b8902f6-46ee-41e9-a690-8e4fa7eedaa8">
+      <Output>
+        <StdOut>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestPlus1WeaponWithSpecialAbility.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestPlus1WeaponWithSpecialAbility.approved.txt"</StdOut>
+        <DebugTrace>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestPlus1WeaponWithSpecialAbility.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestPlus1WeaponWithSpecialAbility.approved.txt"
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method ItemSmith.WeaponTests.TestPlus1WeaponWithSpecialAbility threw exception: 
+ApprovalTests.Core.Exceptions.ApprovalMismatchException: Failed Approval: Received file C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestPlus1WeaponWithSpecialAbility.received.txt does not match approved file C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestPlus1WeaponWithSpecialAbility.approved.txt.</Message>
+          <StackTrace>    at ApprovalTests.Approvers.FileApprover.Fail()
+   at ApprovalTests.Core.Approvals.Approve(IApprovalApprover approver, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer, IApprovalNamer namer, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer)
+   at ApprovalTests.Approvals.Approve(Object text)
+   at ItemSmith.WeaponTests.TestPlus1WeaponWithSpecialAbility() in C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTest.cs:line 255
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9d6b374d-478f-4082-a065-c049367e659c" testId="54739ee5-a958-3974-46b3-0f1f453bb85b" testName="TestPlus3WeaponDaysToCreate" computerName="BACTESPC329" duration="00:00:00.0154102" startTime="2011-08-08T12:08:37.2162340-07:00" endTime="2011-08-08T12:08:37.2318580-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9d6b374d-478f-4082-a065-c049367e659c">
+    </UnitTestResult>
+  </Results>
+</TestRun>

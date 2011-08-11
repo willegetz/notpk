@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="bbaa8302-e9b8-4635-ae9a-7212cc314c8a" name="wgetz@BACTESPC329 2011-08-08 12:05:28" runUser="BACTES\wgetz" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="ad2497b7-727c-4c61-863e-8e14207e0d8e">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="wgetz_BACTESPC329 2011-08-08 12_05_28" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-08-08T12:05:28.7126740-07:00" queuing="2011-08-08T12:05:28.9470340-07:00" start="2011-08-08T12:05:29.1345220-07:00" finish="2011-08-08T12:05:29.5876180-07:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="3" executed="3" passed="1" error="0" failed="2" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestIsMagicWeaponPlus5TotalEnhancementIs10" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="e283cb07-da66-1879-0fe8-f2ab1121051d">
+      <Execution timeOut="1800000" id="4890a070-fd5f-4d6e-8d55-4050080fe2bb" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestIsMagicWeaponPlus5TotalEnhancementIs10" />
+    </UnitTest>
+    <UnitTest name="TestIsMagicWeaponPlus5" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="3d02fd7f-8d3f-94bd-4e09-0faab933d0ad">
+      <Execution timeOut="1800000" id="4c2190fc-3781-4ae7-b58c-ce2ea457d35f" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestIsMagicWeaponPlus5" />
+    </UnitTest>
+    <UnitTest name="TestIsMagicWeaponPlus3" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="872c6a5b-1abc-eb7b-33b6-6e8fce764164">
+      <Execution timeOut="1800000" id="2fb20c30-9e45-4afc-8bc8-927f1a99a43e" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestIsMagicWeaponPlus3" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="872c6a5b-1abc-eb7b-33b6-6e8fce764164" executionId="2fb20c30-9e45-4afc-8bc8-927f1a99a43e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3d02fd7f-8d3f-94bd-4e09-0faab933d0ad" executionId="4c2190fc-3781-4ae7-b58c-ce2ea457d35f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e283cb07-da66-1879-0fe8-f2ab1121051d" executionId="4890a070-fd5f-4d6e-8d55-4050080fe2bb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="2fb20c30-9e45-4afc-8bc8-927f1a99a43e" testId="872c6a5b-1abc-eb7b-33b6-6e8fce764164" testName="TestIsMagicWeaponPlus3" computerName="BACTESPC329" duration="00:00:00.0423639" startTime="2011-08-08T12:05:29.2438900-07:00" endTime="2011-08-08T12:05:29.3376340-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2fb20c30-9e45-4afc-8bc8-927f1a99a43e">
+    </UnitTestResult>
+    <UnitTestResult executionId="4c2190fc-3781-4ae7-b58c-ce2ea457d35f" testId="3d02fd7f-8d3f-94bd-4e09-0faab933d0ad" testName="TestIsMagicWeaponPlus5" computerName="BACTESPC329" duration="00:00:00.0692403" startTime="2011-08-08T12:05:29.3532580-07:00" endTime="2011-08-08T12:05:29.4157540-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4c2190fc-3781-4ae7-b58c-ce2ea457d35f">
+      <Output>
+        <StdOut>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5.approved.txt"</StdOut>
+        <DebugTrace>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5.approved.txt"
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method ItemSmith.WeaponTests.TestIsMagicWeaponPlus5 threw exception: 
+ApprovalTests.Core.Exceptions.ApprovalMissingException: Failed Approval: Approval File "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5.approved.txt" Not Found.</Message>
+          <StackTrace>    at ApprovalTests.Approvers.FileApprover.Fail()
+   at ApprovalTests.Core.Approvals.Approve(IApprovalApprover approver, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer, IApprovalNamer namer, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer)
+   at ApprovalTests.Approvals.Approve(Object text)
+   at ItemSmith.WeaponTests.TestIsMagicWeaponPlus5() in C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTest.cs:line 153
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4890a070-fd5f-4d6e-8d55-4050080fe2bb" testId="e283cb07-da66-1879-0fe8-f2ab1121051d" testName="TestIsMagicWeaponPlus5TotalEnhancementIs10" computerName="BACTESPC329" duration="00:00:00.0235557" startTime="2011-08-08T12:05:29.4313780-07:00" endTime="2011-08-08T12:05:29.4470020-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4890a070-fd5f-4d6e-8d55-4050080fe2bb">
+      <Output>
+        <StdOut>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5TotalEnhancementIs10.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5TotalEnhancementIs10.approved.txt"</StdOut>
+        <DebugTrace>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5TotalEnhancementIs10.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5TotalEnhancementIs10.approved.txt"
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method ItemSmith.WeaponTests.TestIsMagicWeaponPlus5TotalEnhancementIs10 threw exception: 
+ApprovalTests.Core.Exceptions.ApprovalMissingException: Failed Approval: Approval File "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5TotalEnhancementIs10.approved.txt" Not Found.</Message>
+          <StackTrace>    at ApprovalTests.Approvers.FileApprover.Fail()
+   at ApprovalTests.Core.Approvals.Approve(IApprovalApprover approver, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer, IApprovalNamer namer, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer)
+   at ApprovalTests.Approvals.Approve(Object text)
+   at ItemSmith.WeaponTests.TestIsMagicWeaponPlus5TotalEnhancementIs10() in C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTest.cs:line 179
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="fd5f65bd-27b3-474a-ab73-0e0aaeec6470" name="wgetz@BACTESPC329 2011-08-09 13:09:50" runUser="BACTES\wgetz" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="ad2497b7-727c-4c61-863e-8e14207e0d8e">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="wgetz_BACTESPC329 2011-08-09 13_09_50" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-08-09T13:09:50.8418563-07:00" queuing="2011-08-09T13:09:51.0755428-07:00" start="2011-08-09T13:09:51.2624920-07:00" finish="2011-08-09T13:09:52.3374499-07:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="13" executed="13" passed="5" error="0" failed="8" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestNotMasterworkWeapon" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="0941ecc6-892d-ef1d-852c-139d50879753">
+      <Execution timeOut="1800000" id="c9e7b44e-64a6-4097-87a3-6f598d407f40" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestNotMasterworkWeapon" />
+    </UnitTest>
+    <UnitTest name="TestPlus1WeaponWithSpecialAbility" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="b5096b41-7bb0-bb12-693c-aad117aaa7b1">
+      <Execution timeOut="1800000" id="af71a979-fa22-4593-925d-e5b10c8603a1" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestPlus1WeaponWithSpecialAbility" />
+    </UnitTest>
+    <UnitTest name="TestCasterLevelToCreatePlus3Item" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="d4ddad11-1bc1-c1e8-60af-6fc4b047f596">
+      <Execution timeOut="1800000" id="ded37f1d-568b-4b6c-b6dd-8c597693eb75" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestCasterLevelToCreatePlus3Item" />
+    </UnitTest>
+    <UnitTest name="TestMasterworkWeapon" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="efb1cb0c-6efd-e41e-a96f-89bffa7df209">
+      <Execution timeOut="1800000" id="d3cb09d1-53cc-4668-8279-ea0406c0105d" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMasterworkWeapon" />
+    </UnitTest>
+    <UnitTest name="TestIsMagicWeaponPlus2" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="d10d34d2-061d-c328-7dff-648ec1d98774">
+      <Execution timeOut="1800000" id="cbdeb517-7ca0-4ca3-a220-79a94c9e2c99" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestIsMagicWeaponPlus2" />
+    </UnitTest>
+    <UnitTest name="TestIsMagicWeaponPlus5" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="3d02fd7f-8d3f-94bd-4e09-0faab933d0ad">
+      <Execution timeOut="1800000" id="138af5f1-68d1-466c-8d15-a74a6b503f13" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestIsMagicWeaponPlus5" />
+    </UnitTest>
+    <UnitTest name="TestIsGenericMagicWeapon" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="8879c8c4-14cc-da5e-6a49-d167c1f959f7">
+      <Execution timeOut="1800000" id="37adbd71-31b3-49f7-a691-a6994c0ebbd9" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestIsGenericMagicWeapon" />
+    </UnitTest>
+    <UnitTest name="TestIsMagicWeaponPlus5TotalEnhancementIs10" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="e283cb07-da66-1879-0fe8-f2ab1121051d">
+      <Execution timeOut="1800000" id="42ce58e1-0c0f-4d70-b80d-001462ad9653" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestIsMagicWeaponPlus5TotalEnhancementIs10" />
+    </UnitTest>
+    <UnitTest name="TestIsMagicIsNotMasterworkWeapon" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="0d9f71f5-22b7-78ca-3bb4-0ded159f8bd3">
+      <Execution timeOut="1800000" id="68c2824b-604f-4380-89cd-ca31cf931341" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestIsMagicIsNotMasterworkWeapon" />
+    </UnitTest>
+    <UnitTest name="TestPlus3WeaponDaysToCreate" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="54739ee5-a958-3974-46b3-0f1f453bb85b">
+      <Execution timeOut="1800000" id="0b4f4066-a804-4478-99a0-2d1c69480ef4" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestPlus3WeaponDaysToCreate" />
+    </UnitTest>
+    <UnitTest name="TestIsMagicWeaponPlus3" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="872c6a5b-1abc-eb7b-33b6-6e8fce764164">
+      <Execution timeOut="1800000" id="3f2ace5b-b275-485b-bf76-0978379f3d9d" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestIsMagicWeaponPlus3" />
+    </UnitTest>
+    <UnitTest name="TestItemName" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="2489d3dd-5ff4-d85f-bb90-6c0b54df9f6b">
+      <Execution timeOut="1800000" id="65391892-3966-4273-87c9-4fa9bef7bdca" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestItemName" />
+    </UnitTest>
+    <UnitTest name="TestDisplayWeaponStatistics" storage="c:\documents and settings\wgetz\experiments\itemsmith\itemsmithworkshop\itemsmithworkshop\bin\debug\itemsmithworkshop.dll" id="788701b4-3db0-dd01-e07a-c6f7afb82ead">
+      <Execution timeOut="1800000" id="98f76b48-b208-422b-9010-99d35d107b73" />
+      <TestMethod codeBase="C:/Documents and Settings/wgetz/Experiments/ItemSmith/ItemSmithWorkShop/ItemSmithWorkShop/bin/Debug/ItemSmithWorkShop.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ItemSmith.WeaponTests, ItemSmithWorkShop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestDisplayWeaponStatistics" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="d4ddad11-1bc1-c1e8-60af-6fc4b047f596" executionId="ded37f1d-568b-4b6c-b6dd-8c597693eb75" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="788701b4-3db0-dd01-e07a-c6f7afb82ead" executionId="98f76b48-b208-422b-9010-99d35d107b73" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8879c8c4-14cc-da5e-6a49-d167c1f959f7" executionId="37adbd71-31b3-49f7-a691-a6994c0ebbd9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0d9f71f5-22b7-78ca-3bb4-0ded159f8bd3" executionId="68c2824b-604f-4380-89cd-ca31cf931341" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d10d34d2-061d-c328-7dff-648ec1d98774" executionId="cbdeb517-7ca0-4ca3-a220-79a94c9e2c99" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="872c6a5b-1abc-eb7b-33b6-6e8fce764164" executionId="3f2ace5b-b275-485b-bf76-0978379f3d9d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3d02fd7f-8d3f-94bd-4e09-0faab933d0ad" executionId="138af5f1-68d1-466c-8d15-a74a6b503f13" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e283cb07-da66-1879-0fe8-f2ab1121051d" executionId="42ce58e1-0c0f-4d70-b80d-001462ad9653" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2489d3dd-5ff4-d85f-bb90-6c0b54df9f6b" executionId="65391892-3966-4273-87c9-4fa9bef7bdca" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="efb1cb0c-6efd-e41e-a96f-89bffa7df209" executionId="d3cb09d1-53cc-4668-8279-ea0406c0105d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0941ecc6-892d-ef1d-852c-139d50879753" executionId="c9e7b44e-64a6-4097-87a3-6f598d407f40" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b5096b41-7bb0-bb12-693c-aad117aaa7b1" executionId="af71a979-fa22-4593-925d-e5b10c8603a1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="54739ee5-a958-3974-46b3-0f1f453bb85b" executionId="0b4f4066-a804-4478-99a0-2d1c69480ef4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="ded37f1d-568b-4b6c-b6dd-8c597693eb75" testId="d4ddad11-1bc1-c1e8-60af-6fc4b047f596" testName="TestCasterLevelToCreatePlus3Item" computerName="BACTESPC329" duration="00:00:00.1467847" startTime="2011-08-09T13:09:51.3871248-07:00" endTime="2011-08-09T13:09:51.5740740-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ded37f1d-568b-4b6c-b6dd-8c597693eb75">
+      <Output>
+        <StdOut>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestCasterLevelToCreatePlus3Item.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestCasterLevelToCreatePlus3Item.approved.txt"</StdOut>
+        <DebugTrace>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestCasterLevelToCreatePlus3Item.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestCasterLevelToCreatePlus3Item.approved.txt"
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method ItemSmith.WeaponTests.TestCasterLevelToCreatePlus3Item threw exception: 
+ApprovalTests.Core.Exceptions.ApprovalMismatchException: Failed Approval: Received file C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestCasterLevelToCreatePlus3Item.received.txt does not match approved file C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestCasterLevelToCreatePlus3Item.approved.txt.</Message>
+          <StackTrace>    at ApprovalTests.Approvers.FileApprover.Fail()
+   at ApprovalTests.Core.Approvals.Approve(IApprovalApprover approver, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer, IApprovalNamer namer, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer)
+   at ApprovalTests.Approvals.Approve(Object text)
+   at ItemSmith.WeaponTests.TestCasterLevelToCreatePlus3Item() in C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTest.cs:line 209
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="98f76b48-b208-422b-9010-99d35d107b73" testId="788701b4-3db0-dd01-e07a-c6f7afb82ead" testName="TestDisplayWeaponStatistics" computerName="BACTESPC329" duration="00:00:00.0123182" startTime="2011-08-09T13:09:51.6208113-07:00" endTime="2011-08-09T13:09:51.6208113-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="98f76b48-b208-422b-9010-99d35d107b73">
+    </UnitTestResult>
+    <UnitTestResult executionId="37adbd71-31b3-49f7-a691-a6994c0ebbd9" testId="8879c8c4-14cc-da5e-6a49-d167c1f959f7" testName="TestIsGenericMagicWeapon" computerName="BACTESPC329" duration="00:00:00.0224560" startTime="2011-08-09T13:09:51.6363904-07:00" endTime="2011-08-09T13:09:51.6519695-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="37adbd71-31b3-49f7-a691-a6994c0ebbd9">
+      <Output>
+        <StdOut>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsGenericMagicWeapon.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsGenericMagicWeapon.approved.txt"</StdOut>
+        <DebugTrace>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsGenericMagicWeapon.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsGenericMagicWeapon.approved.txt"
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method ItemSmith.WeaponTests.TestIsGenericMagicWeapon threw exception: 
+ApprovalTests.Core.Exceptions.ApprovalMismatchException: Failed Approval: Received file C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsGenericMagicWeapon.received.txt does not match approved file C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsGenericMagicWeapon.approved.txt.</Message>
+          <StackTrace>    at ApprovalTests.Approvers.FileApprover.Fail()
+   at ApprovalTests.Core.Approvals.Approve(IApprovalApprover approver, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer, IApprovalNamer namer, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer)
+   at ApprovalTests.Approvals.Approve(Object text)
+   at ItemSmith.WeaponTests.TestIsGenericMagicWeapon() in C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTest.cs:line 106
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="68c2824b-604f-4380-89cd-ca31cf931341" testId="0d9f71f5-22b7-78ca-3bb4-0ded159f8bd3" testName="TestIsMagicIsNotMasterworkWeapon" computerName="BACTESPC329" duration="00:00:00.0147390" startTime="2011-08-09T13:09:51.6987068-07:00" endTime="2011-08-09T13:09:51.7142859-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="68c2824b-604f-4380-89cd-ca31cf931341">
+    </UnitTestResult>
+    <UnitTestResult executionId="cbdeb517-7ca0-4ca3-a220-79a94c9e2c99" testId="d10d34d2-061d-c328-7dff-648ec1d98774" testName="TestIsMagicWeaponPlus2" computerName="BACTESPC329" duration="00:00:00.0234091" startTime="2011-08-09T13:09:51.7142859-07:00" endTime="2011-08-09T13:09:51.7454441-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cbdeb517-7ca0-4ca3-a220-79a94c9e2c99">
+      <Output>
+        <StdOut>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus2.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus2.approved.txt"</StdOut>
+        <DebugTrace>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus2.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus2.approved.txt"
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method ItemSmith.WeaponTests.TestIsMagicWeaponPlus2 threw exception: 
+ApprovalTests.Core.Exceptions.ApprovalMismatchException: Failed Approval: Received file C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus2.received.txt does not match approved file C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus2.approved.txt.</Message>
+          <StackTrace>    at ApprovalTests.Approvers.FileApprover.Fail()
+   at ApprovalTests.Core.Approvals.Approve(IApprovalApprover approver, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer, IApprovalNamer namer, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer)
+   at ApprovalTests.Approvals.Approve(Object text)
+   at ItemSmith.WeaponTests.TestIsMagicWeaponPlus2() in C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTest.cs:line 122
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3f2ace5b-b275-485b-bf76-0978379f3d9d" testId="872c6a5b-1abc-eb7b-33b6-6e8fce764164" testName="TestIsMagicWeaponPlus3" computerName="BACTESPC329" duration="00:00:00.0569606" startTime="2011-08-09T13:09:51.7610232-07:00" endTime="2011-08-09T13:09:51.8077605-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3f2ace5b-b275-485b-bf76-0978379f3d9d">
+      <Output>
+        <StdOut>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus3.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus3.approved.txt"</StdOut>
+        <DebugTrace>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus3.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus3.approved.txt"
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method ItemSmith.WeaponTests.TestIsMagicWeaponPlus3 threw exception: 
+ApprovalTests.Core.Exceptions.ApprovalMismatchException: Failed Approval: Received file C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus3.received.txt does not match approved file C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus3.approved.txt.</Message>
+          <StackTrace>    at ApprovalTests.Approvers.FileApprover.Fail()
+   at ApprovalTests.Core.Approvals.Approve(IApprovalApprover approver, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer, IApprovalNamer namer, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer)
+   at ApprovalTests.Approvals.Approve(Object text)
+   at ItemSmith.WeaponTests.TestIsMagicWeaponPlus3() in C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTest.cs:line 138
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="138af5f1-68d1-466c-8d15-a74a6b503f13" testId="3d02fd7f-8d3f-94bd-4e09-0faab933d0ad" testName="TestIsMagicWeaponPlus5" computerName="BACTESPC329" duration="00:00:00.0376930" startTime="2011-08-09T13:09:51.8233396-07:00" endTime="2011-08-09T13:09:51.8544978-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="138af5f1-68d1-466c-8d15-a74a6b503f13">
+      <Output>
+        <StdOut>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5.approved.txt"</StdOut>
+        <DebugTrace>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5.approved.txt"
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method ItemSmith.WeaponTests.TestIsMagicWeaponPlus5 threw exception: 
+ApprovalTests.Core.Exceptions.ApprovalMismatchException: Failed Approval: Received file C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5.received.txt does not match approved file C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5.approved.txt.</Message>
+          <StackTrace>    at ApprovalTests.Approvers.FileApprover.Fail()
+   at ApprovalTests.Core.Approvals.Approve(IApprovalApprover approver, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer, IApprovalNamer namer, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer)
+   at ApprovalTests.Approvals.Approve(Object text)
+   at ItemSmith.WeaponTests.TestIsMagicWeaponPlus5() in C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTest.cs:line 154
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="42ce58e1-0c0f-4d70-b80d-001462ad9653" testId="e283cb07-da66-1879-0fe8-f2ab1121051d" testName="TestIsMagicWeaponPlus5TotalEnhancementIs10" computerName="BACTESPC329" duration="00:00:00.0438608" startTime="2011-08-09T13:09:51.8856560-07:00" endTime="2011-08-09T13:09:51.9323933-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="42ce58e1-0c0f-4d70-b80d-001462ad9653">
+      <Output>
+        <StdOut>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5TotalEnhancementIs10.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5TotalEnhancementIs10.approved.txt"</StdOut>
+        <DebugTrace>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5TotalEnhancementIs10.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5TotalEnhancementIs10.approved.txt"
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method ItemSmith.WeaponTests.TestIsMagicWeaponPlus5TotalEnhancementIs10 threw exception: 
+ApprovalTests.Core.Exceptions.ApprovalMismatchException: Failed Approval: Received file C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5TotalEnhancementIs10.received.txt does not match approved file C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestIsMagicWeaponPlus5TotalEnhancementIs10.approved.txt.</Message>
+          <StackTrace>    at ApprovalTests.Approvers.FileApprover.Fail()
+   at ApprovalTests.Core.Approvals.Approve(IApprovalApprover approver, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer, IApprovalNamer namer, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer)
+   at ApprovalTests.Approvals.Approve(Object text)
+   at ItemSmith.WeaponTests.TestIsMagicWeaponPlus5TotalEnhancementIs10() in C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTest.cs:line 180
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="65391892-3966-4273-87c9-4fa9bef7bdca" testId="2489d3dd-5ff4-d85f-bb90-6c0b54df9f6b" testName="TestItemName" computerName="BACTESPC329" duration="00:00:00.0238001" startTime="2011-08-09T13:09:51.9479724-07:00" endTime="2011-08-09T13:09:51.9791306-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="65391892-3966-4273-87c9-4fa9bef7bdca">
+    </UnitTestResult>
+    <UnitTestResult executionId="d3cb09d1-53cc-4668-8279-ea0406c0105d" testId="efb1cb0c-6efd-e41e-a96f-89bffa7df209" testName="TestMasterworkWeapon" computerName="BACTESPC329" duration="00:00:00.0216098" startTime="2011-08-09T13:09:52.0258679-07:00" endTime="2011-08-09T13:09:52.0570261-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d3cb09d1-53cc-4668-8279-ea0406c0105d">
+    </UnitTestResult>
+    <UnitTestResult executionId="c9e7b44e-64a6-4097-87a3-6f598d407f40" testId="0941ecc6-892d-ef1d-852c-139d50879753" testName="TestNotMasterworkWeapon" computerName="BACTESPC329" duration="00:00:00.0069709" startTime="2011-08-09T13:09:52.0726052-07:00" endTime="2011-08-09T13:09:52.0881843-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c9e7b44e-64a6-4097-87a3-6f598d407f40">
+    </UnitTestResult>
+    <UnitTestResult executionId="af71a979-fa22-4593-925d-e5b10c8603a1" testId="b5096b41-7bb0-bb12-693c-aad117aaa7b1" testName="TestPlus1WeaponWithSpecialAbility" computerName="BACTESPC329" duration="00:00:00.0270875" startTime="2011-08-09T13:09:52.0881843-07:00" endTime="2011-08-09T13:09:52.1193425-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="af71a979-fa22-4593-925d-e5b10c8603a1">
+      <Output>
+        <StdOut>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestPlus1WeaponWithSpecialAbility.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestPlus1WeaponWithSpecialAbility.approved.txt"</StdOut>
+        <DebugTrace>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestPlus1WeaponWithSpecialAbility.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestPlus1WeaponWithSpecialAbility.approved.txt"
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method ItemSmith.WeaponTests.TestPlus1WeaponWithSpecialAbility threw exception: 
+ApprovalTests.Core.Exceptions.ApprovalMismatchException: Failed Approval: Received file C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestPlus1WeaponWithSpecialAbility.received.txt does not match approved file C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestPlus1WeaponWithSpecialAbility.approved.txt.</Message>
+          <StackTrace>    at ApprovalTests.Approvers.FileApprover.Fail()
+   at ApprovalTests.Core.Approvals.Approve(IApprovalApprover approver, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer, IApprovalNamer namer, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer)
+   at ApprovalTests.Approvals.Approve(Object text)
+   at ItemSmith.WeaponTests.TestPlus1WeaponWithSpecialAbility() in C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTest.cs:line 256
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0b4f4066-a804-4478-99a0-2d1c69480ef4" testId="54739ee5-a958-3974-46b3-0f1f453bb85b" testName="TestPlus3WeaponDaysToCreate" computerName="BACTESPC329" duration="00:00:00.0295920" startTime="2011-08-09T13:09:52.1349216-07:00" endTime="2011-08-09T13:09:52.1660798-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0b4f4066-a804-4478-99a0-2d1c69480ef4">
+      <Output>
+        <StdOut>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestPlus3WeaponDaysToCreate.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestPlus3WeaponDaysToCreate.approved.txt"</StdOut>
+        <DebugTrace>move /Y "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestPlus3WeaponDaysToCreate.received.txt" "C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestPlus3WeaponDaysToCreate.approved.txt"
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method ItemSmith.WeaponTests.TestPlus3WeaponDaysToCreate threw exception: 
+ApprovalTests.Core.Exceptions.ApprovalMismatchException: Failed Approval: Received file C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestPlus3WeaponDaysToCreate.received.txt does not match approved file C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTests.TestPlus3WeaponDaysToCreate.approved.txt.</Message>
+          <StackTrace>    at ApprovalTests.Approvers.FileApprover.Fail()
+   at ApprovalTests.Core.Approvals.Approve(IApprovalApprover approver, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer, IApprovalNamer namer, IApprovalFailureReporter reporter)
+   at ApprovalTests.Approvals.Approve(IApprovalWriter writer)
+   at ApprovalTests.Approvals.Approve(Object text)
+   at ItemSmith.WeaponTests.TestPlus3WeaponDaysToCreate() in C:\Documents and Settings\wgetz\Experiments\ItemSmith\ItemSmithWorkShop\ItemSmithWorkShop\WeaponTest.cs:line 225
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
