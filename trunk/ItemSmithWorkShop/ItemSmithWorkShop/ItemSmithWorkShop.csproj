@@ -33,11 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ApprovalTests">
-      <HintPath>..\..\..\Approvals\ApprovalTests.dll</HintPath>
+    <Reference Include="ApprovalTests, Version=1.0.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\VS dll Libraries\ApprovalTests\ApprovalTests.dll</HintPath>
     </Reference>
-    <Reference Include="ApprovalUtilities">
-      <HintPath>..\..\..\Approvals\ApprovalUtilities.dll</HintPath>
+    <Reference Include="ApprovalUtilities, Version=1.0.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\VS dll Libraries\ApprovalTests\ApprovalUtilities.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -51,9 +51,15 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cost.cs" />
+    <Compile Include="Damage.cs" />
+    <Compile Include="MaterialType.cs" />
+    <Compile Include="PreRequisites.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BaseWeapon.cs" />
+    <Compile Include="Weapon.cs" />
     <Compile Include="WeaponTest.cs" />
+    <Compile Include="Weight.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

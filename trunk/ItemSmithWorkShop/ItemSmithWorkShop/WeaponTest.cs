@@ -1,10 +1,9 @@
 ﻿using System;
-using ApprovalTests.Core;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ApprovalTests;
 using ApprovalTests.Reporters;
-using Approvals = ApprovalTests.Approvals;
 
-namespace ItemSmith
+namespace ItemSmithWorkShop
 {
 
 	public class MockWeapon : BaseWeapon
