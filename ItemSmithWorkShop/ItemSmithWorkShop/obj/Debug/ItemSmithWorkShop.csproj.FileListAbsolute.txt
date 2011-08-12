@@ -15,3 +15,5 @@ C:\Documents and Settings\wgetz\Experiments\ItemSmithWorkShop\ItemSmithWorkShop\
 C:\Documents and Settings\wgetz\Experiments\ItemSmithWorkShop\ItemSmithWorkShop\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\wgetz\Experiments\ItemSmithWorkShop\ItemSmithWorkShop\obj\Debug\ItemSmithWorkShop.dll
 C:\Documents and Settings\wgetz\Experiments\ItemSmithWorkShop\ItemSmithWorkShop\obj\Debug\ItemSmithWorkShop.pdb
+C:\Users\William\Documents\Visual Studio 2010\GameRelated\ItemSmithWorkShop\ItemSmithWorkShop\bin\Debug\ApprovalTests.dll
+C:\Users\William\Documents\Visual Studio 2010\GameRelated\ItemSmithWorkShop\ItemSmithWorkShop\bin\Debug\ApprovalUtilities.dll
