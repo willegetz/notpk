@@ -1,0 +1,66 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:StringUtilities.cs" caret="25" fromTop="0" />
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:ObjectUtilities.cs" caret="1913" fromTop="31" />
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:HexVitalsTest.cs" caret="131" fromTop="4" />
+      <File id="447C38E9-D359-475F-BD99-785913550D4B/f:HexVitals.cs" caret="1108" fromTop="9" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:ObjectUtilities.cs" caret="1913" fromTop="66" />
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:StringUtilities.cs" caret="25" fromTop="0" />
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:HexVitalsTest.cs" caret="507" fromTop="16" />
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:HexVitalsTest.cs" caret="509" fromTop="17" />
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:HexVitalsTest.cs" caret="754" fromTop="25" />
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:HexVitalsTest.cs" caret="999" fromTop="33" />
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:HexVitalsTest.cs" caret="1246" fromTop="41" />
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:HexVitalsTest.cs" caret="1492" fromTop="49" />
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:HexVitalsTest.cs" caret="1738" fromTop="57" />
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:HexVitalsTest.cs" caret="1983" fromTop="65" />
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:HexVitalsTest.cs" caret="573" fromTop="18" />
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:HexVitalsTest.cs" caret="818" fromTop="26" />
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:HexVitalsTest.cs" caret="1065" fromTop="28" />
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:HexVitalsTest.cs" caret="1311" fromTop="24" />
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:HexVitalsTest.cs" caret="1557" fromTop="26" />
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:HexVitalsTest.cs" caret="1802" fromTop="25" />
+      <File id="31A36535-B22B-4A76-BBC3-50B849115BE1/f:HexVitalsTest.cs" caret="202" fromTop="3" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files (x86)\NUnit 2.5.5\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="var" priority="0" />
+      <Item value="new" priority="0" />
+      <Item value="Hexagonvitals" priority="0" />
+      <Item value="HexVitals" priority="0" />
+      <Item value="vitals" priority="1" />
+      <Item value="Approvals" priority="0" />
+      <Item value="UseReporter" priority="0" />
+      <Item value="typeof" priority="0" />
+      <Item value="DiffReporter" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:HexagonVitals01.HexVitals">
+      <Item value="DeriveSideLength`0" priority="0" />
+      <Item value="GetPropertiesAsString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ApprovalTests.Approvals">
+      <Item value="Approve`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
