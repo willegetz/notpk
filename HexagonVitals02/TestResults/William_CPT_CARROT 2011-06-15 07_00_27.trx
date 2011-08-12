@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="bb574454-7c97-4a86-86db-c9bb2343e754" name="William@CPT_CARROT 2011-06-15 07:00:27" runUser="Cpt_Carrot\William" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="c2a6f356-a881-46ce-9115-08dfffbbf9f7">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="William_CPT_CARROT 2011-06-15 07_00_27">
+      <DeploymentItem filename="C:\Users\William\Documents\Visual Studio 2010\TDDMurachsBook\HexVitalsWithTests\HexagonVitals02\Hexagonvitals.Test\ApprovalTests.dll" />
+      <DeploymentItem filename="C:\Users\William\Documents\Visual Studio 2010\TDDMurachsBook\HexVitalsWithTests\HexagonVitals02\HexagonVitals01\bin\Debug\HexagonVitals01.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-06-15T07:00:27.3769320-07:00" queuing="2011-06-15T07:00:30.2040937-07:00" start="2011-06-15T07:00:30.4691089-07:00" finish="2011-06-15T07:00:32.5072254-07:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="7" executed="7" passed="7" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestMeasurementTypeZero" storage="c:\users\william\documents\visual studio 2010\tddmurachsbook\hexvitalswithtests\hexagonvitals02\hexagonvitals.test\bin\debug\hexagonvitals.test.dll" id="756806fc-abd7-5e06-7fd4-462e6fd2c5bb">
+      <Execution id="a82ae4b3-e48f-4190-8a7d-67842412967a" />
+      <TestMethod codeBase="C:/Users/William/Documents/Visual Studio 2010/TDDMurachsBook/HexVitalsWithTests/HexagonVitals02/Hexagonvitals.Test/bin/Debug/Hexagonvitals.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Hexagonvitals.Test.HexVitalsTest, Hexagonvitals.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMeasurementTypeZero" />
+    </UnitTest>
+    <UnitTest name="TestMeasurementTypeThree" storage="c:\users\william\documents\visual studio 2010\tddmurachsbook\hexvitalswithtests\hexagonvitals02\hexagonvitals.test\bin\debug\hexagonvitals.test.dll" id="1be4b2fe-7b61-a0f3-8a7c-e9be00bcfc25">
+      <Execution id="9b919656-1518-4688-9f5d-39c3740e6941" />
+      <TestMethod codeBase="C:/Users/William/Documents/Visual Studio 2010/TDDMurachsBook/HexVitalsWithTests/HexagonVitals02/Hexagonvitals.Test/bin/Debug/Hexagonvitals.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Hexagonvitals.Test.HexVitalsTest, Hexagonvitals.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMeasurementTypeThree" />
+    </UnitTest>
+    <UnitTest name="TestMeasurementTypeFive" storage="c:\users\william\documents\visual studio 2010\tddmurachsbook\hexvitalswithtests\hexagonvitals02\hexagonvitals.test\bin\debug\hexagonvitals.test.dll" id="43ac6133-40cb-1c47-390d-db50ffe794aa">
+      <Execution id="e0e4d249-d637-4f3d-b95d-08d218b9b54d" />
+      <TestMethod codeBase="C:/Users/William/Documents/Visual Studio 2010/TDDMurachsBook/HexVitalsWithTests/HexagonVitals02/Hexagonvitals.Test/bin/Debug/Hexagonvitals.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Hexagonvitals.Test.HexVitalsTest, Hexagonvitals.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMeasurementTypeFive" />
+    </UnitTest>
+    <UnitTest name="TestMeasurementTypeSix" storage="c:\users\william\documents\visual studio 2010\tddmurachsbook\hexvitalswithtests\hexagonvitals02\hexagonvitals.test\bin\debug\hexagonvitals.test.dll" id="03271c33-0945-33ae-2bea-834454680095">
+      <Execution id="2ceeacf5-ee2e-423a-844f-f6d7ffd94466" />
+      <TestMethod codeBase="C:/Users/William/Documents/Visual Studio 2010/TDDMurachsBook/HexVitalsWithTests/HexagonVitals02/Hexagonvitals.Test/bin/Debug/Hexagonvitals.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Hexagonvitals.Test.HexVitalsTest, Hexagonvitals.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMeasurementTypeSix" />
+    </UnitTest>
+    <UnitTest name="TestMeasurementTypeOne" storage="c:\users\william\documents\visual studio 2010\tddmurachsbook\hexvitalswithtests\hexagonvitals02\hexagonvitals.test\bin\debug\hexagonvitals.test.dll" id="7b1443d7-4392-3d99-deb6-1ed8e014d6a3">
+      <Execution id="b894a603-7da6-47f5-a2a9-963e3e61e7c3" />
+      <TestMethod codeBase="C:/Users/William/Documents/Visual Studio 2010/TDDMurachsBook/HexVitalsWithTests/HexagonVitals02/Hexagonvitals.Test/bin/Debug/Hexagonvitals.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Hexagonvitals.Test.HexVitalsTest, Hexagonvitals.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMeasurementTypeOne" />
+    </UnitTest>
+    <UnitTest name="TestMeasurementTypeFour" storage="c:\users\william\documents\visual studio 2010\tddmurachsbook\hexvitalswithtests\hexagonvitals02\hexagonvitals.test\bin\debug\hexagonvitals.test.dll" id="45248b92-6dd3-e46d-104b-b1aeb363c5fd">
+      <Execution id="da9f1a32-d53a-4346-9094-3331137e8d56" />
+      <TestMethod codeBase="C:/Users/William/Documents/Visual Studio 2010/TDDMurachsBook/HexVitalsWithTests/HexagonVitals02/Hexagonvitals.Test/bin/Debug/Hexagonvitals.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Hexagonvitals.Test.HexVitalsTest, Hexagonvitals.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMeasurementTypeFour" />
+    </UnitTest>
+    <UnitTest name="TestMeasurementTypeTwo" storage="c:\users\william\documents\visual studio 2010\tddmurachsbook\hexvitalswithtests\hexagonvitals02\hexagonvitals.test\bin\debug\hexagonvitals.test.dll" id="9ee2242d-4c72-8f56-56b6-a593f63b8a6c">
+      <Execution id="8c5229fb-f22d-4840-b73c-f111643713fe" />
+      <TestMethod codeBase="C:/Users/William/Documents/Visual Studio 2010/TDDMurachsBook/HexVitalsWithTests/HexagonVitals02/Hexagonvitals.Test/bin/Debug/Hexagonvitals.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Hexagonvitals.Test.HexVitalsTest, Hexagonvitals.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMeasurementTypeTwo" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="03271c33-0945-33ae-2bea-834454680095" executionId="2ceeacf5-ee2e-423a-844f-f6d7ffd94466" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1be4b2fe-7b61-a0f3-8a7c-e9be00bcfc25" executionId="9b919656-1518-4688-9f5d-39c3740e6941" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="43ac6133-40cb-1c47-390d-db50ffe794aa" executionId="e0e4d249-d637-4f3d-b95d-08d218b9b54d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="45248b92-6dd3-e46d-104b-b1aeb363c5fd" executionId="da9f1a32-d53a-4346-9094-3331137e8d56" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="756806fc-abd7-5e06-7fd4-462e6fd2c5bb" executionId="a82ae4b3-e48f-4190-8a7d-67842412967a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7b1443d7-4392-3d99-deb6-1ed8e014d6a3" executionId="b894a603-7da6-47f5-a2a9-963e3e61e7c3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9ee2242d-4c72-8f56-56b6-a593f63b8a6c" executionId="8c5229fb-f22d-4840-b73c-f111643713fe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="2ceeacf5-ee2e-423a-844f-f6d7ffd94466" testId="03271c33-0945-33ae-2bea-834454680095" testName="TestMeasurementTypeSix" computerName="CPT_CARROT" duration="00:00:00.0654951" startTime="2011-06-15T07:00:30.7381243-07:00" endTime="2011-06-15T07:00:31.9661945-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2ceeacf5-ee2e-423a-844f-f6d7ffd94466">
+    </UnitTestResult>
+    <UnitTestResult executionId="9b919656-1518-4688-9f5d-39c3740e6941" testId="1be4b2fe-7b61-a0f3-8a7c-e9be00bcfc25" testName="TestMeasurementTypeThree" computerName="CPT_CARROT" duration="00:00:00.0056520" startTime="2011-06-15T07:00:32.0101970-07:00" endTime="2011-06-15T07:00:32.0541995-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9b919656-1518-4688-9f5d-39c3740e6941">
+    </UnitTestResult>
+    <UnitTestResult executionId="e0e4d249-d637-4f3d-b95d-08d218b9b54d" testId="43ac6133-40cb-1c47-390d-db50ffe794aa" testName="TestMeasurementTypeFive" computerName="CPT_CARROT" duration="00:00:00.0048093" startTime="2011-06-15T07:00:32.0772009-07:00" endTime="2011-06-15T07:00:32.1212034-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e0e4d249-d637-4f3d-b95d-08d218b9b54d">
+    </UnitTestResult>
+    <UnitTestResult executionId="da9f1a32-d53a-4346-9094-3331137e8d56" testId="45248b92-6dd3-e46d-104b-b1aeb363c5fd" testName="TestMeasurementTypeFour" computerName="CPT_CARROT" duration="00:00:00.0073636" startTime="2011-06-15T07:00:32.1492050-07:00" endTime="2011-06-15T07:00:32.1732063-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="da9f1a32-d53a-4346-9094-3331137e8d56">
+    </UnitTestResult>
+    <UnitTestResult executionId="a82ae4b3-e48f-4190-8a7d-67842412967a" testId="756806fc-abd7-5e06-7fd4-462e6fd2c5bb" testName="TestMeasurementTypeZero" computerName="CPT_CARROT" duration="00:00:00.0053343" startTime="2011-06-15T07:00:32.1882072-07:00" endTime="2011-06-15T07:00:32.2092084-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a82ae4b3-e48f-4190-8a7d-67842412967a">
+    </UnitTestResult>
+    <UnitTestResult executionId="b894a603-7da6-47f5-a2a9-963e3e61e7c3" testId="7b1443d7-4392-3d99-deb6-1ed8e014d6a3" testName="TestMeasurementTypeOne" computerName="CPT_CARROT" duration="00:00:00.0053867" startTime="2011-06-15T07:00:32.2372100-07:00" endTime="2011-06-15T07:00:32.2632115-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b894a603-7da6-47f5-a2a9-963e3e61e7c3">
+    </UnitTestResult>
+    <UnitTestResult executionId="8c5229fb-f22d-4840-b73c-f111643713fe" testId="9ee2242d-4c72-8f56-56b6-a593f63b8a6c" testName="TestMeasurementTypeTwo" computerName="CPT_CARROT" duration="00:00:00.0050613" startTime="2011-06-15T07:00:32.2842127-07:00" endTime="2011-06-15T07:00:32.3142144-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8c5229fb-f22d-4840-b73c-f111643713fe">
+    </UnitTestResult>
+  </Results>
+</TestRun>

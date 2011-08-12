@@ -1,0 +1,7 @@
+ApothemLength = 6
+Area = 124.707658144959
+CenterToVertex = 6.92820323027551
+PerimeterLength = 41.5692193816531
+SideLength = 6.92820323027551
+SideToSideLength = 12
+VertexToVertexLength = 13.856406460551
