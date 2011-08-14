@@ -19,14 +19,9 @@ namespace ItemSmithWorkShop
 			currencyType = currency;
 		}
 
-		public string DisplayWeaponCost()
-		{
-			return String.Format("Weapon Cost:\t{0} {1}", weaponCost.ToString(), currencyType);
-		}
-
 		public override string ToString()
 		{
-			return String.Format("Weapon Cost:\t{0} {1}", weaponCost.ToString(), currencyType);
+			return String.Format("Weapon Cost:\t\t{0} {1}", weaponCost.ToString(), currencyType);
 		}
 		// Operate on the cost
 		// Display the cost and currency

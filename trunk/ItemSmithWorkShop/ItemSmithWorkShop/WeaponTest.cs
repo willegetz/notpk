@@ -284,26 +284,26 @@ namespace ItemSmithWorkShop
 
 			Approvals.Approve(displayWeapon);
 		}
-	}
 
-	public class DisplayWeapon
-	{
-		public string weaponName;
-		public string weaponPreRequisites;
-		public string weaponCost;
-
-		public DisplayWeapon(Weapon weapon, PreRequisites preRequisites, Cost cost)
+		[TestMethod]
+		public void TestDisplayWeaponDamage()
 		{
-			weaponName = weapon.DisplayWeaponName();
-			weaponPreRequisites = preRequisites.DisplayPreRequisites();
-			weaponCost = cost.DisplayWeaponCost();
+			Damage damage = new Damage("1d4", "piercing or slashing", "19-20", "x2");
+
+			Approvals.Approve(damage);
 		}
 
-		public override string ToString()
+		[TestMethod]
+		public void TestDisplayNamePreRequisiteCostAndDamage()
 		{
-			return String.Format("{0}\r{1}\r{2}", weaponName, weaponPreRequisites, weaponCost);
+			Weapon weapon = new Weapon("Dagger");
+			PreRequisites preRequisites = new PreRequisites("Simple", "Light", "Melee");
+			Cost cost = new Cost(2, "gold pieces");
+			Damage damage = new Damage("1d4", "piercing or slashing", "19-20", "x2");
+
+			DisplayWeapon displayWeapon = new DisplayWeapon(weapon, preRequisites, cost, damage);
+
+			Approvals.Approve(displayWeapon);
 		}
-
-
 	}
 }

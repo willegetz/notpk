@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Cost.cs" />
     <Compile Include="Damage.cs" />
+    <Compile Include="DisplayWeapon.cs" />
     <Compile Include="MaterialType.cs" />
     <Compile Include="PreRequisites.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

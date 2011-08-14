@@ -22,14 +22,9 @@ namespace ItemSmithWorkShop
 			attackType = type;
 		}
 
-		public string DisplayPreRequisites()
-		{
-			return String.Format("Weapon Proficiency:\t{0}\rWeapon Category:\t{1}\rWeapon Attack Type:\t{2}", weaponProficiency, weaponCategory, attackType);
-		}
-
 		public override string ToString()
 		{
-			return String.Format("Weapon Proficiency:\t{0}\rWeapon Category:\t{1}\rWeapon Attack Type:\t{2}", weaponProficiency, weaponCategory, attackType);
+			return String.Format("Weapon Proficiency:\t{0}\rWeapon Category:\t{1} {2}", weaponProficiency, weaponCategory, attackType);
 		}
 		// Display the proficiency
 	}
