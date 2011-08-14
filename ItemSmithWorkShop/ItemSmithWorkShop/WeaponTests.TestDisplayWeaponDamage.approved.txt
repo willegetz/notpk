@@ -1,0 +1,1 @@
+Weapon Damege:		1d4 piercing or slashingWeapon Threat Range:19-20 / x2

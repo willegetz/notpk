@@ -1,1 +1,1 @@
-Weapon Name:	DaggerWeapon Proficiency:	SimpleWeapon Category:	LightWeapon Attack Type:	MeleeWeapon Cost:	2 gold pieces
+Weapon Name:		DaggerWeapon Proficiency:	SimpleWeapon Category:	Light MeleeWeapon Cost:		2 gold pieces

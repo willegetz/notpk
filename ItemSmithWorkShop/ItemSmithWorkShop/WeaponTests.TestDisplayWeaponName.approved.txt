@@ -1,1 +1,1 @@
-Weapon Name:	Dagger
+Weapon Name:		Dagger
