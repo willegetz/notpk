@@ -7,15 +7,20 @@ namespace ItemSmithWorkShop
 {
 	//		Material Type
 	//			Cost adjustment
-	public class MaterialType
+	public class WeaponMake
 	{
 		public string materialType;
 		public int costAdjustment;
 
-		public MaterialType(string material, int adjustment)
+		public WeaponMake(string material, int adjustment)
 		{
 			materialType = material;
 			costAdjustment = adjustment;
+		}
+
+		public override string ToString()
+		{
+			return String.Format()
 		}
 	}
 }
