@@ -17,7 +17,7 @@ namespace ItemSmithWorkShop
 		public new string WeaponProficiency = "Simple";
 		public new string WeaponCategory = "Light";
 		public new string WeaponAttackType = "Melee";
-		public new decimal WeaponCost = 2M;
+		public decimal WeaponCost = 2M;
 		public new string CurrencyType = " gold pieces";
 		public new int WeaponToHitModifier = 0;
 		public new string WeaponBaseDamage = "1d4";
@@ -302,6 +302,24 @@ namespace ItemSmithWorkShop
 			Damage damage = new Damage("1d4", "piercing or slashing", "19-20", "x2");
 
 			DisplayWeapon displayWeapon = new DisplayWeapon(weapon, preRequisites, cost, damage);
+
+			Approvals.Approve(displayWeapon);
+		}
+
+		[TestMethod]
+		public void TestDisplayMasterwork()
+		{
+			// Failing test. Have to figure out why.
+
+			Weapon weapon = new Weapon("Dagger");
+			WeaponMake weaponMake = new WeaponMake("steel", 300);
+			PreRequisites preRequisites = new PreRequisites("Simple", "Light", "Melee");
+			Cost cost = new Cost(2, "gold pieces");
+			Damage damage = new Damage("1d4", "piercing or slashing", "19-20", "x2");
+
+			weaponMake.IsMasterWorkQualifier(true);
+
+			DisplayWeapon displayWeapon = new DisplayWeapon(weapon, weaponMake, preRequisites, cost, damage);
 
 			Approvals.Approve(displayWeapon);
 		}
