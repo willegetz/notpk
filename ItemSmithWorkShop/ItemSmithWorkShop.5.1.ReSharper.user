@@ -13,7 +13,7 @@
       <File id="9CCCBA02-1EE3-4694-854F-C3555092D7CD/f:WeaponMake.cs" caret="446" fromTop="21" />
       <File id="9CCCBA02-1EE3-4694-854F-C3555092D7CD/f:Cost.cs" caret="90" fromTop="4" />
       <File id="9CCCBA02-1EE3-4694-854F-C3555092D7CD/f:DisplayWeapon.cs" caret="1306" fromTop="30" />
-      <File id="9CCCBA02-1EE3-4694-854F-C3555092D7CD/f:WeaponTest.cs" caret="9900" fromTop="23" />
+      <File id="9CCCBA02-1EE3-4694-854F-C3555092D7CD/f:WeaponTest.cs" caret="9900" fromTop="311" />
     </RecentFiles>
     <RecentEdits>
       <File id="9CCCBA02-1EE3-4694-854F-C3555092D7CD/f:BaseWeapon.cs" caret="4954" fromTop="9" />
@@ -55,8 +55,7 @@
     <Providers />
   </UnitTestRunner>
   <UnitTestRunnerNUnit>
-    <NUnitInstallDir IsNull="False">
-    </NUnitInstallDir>
+    <NUnitInstallDir>C:\Program Files\NUnit 2.5.10\bin\net-2.0\</NUnitInstallDir>
     <UseAddins>Never</UseAddins>
   </UnitTestRunnerNUnit>
   <CompletionStatisticsManager>
