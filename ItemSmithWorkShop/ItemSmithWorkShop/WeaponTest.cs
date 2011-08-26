@@ -308,8 +308,6 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDisplayMasterwork()
 		{
-			// Failing test. Have to figure out why.
-
 			Weapon weapon = new Weapon("Dagger");
 			Cost cost = new Cost(2, "gold pieces");
 			WeaponMake weaponMake = new WeaponMake("Steel", 0, 1, "pound");
