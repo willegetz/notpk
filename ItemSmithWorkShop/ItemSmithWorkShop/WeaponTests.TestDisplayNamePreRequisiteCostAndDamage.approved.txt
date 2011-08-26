@@ -1,1 +1,7 @@
-Weapon Name:		DaggerWeapon Proficiency:	SimpleWeapon Category:	Light MeleeWeapon Cost:		2 gold piecesWeapon Damege:		1d4 piercing or slashingWeapon Threat Range:19-20 / x2
+Weapon Name: DaggerWeapon Proficiency: Simple
+Weapon Category: Light
+Attack Type: MeleeBase Cost: 2
+Currency Type: gold piecesBase Damage: 1d4
+Damage Type: piercing or slashing
+Threat Range: 19-20
+Critical Multiplier x2

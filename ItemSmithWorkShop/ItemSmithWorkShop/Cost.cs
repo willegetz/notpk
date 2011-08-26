@@ -17,7 +17,7 @@
 
 		public override string ToString()
 		{
-			return string.Format("Base Cost: {0} Currency Type: {1}", WeaponCost, currencyType);
+			return string.Format("Base Cost: {0}\nCurrency Type: {1}", WeaponCost, currencyType);
 		}
 		// Operate on the cost
 		// Display the cost and currency

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ItemSmithWorkShop
 {
@@ -35,7 +32,7 @@ namespace ItemSmithWorkShop
 			WeaponPreRequisites = String.Format("Weapon Proficiency:\t{0}\rWeapon Category:\t{1} {2}",
 			                                    preRequisites.weaponProficiency, preRequisites.weaponCategory, preRequisites.attackType);
 			WeaponCost = String.Format("Weapon Cost:\t\t{0} {1}", (cost.WeaponCost + weaponComposition.AdjustedCost), cost.currencyType);//cost.ToString();)
-			WeaponDamage = String.Format("Weapon Damege:\t\t{0} {1}\rWeapon Threat Range:{2} / {3}", damage.BaseDamage, damage.DamageType, damage.ThreatRange, damage.CriticalMultiplier);
+			WeaponDamage = String.Format("Weapon To Hit:\t\t{0}\rWeapon Damage:\t\t{1} {2}\rWeapon Threat Range:{3} / {4}", weaponComposition.MasterWorkToHit, damage.BaseDamage, damage.DamageType, damage.ThreatRange, damage.CriticalMultiplier);
 			WeaponSturdiness = String.Format("Weight:\t\t\t\t{0} {1}\rWeapon Hardness:\t{2}\rWeapon Hit Points:\t{3}",
 			                                 weaponComposition.AdjustedWeight, weaponComposition.WeightType,
 			                                 durability.WeaponHardness, durability.WeaponHitPoints);

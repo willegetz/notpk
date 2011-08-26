@@ -1,1 +1,4 @@
-Weapon Damege:		1d4 piercing or slashingWeapon Threat Range:19-20 / x2
+Base Damage: 1d4
+Damage Type: piercing or slashing
+Threat Range: 19-20
+Critical Multiplier x2
