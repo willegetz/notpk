@@ -312,14 +312,13 @@ namespace ItemSmithWorkShop
 			// Failing test. Have to figure out why.
 
 			Weapon weapon = new Weapon("Dagger");
-			WeaponMake weaponMake = new WeaponMake("steel", 300);
-			PreRequisites preRequisites = new PreRequisites("Simple", "Light", "Melee");
 			Cost cost = new Cost(2, "gold pieces");
+			PreRequisites preRequisites = new PreRequisites("Simple", "Light", "Melee");
 			Damage damage = new Damage("1d4", "piercing or slashing", "19-20", "x2");
 
-			weaponMake.IsMasterWorkQualifier(true);
+			cost.IsMasterWorkQualifier(true);
 
-			DisplayWeapon displayWeapon = new DisplayWeapon(weapon, weaponMake, preRequisites, cost, damage);
+			DisplayWeapon displayWeapon = new DisplayWeapon(weapon, preRequisites, cost, damage);
 
 			Approvals.Approve(displayWeapon);
 		}
