@@ -7,3 +7,12 @@ C:\Users\William\Documents\Visual Studio 2010\TDDMurachsBook\HexVitalsWithTests\
 C:\Users\William\Documents\Visual Studio 2010\TDDMurachsBook\HexVitalsWithTests\HexagonVitals02\HexagonVitals01\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\William\Documents\Visual Studio 2010\TDDMurachsBook\HexVitalsWithTests\HexagonVitals02\HexagonVitals01\obj\x86\Debug\HexagonVitals01.exe
 C:\Users\William\Documents\Visual Studio 2010\TDDMurachsBook\HexVitalsWithTests\HexagonVitals02\HexagonVitals01\obj\x86\Debug\HexagonVitals01.pdb
+C:\Users\William\Documents\Visual Studio 2010\GameRelated\HexVitals\HexagonVitals01\obj\x86\Debug\HexagonVitals01.exe
+C:\Users\William\Documents\Visual Studio 2010\GameRelated\HexVitals\HexagonVitals01\obj\x86\Debug\HexagonVitals01.pdb
+C:\Users\William\Documents\Visual Studio 2010\GameRelated\HexVitals\HexagonVitals01\bin\Debug\HexagonVitals01.exe
+C:\Users\William\Documents\Visual Studio 2010\GameRelated\HexVitals\HexagonVitals01\bin\Debug\HexagonVitals01.pdb
+C:\Users\William\Documents\Visual Studio 2010\GameRelated\HexVitals\HexagonVitals01\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\William\Documents\Visual Studio 2010\GameRelated\HexVitals\HexagonVitals01\obj\x86\Debug\HexagonVitals01.Form1.resources
+C:\Users\William\Documents\Visual Studio 2010\GameRelated\HexVitals\HexagonVitals01\obj\x86\Debug\HexagonVitals01.Properties.Resources.resources
+C:\Users\William\Documents\Visual Studio 2010\GameRelated\HexVitals\HexagonVitals01\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\William\Documents\Visual Studio 2010\GameRelated\HexVitals\HexagonVitals01\obj\x86\Debug\GenerateResource.write.1.tlog
