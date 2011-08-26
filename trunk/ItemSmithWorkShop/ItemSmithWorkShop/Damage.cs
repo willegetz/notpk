@@ -1,4 +1,7 @@
-﻿namespace ItemSmithWorkShop
+﻿using System;
+using System.Collections.Generic;
+
+namespace ItemSmithWorkShop
 {
 	//		Damage
 	//			Base Damage
@@ -7,6 +10,8 @@
 	//			Damage Type
 	public class Damage
 	{
+		public IList<String> combatDamage = new List<String>();
+
 		public string BaseDamage { get; set; }
 		public string DamageType { get; set; }
 		public string ThreatRange { get; set; }
@@ -14,6 +19,11 @@
 
 		public Damage(string damage, string type, string threat, string critical)
 		{
+			combatDamage.Add(damage);
+			combatDamage.Add(type);
+			combatDamage.Add(threat);
+			combatDamage.Add(critical);
+
 			BaseDamage = damage;
 			DamageType = type;
 			ThreatRange = threat;
