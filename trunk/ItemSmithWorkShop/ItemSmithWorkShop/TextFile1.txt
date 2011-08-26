@@ -18,3 +18,29 @@ Weapon Weight:		1 pound
 Damage Type(s):		Piercing or Slashing
 Hardness:			10
 Hit Points			2
+
+
+[Magic +] [Quality] [Material] [Weapon] [of] [Magic Property] [and] [Magic Property] ...
+[Race Requirement] [Alignment Requirement] [Proficiency Requirement]
+[Weapon Class]
+[To Hit]
+[Damage] [Magic +] [Damage Modifier] [Damage Types] [Additional Damage Types]
+[Hardness] [Hit Points]
+[Weight]
+[Cost]
+[Notes]
+
+*************************************************
+*					Dagger						*
+*	+0 To Hit | 1d4 +0 | 19-20/ x2				*
+*************************************************
+*	Simple Weapon Proficiency					*
+*	Light Melee									*
+*	Piercing or Slashing						*
+*												*
+*	Hardness:	10								*
+*	Hit Points:	2								*
+*												*
+*	Weight:		1 pound							*
+*	2 gold pieces								*
+*************************************************

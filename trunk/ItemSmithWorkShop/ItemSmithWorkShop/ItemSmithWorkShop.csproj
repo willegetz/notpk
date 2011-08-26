@@ -60,7 +60,7 @@
     <Compile Include="BaseWeapon.cs" />
     <Compile Include="Weapon.cs" />
     <Compile Include="WeaponTest.cs" />
-    <Compile Include="Weight.cs" />
+    <Compile Include="Durability.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

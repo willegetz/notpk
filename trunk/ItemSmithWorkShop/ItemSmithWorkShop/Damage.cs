@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace ItemSmithWorkShop
+﻿namespace ItemSmithWorkShop
 {
 	//		Damage
 	//			Base Damage
@@ -27,7 +22,7 @@ namespace ItemSmithWorkShop
 
 		public override string ToString()
 		{
-			return String.Format("Weapon Damege:\t\t{0} {1}\rWeapon Threat Range:{2} / {3}", BaseDamage, DamageType, ThreatRange, CriticalMultiplier);
+			return string.Format("Base Damage: {0} Damage Type: {1} Threat Range: {2} Critical Multiplier {3}", BaseDamage, DamageType, ThreatRange, CriticalMultiplier);
 		}
 	}
 }
