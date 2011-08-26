@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ItemSmithWorkShop
 {
@@ -21,7 +18,7 @@ namespace ItemSmithWorkShop
 
 		public override string ToString()
 		{
-			return String.Format("Weapon Hardness: {0} Weapon Hit Points {1}", WeaponHardness, WeaponHitPoints);
+			return String.Format("Weapon Hardness: {0}\nWeapon Hit Points {1}", WeaponHardness, WeaponHitPoints);
 		}
 	}
 }

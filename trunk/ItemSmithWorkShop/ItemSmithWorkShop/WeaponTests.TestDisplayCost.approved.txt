@@ -1,1 +1,2 @@
-Weapon Cost:		2 gold pieces
+Base Cost: 2
+Currency Type: gold pieces

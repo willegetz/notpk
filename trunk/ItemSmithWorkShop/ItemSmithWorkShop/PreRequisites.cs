@@ -21,7 +21,7 @@ namespace ItemSmithWorkShop
 
 		public override string ToString()
 		{
-			return String.Format("Weapon Proficiency: {0} Weapon Category: {1} Attack Type: {2}", weaponProficiency, weaponCategory, attackType);
+			return String.Format("Weapon Proficiency: {0}\nWeapon Category: {1}\nAttack Type: {2}", weaponProficiency, weaponCategory, attackType);
 		}
 		// Display the proficiency
 	}

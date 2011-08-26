@@ -22,7 +22,7 @@
 
 		public override string ToString()
 		{
-			return string.Format("Base Damage: {0} Damage Type: {1} Threat Range: {2} Critical Multiplier {3}", BaseDamage, DamageType, ThreatRange, CriticalMultiplier);
+			return string.Format("Base Damage: {0}\nDamage Type: {1}\nThreat Range: {2}\nCritical Multiplier {3}", BaseDamage, DamageType, ThreatRange, CriticalMultiplier);
 		}
 	}
 }
