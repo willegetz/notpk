@@ -20,7 +20,7 @@ namespace ItemSmithWorkShop
 
 		public override string ToString()
 		{
-			return String.Format("Weapon Name:\t\t{0}", weaponName);
+			return String.Format("Weapon Name:\t\t{0} {1}", weaponName);
 		}
 	}
 }
