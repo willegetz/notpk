@@ -313,12 +313,14 @@ namespace ItemSmithWorkShop
 
 			Weapon weapon = new Weapon("Dagger");
 			Cost cost = new Cost(2, "gold pieces");
+			WeaponMake weaponMake = new WeaponMake("Steel", 0, 1, "pound");
 			PreRequisites preRequisites = new PreRequisites("Simple", "Light", "Melee");
 			Damage damage = new Damage("1d4", "piercing or slashing", "19-20", "x2");
+			Durability durability = new Durability(10, 2);
 
-			cost.IsMasterWorkQualifier(true);
+			weaponMake.IsMasterWorkQualifier(true);
 
-			DisplayWeapon displayWeapon = new DisplayWeapon(weapon, preRequisites, cost, damage);
+			DisplayWeapon displayWeapon = new DisplayWeapon(weapon, weaponMake, preRequisites, cost, damage, durability);
 
 			Approvals.Approve(displayWeapon);
 		}
