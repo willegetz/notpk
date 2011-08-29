@@ -267,7 +267,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDisplayWeaponName()
 		{
-			Weapon weapon = new Weapon("Dagger");
+			NameOfWeapon weapon = new NameOfWeapon("Dagger");
 			
 			Approvals.Approve(weapon);
 		}
@@ -275,7 +275,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDisplayPreRequisiteAndCost()
 		{
-			Weapon weapon = new Weapon("Dagger");
+			NameOfWeapon weapon = new NameOfWeapon("Dagger");
 			PreRequisites preRequisites =  new PreRequisites("Simple", "Light", "Melee");
 			Cost cost = new Cost(2, "gold pieces");
 
@@ -295,7 +295,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDisplayNamePreRequisiteCostAndDamage()
 		{
-			Weapon weapon = new Weapon("Dagger");
+			NameOfWeapon weapon = new NameOfWeapon("Dagger");
 			PreRequisites preRequisites = new PreRequisites("Simple", "Light", "Melee");
 			Cost cost = new Cost(2, "gold pieces");
 			Damage damage = new Damage("1d4", "piercing or slashing", "19-20", "x2");
@@ -308,7 +308,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDisplayMasterwork()
 		{
-			Weapon weapon = new Weapon("Dagger");
+			NameOfWeapon weapon = new NameOfWeapon("Dagger");
 			Cost cost = new Cost(2, "gold pieces");
 			WeaponMake weaponMake = new WeaponMake("Steel", 0, 1, "pound");
 			PreRequisites preRequisites = new PreRequisites("Simple", "Light", "Melee");
@@ -320,6 +320,14 @@ namespace ItemSmithWorkShop
 			DisplayWeapon displayWeapon = new DisplayWeapon(weapon, weaponMake, preRequisites, cost, damage, durability);
 
 			Approvals.Approve(displayWeapon);
+		}
+
+		[TestMethod]
+		public void TestDisplayDagger()
+		{
+			Dagger dagger = new Dagger();
+
+			Approvals.Approve(dagger);
 		}
 	}
 }

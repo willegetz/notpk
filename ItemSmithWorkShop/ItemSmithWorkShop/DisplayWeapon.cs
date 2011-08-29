@@ -11,14 +11,14 @@ namespace ItemSmithWorkShop
 		public string WeaponComposition { get; set; }
 		public string WeaponSturdiness { get; set; }
 
-		public DisplayWeapon(Weapon weapon, PreRequisites preRequisites, Cost cost)
+		public DisplayWeapon(NameOfWeapon weapon, PreRequisites preRequisites, Cost cost)
 		{
 			WeaponName = weapon.ToString();
 			WeaponPreRequisites = preRequisites.ToString();
 			WeaponCost = cost.ToString();
 		}
 
-		public DisplayWeapon(Weapon weapon, PreRequisites preRequisites, Cost cost, Damage damage)
+		public DisplayWeapon(NameOfWeapon weapon, PreRequisites preRequisites, Cost cost, Damage damage)
 		{
 			WeaponName = weapon.ToString();
 			WeaponPreRequisites = preRequisites.ToString();
@@ -26,7 +26,7 @@ namespace ItemSmithWorkShop
 			WeaponDamage = damage.ToString();
 		}
 
-		public DisplayWeapon(Weapon weapon, WeaponMake weaponComposition, PreRequisites preRequisites, Cost cost, Damage damage, Durability durability)
+		public DisplayWeapon(NameOfWeapon weapon, WeaponMake weaponComposition, PreRequisites preRequisites, Cost cost, Damage damage, Durability durability)
 		{
 			WeaponName = String.Format("Weapon Name:\t\t{0}", (weaponComposition.MasterWorkMark + weaponComposition.MaterialType + weapon.WeaponName));
 			WeaponPreRequisites = String.Format("Weapon Proficiency:\t{0}\rWeapon Category:\t{1} {2}",

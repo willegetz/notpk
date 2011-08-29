@@ -1,10 +1,10 @@
 ﻿namespace ItemSmithWorkShop
 {
-	public class Weapon
+	public class NameOfWeapon
 	{
 		public string WeaponName { get; set; }
 
-		public Weapon(string name)
+		public NameOfWeapon(string name)
 		{
 			WeaponName = name;
 		}

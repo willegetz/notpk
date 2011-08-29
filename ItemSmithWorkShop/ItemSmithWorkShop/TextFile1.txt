@@ -19,7 +19,6 @@ Damage Type(s):		Piercing or Slashing
 Hardness:			10
 Hit Points			2
 
-
 [Magic +] [Quality] [Material] [Weapon] [of] [Magic Property] [and] [Magic Property] ...
 [Race Requirement] [Alignment Requirement] [Proficiency Requirement]
 [Weapon Class]
