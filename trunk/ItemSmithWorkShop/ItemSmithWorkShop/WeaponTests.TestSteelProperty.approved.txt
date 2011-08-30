@@ -1,0 +1,5 @@
+Material Name: Steel
+To Hit Modifier +0
+Price Adjustment: +0 gold pieces
+Hardness Modifier: x1
+Special Properties: 
