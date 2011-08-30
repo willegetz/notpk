@@ -326,6 +326,28 @@ namespace ItemSmithWorkShop
 		public void TestDisplayDagger()
 		{
 			Dagger dagger = new Dagger();
+			dagger.WeaponName("Dagger");
+			dagger.WeaponCost("2 gold pieces");
+
+			Approvals.Approve(dagger);
+		}
+
+		[TestMethod]
+		public void TestProperNameDagger()
+		{
+			Dagger dagger = new Dagger();
+			dagger.WeaponName("One-eyed Bart's Shiv");
+			dagger.WeaponCost("2 gold pieces");
+
+			Approvals.Approve(dagger);
+		}
+
+		[TestMethod]
+		public void TestDmChangesPrice()
+		{
+			Dagger dagger = new Dagger();
+			dagger.WeaponName("Expensive Dagger");
+			dagger.WeaponCost("10 gold pieces");
 
 			Approvals.Approve(dagger);
 		}
