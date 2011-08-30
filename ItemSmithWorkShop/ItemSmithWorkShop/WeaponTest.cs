@@ -1,6 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ApprovalTests;
 using ApprovalTests.Reporters;
+using ItemSmithWeaponSmith;
+using System.Text;
+using System;
 
 namespace ItemSmithWorkShop
 {
@@ -218,6 +221,7 @@ namespace ItemSmithWorkShop
 			Approvals.Approve(baseWeapon);
 		}
 
+		[Ignore]
 		[TestMethod]
 		public void TestPlus1WeaponWithSpecialAbility()
 		{
@@ -327,7 +331,7 @@ namespace ItemSmithWorkShop
 		{
 			Dagger dagger = new Dagger();
 			dagger.WeaponName("Dagger");
-			dagger.WeaponCost("2 gold pieces");
+			dagger.WeaponCost(2);
 
 			Approvals.Approve(dagger);
 		}
@@ -337,7 +341,7 @@ namespace ItemSmithWorkShop
 		{
 			Dagger dagger = new Dagger();
 			dagger.WeaponName("One-eyed Bart's Shiv");
-			dagger.WeaponCost("2 gold pieces");
+			dagger.WeaponCost(2);
 
 			Approvals.Approve(dagger);
 		}
@@ -347,9 +351,48 @@ namespace ItemSmithWorkShop
 		{
 			Dagger dagger = new Dagger();
 			dagger.WeaponName("Expensive Dagger");
-			dagger.WeaponCost("10 gold pieces");
+			dagger.WeaponCost(10);
 
 			Approvals.Approve(dagger);
+		}
+
+		[TestMethod]
+		public void TestWeaponIsMasterWork()
+		{
+			Dagger dagger = new Dagger();
+			dagger.WeaponName("Dagger");
+			dagger.WeaponCost(2);
+
+			dagger.IsMasterworkQualifier(true);
+
+			Approvals.Approve(dagger);
+		}
+
+		[TestMethod]
+		public void TestSteelProperty()
+		{
+			SteelMaterial steel = new SteelMaterial();
+
+			Approvals.Approve(steel);
+		}
+
+		[TestMethod]
+		public void TestAdamantineProperty()
+		{
+			ItemSmithWeaponSmith.AdamantineMaterial adamantine = new ItemSmithWeaponSmith.AdamantineMaterial();
+
+			Approvals.Approve(adamantine);
+		}
+
+		[TestMethod]
+		public void TestSteelPropertyOnDagger()
+		{
+			Dagger dagger = new Dagger();
+			SteelMaterial steel = new SteelMaterial();
+
+			dagger.WeaponName("Dagger");
+			dagger.WeaponCost(2);
+			dagger.WeaponMaterial(steel);
 		}
 	}
 }

@@ -19,6 +19,20 @@ Damage Type(s):		Piercing or Slashing
 Hardness:			10
 Hit Points			2
 
+Masterwork changes:
+Name (Masterwork [weapon])
+To Hit (+1)
+Price (+300)
+
+Adamantine changes:
+Name (Adamantine [weapon])
+Material ([Adamantine])
+To Hit (+1)
+Price (+3000)
+Hardness (1.33 * Hardness)
+Special ("Bypass 20 Hardness")
+
+
 [Magic +] [Quality] [Material] [Weapon] [of] [Magic Property] [and] [Magic Property] ...
 [Race Requirement] [Alignment Requirement] [Proficiency Requirement]
 [Weapon Class]

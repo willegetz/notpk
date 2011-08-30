@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ItemSmithWorkShop
+namespace ItemSmithWeaponSmith
 {
-	class Dagger
+	public class Dagger
 	{
 		// Simplicity First.
 		// Display the item  first
 		// Build in complexity one step at a time
 
 		private string Weapon { get; set; }
-		private string WeaponValue { get; set; }
+		private int WeaponValue { get; set; }
+		private int ToHitModifier { get; set; }
+		private bool IsMasterwork { get; set; }
 
 		public void WeaponName(string name)
 		{
@@ -54,7 +56,7 @@ namespace ItemSmithWorkShop
 			return "Piercing or Slashing";
 		}
 
-		public void WeaponCost(string cost)
+		public void WeaponCost(int cost)
 		{
 			WeaponValue = cost;
 		}
@@ -74,17 +76,33 @@ namespace ItemSmithWorkShop
 			return 2;
 		}
 
+		public void IsMasterworkQualifier(bool value)
+		{
+			if (value)
+			{
+				IsMasterwork = true;
+				MasterworkProperties();
+			}
+		}
+
+		private void MasterworkProperties()
+		{
+			Weapon = "Masterwork " + Weapon;
+			ToHitModifier = 1;
+			WeaponValue += 300;
+		}
+
 		public string DisplayWeapon()
 		{
 			var sb = new StringBuilder();
 
-			//sb.Append(WeaponMaterial() + " " + Weapon + "\n");
 			sb.Append(Weapon + " [" + WeaponMaterial() + "]\n");
-			sb.Append(String.Format("{0} Weapon\n{1} Proficiency\n",WeaponCategory(), WeaponProficiencyRequirement()));
-			sb.Append(String.Format("Damage: {0} [{1} {2}] {3}\n",  WeaponDamage(), WeaponThreatRange(), WeaponCritical(), WeaponDamageType()));
+			sb.Append(String.Format("{0} Weapon\n{1} Proficiency\n", WeaponCategory(), WeaponProficiencyRequirement()));
+			sb.Append(String.Format("Attack Bonus: +{0}\n", ToHitModifier));
+			sb.Append(String.Format("Damage: {0} [{1} {2}] {3}\n", WeaponDamage(), WeaponThreatRange(), WeaponCritical(), WeaponDamageType()));
 			sb.Append(String.Format("Weight: {0}\n", WeaponWeight()));
 			sb.Append(String.Format("Hardness: {0}\nHitPoints: {1}\nWeight: {2}\n", WeaponHardness(), WeaponHitPoints(), WeaponWeight()));
-			sb.Append(WeaponValue);
+			sb.Append(WeaponValue + " gold pieces");
 
 			return sb.ToString();
 		}
@@ -92,6 +110,10 @@ namespace ItemSmithWorkShop
 		public override string ToString()
 		{
 			return DisplayWeapon();
+		}
+
+		public void WeaponMaterial(SteelMaterial steel)
+		{
 		}
 	}
 }
