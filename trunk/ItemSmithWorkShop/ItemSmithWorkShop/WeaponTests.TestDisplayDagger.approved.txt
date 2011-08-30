@@ -1,6 +1,7 @@
 Dagger [Steel]
 Melee Weapon
 Light Weapon Proficiency
+Attack Bonus: +0
 Damage: 1d4 [19-20 x2] Piercing or Slashing
 Weight: 1 pound
 Hardness: 10
