@@ -13,7 +13,7 @@ namespace ItemSmithWeaponSmith
 			ToHitModifier = 0;
 			PriceAdjustment = 0;
 			HardnessModifier = 1;
-			SpecialText = String.Empty;
+			SpecialText = "Additional information and flavor text";
 		}
 
 		private string DisplaySteelMaterial()

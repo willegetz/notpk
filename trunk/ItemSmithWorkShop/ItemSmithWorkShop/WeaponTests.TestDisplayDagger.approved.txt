@@ -1,4 +1,4 @@
-Dagger [Steel]
+Dagger
 Melee Weapon
 Light Weapon Proficiency
 Attack Bonus: +0

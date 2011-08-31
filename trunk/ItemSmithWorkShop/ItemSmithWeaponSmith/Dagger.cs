@@ -24,7 +24,14 @@ namespace ItemSmithWeaponSmith
 
 		public string WeaponMaterial()
 		{
-			return String.Format("[{0}]", Material.MaterialName);
+			if (Material == null)
+			{
+				return "";
+			}
+			else
+			{
+				return String.Format(" [{0}]", Material.MaterialName);
+			}
 		}
 
 		public string WeaponProficiencyRequirement()
@@ -59,7 +66,14 @@ namespace ItemSmithWeaponSmith
 
 		public void WeaponCost(int cost)
 		{
-			WeaponValue = cost;
+			if (Material == null)
+			{
+			    WeaponValue = cost;
+			}
+			else
+			{
+			    WeaponValue = (cost + Material.PriceAdjustment);
+			}
 		}
 
 		public string WeaponWeight()
@@ -67,9 +81,18 @@ namespace ItemSmithWeaponSmith
 			return "1 pound";
 		}
 
-		public int WeaponHardness()
+		public decimal WeaponHardness()
 		{
-			return 10;
+			decimal hardness;
+			if (Material == null)
+			{
+				return 10;
+			}
+			else
+			{
+				hardness = Math.Round(10 * Material.HardnessModifier);
+				return hardness;
+			}
 		}
 
 		public int WeaponHitPoints()
@@ -104,6 +127,7 @@ namespace ItemSmithWeaponSmith
 			sb.Append(String.Format("Weight: {0}\n", WeaponWeight()));
 			sb.Append(String.Format("Hardness: {0}\nHitPoints: {1}\nWeight: {2}\n", WeaponHardness(), WeaponHitPoints(), WeaponWeight()));
 			sb.Append(WeaponValue + " gold pieces");
+			sb.Append(SpecialText);
 
 			return sb.ToString();
 		}
@@ -113,11 +137,35 @@ namespace ItemSmithWeaponSmith
 			return DisplayWeapon();
 		}
 
-		public void WeaponMaterial(SteelMaterial steel)
+		public void WeaponMaterial(MaterialComponent component)
 		{
-			Material = steel;
+			if (component == null)
+			{
+				Material.MaterialName = "";
+				Material.PriceAdjustment = 0;
+				Material.HardnessModifier = 1;
+				Material.ToHitModifier = 0;
+				Material.SpecialText = "";
+			}
+			else
+			{
+				Material = component;
+				AssignToHit(Material.ToHitModifier);
+				AssignSpecialText(Material.SpecialText);
+			}
 		}
 
-		public SteelMaterial Material { get; set; }
+		private void AssignSpecialText(string specialText)
+		{
+			SpecialText = String.Format("\n\n{0}", specialText);
+		}
+
+		private void AssignToHit(int toHitModifier)
+		{
+			ToHitModifier = toHitModifier;
+		}
+
+		public string SpecialText { get; set; }
+		public MaterialComponent Material { get; set; }
 	}
 }
