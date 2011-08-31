@@ -7,11 +7,11 @@ namespace ItemSmithWeaponSmith
 {
 	public abstract class MaterialComponent
 	{
-		public string MaterialName { get; set; } // Working
-		public int ToHitModifier { get; set; } // Working
-		public int PriceAdjustment { get; set; } // Working
-		public decimal HardnessModifier { get; set; } // Working
-		public string SpecialText { get; set; } // Working
+		public string MaterialName { get; set; }
+		public int ToHitModifier { get; set; }
+		public int PriceAdjustment { get; set; }
+		public decimal HardnessModifier { get; set; }
+		public string SpecialText { get; set; }
 
 
 	}

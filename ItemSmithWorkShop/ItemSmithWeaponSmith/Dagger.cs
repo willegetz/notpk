@@ -14,8 +14,9 @@ namespace ItemSmithWeaponSmith
 		private string Weapon { get; set; }
 		private int WeaponValue { get; set; }
 		private int ToHitModifier { get; set; }
-
 		private bool IsMasterwork { get; set; }
+		public string SpecialText { get; set; }
+		public MaterialComponent Material { get; set; }
 
 		public void WeaponName(string name)
 		{
@@ -165,7 +166,5 @@ namespace ItemSmithWeaponSmith
 			ToHitModifier = toHitModifier;
 		}
 
-		public string SpecialText { get; set; }
-		public MaterialComponent Material { get; set; }
 	}
 }
