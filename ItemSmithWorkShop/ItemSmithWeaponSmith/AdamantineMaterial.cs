@@ -5,23 +5,10 @@ using System.Text;
 
 namespace ItemSmithWeaponSmith
 {
-	public class AdamantineMaterial
+	public class AdamantineMaterial : MaterialComponent
 	{
-		public string MaterialName { get; set; }
-		public int ToHitModifier = 1;
-		public int PriceAdjustment = 3000;
-		public decimal HardnessModifier { get; set; }
-		public string SpecialText { get; set; }
-
 		public AdamantineMaterial()
 		{
-//				Name (Adamantine [weapon])
-//				Material ([Adamantine])
-//				To Hit (+1)
-//				Price (+3000)
-//				Hardness (1.33 * Hardness)
-//				Special ("Bypass 20 Hardness")
-
 			MaterialName = "Adamantine";
 			ToHitModifier = 1;
 			PriceAdjustment = 3000;
