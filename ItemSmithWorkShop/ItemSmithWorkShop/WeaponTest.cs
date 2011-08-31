@@ -384,26 +384,38 @@ namespace ItemSmithWorkShop
 			Approvals.Approve(adamantine);
 		}
 
+			[TestMethod]
+		public void TestDagger()
+		{
+			Dagger dagger = new Dagger();
+
+			dagger.WeaponName("Dagger");
+			dagger.WeaponCost(2);
+
+			Approvals.Approve(dagger);
+		}
+		
 		[TestMethod]
 		public void TestSteelPropertyOnDagger()
 		{
 			Dagger dagger = new Dagger();
-			SteelMaterial steel = new SteelMaterial();
+			MaterialComponent steel = new SteelMaterial();
 
 			dagger.WeaponName("Dagger");
-			dagger.WeaponCost(2);
 			dagger.WeaponMaterial(steel);
+			dagger.WeaponCost(2);
 
 			Approvals.Approve(dagger);
 		}
 
 		[TestMethod]
-		public void TestDagger()
+		public void TestAdamantinePropertyOnDagger()
 		{
 			Dagger dagger = new Dagger();
-			SteelMaterial steel = new SteelMaterial();
+			MaterialComponent adamantine = new AdamantineMaterial();
 
 			dagger.WeaponName("Dagger");
+			dagger.WeaponMaterial(adamantine);
 			dagger.WeaponCost(2);
 
 			Approvals.Approve(dagger);
