@@ -393,6 +393,20 @@ namespace ItemSmithWorkShop
 			dagger.WeaponName("Dagger");
 			dagger.WeaponCost(2);
 			dagger.WeaponMaterial(steel);
+
+			Approvals.Approve(dagger);
+		}
+
+		[TestMethod]
+		public void TestDagger()
+		{
+			Dagger dagger = new Dagger();
+			SteelMaterial steel = new SteelMaterial();
+
+			dagger.WeaponName("Dagger");
+			dagger.WeaponCost(2);
+
+			Approvals.Approve(dagger);
 		}
 	}
 }

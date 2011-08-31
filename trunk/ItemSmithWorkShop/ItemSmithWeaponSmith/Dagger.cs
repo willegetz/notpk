@@ -14,6 +14,7 @@ namespace ItemSmithWeaponSmith
 		private string Weapon { get; set; }
 		private int WeaponValue { get; set; }
 		private int ToHitModifier { get; set; }
+
 		private bool IsMasterwork { get; set; }
 
 		public void WeaponName(string name)
@@ -23,7 +24,7 @@ namespace ItemSmithWeaponSmith
 
 		public string WeaponMaterial()
 		{
-			return "Steel";
+			return String.Format("[{0}]", Material.MaterialName);
 		}
 
 		public string WeaponProficiencyRequirement()
@@ -96,7 +97,7 @@ namespace ItemSmithWeaponSmith
 		{
 			var sb = new StringBuilder();
 
-			sb.Append(Weapon + " [" + WeaponMaterial() + "]\n");
+			sb.Append(Weapon + WeaponMaterial() + "\n");
 			sb.Append(String.Format("{0} Weapon\n{1} Proficiency\n", WeaponCategory(), WeaponProficiencyRequirement()));
 			sb.Append(String.Format("Attack Bonus: +{0}\n", ToHitModifier));
 			sb.Append(String.Format("Damage: {0} [{1} {2}] {3}\n", WeaponDamage(), WeaponThreatRange(), WeaponCritical(), WeaponDamageType()));
@@ -114,6 +115,9 @@ namespace ItemSmithWeaponSmith
 
 		public void WeaponMaterial(SteelMaterial steel)
 		{
+			Material = steel;
 		}
+
+		public SteelMaterial Material { get; set; }
 	}
 }

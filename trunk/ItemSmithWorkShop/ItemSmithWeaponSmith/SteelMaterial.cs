@@ -5,14 +5,8 @@ using System.Text;
 
 namespace ItemSmithWeaponSmith
 {
-	public class SteelMaterial
+	public class SteelMaterial : MaterialComponent
 	{
-		public string MaterialName { get; set; }
-		public int ToHitModifier = 1;
-		public int PriceAdjustment = 3000;
-		public decimal HardnessModifier { get; set; }
-		public string SpecialText { get; set; }
-
 		public SteelMaterial()
 		{
 			MaterialName = "Steel";
