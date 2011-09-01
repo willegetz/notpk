@@ -1,0 +1,1 @@
+Weapon Name:		DaggerWeapon Proficiency:	Weapon Category:	Weapon Attack Type:	Weapon Cost:		0To Hit Modifier:	+0Base Damage:		+0Threat Range:		Critical Damage:	Weapon Weight:		Damage Type(s):		Minimum Caster Level:	0Days To Create:			0 days

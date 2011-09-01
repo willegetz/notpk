@@ -1,0 +1,2 @@
+Base Cost: 2
+Currency Type: gold pieces

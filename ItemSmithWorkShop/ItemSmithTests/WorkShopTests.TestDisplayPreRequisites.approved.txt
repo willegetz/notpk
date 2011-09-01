@@ -1,0 +1,3 @@
+Weapon Proficiency: Simple
+Weapon Category: Light
+Attack Type: Melee
