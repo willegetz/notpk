@@ -4,8 +4,8 @@ Light Weapon Proficiency
 Attack Bonus: +1
 Damage: 1d4 [19-20 x2] Piercing or Slashing
 Weight: 1 pound
-Hardness: 13
-HitPoints: 2
+Hardness: 10
+HitPoints: 3
 Weight: 1 pound
 3002 gold pieces
 

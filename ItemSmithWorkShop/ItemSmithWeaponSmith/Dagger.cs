@@ -12,11 +12,14 @@ namespace ItemSmithWeaponSmith
 		// Build in complexity one step at a time
 
 		private string Weapon { get; set; }
-		private int WeaponValue { get; set; }
+		private double WeaponValue { get; set; }
 		private int ToHitModifier { get; set; }
 		private bool IsMasterwork { get; set; }
 		public string SpecialText { get; set; }
 		public MaterialComponent Material { get; set; }
+
+		private int masterworkToHitModifier = 1;
+		private double masterworkCostModifier = 300;
 
 		public void WeaponName(string name)
 		{
@@ -82,23 +85,21 @@ namespace ItemSmithWeaponSmith
 			return "1 pound";
 		}
 
-		public decimal WeaponHardness()
+		public double WeaponHardness()
 		{
-			decimal hardness;
+			return 10;
+		}
+
+		public double WeaponHitPoints()
+		{
 			if (Material == null)
 			{
-				return 10;
+				return 2;
 			}
 			else
 			{
-				hardness = Math.Round(10 * Material.HardnessModifier);
-				return hardness;
+				return Math.Round(2 * Material.HitPointModifier);
 			}
-		}
-
-		public int WeaponHitPoints()
-		{
-			return 2;
 		}
 
 		public void IsMasterworkQualifier(bool value)
@@ -113,8 +114,8 @@ namespace ItemSmithWeaponSmith
 		private void MasterworkProperties()
 		{
 			Weapon = "Masterwork " + Weapon;
-			ToHitModifier = 1;
-			WeaponValue += 300;
+			AssignToHit(masterworkToHitModifier);
+			WeaponValue += masterworkCostModifier;
 		}
 
 		public string DisplayWeapon()
@@ -144,7 +145,7 @@ namespace ItemSmithWeaponSmith
 			{
 				Material.MaterialName = "";
 				Material.PriceAdjustment = 0;
-				Material.HardnessModifier = 1;
+				Material.HitPointModifier = 1;
 				Material.ToHitModifier = 0;
 				Material.SpecialText = "";
 			}

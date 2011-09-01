@@ -9,8 +9,8 @@ namespace ItemSmithWeaponSmith
 	{
 		public string MaterialName { get; set; }
 		public int ToHitModifier { get; set; }
-		public int PriceAdjustment { get; set; }
-		public decimal HardnessModifier { get; set; }
+		public virtual int PriceAdjustment { get; set; }
+		public double HitPointModifier { get; set; }
 		public string SpecialText { get; set; }
 
 

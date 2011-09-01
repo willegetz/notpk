@@ -384,7 +384,7 @@ namespace ItemSmithWorkShop
 			Approvals.Approve(adamantine);
 		}
 
-			[TestMethod]
+		[TestMethod]
 		public void TestDagger()
 		{
 			Dagger dagger = new Dagger();
@@ -419,6 +419,17 @@ namespace ItemSmithWorkShop
 			dagger.WeaponCost(2);
 
 			Approvals.Approve(dagger);
+		}
+
+
+
+		// Requires a Wooden Item.
+		// Much more work needs to be done before this can happen.
+		[Ignore]
+		[TestMethod]
+		public void TestDarkwoodPropertyOnWeapon()
+		{
+
 		}
 	}
 }

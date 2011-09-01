@@ -1,5 +1,5 @@
 Material Name: Adamantine
 To Hit Modifier +1
 Price Adjustment: +3000 gold pieces
-Hardness Modifier: x1.33
+Hit Point Modifier: x1.33
 Special Properties: Bypass 20 Hardness
