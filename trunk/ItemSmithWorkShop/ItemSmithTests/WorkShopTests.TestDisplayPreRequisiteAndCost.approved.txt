@@ -1,0 +1,4 @@
+Weapon Name: DaggerWeapon Proficiency: Simple
+Weapon Category: Light
+Attack Type: MeleeBase Cost: 2
+Currency Type: gold pieces

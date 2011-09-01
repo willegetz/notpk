@@ -1,0 +1,10 @@
+Masterwork Dagger
+Melee Weapon
+Light Weapon Proficiency
+Attack Bonus: +1
+Damage: 1d4 [19-20 x2] Piercing or Slashing
+Weight: 1 pound
+Hardness: 10
+HitPoints: 2
+Weight: 1 pound
+302 gold pieces
