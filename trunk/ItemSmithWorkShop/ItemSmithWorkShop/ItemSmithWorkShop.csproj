@@ -59,7 +59,6 @@
     <Compile Include="PreRequisites.cs" />
     <Compile Include="BaseWeapon.cs" />
     <Compile Include="NameOfWeapon.cs" />
-    <Compile Include="WeaponTest.cs" />
     <Compile Include="Durability.cs" />
   </ItemGroup>
   <ItemGroup>
