@@ -20,10 +20,32 @@ namespace ItemSmithWeaponSmith
 
 		private int masterworkToHitModifier = 1;
 		private double masterworkCostModifier = 300;
+		private MaterialComponent steel;
+
+		private bool IsNull { get; set; }
 
 		public Dagger()
 		{
 
+		}
+
+		public Dagger(MaterialComponent component)
+		{
+			CheckForNull(component);
+		}
+
+		private void CheckForNull(MaterialComponent component)
+		{
+			if (component == null)
+			{
+				IsNull = true;
+			}
+			else
+			{
+				Material = component;
+				AssignToHit(Material.ToHitModifier);
+				AssignSpecialText(Material.SpecialText);
+			}
 		}
 
 		public void WeaponName(string name)
@@ -77,11 +99,11 @@ namespace ItemSmithWeaponSmith
 		{
 			if (Material == null)
 			{
-			    WeaponValue = cost;
+				WeaponValue = cost;
 			}
 			else
 			{
-			    WeaponValue = (cost + Material.PriceAdjustment);
+				WeaponValue = (cost + Material.PriceAdjustment);
 			}
 		}
 
@@ -97,7 +119,15 @@ namespace ItemSmithWeaponSmith
 
 		public double WeaponHitPoints()
 		{
-			if (Material == null)
+			//if (Material == null)
+			//{
+			//    return 2;
+			//}
+			//else
+			//{
+			//    return Math.Round(2 * Material.HitPointModifier);
+			//}
+			if (IsNull)
 			{
 				return 2;
 			}
@@ -146,20 +176,7 @@ namespace ItemSmithWeaponSmith
 
 		public void WeaponMaterial(MaterialComponent component)
 		{
-			if (component == null)
-			{
-				Material.MaterialName = "";
-				Material.PriceAdjustment = 0;
-				Material.HitPointModifier = 1;
-				Material.ToHitModifier = 0;
-				Material.SpecialText = "";
-			}
-			else
-			{
-				Material = component;
-				AssignToHit(Material.ToHitModifier);
-				AssignSpecialText(Material.SpecialText);
-			}
+			CheckForNull(component);
 		}
 
 		private void AssignSpecialText(string specialText)
