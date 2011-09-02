@@ -67,12 +67,6 @@
   <ItemGroup>
     <Content Include="PhbWeapon.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ItemSmithWeaponSmith\ItemSmithWeaponSmith.csproj">
-      <Project>{342A7D10-DB5B-474D-9194-E1C8D074FFC5}</Project>
-      <Name>ItemSmithWeaponSmith</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
