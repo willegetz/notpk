@@ -21,6 +21,11 @@ namespace ItemSmithWeaponSmith
 		private int masterworkToHitModifier = 1;
 		private double masterworkCostModifier = 300;
 
+		public Dagger()
+		{
+
+		}
+
 		public void WeaponName(string name)
 		{
 			Weapon = name;
