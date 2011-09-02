@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ApprovalTests.Reporters;
 using ItemSmithWeaponSmith;
 using ApprovalTests;
+using ItemSmithWorkShop;
 
 namespace ItemSmithTests
 {
@@ -85,11 +86,10 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestSteelPropertyOnDagger()
 		{
-			Dagger dagger = new Dagger();
 			MaterialComponent steel = new SteelMaterial();
+			Dagger dagger = new Dagger(steel);
 
 			dagger.WeaponName("Dagger");
-			dagger.WeaponMaterial(steel);
 			dagger.WeaponCost(2);
 
 			Approvals.Approve(dagger);
@@ -98,11 +98,10 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestAdamantinePropertyOnDagger()
 		{
-			Dagger dagger = new Dagger();
 			MaterialComponent adamantine = new AdamantineMaterial();
+			Dagger dagger = new Dagger(adamantine);
 
 			dagger.WeaponName("Dagger");
-			dagger.WeaponMaterial(adamantine);
 			dagger.WeaponCost(2);
 
 			Approvals.Approve(dagger);
@@ -138,6 +137,14 @@ namespace ItemSmithTests
 			dagger.WeaponCost(2);
 
 			Approvals.Approve(dagger);
+		}
+
+		[TestMethod]
+		public void TestSimpleDaggerObject()
+		{
+			SimpleDagger simpleDagger = new SimpleDagger();
+
+			Approvals.Approve(simpleDagger);
 		}
 
 		// Requires a Wooden Item.

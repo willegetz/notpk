@@ -43,8 +43,15 @@
     <Compile Include="MaterialComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Dagger.cs" />
+    <Compile Include="SimpleDagger.cs" />
     <Compile Include="SteelMaterial.cs" />
     <Compile Include="AdamantineMaterial.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ItemSmithWorkShop\ItemSmithWorkShop.csproj">
+      <Project>{9CCCBA02-1EE3-4694-854F-C3555092D7CD}</Project>
+      <Name>ItemSmithWorkShop</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

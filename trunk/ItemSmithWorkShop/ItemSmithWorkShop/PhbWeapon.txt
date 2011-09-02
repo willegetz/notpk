@@ -32,8 +32,29 @@ Price (+3000)
 Hit Points (1.33 * Hit Points)
 Special ("Bypass 20 Hardness")
 
+Darkwood
+Wooden Item only
+COnsidered Masterwork
+Weight is halved
+Price = (Weight * 10) + Masterwork Cost
 
+Cold Iron
+Metal Item Only
+Price = 2 x base cost
+	Any magic enhancements cost an additional 2k gold
+Special Text: Effective against some fey
 
+Mithral
+Metal Only
+Weight is halved
+Cost = base cost + (Weight * 500)
+
+Alchemical Silver
+Metal Only
+Special Text: Bypasses Damage Reduction of lycanthropes
+Damage: -1
+Doesn't work with Adamantine, cold iron, mithral
+Cost for dagger = base cost + 20
 
 [Magic +] [Quality] [Material] [Weapon] [of] [Magic Property] [and] [Magic Property] ...
 [Race Requirement] [Alignment Requirement] [Proficiency Requirement]

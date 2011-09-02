@@ -26,7 +26,7 @@ namespace ItemSmithWeaponSmith
 
 		public Dagger()
 		{
-
+			CheckForNull(Material);
 		}
 
 		public Dagger(MaterialComponent component)
@@ -55,7 +55,7 @@ namespace ItemSmithWeaponSmith
 
 		public string WeaponMaterial()
 		{
-			if (Material == null)
+			if (IsNull)
 			{
 				return "";
 			}
@@ -97,7 +97,7 @@ namespace ItemSmithWeaponSmith
 
 		public void WeaponCost(int cost)
 		{
-			if (Material == null)
+			if (IsNull)
 			{
 				WeaponValue = cost;
 			}
@@ -119,14 +119,6 @@ namespace ItemSmithWeaponSmith
 
 		public double WeaponHitPoints()
 		{
-			//if (Material == null)
-			//{
-			//    return 2;
-			//}
-			//else
-			//{
-			//    return Math.Round(2 * Material.HitPointModifier);
-			//}
 			if (IsNull)
 			{
 				return 2;
@@ -153,6 +145,21 @@ namespace ItemSmithWeaponSmith
 			WeaponValue += masterworkCostModifier;
 		}
 
+		private void AssignSpecialText(string specialText)
+		{
+			SpecialText = String.Format("\n\n{0}", specialText);
+		}
+
+		private void AssignToHit(int toHitModifier)
+		{
+			ToHitModifier = toHitModifier;
+		}
+
+		public override string ToString()
+		{
+			return DisplayWeapon();
+		}
+
 		public string DisplayWeapon()
 		{
 			var sb = new StringBuilder();
@@ -168,26 +175,5 @@ namespace ItemSmithWeaponSmith
 
 			return sb.ToString();
 		}
-
-		public override string ToString()
-		{
-			return DisplayWeapon();
-		}
-
-		public void WeaponMaterial(MaterialComponent component)
-		{
-			CheckForNull(component);
-		}
-
-		private void AssignSpecialText(string specialText)
-		{
-			SpecialText = String.Format("\n\n{0}", specialText);
-		}
-
-		private void AssignToHit(int toHitModifier)
-		{
-			ToHitModifier = toHitModifier;
-		}
-
 	}
 }
