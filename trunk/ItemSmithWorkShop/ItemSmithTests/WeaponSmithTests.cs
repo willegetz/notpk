@@ -108,6 +108,13 @@ namespace ItemSmithTests
 			Approvals.Approve(dagger);
 		}
 
+		[TestMethod]
+		public void TestMaterialPassedIntoConstructor()
+		{
+			MaterialComponent steel = new SteelMaterial();
+			Dagger dagger = new Dagger(steel);
+		}
+
 		// Requires a Wooden Item.
 		// Much more work needs to be done before this can happen.
 		[Ignore]
