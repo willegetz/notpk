@@ -113,6 +113,31 @@ namespace ItemSmithTests
 		{
 			MaterialComponent steel = new SteelMaterial();
 			Dagger dagger = new Dagger(steel);
+			dagger.WeaponName("Dagger");
+			dagger.WeaponCost(2);
+
+			Approvals.Approve(dagger);
+		}
+
+		[TestMethod]
+		public void TestNullMaterialPassedIntoConstructor()
+		{
+			Dagger dagger = new Dagger(null);
+			dagger.WeaponName("Dagger");
+			dagger.WeaponCost(2);
+
+			Approvals.Approve(dagger);
+		}
+
+		[TestMethod]
+		public void TestAdamantineMaterialPassedIntoConstructor()
+		{
+			MaterialComponent adamantine = new AdamantineMaterial();
+			Dagger dagger = new Dagger(adamantine);
+			dagger.WeaponName("Dagger");
+			dagger.WeaponCost(2);
+
+			Approvals.Approve(dagger);
 		}
 
 		// Requires a Wooden Item.
