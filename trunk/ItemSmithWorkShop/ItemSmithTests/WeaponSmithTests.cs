@@ -151,7 +151,7 @@ namespace ItemSmithTests
 		public void TestDaggerDroppedIntoSteel()
 		{
 			SimpleDagger simpleDagger = new SimpleDagger();
-			WeaponSteel steel = new WeaponSteel(simpleDagger);
+			new WeaponSteel(simpleDagger);
 
 			Approvals.Approve(simpleDagger);
 		}
@@ -162,18 +162,38 @@ namespace ItemSmithTests
 			SimpleDagger simpleDagger = new SimpleDagger();
 			simpleDagger.WeaponName = "Slashy Blade of Happiness";
 
-			WeaponSteel steel = new WeaponSteel(simpleDagger);
+			new WeaponSteel(simpleDagger);
 
 			Approvals.Approve(simpleDagger);
 		}
 
+		[TestMethod]
+		public void TestMasterworkDagger()
+		{
+			SimpleDagger simpleDagger = new SimpleDagger();
+			simpleDagger.IsMasterworkQualifier(true);
+
+			Approvals.Approve(simpleDagger);
+		}
+
+		[TestMethod]
+		public void TestDaggerDroppedIntoAdamantine()
+		{
+			SimpleDagger dagger = new SimpleDagger();
+			new WeaponAdamantine(dagger);
+
+			Approvals.Approve(dagger);
+		}
+
 		// Requires a Wooden Item.
 		// Much more work needs to be done before this can happen.
-		[Ignore]
 		[TestMethod]
-		public void TestDarkwoodPropertyOnWeapon()
+		public void TestDaggerDroppedIntoDarkwood()
 		{
+			SimpleDagger dagger = new SimpleDagger();
+			new WeaponDarkwood(dagger);
 
+			Approvals.Approve(dagger);
 		}
 	}
 }
