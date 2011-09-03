@@ -7,13 +7,7 @@ namespace ItemSmithWeaponSmith
 {
 	public class SimpleDagger
 	{
-		public string WeaponName
-		{
-			get
-			{
-				return "Dagger";
-			}
-		}
+		public string WeaponName { get; set;}
 
 		public string WeaponProficiencyRequirement
 		{
@@ -95,6 +89,14 @@ namespace ItemSmithWeaponSmith
 			}
 		}
 
+		public string SpecialText { get; set; }
+
+		public SimpleDagger()
+		{
+			WeaponName = "Dagger";
+			SpecialText = "This is a dagger!";
+		}
+
 		private string WeaponToDisplay()
 		{
 			var buildWeapon = new StringBuilder();
@@ -104,18 +106,10 @@ namespace ItemSmithWeaponSmith
 			buildWeapon.Append(String.Format("Damage: {0} [{1} {2}] {3}\n", WeaponDamage, WeaponThreatRange, WeaponCritical, WeaponDamageType));
 			buildWeapon.Append(String.Format("Weight: {0}\n", WeaponWeight));
 			buildWeapon.Append(String.Format("Hardness: {0}\nHit Points: {1}\nWeight: {2}\n", WeaponHardness, WeaponHitPoints, WeaponWeight));
-			buildWeapon.Append(String.Format("{0} gold pieces", WeaponCost));
+			buildWeapon.Append(String.Format("{0} gold pieces\n", WeaponCost));
+			buildWeapon.Append(String.Format("\nSpecial Text:\n\t{0}", SpecialText));
 
 			return buildWeapon.ToString();
-
-			//sb.Append(Weapon + WeaponMaterial() + "\n");
-			//sb.Append(String.Format("{0} Weapon\n{1} Proficiency\n", WeaponCategory(), WeaponProficiencyRequirement()));
-			//sb.Append(String.Format("Attack Bonus: +{0}\n", ToHitModifier));
-			//sb.Append(String.Format("Damage: {0} [{1} {2}] {3}\n", WeaponDamage(), WeaponThreatRange(), WeaponCritical(), WeaponDamageType()));
-			//sb.Append(String.Format("Weight: {0}\n", WeaponWeight()));
-			//sb.Append(String.Format("Hardness: {0}\nHitPoints: {1}\nWeight: {2}\n", WeaponHardness(), WeaponHitPoints(), WeaponWeight()));
-			//sb.Append(WeaponValue + " gold pieces");
-			//sb.Append(SpecialText);
 		}
 
 		public override string ToString()
