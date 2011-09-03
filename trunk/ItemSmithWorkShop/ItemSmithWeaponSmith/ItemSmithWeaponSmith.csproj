@@ -46,6 +46,7 @@
     <Compile Include="SimpleDagger.cs" />
     <Compile Include="SteelMaterial.cs" />
     <Compile Include="AdamantineMaterial.cs" />
+    <Compile Include="WeaponSteel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ItemSmithWorkShop\ItemSmithWorkShop.csproj">

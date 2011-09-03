@@ -147,6 +147,26 @@ namespace ItemSmithTests
 			Approvals.Approve(simpleDagger);
 		}
 
+		[TestMethod]
+		public void TestDaggerDroppedIntoSteel()
+		{
+			SimpleDagger simpleDagger = new SimpleDagger();
+			WeaponSteel steel = new WeaponSteel(simpleDagger);
+
+			Approvals.Approve(simpleDagger);
+		}
+
+		[TestMethod]
+		public void TestDaggerDroppedIntoSteelProperlyNamed()
+		{
+			SimpleDagger simpleDagger = new SimpleDagger();
+			simpleDagger.WeaponName = "Slashy Blade of Happiness";
+
+			WeaponSteel steel = new WeaponSteel(simpleDagger);
+
+			Approvals.Approve(simpleDagger);
+		}
+
 		// Requires a Wooden Item.
 		// Much more work needs to be done before this can happen.
 		[Ignore]
