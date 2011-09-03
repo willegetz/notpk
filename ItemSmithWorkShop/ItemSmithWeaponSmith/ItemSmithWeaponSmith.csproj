@@ -46,6 +46,8 @@
     <Compile Include="SimpleDagger.cs" />
     <Compile Include="SteelMaterial.cs" />
     <Compile Include="AdamantineMaterial.cs" />
+    <Compile Include="WeaponAdamantine.cs" />
+    <Compile Include="WeaponDarkwood.cs" />
     <Compile Include="WeaponSteel.cs" />
   </ItemGroup>
   <ItemGroup>

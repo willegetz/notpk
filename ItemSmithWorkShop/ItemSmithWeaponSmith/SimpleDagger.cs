@@ -7,7 +7,9 @@ namespace ItemSmithWeaponSmith
 {
 	public class SimpleDagger
 	{
-		public string WeaponName { get; set;}
+		private double masterworkCostModifier = 300;
+
+		public string WeaponName { get; set; }
 
 		public string WeaponProficiencyRequirement
 		{
@@ -59,18 +61,14 @@ namespace ItemSmithWeaponSmith
 
 		public double WeaponCost
 		{
-			get
-			{
-				return 2;
-			}
+			get;
+			set;
 		}
 
-		public string WeaponWeight
+		public double WeaponWeight
 		{
-			get
-			{
-				return "1 pound";
-			}
+			get;
+			set;
 		}
 
 		public double WeaponHardness
@@ -83,17 +81,37 @@ namespace ItemSmithWeaponSmith
 
 		public double WeaponHitPoints
 		{
-			get
-			{
-				return 2;
-			}
+			get;
+			set;
 		}
 
 		public string SpecialText { get; set; }
+		public bool IsMasterwork { get; set; }
+		public int ToHitModifier { get; set; }
+
+		public void IsMasterworkQualifier(bool value)
+		{
+			if (value)
+			{
+				IsMasterwork = true;
+				MasterworkProperties();
+			}
+		}
+
+		private void MasterworkProperties()
+		{
+			WeaponName = "Masterwork " + WeaponName;
+			ToHitModifier = 1;
+			WeaponCost += masterworkCostModifier;
+			SpecialText = SpecialText + "\n\tThis dagger is masterwork quality";
+		}
 
 		public SimpleDagger()
 		{
 			WeaponName = "Dagger";
+			WeaponHitPoints = 2;
+			WeaponCost = 2;
+			WeaponWeight = 1;
 			SpecialText = "This is a dagger!";
 		}
 
@@ -103,9 +121,9 @@ namespace ItemSmithWeaponSmith
 
 			buildWeapon.Append(WeaponName + "\n");
 			buildWeapon.Append(String.Format("{0} Weapon\n{1} Proficiency\n", WeaponCategory, WeaponProficiencyRequirement));
+			buildWeapon.Append(String.Format("To Hit: {0}\n", ToHitModifier));
 			buildWeapon.Append(String.Format("Damage: {0} [{1} {2}] {3}\n", WeaponDamage, WeaponThreatRange, WeaponCritical, WeaponDamageType));
-			buildWeapon.Append(String.Format("Weight: {0}\n", WeaponWeight));
-			buildWeapon.Append(String.Format("Hardness: {0}\nHit Points: {1}\nWeight: {2}\n", WeaponHardness, WeaponHitPoints, WeaponWeight));
+			buildWeapon.Append(String.Format("Hardness: {0}\nHit Points: {1}\nWeight: {2} pound(s)\n", WeaponHardness, WeaponHitPoints, WeaponWeight));
 			buildWeapon.Append(String.Format("{0} gold pieces\n", WeaponCost));
 			buildWeapon.Append(String.Format("\nSpecial Text:\n\t{0}", SpecialText));
 

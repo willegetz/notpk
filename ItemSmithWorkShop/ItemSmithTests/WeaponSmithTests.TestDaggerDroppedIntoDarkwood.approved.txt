@@ -1,13 +1,14 @@
-Slashy Blade of Happiness [Steel]
+Masterwork Dagger [Darkwood]
 Melee Weapon
 Light Weapon Proficiency
-To Hit: 0
+To Hit: 1
 Damage: 1d4 [19-20 x2] Piercing or Slashing
 Hardness: 10
 Hit Points: 2
-Weight: 1 pound(s)
-2 gold pieces
+Weight: 0.5 pound(s)
+312 gold pieces
 
 Special Text:
 	This is a dagger!
-	This is now a Steel Dagger!
+	This dagger is masterwork quality
+	This item is made of Darkwood!

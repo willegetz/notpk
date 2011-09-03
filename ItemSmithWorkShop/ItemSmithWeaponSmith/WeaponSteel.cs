@@ -8,7 +8,6 @@ namespace ItemSmithWeaponSmith
 	public class WeaponSteel
 	{
 		private SimpleDagger SimpleDagger { get; set; }
-		private string name;
 
 		public WeaponSteel(SimpleDagger simpleDagger)
 		{
@@ -19,11 +18,11 @@ namespace ItemSmithWeaponSmith
 			else
 			{
 				SimpleDagger = simpleDagger;
-				SetDaggerTraits();
+				SetSteelTraits();
 			}
 		}
 
-		public Object SetDaggerTraits()
+		public Object SetSteelTraits()
 		{
 			SimpleDagger.WeaponName = SimpleDagger.WeaponName + " [Steel]";
 			SimpleDagger.SpecialText = SimpleDagger.SpecialText + "\n\tThis is now a Steel Dagger!";
