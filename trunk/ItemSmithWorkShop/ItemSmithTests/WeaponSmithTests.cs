@@ -142,7 +142,7 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestSimpleDaggerObject()
 		{
-			SimpleDagger simpleDagger = new SimpleDagger();
+			DaggerMedium simpleDagger = new DaggerMedium();
 
 			Approvals.Approve(simpleDagger);
 		}
@@ -150,7 +150,7 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestDaggerDroppedIntoSteel()
 		{
-			SimpleDagger simpleDagger = new SimpleDagger();
+			DaggerMedium simpleDagger = new DaggerMedium();
 			new WeaponSteel(simpleDagger);
 
 			Approvals.Approve(simpleDagger);
@@ -159,7 +159,7 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestDaggerDroppedIntoSteelProperlyNamed()
 		{
-			SimpleDagger simpleDagger = new SimpleDagger();
+			DaggerMedium simpleDagger = new DaggerMedium();
 			simpleDagger.WeaponName = "Slashy Blade of Happiness";
 
 			new WeaponSteel(simpleDagger);
@@ -170,7 +170,7 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestMasterworkDagger()
 		{
-			SimpleDagger simpleDagger = new SimpleDagger();
+			DaggerMedium simpleDagger = new DaggerMedium();
 			simpleDagger.IsMasterworkQualifier(true);
 
 			Approvals.Approve(simpleDagger);
@@ -179,20 +179,84 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestDaggerDroppedIntoAdamantine()
 		{
-			SimpleDagger dagger = new SimpleDagger();
+			DaggerMedium dagger = new DaggerMedium();
 			new WeaponAdamantine(dagger);
 
 			Approvals.Approve(dagger);
 		}
 
-		// Requires a Wooden Item.
-		// Much more work needs to be done before this can happen.
 		[TestMethod]
 		public void TestDaggerDroppedIntoDarkwood()
 		{
-			SimpleDagger dagger = new SimpleDagger();
+			DaggerMedium dagger = new DaggerMedium();
 			new WeaponDarkwood(dagger);
 
+			Approvals.Approve(dagger);
+		}
+
+		[TestMethod]
+		public void TestDaggerDroppedIntoColdIron()
+		{
+			DaggerMedium dagger = new DaggerMedium();
+			new WeaponColdIron(dagger);
+
+			Approvals.Approve(dagger);
+		}
+
+		[TestMethod]
+		public void TestMasterworkDaggerDroppedIntoColdIron()
+		{
+			DaggerMedium dagger = new DaggerMedium();
+			dagger.IsMasterworkQualifier(true);
+			new WeaponColdIron(dagger);
+
+			Approvals.Approve(dagger);
+		}
+
+		[TestMethod]
+		public void TestDaggerDroppedIntoMithral()
+		{
+			DaggerMedium dagger = new DaggerMedium();
+			dagger.IsMasterworkQualifier(true);
+			new WeaponMithral(dagger);
+
+			Approvals.Approve(dagger);
+		}
+
+		[TestMethod]
+		public void TestMasterworkDaggerDroppedIntoMithral()
+		{
+			DaggerMedium dagger = new DaggerMedium();
+			dagger.IsMasterworkQualifier(true);
+			new WeaponMithral(dagger);
+
+			Approvals.Approve(dagger);
+		}
+
+		[TestMethod]
+		public void TestDaggerDroppedIntoAlchemicalSilver()
+		{
+			DaggerMedium dagger = new DaggerMedium();
+			new WeaponAlchemicalSilver(dagger);
+
+			Approvals.Approve(dagger);
+		}
+
+		[TestMethod]
+		public void TestMasterworkDaggerDroppedIntoAlchemicalSilver()
+		{
+			DaggerMedium dagger = new DaggerMedium();
+			dagger.IsMasterworkQualifier(true);
+			new WeaponAlchemicalSilver(dagger);
+
+			Approvals.Approve(dagger);
+		}
+
+		[TestMethod]
+		public void TestSmallSizeDagger()
+		{
+			DaggerSmall dagger = new DaggerSmall();
+			
 			Approvals.Approve(dagger);
 		}
 	}

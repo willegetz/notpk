@@ -5,9 +5,10 @@ using System.Text;
 
 namespace ItemSmithWeaponSmith
 {
-	public class SimpleDagger
+	public class DaggerMedium
 	{
-		private double masterworkCostModifier = 300;
+		private double masterworkCostModifier;
+		public int BasePrice { get; set; }
 
 		public string WeaponName { get; set; }
 
@@ -29,10 +30,8 @@ namespace ItemSmithWeaponSmith
 
 		public string WeaponDamage
 		{
-			get
-			{
-				return "1d4";
-			}
+			get;
+			set;
 		}
 
 		public string WeaponThreatRange
@@ -86,7 +85,7 @@ namespace ItemSmithWeaponSmith
 		}
 
 		public string SpecialText { get; set; }
-		public bool IsMasterwork { get; set; }
+		public bool IsMasterwork { get; private set; }
 		public int ToHitModifier { get; set; }
 
 		public void IsMasterworkQualifier(bool value)
@@ -102,17 +101,19 @@ namespace ItemSmithWeaponSmith
 		{
 			WeaponName = "Masterwork " + WeaponName;
 			ToHitModifier = 1;
-			WeaponCost += masterworkCostModifier;
-			SpecialText = SpecialText + "\n\tThis dagger is masterwork quality";
+			SpecialText = SpecialText + "\n\tThis dagger is masterwork quality!";
+			masterworkCostModifier = 300;
 		}
 
-		public SimpleDagger()
+		public DaggerMedium()
 		{
 			WeaponName = "Dagger";
+			WeaponDamage = "1d4";
 			WeaponHitPoints = 2;
-			WeaponCost = 2;
 			WeaponWeight = 1;
 			SpecialText = "This is a dagger!";
+			BasePrice = 2;
+			WeaponCost = BasePrice;
 		}
 
 		private string WeaponToDisplay()
@@ -124,7 +125,7 @@ namespace ItemSmithWeaponSmith
 			buildWeapon.Append(String.Format("To Hit: {0}\n", ToHitModifier));
 			buildWeapon.Append(String.Format("Damage: {0} [{1} {2}] {3}\n", WeaponDamage, WeaponThreatRange, WeaponCritical, WeaponDamageType));
 			buildWeapon.Append(String.Format("Hardness: {0}\nHit Points: {1}\nWeight: {2} pound(s)\n", WeaponHardness, WeaponHitPoints, WeaponWeight));
-			buildWeapon.Append(String.Format("{0} gold pieces\n", WeaponCost));
+			buildWeapon.Append(String.Format("{0} gold pieces\n", (WeaponCost + masterworkCostModifier)));
 			buildWeapon.Append(String.Format("\nSpecial Text:\n\t{0}", SpecialText));
 
 			return buildWeapon.ToString();

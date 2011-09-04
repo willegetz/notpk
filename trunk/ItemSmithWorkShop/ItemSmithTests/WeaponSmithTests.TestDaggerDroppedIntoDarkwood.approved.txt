@@ -10,5 +10,5 @@ Weight: 0.5 pound(s)
 
 Special Text:
 	This is a dagger!
-	This dagger is masterwork quality
+	This dagger is masterwork quality!
 	This item is made of Darkwood!

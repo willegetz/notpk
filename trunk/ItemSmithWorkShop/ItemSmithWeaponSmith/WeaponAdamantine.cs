@@ -8,11 +8,11 @@ namespace ItemSmithWeaponSmith
 	public class WeaponAdamantine
 	{
 		private double adamantineHitPointModifier = 1.33;
-		private double adamantineCost = 3000;
+		private double adamantineCost = 2700;
 
-		private SimpleDagger Dagger { get; set; }
+		private DaggerMedium Dagger { get; set; }
 
-		public WeaponAdamantine(SimpleDagger dagger)
+		public WeaponAdamantine(DaggerMedium dagger)
 		{
 			if (dagger == null)
 			{
@@ -25,10 +25,22 @@ namespace ItemSmithWeaponSmith
 			}
 		}
 
+		private void CheckMasterworkStatus()
+		{
+			if (Dagger.IsMasterwork)
+			{
+				return;
+			}
+			else
+			{
+				Dagger.IsMasterworkQualifier(true);
+			}
+		}
+
 		private Object SetAdamantineTraits()
 		{
+			CheckMasterworkStatus();
 			Dagger.WeaponName = Dagger.WeaponName + " [Adamantine]";
-			Dagger.ToHitModifier = 1;
 			Dagger.WeaponHitPoints = Math.Round(Dagger.WeaponHitPoints * adamantineHitPointModifier);
 			Dagger.WeaponCost += adamantineCost;
 			Dagger.SpecialText = Dagger.SpecialText + "\n\tDagger bypasses damage reduction value of 20.";

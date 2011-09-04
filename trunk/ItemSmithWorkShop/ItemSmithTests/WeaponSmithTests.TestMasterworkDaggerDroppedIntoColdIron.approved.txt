@@ -1,14 +1,15 @@
-Masterwork Dagger [Adamantine]
+Masterwork Dagger [Cold Iron]
 Melee Weapon
 Light Weapon Proficiency
 To Hit: 1
 Damage: 1d4 [19-20 x2] Piercing or Slashing
 Hardness: 10
-Hit Points: 3
+Hit Points: 2
 Weight: 1 pound(s)
-3002 gold pieces
+304 gold pieces
 
 Special Text:
 	This is a dagger!
 	This dagger is masterwork quality!
-	Dagger bypasses damage reduction value of 20.
+	Cold Iron is effective against some Fey.
+	Magic enhancements cost an additional 2000 gold pieces.
