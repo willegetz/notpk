@@ -7,6 +7,8 @@ using ApprovalTests.Reporters;
 using ItemSmithWeaponSmith;
 using ApprovalTests;
 using ItemSmithWorkShop;
+using System.Collections.Specialized;
+using System.Collections;
 
 namespace ItemSmithTests
 {
@@ -258,6 +260,41 @@ namespace ItemSmithTests
 			DaggerSmall dagger = new DaggerSmall();
 			
 			Approvals.Approve(dagger);
+		}
+
+		[TestMethod]
+		public void TestWeaponDamageBySize()
+		{
+			// Fine	Diminutive	Tiny	Small	Medium	Large	Huge	Gargantuan	Colossal
+			// —	1	1d2	1d3	1d4	1d6	1d8	2d6	3d6
+			Dictionary<string, string> damage = new Dictionary<string, string>();
+
+			damage.Add("Fine", "No Meaningful Damage");
+			damage.Add("Diminutive", "1");
+			damage.Add("Tiny", "1d2");
+			damage.Add("Small", "1d3");
+			damage.Add("Medium", "1d4");
+			damage.Add("Large", "1d6");
+			damage.Add("Huge", "1d8");
+			damage.Add("Gargantuan", "2d6");
+			damage.Add("Colossal", "3d6");
+
+			List<KeyValuePair<string, string>> weaponDamage = new List<KeyValuePair<string, string>>();
+
+			var sb = new StringBuilder();
+
+			foreach (var item in damage)
+			{
+				weaponDamage.Add(item);
+				//sb.Append(String.Format("Size: {0}\tDamage: {1}\n", item.Key, item.Value));
+			}
+
+			foreach (var item in weaponDamage)
+			{
+				sb.Append(String.Format("Index: {2}\tSize: {0}\tDamage: {1}\n", item.Key, item.Value, weaponDamage.IndexOf(item)));
+			}
+
+			Approvals.Approve(sb);
 		}
 	}
 }

@@ -107,6 +107,7 @@ namespace ItemSmithWeaponSmith
 
 		public DaggerMedium()
 		{
+
 			WeaponName = "Dagger";
 			WeaponDamage = "1d4";
 			WeaponHitPoints = 2;
