@@ -1,10 +1,10 @@
-Dagger
+Dagger (Small)
 Melee Weapon
 Light Weapon Proficiency
-Damage: 1d4 [19-20 x2] Piercing or Slashing
-Hardness: 10
-Hit Points: 2
-Weight: 1 pound(s)
+Damage: 1d3 [19-20 x2] Piercing or Slashing
+Hardness: 5
+Hit Points: 1
+Weight: 0.5 pound(s)
 2 gold pieces
 
 Weapon Text:

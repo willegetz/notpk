@@ -10,9 +10,9 @@ namespace ItemSmithWeaponSmith
 		private double adamantineHitPointModifier = 1.33;
 		private double adamantineCost = 2700;
 
-		private DaggerMedium Dagger { get; set; }
+		private SimpleDagger Dagger { get; set; }
 
-		public WeaponAdamantine(DaggerMedium dagger)
+		public WeaponAdamantine(SimpleDagger dagger)
 		{
 			if (dagger == null)
 			{
@@ -43,7 +43,7 @@ namespace ItemSmithWeaponSmith
 			Dagger.WeaponName = Dagger.WeaponName + " [Adamantine]";
 			Dagger.WeaponHitPoints = Math.Round(Dagger.WeaponHitPoints * adamantineHitPointModifier);
 			Dagger.WeaponCost += adamantineCost;
-			Dagger.SpecialText = Dagger.SpecialText + "\n\tDagger bypasses damage reduction value of 20.";
+			Dagger.WeaponText = Dagger.WeaponText + "\n\tDagger bypasses damage reduction value of 20.";
 			
 			return Dagger;
 		}

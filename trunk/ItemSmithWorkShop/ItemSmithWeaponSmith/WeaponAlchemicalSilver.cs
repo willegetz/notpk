@@ -7,11 +7,11 @@ namespace ItemSmithWeaponSmith
 {
 	public class WeaponAlchemicalSilver
 	{
-		private DaggerMedium Dagger { get; set; }
+		private SimpleDagger Dagger { get; set; }
 
 		private double alchemySilverCost = 20;
 
-		public WeaponAlchemicalSilver(DaggerMedium dagger)
+		public WeaponAlchemicalSilver(SimpleDagger dagger)
 		{
 			if (dagger == null)
 			{
@@ -29,7 +29,7 @@ namespace ItemSmithWeaponSmith
 			Dagger.WeaponName = Dagger.WeaponName + " [Alchemical Silver]";
 			Dagger.WeaponDamage = Dagger.WeaponDamage + " -1";
 			Dagger.WeaponCost += alchemySilverCost;
-			Dagger.SpecialText = Dagger.SpecialText + "\n\tAlchemical Silver bypasses damage reduction on lycanthropes.";
+			Dagger.WeaponText = Dagger.WeaponText + "\n\tAlchemical Silver bypasses damage reduction on lycanthropes.";
 
 			return Dagger;
 		}

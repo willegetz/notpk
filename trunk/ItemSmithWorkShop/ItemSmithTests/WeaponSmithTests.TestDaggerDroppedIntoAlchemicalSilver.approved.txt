@@ -1,13 +1,13 @@
 Dagger [Alchemical Silver]
 Melee Weapon
 Light Weapon Proficiency
-To Hit: 0
 Damage: 1d4 -1 [19-20 x2] Piercing or Slashing
 Hardness: 10
 Hit Points: 2
 Weight: 1 pound(s)
 22 gold pieces
 
-Special Text:
-	This is a dagger!
+Weapon Text:
+	The dagger is a common secondary weapon. You get a +2 bonus on
+	Sleight of Hand checks made to conceal a dagger on your body.
 	Alchemical Silver bypasses damage reduction on lycanthropes.

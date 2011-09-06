@@ -44,7 +44,7 @@
     <Compile Include="MaterialComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Dagger.cs" />
-    <Compile Include="DaggerMedium.cs" />
+    <Compile Include="SimpleDagger.cs" />
     <Compile Include="SteelMaterial.cs" />
     <Compile Include="AdamantineMaterial.cs" />
     <Compile Include="WeaponAdamantine.cs" />
@@ -52,6 +52,7 @@
     <Compile Include="WeaponColdIron.cs" />
     <Compile Include="WeaponDarkwood.cs" />
     <Compile Include="WeaponMithral.cs" />
+    <Compile Include="WeaponSizeAdjustments.cs" />
     <Compile Include="WeaponSteel.cs" />
   </ItemGroup>
   <ItemGroup>

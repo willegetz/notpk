@@ -1,0 +1,18 @@
+Sera's Bite (Masterwork Dagger (Diminutive) [Adamantine])
+Melee Weapon
+Light Weapon Proficiency
+To Hit: +1
+Damage: 1 [19-20 x2] Piercing or Slashing
+Hardness: 1.25
+Hit Points: 1
+Weight: 1 pound(s)
+3002 gold pieces
+
+Weapon Text:
+	The dagger is a common secondary weapon. You get a +2 bonus on
+	Sleight of Hand checks made to conceal a dagger on your body.
+	This dagger is masterwork quality!
+	Dagger bypasses damage reduction value of 20.
+
+Additional Text:
+	Sera forged this dagger for revenge against those that ruined her home.
