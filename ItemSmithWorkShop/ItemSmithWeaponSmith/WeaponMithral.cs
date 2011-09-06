@@ -7,11 +7,11 @@ namespace ItemSmithWeaponSmith
 {
 	public class WeaponMithral
 	{
-		private DaggerMedium Dagger { get; set; }
+		private SimpleDagger Dagger { get; set; }
 
 		private double mithralCost = 500;
 
-		public WeaponMithral(DaggerMedium dagger)
+		public WeaponMithral(SimpleDagger dagger)
 		{
 			if (dagger == null)
 			{
@@ -42,7 +42,7 @@ namespace ItemSmithWeaponSmith
 			Dagger.WeaponName = Dagger.WeaponName + " [Mithral]";
 			Dagger.WeaponCost += (mithralCost * Dagger.WeaponWeight);
 			Dagger.WeaponWeight = (Dagger.WeaponWeight / 2);
-			Dagger.SpecialText = Dagger.SpecialText + "\n\tThis item is made of mithral!";
+			Dagger.WeaponText = Dagger.WeaponText + "\n\tThis item is made of mithral!";
 
 			return Dagger;
 		}

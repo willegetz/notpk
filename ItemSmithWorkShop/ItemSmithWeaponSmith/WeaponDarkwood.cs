@@ -7,9 +7,9 @@ namespace ItemSmithWeaponSmith
 {
 	public class WeaponDarkwood
 	{
-		private DaggerMedium Dagger { get; set; }
+		private SimpleDagger Dagger { get; set; }
 
-		public WeaponDarkwood(DaggerMedium dagger)
+		public WeaponDarkwood(SimpleDagger dagger)
 		{
 			if (dagger == null)
 			{
@@ -28,7 +28,7 @@ namespace ItemSmithWeaponSmith
 			Dagger.WeaponName = Dagger.WeaponName + " [Darkwood]";
 			Dagger.WeaponCost += (Dagger.WeaponWeight * 10);
 			Dagger.WeaponWeight = (.5 * Dagger.WeaponWeight);
-			Dagger.SpecialText = Dagger.SpecialText + "\n\tThis item is made of Darkwood!";
+			Dagger.WeaponText = Dagger.WeaponText + "\n\tThis item is made of Darkwood!";
 			return Dagger;
 		}
 	}

@@ -7,9 +7,9 @@ namespace ItemSmithWeaponSmith
 {
 	public class WeaponSteel
 	{
-		private DaggerMedium SimpleDagger { get; set; }
+		private SimpleDagger SimpleDagger { get; set; }
 
-		public WeaponSteel(DaggerMedium simpleDagger)
+		public WeaponSteel(SimpleDagger simpleDagger)
 		{
 			if (simpleDagger == null)
 			{
@@ -25,7 +25,7 @@ namespace ItemSmithWeaponSmith
 		public Object SetSteelTraits()
 		{
 			SimpleDagger.WeaponName = SimpleDagger.WeaponName + " [Steel]";
-			SimpleDagger.SpecialText = SimpleDagger.SpecialText + "\n\tThis is now a Steel Dagger!";
+			SimpleDagger.WeaponText = SimpleDagger.WeaponText + "\n\tThis is now a Steel Dagger!";
 			return SimpleDagger;
 		}
 

@@ -1,9 +1,9 @@
-Dagger
+Dagger (Colossal)
 Melee Weapon
 Light Weapon Proficiency
-Damage: 1d4 [19-20 x2] Piercing or Slashing
-Hardness: 10
-Hit Points: 2
+Damage: 3d6 [19-20 x2] Piercing or Slashing
+Hardness: 160
+Hit Points: 32
 Weight: 1 pound(s)
 2 gold pieces
 

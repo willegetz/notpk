@@ -7,11 +7,11 @@ namespace ItemSmithWeaponSmith
 {
 	public class WeaponColdIron
 	{
-		private DaggerMedium Dagger { get; set; }
+		private SimpleDagger Dagger { get; set; }
 
 		private double coldIronCost;
 
-		public WeaponColdIron(DaggerMedium dagger)
+		public WeaponColdIron(SimpleDagger dagger)
 		{
 			if (dagger == null)
 			{
@@ -29,7 +29,7 @@ namespace ItemSmithWeaponSmith
 			CalculateColdIronCost();
 			Dagger.WeaponName = Dagger.WeaponName + " [Cold Iron]";
 			Dagger.WeaponCost = coldIronCost;
-			Dagger.SpecialText = Dagger.SpecialText + "\n\tCold Iron is effective against some Fey.\n\tMagic enhancements cost an additional 2000 gold pieces.";
+			Dagger.WeaponText = Dagger.WeaponText + "\n\tCold Iron is effective against some Fey.\n\tMagic enhancements cost an additional 2000 gold pieces.";
 
 			return Dagger;
 		}

@@ -1,15 +1,16 @@
 Masterwork Dagger [Cold Iron]
 Melee Weapon
 Light Weapon Proficiency
-To Hit: 1
+To Hit: +1
 Damage: 1d4 [19-20 x2] Piercing or Slashing
 Hardness: 10
 Hit Points: 2
 Weight: 1 pound(s)
 304 gold pieces
 
-Special Text:
-	This is a dagger!
+Weapon Text:
+	The dagger is a common secondary weapon. You get a +2 bonus on
+	Sleight of Hand checks made to conceal a dagger on your body.
 	This dagger is masterwork quality!
 	Cold Iron is effective against some Fey.
 	Magic enhancements cost an additional 2000 gold pieces.

@@ -144,7 +144,7 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestSimpleDaggerObject()
 		{
-			DaggerMedium simpleDagger = new DaggerMedium();
+			SimpleDagger simpleDagger = new SimpleDagger(null);
 
 			Approvals.Approve(simpleDagger);
 		}
@@ -152,7 +152,7 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestDaggerDroppedIntoSteel()
 		{
-			DaggerMedium simpleDagger = new DaggerMedium();
+			SimpleDagger simpleDagger = new SimpleDagger(null);
 			new WeaponSteel(simpleDagger);
 
 			Approvals.Approve(simpleDagger);
@@ -161,7 +161,7 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestDaggerDroppedIntoSteelProperlyNamed()
 		{
-			DaggerMedium simpleDagger = new DaggerMedium();
+			SimpleDagger simpleDagger = new SimpleDagger(null);
 			simpleDagger.WeaponName = "Slashy Blade of Happiness";
 
 			new WeaponSteel(simpleDagger);
@@ -172,7 +172,7 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestMasterworkDagger()
 		{
-			DaggerMedium simpleDagger = new DaggerMedium();
+			SimpleDagger simpleDagger = new SimpleDagger(null);
 			simpleDagger.IsMasterworkQualifier(true);
 
 			Approvals.Approve(simpleDagger);
@@ -181,7 +181,7 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestDaggerDroppedIntoAdamantine()
 		{
-			DaggerMedium dagger = new DaggerMedium();
+			SimpleDagger dagger = new SimpleDagger(null);
 			new WeaponAdamantine(dagger);
 
 			Approvals.Approve(dagger);
@@ -190,7 +190,7 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestDaggerDroppedIntoDarkwood()
 		{
-			DaggerMedium dagger = new DaggerMedium();
+			SimpleDagger dagger = new SimpleDagger(null);
 			new WeaponDarkwood(dagger);
 
 			Approvals.Approve(dagger);
@@ -199,7 +199,7 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestDaggerDroppedIntoColdIron()
 		{
-			DaggerMedium dagger = new DaggerMedium();
+			SimpleDagger dagger = new SimpleDagger(null);
 			new WeaponColdIron(dagger);
 
 			Approvals.Approve(dagger);
@@ -208,7 +208,7 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestMasterworkDaggerDroppedIntoColdIron()
 		{
-			DaggerMedium dagger = new DaggerMedium();
+			SimpleDagger dagger = new SimpleDagger(null);
 			dagger.IsMasterworkQualifier(true);
 			new WeaponColdIron(dagger);
 
@@ -218,7 +218,7 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestDaggerDroppedIntoMithral()
 		{
-			DaggerMedium dagger = new DaggerMedium();
+			SimpleDagger dagger = new SimpleDagger(null);
 			dagger.IsMasterworkQualifier(true);
 			new WeaponMithral(dagger);
 
@@ -228,7 +228,7 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestMasterworkDaggerDroppedIntoMithral()
 		{
-			DaggerMedium dagger = new DaggerMedium();
+			SimpleDagger dagger = new SimpleDagger(null);
 			dagger.IsMasterworkQualifier(true);
 			new WeaponMithral(dagger);
 
@@ -238,7 +238,7 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestDaggerDroppedIntoAlchemicalSilver()
 		{
-			DaggerMedium dagger = new DaggerMedium();
+			SimpleDagger dagger = new SimpleDagger(null);
 			new WeaponAlchemicalSilver(dagger);
 
 			Approvals.Approve(dagger);
@@ -247,7 +247,7 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestMasterworkDaggerDroppedIntoAlchemicalSilver()
 		{
-			DaggerMedium dagger = new DaggerMedium();
+			SimpleDagger dagger = new SimpleDagger(null);
 			dagger.IsMasterworkQualifier(true);
 			new WeaponAlchemicalSilver(dagger);
 
@@ -257,9 +257,71 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestSmallSizeDagger()
 		{
-			DaggerSmall dagger = new DaggerSmall();
-			
-			Approvals.Approve(dagger);
+			SimpleDagger mediumDagger = new SimpleDagger("Small");
+
+			Approvals.Approve(mediumDagger);
+		}
+
+		[TestMethod]
+		public void TestFineSizeDagger()
+		{
+			SimpleDagger fineDagger = new SimpleDagger("Fine");
+
+			Approvals.Approve(fineDagger);
+		}
+
+		[TestMethod]
+		public void TestColossalSizeDagger()
+		{
+			SimpleDagger colossalDagger = new SimpleDagger("Colossal");
+
+			Approvals.Approve(colossalDagger);
+		}
+
+		[TestMethod]
+		public void TestLargeDagger()
+		{
+			SimpleDagger largeDagger = new SimpleDagger("Large");
+
+			Approvals.Approve(largeDagger);
+		}
+
+		[TestMethod]
+		public void TestProperNamedFineSizeDagger()
+		{
+			SimpleDagger faeDagger = new SimpleDagger("Diminutive");
+			new WeaponAdamantine(faeDagger);
+			faeDagger.WeaponName = String.Format("Sera's Bite ({0})", faeDagger.WeaponName);
+			faeDagger.AdditionalText = "Sera forged this dagger for revenge against those that ruined her home.";
+
+			Approvals.Approve(faeDagger);
+		}
+
+		[TestMethod]
+		public void TestWeaponHardnessHitPointsBySize()
+		{
+			Dictionary<string, double> hardnessHitPoints = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase);
+			var sb = new StringBuilder();
+
+			double hardness = 10;
+			double hitPoints = 20;
+
+			hardnessHitPoints.Add("Fine", 0.0625);
+			hardnessHitPoints.Add("Diminutive", 0.125);
+			hardnessHitPoints.Add("Tiny", 0.25);
+			hardnessHitPoints.Add("Small", 0.5);
+			hardnessHitPoints.Add("Medium", 1);
+			hardnessHitPoints.Add("Large", 2);
+			hardnessHitPoints.Add("Huge", 4);
+			hardnessHitPoints.Add("Gargantuan", 8);
+			hardnessHitPoints.Add("Colossal", 16);
+
+			foreach (var item in hardnessHitPoints)
+			{
+				sb.Append(String.Format("Original Hardness: {0}\tOriginal Hit Points: {1}\nWeapon Size: {2}\nNew Hardness: {3}\tNew Hit Points: {4}\n\n", hardness, hitPoints, item.Key, (hardness * item.Value), (hitPoints * item.Value)));
+			}
+
+			Approvals.Approve(sb);
 		}
 
 		[TestMethod]
