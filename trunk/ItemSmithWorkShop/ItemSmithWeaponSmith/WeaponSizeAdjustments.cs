@@ -21,14 +21,94 @@ namespace ItemSmithWeaponSmith
 			}
 			else
 			{
-				DetermineWeaponDamage(weaponSize);
+				SelectWeaponDamageToScale(weaponSize);
 				AdjustHardnessHitPointsForSize(weaponSize);
 				AdjustWeightForSize(weaponSize);
 				AdjsutCostForSize(weaponSize);
 			}
 		}
 
-		public void DetermineWeaponDamage(string weaponSize)
+		public void SelectWeaponDamageToScale(string weaponSize)
+		{
+			switch (WeaponDamage)
+			{
+				case "1d2":
+					ScaleDamageFrom1d2(weaponSize);
+					break;
+				case "1d3":
+					ScaleDamageFrom1d3(weaponSize);
+					break;
+				case "1d4":
+					ScaleDamageFrom1d4(weaponSize);
+					break;
+				case "1d6":
+					ScaleDamageFrom1d6(weaponSize);
+					break;
+				case "2d4":
+					ScaleDamageFrom2d4(weaponSize);
+					break;
+				case "1d8":
+					ScaleDamageFrom1d8(weaponSize);
+					break;
+				case "1d10":
+					ScaleDamageFrom1d10(weaponSize);
+					break;
+				case "1d12":
+					ScaleDamageFrom1d12(weaponSize);
+					break;
+				case "2d6":
+					ScaleDamageFrom2d6(weaponSize);
+					break;
+				default:
+					return;
+			}
+		}
+
+		public void ScaleDamageFrom1d2(string weaponSize)
+		{
+			Dictionary<string, string> damageAdjustment = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+			var sb = new StringBuilder();
+
+			damageAdjustment.Add("Fine", "No Meaningful Damage");
+			damageAdjustment.Add("Diminutive", "No Meaningful Damage");
+			damageAdjustment.Add("Tiny", "No Meaningful Damage");
+			damageAdjustment.Add("Small", "1");
+			damageAdjustment.Add("Medium", "1d2");
+			damageAdjustment.Add("Large", "1d3");
+			damageAdjustment.Add("Huge", "1d4");
+			damageAdjustment.Add("Gargantuan", "1d6");
+			damageAdjustment.Add("Colossal", "1d8");
+
+			if (damageAdjustment.ContainsKey(weaponSize))
+			{
+				WeaponDamage = damageAdjustment[weaponSize];
+				WeaponName = String.Format("{0} ({1})", WeaponName, weaponSize);
+			}
+		}
+
+		public void ScaleDamageFrom1d3(string weaponSize)
+		{
+			Dictionary<string, string> damageAdjustment = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+			var sb = new StringBuilder();
+
+			damageAdjustment.Add("Fine", "No Meaningful Damage");
+			damageAdjustment.Add("Diminutive", "No Meaningful Damage");
+			damageAdjustment.Add("Tiny", "1");
+			damageAdjustment.Add("Small", "1d2");
+			damageAdjustment.Add("Medium", "1d3");
+			damageAdjustment.Add("Large", "1d4");
+			damageAdjustment.Add("Huge", "1d6");
+			damageAdjustment.Add("Gargantuan", "1d8");
+			damageAdjustment.Add("Colossal", "2d6");
+
+			if (damageAdjustment.ContainsKey(weaponSize))
+			{
+				WeaponDamage = damageAdjustment[weaponSize];
+				WeaponName = String.Format("{0} ({1})", WeaponName, weaponSize);
+			}
+		}
+
+		public void ScaleDamageFrom1d4(string weaponSize)
 		{
 			Dictionary<string, string> damageAdjustment = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 			var sb = new StringBuilder();
@@ -42,6 +122,138 @@ namespace ItemSmithWeaponSmith
 			damageAdjustment.Add("Huge", "1d8");
 			damageAdjustment.Add("Gargantuan", "2d6");
 			damageAdjustment.Add("Colossal", "3d6");
+
+			if (damageAdjustment.ContainsKey(weaponSize))
+			{
+				WeaponDamage = damageAdjustment[weaponSize];
+				WeaponName = String.Format("{0} ({1})", WeaponName, weaponSize);
+			}
+		}
+
+		public void ScaleDamageFrom1d6(string weaponSize)
+		{
+			Dictionary<string, string> damageAdjustment = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+			var sb = new StringBuilder();
+
+			damageAdjustment.Add("Fine", "1");
+			damageAdjustment.Add("Diminutive", "1d2");
+			damageAdjustment.Add("Tiny", "1d3");
+			damageAdjustment.Add("Small", "1d4");
+			damageAdjustment.Add("Medium", "1d6");
+			damageAdjustment.Add("Large", "1d8");
+			damageAdjustment.Add("Huge", "2d6");
+			damageAdjustment.Add("Gargantuan", "3d6");
+			damageAdjustment.Add("Colossal", "4d6");
+
+			if (damageAdjustment.ContainsKey(weaponSize))
+			{
+				WeaponDamage = damageAdjustment[weaponSize];
+				WeaponName = String.Format("{0} ({1})", WeaponName, weaponSize);
+			}
+		}
+
+		public void ScaleDamageFrom2d4(string weaponSize)
+		{
+			Dictionary<string, string> damageAdjustment = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+			var sb = new StringBuilder();
+
+			damageAdjustment.Add("Fine", "1d2");
+			damageAdjustment.Add("Diminutive", "1d3");
+			damageAdjustment.Add("Tiny", "1d4");
+			damageAdjustment.Add("Small", "1d6");
+			damageAdjustment.Add("Medium", "2d4");
+			damageAdjustment.Add("Large", "2d6");
+			damageAdjustment.Add("Huge", "3d6");
+			damageAdjustment.Add("Gargantuan", "4d6");
+			damageAdjustment.Add("Colossal", "6d6");
+
+			if (damageAdjustment.ContainsKey(weaponSize))
+			{
+				WeaponDamage = damageAdjustment[weaponSize];
+				WeaponName = String.Format("{0} ({1})", WeaponName, weaponSize);
+			}
+		}
+
+		public void ScaleDamageFrom1d8(string weaponSize)
+		{
+			Dictionary<string, string> damageAdjustment = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+			var sb = new StringBuilder();
+
+			damageAdjustment.Add("Fine", "1d2");
+			damageAdjustment.Add("Diminutive", "1d3");
+			damageAdjustment.Add("Tiny", "1d4");
+			damageAdjustment.Add("Small", "1d6");
+			damageAdjustment.Add("Medium", "1d8");
+			damageAdjustment.Add("Large", "2d6");
+			damageAdjustment.Add("Huge", "3d6");
+			damageAdjustment.Add("Gargantuan", "4d6");
+			damageAdjustment.Add("Colossal", "6d6");
+
+			if (damageAdjustment.ContainsKey(weaponSize))
+			{
+				WeaponDamage = damageAdjustment[weaponSize];
+				WeaponName = String.Format("{0} ({1})", WeaponName, weaponSize);
+			}
+		}
+
+		public void ScaleDamageFrom1d10(string weaponSize)
+		{
+			Dictionary<string, string> damageAdjustment = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+			var sb = new StringBuilder();
+
+			damageAdjustment.Add("Fine", "1d3");
+			damageAdjustment.Add("Diminutive", "1d4");
+			damageAdjustment.Add("Tiny", "1d6");
+			damageAdjustment.Add("Small", "1d8");
+			damageAdjustment.Add("Medium", "1d10");
+			damageAdjustment.Add("Large", "2d8");
+			damageAdjustment.Add("Huge", "3d8");
+			damageAdjustment.Add("Gargantuan", "4d8");
+			damageAdjustment.Add("Colossal", "6d8");
+
+			if (damageAdjustment.ContainsKey(weaponSize))
+			{
+				WeaponDamage = damageAdjustment[weaponSize];
+				WeaponName = String.Format("{0} ({1})", WeaponName, weaponSize);
+			}
+		}
+
+		public void ScaleDamageFrom1d12(string weaponSize)
+		{
+			Dictionary<string, string> damageAdjustment = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+			var sb = new StringBuilder();
+
+			damageAdjustment.Add("Fine", "1d4");
+			damageAdjustment.Add("Diminutive", "1d6");
+			damageAdjustment.Add("Tiny", "1d8");
+			damageAdjustment.Add("Small", "1d10");
+			damageAdjustment.Add("Medium", "1d12");
+			damageAdjustment.Add("Large", "3d6");
+			damageAdjustment.Add("Huge", "4d6");
+			damageAdjustment.Add("Gargantuan", "6d6");
+			damageAdjustment.Add("Colossal", "8d6");
+
+			if (damageAdjustment.ContainsKey(weaponSize))
+			{
+				WeaponDamage = damageAdjustment[weaponSize];
+				WeaponName = String.Format("{0} ({1})", WeaponName, weaponSize);
+			}
+		}
+
+		public void ScaleDamageFrom2d6(string weaponSize)
+		{
+			Dictionary<string, string> damageAdjustment = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+			var sb = new StringBuilder();
+
+			damageAdjustment.Add("Fine", "1d4");
+			damageAdjustment.Add("Diminutive", "1d6");
+			damageAdjustment.Add("Tiny", "1d8");
+			damageAdjustment.Add("Small", "1d10");
+			damageAdjustment.Add("Medium", "2d6");
+			damageAdjustment.Add("Large", "3d6");
+			damageAdjustment.Add("Huge", "4d6");
+			damageAdjustment.Add("Gargantuan", "6d6");
+			damageAdjustment.Add("Colossal", "8d6");
 
 			if (damageAdjustment.ContainsKey(weaponSize))
 			{
