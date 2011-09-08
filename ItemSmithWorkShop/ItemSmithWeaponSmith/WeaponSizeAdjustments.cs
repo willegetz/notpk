@@ -67,7 +67,6 @@ namespace ItemSmithWeaponSmith
 		public void ScaleDamageFrom1d2(string weaponSize)
 		{
 			Dictionary<string, string> damageAdjustment = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
-			var sb = new StringBuilder();
 
 			damageAdjustment.Add("Fine", "No Meaningful Damage");
 			damageAdjustment.Add("Diminutive", "No Meaningful Damage");
@@ -89,7 +88,6 @@ namespace ItemSmithWeaponSmith
 		public void ScaleDamageFrom1d3(string weaponSize)
 		{
 			Dictionary<string, string> damageAdjustment = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
-			var sb = new StringBuilder();
 
 			damageAdjustment.Add("Fine", "No Meaningful Damage");
 			damageAdjustment.Add("Diminutive", "No Meaningful Damage");
