@@ -3,12 +3,12 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ApprovalTests.Reporters;
 using ItemSmithWeaponSmith;
-using ApprovalTests;
 using ItemSmithWorkShop;
 using System.Collections.Specialized;
 using System.Collections;
+using ApprovalTests.Reporters;
+using ApprovalTests;
 
 namespace ItemSmithTests
 {
@@ -358,5 +358,140 @@ namespace ItemSmithTests
 
 			Approvals.Approve(sb);
 		}
+
+		[TestMethod]
+		public void TestDictionaryQuery()
+		{
+			string[] baseDamage = new []{"1d2", "1d3", "1d4", "1d6", "2d4", "1d8", "1d10", "1d12", "2d6"};
+			string[] sizeDesired = new[] { "Fine", "Diminutive", "Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal" };
+			//string adjustedDamage = GetDamage(baseDamage, sizeDesired);
+			//string size = sizeDesired;
+			//string formatResult = String.Format("Medium Size Damage of '{0}' scales to => {1} Size Damage of '{2}'", baseDamage, sizeDesired, adjustedDamage));
+
+			ApprovalTests.Combinations.Approvals.ApproveAllCombinations(GetDamage, baseDamage, sizeDesired);
+		}
+
+		public string GetDamage(string damage, string size)
+		{
+
+			const string fine = "Fine";
+			const string diminutive = "Diminutive";
+			const string tiny = "Tiny";
+			const string small = "Small";
+			const string medium = "Medium";
+			const string large = "Large";
+			const string huge = "Huge";
+			const string gargantuan = "Gargantuan";
+			const string colossal = "Colossal";
+
+			Dictionary<string, string> ScaleDamageFrom1d2 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase){
+						 {fine, "No Meaningful Damage"}, {"Diminutive", "No Meaningful Damage"}, {"Tiny", "No Meaningful Damage"},
+						 {"Small", "1"}, {"Medium", "1d2"}, {"Large", "1d3"}, {"Huge", "1d4"}, {"Gargantuan", "1d6"}, {"Colossal", "1d8"}
+			};
+
+			Dictionary<string, string> ScaleDamageFrom1d3 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase){
+						 {fine, "No Meaningful Damage"}, {"Diminutive", "No Meaningful Damage"}, {"Tiny", "1d3"},
+						 {"Small", "1d2"}, {"Medium", "1d3"}, {"Large", "1d4"}, {"Huge", "1d6"}, {"Gargantuan", "1d8"}, {"Colossal", "2d6"}
+			};
+
+			Dictionary<string, string> ScaleDamageFrom1d4 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
+						 {fine, "No Meaningful Damage"}, {"Diminutive", "1"}, {"Tiny", "1d2"}, {"Small", "1d3"},
+						 {"Medium", "1d4"}, {"Large", "1d6"}, {"Huge", "1d8"}, {"Gargantuan", "2d6"}, {"Colossal", "3d6"}
+			};
+
+			Dictionary<string, string> ScaleDamageFrom1d6 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
+						 {fine, "1"}, {"Diminutive", "1d2"}, {"Tiny", "1d3"}, {"Small", "1d4"},
+						 {"Medium", "1d6"}, {"Large", "1d8"}, {"Huge", "2d6"}, {"Gargantuan", "3d6"}, {"Colossal", "4d6"}
+			};
+
+			Dictionary<string, string> ScaleDamageFrom2d4 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
+						 {fine, "1d2"}, {"Diminutive", "1d3"}, {"Tiny", "1d4"}, {"Small", "1d6"},
+						 {"Medium", "2d4"}, {"Large", "2d6"}, {"Huge", "3d6"}, {"Gargantuan", "4d6"}, {"Colossal", "6d6"}
+			};
+
+			Dictionary<string, string> ScaleDamageFrom1d8 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
+						 {fine, "1d2"}, {"Diminutive", "1d3"}, {"Tiny", "1d4"}, {"Small", "1d6"},
+						 {"Medium", "1d8"}, {"Large", "2d6"}, {"Huge", "3d6"}, {"Gargantuan", "4d6"}, {"Colossal", "6d6"}
+			};
+
+			Dictionary<string, string> ScaleDamageFrom1d10 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
+						 {fine, "1d3"}, {"Diminutive", "1d4"}, {"Tiny", "1d6"}, {"Small", "1d8"},
+						 {"Medium", "1d10"}, {"Large", "2d8"}, {"Huge", "3d8"}, {"Gargantuan", "4d8"}, {"Colossal", "6d8"}
+			};
+
+			Dictionary<string, string> ScaleDamageFrom1d12 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
+						 {fine, "1d4"}, {"Diminutive", "1d6"}, {"Tiny", "1d8"}, {"Small", "1d10"},
+						 {"Medium", "1d12"}, {"Large", "3d6"}, {"Huge", "4d6"}, {"Gargantuan", "6d6"}, {"Colossal", "8d6"}
+			};
+
+			Dictionary<string, string> ScaleDamageFrom2d6 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
+						 {fine, "1d4"}, {"Diminutive", "1d6"}, {"Tiny", "1d8"}, {"Small", "1d10"},
+						 {"Medium", "2d6"}, {"Large", "3d6"}, {"Huge", "4d6"}, {"Gargantuan", "6d6"}, {"Colossal", "8d6"}
+			};
+
+			Dictionary<string, Dictionary<string, string>> sizeModification = new Dictionary<string, Dictionary<string, string>>{
+						 {"1d2", ScaleDamageFrom1d2}, {"1d3", ScaleDamageFrom1d3}, {"1d4", ScaleDamageFrom1d4}, {"1d6", ScaleDamageFrom1d6},
+						 {"2d4", ScaleDamageFrom2d4}, {"1d8", ScaleDamageFrom1d8}, {"1d10", ScaleDamageFrom1d10}, {"1d12", ScaleDamageFrom1d12},
+						 {"2d6", ScaleDamageFrom2d6}
+			};
+			
+			return sizeModification[damage][size].ToString();
+		}
+
+		//public Dictionary<string, Dictionary<string, string>> BuildDamageScales()
+		//{
+		//    Dictionary<string, string> ScaleDamageFrom1d2 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase){
+		//                 {"Fine", "No Meaningful Damage"}, {"Diminutive", "No Meaningful Damage"}, {"Tiny", "No Meaningful Damage"},
+		//                 {"Small", "1"}, {"Medium", "1d2"}, {"Large", "1d3"}, {"Huge", "1d4"}, {"Gargantuan", "1d6"}, {"Colossal", "1d8"}
+		//    };
+
+		//    Dictionary<string, string> ScaleDamageFrom1d3 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase){
+		//                 {"Fine", "No Meaningful Damage"}, {"Diminutive", "No Meaningful Damage"}, {"Tiny", "1d3"},
+		//                 {"Small", "1d2"}, {"Medium", "1d3"}, {"Large", "1d4"}, {"Huge", "1d6"}, {"Gargantuan", "1d8"}, {"Colossal", "2d6"}
+		//    };
+
+		//    Dictionary<string, string> ScaleDamageFrom1d4 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
+		//                 {"Fine", "No Meaningful Damage"}, {"Diminutive", "1"}, {"Tiny", "1d2"}, {"Small", "1d3"},
+		//                 {"Medium", "1d4"}, {"Large", "1d6"}, {"Huge", "1d8"}, {"Gargantuan", "2d6"}, {"Colossal", "3d6"}
+		//    };
+
+		//    Dictionary<string, string> ScaleDamageFrom1d6 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
+		//                 {"Fine", "1"}, {"Diminutive", "1d2"}, {"Tiny", "1d3"}, {"Small", "1d4"},
+		//                 {"Medium", "1d6"}, {"Large", "1d8"}, {"Huge", "2d6"}, {"Gargantuan", "3d6"}, {"Colossal", "4d6"}
+		//    };
+
+		//    Dictionary<string, string> ScaleDamageFrom2d4 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
+		//                 {"Fine", "1d2"}, {"Diminutive", "1d3"}, {"Tiny", "1d4"}, {"Small", "1d6"},
+		//                 {"Medium", "2d4"}, {"Large", "2d6"}, {"Huge", "3d6"}, {"Gargantuan", "4d6"}, {"Colossal", "6d6"}
+		//    };
+
+		//    Dictionary<string, string> ScaleDamageFrom1d8 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
+		//                 {"Fine", "1d2"}, {"Diminutive", "1d3"}, {"Tiny", "1d4"}, {"Small", "1d6"},
+		//                 {"Medium", "1d8"}, {"Large", "2d6"}, {"Huge", "3d6"}, {"Gargantuan", "4d6"}, {"Colossal", "6d6"}
+		//    };
+
+		//    Dictionary<string, string> ScaleDamageFrom1d10 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
+		//                 {"Fine", "1d3"}, {"Diminutive", "1d4"}, {"Tiny", "1d6"}, {"Small", "1d8"},
+		//                 {"Medium", "1d10"}, {"Large", "2d8"}, {"Huge", "3d8"}, {"Gargantuan", "4d8"}, {"Colossal", "6d8"}
+		//    };
+
+		//    Dictionary<string, string> ScaleDamageFrom1d12 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
+		//                 {"Fine", "1d4"}, {"Diminutive", "1d6"}, {"Tiny", "1d8"}, {"Small", "1d10"},
+		//                 {"Medium", "1d12"}, {"Large", "3d6"}, {"Huge", "4d6"}, {"Gargantuan", "6d6"}, {"Colossal", "8d6"}
+		//    };
+
+		//    Dictionary<string, string> ScaleDamageFrom2d6 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
+		//                 {"Fine", "1d4"}, {"Diminutive", "1d6"}, {"Tiny", "1d8"}, {"Small", "1d10"},
+		//                 {"Medium", "2d6"}, {"Large", "3d6"}, {"Huge", "4d6"}, {"Gargantuan", "6d6"}, {"Colossal", "8d6"}
+		//    };
+
+		//    Dictionary<string, Dictionary<string, string>> sizeModification = new Dictionary<string, Dictionary<string, string>>{
+		//                 {"1d2", ScaleDamageFrom1d2}, {"1d3", ScaleDamageFrom1d3}, {"1d4", ScaleDamageFrom1d4}, {"1d6", ScaleDamageFrom1d6},
+		//                 {"2d4", ScaleDamageFrom1d6}, {"1d8", ScaleDamageFrom1d6}, {"1d10", ScaleDamageFrom1d6}, {"1d12", ScaleDamageFrom1d6},
+		//                 {"2d6", ScaleDamageFrom1d6}
+		//    };
+
+		//    return sizeModification;
+		//}
 	}
 }

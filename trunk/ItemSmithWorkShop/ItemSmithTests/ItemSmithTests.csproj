@@ -33,10 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ApprovalTests">
-      <HintPath>..\..\Approvals\ApprovalTests.dll</HintPath>
+    <Reference Include="ApprovalTests, Version=1.0.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ApprovalTests.dll</HintPath>
     </Reference>
-    <Reference Include="ApprovalUtilities">
+    <Reference Include="ApprovalUtilities, Version=1.0.11.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\Approvals\ApprovalUtilities.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
