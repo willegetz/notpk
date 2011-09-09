@@ -9,7 +9,7 @@
 [1d2,Colossal] => 1d8
 [1d3,Fine] => No Meaningful Damage
 [1d3,Diminutive] => No Meaningful Damage
-[1d3,Tiny] => 1d3
+[1d3,Tiny] => 1
 [1d3,Small] => 1d2
 [1d3,Medium] => 1d3
 [1d3,Large] => 1d4
