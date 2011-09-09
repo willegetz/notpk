@@ -80,6 +80,7 @@ namespace ItemSmithWeaponSmith
 
 		public SimpleDagger(string weaponSize)
 		{
+			
 			WeaponName = "Dagger";
 			WeaponDamage = "1d4";
 			WeaponHardness = 10;
