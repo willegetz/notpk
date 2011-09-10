@@ -1,15 +1,14 @@
-Dagger [Masterwork] [Alchemical Silver]
++1 Dagger (Medium) [Masterwork]
 Melee Weapon
 Light Weapon Proficiency
 To Hit: +1
-Damage: 1d4 -1 [19-20 x2] Piercing or Slashing
+Damage: 1d4 [19-20 x2] Piercing or Slashing
 Hardness: 10
 Hit Points: 2
 Weight: 1 pound(s)
-322 gold pieces
+302 gold pieces
 
 Weapon Text:
 	The dagger is a common secondary weapon. You get a +2 bonus on
 	Sleight of Hand checks made to conceal a dagger on your body.
 	This dagger is masterwork quality!
-	Alchemical Silver bypasses damage reduction on lycanthropes.

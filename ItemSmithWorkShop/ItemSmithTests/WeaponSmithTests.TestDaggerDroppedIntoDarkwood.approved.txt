@@ -1,4 +1,4 @@
-Masterwork Dagger [Darkwood]
+Dagger [Masterwork] [Darkwood]
 Melee Weapon
 Light Weapon Proficiency
 To Hit: +1

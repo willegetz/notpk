@@ -298,6 +298,72 @@ namespace ItemSmithTests
 		}
 
 		[TestMethod]
+		public void TestMultipleDaggers()
+		{
+			SimpleDagger dagger;
+			List<SimpleDagger> inventory = new List<SimpleDagger>();
+			var displayInventory = new StringBuilder();
+
+			int daggerQuantity = 5;
+
+			for (int i = 0; i <= daggerQuantity; i++)
+			{
+				dagger = new SimpleDagger(null);
+				inventory.Add(dagger);
+			}
+
+			foreach (var item in inventory)
+			{
+				displayInventory.Append(item + "\n\n");
+			}
+
+			Approvals.Approve(displayInventory);
+		}
+
+		[TestMethod]
+		public void TestMultipleDifferentDaggers()
+		{
+			List<SimpleDagger> inventory = new List<SimpleDagger>();
+			var displayInventory = new StringBuilder();
+
+			SimpleDagger faeDagger = new SimpleDagger("Fine");
+			new WeaponAlchemicalSilver(faeDagger);
+			faeDagger.WeaponName = String.Format("Faerie's Dagger ({0})", faeDagger.WeaponName);
+			faeDagger.AdditionalText = "Dagger left by a faerie as a token of friendship.";
+
+			SimpleDagger ogreDagger = new SimpleDagger("Large");
+			new WeaponColdIron(ogreDagger);
+			ogreDagger.WeaponName = String.Format("Tooth ({0})", ogreDagger.WeaponName);
+			ogreDagger.AdditionalText = "Dagger of an Ogre Mage chief taken from its body after a vicious fight.";
+
+			SimpleDagger expensiveDagger = new SimpleDagger("Medium");
+			new WeaponMithral(expensiveDagger);
+			expensiveDagger.WeaponName = String.Format("Oscar's Fine Blade ({0})", expensiveDagger.WeaponName);
+			expensiveDagger.WeaponCost = (expensiveDagger.WeaponCost * 10);
+			expensiveDagger.AdditionalText = "Oscar's Fine Blade is ornately crafted. Fine jewels are tastefully set along the hilt.\n\tThe mithral is inlaid with gold to form a rich and flowing design that hints at the arcane.";
+
+			inventory.Add(faeDagger);
+			inventory.Add(ogreDagger);
+			inventory.Add(expensiveDagger);
+
+			foreach (var item in inventory)
+			{
+				displayInventory.Append(item + "\n\n\n");
+			}
+
+			Approvals.Approve(displayInventory);
+		}
+
+		[TestMethod]
+		public void TestMagicalWeapon()
+		{
+			SimpleDagger dagger = new SimpleDagger("Medium");
+			new MagicWeapon(dagger, 1);
+
+			Approvals.Approve(dagger);
+		}
+
+		[TestMethod]
 		public void TestWeaponHardnessHitPointsBySize()
 		{
 			Dictionary<string, double> hardnessHitPoints = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase);
@@ -327,8 +393,6 @@ namespace ItemSmithTests
 		[TestMethod]
 		public void TestWeaponDamageBySize()
 		{
-			// Fine	Diminutive	Tiny	Small	Medium	Large	Huge	Gargantuan	Colossal
-			// —	1	1d2	1d3	1d4	1d6	1d8	2d6	3d6
 			Dictionary<string, string> damage = new Dictionary<string, string>();
 
 			damage.Add("Fine", "No Meaningful Damage");
@@ -348,7 +412,6 @@ namespace ItemSmithTests
 			foreach (var item in damage)
 			{
 				weaponDamage.Add(item);
-				//sb.Append(String.Format("Size: {0}\tDamage: {1}\n", item.Key, item.Value));
 			}
 
 			foreach (var item in weaponDamage)
@@ -364,9 +427,6 @@ namespace ItemSmithTests
 		{
 			string[] baseDamage = new []{"1d2", "1d3", "1d4", "1d6", "2d4", "1d8", "1d10", "1d12", "2d6"};
 			string[] sizeDesired = new[] { "Fine", "Diminutive", "Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal" };
-			//string adjustedDamage = GetDamage(baseDamage, sizeDesired);
-			//string size = sizeDesired;
-			//string formatResult = String.Format("Medium Size Damage of '{0}' scales to => {1} Size Damage of '{2}'", baseDamage, sizeDesired, adjustedDamage));
 
 			ApprovalTests.Combinations.Approvals.ApproveAllCombinations(GetDamage, baseDamage, sizeDesired);
 		}

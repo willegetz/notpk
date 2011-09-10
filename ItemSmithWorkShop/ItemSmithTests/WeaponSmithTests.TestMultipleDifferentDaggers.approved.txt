@@ -1,0 +1,58 @@
+Faerie's Dagger (Dagger (Fine) [Alchemical Silver])
+Melee Weapon
+Light Weapon Proficiency
+Damage: No Meaningful Damage -1 [19-20 x2] Piercing or Slashing
+Hardness: 1
+Hit Points: 1
+Weight: 1 pound(s)
+22 gold pieces
+
+Weapon Text:
+	The dagger is a common secondary weapon. You get a +2 bonus on
+	Sleight of Hand checks made to conceal a dagger on your body.
+	Alchemical Silver bypasses damage reduction on lycanthropes.
+
+Additional Text:
+	Dagger left by a faerie as a token of friendship.
+
+
+Tooth (Dagger (Large) [Cold Iron])
+Melee Weapon
+Light Weapon Proficiency
+Damage: 1d6 [19-20 x2] Piercing or Slashing
+Hardness: 20
+Hit Points: 4
+Weight: 2 pound(s)
+4 gold pieces
+
+Weapon Text:
+	The dagger is a common secondary weapon. You get a +2 bonus on
+	Sleight of Hand checks made to conceal a dagger on your body.
+	Cold Iron is effective against some Fey.
+	Magic enhancements cost an additional 2000 gold pieces.
+
+Additional Text:
+	Dagger of an Ogre Mage chief taken from its body after a vicious fight.
+
+
+Oscar's Fine Blade (Dagger (Medium) [Masterwork] [Mithral])
+Melee Weapon
+Light Weapon Proficiency
+To Hit: +1
+Damage: 1d4 [19-20 x2] Piercing or Slashing
+Hardness: 10
+Hit Points: 2
+Weight: 0.5 pound(s)
+5320 gold pieces
+
+Weapon Text:
+	The dagger is a common secondary weapon. You get a +2 bonus on
+	Sleight of Hand checks made to conceal a dagger on your body.
+	This dagger is masterwork quality!
+	This item is made of mithral!
+
+Additional Text:
+	Oscar's Fine Blade is ornately crafted. Fine jewels are tastefully set along the hilt.
+	The mithral is inlaid with gold to form a rich and flowing design that hints at the arcane.
+
+
