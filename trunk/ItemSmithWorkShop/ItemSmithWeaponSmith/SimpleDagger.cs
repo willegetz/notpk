@@ -7,60 +7,23 @@ namespace ItemSmithWeaponSmith
 {
 	public class SimpleDagger : WeaponSizeAdjustments
 	{
+		WeaponSizeAdjustments sizeAdjustment;
+		
 		private double masterworkCostModifier;
-		public int BasePrice { get; set; }
 
-		public string WeaponProficiencyRequirement
-		{
-			get
-			{
-				return "Light Weapon";
-			}
-		}
-
-		public string WeaponCategory
-		{
-			get
-			{
-				return "Melee";
-			}
-		}
-
-		public string WeaponThreatRange
-		{
-			get
-			{
-				return "19-20";
-			}
-		}
-
-		public string WeaponCritical
-		{
-			get
-			{
-				return "x2";
-			}
-		}
-
-		public string WeaponDamageType
-		{
-			get
-			{
-				return "Piercing or Slashing";
-			}
-		}
-
-		public double WeaponCost
-		{
-			get;
-			set;
-		}
+		public string WeaponProficiencyRequirement { get { return "Light Weapon"; } }
+		public string WeaponCategory { get { return "Melee"; } }
+		public string WeaponThreatRange { get { return "19-20"; } }
+		public string WeaponCritical { get { return "x2"; } }
+		public string WeaponDamageType { get { return "Piercing or Slashing"; } }
 
 		public string WeaponText { get; set; }
-		public bool IsMasterwork { get; private set; }
-		public int ToHitModifier { get; set; }
 		public string AdditionalText { get; set; }
-
+		public int BasePrice { get; set; }
+		public int ToHitModifier { get; set; }
+		public double WeaponCost { get; set; }
+		public bool IsMasterwork { get; private set; }
+		
 		public void IsMasterworkQualifier(bool value)
 		{
 			if (value)
@@ -72,7 +35,7 @@ namespace ItemSmithWeaponSmith
 
 		private void MasterworkProperties()
 		{
-			WeaponName = "Masterwork " + WeaponName;
+			WeaponName = WeaponName + " [Masterwork]";
 			ToHitModifier = 1;
 			WeaponText = WeaponText + "\n\tThis dagger is masterwork quality!";
 			masterworkCostModifier = 300;
@@ -80,7 +43,6 @@ namespace ItemSmithWeaponSmith
 
 		public SimpleDagger(string weaponSize)
 		{
-			
 			WeaponName = "Dagger";
 			WeaponDamage = "1d4";
 			WeaponHardness = 10;
