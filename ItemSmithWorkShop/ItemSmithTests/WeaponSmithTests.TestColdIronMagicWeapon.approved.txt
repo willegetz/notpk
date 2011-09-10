@@ -6,7 +6,12 @@ Damage: 1d4 +1 [19-20 x2] Piercing or Slashing, Magic
 Hardness: 11
 Hit Points: 3
 Weight: 1 pound(s)
-2304 gold pieces
+4304 gold pieces
+Creation Costs
+	Caster Level: 3
+	Days to Create: 2
+	Experience Cost: 80 experience points
+	Raw Material Cost: 1000 gold pieces
 
 Weapon Text:
 	The dagger is a common secondary weapon. You get a +2 bonus on

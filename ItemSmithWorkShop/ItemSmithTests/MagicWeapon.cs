@@ -13,6 +13,8 @@ namespace ItemSmithWeaponSmith
 		private double TotalEnhancementCost { get; set; }
 		private double TotalEnhancementBonus { get; set; }
 		private double plusEnhancementBonus;
+		private double enhancementMultiplier = 2000;
+		private double coldIronAdditionalCost = 2000;
 
 		public MagicWeapon(SimpleDagger dagger, int plusEnhancement)
 		{
@@ -38,7 +40,6 @@ namespace ItemSmithWeaponSmith
 		{
 			if (qualifier)
 			{
-				Dagger.IsMagical = qualifier;
 				Dagger.WeaponName = String.Format("{0} Glowing", Dagger.WeaponName);
 				Dagger.WeaponText = String.Format("{0}\n\tThis weapon sheds light equivelant to a light spell\n\t\t(bright light in a 20 foot radius, shadowy light in a 40 foot radius)\n\t\tThe light from this weapon can't be concealed when drawn, nor can it be shut off.", Dagger.WeaponText);
 			}
@@ -59,7 +60,15 @@ namespace ItemSmithWeaponSmith
 		private void CalculateMagicalCost()
 		{
 			TotalEnhancementBonus = plusEnhancementBonus;
-			TotalEnhancementCost = (TotalEnhancementBonus * TotalEnhancementBonus) * 2000;
+			
+			if (Dagger.IsColdIron)
+			{
+				TotalEnhancementCost = ((TotalEnhancementBonus * TotalEnhancementBonus) * enhancementMultiplier) + coldIronAdditionalCost;
+			}
+			else
+			{
+			TotalEnhancementCost = (TotalEnhancementBonus * TotalEnhancementBonus) * enhancementMultiplier;
+			}
 		}
 
 		private void CalculateCasterLevel()
@@ -84,6 +93,7 @@ namespace ItemSmithWeaponSmith
 
 		private void SetMagicalTraits()
 		{
+			Dagger.IsMagical = true;
 			CheckMasterworkStatus();
 			CalculateMagicalCost();
 			CalculateCasterLevel();

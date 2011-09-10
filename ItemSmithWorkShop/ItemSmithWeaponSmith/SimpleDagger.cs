@@ -28,6 +28,7 @@ namespace ItemSmithWeaponSmith
 		public double RawMaterialCost { get; set; }
 		public bool IsMagical { get; set; }
 		public bool IsMasterwork { get; private set; }
+		public bool IsColdIron { get; set; }
 		
 		public void IsMasterworkQualifier(bool value)
 		{

@@ -26,6 +26,7 @@ namespace ItemSmithWeaponSmith
 
 		private Object SetColdIronTraits()
 		{
+			Dagger.IsColdIron = true;
 			CalculateColdIronCost();
 			Dagger.WeaponName = Dagger.WeaponName + " [Cold Iron]";
 			Dagger.WeaponCost = coldIronCost;
@@ -37,10 +38,6 @@ namespace ItemSmithWeaponSmith
 		private void CalculateColdIronCost()
 		{
 			coldIronCost = (Dagger.WeaponCost - Dagger.BasePrice) + (Dagger.BasePrice * 2);
-			if (Dagger.IsMagical)
-			{
-				Dagger.WeaponCost += 2000;
-			}
 		}
 
 	}
