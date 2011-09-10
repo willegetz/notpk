@@ -1,14 +1,22 @@
-+1 Dagger (Medium) [Masterwork]
++1 Dagger (Medium) [Masterwork] Glowing
 Melee Weapon
 Light Weapon Proficiency
 To Hit: +1
-Damage: 1d4 [19-20 x2] Piercing or Slashing
-Hardness: 10
-Hit Points: 2
+Damage: 1d4 +1 [19-20 x2] Piercing or Slashing, Magic
+Hardness: 11
+Hit Points: 3
 Weight: 1 pound(s)
-302 gold pieces
+2302 gold pieces
+Creation Costs
+	Caster Level: 3
+	Days to Create: 2
+	Experience Cost: 80 experience points
+	Raw Material Cost: 1000 gold pieces
 
 Weapon Text:
 	The dagger is a common secondary weapon. You get a +2 bonus on
 	Sleight of Hand checks made to conceal a dagger on your body.
 	This dagger is masterwork quality!
+	This weapon sheds light equivelant to a light spell
+		(bright light in a 20 foot radius, shadowy light in a 40 foot radius)
+		The light from this weapon can't be concealed when drawn, nor can it be shut off.

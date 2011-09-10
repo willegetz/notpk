@@ -37,6 +37,10 @@ namespace ItemSmithWeaponSmith
 		private void CalculateColdIronCost()
 		{
 			coldIronCost = (Dagger.WeaponCost - Dagger.BasePrice) + (Dagger.BasePrice * 2);
+			if (Dagger.IsMagical)
+			{
+				Dagger.WeaponCost += 2000;
+			}
 		}
 
 	}
