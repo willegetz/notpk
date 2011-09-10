@@ -1,0 +1,80 @@
++1 Dagger (Medium) [Masterwork]
+Melee Weapon
+Light Weapon Proficiency
+To Hit: +1
+Damage: 1d4 +1 [19-20 x2] Piercing or Slashing, Magic
+Hardness: 11
+Hit Points: 3
+Weight: 1 pound(s)
+2302 gold pieces
+
+Weapon Text:
+	The dagger is a common secondary weapon. You get a +2 bonus on
+	Sleight of Hand checks made to conceal a dagger on your body.
+	This dagger is masterwork quality!
+
+
++2 Dagger (Small) [Masterwork]
+Melee Weapon
+Light Weapon Proficiency
+To Hit: +2
+Damage: 1d3 +2 [19-20 x2] Piercing or Slashing, Magic
+Hardness: 7
+Hit Points: 3
+Weight: 0.5 pound(s)
+8302 gold pieces
+
+Weapon Text:
+	The dagger is a common secondary weapon. You get a +2 bonus on
+	Sleight of Hand checks made to conceal a dagger on your body.
+	This dagger is masterwork quality!
+
+
++3 Dagger (Large) [Masterwork]
+Melee Weapon
+Light Weapon Proficiency
+To Hit: +3
+Damage: 1d6 +3 [19-20 x2] Piercing or Slashing, Magic
+Hardness: 23
+Hit Points: 7
+Weight: 2 pound(s)
+18302 gold pieces
+
+Weapon Text:
+	The dagger is a common secondary weapon. You get a +2 bonus on
+	Sleight of Hand checks made to conceal a dagger on your body.
+	This dagger is masterwork quality!
+
+
++4 Dagger (Tiny) [Masterwork]
+Melee Weapon
+Light Weapon Proficiency
+To Hit: +4
+Damage: 1d2 +4 [19-20 x2] Piercing or Slashing, Magic
+Hardness: 6.5
+Hit Points: 5
+Weight: 0.5 pound(s)
+32302 gold pieces
+
+Weapon Text:
+	The dagger is a common secondary weapon. You get a +2 bonus on
+	Sleight of Hand checks made to conceal a dagger on your body.
+	This dagger is masterwork quality!
+
+
++5 Dagger (Huge) [Masterwork]
+Melee Weapon
+Light Weapon Proficiency
+To Hit: +5
+Damage: 1d8 +5 [19-20 x2] Piercing or Slashing, Magic
+Hardness: 45
+Hit Points: 13
+Weight: 2 pound(s)
+50302 gold pieces
+
+Weapon Text:
+	The dagger is a common secondary weapon. You get a +2 bonus on
+	Sleight of Hand checks made to conceal a dagger on your body.
+	This dagger is masterwork quality!
+
+

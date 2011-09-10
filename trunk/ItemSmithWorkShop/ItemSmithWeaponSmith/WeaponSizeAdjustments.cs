@@ -13,6 +13,16 @@ namespace ItemSmithWeaponSmith
 		public double WeaponHitPoints { get; set; }
 		public double WeaponWeight { get; set; }
 
+		const string fine = "Fine";
+		const string diminutive = "Diminutive";
+		const string tiny = "Tiny";
+		const string small = "Small";
+		const string medium = "Medium";
+		const string large = "Large";
+		const string huge = "Huge";
+		const string gargantuan = "Gargantuan";
+		const string colossal = "Colossal";
+
 		public WeaponSizeAdjustments() { }
 
 		public void CheckForNull(string weaponSize)
@@ -32,16 +42,6 @@ namespace ItemSmithWeaponSmith
 
 		public void SelectWeaponDamageToScale(string weaponSize)
 		{
-			const string fine = "Fine";
-			const string diminutive = "Diminutive";
-			const string tiny = "Tiny";
-			const string small = "Small";
-			const string medium = "Medium";
-			const string large = "Large";
-			const string huge = "Huge";
-			const string gargantuan = "Gargantuan";
-			const string colossal = "Colossal";
-
 			Dictionary<string, int> sizing = new Dictionary<string, int>{
 			{fine, 0}, {diminutive, 1}, {tiny, 2}, {small, 3}, {medium, 4}, {large, 5}, {huge, 6}, {gargantuan, 7}, {colossal, 8}};
 
@@ -69,27 +69,14 @@ namespace ItemSmithWeaponSmith
 
 		public void AdjustHardnessHitPointsForSize(string weaponSize)
 		{
-			Dictionary<string, double> hardnessHitPointsAdjustment = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase);
-
-			hardnessHitPointsAdjustment.Add("Fine", 0.0625);
-			hardnessHitPointsAdjustment.Add("Diminutive", 0.125);
-			hardnessHitPointsAdjustment.Add("Tiny", 0.25);
-			hardnessHitPointsAdjustment.Add("Small", 0.5);
-			hardnessHitPointsAdjustment.Add("Medium", 1);
-			hardnessHitPointsAdjustment.Add("Large", 2);
-			hardnessHitPointsAdjustment.Add("Huge", 4);
-			hardnessHitPointsAdjustment.Add("Gargantuan", 8);
-			hardnessHitPointsAdjustment.Add("Colossal", 16);
+			Dictionary<string, double> hardnessHitPointsAdjustment = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase) { 
+			{fine, 0.0625}, {diminutive, 0.125}, {tiny, 0.25}, {small, 0.5}, {medium, 1}, {large, 2}, {huge, 4}, {gargantuan, 8}, {colossal, 16}
+			};
 
 			if (hardnessHitPointsAdjustment.ContainsKey(weaponSize))
 			{
 				WeaponHardness = (WeaponHardness * hardnessHitPointsAdjustment[weaponSize]);
 				WeaponHitPoints = (WeaponHitPoints * hardnessHitPointsAdjustment[weaponSize]);
-			}
-			else
-			{
-				WeaponHardness = 10;
-				WeaponHitPoints = 2;
 			}
 			if (WeaponHardness < 1)
 			{
@@ -101,16 +88,32 @@ namespace ItemSmithWeaponSmith
 			}
 		}
 
+		//public void AdjustWeightForSize(string weaponSize)
+		//{
+		//    Dictionary<string, double> weightAdjustment = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase) { 
+		//    {fine, 0.0625}, {diminutive, 0.125}, {tiny, 0.25}, {small, 0.5}, {medium, 1}, {large, 2}, {huge, 4}, {gargantuan, 8}, {colossal, 16}
+		//    };
+
+		//    if (weightAdjustment.ContainsKey(weaponSize))
+		//    {
+		//        WeaponWeight *= weightAdjustment[weaponSize];
+		//    }
+		//}
+
 		public void AdjustWeightForSize(string weaponSize)
 		{
-			Dictionary<string, double> weightAdjustment = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase);
+			Dictionary<string, int> sizing = new Dictionary<string, int>{
+		    {fine, 0}, {diminutive, 1}, {tiny, 2}, {small, 3}, {medium, 4}, {large, 5}, {huge, 6}, {gargantuan, 7}, {colossal, 8}};
 
-			weightAdjustment.Add("Small", 0.5);
-			weightAdjustment.Add("Large", 2);
+			int sizeIndex = sizing[weaponSize];
 
-			if (weightAdjustment.ContainsKey(weaponSize))
+			if (sizeIndex < 4)
 			{
-				WeaponWeight *= weightAdjustment[weaponSize];
+				WeaponWeight *= 0.5;
+			}
+			else if (sizeIndex > 4)
+			{
+				WeaponWeight *= 2;
 			}
 		}
 

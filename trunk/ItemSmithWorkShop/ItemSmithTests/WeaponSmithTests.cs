@@ -358,7 +358,65 @@ namespace ItemSmithTests
 		public void TestMagicalWeapon()
 		{
 			SimpleDagger dagger = new SimpleDagger("Medium");
+			MagicWeapon magicDagger = new MagicWeapon(dagger, 1);
+			magicDagger.IsGlowingWeapon(true);
+
+			Approvals.Approve(dagger);
+		}
+
+		[TestMethod]
+		public void TestMagicalWeapons()
+		{
+			SimpleDagger dagger = new SimpleDagger("Medium");
+			MagicWeapon magicDagger = new MagicWeapon(dagger, 1);
+
+			SimpleDagger smallDagger = new SimpleDagger("Small");
+			MagicWeapon smallMagicDagger = new MagicWeapon(smallDagger, 2);
+
+			SimpleDagger largeDagger = new SimpleDagger("Large");
+			MagicWeapon largeMagicDagger = new MagicWeapon(largeDagger, 3);
+
+			SimpleDagger tinyDagger = new SimpleDagger("Tiny");
+			MagicWeapon tinyMagicDagger = new MagicWeapon(tinyDagger, 4);
+
+			SimpleDagger hugeDagger = new SimpleDagger("Huge");
+			MagicWeapon hugeMagicDagger = new MagicWeapon(hugeDagger, 5);
+
+			List<SimpleDagger> inventory = new List<SimpleDagger>();
+			var displayInventory = new StringBuilder();
+
+			inventory.Add(dagger);
+			inventory.Add(smallDagger);
+			inventory.Add(largeDagger);
+			inventory.Add(tinyDagger);
+			inventory.Add(hugeDagger);
+
+			foreach (var item in inventory)
+			{
+				displayInventory.Append(item + "\n\n\n");
+			}
+
+			Approvals.Approve(displayInventory);
+		}
+
+		[TestMethod]
+		public void TestColdIronMagicWeapon()
+		{
+			SimpleDagger dagger = new SimpleDagger(null);
+			new WeaponColdIron(dagger);
 			new MagicWeapon(dagger, 1);
+
+			Approvals.Approve(dagger);
+		}
+
+		[TestMethod]
+		public void TestNamedMagicWeapon()
+		{
+			SimpleDagger dagger = new SimpleDagger("Huge");
+			dagger.AdditionalText = "Brawn carried this boot knife whenever he went into the wilderness to work. While not fashioned for combat,\n\t\tBrawn has successfully defended himself many times with this blade.";
+			new WeaponAdamantine(dagger);
+			new MagicWeapon(dagger, 3);
+			dagger.WeaponName = String.Format("Brawn's Insurance ({0})", dagger.WeaponName);
 
 			Approvals.Approve(dagger);
 		}
@@ -429,6 +487,37 @@ namespace ItemSmithTests
 			string[] sizeDesired = new[] { "Fine", "Diminutive", "Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal" };
 
 			ApprovalTests.Combinations.Approvals.ApproveAllCombinations(GetDamage, baseDamage, sizeDesired);
+		}
+
+		[TestMethod]
+		public void TestWeightCalculationUsingHardnessHitPointModifiers()
+		{
+			//double[] weightModifiers = new[] { 0.0625, 0.125, 0.25, 0.5, 1, 2, 4, 8, 16 };
+
+			double[] weaponWeights = new[] { 0.5, 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15 };
+
+			Dictionary<string, double> weightModifiers = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase);
+			weightModifiers.Add("Fine", 0.0625);
+			weightModifiers.Add("Diminutive", 0.125);
+			weightModifiers.Add("Tiny", 0.25);
+			weightModifiers.Add("Small", 0.5);
+			weightModifiers.Add("Medium", 1);
+			weightModifiers.Add("Large", 2);
+			weightModifiers.Add("Huge", 4);
+			weightModifiers.Add("Gargantuan", 8);
+			weightModifiers.Add("Colossal", 16);
+
+			var sb = new StringBuilder();
+
+			foreach (var weight in weaponWeights)
+			{
+				foreach (var modifier in weightModifiers)
+				{
+					sb.Append(String.Format("Initial Weight for Medium Weapon: '{0}' pounds\t=>\t'<{1}>'\t'{2} pounds'\n", weight,  modifier.Key, (weight * modifier.Value)));
+				}
+			}
+
+			Approvals.Approve(sb);
 		}
 
 		public string GetDamage(string damage, string size)

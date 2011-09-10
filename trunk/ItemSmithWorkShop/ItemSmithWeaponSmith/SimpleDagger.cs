@@ -15,13 +15,18 @@ namespace ItemSmithWeaponSmith
 		public string WeaponCategory { get { return "Melee"; } }
 		public string WeaponThreatRange { get { return "19-20"; } }
 		public string WeaponCritical { get { return "x2"; } }
-		public string WeaponDamageType { get { return "Piercing or Slashing"; } }
 
+		public string WeaponDamageType { get; set; }
 		public string WeaponText { get; set; }
 		public string AdditionalText { get; set; }
 		public int BasePrice { get; set; }
-		public int ToHitModifier { get; set; }
+		public double ToHitModifier { get; set; }
 		public double WeaponCost { get; set; }
+		public double CasterLevel { get; set; }
+		public double DaysToCreate { get; set; }
+		public double ExperienceCost { get; set; }
+		public double RawMaterialCost { get; set; }
+		public bool IsMagical { get; set; }
 		public bool IsMasterwork { get; private set; }
 		
 		public void IsMasterworkQualifier(bool value)
@@ -45,6 +50,7 @@ namespace ItemSmithWeaponSmith
 		{
 			WeaponName = "Dagger";
 			WeaponDamage = "1d4";
+			WeaponDamageType = "Piercing or Slashing";
 			WeaponHardness = 10;
 			WeaponHitPoints = 2;
 			WeaponWeight = 1;
@@ -67,6 +73,13 @@ namespace ItemSmithWeaponSmith
 			buildWeapon.Append(String.Format("Damage: {0} [{1} {2}] {3}\n", WeaponDamage, WeaponThreatRange, WeaponCritical, WeaponDamageType));
 			buildWeapon.Append(String.Format("Hardness: {0}\nHit Points: {1}\nWeight: {2} pound(s)\n", WeaponHardness, WeaponHitPoints, WeaponWeight));
 			buildWeapon.Append(String.Format("{0} gold pieces\n", (WeaponCost + masterworkCostModifier)));
+			if (IsMagical)
+			{
+				buildWeapon.Append(String.Format("Creation Costs\n\tCaster Level: {0}\n", CasterLevel));
+				buildWeapon.Append(String.Format("\tDays to Create: {0}\n", DaysToCreate));
+				buildWeapon.Append(String.Format("\tExperience Cost: {0} experience points\n", ExperienceCost));
+				buildWeapon.Append(String.Format("\tRaw Material Cost: {0} gold pieces\n", RawMaterialCost));
+			}
 			buildWeapon.Append(String.Format("\nWeapon Text:\n\t{0}", WeaponText));
 			if (!String.IsNullOrEmpty(AdditionalText))
 			{

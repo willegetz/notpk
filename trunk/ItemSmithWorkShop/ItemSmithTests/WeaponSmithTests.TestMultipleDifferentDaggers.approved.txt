@@ -4,7 +4,7 @@ Light Weapon Proficiency
 Damage: No Meaningful Damage -1 [19-20 x2] Piercing or Slashing
 Hardness: 1
 Hit Points: 1
-Weight: 1 pound(s)
+Weight: 0.5 pound(s)
 22 gold pieces
 
 Weapon Text:
