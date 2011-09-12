@@ -74,6 +74,7 @@ namespace ItemSmithWeaponSmith
 			{fine, 0.0625}, {diminutive, 0.125}, {tiny, 0.25}, {small, 0.5}, {medium, 1}, {large, 2}, {huge, 4}, {gargantuan, 8}, {colossal, 16}
 			};
 
+
 			if (hardnessHitPointsAdjustment.ContainsKey(weaponSize))
 			{
 				WeaponHardness = (WeaponHardness * hardnessHitPointsAdjustment[weaponSize]);
