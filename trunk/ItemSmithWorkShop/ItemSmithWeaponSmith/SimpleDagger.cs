@@ -7,9 +7,7 @@ namespace ItemSmithWeaponSmith
 {
 	public class SimpleDagger : WeaponSizeAdjustments
 	{
-		WeaponSizeAdjustments sizeAdjustment;
-		
-		private double masterworkCostModifier;
+		public double masterworkCostModifier;
 
 		public string WeaponProficiencyRequirement { get { return "Light Weapon"; } }
 		public string WeaponCategory { get { return "Melee"; } }
@@ -19,7 +17,7 @@ namespace ItemSmithWeaponSmith
 		public string WeaponDamageType { get; set; }
 		public string WeaponText { get; set; }
 		public string AdditionalText { get; set; }
-		public int BasePrice { get; set; }
+		//public double BasePrice { get; set; }
 		public double ToHitModifier { get; set; }
 		public double WeaponCost { get; set; }
 		public double CasterLevel { get; set; }
