@@ -52,7 +52,6 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MagicWeapon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WeaponSmithTests.cs" />
     <Compile Include="WorkShopTests.cs" />
