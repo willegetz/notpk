@@ -29,11 +29,13 @@ namespace ItemSmithWeaponSmith
 		{
 			if (Dagger.IsMasterwork)
 			{
+				Dagger.masterworkCostModifier = 0;
 				return;
 			}
 			else
 			{
 				Dagger.IsMasterworkQualifier(true);
+				Dagger.masterworkCostModifier = 0;
 			}
 		}
 

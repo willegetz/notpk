@@ -6,7 +6,7 @@ Damage: 1d4 [19-20 x2] Piercing or Slashing
 Hardness: 10
 Hit Points: 2
 Weight: 0.5 pound(s)
-802 gold pieces
+502 gold pieces
 
 Weapon Text:
 	The dagger is a common secondary weapon. You get a +2 bonus on

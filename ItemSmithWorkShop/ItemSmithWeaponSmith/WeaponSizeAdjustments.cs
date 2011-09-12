@@ -12,6 +12,7 @@ namespace ItemSmithWeaponSmith
 		public double WeaponHardness { get; set; }
 		public double WeaponHitPoints { get; set; }
 		public double WeaponWeight { get; set; }
+		public double BasePrice { get; set; }
 
 		const string fine = "Fine";
 		const string diminutive = "Diminutive";
@@ -119,9 +120,16 @@ namespace ItemSmithWeaponSmith
 
 		public void AdjsutCostForSize(string weaponSize)
 		{
-			Dictionary<string, double> costAdjustment = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase);
+			Dictionary<string, int> sizing = new Dictionary<string, int>{
+		    {fine, 0}, {diminutive, 1}, {tiny, 2}, {small, 3}, {medium, 4}, {large, 5}, {huge, 6}, {gargantuan, 7}, {colossal, 8}};
 
-			costAdjustment.Add("Large", 2);
+			int sizeIndex = sizing[weaponSize];
+
+			if (sizeIndex > 4)
+			{
+				BasePrice *= 2;
+			}
+
 		}
 	}
 }
