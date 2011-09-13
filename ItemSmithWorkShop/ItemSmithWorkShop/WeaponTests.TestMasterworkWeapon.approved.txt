@@ -1,1 +1,0 @@
-Weapon Name:		Masterwork DaggerWeapon Proficiency:	SimpleWeapon Category:	LightWeapon Attack Type:	MeleeWeapon Cost:		302 gold piecesTo Hit Modifier:	+1 EnhancementBase Damage:		1d4+0Threat Range:		19 - 20Critical Damage:	x2Weapon Weight:		1 lbDamage Type(s):		Piercing or SlashingMinimum Caster Level:	0Days To Create:			0 days

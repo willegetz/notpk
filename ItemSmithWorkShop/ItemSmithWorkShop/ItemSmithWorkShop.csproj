@@ -33,10 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ApprovalTests">
-      <HintPath>..\..\Approvals\ApprovalTests.dll</HintPath>
+    <Reference Include="ApprovalTests, Version=1.0.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ApprovalTests.dll</HintPath>
     </Reference>
-    <Reference Include="ApprovalUtilities">
+    <Reference Include="ApprovalUtilities, Version=1.0.11.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\Approvals\ApprovalUtilities.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
@@ -51,19 +52,37 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Material\WeaponAdamantine.cs" />
+    <Compile Include="Material\WeaponAlchemicalSilver.cs" />
+    <Compile Include="Material\WeaponColdIron.cs" />
+    <Compile Include="Material\WeaponDarkwood.cs" />
+    <Compile Include="Material\WeaponMithral.cs" />
+    <Compile Include="Material\WeaponSteel.cs" />
+    <Compile Include="Tests\OldWeaponSmithTests\OldWeaponSmith.cs" />
+    <Compile Include="OldWeaponSmith\AdamantineMaterial.cs" />
+    <Compile Include="OldWeaponSmith\Dagger.cs" />
+    <Compile Include="OldWeaponSmith\MaterialComponent.cs" />
+    <Compile Include="OldWeaponSmith\SteelMaterial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Cost.cs" />
-    <Compile Include="Damage.cs" />
-    <Compile Include="DisplayWeapon.cs" />
-    <Compile Include="WeaponMake.cs" />
-    <Compile Include="PreRequisites.cs" />
-    <Compile Include="BaseWeapon.cs" />
-    <Compile Include="NameOfWeapon.cs" />
-    <Compile Include="Durability.cs" />
+    <Compile Include="Tests\SpikeTests\WeaponSmithSpikes.cs" />
+    <Compile Include="Tests\WeaponSmithTests\WeaponSmithTests.cs" />
+    <Compile Include="WeaponSmith\MagicWeapon.cs" />
+    <Compile Include="WeaponSmith\SimpleDagger.cs" />
+    <Compile Include="WeaponSmith\WeaponSizeAdjustments.cs" />
+    <Compile Include="Tests\WorkShopTests\WorkShopTests.cs" />
+    <Compile Include="WorkShop\Cost.cs" />
+    <Compile Include="WorkShop\Damage.cs" />
+    <Compile Include="WorkShop\DisplayWeapon.cs" />
+    <Compile Include="WorkShop\WeaponMake.cs" />
+    <Compile Include="WorkShop\PreRequisites.cs" />
+    <Compile Include="WorkShop\BaseWeapon.cs" />
+    <Compile Include="WorkShop\NameOfWeapon.cs" />
+    <Compile Include="WorkShop\Durability.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="PhbWeapon.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
