@@ -7,9 +7,9 @@ namespace ItemSmithWorkShop
 {
 	public class WeaponDarkwood
 	{
-		private SimpleDagger Dagger { get; set; }
+		private GenericDagger Dagger { get; set; }
 
-		public WeaponDarkwood(SimpleDagger dagger)
+		public WeaponDarkwood(GenericDagger dagger)
 		{
 			if (dagger == null)
 			{

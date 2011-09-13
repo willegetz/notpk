@@ -67,7 +67,7 @@
     <Compile Include="Tests\SpikeTests\WeaponSmithSpikes.cs" />
     <Compile Include="Tests\WeaponSmithTests\WeaponSmithTests.cs" />
     <Compile Include="WeaponSmith\MagicWeapon.cs" />
-    <Compile Include="WeaponSmith\SimpleDagger.cs" />
+    <Compile Include="WeaponSmith\GenericDagger.cs" />
     <Compile Include="WeaponSmith\WeaponSizeAdjustments.cs" />
     <Compile Include="Tests\WorkShopTests\WorkShopTests.cs" />
     <Compile Include="WorkShop\Cost.cs" />

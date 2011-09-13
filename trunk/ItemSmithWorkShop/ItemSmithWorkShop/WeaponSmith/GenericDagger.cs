@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ItemSmithWorkShop
 {
-	public class SimpleDagger : WeaponSizeAdjustments
+	public class GenericDagger : WeaponSizeAdjustments
 	{
 		public double masterworkCostModifier;
 
@@ -45,7 +45,7 @@ namespace ItemSmithWorkShop
 			masterworkCostModifier = 300;
 		}
 
-		public SimpleDagger(string weaponSize)
+		public GenericDagger(string weaponSize)
 		{
 			WeaponName = "Dagger";
 			WeaponDamage = "1d4";

@@ -10,9 +10,9 @@ namespace ItemSmithWorkShop
 		private double adamantineHitPointModifier = 1.33;
 		private double adamantineCost = 2700;
 
-		private SimpleDagger Dagger { get; set; }
+		private GenericDagger Dagger { get; set; }
 
-		public WeaponAdamantine(SimpleDagger dagger)
+		public WeaponAdamantine(GenericDagger dagger)
 		{
 			if (dagger == null)
 			{

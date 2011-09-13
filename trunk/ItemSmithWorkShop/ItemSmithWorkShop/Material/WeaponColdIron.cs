@@ -7,11 +7,11 @@ namespace ItemSmithWorkShop
 {
 	public class WeaponColdIron
 	{
-		private SimpleDagger Dagger { get; set; }
+		private GenericDagger Dagger { get; set; }
 
 		private double coldIronCost;
 
-		public WeaponColdIron(SimpleDagger dagger)
+		public WeaponColdIron(GenericDagger dagger)
 		{
 			if (dagger == null)
 			{

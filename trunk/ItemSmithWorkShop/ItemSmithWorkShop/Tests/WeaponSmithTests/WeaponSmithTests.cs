@@ -18,7 +18,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestSimpleDaggerObject()
 		{
-			SimpleDagger simpleDagger = new SimpleDagger(null);
+			GenericDagger simpleDagger = new GenericDagger(null);
 
 			Approvals.Approve(simpleDagger);
 		}
@@ -26,7 +26,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoSteel()
 		{
-			SimpleDagger simpleDagger = new SimpleDagger(null);
+			GenericDagger simpleDagger = new GenericDagger(null);
 			new WeaponSteel(simpleDagger);
 
 			Approvals.Approve(simpleDagger);
@@ -35,7 +35,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoSteelProperlyNamed()
 		{
-			SimpleDagger simpleDagger = new SimpleDagger(null);
+			GenericDagger simpleDagger = new GenericDagger(null);
 			simpleDagger.WeaponName = "Slashy Blade of Happiness";
 
 			new WeaponSteel(simpleDagger);
@@ -46,7 +46,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMasterworkDagger()
 		{
-			SimpleDagger simpleDagger = new SimpleDagger(null);
+			GenericDagger simpleDagger = new GenericDagger(null);
 			simpleDagger.IsMasterworkQualifier(true);
 
 			Approvals.Approve(simpleDagger);
@@ -55,7 +55,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoAdamantine()
 		{
-			SimpleDagger dagger = new SimpleDagger(null);
+			GenericDagger dagger = new GenericDagger(null);
 			new WeaponAdamantine(dagger);
 
 			Approvals.Approve(dagger);
@@ -64,7 +64,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoDarkwood()
 		{
-			SimpleDagger dagger = new SimpleDagger(null);
+			GenericDagger dagger = new GenericDagger(null);
 			new WeaponDarkwood(dagger);
 
 			Approvals.Approve(dagger);
@@ -73,7 +73,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoColdIron()
 		{
-			SimpleDagger dagger = new SimpleDagger(null);
+			GenericDagger dagger = new GenericDagger(null);
 			new WeaponColdIron(dagger);
 
 			Approvals.Approve(dagger);
@@ -82,7 +82,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMasterworkDaggerDroppedIntoColdIron()
 		{
-			SimpleDagger dagger = new SimpleDagger(null);
+			GenericDagger dagger = new GenericDagger(null);
 			dagger.IsMasterworkQualifier(true);
 			new WeaponColdIron(dagger);
 
@@ -92,7 +92,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoMithral()
 		{
-			SimpleDagger dagger = new SimpleDagger(null);
+			GenericDagger dagger = new GenericDagger(null);
 			dagger.IsMasterworkQualifier(true);
 			new WeaponMithral(dagger);
 
@@ -102,7 +102,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMasterworkDaggerDroppedIntoMithral()
 		{
-			SimpleDagger dagger = new SimpleDagger(null);
+			GenericDagger dagger = new GenericDagger(null);
 			dagger.IsMasterworkQualifier(true);
 			new WeaponMithral(dagger);
 
@@ -112,7 +112,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoAlchemicalSilver()
 		{
-			SimpleDagger dagger = new SimpleDagger(null);
+			GenericDagger dagger = new GenericDagger(null);
 			new WeaponAlchemicalSilver(dagger);
 
 			Approvals.Approve(dagger);
@@ -121,7 +121,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMasterworkDaggerDroppedIntoAlchemicalSilver()
 		{
-			SimpleDagger dagger = new SimpleDagger(null);
+			GenericDagger dagger = new GenericDagger(null);
 			dagger.IsMasterworkQualifier(true);
 			new WeaponAlchemicalSilver(dagger);
 
@@ -131,7 +131,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestSmallSizeDagger()
 		{
-			SimpleDagger mediumDagger = new SimpleDagger("Small");
+			GenericDagger mediumDagger = new GenericDagger("Small");
 
 			Approvals.Approve(mediumDagger);
 		}
@@ -139,7 +139,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestFineSizeDagger()
 		{
-			SimpleDagger fineDagger = new SimpleDagger("Fine");
+			GenericDagger fineDagger = new GenericDagger("Fine");
 
 			Approvals.Approve(fineDagger);
 		}
@@ -147,7 +147,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestColossalSizeDagger()
 		{
-			SimpleDagger colossalDagger = new SimpleDagger("Colossal");
+			GenericDagger colossalDagger = new GenericDagger("Colossal");
 
 			Approvals.Approve(colossalDagger);
 		}
@@ -155,7 +155,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestLargeDagger()
 		{
-			SimpleDagger largeDagger = new SimpleDagger("Large");
+			GenericDagger largeDagger = new GenericDagger("Large");
 
 			Approvals.Approve(largeDagger);
 		}
@@ -163,7 +163,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestProperNamedFineSizeDagger()
 		{
-			SimpleDagger faeDagger = new SimpleDagger("Diminutive");
+			GenericDagger faeDagger = new GenericDagger("Diminutive");
 			new WeaponAdamantine(faeDagger);
 			faeDagger.WeaponName = String.Format("Sera's Bite ({0})", faeDagger.WeaponName);
 			faeDagger.AdditionalText = "Sera forged this dagger for revenge against those that ruined her home.";
@@ -174,15 +174,15 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMultipleDaggers()
 		{
-			SimpleDagger dagger;
-			List<SimpleDagger> inventory = new List<SimpleDagger>();
+			GenericDagger dagger;
+			List<GenericDagger> inventory = new List<GenericDagger>();
 			var displayInventory = new StringBuilder();
 
 			int daggerQuantity = 5;
 
 			for (int i = 0; i <= daggerQuantity; i++)
 			{
-				dagger = new SimpleDagger(null);
+				dagger = new GenericDagger(null);
 				inventory.Add(dagger);
 			}
 
@@ -197,20 +197,20 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMultipleDifferentDaggers()
 		{
-			List<SimpleDagger> inventory = new List<SimpleDagger>();
+			List<GenericDagger> inventory = new List<GenericDagger>();
 			var displayInventory = new StringBuilder();
 
-			SimpleDagger faeDagger = new SimpleDagger("Fine");
+			GenericDagger faeDagger = new GenericDagger("Fine");
 			new WeaponAlchemicalSilver(faeDagger);
 			faeDagger.WeaponName = String.Format("Faerie's Dagger ({0})", faeDagger.WeaponName);
 			faeDagger.AdditionalText = "Dagger left by a faerie as a token of friendship.";
 
-			SimpleDagger ogreDagger = new SimpleDagger("Large");
+			GenericDagger ogreDagger = new GenericDagger("Large");
 			new WeaponColdIron(ogreDagger);
 			ogreDagger.WeaponName = String.Format("Tooth ({0})", ogreDagger.WeaponName);
 			ogreDagger.AdditionalText = "Dagger of an Ogre Mage chief taken from its body after a vicious fight.";
 
-			SimpleDagger expensiveDagger = new SimpleDagger("Medium");
+			GenericDagger expensiveDagger = new GenericDagger("Medium");
 			new WeaponMithral(expensiveDagger);
 			expensiveDagger.WeaponName = String.Format("Oscar's Fine Blade ({0})", expensiveDagger.WeaponName);
 			expensiveDagger.WeaponCost = (expensiveDagger.WeaponCost * 10);
@@ -231,7 +231,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMagicalWeapon()
 		{
-			SimpleDagger dagger = new SimpleDagger("Medium");
+			GenericDagger dagger = new GenericDagger("Medium");
 			MagicWeapon magicDagger = new MagicWeapon(dagger, 1);
 			magicDagger.IsGlowingWeapon(true);
 
@@ -241,22 +241,22 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMagicalWeapons()
 		{
-			SimpleDagger dagger = new SimpleDagger("Medium");
+			GenericDagger dagger = new GenericDagger("Medium");
 			MagicWeapon magicDagger = new MagicWeapon(dagger, 1);
 
-			SimpleDagger smallDagger = new SimpleDagger("Small");
+			GenericDagger smallDagger = new GenericDagger("Small");
 			MagicWeapon smallMagicDagger = new MagicWeapon(smallDagger, 2);
 
-			SimpleDagger largeDagger = new SimpleDagger("Large");
+			GenericDagger largeDagger = new GenericDagger("Large");
 			MagicWeapon largeMagicDagger = new MagicWeapon(largeDagger, 3);
 
-			SimpleDagger tinyDagger = new SimpleDagger("Tiny");
+			GenericDagger tinyDagger = new GenericDagger("Tiny");
 			MagicWeapon tinyMagicDagger = new MagicWeapon(tinyDagger, 4);
 
-			SimpleDagger hugeDagger = new SimpleDagger("Huge");
+			GenericDagger hugeDagger = new GenericDagger("Huge");
 			MagicWeapon hugeMagicDagger = new MagicWeapon(hugeDagger, 5);
 
-			List<SimpleDagger> inventory = new List<SimpleDagger>();
+			List<GenericDagger> inventory = new List<GenericDagger>();
 			var displayInventory = new StringBuilder();
 
 			inventory.Add(dagger);
@@ -276,7 +276,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestColdIronMagicWeapon()
 		{
-			SimpleDagger dagger = new SimpleDagger(null);
+			GenericDagger dagger = new GenericDagger(null);
 			new WeaponColdIron(dagger);
 			new MagicWeapon(dagger, 1);
 
@@ -286,7 +286,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestNamedMagicWeapon()
 		{
-			SimpleDagger dagger = new SimpleDagger("Huge");
+			GenericDagger dagger = new GenericDagger("Huge");
 			dagger.AdditionalText = "Brawn carried this boot knife whenever he went into the wilderness to work. While not fashioned for combat,\n\t\tBrawn has successfully defended himself many times with this blade.";
 			new WeaponAdamantine(dagger);
 			new MagicWeapon(dagger, 3);
