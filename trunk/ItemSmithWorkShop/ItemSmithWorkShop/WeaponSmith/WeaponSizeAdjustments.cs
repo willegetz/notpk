@@ -90,43 +90,23 @@ namespace ItemSmithWorkShop
 			}
 		}
 
-		//public void AdjustWeightForSize(string weaponSize)
-		//{
-		//    Dictionary<string, double> weightAdjustment = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase) { 
-		//    {fine, 0.0625}, {diminutive, 0.125}, {tiny, 0.25}, {small, 0.5}, {medium, 1}, {large, 2}, {huge, 4}, {gargantuan, 8}, {colossal, 16}
-		//    };
-
-		//    if (weightAdjustment.ContainsKey(weaponSize))
-		//    {
-		//        WeaponWeight *= weightAdjustment[weaponSize];
-		//    }
-		//}
-
 		public void AdjustWeightForSize(string weaponSize)
 		{
-			Dictionary<string, int> sizing = new Dictionary<string, int>{
-		    {fine, 0}, {diminutive, 1}, {tiny, 2}, {small, 3}, {medium, 4}, {large, 5}, {huge, 6}, {gargantuan, 7}, {colossal, 8}};
+			Dictionary<string, double> weightAdjustment = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase) { 
+		    {fine, 0.0625}, {diminutive, 0.125}, {tiny, 0.25}, {small, 0.5}, {medium, 1}, {large, 2}, {huge, 4}, {gargantuan, 8}, {colossal, 16}
+		    };
 
-			int sizeIndex = sizing[weaponSize];
-
-			if (sizeIndex < 4)
+			if (weightAdjustment.ContainsKey(weaponSize))
 			{
-				WeaponWeight *= 0.5;
-			}
-			else if (sizeIndex > 4)
-			{
-				WeaponWeight *= 2;
+				WeaponWeight *= weightAdjustment[weaponSize];
 			}
 		}
 
 		public void AdjsutCostForSize(string weaponSize)
 		{
-			Dictionary<string, int> sizing = new Dictionary<string, int>{
-		    {fine, 0}, {diminutive, 1}, {tiny, 2}, {small, 3}, {medium, 4}, {large, 5}, {huge, 6}, {gargantuan, 7}, {colossal, 8}};
+			List<string> size = new List<string>() { fine, diminutive, tiny, small, medium, large, huge, gargantuan, colossal };
 
-			int sizeIndex = sizing[weaponSize];
-
-			if (sizeIndex > 4)
+			if (size.IndexOf(weaponSize) > 4)
 			{
 				BasePrice *= 2;
 			}

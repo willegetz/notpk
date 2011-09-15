@@ -17,7 +17,6 @@ namespace ItemSmithWorkShop
 		public string WeaponDamageType { get; set; }
 		public string WeaponText { get; set; }
 		public string AdditionalText { get; set; }
-		//public double BasePrice { get; set; }
 		public double ToHitModifier { get; set; }
 		public double WeaponCost { get; set; }
 		public double CasterLevel { get; set; }
