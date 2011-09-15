@@ -40,7 +40,7 @@ namespace ItemSmithWorkShop
 		{
 			if (qualifier)
 			{
-				Dagger.WeaponName = String.Format("{0} Glowing", Dagger.WeaponName);
+				Dagger.WeaponName = String.Format("{0} [Glowing]", Dagger.WeaponName);
 				Dagger.WeaponText = String.Format("{0}\n\tThis weapon sheds light equivelant to a light spell\n\t\t(bright light in a 20 foot radius, shadowy light in a 40 foot radius)\n\t\tThe light from this weapon can't be concealed when drawn, nor can it be shut off.", Dagger.WeaponText);
 			}
 		}

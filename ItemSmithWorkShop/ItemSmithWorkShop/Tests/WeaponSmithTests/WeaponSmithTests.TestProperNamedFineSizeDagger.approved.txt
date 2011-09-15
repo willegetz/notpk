@@ -1,4 +1,4 @@
-Sera's Bite (Dagger (Diminutive) [Masterwork] [Adamantine])
+Sera's Bite (Dagger) [Adamantine] (Diminutive) [Masterwork]
 Melee Weapon
 Light Weapon Proficiency
 To Hit: +1
@@ -6,7 +6,7 @@ Damage: 1 [19-20 x2] Piercing or Slashing
 Hardness: 1.25
 Hit Points: 1
 Weight: 0.125 pound(s)
-3002 gold pieces
+3000.25 gold pieces
 
 Weapon Text:
 	The dagger is a common secondary weapon. You get a +2 bonus on

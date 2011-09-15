@@ -1,4 +1,4 @@
-Dagger [Masterwork] [Adamantine]
+Dagger [Adamantine] (Medium) [Masterwork]
 Melee Weapon
 Light Weapon Proficiency
 To Hit: +1

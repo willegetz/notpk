@@ -202,7 +202,7 @@ namespace ItemSmithWorkShop
 
 			GenericDagger faeDagger = new GenericDagger("Fine");
 			new WeaponAlchemicalSilver(faeDagger);
-			faeDagger.WeaponName = String.Format("Faerie's Dagger ({0})", faeDagger.WeaponName);
+			faeDagger.WeaponName = String.Format("Faerie's Dagger ({0}{3} ({1}){2})\n", faeDagger.WeaponName, faeDagger.WeaponSize, faeDagger.MasterWorkLabel, faeDagger.MaterialName);
 			faeDagger.AdditionalText = "Dagger left by a faerie as a token of friendship.";
 
 			GenericDagger ogreDagger = new GenericDagger("Large");

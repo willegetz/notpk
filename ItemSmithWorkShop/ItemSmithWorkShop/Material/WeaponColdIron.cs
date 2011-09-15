@@ -28,7 +28,7 @@ namespace ItemSmithWorkShop
 		{
 			Dagger.IsColdIron = true;
 			CalculateColdIronCost();
-			Dagger.WeaponName = Dagger.WeaponName + " [Cold Iron]";
+			Dagger.MaterialName = " [Cold Iron]";
 			Dagger.WeaponCost = coldIronCost;
 			Dagger.WeaponText = Dagger.WeaponText + "\n\tCold Iron is effective against some Fey.\n\tMagic enhancements cost an additional 2000 gold pieces.";
 
