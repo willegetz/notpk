@@ -41,7 +41,7 @@ namespace ItemSmithWorkShop
 
 		private Object SetMithralTraits()
 		{
-			Dagger.WeaponName = Dagger.WeaponName + " [Mithral]";
+			Dagger.MaterialName = " [Mithral]";
 			Dagger.WeaponCost += (mithralCost * Dagger.WeaponWeight);
 			Dagger.WeaponWeight = (Dagger.WeaponWeight / 2);
 			Dagger.WeaponText = Dagger.WeaponText + "\n\tThis item is made of mithral!";

@@ -1,4 +1,4 @@
-Dagger [Steel]
+Dagger [Steel] (Medium)
 Melee Weapon
 Light Weapon Proficiency
 Damage: 1d4 [19-20 x2] Piercing or Slashing

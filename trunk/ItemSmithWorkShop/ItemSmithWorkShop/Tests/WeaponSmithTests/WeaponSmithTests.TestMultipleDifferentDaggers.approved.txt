@@ -1,11 +1,12 @@
-Faerie's Dagger (Dagger (Fine) [Alchemical Silver])
+Faerie's Dagger (Dagger [Alchemical Silver] (Fine))
+ [Alchemical Silver] (Fine)
 Melee Weapon
 Light Weapon Proficiency
 Damage: No Meaningful Damage -1 [19-20 x2] Piercing or Slashing
 Hardness: 1
 Hit Points: 1
 Weight: 0.0625 pound(s)
-22 gold pieces
+20.125 gold pieces
 
 Weapon Text:
 	The dagger is a common secondary weapon. You get a +2 bonus on
@@ -16,7 +17,7 @@ Additional Text:
 	Dagger left by a faerie as a token of friendship.
 
 
-Tooth (Dagger (Large) [Cold Iron])
+Tooth (Dagger) [Cold Iron] (Large)
 Melee Weapon
 Light Weapon Proficiency
 Damage: 1d6 [19-20 x2] Piercing or Slashing
@@ -35,7 +36,7 @@ Additional Text:
 	Dagger of an Ogre Mage chief taken from its body after a vicious fight.
 
 
-Oscar's Fine Blade (Dagger (Medium) [Masterwork] [Mithral])
+Oscar's Fine Blade (Dagger) [Mithral] (Medium) [Masterwork]
 Melee Weapon
 Light Weapon Proficiency
 To Hit: +1

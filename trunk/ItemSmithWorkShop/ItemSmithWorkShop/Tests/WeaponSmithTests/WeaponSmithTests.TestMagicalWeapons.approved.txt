@@ -69,7 +69,7 @@ Damage: 1d2 +4 [19-20 x2] Piercing or Slashing, Magic
 Hardness: 6.5
 Hit Points: 5
 Weight: 0.25 pound(s)
-32302 gold pieces
+32300.5 gold pieces
 Creation Costs
 	Caster Level: 12
 	Days to Create: 32
@@ -90,7 +90,7 @@ Damage: 1d8 +5 [19-20 x2] Piercing or Slashing, Magic
 Hardness: 45
 Hit Points: 13
 Weight: 4 pound(s)
-50304 gold pieces
+50308 gold pieces
 Creation Costs
 	Caster Level: 15
 	Days to Create: 50

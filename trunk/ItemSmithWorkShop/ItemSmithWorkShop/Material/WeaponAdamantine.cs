@@ -40,7 +40,7 @@ namespace ItemSmithWorkShop
 		private Object SetAdamantineTraits()
 		{
 			CheckMasterworkStatus();
-			Dagger.WeaponName = Dagger.WeaponName + " [Adamantine]";
+			Dagger.MaterialName = " [Adamantine]";
 			Dagger.WeaponHitPoints = Math.Round(Dagger.WeaponHitPoints * adamantineHitPointModifier);
 			Dagger.WeaponCost += adamantineCost;
 			Dagger.WeaponText = Dagger.WeaponText + "\n\tDagger bypasses damage reduction value of 20.";

@@ -1,11 +1,9 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ApprovalTests.Reporters;
 using ApprovalTests;
-
+using System.Collections.Generic;
+using System.Text;
+using System;
 namespace ItemSmithWorkShop
 {
 	[TestClass]
@@ -115,6 +113,31 @@ namespace ItemSmithWorkShop
 			Approvals.Approve(sb);
 		}
 
+		[TestMethod]
+		public void TestNewSizingClass()
+		{
+			// Using the Heavy Mace for multiplier
+			double hardness = 10;
+			double hitPoints = 20;
+			double weight = 8;
+
+			string[] baseDamage = new[] { "1d2", "1d3", "1d4", "1d6", "2d4", "1d8", "1d10", "1d12", "2d6" };
+			string[] sizeDesired = new[] { "Fine", "Diminutive", "Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal" };
+
+			var sb = new StringBuilder();
+
+			foreach (var damage in baseDamage)
+			{
+				foreach (var size in sizeDesired)
+				{
+					var sizing = new WeaponSizing(damage, size);
+					sb.Append(string.Format("Size: {9}\n\tStarting Damage: {0}\tNew Damage: {1}\n\tModifier: {2}\n\tStarting Hardness: {3}\tNew Hardness: {4}\n\tStarting Hit Points: {5}\tNew Hit Points: {6}\n\tStarting Weight: {7}\tNew HitPoints: {8}\n", damage, sizing.NewDamage, sizing.Multiplier, hardness, (hardness * sizing.Multiplier), hitPoints, (hitPoints * sizing.Multiplier), weight, (weight * sizing.Multiplier), size));
+				}
+			}
+
+			Approvals.Approve(sb.ToString());
+		}
+
 		public string GetDamage(string damage, string size)
 		{
 			const string fine = "Fine";
@@ -150,24 +173,5 @@ namespace ItemSmithWorkShop
 
 			return sizeModification[damage][sizingIndex].ToString();
 		}
-	}
-
-	public class Sizing
-	{
-		// Original Damage Value is Key to the Second Dictionary whose key is Size
-
-		// Key is the Size
-		// Keys { "Fine", "Diminutive", "Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal" }
-
-		// Weight Value is the original value multiplied by the adjustment modifier
-		// { 0.0625, 0.125, 0.25, 0.5, 1, 2, 4, 8, 16 }
-
-		// Hardness Value is the original value multiplied by the adjustment modifier
-		// { 0.0625, 0.125, 0.25, 0.5, 1, 2, 4, 8, 16 }
-
-		// Hit Point Value is the original value multiplied by the adjustment modifier
-		// { 0.0625, 0.125, 0.25, 0.5, 1, 2, 4, 8, 16 }
-
-		// Cost Value is the original value multiplied by the adjustment modifier
 	}
 }

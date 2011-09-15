@@ -26,7 +26,7 @@ namespace ItemSmithWorkShop
 
 		private Object SetAlchemySilverTraits()
 		{
-			Dagger.WeaponName = Dagger.WeaponName + " [Alchemical Silver]";
+			Dagger.MaterialName = " [Alchemical Silver]";
 			Dagger.WeaponDamage = Dagger.WeaponDamage + " -1";
 			Dagger.WeaponCost += alchemySilverCost;
 			Dagger.WeaponText = Dagger.WeaponText + "\n\tAlchemical Silver bypasses damage reduction on lycanthropes.";

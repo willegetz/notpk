@@ -1,4 +1,4 @@
-Dagger [Masterwork] [Mithral]
+Dagger [Mithral] (Medium) [Masterwork]
 Melee Weapon
 Light Weapon Proficiency
 To Hit: +1
