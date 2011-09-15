@@ -151,4 +151,23 @@ namespace ItemSmithWorkShop
 			return sizeModification[damage][sizingIndex].ToString();
 		}
 	}
+
+	public class Sizing
+	{
+		// Original Damage Value is Key to the Second Dictionary whose key is Size
+
+		// Key is the Size
+		// Keys { "Fine", "Diminutive", "Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan", "Colossal" }
+
+		// Weight Value is the original value multiplied by the adjustment modifier
+		// { 0.0625, 0.125, 0.25, 0.5, 1, 2, 4, 8, 16 }
+
+		// Hardness Value is the original value multiplied by the adjustment modifier
+		// { 0.0625, 0.125, 0.25, 0.5, 1, 2, 4, 8, 16 }
+
+		// Hit Point Value is the original value multiplied by the adjustment modifier
+		// { 0.0625, 0.125, 0.25, 0.5, 1, 2, 4, 8, 16 }
+
+		// Cost Value is the original value multiplied by the adjustment modifier
+	}
 }
