@@ -3,8 +3,8 @@ Melee Weapon
 Light Weapon Proficiency
 To Hit: +3
 Damage: 1d8 +3 [19-20 x2] Piercing or Slashing, Magic
-Hardness: 43
-Hit Points: 14
+Hardness: 46
+Hit Points: 41
 Weight: 4 pound(s)
 21008 gold pieces
 Creation Costs

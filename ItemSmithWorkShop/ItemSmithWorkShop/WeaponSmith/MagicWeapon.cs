@@ -13,6 +13,8 @@ namespace ItemSmithWorkShop
 		private double TotalEnhancementCost { get; set; }
 		private double TotalEnhancementBonus { get; set; }
 		private double plusEnhancementBonus;
+		private double HardnessEnhancementBonus { get; set; }
+		private double HitPointEnhancementBOnus { get; set; }
 		private double enhancementMultiplier = 2000;
 		private double coldIronAdditionalCost = 2000;
 
@@ -41,7 +43,7 @@ namespace ItemSmithWorkShop
 			if (qualifier)
 			{
 				Dagger.WeaponName = String.Format("{0} [Glowing]", Dagger.WeaponName);
-				Dagger.WeaponText = String.Format("{0}\n\tThis weapon sheds light equivelant to a light spell\n\t\t(bright light in a 20 foot radius, shadowy light in a 40 foot radius)\n\t\tThe light from this weapon can't be concealed when drawn, nor can it be shut off.", Dagger.WeaponText);
+				Dagger.WeaponText = String.Format("{0}\n\tThis weapon sheds light equivalent to a light spell\n\t\t(bright light in a 20 foot radius, shadowy light in a 40 foot radius)\n\t\tThe light from this weapon can't be concealed when drawn, nor can it be shut off.", Dagger.WeaponText);
 			}
 		}
 
@@ -91,6 +93,16 @@ namespace ItemSmithWorkShop
 			Dagger.RawMaterialCost = TotalEnhancementCost / 2;
 		}
 
+		public void CalculateHardness()
+		{
+			Dagger.WeaponHardness += (plusEnhancementBonus * 2);
+		}
+
+		public void CalculateHitPoints()
+		{
+			Dagger.WeaponHitPoints += (plusEnhancementBonus * 10);
+		}
+
 		private void SetMagicalTraits()
 		{
 			Dagger.IsMagical = true;
@@ -100,6 +112,8 @@ namespace ItemSmithWorkShop
 			CalculateCreationDays();
 			CalculateExperienceCost();
 			CalculateRawMaterialCost();
+			CalculateHardness();
+			CalculateHitPoints();
 			MagicItemDisplay();
 		}
 
@@ -110,8 +124,6 @@ namespace ItemSmithWorkShop
 			Dagger.WeaponDamage = String.Format("{0} +{1}", Dagger.WeaponDamage, plusEnhancementBonus);
 			Dagger.WeaponDamageType = String.Format("{0}, {1}", Dagger.WeaponDamageType, MagicDamageType);
 			Dagger.WeaponCost += TotalEnhancementCost;
-			Dagger.WeaponHardness += plusEnhancementBonus;
-			Dagger.WeaponHitPoints += plusEnhancementBonus;
 
 			return Dagger;
 		}
