@@ -40,23 +40,6 @@ namespace ItemSmithWorkShop
 		public bool IsMagical { get; set; }
 		public bool IsMasterwork { get; private set; }
 		public bool IsColdIron { get; set; }
-		
-		public void IsMasterworkQualifier(bool value)
-		{
-			if (value)
-			{
-				IsMasterwork = true;
-				MasterworkProperties();
-			}
-		}
-
-		private void MasterworkProperties()
-		{
-			MasterWorkLabel = " [Masterwork]";
-			ToHitModifier = 1;
-			WeaponText = WeaponText + "\n\tThis dagger is masterwork quality!";
-			masterworkCostModifier = 300;
-		}
 
 		public GenericDagger(string weaponSize)
 		{
@@ -126,6 +109,23 @@ namespace ItemSmithWorkShop
 				BasePrice *= sizing.Multiplier;
 				WeaponCost = BasePrice;
 			}
+		}
+
+		public void IsMasterworkQualifier(bool value)
+		{
+			if (value)
+			{
+				IsMasterwork = true;
+				MasterworkProperties();
+			}
+		}
+
+		private void MasterworkProperties()
+		{
+			MasterWorkLabel = " [Masterwork]";
+			ToHitModifier = 1;
+			WeaponText = WeaponText + "\n\tThis dagger is masterwork quality!";
+			masterworkCostModifier = 300;
 		}
 
 		private string WeaponToDisplay()
