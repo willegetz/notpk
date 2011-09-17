@@ -290,7 +290,7 @@ namespace ItemSmithWorkShop
 			dagger.AdditionalText = "Brawn carried this boot knife whenever he went into the wilderness to work. While not fashioned for combat,\n\t\tBrawn has successfully defended himself many times with this blade.";
 			new WeaponAdamantine(dagger);
 			new MagicWeapon(dagger, 3);
-			dagger.WeaponName = String.Format("Brawn's Insurance ({0})", dagger.WeaponName);
+			dagger.WeaponName = String.Format("Brawn's Insurance ({1})", dagger.PlusEnhancementBonus, dagger.WeaponName);
 
 			Approvals.Approve(dagger);
 		}
@@ -303,6 +303,8 @@ namespace ItemSmithWorkShop
 			EnchantWeapon enchant = new EnchantWeapon(flameDagger);
 			enchant.MagicalAbility("Flaming");
 			// Enchant the flameDagger with a SpecialAbility
+
+			Approvals.Approve(flameDagger);
 		}
 	}
 
@@ -324,6 +326,8 @@ namespace ItemSmithWorkShop
 		// Upon command, a flaming weapon is sheathed in fire. The fire does not harm the wielder. The effect remains until another command is given. A flaming weapon deals an extra 1d6 points of fire damage on a successful hit. Bows, crossbows, and slings so crafted bestow the fire energy upon their ammunition.
 		// Moderate evocation; CL 10th; Craft Magic Arms and Armor and flame blade, flame strike, or fireball; Price +1 bonus.
 
+		List<EnchantWeapon> weaponEnchantments = new List<EnchantWeapon>();
+
 		private GenericDagger FlameDagger;
 
 		private string MagicAbilityName { get; set; }
@@ -335,7 +339,14 @@ namespace ItemSmithWorkShop
 
 		public void MagicalAbility(string magicAbility)
 		{
-			MagicAbilityName = magicAbility; 
+			MagicAbilityName = magicAbility;
+
+			SetMagicAbility();
+		}
+
+		private void SetMagicAbility()
+		{
+			FlameDagger.WeaponName = string.Format("+{0} {1} {2}", FlameDagger.PlusEnhancementBonus, MagicAbilityName, FlameDagger.WeaponType);
 		}
 	}
 }
