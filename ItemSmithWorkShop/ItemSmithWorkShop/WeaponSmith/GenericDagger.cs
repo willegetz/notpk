@@ -17,6 +17,7 @@ namespace ItemSmithWorkShop
 		public string WeaponCritical { get { return "x2"; } }
 
 		public string WeaponName { get; set; }
+		public string WeaponType { get; set; }
 		public string WeaponDamage { get; set; }
 		public double WeaponHardness { get; set; }
 		public double WeaponHitPoints { get; set; }
@@ -29,6 +30,8 @@ namespace ItemSmithWorkShop
 		public string AdditionalText { get; set; }
 		public string MasterWorkLabel { get; set; }
 		public string MaterialName { get; set; }
+
+		public int PlusEnhancementBonus { get; set; }
 
 		public double ToHitModifier { get; set; }
 		public double WeaponCost { get; set; }
@@ -44,7 +47,8 @@ namespace ItemSmithWorkShop
 		public GenericDagger(string weaponSize)
 		{
 			
-			WeaponName = "Dagger";
+			WeaponType = "Dagger";
+			WeaponName = WeaponType;
 			WeaponDamage = "1d4";
 			WeaponDamageType = "Piercing or Slashing";
 			WeaponHardness = 10;
@@ -132,7 +136,7 @@ namespace ItemSmithWorkShop
 		{
 			var buildWeapon = new StringBuilder();
 
-			buildWeapon.Append(string.Format("{0}{3} ({1}){2}\n", WeaponName, WeaponSize, MasterWorkLabel, MaterialName));
+			buildWeapon.Append(string.Format("{0}{1} ({2}){3}\n", WeaponName, MaterialName, WeaponSize, MasterWorkLabel));
 			buildWeapon.Append(string.Format("{0} Weapon\n{1} Proficiency\n", WeaponCategory, WeaponProficiencyRequirement));
 			if (ToHitModifier != 0)
 			{

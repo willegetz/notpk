@@ -11,10 +11,11 @@ namespace ItemSmithWorkShop
 		private string MagicDamageType { get { return "Magic"; } }
 
 		private double TotalEnhancementCost { get; set; }
-		private double TotalEnhancementBonus { get; set; }
-		private double plusEnhancementBonus;
+		public double TotalEnhancementBonus { get; set; }
+
 		private double HardnessEnhancementBonus { get; set; }
 		private double HitPointEnhancementBOnus { get; set; }
+		private double enhancementBonus;
 		private double enhancementMultiplier = 2000;
 		private double coldIronAdditionalCost = 2000;
 
@@ -33,7 +34,8 @@ namespace ItemSmithWorkShop
 		{
 			if (plusEnhancement > 0 && plusEnhancement <=5)
 			{
-				plusEnhancementBonus = plusEnhancement;
+				enhancementBonus = plusEnhancement;
+				Dagger.PlusEnhancementBonus = plusEnhancement;
 			}
 			return;
 		}
@@ -42,8 +44,8 @@ namespace ItemSmithWorkShop
 		{
 			if (qualifier)
 			{
-				Dagger.WeaponName = String.Format("{0} [Glowing]", Dagger.WeaponName);
-				Dagger.WeaponText = String.Format("{0}\n\tThis weapon sheds light equivalent to a light spell\n\t\t(bright light in a 20 foot radius, shadowy light in a 40 foot radius)\n\t\tThe light from this weapon can't be concealed when drawn, nor can it be shut off.", Dagger.WeaponText);
+				Dagger.WeaponName = string.Format("{0} [Glowing]", Dagger.WeaponName);
+				Dagger.WeaponText = string.Format("{0}\n\tThis weapon sheds light equivalent to a light spell\n\t\t(bright light in a 20 foot radius, shadowy light in a 40 foot radius)\n\t\tThe light from this weapon can't be concealed when drawn, nor can it be shut off.", Dagger.WeaponText);
 			}
 		}
 
@@ -51,17 +53,19 @@ namespace ItemSmithWorkShop
 		{
 			if (Dagger.IsMasterwork)
 			{
+				Dagger.MasterWorkLabel = string.Empty;
 				return;
 			}
 			else
 			{
 				Dagger.IsMasterworkQualifier(true);
+				Dagger.MasterWorkLabel = string.Empty;
 			}
 		}
 
 		private void CalculateMagicalCost()
 		{
-			TotalEnhancementBonus = plusEnhancementBonus;
+			TotalEnhancementBonus = enhancementBonus;
 			
 			if (Dagger.IsColdIron)
 			{
@@ -75,7 +79,7 @@ namespace ItemSmithWorkShop
 
 		private void CalculateCasterLevel()
 		{
-			Dagger.CasterLevel = plusEnhancementBonus * 3;
+			Dagger.CasterLevel = enhancementBonus * 3;
 		}
 
 		public void CalculateCreationDays()
@@ -95,12 +99,12 @@ namespace ItemSmithWorkShop
 
 		public void CalculateHardness()
 		{
-			Dagger.WeaponHardness += (plusEnhancementBonus * 2);
+			Dagger.WeaponHardness += (enhancementBonus * 2);
 		}
 
 		public void CalculateHitPoints()
 		{
-			Dagger.WeaponHitPoints += (plusEnhancementBonus * 10);
+			Dagger.WeaponHitPoints += (enhancementBonus * 10);
 		}
 
 		private void SetMagicalTraits()
@@ -119,10 +123,10 @@ namespace ItemSmithWorkShop
 
 		private Object MagicItemDisplay()
 		{
-			Dagger.WeaponName = String.Format("+{0} {1}", plusEnhancementBonus, Dagger.WeaponName);
-			Dagger.ToHitModifier = plusEnhancementBonus;
-			Dagger.WeaponDamage = String.Format("{0} +{1}", Dagger.WeaponDamage, plusEnhancementBonus);
-			Dagger.WeaponDamageType = String.Format("{0}, {1}", Dagger.WeaponDamageType, MagicDamageType);
+			Dagger.WeaponName = string.Format("+{0} {1}", Dagger.PlusEnhancementBonus, Dagger.WeaponType);
+			Dagger.ToHitModifier = enhancementBonus;
+			Dagger.WeaponDamage = string.Format("{0} +{1}", Dagger.WeaponDamage, enhancementBonus);
+			Dagger.WeaponDamageType = string.Format("{0}, {1}", Dagger.WeaponDamageType, MagicDamageType);
 			Dagger.WeaponCost += TotalEnhancementCost;
 
 			return Dagger;

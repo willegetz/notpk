@@ -1,4 +1,4 @@
-+1 Dagger (Medium) [Masterwork]
++1 Dagger (Medium)
 Melee Weapon
 Light Weapon Proficiency
 To Hit: +1
@@ -19,7 +19,7 @@ Weapon Text:
 	This dagger is masterwork quality!
 
 
-+2 Dagger (Small) [Masterwork]
++2 Dagger (Small)
 Melee Weapon
 Light Weapon Proficiency
 To Hit: +2
@@ -40,7 +40,7 @@ Weapon Text:
 	This dagger is masterwork quality!
 
 
-+3 Dagger (Large) [Masterwork]
++3 Dagger (Large)
 Melee Weapon
 Light Weapon Proficiency
 To Hit: +3
@@ -61,7 +61,7 @@ Weapon Text:
 	This dagger is masterwork quality!
 
 
-+4 Dagger (Tiny) [Masterwork]
++4 Dagger (Tiny)
 Melee Weapon
 Light Weapon Proficiency
 To Hit: +4
@@ -82,7 +82,7 @@ Weapon Text:
 	This dagger is masterwork quality!
 
 
-+5 Dagger (Huge) [Masterwork]
++5 Dagger (Huge)
 Melee Weapon
 Light Weapon Proficiency
 To Hit: +5
