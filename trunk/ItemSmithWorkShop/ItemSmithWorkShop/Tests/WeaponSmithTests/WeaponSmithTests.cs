@@ -93,7 +93,6 @@ namespace ItemSmithWorkShop
 		public void TestDaggerDroppedIntoMithral()
 		{
 			GenericDagger dagger = new GenericDagger(null);
-			dagger.IsMasterworkQualifier(true);
 			new WeaponMithral(dagger);
 
 			Approvals.Approve(dagger);
@@ -299,9 +298,11 @@ namespace ItemSmithWorkShop
 		public void TestAddFlamingEnhancement()
 		{
 			GenericDagger flameDagger = new GenericDagger("Medium");
-			new MagicWeapon(flameDagger, 1);
-			EnchantWeapon enchant = new EnchantWeapon(flameDagger);
-			enchant.MagicalAbility("Flaming");
+			MagicWeapon magicWeapon = new MagicWeapon(flameDagger, 1);
+			//magicWeapon.EnchantWeaponWith("Flaming");
+
+			//EnchantWeapon enchant = new EnchantWeapon(flameDagger);
+			//enchant.MagicalAbility("Flaming");
 			// Enchant the flameDagger with a SpecialAbility
 
 			Approvals.Approve(flameDagger);

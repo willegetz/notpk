@@ -12,7 +12,7 @@ Creation Costs
 	Caster Level: 9
 	Days to Create: 18
 	Experience Cost: 720 experience points
-	Raw Material Cost: 12008 gold pieces
+	Raw Material Cost: 9308 gold pieces
 
 Weapon Text:
 	The dagger is a common secondary weapon. You get a +2 bonus on

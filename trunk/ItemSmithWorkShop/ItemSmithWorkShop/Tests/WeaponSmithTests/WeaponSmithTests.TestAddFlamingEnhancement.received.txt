@@ -1,4 +1,4 @@
-+1 Dagger [Glowing] (Medium)
++1 Dagger (Medium)
 Melee Weapon
 Light Weapon Proficiency
 To Hit: +1
@@ -18,6 +18,3 @@ Weapon Text:
 	The dagger is a common secondary weapon. You get a +2 bonus on
 	Sleight of Hand checks made to conceal a dagger on your body.
 	This dagger is masterwork quality!
-	This weapon sheds light equivalent to a light spell
-		(bright light in a 20 foot radius, shadowy light in a 40 foot radius)
-		The light from this weapon can't be concealed when drawn, nor can it be shut off.

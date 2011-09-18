@@ -131,5 +131,21 @@ namespace ItemSmithWorkShop
 
 			return Dagger;
 		}
+
+		List<MagicWeapon> weaponEnchantments = new List<MagicWeapon>();
+
+		private string MagicAbilityName { get; set; }
+
+		public void EnchantWeaponWith(string magicAbility)
+		{
+			MagicAbilityName = magicAbility;
+
+			SetMagicAbility();
+		}
+
+		private void SetMagicAbility()
+		{
+			Dagger.WeaponName = string.Format("+{0} {1} {2}", Dagger.PlusEnhancementBonus, MagicAbilityName, Dagger.WeaponType);
+		}
 	}
 }
