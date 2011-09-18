@@ -7,11 +7,12 @@ Hardness: 12
 Hit Points: 12
 Weight: 1 pound(s)
 2302 gold pieces
+
 Creation Costs
 	Caster Level: 3
 	Days to Create: 2
 	Experience Cost: 80 experience points
-	Raw Material Cost: 1000 gold pieces
+	Raw Material Cost: 1302 gold pieces
 
 Weapon Text:
 	The dagger is a common secondary weapon. You get a +2 bonus on
@@ -28,11 +29,12 @@ Hardness: 9
 Hit Points: 21
 Weight: 0.5 pound(s)
 8302 gold pieces
+
 Creation Costs
 	Caster Level: 6
 	Days to Create: 8
 	Experience Cost: 320 experience points
-	Raw Material Cost: 4000 gold pieces
+	Raw Material Cost: 4302 gold pieces
 
 Weapon Text:
 	The dagger is a common secondary weapon. You get a +2 bonus on
@@ -49,11 +51,12 @@ Hardness: 26
 Hit Points: 34
 Weight: 2 pound(s)
 18304 gold pieces
+
 Creation Costs
 	Caster Level: 9
 	Days to Create: 18
 	Experience Cost: 720 experience points
-	Raw Material Cost: 9000 gold pieces
+	Raw Material Cost: 9304 gold pieces
 
 Weapon Text:
 	The dagger is a common secondary weapon. You get a +2 bonus on
@@ -70,11 +73,12 @@ Hardness: 10.5
 Hit Points: 41
 Weight: 0.25 pound(s)
 32300.5 gold pieces
+
 Creation Costs
 	Caster Level: 12
 	Days to Create: 32
 	Experience Cost: 1280 experience points
-	Raw Material Cost: 16000 gold pieces
+	Raw Material Cost: 16300.5 gold pieces
 
 Weapon Text:
 	The dagger is a common secondary weapon. You get a +2 bonus on
@@ -91,11 +95,12 @@ Hardness: 50
 Hit Points: 58
 Weight: 4 pound(s)
 50308 gold pieces
+
 Creation Costs
 	Caster Level: 15
 	Days to Create: 50
 	Experience Cost: 2000 experience points
-	Raw Material Cost: 25000 gold pieces
+	Raw Material Cost: 25308 gold pieces
 
 Weapon Text:
 	The dagger is a common secondary weapon. You get a +2 bonus on

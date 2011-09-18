@@ -132,6 +132,16 @@ namespace ItemSmithWorkShop
 			masterworkCostModifier = 300;
 		}
 
+		public void CalculateWeaponCost()
+		{
+			// Start with the base price
+			// Adjust it for Size
+			// Add any material component to it
+			// Add a masterwork price if applicable
+			// This gives us our Item Cost
+			// Add the magic cost
+		}
+
 		private string WeaponToDisplay()
 		{
 			var buildWeapon = new StringBuilder();
@@ -147,10 +157,10 @@ namespace ItemSmithWorkShop
 			buildWeapon.Append(string.Format("{0} gold pieces\n", (WeaponCost + masterworkCostModifier)));
 			if (IsMagical)
 			{
-				buildWeapon.Append(string.Format("Creation Costs\n\tCaster Level: {0}\n", CasterLevel));
+				buildWeapon.Append(string.Format("\nCreation Costs\n\tCaster Level: {0}\n", CasterLevel));
 				buildWeapon.Append(string.Format("\tDays to Create: {0}\n", DaysToCreate));
 				buildWeapon.Append(string.Format("\tExperience Cost: {0} experience points\n", ExperienceCost));
-				buildWeapon.Append(string.Format("\tRaw Material Cost: {0} gold pieces\n", RawMaterialCost));
+				buildWeapon.Append(string.Format("\tRaw Material Cost: {0} gold pieces\n", (RawMaterialCost + BasePrice + masterworkCostModifier)));
 			}
 			buildWeapon.Append(string.Format("\nWeapon Text:\n\t{0}", WeaponText));
 			if (!string.IsNullOrEmpty(AdditionalText))
