@@ -301,53 +301,7 @@ namespace ItemSmithWorkShop
 			MagicWeapon magicWeapon = new MagicWeapon(flameDagger, 1);
 			magicWeapon.EnchantWeaponWith("Flaming");
 
-			//EnchantWeapon enchant = new EnchantWeapon(flameDagger);
-			//enchant.MagicalAbility("Flaming");
-			// Enchant the flameDagger with a SpecialAbility
-
 			Approvals.Approve(flameDagger);
-		}
-	}
-
-	public class EnchantWeapon
-	{
-		// Given the Magic Ability:
-		// Amend the Name to reflect the ability 
-		// Flaming
-		// Amend the Damage with the flaming damage
-		// Damage + 1d6
-		// Type + Fire
-		// Amend the Enhancement Total to reflect the new enhancement
-		// +1
-		// Change the price based on the new enhancement
-		//
-		// Compare Caster Levels
-		// CasterLevel vs. CL 10
-		// Add Flaming Info
-		// Upon command, a flaming weapon is sheathed in fire. The fire does not harm the wielder. The effect remains until another command is given. A flaming weapon deals an extra 1d6 points of fire damage on a successful hit. Bows, crossbows, and slings so crafted bestow the fire energy upon their ammunition.
-		// Moderate evocation; CL 10th; Craft Magic Arms and Armor and flame blade, flame strike, or fireball; Price +1 bonus.
-
-		List<EnchantWeapon> weaponEnchantments = new List<EnchantWeapon>();
-
-		private GenericDagger FlameDagger;
-
-		private string MagicAbilityName { get; set; }
-
-		public EnchantWeapon(GenericDagger flameDagger)
-		{
-			FlameDagger = flameDagger;
-		}
-
-		public void MagicalAbility(string magicAbility)
-		{
-			MagicAbilityName = magicAbility;
-
-			SetMagicAbility();
-		}
-
-		private void SetMagicAbility()
-		{
-			FlameDagger.WeaponName = string.Format("+{0} {1} {2}", FlameDagger.PlusEnhancementBonus, MagicAbilityName, FlameDagger.WeaponType);
 		}
 	}
 }

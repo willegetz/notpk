@@ -9,6 +9,11 @@ namespace ItemSmithWorkShop
 	{
 		private GenericDagger Dagger { get; set; }
 		private string MagicDamageType { get { return "Magic"; } }
+		
+		private string MagicAbilityName { get; set; }
+		private string MagicAbilityDamage { get; set; }
+		private string MagicAbilityDamageType { get; set; }
+		private string MagicAbilityText { get; set; }
 
 		private double TotalEnhancementCost { get; set; }
 		public double TotalEnhancementBonus { get; set; }
@@ -17,6 +22,7 @@ namespace ItemSmithWorkShop
 		private double MagicAbilityCasterLevel { get; set; }
 		private double HardnessEnhancementBonus { get; set; }
 		private double HitPointEnhancementBOnus { get; set; }
+
 		private double enhancementBonus;
 		private double enhancementMultiplier = 2000;
 		private double coldIronAdditionalCost = 2000;
@@ -149,14 +155,13 @@ namespace ItemSmithWorkShop
 			return Dagger;
 		}
 
-		List<MagicWeapon> weaponEnchantments = new List<MagicWeapon>();
-
-		private string MagicAbilityName { get; set; }
-
 		public void EnchantWeaponWith(string magicAbility)
 		{
 			MagicAbilityName = magicAbility;
 			MagicAbilityCasterLevel = 10;
+			MagicAbilityDamage = " +1d6";
+			MagicAbilityDamageType = ", Fire";
+			MagicAbilityText = "\n\n\tUpon command, a flaming weapon is sheathed in fire.\n\tThe fire does not harm the wielder. The effect\n\tremains until another command is given.\n\tCraft Magic Arms and Armor and flame blade, flame strike, or fireball";
 
 			SetMagicAbility();
 		}
@@ -164,11 +169,10 @@ namespace ItemSmithWorkShop
 		private void SetMagicAbility()
 		{
 			Dagger.WeaponName = string.Format("+{0} {1} {2}", Dagger.PlusEnhancementBonus, MagicAbilityName, Dagger.WeaponType);
-			Dagger.WeaponDamage = string.Format("{0} +1d6", Dagger.WeaponDamage);
-			Dagger.WeaponDamageType = string.Format("{0}, Fire", Dagger.WeaponDamageType);
+			Dagger.WeaponDamage = string.Format("{0}{1}", Dagger.WeaponDamage, MagicAbilityDamage);
+			Dagger.WeaponDamageType = string.Format("{0}{1}", Dagger.WeaponDamageType, MagicAbilityDamageType);
 			MagicAbilityEnhancement = 1;
-			Dagger.WeaponText = string.Format("{0}\n\n\tUpon command, a flaming weapon is sheathed in fire.\n\tThe fire does not harm the wielder. The effect\n\tremains until another command is given.\n\tCraft Magic Arms and Armor and flame blade, flame strike, or fireball", Dagger.WeaponText);
-			//CalculateMagicalCost();
+			Dagger.WeaponText = string.Format("{0}{1}", Dagger.WeaponText, MagicAbilityText);
 			SetMagicalTraits();
 			Dagger.CalculateWeaponCost();
 		}
