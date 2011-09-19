@@ -26,9 +26,11 @@ namespace ItemSmithWorkShop
 		{
 			Dagger.IsMasterworkQualifier(true);
 			Dagger.MaterialName = " [Darkwood]";
-			Dagger.WeaponCost += (Dagger.WeaponWeight * 10);
+			Dagger.SpecialMaterialCost = (Dagger.WeaponWeight * 10);
 			Dagger.WeaponWeight = (.5 * Dagger.WeaponWeight);
 			Dagger.WeaponText = Dagger.WeaponText + "\n\tThis item is made of Darkwood!";
+			Dagger.CalculateWeaponCost();
+
 			return Dagger;
 		}
 	}

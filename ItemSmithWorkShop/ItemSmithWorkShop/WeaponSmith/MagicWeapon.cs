@@ -73,7 +73,7 @@ namespace ItemSmithWorkShop
 			}
 			else
 			{
-			TotalEnhancementCost = (TotalEnhancementBonus * TotalEnhancementBonus) * enhancementMultiplier;
+				TotalEnhancementCost = (TotalEnhancementBonus * TotalEnhancementBonus) * enhancementMultiplier;
 			}
 		}
 
@@ -127,7 +127,8 @@ namespace ItemSmithWorkShop
 			Dagger.ToHitModifier = enhancementBonus;
 			Dagger.WeaponDamage = string.Format("{0} +{1}", Dagger.WeaponDamage, enhancementBonus);
 			Dagger.WeaponDamageType = string.Format("{0}, {1}", Dagger.WeaponDamageType, MagicDamageType);
-			Dagger.WeaponCost += TotalEnhancementCost;
+			Dagger.EnchantmentCost = TotalEnhancementCost;
+			Dagger.CalculateWeaponCost();
 
 			return Dagger;
 		}
