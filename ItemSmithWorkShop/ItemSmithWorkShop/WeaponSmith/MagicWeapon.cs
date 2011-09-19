@@ -12,7 +12,9 @@ namespace ItemSmithWorkShop
 
 		private double TotalEnhancementCost { get; set; }
 		public double TotalEnhancementBonus { get; set; }
+		public double MagicAbilityEnhancement { get; set; }
 
+		private double MagicAbilityCasterLevel { get; set; }
 		private double HardnessEnhancementBonus { get; set; }
 		private double HitPointEnhancementBOnus { get; set; }
 		private double enhancementBonus;
@@ -27,7 +29,9 @@ namespace ItemSmithWorkShop
 			}
 			Dagger = dagger;
 			ConfirmValidPlusEnhancement(plusEnhancement);
+			CheckMasterworkStatus();
 			SetMagicalTraits();
+			MagicItemDisplay();
 		}
 
 		private void ConfirmValidPlusEnhancement(int plusEnhancement)
@@ -65,7 +69,7 @@ namespace ItemSmithWorkShop
 
 		private void CalculateMagicalCost()
 		{
-			TotalEnhancementBonus = enhancementBonus;
+			TotalEnhancementBonus = enhancementBonus + MagicAbilityEnhancement;
 			
 			if (Dagger.IsColdIron)
 			{
@@ -75,11 +79,26 @@ namespace ItemSmithWorkShop
 			{
 				TotalEnhancementCost = (TotalEnhancementBonus * TotalEnhancementBonus) * enhancementMultiplier;
 			}
+			Dagger.EnchantmentCost = TotalEnhancementCost;
 		}
 
 		private void CalculateCasterLevel()
 		{
-			Dagger.CasterLevel = enhancementBonus * 3;
+			if (MagicAbilityCasterLevel == 0)
+			{
+				Dagger.CasterLevel = enhancementBonus * 3;
+			}
+			else
+			{
+				if (Dagger.CasterLevel >= MagicAbilityCasterLevel)
+				{
+					Dagger.CasterLevel = enhancementBonus * 3;
+				}
+				else
+				{
+					Dagger.CasterLevel = MagicAbilityCasterLevel;
+				}
+			}
 		}
 
 		public void CalculateCreationDays()
@@ -110,7 +129,6 @@ namespace ItemSmithWorkShop
 		private void SetMagicalTraits()
 		{
 			Dagger.IsMagical = true;
-			CheckMasterworkStatus();
 			CalculateMagicalCost();
 			CalculateCasterLevel();
 			CalculateCreationDays();
@@ -118,7 +136,6 @@ namespace ItemSmithWorkShop
 			CalculateRawMaterialCost();
 			CalculateHardness();
 			CalculateHitPoints();
-			MagicItemDisplay();
 		}
 
 		private Object MagicItemDisplay()
@@ -127,7 +144,6 @@ namespace ItemSmithWorkShop
 			Dagger.ToHitModifier = enhancementBonus;
 			Dagger.WeaponDamage = string.Format("{0} +{1}", Dagger.WeaponDamage, enhancementBonus);
 			Dagger.WeaponDamageType = string.Format("{0}, {1}", Dagger.WeaponDamageType, MagicDamageType);
-			Dagger.EnchantmentCost = TotalEnhancementCost;
 			Dagger.CalculateWeaponCost();
 
 			return Dagger;
@@ -140,6 +156,7 @@ namespace ItemSmithWorkShop
 		public void EnchantWeaponWith(string magicAbility)
 		{
 			MagicAbilityName = magicAbility;
+			MagicAbilityCasterLevel = 10;
 
 			SetMagicAbility();
 		}
@@ -147,6 +164,13 @@ namespace ItemSmithWorkShop
 		private void SetMagicAbility()
 		{
 			Dagger.WeaponName = string.Format("+{0} {1} {2}", Dagger.PlusEnhancementBonus, MagicAbilityName, Dagger.WeaponType);
+			Dagger.WeaponDamage = string.Format("{0} +1d6", Dagger.WeaponDamage);
+			Dagger.WeaponDamageType = string.Format("{0}, Fire", Dagger.WeaponDamageType);
+			MagicAbilityEnhancement = 1;
+			Dagger.WeaponText = string.Format("{0}\n\n\tUpon command, a flaming weapon is sheathed in fire.\n\tThe fire does not harm the wielder. The effect\n\tremains until another command is given.\n\tCraft Magic Arms and Armor and flame blade, flame strike, or fireball", Dagger.WeaponText);
+			//CalculateMagicalCost();
+			SetMagicalTraits();
+			Dagger.CalculateWeaponCost();
 		}
 	}
 }
