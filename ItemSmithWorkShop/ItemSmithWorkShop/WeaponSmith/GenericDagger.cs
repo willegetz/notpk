@@ -111,7 +111,6 @@ namespace ItemSmithWorkShop
 			{
 				BasePrice *= sizing.Multiplier;
 				ItemCost = BasePrice;
-				//TotalWeaponCost = BasePrice;
 			}
 		}
 

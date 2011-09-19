@@ -298,7 +298,7 @@ namespace ItemSmithWorkShop
 		public void TestAddFlamingEnhancement()
 		{
 			GenericDagger flameDagger = new GenericDagger("Medium");
-			MagicWeapon magicWeapon = new MagicWeapon(flameDagger, 1);
+			MagicWeapon magicWeapon = new MagicWeapon(flameDagger, 3);
 			magicWeapon.EnchantWeaponWith("Flaming");
 
 			Approvals.Approve(flameDagger);

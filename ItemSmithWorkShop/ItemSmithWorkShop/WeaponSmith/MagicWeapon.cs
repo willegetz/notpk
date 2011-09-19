@@ -90,13 +90,14 @@ namespace ItemSmithWorkShop
 
 		private void CalculateCasterLevel()
 		{
+
 			if (MagicAbilityCasterLevel == 0)
 			{
 				Dagger.CasterLevel = enhancementBonus * 3;
 			}
 			else
 			{
-				if (Dagger.CasterLevel >= MagicAbilityCasterLevel)
+				if (Dagger.CasterLevel > MagicAbilityCasterLevel)
 				{
 					Dagger.CasterLevel = enhancementBonus * 3;
 				}
@@ -162,7 +163,7 @@ namespace ItemSmithWorkShop
 			MagicAbilityDamage = " +1d6";
 			MagicAbilityDamageType = ", Fire";
 			MagicAbilityText = "\n\n\tUpon command, a flaming weapon is sheathed in fire.\n\tThe fire does not harm the wielder. The effect\n\tremains until another command is given.\n\tCraft Magic Arms and Armor and flame blade, flame strike, or fireball";
-
+			// Name, CasterLevel, Damage, CritBonus, DamageType, Text
 			SetMagicAbility();
 		}
 
