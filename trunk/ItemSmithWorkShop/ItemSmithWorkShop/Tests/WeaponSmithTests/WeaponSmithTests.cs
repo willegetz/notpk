@@ -299,7 +299,7 @@ namespace ItemSmithWorkShop
 		{
 			GenericDagger flameDagger = new GenericDagger("Medium");
 			MagicWeapon magicWeapon = new MagicWeapon(flameDagger, 1);
-			//magicWeapon.EnchantWeaponWith("Flaming");
+			magicWeapon.EnchantWeaponWith("Flaming");
 
 			//EnchantWeapon enchant = new EnchantWeapon(flameDagger);
 			//enchant.MagicalAbility("Flaming");

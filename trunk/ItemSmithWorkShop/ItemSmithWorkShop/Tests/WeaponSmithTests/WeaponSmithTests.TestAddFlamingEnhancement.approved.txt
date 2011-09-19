@@ -1,20 +1,25 @@
-+1 Dagger (Medium)
++1 Flaming Dagger (Medium)
 Melee Weapon
 Light Weapon Proficiency
 To Hit: +1
-Damage: 1d4 +1 [19-20 x2] Piercing or Slashing, Magic
-Hardness: 12
-Hit Points: 12
+Damage: 1d4 +1 +1d6 [19-20 x2] Piercing or Slashing, Magic, Fire
+Hardness: 14
+Hit Points: 22
 Weight: 1 pound(s)
-2302 gold pieces
+8302 gold pieces
 
 Creation Costs
-	Caster Level: 3
-	Days to Create: 2
-	Experience Cost: 80 experience points
-	Raw Material Cost: 1302 gold pieces
+	Caster Level: 10
+	Days to Create: 8
+	Experience Cost: 320 experience points
+	Raw Material Cost: 4302 gold pieces
 
 Weapon Text:
 	The dagger is a common secondary weapon. You get a +2 bonus on
 	Sleight of Hand checks made to conceal a dagger on your body.
 	This dagger is masterwork quality!
+
+	Upon command, a flaming weapon is sheathed in fire.
+	The fire does not harm the wielder. The effect
+	remains until another command is given.
+	Craft Magic Arms and Armor and flame blade, flame strike, or fireball
