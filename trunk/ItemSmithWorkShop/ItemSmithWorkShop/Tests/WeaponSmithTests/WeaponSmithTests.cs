@@ -212,7 +212,7 @@ namespace ItemSmithWorkShop
 			GenericDagger expensiveDagger = new GenericDagger("Medium");
 			new WeaponMithral(expensiveDagger);
 			expensiveDagger.WeaponName = String.Format("Oscar's Fine Blade ({0})", expensiveDagger.WeaponName);
-			expensiveDagger.WeaponCost = (expensiveDagger.WeaponCost * 10);
+			expensiveDagger.TotalWeaponCost = (expensiveDagger.TotalWeaponCost * 10);
 			expensiveDagger.AdditionalText = "Oscar's Fine Blade is ornately crafted. Fine jewels are tastefully set along the hilt.\n\tThe mithral is inlaid with gold to form a rich and flowing design that hints at the arcane.";
 
 			inventory.Add(faeDagger);

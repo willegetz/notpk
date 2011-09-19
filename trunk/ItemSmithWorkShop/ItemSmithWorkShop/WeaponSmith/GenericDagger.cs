@@ -9,7 +9,7 @@ namespace ItemSmithWorkShop
 	{
 		WeaponSizing sizing;
 
-		public double masterworkCostModifier;
+		public double masterworkCostModifier = 300;
 
 		public string WeaponProficiencyRequirement { get { return "Light Weapon"; } }
 		public string WeaponCategory { get { return "Melee"; } }
@@ -33,8 +33,12 @@ namespace ItemSmithWorkShop
 
 		public int PlusEnhancementBonus { get; set; }
 
+		public double MasterworkCost { get; set; }
+		public double SpecialMaterialCost { get; set; }
+		public double EnchantmentCost { get; set; }
+		public double ItemCost { get; set; }
 		public double ToHitModifier { get; set; }
-		public double WeaponCost { get; set; }
+		public double TotalWeaponCost { get; set; }
 		public double CasterLevel { get; set; }
 		public double DaysToCreate { get; set; }
 		public double ExperienceCost { get; set; }
@@ -46,7 +50,6 @@ namespace ItemSmithWorkShop
 
 		public GenericDagger(string weaponSize)
 		{
-			
 			WeaponType = "Dagger";
 			WeaponName = WeaponType;
 			WeaponDamage = "1d4";
@@ -59,7 +62,7 @@ namespace ItemSmithWorkShop
 			BasePrice = 2;
 			sizing = new WeaponSizing(WeaponDamage, WeaponSize);
 			ApplySizingModifier();
-			//WeaponCost = BasePrice;
+			CalculateWeaponCost();
 		}
 
 		private void CheckForNull(string weaponSize)
@@ -79,39 +82,36 @@ namespace ItemSmithWorkShop
 			WeaponDamage = sizing.NewDamage;
 			WeaponWeight *= sizing.Multiplier;
 
-			WeaponHitPointsCalculation();
-			WeaponHardnessCalculation();
-			WeaponCostCalculation();
+			ApplyHardnessHitPointsSizeModifier();
+			ApplyCostSizeModifier();
 		}
 
-		private void WeaponHardnessCalculation()
+		private void ApplyHardnessHitPointsSizeModifier()
 		{
 			WeaponHardness *= sizing.Multiplier;
+			WeaponHitPoints *= sizing.Multiplier;
+
 			if (WeaponHardness < 1)
 			{
 				WeaponHardness = 1;
 			}
-		}
-
-		private void WeaponHitPointsCalculation()
-		{
-			WeaponHitPoints *= sizing.Multiplier;
 			if (WeaponHitPoints < 1)
 			{
 				WeaponHitPoints = 1;
 			}
 		}
 
-		private void WeaponCostCalculation()
+		private void ApplyCostSizeModifier()
 		{
 			if (WeaponSize == "Small")
 			{
-				WeaponCost = BasePrice;
+				TotalWeaponCost = BasePrice;
 			}
 			else
 			{
 				BasePrice *= sizing.Multiplier;
-				WeaponCost = BasePrice;
+				ItemCost = BasePrice;
+				//TotalWeaponCost = BasePrice;
 			}
 		}
 
@@ -129,17 +129,14 @@ namespace ItemSmithWorkShop
 			MasterWorkLabel = " [Masterwork]";
 			ToHitModifier = 1;
 			WeaponText = WeaponText + "\n\tThis dagger is masterwork quality!";
-			masterworkCostModifier = 300;
+			MasterworkCost = masterworkCostModifier;
+			CalculateWeaponCost();
 		}
 
 		public void CalculateWeaponCost()
 		{
-			// Start with the base price
-			// Adjust it for Size
-			// Add any material component to it
-			// Add a masterwork price if applicable
-			// This gives us our Item Cost
-			// Add the magic cost
+			ItemCost = BasePrice + MasterworkCost + SpecialMaterialCost;
+			TotalWeaponCost = ItemCost + EnchantmentCost;
 		}
 
 		private string WeaponToDisplay()
@@ -154,13 +151,13 @@ namespace ItemSmithWorkShop
 			}
 			buildWeapon.Append(string.Format("Damage: {0} [{1} {2}] {3}\n", WeaponDamage, WeaponThreatRange, WeaponCritical, WeaponDamageType));
 			buildWeapon.Append(string.Format("Hardness: {0}\nHit Points: {1}\nWeight: {2} pound(s)\n", WeaponHardness, WeaponHitPoints, WeaponWeight));
-			buildWeapon.Append(string.Format("{0} gold pieces\n", (WeaponCost + masterworkCostModifier)));
+			buildWeapon.Append(string.Format("{0} gold pieces\n", (TotalWeaponCost)));
 			if (IsMagical)
 			{
 				buildWeapon.Append(string.Format("\nCreation Costs\n\tCaster Level: {0}\n", CasterLevel));
 				buildWeapon.Append(string.Format("\tDays to Create: {0}\n", DaysToCreate));
 				buildWeapon.Append(string.Format("\tExperience Cost: {0} experience points\n", ExperienceCost));
-				buildWeapon.Append(string.Format("\tRaw Material Cost: {0} gold pieces\n", (RawMaterialCost + BasePrice + masterworkCostModifier)));
+				buildWeapon.Append(string.Format("\tRaw Material Cost: {0} gold pieces\n", (RawMaterialCost + ItemCost)));
 			}
 			buildWeapon.Append(string.Format("\nWeapon Text:\n\t{0}", WeaponText));
 			if (!string.IsNullOrEmpty(AdditionalText))

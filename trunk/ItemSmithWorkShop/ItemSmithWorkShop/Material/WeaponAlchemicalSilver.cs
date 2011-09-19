@@ -28,8 +28,9 @@ namespace ItemSmithWorkShop
 		{
 			Dagger.MaterialName = " [Alchemical Silver]";
 			Dagger.WeaponDamage = Dagger.WeaponDamage + " -1";
-			Dagger.WeaponCost += alchemySilverCost;
+			Dagger.SpecialMaterialCost  = alchemySilverCost;
 			Dagger.WeaponText = Dagger.WeaponText + "\n\tAlchemical Silver bypasses damage reduction on lycanthropes.";
+			Dagger.CalculateWeaponCost();
 
 			return Dagger;
 		}
