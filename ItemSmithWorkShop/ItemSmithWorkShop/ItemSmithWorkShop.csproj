@@ -65,6 +65,7 @@
     <Compile Include="OldWeaponSmith\SteelMaterial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\SpikeTests\WeaponSmithSpikes.cs" />
+    <Compile Include="WeaponSmith\WeaponData.cs" />
     <Compile Include="Tests\WeaponSmithTests\WeaponSmithTests.cs" />
     <Compile Include="WeaponSmith\MagicWeapon.cs" />
     <Compile Include="WeaponSmith\GenericDagger.cs" />

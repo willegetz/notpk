@@ -10,6 +10,7 @@ namespace ItemSmithWorkShop
 		WeaponSizing sizing;
 
 		public double masterworkCostModifier = 300;
+		private WeaponData weaponData;
 
 		public string WeaponProficiencyRequirement { get; set; }
 		public string WeaponCategory { get; set; }
@@ -48,27 +49,6 @@ namespace ItemSmithWorkShop
 		public bool IsMasterwork { get; private set; }
 		public bool IsColdIron { get; set; }
 
-		public GenericDagger(string weaponSize)
-		{
-			WeaponType = "Dagger";
-			WeaponName = WeaponType;
-			WeaponCategory = "Melee";
-			WeaponProficiencyRequirement = "Light Weapon";
-			WeaponDamage = "1d4";
-			WeaponThreatRange = "19-20";
-			WeaponCritical = "x2";
-			WeaponDamageType = "Piercing or Slashing";
-			WeaponHardness = 10;
-			WeaponHitPoints = 2;
-			WeaponWeight = 1;
-			WeaponText = "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.";
-			CheckForNull(weaponSize);
-			BasePrice = 2;
-			sizing = new WeaponSizing(WeaponDamage, WeaponSize);
-			ApplySizingModifier();
-			CalculateWeaponCost();
-		}
-
 		public GenericDagger(string name, string size, string category, string proficiency, string damage, string threatRange, string criticalMultiplier, string damageType, double hardness, double hitPoints, double weight, double basePrice, string weaponText)
 		{
 			WeaponType = name;
@@ -84,6 +64,28 @@ namespace ItemSmithWorkShop
 			BasePrice = basePrice;
 			WeaponWeight = weight;
 			WeaponText = weaponText;
+
+			CheckForNull(size);
+			sizing = new WeaponSizing(WeaponDamage, WeaponSize);
+			ApplySizingModifier();
+			CalculateWeaponCost();
+		}
+
+		public GenericDagger(WeaponData weaponData, string size)
+		{
+			WeaponType = weaponData.WeaponName;
+			WeaponName = weaponData.WeaponName;
+			WeaponCategory = weaponData.WeaponCategory;
+			WeaponProficiencyRequirement = weaponData.WeaponProficiencyRequirement;
+			WeaponDamage = weaponData.WeaponDamage;
+			WeaponThreatRange = weaponData.WeaponThreatRange;
+			WeaponCritical = weaponData.WeaponCritical;
+			WeaponDamageType = weaponData.WeaponDamageType;
+			WeaponHardness = weaponData.WeaponHardness;
+			WeaponHitPoints = weaponData.WeaponHitPoints;
+			BasePrice = weaponData.BasePrice;
+			WeaponWeight = weaponData.WeaponWeight;
+			WeaponText = weaponData.WeaponText;
 
 			CheckForNull(size);
 			sizing = new WeaponSizing(WeaponDamage, WeaponSize);
