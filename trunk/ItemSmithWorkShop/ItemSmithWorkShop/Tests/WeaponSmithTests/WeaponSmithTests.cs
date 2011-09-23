@@ -18,7 +18,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestSimpleDaggerObject()
 		{
-			GenericDagger simpleDagger = new GenericDagger("Dagger", "Medium", "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
+			GenericDagger simpleDagger = new GenericDagger(new WeaponData(), null);
 
 			Approvals.Approve(simpleDagger);
 		}
@@ -26,7 +26,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoSteel()
 		{
-			GenericDagger simpleDagger = new GenericDagger(null);
+			GenericDagger simpleDagger = new GenericDagger("Dagger", null, "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			new WeaponSteel(simpleDagger);
 
 			Approvals.Approve(simpleDagger);
@@ -35,7 +35,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoSteelProperlyNamed()
 		{
-			GenericDagger simpleDagger = new GenericDagger(null);
+			GenericDagger simpleDagger = new GenericDagger("Dagger", null, "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			simpleDagger.WeaponName = "Slashy Blade of Happiness";
 
 			new WeaponSteel(simpleDagger);
@@ -46,7 +46,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMasterworkDagger()
 		{
-			GenericDagger simpleDagger = new GenericDagger(null);
+			GenericDagger simpleDagger = new GenericDagger("Dagger", null, "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			simpleDagger.IsMasterworkQualifier(true);
 
 			Approvals.Approve(simpleDagger);
@@ -55,7 +55,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoAdamantine()
 		{
-			GenericDagger dagger = new GenericDagger(null);
+			GenericDagger dagger = new GenericDagger("Dagger", null, "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			new WeaponAdamantine(dagger);
 
 			Approvals.Approve(dagger);
@@ -64,7 +64,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoDarkwood()
 		{
-			GenericDagger dagger = new GenericDagger(null);
+			GenericDagger dagger = new GenericDagger("Dagger", null, "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			new WeaponDarkwood(dagger);
 
 			Approvals.Approve(dagger);
@@ -73,7 +73,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoColdIron()
 		{
-			GenericDagger dagger = new GenericDagger(null);
+			GenericDagger dagger = new GenericDagger("Dagger", null, "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			new WeaponColdIron(dagger);
 
 			Approvals.Approve(dagger);
@@ -82,7 +82,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMasterworkDaggerDroppedIntoColdIron()
 		{
-			GenericDagger dagger = new GenericDagger(null);
+			GenericDagger dagger = new GenericDagger("Dagger", null, "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			dagger.IsMasterworkQualifier(true);
 			new WeaponColdIron(dagger);
 
@@ -92,7 +92,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoMithral()
 		{
-			GenericDagger dagger = new GenericDagger(null);
+			GenericDagger dagger = new GenericDagger("Dagger", null, "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			new WeaponMithral(dagger);
 
 			Approvals.Approve(dagger);
@@ -101,7 +101,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMasterworkDaggerDroppedIntoMithral()
 		{
-			GenericDagger dagger = new GenericDagger(null);
+			GenericDagger dagger = new GenericDagger("Dagger", null, "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			dagger.IsMasterworkQualifier(true);
 			new WeaponMithral(dagger);
 
@@ -111,7 +111,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoAlchemicalSilver()
 		{
-			GenericDagger dagger = new GenericDagger(null);
+			GenericDagger dagger = new GenericDagger("Dagger", null, "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			new WeaponAlchemicalSilver(dagger);
 
 			Approvals.Approve(dagger);
@@ -120,7 +120,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMasterworkDaggerDroppedIntoAlchemicalSilver()
 		{
-			GenericDagger dagger = new GenericDagger(null);
+			GenericDagger dagger = new GenericDagger("Dagger", null, "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			dagger.IsMasterworkQualifier(true);
 			new WeaponAlchemicalSilver(dagger);
 
@@ -130,7 +130,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestSmallSizeDagger()
 		{
-			GenericDagger mediumDagger = new GenericDagger("Small");
+			GenericDagger mediumDagger = new GenericDagger("Dagger", "Small", "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 
 			Approvals.Approve(mediumDagger);
 		}
@@ -138,7 +138,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestFineSizeDagger()
 		{
-			GenericDagger fineDagger = new GenericDagger("Fine");
+			GenericDagger fineDagger = new GenericDagger("Dagger", "Fine", "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 
 			Approvals.Approve(fineDagger);
 		}
@@ -146,7 +146,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestColossalSizeDagger()
 		{
-			GenericDagger colossalDagger = new GenericDagger("Colossal");
+			GenericDagger colossalDagger = new GenericDagger("Dagger", "Colossal", "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 
 			Approvals.Approve(colossalDagger);
 		}
@@ -154,7 +154,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestLargeDagger()
 		{
-			GenericDagger largeDagger = new GenericDagger("Large");
+			GenericDagger largeDagger = new GenericDagger("Dagger", "Large", "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 
 			Approvals.Approve(largeDagger);
 		}
@@ -162,7 +162,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestProperNamedFineSizeDagger()
 		{
-			GenericDagger faeDagger = new GenericDagger("Diminutive");
+			GenericDagger faeDagger = new GenericDagger("Dagger", "Diminutive", "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			new WeaponAdamantine(faeDagger);
 			faeDagger.WeaponName = String.Format("Sera's Bite ({0})", faeDagger.WeaponName);
 			faeDagger.AdditionalText = "Sera forged this dagger for revenge against those that ruined her home.";
@@ -181,7 +181,7 @@ namespace ItemSmithWorkShop
 
 			for (int i = 0; i <= daggerQuantity; i++)
 			{
-				dagger = new GenericDagger(null);
+				dagger = new GenericDagger("Dagger", null, "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 				inventory.Add(dagger);
 			}
 
@@ -199,17 +199,17 @@ namespace ItemSmithWorkShop
 			List<GenericDagger> inventory = new List<GenericDagger>();
 			var displayInventory = new StringBuilder();
 
-			GenericDagger faeDagger = new GenericDagger("Fine");
+			GenericDagger faeDagger = new GenericDagger("Dagger", "Fine", "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			new WeaponAlchemicalSilver(faeDagger);
 			faeDagger.WeaponName = String.Format("Faerie's Dagger ({0}{3} ({1}){2})\n", faeDagger.WeaponName, faeDagger.WeaponSize, faeDagger.MasterWorkLabel, faeDagger.MaterialName);
 			faeDagger.AdditionalText = "Dagger left by a faerie as a token of friendship.";
 
-			GenericDagger ogreDagger = new GenericDagger("Large");
+			GenericDagger ogreDagger = new GenericDagger("Dagger", "Large", "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			new WeaponColdIron(ogreDagger);
 			ogreDagger.WeaponName = String.Format("Tooth ({0})", ogreDagger.WeaponName);
 			ogreDagger.AdditionalText = "Dagger of an Ogre Mage chief taken from its body after a vicious fight.";
 
-			GenericDagger expensiveDagger = new GenericDagger("Medium");
+			GenericDagger expensiveDagger = new GenericDagger("Dagger", "Medium", "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			new WeaponMithral(expensiveDagger);
 			expensiveDagger.WeaponName = String.Format("Oscar's Fine Blade ({0})", expensiveDagger.WeaponName);
 			expensiveDagger.TotalWeaponCost = (expensiveDagger.TotalWeaponCost * 10);
@@ -230,7 +230,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMagicalWeapon()
 		{
-			GenericDagger dagger = new GenericDagger("Medium");
+			GenericDagger dagger = new GenericDagger("Dagger", "Medium", "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			MagicWeapon magicDagger = new MagicWeapon(dagger, 1);
 			magicDagger.IsGlowingWeapon(true);
 
@@ -240,19 +240,19 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMagicalWeapons()
 		{
-			GenericDagger dagger = new GenericDagger("Medium");
+			GenericDagger dagger = new GenericDagger("Dagger", "Medium", "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			MagicWeapon magicDagger = new MagicWeapon(dagger, 1);
 
-			GenericDagger smallDagger = new GenericDagger("Small");
+			GenericDagger smallDagger = new GenericDagger("Dagger", "Small", "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			MagicWeapon smallMagicDagger = new MagicWeapon(smallDagger, 2);
 
-			GenericDagger largeDagger = new GenericDagger("Large");
+			GenericDagger largeDagger = new GenericDagger("Dagger", "Large", "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			MagicWeapon largeMagicDagger = new MagicWeapon(largeDagger, 3);
 
-			GenericDagger tinyDagger = new GenericDagger("Tiny");
+			GenericDagger tinyDagger = new GenericDagger("Dagger", "Tiny", "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			MagicWeapon tinyMagicDagger = new MagicWeapon(tinyDagger, 4);
 
-			GenericDagger hugeDagger = new GenericDagger("Huge");
+			GenericDagger hugeDagger = new GenericDagger("Dagger", "Huge", "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			MagicWeapon hugeMagicDagger = new MagicWeapon(hugeDagger, 5);
 
 			List<GenericDagger> inventory = new List<GenericDagger>();
@@ -275,7 +275,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestColdIronMagicWeapon()
 		{
-			GenericDagger dagger = new GenericDagger(null);
+			GenericDagger dagger = new GenericDagger("Dagger", null, "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			new WeaponColdIron(dagger);
 			new MagicWeapon(dagger, 1);
 
@@ -285,7 +285,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestNamedMagicWeapon()
 		{
-			GenericDagger dagger = new GenericDagger("Huge");
+			GenericDagger dagger = new GenericDagger("Dagger", "Huge", "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			dagger.AdditionalText = "Brawn carried this boot knife whenever he went into the wilderness to work. While not fashioned for combat,\n\t\tBrawn has successfully defended himself many times with this blade.";
 			new WeaponAdamantine(dagger);
 			new MagicWeapon(dagger, 3);
