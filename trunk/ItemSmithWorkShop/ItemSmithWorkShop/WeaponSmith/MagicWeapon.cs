@@ -7,7 +7,7 @@ namespace ItemSmithWorkShop
 {
 	public class MagicWeapon
 	{
-		private GenericDagger Dagger { get; set; }
+		private GenericWeapon Dagger { get; set; }
 		private string MagicDamageType { get { return "Magic"; } }
 		
 		private string MagicAbilityName { get; set; }
@@ -27,7 +27,7 @@ namespace ItemSmithWorkShop
 		private double enhancementMultiplier = 2000;
 		private double coldIronAdditionalCost = 2000;
 
-		public MagicWeapon(GenericDagger dagger, int plusEnhancement)
+		public MagicWeapon(GenericWeapon dagger, int plusEnhancement)
 		{
 			if (dagger == null)
 			{
