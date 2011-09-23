@@ -18,7 +18,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestSimpleDaggerObject()
 		{
-			GenericDagger simpleDagger = new GenericDagger(null);
+			GenericDagger simpleDagger = new GenericDagger("Dagger", "Medium", "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 
 			Approvals.Approve(simpleDagger);
 		}
@@ -297,7 +297,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestAddFlamingEnhancement()
 		{
-			GenericDagger flameDagger = new GenericDagger("Medium");
+			GenericDagger flameDagger = new GenericDagger("Dagger", "Medium", "Melee", "Light Weapon", "1d4", "19-20", "x2", "Piercing or Slashing", 10, 2, 1, 2, "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.");
 			MagicWeapon magicWeapon = new MagicWeapon(flameDagger, 1);
 			magicWeapon.EnchantWeaponWith("Flaming");
 
