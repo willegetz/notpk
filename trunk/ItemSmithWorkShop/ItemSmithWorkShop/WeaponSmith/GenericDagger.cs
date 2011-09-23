@@ -11,10 +11,10 @@ namespace ItemSmithWorkShop
 
 		public double masterworkCostModifier = 300;
 
-		public string WeaponProficiencyRequirement { get { return "Light Weapon"; } }
-		public string WeaponCategory { get { return "Melee"; } }
-		public string WeaponThreatRange { get { return "19-20"; } }
-		public string WeaponCritical { get { return "x2"; } }
+		public string WeaponProficiencyRequirement { get; set; }
+		public string WeaponCategory { get; set; }
+		public string WeaponThreatRange { get; set; }
+		public string WeaponCritical { get; set; }
 
 		public string WeaponName { get; set; }
 		public string WeaponType { get; set; }
@@ -52,7 +52,11 @@ namespace ItemSmithWorkShop
 		{
 			WeaponType = "Dagger";
 			WeaponName = WeaponType;
+			WeaponCategory = "Melee";
+			WeaponProficiencyRequirement = "Light Weapon";
 			WeaponDamage = "1d4";
+			WeaponThreatRange = "19-20";
+			WeaponCritical = "x2";
 			WeaponDamageType = "Piercing or Slashing";
 			WeaponHardness = 10;
 			WeaponHitPoints = 2;
@@ -60,6 +64,28 @@ namespace ItemSmithWorkShop
 			WeaponText = "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.";
 			CheckForNull(weaponSize);
 			BasePrice = 2;
+			sizing = new WeaponSizing(WeaponDamage, WeaponSize);
+			ApplySizingModifier();
+			CalculateWeaponCost();
+		}
+
+		public GenericDagger(string name, string size, string category, string proficiency, string damage, string threatRange, string criticalMultiplier, string damageType, double hardness, double hitPoints, double weight, double basePrice, string weaponText)
+		{
+			WeaponType = name;
+			WeaponName = name;
+			WeaponCategory = category;
+			WeaponProficiencyRequirement = proficiency;
+			WeaponDamage = damage;
+			WeaponThreatRange = threatRange;
+			WeaponCritical = criticalMultiplier;
+			WeaponDamageType = damageType;
+			WeaponHardness = hardness;
+			WeaponHitPoints = hitPoints;
+			BasePrice = basePrice;
+			WeaponWeight = weight;
+			WeaponText = weaponText;
+
+			CheckForNull(size);
 			sizing = new WeaponSizing(WeaponDamage, WeaponSize);
 			ApplySizingModifier();
 			CalculateWeaponCost();
