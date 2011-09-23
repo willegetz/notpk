@@ -11,6 +11,29 @@ using ApprovalTests;
 
 namespace ItemSmithWorkShop
 {
+	public static class DaggerHelper
+	{
+		public static WeaponData GetWeaponData()
+		{
+			WeaponData data = new WeaponData();
+
+			data.WeaponName = "Dagger";
+			data.WeaponCategory = "Melee";
+			data.WeaponProficiencyRequirement = "Light Weapon";
+			data.WeaponDamage = "1d4";
+			data.WeaponThreatRange = "19-20";
+			data.WeaponCritical = "x2";
+			data.WeaponDamageType = "Piercing or Slashing";
+			data.WeaponHardness = 10;
+			data.WeaponHitPoints = 2;
+			data.BasePrice = 2;
+			data.WeaponWeight = 1;
+			data.WeaponText = "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body.";
+
+			return data;
+		}
+	}
+
 	[TestClass]
 	[UseReporter(typeof(DiffReporter))]
 	public class WeaponSmithTests
@@ -18,7 +41,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestSimpleDaggerObject()
 		{
-			GenericWeapon simpleDagger = new GenericWeapon(new WeaponData(), null);
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon simpleDagger = new GenericWeapon(daggerhelper, null);
 
 			Approvals.Approve(simpleDagger);
 		}
@@ -26,7 +51,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoSteel()
 		{
-			GenericWeapon simpleDagger = new GenericWeapon(new WeaponData(), null);
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon simpleDagger = new GenericWeapon(daggerhelper, null);
 			new WeaponSteel(simpleDagger);
 
 			Approvals.Approve(simpleDagger);
@@ -35,7 +62,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoSteelProperlyNamed()
 		{
-			GenericWeapon simpleDagger = new GenericWeapon(new WeaponData(), null);
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon simpleDagger = new GenericWeapon(daggerhelper, null);
 			simpleDagger.WeaponName = "Slashy Blade of Happiness";
 
 			new WeaponSteel(simpleDagger);
@@ -46,7 +75,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMasterworkDagger()
 		{
-			GenericWeapon simpleDagger = new GenericWeapon(new WeaponData(), null);
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon simpleDagger = new GenericWeapon(daggerhelper, null);
 			simpleDagger.IsMasterworkQualifier(true);
 
 			Approvals.Approve(simpleDagger);
@@ -55,7 +86,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoAdamantine()
 		{
-			GenericWeapon dagger = new GenericWeapon(new WeaponData(), null);
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
 			new WeaponAdamantine(dagger);
 
 			Approvals.Approve(dagger);
@@ -64,7 +97,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoDarkwood()
 		{
-			GenericWeapon dagger = new GenericWeapon(new WeaponData(), null);
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
 			new WeaponDarkwood(dagger);
 
 			Approvals.Approve(dagger);
@@ -73,7 +108,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoColdIron()
 		{
-			GenericWeapon dagger = new GenericWeapon(new WeaponData(), null);
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
 			new WeaponColdIron(dagger);
 
 			Approvals.Approve(dagger);
@@ -82,7 +119,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMasterworkDaggerDroppedIntoColdIron()
 		{
-			GenericWeapon dagger = new GenericWeapon(new WeaponData(), null);
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
 			dagger.IsMasterworkQualifier(true);
 			new WeaponColdIron(dagger);
 
@@ -92,7 +131,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoMithral()
 		{
-			GenericWeapon dagger = new GenericWeapon(new WeaponData(), null);
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
 			new WeaponMithral(dagger);
 
 			Approvals.Approve(dagger);
@@ -101,7 +142,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMasterworkDaggerDroppedIntoMithral()
 		{
-			GenericWeapon dagger = new GenericWeapon(new WeaponData(), null);
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
 			dagger.IsMasterworkQualifier(true);
 			new WeaponMithral(dagger);
 
@@ -111,7 +154,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoAlchemicalSilver()
 		{
-			GenericWeapon dagger = new GenericWeapon(new WeaponData(), null);
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
 			new WeaponAlchemicalSilver(dagger);
 
 			Approvals.Approve(dagger);
@@ -120,7 +165,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMasterworkDaggerDroppedIntoAlchemicalSilver()
 		{
-			GenericWeapon dagger = new GenericWeapon(new WeaponData(), null);
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
 			dagger.IsMasterworkQualifier(true);
 			new WeaponAlchemicalSilver(dagger);
 
@@ -130,7 +177,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestSmallSizeDagger()
 		{
-			GenericWeapon mediumDagger = new GenericWeapon(new WeaponData(), "Small");
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon mediumDagger = new GenericWeapon(daggerhelper, "Small");
 
 			Approvals.Approve(mediumDagger);
 		}
@@ -138,7 +187,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestFineSizeDagger()
 		{
-			GenericWeapon fineDagger = new GenericWeapon(new WeaponData(), "Fine");
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon fineDagger = new GenericWeapon(daggerhelper, "Fine");
 
 			Approvals.Approve(fineDagger);
 		}
@@ -146,7 +197,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestColossalSizeDagger()
 		{
-			GenericWeapon colossalDagger = new GenericWeapon(new WeaponData(), "Colossal");
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon colossalDagger = new GenericWeapon(daggerhelper, "Colossal");
 
 			Approvals.Approve(colossalDagger);
 		}
@@ -154,7 +207,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestLargeDagger()
 		{
-			GenericWeapon largeDagger = new GenericWeapon(new WeaponData(), "Large");
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon largeDagger = new GenericWeapon(daggerhelper, "Large");
 
 			Approvals.Approve(largeDagger);
 		}
@@ -162,7 +217,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestProperNamedFineSizeDagger()
 		{
-			GenericWeapon faeDagger = new GenericWeapon(new WeaponData(), "Diminutive");
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon faeDagger = new GenericWeapon(daggerhelper, "Diminutive");
 			new WeaponAdamantine(faeDagger);
 			faeDagger.WeaponName = String.Format("Sera's Bite ({0})", faeDagger.WeaponName);
 			faeDagger.AdditionalText = "Sera forged this dagger for revenge against those that ruined her home.";
@@ -173,6 +230,8 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMultipleDaggers()
 		{
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
 			GenericWeapon dagger;
 			List<GenericWeapon> inventory = new List<GenericWeapon>();
 			var displayInventory = new StringBuilder();
@@ -181,7 +240,7 @@ namespace ItemSmithWorkShop
 
 			for (int i = 0; i <= daggerQuantity; i++)
 			{
-				dagger = new GenericWeapon(new WeaponData(), null);
+				dagger = new GenericWeapon(daggerhelper, null);
 				inventory.Add(dagger);
 			}
 
@@ -196,20 +255,22 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMultipleDifferentDaggers()
 		{
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
 			List<GenericWeapon> inventory = new List<GenericWeapon>();
 			var displayInventory = new StringBuilder();
 
-			GenericWeapon faeDagger = new GenericWeapon(new WeaponData(), "Fine");
+			GenericWeapon faeDagger = new GenericWeapon(daggerhelper, "Fine");
 			new WeaponAlchemicalSilver(faeDagger);
 			faeDagger.WeaponName = String.Format("Faerie's Dagger ({0}{3} ({1}){2})\n", faeDagger.WeaponName, faeDagger.WeaponSize, faeDagger.MasterWorkLabel, faeDagger.MaterialName);
 			faeDagger.AdditionalText = "Dagger left by a faerie as a token of friendship.";
 
-			GenericWeapon ogreDagger = new GenericWeapon(new WeaponData(), "Large");
+			GenericWeapon ogreDagger = new GenericWeapon(daggerhelper, "Large");
 			new WeaponColdIron(ogreDagger);
 			ogreDagger.WeaponName = String.Format("Tooth ({0})", ogreDagger.WeaponName);
 			ogreDagger.AdditionalText = "Dagger of an Ogre Mage chief taken from its body after a vicious fight.";
 
-			GenericWeapon expensiveDagger = new GenericWeapon(new WeaponData(), "Medium");
+			GenericWeapon expensiveDagger = new GenericWeapon(daggerhelper, "Medium");
 			new WeaponMithral(expensiveDagger);
 			expensiveDagger.WeaponName = String.Format("Oscar's Fine Blade ({0})", expensiveDagger.WeaponName);
 			expensiveDagger.TotalWeaponCost = (expensiveDagger.TotalWeaponCost * 10);
@@ -230,7 +291,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMagicalWeapon()
 		{
-			GenericWeapon dagger = new GenericWeapon(new WeaponData(), "Medium");
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon dagger = new GenericWeapon(daggerhelper, "Medium");
 			MagicWeapon magicDagger = new MagicWeapon(dagger, 1);
 			magicDagger.IsGlowingWeapon(true);
 
@@ -240,19 +303,21 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMagicalWeapons()
 		{
-			GenericWeapon dagger = new GenericWeapon(new WeaponData(), "Medium");
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon dagger = new GenericWeapon(daggerhelper, "Medium");
 			MagicWeapon magicDagger = new MagicWeapon(dagger, 1);
 
-			GenericWeapon smallDagger = new GenericWeapon(new WeaponData(), "Small");
+			GenericWeapon smallDagger = new GenericWeapon(daggerhelper, "Small");
 			MagicWeapon smallMagicDagger = new MagicWeapon(smallDagger, 2);
 
-			GenericWeapon largeDagger = new GenericWeapon(new WeaponData(), "Large");
+			GenericWeapon largeDagger = new GenericWeapon(daggerhelper, "Large");
 			MagicWeapon largeMagicDagger = new MagicWeapon(largeDagger, 3);
 
-			GenericWeapon tinyDagger = new GenericWeapon(new WeaponData(), "Tiny");
+			GenericWeapon tinyDagger = new GenericWeapon(daggerhelper, "Tiny");
 			MagicWeapon tinyMagicDagger = new MagicWeapon(tinyDagger, 4);
 
-			GenericWeapon hugeDagger = new GenericWeapon(new WeaponData(), "Huge");
+			GenericWeapon hugeDagger = new GenericWeapon(daggerhelper, "Huge");
 			MagicWeapon hugeMagicDagger = new MagicWeapon(hugeDagger, 5);
 
 			List<GenericWeapon> inventory = new List<GenericWeapon>();
@@ -275,7 +340,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestColdIronMagicWeapon()
 		{
-			GenericWeapon dagger = new GenericWeapon(new WeaponData(), null);
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
 			new WeaponColdIron(dagger);
 			new MagicWeapon(dagger, 1);
 
@@ -285,7 +352,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestNamedMagicWeapon()
 		{
-			GenericWeapon dagger = new GenericWeapon(new WeaponData(), "Huge");
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon dagger = new GenericWeapon(daggerhelper, "Huge");
 			dagger.AdditionalText = "Brawn carried this boot knife whenever he went into the wilderness to work. While not fashioned for combat,\n\t\tBrawn has successfully defended himself many times with this blade.";
 			new WeaponAdamantine(dagger);
 			new MagicWeapon(dagger, 3);
@@ -297,7 +366,9 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestAddFlamingEnhancement()
 		{
-			GenericWeapon flameDagger = new GenericWeapon(new WeaponData(), "Medium");
+			var daggerhelper = DaggerHelper.GetWeaponData();
+
+			GenericWeapon flameDagger = new GenericWeapon(daggerhelper, "Medium");
 			MagicWeapon magicWeapon = new MagicWeapon(flameDagger, 1);
 			magicWeapon.EnchantWeaponWith("Flaming");
 
