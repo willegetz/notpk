@@ -13,6 +13,14 @@ namespace ItemSmithWorkShop
 {
 	public static class DaggerHelper
 	{
+		public static DaggerHelper(string weapon)
+		{
+			Dictionary<string, WeaponData> genericWeapons = new Dictionary<string, WeaponData>();
+			genericWeapons.Add("Dagger", new WeaponData { WeaponName = "Dagger", WeaponCategory = "Melee", WeaponProficiencyRequirement = "Light Weapon", WeaponDamage = "1d4", WeaponThreatRange = "19-20", WeaponCritical = "x2", WeaponDamageType = "Piercing or Slashing", WeaponHardness = 10, WeaponHitPoints = 2, BasePrice = 2, WeaponWeight = 1, WeaponText = "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body." });
+
+			return genericWeapons[weapon];
+		}
+
 		public static WeaponData GetWeaponData()
 		{
 			WeaponData data = new WeaponData();
@@ -41,11 +49,16 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestSimpleDaggerObject()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData();
+			var daggerhelper = DaggerHelper("Dagger");
 
 			GenericWeapon simpleDagger = new GenericWeapon(daggerhelper, null);
 
 			Approvals.Approve(simpleDagger);
+		}
+
+		private object DaggerHelper(string p)
+		{
+			throw new NotImplementedException();
 		}
 
 		[TestMethod]
