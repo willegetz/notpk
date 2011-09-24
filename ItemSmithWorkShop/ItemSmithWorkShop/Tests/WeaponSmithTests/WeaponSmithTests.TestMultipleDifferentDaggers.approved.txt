@@ -1,7 +1,7 @@
 Faerie's Dagger (Dagger [Alchemical Silver] (Fine))
  [Alchemical Silver] (Fine)
-Melee Weapon
-Light Weapon Proficiency
+Light Melee Weapon
+Simple Weapon Proficiency
 Damage: No Meaningful Damage -1 [19-20 x2] Piercing or Slashing
 Hardness: 1
 Hit Points: 1
@@ -18,8 +18,8 @@ Additional Text:
 
 
 Tooth (Dagger) [Cold Iron] (Large)
-Melee Weapon
-Light Weapon Proficiency
+Light Melee Weapon
+Simple Weapon Proficiency
 Damage: 1d6 [19-20 x2] Piercing or Slashing
 Hardness: 20
 Hit Points: 4
@@ -37,8 +37,8 @@ Additional Text:
 
 
 Oscar's Fine Blade (Dagger) [Mithral] (Medium) [Masterwork]
-Melee Weapon
-Light Weapon Proficiency
+Light Melee Weapon
+Simple Weapon Proficiency
 To Hit: +1
 Damage: 1d4 [19-20 x2] Piercing or Slashing
 Hardness: 10

@@ -1,6 +1,6 @@
 Dagger [Adamantine] (Medium) [Masterwork]
-Melee Weapon
-Light Weapon Proficiency
+Light Melee Weapon
+Simple Weapon Proficiency
 To Hit: +1
 Damage: 1d4 [19-20 x2] Piercing or Slashing
 Hardness: 10

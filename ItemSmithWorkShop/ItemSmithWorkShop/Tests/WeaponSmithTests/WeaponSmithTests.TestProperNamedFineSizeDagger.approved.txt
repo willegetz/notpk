@@ -1,6 +1,6 @@
 Sera's Bite (Dagger) [Adamantine] (Diminutive) [Masterwork]
-Melee Weapon
-Light Weapon Proficiency
+Light Melee Weapon
+Simple Weapon Proficiency
 To Hit: +1
 Damage: 1 [19-20 x2] Piercing or Slashing
 Hardness: 1.25

@@ -1,6 +1,6 @@
 Dagger (Small)
-Melee Weapon
-Light Weapon Proficiency
+Light Melee Weapon
+Simple Weapon Proficiency
 Damage: 1d3 [19-20 x2] Piercing or Slashing
 Hardness: 5
 Hit Points: 1
