@@ -19,5 +19,7 @@ namespace ItemSmithWorkShop
 		public double BasePrice { get; set; }
 		public double WeaponWeight { get; set; }
 		public string WeaponText { get; set; }
+
+		public string RangeIncrement { get; set; }
 	}
 }
