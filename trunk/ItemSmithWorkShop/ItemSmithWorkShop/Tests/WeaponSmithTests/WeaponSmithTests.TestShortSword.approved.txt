@@ -1,0 +1,11 @@
+Short Sword (Medium)
+Light Melee Weapon
+Martial Weapon Proficiency
+Damage: 1d6 [19-20 x2] Slashing
+Hardness: 10
+Hit Points: 2
+Weight: 2 pound(s)
+10 gold pieces
+
+Weapon Text:
+	This sword is popular as an off-hand weapon.

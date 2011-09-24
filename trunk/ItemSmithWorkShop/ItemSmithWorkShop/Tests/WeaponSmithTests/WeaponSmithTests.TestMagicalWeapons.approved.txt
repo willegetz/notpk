@@ -1,6 +1,6 @@
 +1 Dagger (Medium)
-Melee Weapon
-Light Weapon Proficiency
+Light Melee Weapon
+Simple Weapon Proficiency
 To Hit: +1
 Damage: 1d4 +1 [19-20 x2] Piercing or Slashing, Magic
 Hardness: 12
@@ -21,8 +21,8 @@ Weapon Text:
 
 
 +2 Dagger (Small)
-Melee Weapon
-Light Weapon Proficiency
+Light Melee Weapon
+Simple Weapon Proficiency
 To Hit: +2
 Damage: 1d3 +2 [19-20 x2] Piercing or Slashing, Magic
 Hardness: 9
@@ -43,8 +43,8 @@ Weapon Text:
 
 
 +3 Dagger (Large)
-Melee Weapon
-Light Weapon Proficiency
+Light Melee Weapon
+Simple Weapon Proficiency
 To Hit: +3
 Damage: 1d6 +3 [19-20 x2] Piercing or Slashing, Magic
 Hardness: 26
@@ -65,8 +65,8 @@ Weapon Text:
 
 
 +4 Dagger (Tiny)
-Melee Weapon
-Light Weapon Proficiency
+Light Melee Weapon
+Simple Weapon Proficiency
 To Hit: +4
 Damage: 1d2 +4 [19-20 x2] Piercing or Slashing, Magic
 Hardness: 10.5
@@ -87,8 +87,8 @@ Weapon Text:
 
 
 +5 Dagger (Huge)
-Melee Weapon
-Light Weapon Proficiency
+Light Melee Weapon
+Simple Weapon Proficiency
 To Hit: +5
 Damage: 1d8 +5 [19-20 x2] Piercing or Slashing, Magic
 Hardness: 50

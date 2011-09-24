@@ -1,6 +1,6 @@
 +1 Flaming Dagger (Medium)
-Melee Weapon
-Light Weapon Proficiency
+Light Melee Weapon
+Simple Weapon Proficiency
 To Hit: +1
 Damage: 1d4 +1 +1d6 [19-20 x2] Piercing or Slashing, Magic, Fire
 Hardness: 14

@@ -34,6 +34,7 @@ namespace ItemSmithWorkShop
 				return;
 			}
 			Dagger = dagger;
+
 			ConfirmValidPlusEnhancement(plusEnhancement);
 			CheckMasterworkStatus();
 			SetMagicalTraits();

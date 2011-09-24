@@ -1,6 +1,6 @@
 Brawn's Insurance (+3 Dagger) [Adamantine] (Huge)
-Melee Weapon
-Light Weapon Proficiency
+Light Melee Weapon
+Simple Weapon Proficiency
 To Hit: +3
 Damage: 1d8 +3 [19-20 x2] Piercing or Slashing, Magic
 Hardness: 46
