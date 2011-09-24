@@ -15,6 +15,7 @@ namespace ItemSmithWorkShop
 		public string WeaponCategory { get; set; }
 		public string WeaponThreatRange { get; set; }
 		public string WeaponCritical { get; set; }
+		public string RangeIncrement { get; set; }
 
 		public string WeaponName { get; set; }
 		public string WeaponType { get; set; }
@@ -58,6 +59,7 @@ namespace ItemSmithWorkShop
 			WeaponThreatRange = weaponData.WeaponThreatRange;
 			WeaponCritical = weaponData.WeaponCritical;
 			WeaponDamageType = weaponData.WeaponDamageType;
+			RangeIncrement = weaponData.RangeIncrement;
 			WeaponHardness = weaponData.WeaponHardness;
 			WeaponHitPoints = weaponData.WeaponHitPoints;
 			BasePrice = weaponData.BasePrice;
@@ -154,6 +156,10 @@ namespace ItemSmithWorkShop
 				buildWeapon.Append(string.Format("To Hit: +{0}\n", ToHitModifier));
 			}
 			buildWeapon.Append(string.Format("Damage: {0} [{1} {2}] {3}\n", WeaponDamage, WeaponThreatRange, WeaponCritical, WeaponDamageType));
+			if (!string.IsNullOrEmpty(RangeIncrement))
+			{
+				buildWeapon.Append(string.Format("Range Increment: {0}\n", RangeIncrement));
+			}
 			buildWeapon.Append(string.Format("Hardness: {0}\nHit Points: {1}\nWeight: {2} pound(s)\n", WeaponHardness, WeaponHitPoints, WeaponWeight));
 			buildWeapon.Append(string.Format("{0} gold pieces\n", (TotalWeaponCost)));
 			if (IsMagical)

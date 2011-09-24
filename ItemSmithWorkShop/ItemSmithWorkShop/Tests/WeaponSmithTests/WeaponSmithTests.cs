@@ -19,8 +19,9 @@ namespace ItemSmithWorkShop
 		{
 			genericWeapons = new Dictionary<string, WeaponData>(StringComparer.OrdinalIgnoreCase)
 			{
-				{"Dagger", new WeaponData { WeaponName = "Dagger", WeaponCategory = "Light Melee", WeaponProficiencyRequirement = "Simple Weapon", WeaponDamage = "1d4", WeaponThreatRange = "19-20", WeaponCritical = "x2", WeaponDamageType = "Piercing or Slashing", WeaponHardness = 10, WeaponHitPoints = 2, BasePrice = 2, WeaponWeight = 1, WeaponText = "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body." }},
-				{"Short Sword", new WeaponData { WeaponName = "Short Sword", WeaponCategory = "Light Melee", WeaponProficiencyRequirement = "Martial Weapon", WeaponDamage = "1d6", WeaponThreatRange = "19-20", WeaponCritical = "x2", WeaponDamageType = "Slashing", WeaponHardness = 10, WeaponHitPoints = 2, BasePrice = 10, WeaponWeight = 2, WeaponText = "This sword is popular as an off-hand weapon." }}
+				{"Dagger", new WeaponData { WeaponName = "Dagger", WeaponCategory = "Light Melee", WeaponProficiencyRequirement = "Simple Weapon", WeaponDamage = "1d4", WeaponThreatRange = "19-20", WeaponCritical = "x2", WeaponDamageType = "Piercing or Slashing", RangeIncrement = null, WeaponHardness = 10, WeaponHitPoints = 2, BasePrice = 2, WeaponWeight = 1, WeaponText = "The dagger is a common secondary weapon. You get a +2 bonus on\n\tSleight of Hand checks made to conceal a dagger on your body." }},
+				{"Short Sword", new WeaponData { WeaponName = "Short Sword", WeaponCategory = "Light Melee", WeaponProficiencyRequirement = "Martial Weapon", WeaponDamage = "1d6", WeaponThreatRange = "19-20", WeaponCritical = "x2", WeaponDamageType = "Slashing", RangeIncrement = null, WeaponHardness = 10, WeaponHitPoints = 2, BasePrice = 10, WeaponWeight = 2, WeaponText = "This sword is popular as an off-hand weapon." }},
+				{"Heavy Crossbow", new WeaponData { WeaponName = "Heavy Crossbow", WeaponCategory = "Ranged", WeaponProficiencyRequirement = "Simple Weapon", WeaponDamage = "1d10", WeaponThreatRange = "19-20", WeaponCritical = "x2", WeaponDamageType = "Piercing", RangeIncrement = "120 feet", WeaponHardness = 5, WeaponHitPoints = 5, BasePrice = 50, WeaponWeight = 8, WeaponText = "You  draw a heavy crossbow back by turning a small winch.\n\tLoading a heavy crossbow is a full-round action that provokes\n\tan attack of opportunity.\n\tNormally, operating a heavy crossbow requires two hands.\n\tHowever, you can shoot, but not load, a heavy crossbow with one\n\thand at a -4 penalty on attack rolls. You can shoot a heavy crossbow\n\twith each hand, but you take a penalty on attack rolls as if attacking\n\twith two one-handed weapons.\n\tThis penalty is cumulative with the penalty for one-handed firing." }},
 			};
 		}
 
@@ -379,6 +380,16 @@ namespace ItemSmithWorkShop
 			GenericWeapon shortSword = new GenericWeapon(daggerHelper, null);
 
 			Approvals.Approve(shortSword);
+		}
+
+		[TestMethod]
+		public void TestShortHeavyCrossbow()
+		{
+			var daggerHelper = DaggerHelper.GetWeaponData("Heavy Crossbow");
+
+			GenericWeapon heavyCrossbow = new GenericWeapon(daggerHelper, null);
+
+			Approvals.Approve(heavyCrossbow);
 		}
 	}
 }
