@@ -43,11 +43,20 @@ namespace ItemSmithWorkShop
 			DamageScale = new Dictionary<string, string[]>{
 						 {"1d2", damage1D2}, {"1d3", damage1D3}, {"1d4", damage1D4}, {"1d6", damage1D6},
 						 {"2d4", damage2D4}, {"1d8", damage1D8}, {"1d10", damage1D10}, {"1d12", damage1D12},
-						 {"2d6", damage2D6}
+						 {"2d6", damage2D6},
 			};
 
-			NewDamage = DamageScale[damage][SizeIndex.IndexOf(size)];
-			Multiplier = SizeModification[SizeIndex.IndexOf(size)];
+			if (DamageScale.ContainsKey(damage))
+			{
+				NewDamage = DamageScale[damage][SizeIndex.IndexOf(size)];
+				Multiplier = SizeModification[SizeIndex.IndexOf(size)];
+			}
+			else
+			{
+				NewDamage = damage + " (No sizing info)";
+				Multiplier = SizeModification[SizeIndex.IndexOf(size)];
+			}
+
 		}
 	}
 }
