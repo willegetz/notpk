@@ -53,7 +53,19 @@ namespace ItemSmithWorkShop
 			}
 			else
 			{
-				NewDamage = damage + " (No sizing info)";
+				int stringIndex;
+				var multiHeadSting = new StringBuilder();
+				string[] multiHeadedWeapon = damage.Split('/');
+				
+				foreach (var item in multiHeadedWeapon)
+				{
+					string index = item.ToString();
+					multiHeadSting.Append(DamageScale[index][SizeIndex.IndexOf(size)] + "/");
+				}
+				
+				stringIndex = multiHeadSting.Length - 1;
+				multiHeadSting.Remove(stringIndex, 1);
+				NewDamage = multiHeadSting.ToString();
 				Multiplier = SizeModification[SizeIndex.IndexOf(size)];
 			}
 

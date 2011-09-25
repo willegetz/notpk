@@ -1,0 +1,11 @@
+Quarterstaff (Medium)
+Two-Handed Melee Weapon
+Simple Weapon Proficiency
+Damage: 1d6/1d6 [20 x2] Bludgeoning
+Hardness: 5
+Hit Points: 10
+Weight: 4 pound(s)
+0 gold pieces
+
+Weapon Text:
+	I am a quarterstaff
