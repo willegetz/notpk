@@ -231,23 +231,23 @@ namespace ItemSmithWorkShop
 			baseWeapon = mockWeapon;
 			baseWeapon.IsMasterworkQualifier(true);
 
-			int combatEnhancement = 1;
+			//int combatEnhancement = 1;
 			// Create the magic weapon special ability
 			// special ability name
-			string weaponSpecialAbilityName = "Flaming"; // Will go in front of the WeaponName, but after the +n.
+			//string weaponSpecialAbilityName = "Flaming"; // Will go in front of the WeaponName, but after the +n.
 			// Special ability base cost modifier
-			int weaponSpecialAbilityCostModifier = 1; // Will be added to the combatEnhancement to determine base cost
+			//int weaponSpecialAbilityCostModifier = 1; // Will be added to the combatEnhancement to determine base cost
 			// Special ability combat modifier
-			string specialAbilityDamageBonus = "+ 1d6"; // Will be amended to the WeaponDamage
+			//string specialAbilityDamageBonus = "+ 1d6"; // Will be amended to the WeaponDamage
 			// Special ability damage type
-			string specialAbilityDamageType = "Fire"; // Will be amended to DamageType
+			//string specialAbilityDamageType = "Fire"; // Will be amended to DamageType
 			// Special ability caster level
-			int specialAbilityCasterLevel = 10; // Will be compared to the Enhancement Caster Level, higher will be used
-			string specialAbilityCreationFeat = "Create Magic Arms and Armor"; // New field. Don't know where
-			string specialAbilityCreationSpells = "Flame Blade, Flame Strike, or Fireball"; // New field. Don't know where
-			string specialAbilitySchool = "Moderate Evocation"; //  New field. Don't know where
+			//int specialAbilityCasterLevel = 10; // Will be compared to the Enhancement Caster Level, higher will be used
+			//string specialAbilityCreationFeat = "Create Magic Arms and Armor"; // New field. Don't know where
+			//string specialAbilityCreationSpells = "Flame Blade, Flame Strike, or Fireball"; // New field. Don't know where
+			//string specialAbilitySchool = "Moderate Evocation"; //  New field. Don't know where
 			// Special ability description
-			string specialAbilityDescription = "Upon command, a flaming weapon is sheathed in fire. The fire does not harm the wielder. The effect remains until another command is given";
+			//string specialAbilityDescription = "Upon command, a flaming weapon is sheathed in fire. The fire does not harm the wielder. The effect remains until another command is given";
 			// New field. Don't know where.
 
 			Approvals.Approve(baseWeapon);

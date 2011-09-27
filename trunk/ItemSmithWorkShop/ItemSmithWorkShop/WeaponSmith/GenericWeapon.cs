@@ -16,6 +16,7 @@ namespace ItemSmithWorkShop
 		public string WeaponThreatRange { get; set; }
 		public string WeaponCritical { get; set; }
 		public string RangeIncrement { get; set; }
+		public string AdditionalCreationCosts { get; set; }
 
 		public string WeaponName { get; set; }
 		public string WeaponType { get; set; }
@@ -168,6 +169,7 @@ namespace ItemSmithWorkShop
 				buildWeapon.Append(string.Format("\tDays to Create: {0}\n", DaysToCreate));
 				buildWeapon.Append(string.Format("\tExperience Cost: {0} experience points\n", ExperienceCost));
 				buildWeapon.Append(string.Format("\tRaw Material Cost: {0} gold pieces\n", (RawMaterialCost + ItemCost)));
+				buildWeapon.Append(AdditionalCreationCosts);
 			}
 			buildWeapon.Append(string.Format("\nWeapon Text:\n\t{0}", WeaponText));
 			if (!string.IsNullOrEmpty(AdditionalText))

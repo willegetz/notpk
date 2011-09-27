@@ -13,6 +13,8 @@ Creation Costs
 	Days to Create: 8
 	Experience Cost: 320 experience points
 	Raw Material Cost: 4302 gold pieces
+	Required Feats: Craft Magic Arms and Armor
+	Required Spells: flame blade, flame strike, or fireball
 
 Weapon Text:
 	The dagger is a common secondary weapon. You get a +2 bonus on
@@ -22,4 +24,3 @@ Weapon Text:
 	Upon command, a flaming weapon is sheathed in fire.
 	The fire does not harm the wielder. The effect
 	remains until another command is given.
-	Craft Magic Arms and Armor and flame blade, flame strike, or fireball

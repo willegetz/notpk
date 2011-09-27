@@ -163,8 +163,8 @@ namespace ItemSmithWorkShop
 			MagicAbilityCasterLevel = 10;
 			MagicAbilityDamage = " +1d6";
 			MagicAbilityDamageType = ", Fire";
-			MagicAbilityText = "\n\n\tUpon command, a flaming weapon is sheathed in fire.\n\tThe fire does not harm the wielder. The effect\n\tremains until another command is given.\n\tCraft Magic Arms and Armor and flame blade, flame strike, or fireball";
-			// Name, CasterLevel, Damage, CritBonus, DamageType, Text
+			Dagger.AdditionalCreationCosts = "\tRequired Feats: Craft Magic Arms and Armor\n\tRequired Spells: flame blade, flame strike, or fireball\n";
+			MagicAbilityText = "\n\n\tUpon command, a flaming weapon is sheathed in fire.\n\tThe fire does not harm the wielder. The effect\n\tremains until another command is given.";
 			SetMagicAbility();
 		}
 
