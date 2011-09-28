@@ -11,7 +11,7 @@ namespace ItemSmithWorkShop
 
 		public double masterworkCostModifier = 300;
 
-		public string WeaponProficiencyRequirement { get; set; }
+		public virtual string WeaponProficiencyRequirement { get; set; }
 		public string WeaponCategory { get; set; }
 		public string WeaponThreatRange { get; set; }
 		public string WeaponCritical { get; set; }
