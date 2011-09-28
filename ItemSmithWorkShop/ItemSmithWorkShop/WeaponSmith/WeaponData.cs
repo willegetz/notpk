@@ -8,6 +8,7 @@ namespace ItemSmithWorkShop
 	public class WeaponData
 	{
 		public string WeaponName { get; set; }
+		public string WeaponPart { get; set; }
 		public string WeaponCategory { get; set; }
 		public string WeaponProficiencyRequirement { get; set; }
 		public string WeaponDamage { get; set; }

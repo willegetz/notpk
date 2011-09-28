@@ -17,6 +17,7 @@ namespace ItemSmithWorkShop
 		public string WeaponCritical { get; set; }
 		public string RangeIncrement { get; set; }
 		public string AdditionalCreationCosts { get; set; }
+		public string WeaponPart { get; set; }
 
 		public string WeaponName { get; set; }
 		public string WeaponType { get; set; }
@@ -47,13 +48,16 @@ namespace ItemSmithWorkShop
 		public double RawMaterialCost { get; set; }
 
 		public bool IsMagical { get; set; }
-		public bool IsMasterwork { get; private set; }
+		public bool IsMasterwork { get; protected set; }
 		public bool IsColdIron { get; set; }
+
+		public GenericWeapon(){}
 
 		public GenericWeapon(WeaponData weaponData, string size)
 		{
 			WeaponType = weaponData.WeaponName;
 			WeaponName = weaponData.WeaponName;
+			WeaponPart = weaponData.WeaponPart;
 			WeaponCategory = weaponData.WeaponCategory;
 			WeaponProficiencyRequirement = weaponData.WeaponProficiencyRequirement;
 			WeaponDamage = weaponData.WeaponDamage;
@@ -122,7 +126,7 @@ namespace ItemSmithWorkShop
 			}
 		}
 
-		public void IsMasterworkQualifier(bool value)
+		public virtual void IsMasterworkQualifier(bool value)
 		{
 			if (value)
 			{
@@ -131,22 +135,22 @@ namespace ItemSmithWorkShop
 			}
 		}
 
-		private void MasterworkProperties()
+		protected virtual void MasterworkProperties()
 		{
 			MasterWorkLabel = " [Masterwork]";
 			ToHitModifier = 1;
-			WeaponText = WeaponText + "\n\tThis dagger is masterwork quality!";
+			WeaponText = WeaponText + string.Format("\n\tThis {0} is masterwork quality!", WeaponType.ToLower());
 			MasterworkCost = masterworkCostModifier;
 			CalculateWeaponCost();
 		}
 
-		public void CalculateWeaponCost()
+		public virtual void CalculateWeaponCost()
 		{
 			ItemCost = BasePrice + MasterworkCost + SpecialMaterialCost;
 			TotalWeaponCost = ItemCost + EnchantmentCost;
 		}
 
-		private string WeaponToDisplay()
+		protected string WeaponToDisplay()
 		{
 			var buildWeapon = new StringBuilder();
 
