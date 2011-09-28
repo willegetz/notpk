@@ -1,0 +1,21 @@
+Dwarven Urgrosh (Medium)
+Two-Handed Melee Weapon
+Exotic Weapon Proficiency
+Weight: 12 pound(s)
+Total Weapon Cost: 50 gold pieces
+
+Dwarven Urgrosh Axe Head [Steel]
+Damage: 1d8 [20 x2] Slashing
+Hardness: 5
+Hit Points: 10
+Weapon Text:
+	A dwarven urgrosh is a double weapon.	This is the axe head.
+	This is now a steel dwarven urgrosh!
+
+Dwarven Urgrosh Spear Head [Steel]
+Damage: 1d6 [20 x2] Piercing
+Hardness: 5
+Hit Points: 10
+Weapon Text:
+	A dwarven urgrosh is a double weapon.	This is the spear head.
+	This is now a steel dwarven urgrosh!

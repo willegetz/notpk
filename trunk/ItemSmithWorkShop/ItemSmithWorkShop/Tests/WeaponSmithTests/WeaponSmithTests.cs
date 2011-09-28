@@ -427,17 +427,99 @@ namespace ItemSmithWorkShop
 		}
 
 		[TestMethod]
-		public void TestMasterworkDwarvenUrgrosh()
+		public void TestMagicalDwarvenUrgrosh()
 		{
 			var urgroshDataA = DaggerHelper.GetWeaponData("Dwarven Urgrosh A");
 			var urgroshDataB = DaggerHelper.GetWeaponData("Dwarven Urgrosh B");
 
 			var doubleWeapon = new GenericDoubleWeapon(urgroshDataA, urgroshDataB, null);
-			doubleWeapon.FirstWeaponPart.IsMasterworkQualifier(true);
-			doubleWeapon.SecondWeaponPart.IsMasterworkQualifier(true);
 
 			new MagicWeapon(doubleWeapon.FirstWeaponPart, 1);
 			new MagicWeapon(doubleWeapon.SecondWeaponPart, 1);
+
+			Approvals.Approve(doubleWeapon);
+		}
+
+		[TestMethod]
+		public void TestUrgroshDroppedIntoAdamantine()
+		{
+			var urgroshDataA = DaggerHelper.GetWeaponData("Dwarven Urgrosh A");
+			var urgroshDataB = DaggerHelper.GetWeaponData("Dwarven Urgrosh B");
+
+			var doubleWeapon = new GenericDoubleWeapon(urgroshDataA, urgroshDataB, null);
+
+			new WeaponAdamantine(doubleWeapon.FirstWeaponPart);
+			new WeaponAdamantine(doubleWeapon.SecondWeaponPart);
+
+			Approvals.Approve(doubleWeapon);
+		}
+
+		[TestMethod]
+		public void TestUrgroshDroppedIntoAlchemicalSilver()
+		{
+			var urgroshDataA = DaggerHelper.GetWeaponData("Dwarven Urgrosh A");
+			var urgroshDataB = DaggerHelper.GetWeaponData("Dwarven Urgrosh B");
+
+			var doubleWeapon = new GenericDoubleWeapon(urgroshDataA, urgroshDataB, null);
+
+			new WeaponAlchemicalSilver(doubleWeapon.FirstWeaponPart);
+			new WeaponAlchemicalSilver(doubleWeapon.SecondWeaponPart);
+
+			Approvals.Approve(doubleWeapon);
+		}
+
+		[TestMethod]
+		public void TestUrgroshDroppedIntoColdIron()
+		{
+			var urgroshDataA = DaggerHelper.GetWeaponData("Dwarven Urgrosh A");
+			var urgroshDataB = DaggerHelper.GetWeaponData("Dwarven Urgrosh B");
+
+			var doubleWeapon = new GenericDoubleWeapon(urgroshDataA, urgroshDataB, null);
+
+			new WeaponColdIron(doubleWeapon.FirstWeaponPart);
+			new WeaponColdIron(doubleWeapon.SecondWeaponPart);
+
+			Approvals.Approve(doubleWeapon);
+		}
+
+		[TestMethod]
+		public void TestUrgroshDroppedIntoDarkwood()
+		{
+			var urgroshDataA = DaggerHelper.GetWeaponData("Dwarven Urgrosh A");
+			var urgroshDataB = DaggerHelper.GetWeaponData("Dwarven Urgrosh B");
+
+			var doubleWeapon = new GenericDoubleWeapon(urgroshDataA, urgroshDataB, null);
+
+			new WeaponDarkwood(doubleWeapon.FirstWeaponPart);
+			new WeaponDarkwood(doubleWeapon.SecondWeaponPart);
+
+			Approvals.Approve(doubleWeapon);
+		}
+
+		[TestMethod]
+		public void TestUrgroshDroppedIntoMithral()
+		{
+			var urgroshDataA = DaggerHelper.GetWeaponData("Dwarven Urgrosh A");
+			var urgroshDataB = DaggerHelper.GetWeaponData("Dwarven Urgrosh B");
+
+			var doubleWeapon = new GenericDoubleWeapon(urgroshDataA, urgroshDataB, null);
+
+			new WeaponMithral(doubleWeapon.FirstWeaponPart);
+			new WeaponMithral(doubleWeapon.SecondWeaponPart);
+
+			Approvals.Approve(doubleWeapon);
+		}
+
+		[TestMethod]
+		public void TestUrgroshDroppedIntoSteel()
+		{
+			var urgroshDataA = DaggerHelper.GetWeaponData("Dwarven Urgrosh A");
+			var urgroshDataB = DaggerHelper.GetWeaponData("Dwarven Urgrosh B");
+
+			var doubleWeapon = new GenericDoubleWeapon(urgroshDataA, urgroshDataB, null);
+
+			new WeaponSteel(doubleWeapon.FirstWeaponPart);
+			new WeaponSteel(doubleWeapon.SecondWeaponPart);
 
 			Approvals.Approve(doubleWeapon);
 		}
