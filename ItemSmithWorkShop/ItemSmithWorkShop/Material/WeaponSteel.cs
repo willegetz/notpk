@@ -25,7 +25,7 @@ namespace ItemSmithWorkShop
 		public Object SetSteelTraits()
 		{
 			SimpleDagger.MaterialName = " [Steel]";
-			SimpleDagger.WeaponText = SimpleDagger.WeaponText + "\n\tThis is now a Steel Dagger!";
+			SimpleDagger.WeaponText = SimpleDagger.WeaponText + string.Format("\n\tThis is now a steel {0}!", SimpleDagger.WeaponType.ToLower());
 			return SimpleDagger;
 		}
 
