@@ -8,6 +8,7 @@ namespace ItemSmithWorkShop
 	public class GenericWeapon
 	{
 		WeaponSizing sizing;
+		WeaponData weaponData;
 
 		public double masterworkCostModifier = 300;
 
@@ -53,8 +54,9 @@ namespace ItemSmithWorkShop
 
 		public GenericWeapon(){}
 
-		public GenericWeapon(WeaponData weaponData, string size)
+		public GenericWeapon(WeaponData data, string size)
 		{
+			CheckForNullData(data);
 			WeaponType = weaponData.WeaponName;
 			WeaponName = weaponData.WeaponName;
 			WeaponPart = weaponData.WeaponPart;
@@ -71,13 +73,25 @@ namespace ItemSmithWorkShop
 			WeaponWeight = weaponData.WeaponWeight;
 			WeaponText = weaponData.WeaponText;
 
-			CheckForNull(size);
+			CheckForNullSize(size);
 			sizing = new WeaponSizing(WeaponDamage, WeaponSize);
 			ApplySizingModifier();
 			CalculateWeaponCost();
 		}
 
-		private void CheckForNull(string weaponSize)
+		private void CheckForNullData(WeaponData data)
+		{
+			if (data == null)
+			{
+				weaponData = DaggerHelper.GetWeaponData("");
+			}
+			else
+			{
+				weaponData = data;
+			}
+		}
+
+		private void CheckForNullSize(string weaponSize)
 		{
 			if (string.IsNullOrEmpty(weaponSize))
 			{
@@ -103,11 +117,11 @@ namespace ItemSmithWorkShop
 			WeaponHardness *= sizing.Multiplier;
 			WeaponHitPoints *= sizing.Multiplier;
 
-			if (WeaponHardness < 1)
+			if (WeaponHardness < 1 && WeaponHardness != 0)
 			{
 				WeaponHardness = 1;
 			}
-			if (WeaponHitPoints < 1)
+			if (WeaponHitPoints < 1 && WeaponHitPoints != 0)
 			{
 				WeaponHitPoints = 1;
 			}
