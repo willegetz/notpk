@@ -51,6 +51,11 @@ namespace ItemSmithWorkShop
 				NewDamage = DamageScale[damage][SizeIndex.IndexOf(size)];
 				Multiplier = SizeModification[SizeIndex.IndexOf(size)];
 			}
+			else if (string.IsNullOrEmpty(damage))
+			{
+				NewDamage = "";
+				Multiplier = 0;
+			}
 			else
 			{
 				int stringIndex;

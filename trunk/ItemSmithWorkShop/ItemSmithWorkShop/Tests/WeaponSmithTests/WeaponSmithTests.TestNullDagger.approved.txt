@@ -1,0 +1,11 @@
+ (Medium)
+ Weapon
+ Proficiency
+Damage:  [ ] 
+Hardness: 0
+Hit Points: 0
+Weight: 0 pound(s)
+0 gold pieces
+
+Weapon Text:
+	

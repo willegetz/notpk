@@ -25,6 +25,7 @@ namespace ItemSmithWorkShop
 				{"Quarterstaff", new WeaponData{ WeaponName = "Quarterstaff", WeaponCategory = "Two-Handed Melee", WeaponProficiencyRequirement = "Simple Weapon", WeaponDamage = "1d6/1d6", WeaponThreatRange = "20", WeaponCritical = "x2", WeaponDamageType = "Bludgeoning", WeaponHardness = 5, WeaponHitPoints = 10, BasePrice = 0, WeaponWeight = 4, WeaponText = "I am a quarterstaff"}},
 				{"Dwarven Urgrosh A", new WeaponData{ WeaponName = "Dwarven Urgrosh", WeaponPart = "Axe Head", WeaponCategory = "Two-Handed Melee", WeaponProficiencyRequirement = "Exotic Weapon", WeaponDamage = "1d8", WeaponThreatRange = "20", WeaponCritical = "x2", WeaponDamageType = "Slashing", WeaponHardness = 5, WeaponHitPoints = 10, BasePrice = 50, WeaponWeight = 12, WeaponText = "A dwarven urgrosh is a double weapon.\r\tThis is the axe head."} },
 				{"Dwarven Urgrosh B", new WeaponData{ WeaponName = "Dwarven Urgrosh", WeaponPart = "Spear Head", WeaponDamage = "1d6", WeaponThreatRange = "20", WeaponCritical = "x2", WeaponDamageType = "Piercing", WeaponHardness = 5, WeaponHitPoints = 10, WeaponWeight = 12, BasePrice = 50, WeaponText = "A dwarven urgrosh is a double weapon.\r\tThis is the spear head."} },
+				{ "", new WeaponData { WeaponName = "", WeaponCategory = "", WeaponProficiencyRequirement = "", WeaponDamage = "", WeaponThreatRange = "", WeaponCritical = "", WeaponDamageType = "", WeaponHardness = 0, WeaponHitPoints = 0, BasePrice = 0, WeaponWeight = 0, WeaponText = "" }},
 			};
 
 			// A double weapon has two different heads
@@ -48,6 +49,14 @@ namespace ItemSmithWorkShop
 	[UseReporter(typeof(DiffReporter))]
 	public class WeaponSmithTests
 	{
+		[TestMethod]
+		public void TestNullDagger()
+		{
+			GenericWeapon nullWeapon = new GenericWeapon(null, null);
+
+			Approvals.Approve(nullWeapon);
+		}
+
 		[TestMethod]
 		public void TestSimpleDaggerObject()
 		{
