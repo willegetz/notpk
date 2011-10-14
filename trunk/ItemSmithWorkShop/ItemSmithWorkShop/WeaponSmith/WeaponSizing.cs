@@ -55,25 +55,11 @@ namespace ItemSmithWorkShop
 			}
 			else if (string.IsNullOrEmpty(damage))
 			{
-				NewDamage = "";
-				Multiplier = 0;
+				GetNullSizingData();
 			}
 			else
 			{
-				int stringIndex;
-				var multiHeadSting = new StringBuilder();
-				string[] multiHeadedWeapon = damage.Split('/');
-				
-				foreach (var item in multiHeadedWeapon)
-				{
-					string index = item.ToString();
-					multiHeadSting.Append(DamageScale[index][SizeIndex.IndexOf(size)] + "/");
-				}
-				
-				stringIndex = multiHeadSting.Length - 1;
-				multiHeadSting.Remove(stringIndex, 1);
-				NewDamage = multiHeadSting.ToString();
-				Multiplier = SizeModification[SizeIndex.IndexOf(size)];
+				GetOutOfRangeSizingData(damage, size);
 			}
 
 		}
@@ -81,6 +67,30 @@ namespace ItemSmithWorkShop
 		public void GetNewSizingData(string damage, string size)
 		{
 			NewDamage = DamageScale[damage][SizeIndex.IndexOf(size)];
+			Multiplier = SizeModification[SizeIndex.IndexOf(size)];
+		}
+
+		public void GetNullSizingData()
+		{
+			NewDamage = "";
+			Multiplier = 0;
+		}
+
+		public void GetOutOfRangeSizingData(string damage, string size)
+		{
+			int stringIndex;
+			var multiHeadSting = new StringBuilder();
+			string[] multiHeadedWeapon = damage.Split('/');
+
+			foreach (var item in multiHeadedWeapon)
+			{
+				string index = item.ToString();
+				multiHeadSting.Append(DamageScale[index][SizeIndex.IndexOf(size)] + "/");
+			}
+
+			stringIndex = multiHeadSting.Length - 1;
+			multiHeadSting.Remove(stringIndex, 1);
+			NewDamage = multiHeadSting.ToString();
 			Multiplier = SizeModification[SizeIndex.IndexOf(size)];
 		}
 	}
