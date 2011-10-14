@@ -130,7 +130,8 @@ namespace ItemSmithWorkShop
 			{
 				foreach (var size in sizeDesired)
 				{
-					var sizing = new WeaponSizing(damage, size);
+					var sizing = new WeaponSizing();
+					sizing.SetSizingValues(damage, size);
 					sb.Append(string.Format("Size: {9}\n\tStarting Damage: {0}\tNew Damage: {1}\n\tModifier: {2}\n\tStarting Hardness: {3}\tNew Hardness: {4}\n\tStarting Hit Points: {5}\tNew Hit Points: {6}\n\tStarting Weight: {7}\tNew HitPoints: {8}\n", damage, sizing.NewDamage, sizing.Multiplier, hardness, (hardness * sizing.Multiplier), hitPoints, (hitPoints * sizing.Multiplier), weight, (weight * sizing.Multiplier), size));
 				}
 			}

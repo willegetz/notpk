@@ -7,7 +7,7 @@ namespace ItemSmithWorkShop
 {
 	public class WeaponAlchemicalSilver
 	{
-		private GenericWeapon Dagger { get; set; }
+		GenericWeapon Dagger;
 
 		private double alchemySilverCost = 20;
 

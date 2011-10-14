@@ -24,7 +24,7 @@ namespace ItemSmithWorkShop
 		public string NewDamage { get; set; }
 		public double Multiplier { get; set; }
 
-		public WeaponSizing(string damage, string size)
+		public WeaponSizing()
 		{
 			SizeIndex = new List<string> { fine, diminutive, tiny, small, medium, large, huge, gargantuan, colossal };
 
@@ -45,11 +45,13 @@ namespace ItemSmithWorkShop
 						 {"2d4", damage2D4}, {"1d8", damage1D8}, {"1d10", damage1D10}, {"1d12", damage1D12},
 						 {"2d6", damage2D6},
 			};
+		}
 
+		public void SetSizingValues(string damage, string size)
+		{
 			if (DamageScale.ContainsKey(damage))
 			{
-				NewDamage = DamageScale[damage][SizeIndex.IndexOf(size)];
-				Multiplier = SizeModification[SizeIndex.IndexOf(size)];
+				GetNewSizingData(damage, size);
 			}
 			else if (string.IsNullOrEmpty(damage))
 			{
@@ -74,6 +76,12 @@ namespace ItemSmithWorkShop
 				Multiplier = SizeModification[SizeIndex.IndexOf(size)];
 			}
 
+		}
+
+		public void GetNewSizingData(string damage, string size)
+		{
+			NewDamage = DamageScale[damage][SizeIndex.IndexOf(size)];
+			Multiplier = SizeModification[SizeIndex.IndexOf(size)];
 		}
 	}
 }
