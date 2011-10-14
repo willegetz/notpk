@@ -57,26 +57,10 @@ namespace ItemSmithWorkShop
 		public GenericWeapon(WeaponData data, string size)
 		{
 			CheckForNullData(data);
-			WeaponType = weaponData.WeaponName;
-			WeaponName = weaponData.WeaponName;
-			WeaponPart = weaponData.WeaponPart;
-			WeaponCategory = weaponData.WeaponCategory;
-			WeaponProficiencyRequirement = weaponData.WeaponProficiencyRequirement;
-			WeaponDamage = weaponData.WeaponDamage;
-			WeaponThreatRange = weaponData.WeaponThreatRange;
-			WeaponCritical = weaponData.WeaponCritical;
-			WeaponDamageType = weaponData.WeaponDamageType;
-			RangeIncrement = weaponData.RangeIncrement;
-			WeaponHardness = weaponData.WeaponHardness;
-			WeaponHitPoints = weaponData.WeaponHitPoints;
-			BasePrice = weaponData.BasePrice;
-			WeaponWeight = weaponData.WeaponWeight;
-			WeaponText = weaponData.WeaponText;
-
 			CheckForNullSize(size);
-			sizing = new WeaponSizing(WeaponDamage, WeaponSize);
-			ApplySizingModifier();
-			CalculateWeaponCost();
+			sizing = new WeaponSizing();
+
+			SetWeaponInitialValues();
 		}
 
 		private void CheckForNullData(WeaponData data)
@@ -101,6 +85,29 @@ namespace ItemSmithWorkShop
 			{
 				WeaponSize = weaponSize;
 			}
+		}
+
+		private void SetWeaponInitialValues()
+		{
+			WeaponType = weaponData.WeaponName;
+			WeaponName = weaponData.WeaponName;
+			WeaponPart = weaponData.WeaponPart;
+			WeaponCategory = weaponData.WeaponCategory;
+			WeaponProficiencyRequirement = weaponData.WeaponProficiencyRequirement;
+			WeaponDamage = weaponData.WeaponDamage;
+			WeaponThreatRange = weaponData.WeaponThreatRange;
+			WeaponCritical = weaponData.WeaponCritical;
+			WeaponDamageType = weaponData.WeaponDamageType;
+			RangeIncrement = weaponData.RangeIncrement;
+			WeaponHardness = weaponData.WeaponHardness;
+			WeaponHitPoints = weaponData.WeaponHitPoints;
+			BasePrice = weaponData.BasePrice;
+			WeaponWeight = weaponData.WeaponWeight;
+			WeaponText = weaponData.WeaponText;
+
+			sizing.SetSizingValues(WeaponDamage, WeaponSize);
+			ApplySizingModifier();
+			CalculateWeaponCost();
 		}
 
 		private void ApplySizingModifier()

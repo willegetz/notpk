@@ -7,7 +7,8 @@ namespace ItemSmithWorkShop
 {
 	public class MagicWeapon
 	{
-		private GenericWeapon Dagger { get; set; }
+		GenericWeapon Dagger;
+
 		private string MagicDamageType { get { return "Magic"; } }
 		
 		private string MagicAbilityName { get; set; }

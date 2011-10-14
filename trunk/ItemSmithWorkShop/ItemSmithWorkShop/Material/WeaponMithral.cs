@@ -7,7 +7,7 @@ namespace ItemSmithWorkShop
 {
 	public class WeaponMithral
 	{
-		private GenericWeapon Dagger { get; set; }
+		GenericWeapon Dagger;
 
 		private double mithralCost = 500;
 

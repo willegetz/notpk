@@ -7,7 +7,7 @@ namespace ItemSmithWorkShop
 {
 	public class WeaponSteel
 	{
-		private GenericWeapon SimpleDagger { get; set; }
+		GenericWeapon SimpleDagger;
 
 		public WeaponSteel(GenericWeapon simpleDagger)
 		{
