@@ -8,6 +8,7 @@ using System.Collections.Specialized;
 using System.Collections;
 using ApprovalTests.Reporters;
 using ApprovalTests;
+using ItemSmithWorkShop.WeaponSmith;
 
 namespace ItemSmithWorkShop
 {
@@ -531,6 +532,17 @@ namespace ItemSmithWorkShop
 			new WeaponSteel(doubleWeapon.SecondWeaponPart);
 
 			Approvals.Approve(doubleWeapon);
+		}
+
+		[TestMethod]
+		public void TestMasterworkClass()
+		{
+			var dagger = DaggerHelper.GetWeaponData("Dagger");
+			var testDagger = new GenericWeapon(dagger, null);
+
+			MasterworkWeapon.MakeMasterwork(testDagger);
+
+			Approvals.Approve(testDagger);
 		}
 	}
 }

@@ -66,6 +66,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\SpikeTests\WeaponSmithSpikes.cs" />
     <Compile Include="WeaponSmith\GenericDoubleWeapon.cs" />
+    <Compile Include="WeaponSmith\MasterworkWeapon.cs" />
     <Compile Include="WeaponSmith\WeaponData.cs" />
     <Compile Include="Tests\WeaponSmithTests\WeaponSmithTests.cs" />
     <Compile Include="WeaponSmith\MagicWeapon.cs" />
