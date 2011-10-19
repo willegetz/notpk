@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ItemSmithWorkShop.WeaponSmith;
 
 namespace ItemSmithWorkShop
 {
@@ -70,7 +71,7 @@ namespace ItemSmithWorkShop
 			}
 			else
 			{
-				Dagger.IsMasterworkQualifier(true);
+				MasterworkWeapon.MakeMasterwork(Dagger);
 				Dagger.MasterWorkLabel = string.Empty;
 			}
 		}

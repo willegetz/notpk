@@ -98,7 +98,7 @@ namespace ItemSmithWorkShop
 			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon simpleDagger = new GenericWeapon(daggerhelper, null);
-			simpleDagger.IsMasterworkQualifier(true);
+			MasterworkWeapon.MakeMasterwork(simpleDagger);
 
 			Approvals.Approve(simpleDagger);
 		}
@@ -142,7 +142,7 @@ namespace ItemSmithWorkShop
 			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
-			dagger.IsMasterworkQualifier(true);
+			MasterworkWeapon.MakeMasterwork(dagger);
 			new WeaponColdIron(dagger);
 
 			Approvals.Approve(dagger);
@@ -165,7 +165,7 @@ namespace ItemSmithWorkShop
 			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
-			dagger.IsMasterworkQualifier(true);
+			MasterworkWeapon.MakeMasterwork(dagger);
 			new WeaponMithral(dagger);
 
 			Approvals.Approve(dagger);
@@ -188,7 +188,7 @@ namespace ItemSmithWorkShop
 			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
-			dagger.IsMasterworkQualifier(true);
+			MasterworkWeapon.MakeMasterwork(dagger);
 			new WeaponAlchemicalSilver(dagger);
 
 			Approvals.Approve(dagger);

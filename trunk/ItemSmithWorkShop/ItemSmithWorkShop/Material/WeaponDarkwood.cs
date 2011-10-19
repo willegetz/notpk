@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ItemSmithWorkShop.WeaponSmith;
 
 namespace ItemSmithWorkShop
 {
@@ -24,7 +25,7 @@ namespace ItemSmithWorkShop
 
 		private Object SetDarkwoodTraits()
 		{
-			Dagger.IsMasterworkQualifier(true);
+			MasterworkWeapon.MakeMasterwork(Dagger);
 			Dagger.MaterialName = " [Darkwood]";
 			Dagger.SpecialMaterialCost = (Dagger.WeaponWeight * 10);
 			Dagger.WeaponWeight = (.5 * Dagger.WeaponWeight);

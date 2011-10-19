@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ItemSmithWorkShop.WeaponSmith;
 
 namespace ItemSmithWorkShop
 {
@@ -33,7 +34,7 @@ namespace ItemSmithWorkShop
 			}
 			else
 			{
-				Dagger.IsMasterworkQualifier(true);
+				MasterworkWeapon.MakeMasterwork(Dagger);
 			}
 		}
 
@@ -42,7 +43,7 @@ namespace ItemSmithWorkShop
 			CheckMasterworkStatus();
 			Dagger.MaterialName = " [Adamantine]";
 			Dagger.WeaponHitPoints = Math.Round(Dagger.WeaponHitPoints * adamantineHitPointModifier);
-			Dagger.SpecialMaterialCost = (adamantineCost - Dagger.MasterworkCost);
+			Dagger.SpecialMaterialCost = (adamantineCost - CalculateWeaponCosts.GetMasterworkCost());
 			Dagger.WeaponText = Dagger.WeaponText + "\n\tDagger bypasses damage reduction value of 20.";
 			Dagger.CalculateWeaponCost();
 

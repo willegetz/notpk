@@ -53,6 +53,8 @@ namespace ItemSmithWorkShop
 		public bool IsMasterwork { get; set; }
 		public bool IsColdIron { get; set; }
 
+		public double externalMasterworkCost;
+
 		public GenericWeapon(){}
 
 		public GenericWeapon(WeaponData data, string size)
@@ -148,28 +150,38 @@ namespace ItemSmithWorkShop
 			}
 		}
 
-		public virtual void IsMasterworkQualifier(bool value)
-		{
-			if (value)
-			{
-				IsMasterwork = true;
-				MasterworkProperties();
-			}
-		}
+		//public virtual void IsMasterworkQualifier(bool value)
+		//{
+		//    if (value)
+		//    {
+		//        IsMasterwork = true;
+		//        MasterworkProperties();
+		//    }
+		//}
 
-		protected virtual void MasterworkProperties()
-		{
-			MasterWorkLabel = " [Masterwork]";
-			ToHitModifier = 1;
-			WeaponText = WeaponText + string.Format("\n\tThis {0} is masterwork quality!", WeaponType.ToLower());
-			MasterworkCost = masterworkCostModifier;
-			CalculateWeaponCost();
-		}
+		//protected virtual void MasterworkProperties()
+		//{
+		//    MasterWorkLabel = " [Masterwork]";
+		//    ToHitModifier = 1;
+		//    WeaponText = WeaponText + string.Format("\n\tThis {0} is masterwork quality!", WeaponType.ToLower());
+		//    MasterworkCost = masterworkCostModifier;
+		//    CalculateWeaponCost();
+		//}
 
 		public virtual void CalculateWeaponCost()
 		{
-			ItemCost = BasePrice + MasterworkCost + SpecialMaterialCost;
+			if (IsMasterwork && CalculateWeaponCosts.GetMasterworkCost() == 0)
+			{
+				externalMasterworkCost = 0;
+			}
+			else if (IsMasterwork && CalculateWeaponCosts.GetMasterworkCost() != 0)
+			{
+				externalMasterworkCost = CalculateWeaponCosts.GetMasterworkCost();
+			}
+			ItemCost = BasePrice + MasterworkCost + externalMasterworkCost + SpecialMaterialCost;
 			TotalWeaponCost = ItemCost + EnchantmentCost;
+			//ItemCost = BasePrice + MasterworkCost + SpecialMaterialCost;
+			//TotalWeaponCost = ItemCost + EnchantmentCost;
 		}
 
 		protected string WeaponToDisplay()
