@@ -557,5 +557,18 @@ namespace ItemSmithWorkShop
 
 			Approvals.Approve(doubleWeapon);
 		}
+
+		[TestMethod]
+		public void TestMasterworkClassOnOneHead()
+		{
+			var urgroshDataA = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh A");
+			var urgroshDataB = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh B");
+
+			var doubleWeapon = new GenericDoubleWeapon(urgroshDataA, urgroshDataB, null);
+
+			MasterworkWeapon.MakeMasterwork(doubleWeapon.SecondWeaponPart);
+
+			Approvals.Approve(doubleWeapon);
+		}
 	}
 }
