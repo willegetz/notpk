@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ItemSmithWorkShop.WeaponSmith;
 
 namespace ItemSmithWorkShop
 {
@@ -67,7 +68,7 @@ namespace ItemSmithWorkShop
 		{
 			if (data == null)
 			{
-				weaponData = DaggerHelper.GetWeaponData("");
+				weaponData = TempWeaponDictionary.GetWeaponData("");
 			}
 			else
 			{

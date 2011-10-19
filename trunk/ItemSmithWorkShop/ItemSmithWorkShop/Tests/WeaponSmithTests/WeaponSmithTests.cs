@@ -12,11 +12,11 @@ using ItemSmithWorkShop.WeaponSmith;
 
 namespace ItemSmithWorkShop
 {
-	public static class DaggerHelper
+	public static class TempWeaponDictionary
 	{
 		private static Dictionary<string, WeaponData> genericWeapons;
 
-		static DaggerHelper()
+		static TempWeaponDictionary()
 		{
 			genericWeapons = new Dictionary<string, WeaponData>(StringComparer.OrdinalIgnoreCase)
 			{
@@ -61,7 +61,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestSimpleDaggerObject()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon simpleDagger = new GenericWeapon(daggerhelper, null);
 
@@ -71,7 +71,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoSteel()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon simpleDagger = new GenericWeapon(daggerhelper, null);
 			new WeaponSteel(simpleDagger);
@@ -82,7 +82,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoSteelProperlyNamed()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon simpleDagger = new GenericWeapon(daggerhelper, null);
 			simpleDagger.WeaponName = "Slashy Blade of Happiness";
@@ -95,7 +95,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMasterworkDagger()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon simpleDagger = new GenericWeapon(daggerhelper, null);
 			simpleDagger.IsMasterworkQualifier(true);
@@ -106,7 +106,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoAdamantine()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
 			new WeaponAdamantine(dagger);
@@ -117,7 +117,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoDarkwood()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
 			new WeaponDarkwood(dagger);
@@ -128,7 +128,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoColdIron()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
 			new WeaponColdIron(dagger);
@@ -139,7 +139,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMasterworkDaggerDroppedIntoColdIron()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
 			dagger.IsMasterworkQualifier(true);
@@ -151,7 +151,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoMithral()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
 			new WeaponMithral(dagger);
@@ -162,7 +162,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMasterworkDaggerDroppedIntoMithral()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
 			dagger.IsMasterworkQualifier(true);
@@ -174,7 +174,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestDaggerDroppedIntoAlchemicalSilver()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
 			new WeaponAlchemicalSilver(dagger);
@@ -185,7 +185,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMasterworkDaggerDroppedIntoAlchemicalSilver()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
 			dagger.IsMasterworkQualifier(true);
@@ -197,7 +197,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestSmallSizeDagger()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon mediumDagger = new GenericWeapon(daggerhelper, "Small");
 
@@ -207,7 +207,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestFineSizeDagger()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon fineDagger = new GenericWeapon(daggerhelper, "Fine");
 
@@ -217,7 +217,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestColossalSizeDagger()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon colossalDagger = new GenericWeapon(daggerhelper, "Colossal");
 
@@ -227,7 +227,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestLargeDagger()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon largeDagger = new GenericWeapon(daggerhelper, "Large");
 
@@ -237,7 +237,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestProperNamedFineSizeDagger()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon faeDagger = new GenericWeapon(daggerhelper, "Diminutive");
 			new WeaponAdamantine(faeDagger);
@@ -250,7 +250,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMultipleDaggers()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon dagger;
 			List<GenericWeapon> inventory = new List<GenericWeapon>();
@@ -275,7 +275,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMultipleDifferentDaggers()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			List<GenericWeapon> inventory = new List<GenericWeapon>();
 			var displayInventory = new StringBuilder();
@@ -311,7 +311,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMagicalWeapon()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon dagger = new GenericWeapon(daggerhelper, "Medium");
 			MagicWeapon magicDagger = new MagicWeapon(dagger, 1);
@@ -323,7 +323,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMagicalWeapons()
 		{
-			var daggerHelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerHelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon dagger = new GenericWeapon(daggerHelper, "Medium");
 			MagicWeapon magicDagger = new MagicWeapon(dagger, 1);
@@ -360,7 +360,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestColdIronMagicWeapon()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon dagger = new GenericWeapon(daggerhelper, null);
 			new WeaponColdIron(dagger);
@@ -372,7 +372,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestNamedMagicWeapon()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon dagger = new GenericWeapon(daggerhelper, "Huge");
 			dagger.AdditionalText = "Brawn carried this boot knife whenever he went into the wilderness to work. While not fashioned for combat,\n\t\tBrawn has successfully defended himself many times with this blade.";
@@ -386,7 +386,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestAddFlamingEnhancement()
 		{
-			var daggerhelper = DaggerHelper.GetWeaponData("Dagger");
+			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon flameDagger = new GenericWeapon(daggerhelper, "Medium");
 			MagicWeapon magicWeapon = new MagicWeapon(flameDagger, 1);
@@ -398,7 +398,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestShortSword()
 		{
-			var daggerHelper = DaggerHelper.GetWeaponData("Short Sword");
+			var daggerHelper = TempWeaponDictionary.GetWeaponData("Short Sword");
 
 			GenericWeapon shortSword = new GenericWeapon(daggerHelper, null);
 
@@ -408,7 +408,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestHeavyCrossbow()
 		{
-			var daggerHelper = DaggerHelper.GetWeaponData("Heavy Crossbow");
+			var daggerHelper = TempWeaponDictionary.GetWeaponData("Heavy Crossbow");
 
 			GenericWeapon heavyCrossbow = new GenericWeapon(daggerHelper, null);
 
@@ -418,7 +418,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestQuarterstaff()
 		{
-			var daggerHelper = DaggerHelper.GetWeaponData("Quarterstaff");
+			var daggerHelper = TempWeaponDictionary.GetWeaponData("Quarterstaff");
 
 			GenericWeapon quarterstaff = new GenericWeapon(daggerHelper, null);
 
@@ -428,8 +428,8 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestSimpleDwarvenUrgrosh()
 		{
-			var urgroshDataA = DaggerHelper.GetWeaponData("Dwarven Urgrosh A");
-			var urgroshDataB = DaggerHelper.GetWeaponData("Dwarven Urgrosh B");
+			var urgroshDataA = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh A");
+			var urgroshDataB = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh B");
 
 			var doubleWeapon = new GenericDoubleWeapon(urgroshDataA, urgroshDataB, null);
 
@@ -439,8 +439,8 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMagicalDwarvenUrgrosh()
 		{
-			var urgroshDataA = DaggerHelper.GetWeaponData("Dwarven Urgrosh A");
-			var urgroshDataB = DaggerHelper.GetWeaponData("Dwarven Urgrosh B");
+			var urgroshDataA = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh A");
+			var urgroshDataB = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh B");
 
 			var doubleWeapon = new GenericDoubleWeapon(urgroshDataA, urgroshDataB, null);
 
@@ -453,8 +453,8 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestUrgroshDroppedIntoAdamantine()
 		{
-			var urgroshDataA = DaggerHelper.GetWeaponData("Dwarven Urgrosh A");
-			var urgroshDataB = DaggerHelper.GetWeaponData("Dwarven Urgrosh B");
+			var urgroshDataA = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh A");
+			var urgroshDataB = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh B");
 
 			var doubleWeapon = new GenericDoubleWeapon(urgroshDataA, urgroshDataB, null);
 
@@ -467,8 +467,8 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestUrgroshDroppedIntoAlchemicalSilver()
 		{
-			var urgroshDataA = DaggerHelper.GetWeaponData("Dwarven Urgrosh A");
-			var urgroshDataB = DaggerHelper.GetWeaponData("Dwarven Urgrosh B");
+			var urgroshDataA = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh A");
+			var urgroshDataB = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh B");
 
 			var doubleWeapon = new GenericDoubleWeapon(urgroshDataA, urgroshDataB, null);
 
@@ -481,8 +481,8 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestUrgroshDroppedIntoColdIron()
 		{
-			var urgroshDataA = DaggerHelper.GetWeaponData("Dwarven Urgrosh A");
-			var urgroshDataB = DaggerHelper.GetWeaponData("Dwarven Urgrosh B");
+			var urgroshDataA = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh A");
+			var urgroshDataB = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh B");
 
 			var doubleWeapon = new GenericDoubleWeapon(urgroshDataA, urgroshDataB, null);
 
@@ -495,8 +495,8 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestUrgroshDroppedIntoDarkwood()
 		{
-			var urgroshDataA = DaggerHelper.GetWeaponData("Dwarven Urgrosh A");
-			var urgroshDataB = DaggerHelper.GetWeaponData("Dwarven Urgrosh B");
+			var urgroshDataA = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh A");
+			var urgroshDataB = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh B");
 
 			var doubleWeapon = new GenericDoubleWeapon(urgroshDataA, urgroshDataB, null);
 
@@ -509,8 +509,8 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestUrgroshDroppedIntoMithral()
 		{
-			var urgroshDataA = DaggerHelper.GetWeaponData("Dwarven Urgrosh A");
-			var urgroshDataB = DaggerHelper.GetWeaponData("Dwarven Urgrosh B");
+			var urgroshDataA = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh A");
+			var urgroshDataB = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh B");
 
 			var doubleWeapon = new GenericDoubleWeapon(urgroshDataA, urgroshDataB, null);
 
@@ -523,8 +523,8 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestUrgroshDroppedIntoSteel()
 		{
-			var urgroshDataA = DaggerHelper.GetWeaponData("Dwarven Urgrosh A");
-			var urgroshDataB = DaggerHelper.GetWeaponData("Dwarven Urgrosh B");
+			var urgroshDataA = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh A");
+			var urgroshDataB = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh B");
 
 			var doubleWeapon = new GenericDoubleWeapon(urgroshDataA, urgroshDataB, null);
 
@@ -537,12 +537,25 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestMasterworkClass()
 		{
-			var dagger = DaggerHelper.GetWeaponData("Dagger");
+			var dagger = TempWeaponDictionary.GetWeaponData("Dagger");
 			var testDagger = new GenericWeapon(dagger, null);
 
 			MasterworkWeapon.MakeMasterwork(testDagger);
 
 			Approvals.Approve(testDagger);
+		}
+
+		[TestMethod]
+		public void TestMasterworkClassOnDoubleWeapon()
+		{
+			var urgroshDataA = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh A");
+			var urgroshDataB = TempWeaponDictionary.GetWeaponData("Dwarven Urgrosh B");
+
+			var doubleWeapon = new GenericDoubleWeapon(urgroshDataA, urgroshDataB, null);
+
+			MasterworkWeapon.MakeMasterwork(doubleWeapon);
+
+			Approvals.Approve(doubleWeapon);
 		}
 	}
 }
