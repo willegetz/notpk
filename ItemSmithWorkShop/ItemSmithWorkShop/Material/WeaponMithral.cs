@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ItemSmithWorkShop.WeaponSmith;
 
 namespace ItemSmithWorkShop
 {
@@ -34,7 +35,7 @@ namespace ItemSmithWorkShop
 			}
 			else
 			{
-				Dagger.IsMasterworkQualifier(true);
+				MasterworkWeapon.MakeMasterwork(Dagger);
 				Dagger.masterworkCostModifier = 0;
 			}
 		}
@@ -42,7 +43,7 @@ namespace ItemSmithWorkShop
 		private Object SetMithralTraits()
 		{
 			Dagger.MaterialName = " [Mithral]";
-			Dagger.SpecialMaterialCost = (mithralCost * Dagger.WeaponWeight) - Dagger.MasterworkCost;
+			Dagger.SpecialMaterialCost = (mithralCost * Dagger.WeaponWeight) - CalculateWeaponCosts.GetMasterworkCost();
 			Dagger.WeaponWeight = (Dagger.WeaponWeight / 2);
 			Dagger.WeaponText = Dagger.WeaponText + "\n\tThis item is made of mithral!";
 			Dagger.CalculateWeaponCost();

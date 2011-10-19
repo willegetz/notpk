@@ -31,11 +31,6 @@ namespace ItemSmithWorkShop
 			BasePrice = (FirstWeaponPart.BasePrice + SecondWeaponPart.BasePrice) / 2;
 		}
 
-		public override void IsMasterworkQualifier(bool value)
-		{
-			base.IsMasterworkQualifier(value);
-		}
-
 		private double HighestCasterLevel()
 		{
 			if (FirstWeaponPart.CasterLevel >= SecondWeaponPart.CasterLevel)
