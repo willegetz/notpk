@@ -38,7 +38,6 @@ namespace ItemSmithWorkShop
 
 		public int PlusEnhancementBonus { get; set; }
 
-		public double MasterworkCost { get; set; }
 		public double SpecialMaterialCost { get; set; }
 		public double EnchantmentCost { get; set; }
 		public double ItemCost { get; set; }
@@ -150,24 +149,6 @@ namespace ItemSmithWorkShop
 			}
 		}
 
-		//public virtual void IsMasterworkQualifier(bool value)
-		//{
-		//    if (value)
-		//    {
-		//        IsMasterwork = true;
-		//        MasterworkProperties();
-		//    }
-		//}
-
-		//protected virtual void MasterworkProperties()
-		//{
-		//    MasterWorkLabel = " [Masterwork]";
-		//    ToHitModifier = 1;
-		//    WeaponText = WeaponText + string.Format("\n\tThis {0} is masterwork quality!", WeaponType.ToLower());
-		//    MasterworkCost = masterworkCostModifier;
-		//    CalculateWeaponCost();
-		//}
-
 		public virtual void CalculateWeaponCost()
 		{
 			if (IsMasterwork && CalculateWeaponCosts.GetMasterworkCost() == 0)
@@ -178,10 +159,8 @@ namespace ItemSmithWorkShop
 			{
 				externalMasterworkCost = CalculateWeaponCosts.GetMasterworkCost();
 			}
-			ItemCost = BasePrice + MasterworkCost + externalMasterworkCost + SpecialMaterialCost;
+			ItemCost = BasePrice + externalMasterworkCost + SpecialMaterialCost;
 			TotalWeaponCost = ItemCost + EnchantmentCost;
-			//ItemCost = BasePrice + MasterworkCost + SpecialMaterialCost;
-			//TotalWeaponCost = ItemCost + EnchantmentCost;
 		}
 
 		protected string WeaponToDisplay()
