@@ -49,7 +49,7 @@ namespace ItemSmithWorkShop
 		public double RawMaterialCost { get; set; }
 
 		public bool IsMagical { get; set; }
-		public bool IsMasterwork { get; protected set; }
+		public bool IsMasterwork { get; set; }
 		public bool IsColdIron { get; set; }
 
 		public GenericWeapon(){}
