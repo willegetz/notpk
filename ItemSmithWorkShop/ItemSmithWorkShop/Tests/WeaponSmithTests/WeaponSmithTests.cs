@@ -27,7 +27,7 @@ namespace ItemSmithWorkShop
 				{"Quarterstaff", new WeaponData{ WeaponName = "Quarterstaff", WeaponCategory = "Two-Handed Melee", WeaponProficiencyRequirement = "Simple Weapon", WeaponDamage = "1d6/1d6", WeaponThreatRange = "20", WeaponCritical = "x2", WeaponDamageType = "Bludgeoning", WeaponHardness = 5, WeaponHitPoints = 10, BasePrice = 0, WeaponWeight = 4, WeaponText = "I am a quarterstaff"}},
 				{"Dwarven Urgrosh A", new WeaponData{ WeaponName = "Dwarven Urgrosh", WeaponPart = "Axe Head", WeaponCategory = "Two-Handed Melee", WeaponProficiencyRequirement = "Exotic Weapon", WeaponDamage = "1d8", WeaponThreatRange = "20", WeaponCritical = "x2", WeaponDamageType = "Slashing", WeaponHardness = 5, WeaponHitPoints = 10, BasePrice = 50, WeaponWeight = 12, WeaponText = "A dwarven urgrosh is a double weapon.\r\tThis is the axe head."} },
 				{"Dwarven Urgrosh B", new WeaponData{ WeaponName = "Dwarven Urgrosh", WeaponPart = "Spear Head", WeaponDamage = "1d6", WeaponThreatRange = "20", WeaponCritical = "x2", WeaponDamageType = "Piercing", WeaponHardness = 5, WeaponHitPoints = 10, WeaponWeight = 12, BasePrice = 50, WeaponText = "A dwarven urgrosh is a double weapon.\r\tThis is the spear head."} },
-				{ "", new WeaponData { WeaponName = "", WeaponCategory = "", WeaponProficiencyRequirement = "", WeaponDamage = "", WeaponThreatRange = "", WeaponCritical = "", WeaponDamageType = "", WeaponHardness = 0, WeaponHitPoints = 0, BasePrice = 0, WeaponWeight = 0, WeaponText = "" }},
+				{ "", new WeaponData { WeaponName = "No Weapon Selected", WeaponCategory = "", WeaponProficiencyRequirement = "", WeaponDamage = "", WeaponThreatRange = "", WeaponCritical = "", WeaponDamageType = "", WeaponHardness = 0, WeaponHitPoints = 0, BasePrice = 0, WeaponWeight = 0, WeaponText = "" }},
 			};
 
 			// A double weapon has two different heads
@@ -578,19 +578,21 @@ namespace ItemSmithWorkShop
 			// +1 Cold Iron Dagger
 			//ItemCost = BasePrice + externalMasterworkCost + SpecialMaterialCost;
 			//TotalWeaponCost = ItemCost + EnchantmentCost;
-			var weaopn = new GenericWeapon();
+			var weaopn = new GenericWeapon(null, null);
 			var coldIron = new WeaponColdIron(weaopn);
+			var magical = new MagicWeapon(weaopn, 1);
 
 			WeaponPriceCalculations.SetMasterworkCost(300);
 			WeaponPriceCalculations.SetBasePrice(2);
 			coldIron.CalculateColdIronCost(WeaponPriceCalculations.GetBasePriceCost());
-			WeaponPriceCalculations.SetSpecialMaterialCost(coldIron.coldIronCost);
+			WeaponPriceCalculations.SetMagicalCost(magical.TotalEnhancementCost);
 
 			weaopn.BasePrice = WeaponPriceCalculations.GetBasePriceCost();
 			weaopn.externalMasterworkCost = WeaponPriceCalculations.GetMasterworkCost();
 			weaopn.SpecialMaterialCost = WeaponPriceCalculations.GetSpecialMaterialCost();
-			weaopn.EnchantmentCost = 2000;
-			weaopn.CalculateWeaponCost();
+			weaopn.EnchantmentCost = WeaponPriceCalculations.GetMagicalEnchantmentCost();
+
+			weaopn.TotalWeaponCost = WeaponPriceCalculations.DetermineTotalWeaponCost();
 
 			Approvals.Approve(weaopn.TotalWeaponCost);
 		}
