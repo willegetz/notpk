@@ -34,8 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ApprovalTests, Version=1.0.10.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ApprovalTests.dll</HintPath>
+      <HintPath>..\..\..\..\VS dll Libraries\ApprovalSource\ApprovalTests\bin\Debug\ApprovalTests.dll</HintPath>
     </Reference>
     <Reference Include="ApprovalUtilities, Version=1.0.11.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\Approvals\ApprovalUtilities.dll</HintPath>
@@ -58,6 +57,7 @@
     <Compile Include="Material\WeaponDarkwood.cs" />
     <Compile Include="Material\WeaponMithral.cs" />
     <Compile Include="Material\WeaponSteel.cs" />
+    <Compile Include="NCrunchUtilities\NCrunchSilentReporter .cs" />
     <Compile Include="Tests\OldWeaponSmithTests\OldWeaponSmith.cs" />
     <Compile Include="OldWeaponSmith\AdamantineMaterial.cs" />
     <Compile Include="OldWeaponSmith\Dagger.cs" />
