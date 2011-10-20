@@ -151,13 +151,13 @@ namespace ItemSmithWorkShop
 
 		public virtual void CalculateWeaponCost()
 		{
-			if (IsMasterwork && CalculateWeaponCosts.GetMasterworkCost() == 0)
+			if (IsMasterwork && WeaponPriceCalculations.GetMasterworkCost() == 0)
 			{
 				externalMasterworkCost = 0;
 			}
-			else if (IsMasterwork && CalculateWeaponCosts.GetMasterworkCost() != 0)
+			else if (IsMasterwork && WeaponPriceCalculations.GetMasterworkCost() != 0)
 			{
-				externalMasterworkCost = CalculateWeaponCosts.GetMasterworkCost();
+				externalMasterworkCost = WeaponPriceCalculations.GetMasterworkCost();
 			}
 			ItemCost = BasePrice + externalMasterworkCost + SpecialMaterialCost;
 			TotalWeaponCost = ItemCost + EnchantmentCost;

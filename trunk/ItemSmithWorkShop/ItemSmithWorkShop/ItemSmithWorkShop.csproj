@@ -65,7 +65,7 @@
     <Compile Include="OldWeaponSmith\SteelMaterial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\SpikeTests\WeaponSmithSpikes.cs" />
-    <Compile Include="WeaponSmith\CalculateWeaponCosts.cs" />
+    <Compile Include="WeaponSmith\WeaponPriceCalculations.cs" />
     <Compile Include="WeaponSmith\GenericDoubleWeapon.cs" />
     <Compile Include="WeaponSmith\MasterworkWeapon.cs" />
     <Compile Include="WeaponSmith\WeaponData.cs" />
@@ -143,6 +143,9 @@
       <DependentUpon>WeaponSmithTests.cs</DependentUpon>
     </Content>
     <Content Include="Tests\WeaponSmithTests\WeaponSmithTests.TestColossalSizeDagger.approved.txt">
+      <DependentUpon>WeaponSmithTests.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponSmithTests\WeaponSmithTests.TestCorrectCostWithCalculationCostsClass.approved.txt">
       <DependentUpon>WeaponSmithTests.cs</DependentUpon>
     </Content>
     <Content Include="Tests\WeaponSmithTests\WeaponSmithTests.TestDaggerDroppedIntoAdamantine.approved.txt">

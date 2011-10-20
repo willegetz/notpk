@@ -9,7 +9,7 @@ namespace ItemSmithWorkShop
 	{
 		GenericWeapon Dagger;
 
-		private double coldIronCost;
+		public double coldIronCost;
 
 		public WeaponColdIron(GenericWeapon dagger)
 		{
@@ -27,7 +27,7 @@ namespace ItemSmithWorkShop
 		private Object SetColdIronTraits()
 		{
 			Dagger.IsColdIron = true;
-			CalculateColdIronCost();
+			CalculateColdIronCost(Dagger.BasePrice);
 			Dagger.MaterialName = " [Cold Iron]";
 			Dagger.SpecialMaterialCost = coldIronCost;
 			Dagger.WeaponText = Dagger.WeaponText + "\n\tCold Iron is effective against some Fey.\n\tMagic enhancements cost an additional 2000 gold pieces.";
@@ -36,9 +36,9 @@ namespace ItemSmithWorkShop
 			return Dagger;
 		}
 
-		private void CalculateColdIronCost()
+		public void CalculateColdIronCost(double basePrice)
 		{
-			coldIronCost = (Dagger.BasePrice);
+			coldIronCost = basePrice;
 		}
 
 	}
