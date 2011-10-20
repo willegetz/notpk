@@ -571,5 +571,28 @@ namespace ItemSmithWorkShop
 
 			Approvals.Approve(doubleWeapon);
 		}
+
+		[TestMethod]
+		public void TestCorrectCostWithCalculationCostsClass()
+		{
+			// +1 Cold Iron Dagger
+			//ItemCost = BasePrice + externalMasterworkCost + SpecialMaterialCost;
+			//TotalWeaponCost = ItemCost + EnchantmentCost;
+			var weaopn = new GenericWeapon();
+			var coldIron = new WeaponColdIron(weaopn);
+
+			WeaponPriceCalculations.SetMasterworkCost(300);
+			WeaponPriceCalculations.SetBasePrice(2);
+			coldIron.CalculateColdIronCost(WeaponPriceCalculations.GetBasePriceCost());
+			WeaponPriceCalculations.SetSpecialMaterialCost(coldIron.coldIronCost);
+
+			weaopn.BasePrice = WeaponPriceCalculations.GetBasePriceCost();
+			weaopn.externalMasterworkCost = WeaponPriceCalculations.GetMasterworkCost();
+			weaopn.SpecialMaterialCost = WeaponPriceCalculations.GetSpecialMaterialCost();
+			weaopn.EnchantmentCost = 2000;
+			weaopn.CalculateWeaponCost();
+
+			Approvals.Approve(weaopn.TotalWeaponCost);
+		}
 	}
 }

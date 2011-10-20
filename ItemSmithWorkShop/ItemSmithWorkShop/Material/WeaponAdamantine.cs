@@ -43,7 +43,7 @@ namespace ItemSmithWorkShop
 			CheckMasterworkStatus();
 			Dagger.MaterialName = " [Adamantine]";
 			Dagger.WeaponHitPoints = Math.Round(Dagger.WeaponHitPoints * adamantineHitPointModifier);
-			Dagger.SpecialMaterialCost = (adamantineCost - CalculateWeaponCosts.GetMasterworkCost());
+			Dagger.SpecialMaterialCost = (adamantineCost - WeaponPriceCalculations.GetMasterworkCost());
 			Dagger.WeaponText = Dagger.WeaponText + "\n\tDagger bypasses damage reduction value of 20.";
 			Dagger.CalculateWeaponCost();
 

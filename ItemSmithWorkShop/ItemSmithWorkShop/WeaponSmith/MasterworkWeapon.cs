@@ -37,8 +37,8 @@ namespace ItemSmithWorkShop.WeaponSmith
 			singleWeapon.MasterWorkLabel = " [Masterwork]";
 			singleWeapon.ToHitModifier = 1;
 			singleWeapon.WeaponText = singleWeapon.WeaponText + string.Format("\n\tThis {0} is masterwork quality!", singleWeapon.WeaponType.ToLower());
-			CalculateWeaponCosts.SetMasterworkCost(singleWeaponMasterworkCost);
-			singleWeapon.TotalWeaponCost += CalculateWeaponCosts.GetMasterworkCost();
+			WeaponPriceCalculations.SetMasterworkCost(singleWeaponMasterworkCost);
+			singleWeapon.TotalWeaponCost += WeaponPriceCalculations.GetMasterworkCost();
 		}
 	}
 }
