@@ -9,6 +9,7 @@ using System.Collections;
 using ApprovalTests.Reporters;
 using ApprovalTests;
 using ItemSmithWorkShop.WeaponSmith;
+using TestingUtilities;
 
 namespace ItemSmithWorkShop
 {
@@ -47,7 +48,7 @@ namespace ItemSmithWorkShop
 	}
 
 	[TestClass]
-	[UseReporter(typeof(DiffReporter))]
+	[UseReporter(typeof(NCrunchSilentReporter))]
 	public class WeaponSmithTests
 	{
 		[TestMethod]
