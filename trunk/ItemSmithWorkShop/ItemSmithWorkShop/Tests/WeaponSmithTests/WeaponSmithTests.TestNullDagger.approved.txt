@@ -1,4 +1,4 @@
- (Medium)
+No Weapon Selected (Medium)
  Weapon
  Proficiency
 Damage:  [ ] 

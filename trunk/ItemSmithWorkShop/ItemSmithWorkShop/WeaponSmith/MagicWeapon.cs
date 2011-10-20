@@ -17,7 +17,7 @@ namespace ItemSmithWorkShop
 		private string MagicAbilityDamageType { get; set; }
 		private string MagicAbilityText { get; set; }
 
-		private double TotalEnhancementCost { get; set; }
+		public double TotalEnhancementCost { get; set; }
 		public double TotalEnhancementBonus { get; set; }
 		public double MagicAbilityEnhancement { get; set; }
 
@@ -25,9 +25,11 @@ namespace ItemSmithWorkShop
 		private double HardnessEnhancementBonus { get; set; }
 		private double HitPointEnhancementBOnus { get; set; }
 
-		private double enhancementBonus;
+		public double enhancementBonus;
 		private double enhancementMultiplier = 2000;
 		private double coldIronAdditionalCost = 2000;
+
+		public MagicWeapon(){}
 
 		public MagicWeapon(GenericWeapon dagger, int plusEnhancement)
 		{
@@ -76,7 +78,7 @@ namespace ItemSmithWorkShop
 			}
 		}
 
-		private void CalculateMagicalCost()
+		public void CalculateMagicalCost()
 		{
 			TotalEnhancementBonus = enhancementBonus + MagicAbilityEnhancement;
 			
@@ -88,6 +90,7 @@ namespace ItemSmithWorkShop
 			{
 				TotalEnhancementCost = (TotalEnhancementBonus * TotalEnhancementBonus) * enhancementMultiplier;
 			}
+
 			Dagger.EnchantmentCost = TotalEnhancementCost;
 		}
 
