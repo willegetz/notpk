@@ -11,7 +11,7 @@ namespace ItemSmithWorkShop
 		WeaponSizing sizing;
 		WeaponData weaponData;
 
-		public double masterworkCostModifier = 300;
+		public double masterworkCostModifier = 0;
 
 		public virtual string WeaponProficiencyRequirement { get; set; }
 		public string WeaponCategory { get; set; }
@@ -140,26 +140,23 @@ namespace ItemSmithWorkShop
 		{
 			if (WeaponSize == "Small")
 			{
-				TotalWeaponCost = BasePrice;
+				WeaponPriceCalculations.SetBasePrice(BasePrice);
 			}
 			else
 			{
-				BasePrice *= sizing.Multiplier;
-				ItemCost = BasePrice;
+				WeaponPriceCalculations.SetBasePrice((BasePrice *= sizing.Multiplier));
 			}
 		}
 
 		public virtual void CalculateWeaponCost()
 		{
-			if (IsMasterwork && WeaponPriceCalculations.GetMasterworkCost() == 0)
-			{
-				externalMasterworkCost = 0;
-			}
-			else if (IsMasterwork && WeaponPriceCalculations.GetMasterworkCost() != 0)
+			if (IsMasterwork)
 			{
 				externalMasterworkCost = WeaponPriceCalculations.GetMasterworkCost();
 			}
-			ItemCost = BasePrice + externalMasterworkCost + SpecialMaterialCost;
+
+			ItemCost = WeaponPriceCalculations.GetBasePriceCost() + externalMasterworkCost + SpecialMaterialCost;
+			
 			TotalWeaponCost = ItemCost + EnchantmentCost;
 		}
 

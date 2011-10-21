@@ -30,13 +30,13 @@ namespace ItemSmithWorkShop
 		{
 			if (Dagger.IsMasterwork)
 			{
-				Dagger.masterworkCostModifier = 0;
+				WeaponPriceCalculations.SetMasterworkCost(0);
 				return;
 			}
 			else
 			{
 				MasterworkWeapon.MakeMasterwork(Dagger);
-				Dagger.masterworkCostModifier = 0;
+				WeaponPriceCalculations.SetMasterworkCost(0);
 			}
 		}
 
