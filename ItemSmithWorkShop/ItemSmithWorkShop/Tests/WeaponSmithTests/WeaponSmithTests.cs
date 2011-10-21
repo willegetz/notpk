@@ -575,9 +575,17 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestCorrectCostWithCalculationCostsClass()
 		{
+			// Why am I calculating all the prices at once?
+			// here should be a price check once the item is completed.
+			// A second check once it is made masterwork
+			// Again once a special material has been added
+			// Again once an enhancement bonus has been added
+			// Again when a magical ability is added.
+			//
 			// +1 Cold Iron Dagger
 			//ItemCost = BasePrice + externalMasterworkCost + SpecialMaterialCost;
 			//TotalWeaponCost = ItemCost + EnchantmentCost;
+			
 			var weaopn = new GenericWeapon(null, null);
 			var coldIron = new WeaponColdIron(weaopn);
 			var magical = new MagicWeapon(weaopn, 1);
@@ -594,7 +602,8 @@ namespace ItemSmithWorkShop
 
 			weaopn.TotalWeaponCost = WeaponPriceCalculations.DetermineTotalWeaponCost();
 
-			Approvals.Approve(weaopn.TotalWeaponCost);
+			var failMessage = "This test is poorly written and does not express the calculation control flow needed adequately.";
+			Approvals.Approve(failMessage);
 		}
 	}
 }

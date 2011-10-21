@@ -139,6 +139,9 @@
     <Content Include="Tests\WeaponSmithTests\WeaponSmithTests.TestAddFlamingEnhancement.approved.txt">
       <DependentUpon>WeaponSmithTests.cs</DependentUpon>
     </Content>
+    <Content Include="Tests\WeaponSmithTests\WeaponSmithTests.TestCalculateBasePrice.approved.txt">
+      <DependentUpon>WeaponSmithTests.cs</DependentUpon>
+    </Content>
     <Content Include="Tests\WeaponSmithTests\WeaponSmithTests.TestColdIronMagicWeapon.approved.txt">
       <DependentUpon>WeaponSmithTests.cs</DependentUpon>
     </Content>
