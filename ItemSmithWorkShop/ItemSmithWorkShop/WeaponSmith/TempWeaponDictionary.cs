@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ItemSmithWorkShop.WeaponSmith
 {
-	class TempWeaponDictionary
+	public class TempWeaponDictionary
 	{
 		private static Dictionary<string, WeaponData> genericWeapons;
 

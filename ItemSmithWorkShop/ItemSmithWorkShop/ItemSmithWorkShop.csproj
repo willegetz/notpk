@@ -65,6 +65,7 @@
     <Compile Include="OldWeaponSmith\SteelMaterial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\SpikeTests\WeaponSmithSpikes.cs" />
+    <Compile Include="Tests\WeaponSmithTests\CreateWeapon.cs" />
     <Compile Include="Tests\WeaponSmithTests\NewCreationFlowTests.cs" />
     <Compile Include="WeaponSmith\TempWeaponDictionary.cs" />
     <Compile Include="WeaponSmith\WeaponPriceCalculations.cs" />
@@ -137,6 +138,12 @@
     </Content>
     <Content Include="Tests\SpikeTests\WeaponSmithSpikes.TestWeightCalculationUsingHardnessHitPointModifiers.approved.txt">
       <DependentUpon>WeaponSmithSpikes.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponSmithTests\NewCreationFlowTests.TestCreateDoubleWeaponWithNewClass.approved.txt">
+      <DependentUpon>NewCreationFlowTests.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponSmithTests\NewCreationFlowTests.TestCreateWeaponClass.approved.txt">
+      <DependentUpon>NewCreationFlowTests.cs</DependentUpon>
     </Content>
     <Content Include="Tests\WeaponSmithTests\WeaponSmithTests.TestAddFlamingEnhancement.approved.txt">
       <DependentUpon>WeaponSmithTests.cs</DependentUpon>

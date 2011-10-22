@@ -6,10 +6,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ItemSmithWorkShop;
 using System.Collections.Specialized;
 using System.Collections;
-using ApprovalTests.Reporters;
 using ApprovalTests;
 using ItemSmithWorkShop.WeaponSmith;
-using TestingUtilities;
 
 namespace ItemSmithWorkShop
 {
