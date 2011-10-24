@@ -92,5 +92,42 @@ namespace ItemSmithWorkShop
 			NewDamage = multiHeadSting.ToString();
 			Multiplier = SizeModification[SizeIndex.IndexOf(size)];
 		}
+
+
+		internal void SetSizingValues(WeaponData data, string size)
+		{
+			SetSizingValues(data.WeaponDamage, size);
+
+			data.WeaponDamage = NewDamage;
+
+			if (size == "Small")
+			{
+				data.BasePrice = data.BasePrice;
+			}
+			else
+			{
+				data.BasePrice = data.BasePrice * Multiplier;
+			}
+			
+			if ((data.WeaponHardness * Multiplier) <= 1)
+			{
+				data.WeaponHardness = Math.Ceiling(data.WeaponHardness* Multiplier);
+			}
+			else
+			{
+				data.WeaponHardness = data.WeaponHardness * Multiplier;
+			}
+
+			if ((data.WeaponHitPoints * Multiplier) <= 1)
+			{
+				data.WeaponHitPoints = Math.Ceiling(data.WeaponHitPoints * Multiplier);
+			}
+			else
+			{
+				data.WeaponHitPoints = data.WeaponHitPoints * Multiplier;
+			}
+		}
+
+
 	}
 }

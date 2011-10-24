@@ -18,6 +18,10 @@ namespace ItemSmithWorkShop.Tests.WeaponSmithTests
 
 			var dagger = new CreateWeapon(weaponData);
 
+			dagger.SizeAdjustment("Medium");
+			dagger.ManipulatePrice(0);
+			dagger.ProduceFinalWeapon();
+
 			Approvals.Approve(dagger.DisplayWeapon1());
 		}
 
