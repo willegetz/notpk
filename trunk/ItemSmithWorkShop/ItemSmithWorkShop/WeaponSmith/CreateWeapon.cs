@@ -10,12 +10,32 @@ namespace ItemSmithWorkShop
 	{
 		GenericWeapon weapon;
 		GenericWeapon1 weapon1;
+		WeaponSizing sizing;
 
 		List<WeaponData> weaponDataBundle = new List<WeaponData>();
+		WeaponData data;
 
-		public CreateWeapon(WeaponData weaponData)
+		public CreateWeapon(WeaponData weaponData) 
 		{
-			weapon1 = new GenericWeapon1(weaponData);
+			data = weaponData;
+			weapon1 = new GenericWeapon1();
+			sizing = new WeaponSizing();
+			weaponDataBundle = new List<WeaponData>();
+		}
+
+		public void SizeAdjustment(string size)
+		{
+			sizing.SetSizingValues(data, size);
+		}
+
+		public void ManipulatePrice(double adjustment)
+		{
+			weapon1.PriceAdjustment(data.BasePrice, adjustment);
+		}
+
+		public void ProduceFinalWeapon()
+		{
+			weapon1.PutWeaponStuffInString(data);
 		}
 
 		internal string DisplayWeapon1()
