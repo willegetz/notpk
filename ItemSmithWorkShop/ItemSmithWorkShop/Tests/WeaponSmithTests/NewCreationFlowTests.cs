@@ -15,10 +15,10 @@ namespace ItemSmithWorkShop.Tests.WeaponSmithTests
 		public void TestCreateWeaponClass()
 		{
 			var weaponData = TempWeaponDictionary.GetWeaponData("Dagger");
-			
+
 			var dagger = new CreateWeapon(weaponData);
 
-			Approvals.Approve(dagger.DisplayWeapon());
+			Approvals.Approve(dagger.DisplayWeapon1());
 		}
 
 		[TestMethod]

@@ -1,12 +1,15 @@
-Dagger (Medium)
-Light Melee Weapon
-Simple Weapon Proficiency
-Damage: 1d4 [19-20 x2] Piercing or Slashing
-Hardness: 10
-Hit Points: 2
-Weight: 1 pound(s)
-2 gold pieces
-
-Weapon Text:
-	The dagger is a common secondary weapon. You get a +2 bonus on
+WeaponName:		Dagger
+WeaponPart:		
+WeaponCategory:		Light Melee
+WeaponProficiencyRequirement:		Simple Weapon
+WeaponDamage:		1d4
+WeaponThreatRange:		19-20
+WeaponCritical:		x2
+WeaponDamageType:		Piercing or Slashing
+WeaponHardness:		10
+WeaponHitPoints:		2
+BasePrice:		2
+WeaponWeight:		1
+WeaponText:		The dagger is a common secondary weapon. You get a +2 bonus on
 	Sleight of Hand checks made to conceal a dagger on your body.
+RangeIncrement:		

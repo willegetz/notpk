@@ -65,8 +65,9 @@
     <Compile Include="OldWeaponSmith\SteelMaterial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\SpikeTests\WeaponSmithSpikes.cs" />
-    <Compile Include="Tests\WeaponSmithTests\CreateWeapon.cs" />
+    <Compile Include="WeaponSmith\CreateWeapon.cs" />
     <Compile Include="Tests\WeaponSmithTests\NewCreationFlowTests.cs" />
+    <Compile Include="WeaponSmith\GenericWeapon1.cs" />
     <Compile Include="WeaponSmith\TempWeaponDictionary.cs" />
     <Compile Include="WeaponSmith\WeaponPriceCalculations.cs" />
     <Compile Include="WeaponSmith\GenericDoubleWeapon.cs" />

@@ -2,27 +2,37 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ItemSmithWorkShop.WeaponSmith;
 
 namespace ItemSmithWorkShop
 {
 	class CreateWeapon
 	{
-
 		GenericWeapon weapon;
-		private WeaponData weaponDataBundle;
-		private WeaponData weaponData1;
-		private WeaponData weaponData2;
+		GenericWeapon1 weapon1;
+
+		List<WeaponData> weaponDataBundle = new List<WeaponData>();
 
 		public CreateWeapon(WeaponData weaponData)
 		{
-			weaponDataBundle = weaponData;
-			weapon = new GenericWeapon(weaponData, null);
+			weapon1 = new GenericWeapon1(weaponData);
 		}
+
+		internal string DisplayWeapon1()
+		{
+			return weapon1.ToString();
+		}
+
+
+
+
+
+
 
 		public CreateWeapon(WeaponData weaponData1, WeaponData weaponData2)
 		{
-			this.weaponData1 = weaponData1;
-			this.weaponData2 = weaponData2;
+			weaponDataBundle.Add(weaponData1);
+			weaponDataBundle.Add(weaponData2);
 
 			weapon = new GenericDoubleWeapon(weaponData1, weaponData2, null);
 		}
