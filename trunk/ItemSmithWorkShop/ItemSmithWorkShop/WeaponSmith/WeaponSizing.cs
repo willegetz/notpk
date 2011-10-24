@@ -61,7 +61,6 @@ namespace ItemSmithWorkShop
 			{
 				GetOutOfRangeSizingData(damage, size);
 			}
-
 		}
 
 		public void GetNewSizingData(string damage, string size)
