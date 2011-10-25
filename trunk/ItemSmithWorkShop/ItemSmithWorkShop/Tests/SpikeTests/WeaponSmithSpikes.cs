@@ -116,7 +116,6 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestNewSizingClass()
 		{
-			// Using the Heavy Mace for multiplier
 			double hardness = 10;
 			double hitPoints = 20;
 			double weight = 8;
