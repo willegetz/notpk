@@ -18,6 +18,21 @@ namespace ItemSmithWorkShop.Tests.WeaponSmithTests
 
 			var dagger = new CreateWeapon(weaponData);
 
+			var ticket = new WeaponTicket();
+			ticket.AddLineItem(new WeaponHead("dagger"));
+			ticket.AddLineItem(new AdamantineMaterial());
+			ticket.AddLineItem(new ...?);
+
+			public class LineItem
+			{
+			     public virtual string GetDice()
+				 {
+				 	return string.Empty;
+				 }
+			}
+
+			Approvals.Approve(ticket);
+
 			dagger.SizeAdjustment("Medium");
 			dagger.ManipulatePrice(0);
 			dagger.ProduceFinalWeapon();
