@@ -9,26 +9,61 @@ namespace ItemSmithWorkShop.WeaponOrder
 	class WeaponHead : LineItem
 	{
 		WeaponData weaponData;
-		List<WeaponData> data;
+		public List<int> columnLengths;
+		public List<T> dataValues;
 
 		public WeaponHead(string name)
 		{
 			weaponData = TempWeaponDictionary.GetWeaponData(name);
+			columnLengths = new List<int>();
+			dataValues = new List<T>();
+			WeaponName = weaponData.WeaponName;
+			Category = weaponData.WeaponCategory;
+			ProficiencyRequirement = weaponData.WeaponProficiencyRequirement;
+
+			AddValuesToCollection();
 		}
 
-		public override string WeaponHeadName()
+		public override string WeaponName
 		{
-			return weaponData.WeaponName;
+			get
+			{
+				return weaponName;
+			}
+			set
+			{
+				weaponName = value;
+				weaponNameLength = weaponName.Length;
+				columnLengths.Add(weaponNameLength);
+			}
 		}
 
-		public override string Category()
+		public override string Category
 		{
-			return weaponData.WeaponCategory;
+			get
+			{
+				return category;
+			}
+			set
+			{
+				category = value;
+				categoryLength = category.Length;
+				columnLengths.Add(categoryLength);
+			}
 		}
 
-		public override string ProficiencyRequirement()
+		public override string ProficiencyRequirement
 		{
-			return weaponData.WeaponProficiencyRequirement;
+			get
+			{
+				return proficiency;
+			}
+			set
+			{
+				proficiency = value;
+				proficiencyLength = proficiency.Length;
+				columnLengths.Add(proficiencyLength);
+			}
 		}
 
 		public override string Damage()
@@ -53,14 +88,11 @@ namespace ItemSmithWorkShop.WeaponOrder
 
 		public override string ToString()
 		{
-			List<int> stringLength = new List<int>();
-
 			var sb = new StringBuilder();
 
-			sb.Append(string.Format("{0}|{1}|{2}|{3}|{4}|{5}|{6}", WeaponHeadName(), Category(), ProficiencyRequirement(), Damage(), DamageType(), ThreatRange(), CriticalMultiplier()));
+			sb.Append(string.Format("{0}|{1}|{2}|{3}|{4}|{5}|{6}\n", WeaponName, Category, ProficiencyRequirement, Damage(), DamageType(), ThreatRange(), CriticalMultiplier()));
 			
 			return sb.ToString();
-
 		}
 	}
 }
