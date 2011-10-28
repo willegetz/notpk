@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ItemSmithWorkShop.WeaponTicket
+namespace ItemSmithWorkShop.WeaponOrder
 {
 	class LineItem
 	{
@@ -23,6 +23,21 @@ namespace ItemSmithWorkShop.WeaponTicket
 		}
 
 		public virtual string Damage()
+		{
+			return string.Empty;
+		}
+
+		public virtual string DamageType()
+		{
+			return string.Empty;
+		}
+
+		public virtual string ThreatRange()
+		{
+			return string.Empty;
+		}
+
+		public virtual string CriticalMultiplier()
 		{
 			return string.Empty;
 		}

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ApprovalTests;
-using ItemSmithWorkShop.WeaponTicket;
+using ItemSmithWorkShop.WeaponOrder;
 
 namespace ItemSmithWorkShop.Tests.WeaponTicketTests
 {
@@ -17,6 +17,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTicketTests
 			var ticket = new WeaponTicket();
 
 			ticket.AddLineItem(new WeaponHead("Dagger"));
+			ticket.AddLineItem(new WeaponHead("Short Sword"));
 
 			Approvals.Approve(ticket);
 		}
