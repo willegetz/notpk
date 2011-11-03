@@ -10,18 +10,22 @@ namespace ItemSmithWorkShop.WeaponOrder
 	{
 		WeaponData weaponData;
 		public List<int> columnLengths;
-		public List<T> dataValues;
+		public List<double> dataValues;
+		public List<string> descriptions;
 
 		public WeaponHead(string name)
 		{
 			weaponData = TempWeaponDictionary.GetWeaponData(name);
 			columnLengths = new List<int>();
-			dataValues = new List<T>();
+			dataValues = new List<double>();
+			descriptions = new List<string>();
 			WeaponName = weaponData.WeaponName;
 			Category = weaponData.WeaponCategory;
 			ProficiencyRequirement = weaponData.WeaponProficiencyRequirement;
+			Damage = weaponData.WeaponDamage;
+			DamageType = weaponData.WeaponDamageType;
 
-			AddValuesToCollection();
+			//AddValuesToCollection();
 		}
 
 		public override string WeaponName
@@ -33,6 +37,7 @@ namespace ItemSmithWorkShop.WeaponOrder
 			set
 			{
 				weaponName = value;
+				descriptions.Add(weaponName);
 				weaponNameLength = weaponName.Length;
 				columnLengths.Add(weaponNameLength);
 			}
@@ -47,6 +52,7 @@ namespace ItemSmithWorkShop.WeaponOrder
 			set
 			{
 				category = value;
+				descriptions.Add(category);
 				categoryLength = category.Length;
 				columnLengths.Add(categoryLength);
 			}
@@ -61,20 +67,43 @@ namespace ItemSmithWorkShop.WeaponOrder
 			set
 			{
 				proficiency = value;
+				descriptions.Add(proficiency);
 				proficiencyLength = proficiency.Length;
 				columnLengths.Add(proficiencyLength);
 			}
 		}
 
-		public override string Damage()
+		public override string Damage
 		{
-			return weaponData.WeaponDamage;
+			get
+			{
+				return damage;
+			}
+			set
+			{
+				damage = value;
+				descriptions.Add(damage);
+				damageLength = damage.Length;
+				columnLengths.Add(damageLength);
+			}
 		}
 
-		public override string DamageType()
+		public override string DamageType
 		{
-			return weaponData.WeaponDamageType;
+			get
+			{
+				return damageType;
+			}
+			set
+			{
+				damageType = value;
+				descriptions.Add(damageType);
+				damageTypeLength = damageType.Length;
+				columnLengths.Add(damageTypeLength);
+			}
 		}
+
+		public override int ColumnWidth { get; set; }
 
 		public override string ThreatRange()
 		{
@@ -90,7 +119,7 @@ namespace ItemSmithWorkShop.WeaponOrder
 		{
 			var sb = new StringBuilder();
 
-			sb.Append(string.Format("{0}|{1}|{2}|{3}|{4}|{5}|{6}\n", WeaponName, Category, ProficiencyRequirement, Damage(), DamageType(), ThreatRange(), CriticalMultiplier()));
+			sb.Append(string.Format("{0}|{1}|{2}|{3}|{4}|{5}|{6}", WeaponName.PadLeft(ColumnWidth), Category.PadLeft(ColumnWidth), ProficiencyRequirement.PadLeft(ColumnWidth), Damage.PadLeft(ColumnWidth), DamageType.PadLeft(ColumnWidth), ThreatRange().PadLeft(ColumnWidth), CriticalMultiplier().PadLeft(ColumnWidth)));
 			
 			return sb.ToString();
 		}
