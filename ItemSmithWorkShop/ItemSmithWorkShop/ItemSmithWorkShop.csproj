@@ -282,6 +282,7 @@
     <Content Include="Tests\WeaponSmithTests\WeaponSmithTests.TestUrgroshDroppedIntoSteel.approved.txt">
       <DependentUpon>WeaponSmithTests.cs</DependentUpon>
     </Content>
+    <Content Include="Tests\WeaponTicketTests\WeaponTicketTests.TestWeaponTicket.approved.txt" />
     <Content Include="Tests\WorkShopTests\WorkShopTests.TestAdamantineProperty.approved.txt">
       <DependentUpon>WorkShopTests.cs</DependentUpon>
     </Content>
