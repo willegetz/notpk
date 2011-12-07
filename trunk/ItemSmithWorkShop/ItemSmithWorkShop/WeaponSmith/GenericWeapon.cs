@@ -11,8 +11,6 @@ namespace ItemSmithWorkShop
 		WeaponSizing sizing;
 		WeaponData weaponData;
 
-		public double masterworkCostModifier = 0;
-
 		public virtual string WeaponProficiencyRequirement { get; set; }
 		public string WeaponCategory { get; set; }
 		public string WeaponThreatRange { get; set; }
