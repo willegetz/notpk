@@ -1,0 +1,4 @@
+                 Name|             Category|          Proficiency|               Damage|          Damage Type|               Threat|             Critical|
+
+               Dagger|          Light Melee|        Simple Weapon|                  1d4| Piercing or Slashing|                19-20|                   x2
+          Short Sword|          Light Melee|       Martial Weapon|                  1d6|             Slashing|                19-20|                   x2

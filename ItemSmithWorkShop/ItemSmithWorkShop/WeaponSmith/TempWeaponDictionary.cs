@@ -2,14 +2,25 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using AdventureItems;
 
 namespace ItemSmithWorkShop.WeaponSmith
 {
-	public class TempWeaponDictionary
+	public class TempWeaponDictionary : AdventureItem
 	{
 		private static Dictionary<string, WeaponData> genericWeapons;
 
 		static TempWeaponDictionary()
+		{
+			LoadWeaponDictionary();
+		}
+
+		public static WeaponData GetWeaponData(string weapon)
+		{
+			return genericWeapons[weapon];
+		}
+
+		private static void LoadWeaponDictionary()
 		{
 			genericWeapons = new Dictionary<string, WeaponData>(StringComparer.OrdinalIgnoreCase)
 			{
@@ -21,21 +32,17 @@ namespace ItemSmithWorkShop.WeaponSmith
 				{"Dwarven Urgrosh B", new WeaponData{ WeaponName = "Dwarven Urgrosh", WeaponPart = "Spear Head", WeaponDamage = "1d6", WeaponThreatRange = "20", WeaponCritical = "x2", WeaponDamageType = "Piercing", WeaponHardness = 5, WeaponHitPoints = 10, WeaponWeight = 12, BasePrice = 50, WeaponText = "A dwarven urgrosh is a double weapon.\r\tThis is the spear head."} },
 				{ "", new WeaponData { WeaponName = "No Weapon Selected", WeaponCategory = "", WeaponProficiencyRequirement = "", WeaponDamage = "", WeaponThreatRange = "", WeaponCritical = "", WeaponDamageType = "", WeaponHardness = 0, WeaponHitPoints = 0, BasePrice = 0, WeaponWeight = 0, WeaponText = "" }},
 			};
-
-			// A double weapon has two different heads
-			// A double weapon has one damage per head
-			//		Damage may or may not be the same
-			//		Damage scales with size
-			// Each head may be of a different material
-			// Each head may have a different enhancement bonus
-			//		Whole weapon must be masterwork
-			//		Masterwork cost is doubled
-			//		Each head's enhancement adds to the total value of weapon
-		}
-
-		public static WeaponData GetWeaponData(string weapon)
-		{
-			return genericWeapons[weapon];
 		}
 	}
+
+	/* // A double weapon has two different heads
+		   // A double weapon has one damage per head
+		   //		Damage may or may not be the same
+		   //		Damage scales with size
+		   // Each head may be of a different material
+		   // Each head may have a different enhancement bonus
+		   //		Whole weapon must be masterwork
+		   //		Masterwork cost is doubled
+		   //		Each head's enhancement adds to the total value of weapon
+	*/
 }
