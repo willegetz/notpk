@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using AdventureItems;
 
 namespace ItemSmithWorkShop
 {
@@ -166,7 +167,5 @@ namespace ItemSmithWorkShop
 				data.WeaponHitPoints = data.WeaponHitPoints * Multiplier;
 			}
 		}
-
-
 	}
 }

@@ -22,7 +22,7 @@ namespace ItemSmithWorkShop
 		[TestMethod]
 		public void TestSimpleDaggerObject()
 		{
-			var daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
+			WeaponData daggerhelper = TempWeaponDictionary.GetWeaponData("Dagger");
 
 			GenericWeapon simpleDagger = new GenericWeapon(daggerhelper, null);
 

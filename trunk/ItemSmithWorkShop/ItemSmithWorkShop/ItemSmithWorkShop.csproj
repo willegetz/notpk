@@ -33,12 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ApprovalTests, Version=1.0.10.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\VS dll Libraries\ApprovalSource\ApprovalTests\bin\Debug\ApprovalTests.dll</HintPath>
-    </Reference>
-    <Reference Include="ApprovalUtilities, Version=1.0.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Approvals\ApprovalUtilities.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -51,6 +45,11 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdventureItems\AdventureItem.cs" />
+    <Compile Include="AdventureItems\AdventureItemShop.cs" />
+    <Compile Include="AdventureItems\WeaponItem.cs" />
+    <Compile Include="AdventureItems\WeaponItemSmith.cs" />
+    <Compile Include="AdventureItems\WeaponOrder.cs" />
     <Compile Include="Material\WeaponAdamantine.cs" />
     <Compile Include="Material\WeaponAlchemicalSilver.cs" />
     <Compile Include="Material\WeaponColdIron.cs" />
@@ -58,11 +57,12 @@
     <Compile Include="Material\WeaponMithral.cs" />
     <Compile Include="Material\WeaponSteel.cs" />
     <Compile Include="NCrunchUtilities\NCrunchSilentReporter .cs" />
-    <Compile Include="NewWeaponSmith\AdventureItem.cs" />
-    <Compile Include="NewWeaponSmith\AdventureWeapon.cs" />
-    <Compile Include="NewWeaponSmith\Decorators\AdventureItemDecorator.cs" />
-    <Compile Include="NewWeaponSmith\Decorators\Masterwork.cs" />
-    <Compile Include="Tests\NewWeaponSmithTests\NewWeaponSmithTests.cs" />
+    <Compile Include="NewWeaponSmithSpike\AdventureItemSpike.cs" />
+    <Compile Include="NewWeaponSmithSpike\AdventureWeaponSpike.cs" />
+    <Compile Include="NewWeaponSmithSpike\Decorators\AdventureItemDecorator.cs" />
+    <Compile Include="NewWeaponSmithSpike\Decorators\Masterwork.cs" />
+    <Compile Include="Tests\AdventureItemsTests\AdventureItemsTest.cs" />
+    <Compile Include="Tests\NewWeaponSmithSpikeTests\WeaponSmithDecoratorSpikeTest.cs" />
     <Compile Include="Tests\OldWeaponSmithTests\OldWeaponSmith.cs" />
     <Compile Include="OldWeaponSmith\AdamantineMaterial.cs" />
     <Compile Include="OldWeaponSmith\Dagger.cs" />
@@ -98,8 +98,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="PhbWeapon.txt" />
-    <Content Include="Tests\NewWeaponSmithTests\NewWeaponSmithTests.TestCreateDagger.approved.txt" />
-    <Content Include="Tests\NewWeaponSmithTests\NewWeaponSmithTests.TestCreateMasterworkDagger.approved.txt" />
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateWeapon.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\NewWeaponSmithSpikeTests\WeaponSmithDecoratorSpikeTest.TestCreateDagger.approved.txt" />
+    <Content Include="Tests\NewWeaponSmithSpikeTests\WeaponSmithDecoratorSpikeTest.TestCreateMasterworkDagger.approved.txt" />
     <Content Include="Tests\OldWeaponSmithTests\OldWeaponSmith.TestAdamantineMaterialPassedIntoConstructor.approved.txt">
       <DependentUpon>OldWeaponSmith.cs</DependentUpon>
     </Content>
@@ -376,6 +379,16 @@
     </Content>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\VS dll Libraries\ApprovalSource\ApprovalTests\ApprovalTests.csproj">
+      <Project>{F70C9A76-F797-4167-8178-14821F8634BC}</Project>
+      <Name>ApprovalTests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\VS dll Libraries\ApprovalSource\SimpleLogger\ApprovalUtilities.csproj">
+      <Project>{E9683C33-7A71-4776-B7C9-E89C565AC16B}</Project>
+      <Name>ApprovalUtilities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
