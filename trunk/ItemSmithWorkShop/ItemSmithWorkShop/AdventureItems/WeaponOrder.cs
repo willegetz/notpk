@@ -6,20 +6,21 @@ namespace ItemSmithWorkShop.AdventureItems
 {
 	public class WeaponOrder
 	{
-		private double BasePrice;
-		private string RangeIncrement;
-		private string WeaponCategory;
-		private string WeaponCritical;
-		private string WeaponDamage;
-		private string WeaponDamageType;
-		private double WeaponHardness;
-		private double WeaponHitPoints;
-		private string WeaponName;
-		private string WeaponPart;
-		private string WeaponProficiencyRequirement;
-		private string WeaponText;
-		private string WeaponThreatRange;
-		private double WeaponWeight;
+		private string Name; //required
+		private double Cost; //required
+		public string Damage { get; private set; }
+		public string ThreatRange { get; private set; }
+		public string Critical { get; private set; }
+		public string Range { get; private set; }
+		public double Weight; //required
+		public string DamageType { get; private set; }
+		public string Description; //required
+		public string Proficiency { get; private set; }
+		public string Category { get; private set; }
+		public double Hardness { get; private set; }
+		public double HitPoints { get; private set; }
+
+		public string Part { get; private set; }
 
 		public WeaponOrder(WeaponData weaponData)
 		{
@@ -28,29 +29,41 @@ namespace ItemSmithWorkShop.AdventureItems
 
 		private void WeaponInformation(WeaponData data)
 		{
-			WeaponName = data.WeaponName;
-			WeaponPart = data.WeaponPart;
-			WeaponCategory = data.WeaponCategory;
-			WeaponProficiencyRequirement = data.WeaponProficiencyRequirement;
-			WeaponDamage = data.WeaponDamage;
-			WeaponThreatRange = data.WeaponThreatRange;
-			WeaponCritical = data.WeaponCritical;
-			WeaponDamageType = data.WeaponDamageType;
-			WeaponHardness = data.WeaponHardness;
-			WeaponHitPoints = data.WeaponHitPoints;
-			BasePrice = data.BasePrice;
-			WeaponWeight = data.WeaponWeight;
-			WeaponText = data.WeaponText;
-			RangeIncrement = data.RangeIncrement;
+			Name = data.WeaponName;
+			Cost = data.BasePrice;
+			Damage = data.WeaponDamage;
+			ThreatRange = data.WeaponThreatRange;
+			Critical = data.WeaponCritical;
+			Range = data.RangeIncrement;
+			Weight = data.WeaponWeight;
+			DamageType = data.WeaponDamageType;
+			Description = data.WeaponText;
+			Proficiency = data.WeaponProficiencyRequirement;
+			Category = data.WeaponCategory;
+			Hardness = data.WeaponHardness;
+			HitPoints = data.WeaponHitPoints;
+			Part = data.WeaponPart;
+
 		}
 
 		internal string GetName()
 		{
-			return WeaponName;
+			return Name;
 		}
+		
 		public double GetCost()
 		{
-			return BasePrice;
+			return Cost;
+		}
+
+		public double GetWeight()
+		{
+			return Weight;
+		}
+
+		public string GetDescription()
+		{
+			return Description;
 		}
 	}
 }
