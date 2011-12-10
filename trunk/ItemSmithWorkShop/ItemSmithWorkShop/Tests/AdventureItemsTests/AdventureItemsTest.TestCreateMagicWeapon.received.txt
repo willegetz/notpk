@@ -1,0 +1,5 @@
++1 Mithral Dagger:	'2502 gp'
+Weight: '0.5 pound(s)'
+To Hit: '+1'
+Damage: ' +1'
+	

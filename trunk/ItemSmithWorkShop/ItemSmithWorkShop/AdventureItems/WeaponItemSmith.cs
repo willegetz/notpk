@@ -6,12 +6,11 @@ using ItemSmithWorkShop.AdventureItems;
 
 namespace AdventureItems
 {
-	public class WeaponItemSmith : AdventureItemShop
+	public class WeaponItemSmith
 	{
-		protected override AdventureItem CreateItem(string itemName)
+		public static WeaponItem OrderItem(string order)
 		{
-			var weapon = new WeaponOrder(TempWeaponDictionary.GetWeaponData(itemName));
-			return new WeaponItem(weapon);
+			return new WeaponItem(new WeaponOrder(TempWeaponDictionary.GetWeaponData(order)));
 		}
 	}
 }

@@ -6,11 +6,10 @@ namespace ItemSmithWorkShop.AdventureItems
 {
 	public class WeaponOrder
 	{
-		private string Name; //required
-		private double Cost; //required
-		public double Weight; //required
-		public string Description; //required
-
+		public string Name { get; private set;}
+		public double Cost { get; private set;}
+		public double Weight { get; private set;}
+		public string Description { get; private set; }
 		public string Damage { get; private set; }
 		public string ThreatRange { get; private set; }
 		public string Critical { get; private set; }
@@ -45,27 +44,6 @@ namespace ItemSmithWorkShop.AdventureItems
 			Hardness = data.WeaponHardness;
 			HitPoints = data.WeaponHitPoints;
 			Part = data.WeaponPart;
-
-		}
-
-		internal string GetName()
-		{
-			return Name;
-		}
-		
-		public double GetCost()
-		{
-			return Cost;
-		}
-
-		public double GetWeight()
-		{
-			return Weight;
-		}
-
-		public string GetDescription()
-		{
-			return Description;
 		}
 	}
 }

@@ -1,5 +1,6 @@
-Dagger:	'2 gp'
++1 Dagger:	'2002 gp'
 Weight: '1 pound(s)'
-Damage: '1d4'
+To Hit: '+1'
+Damage: '1d4 +1'
 	The dagger is a common secondary weapon. You get a +2 bonus on
 	Sleight of Hand checks made to conceal a dagger on your body.
