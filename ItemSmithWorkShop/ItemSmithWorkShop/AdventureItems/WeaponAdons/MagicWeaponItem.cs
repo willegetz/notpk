@@ -17,17 +17,17 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			enhancementBonus = bonus;
 		}
 
-		public override string GetName()
+		public string GetName()
 		{
 			return string.Format("+{0} {1}", enhancementBonus, weaponItem.GetName());
 		}
 
-		public override double GetCost()
+		public double GetCost()
 		{
 			return weaponItem.GetCost() + (Math.Pow(enhancementBonus, 2) * 2000);
 		}
 
-		public override string GetDamage()
+		public string GetDamage()
 		{
 			return string.Format("{0} +{1}", weaponItem.GetDamage(), enhancementBonus);
 		}

@@ -118,6 +118,9 @@
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateDarkwoodWeapon.approved.txt">
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMagicMithralWeapon.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMagicWeapon.approved.txt">
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
