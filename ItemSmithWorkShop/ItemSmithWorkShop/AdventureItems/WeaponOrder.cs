@@ -8,13 +8,14 @@ namespace ItemSmithWorkShop.AdventureItems
 	{
 		private string Name; //required
 		private double Cost; //required
+		public double Weight; //required
+		public string Description; //required
+
 		public string Damage { get; private set; }
 		public string ThreatRange { get; private set; }
 		public string Critical { get; private set; }
 		public string Range { get; private set; }
-		public double Weight; //required
 		public string DamageType { get; private set; }
-		public string Description; //required
 		public string Proficiency { get; private set; }
 		public string Category { get; private set; }
 		public double Hardness { get; private set; }
@@ -31,13 +32,14 @@ namespace ItemSmithWorkShop.AdventureItems
 		{
 			Name = data.WeaponName;
 			Cost = data.BasePrice;
+			Weight = data.WeaponWeight;
+			Description = data.WeaponText;
+
 			Damage = data.WeaponDamage;
 			ThreatRange = data.WeaponThreatRange;
 			Critical = data.WeaponCritical;
 			Range = data.RangeIncrement;
-			Weight = data.WeaponWeight;
 			DamageType = data.WeaponDamageType;
-			Description = data.WeaponText;
 			Proficiency = data.WeaponProficiencyRequirement;
 			Category = data.WeaponCategory;
 			Hardness = data.WeaponHardness;
