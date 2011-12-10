@@ -15,7 +15,8 @@ namespace AdventureItemsTests
 		{
 			AdventureItemShop weaponShop = new WeaponItemSmith();
 			AdventureItem weapon = weaponShop.OrderItem("Dagger");
-			Approvals.Approve(weapon.GetItem());
+			var weapon = new DisplayItem(weapon);
+			Approvals.Approve(weapon);
 		}
 	}
 }
