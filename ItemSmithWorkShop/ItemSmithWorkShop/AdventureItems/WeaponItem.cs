@@ -5,8 +5,12 @@ using ItemSmithWorkShop.AdventureItems;
 
 namespace AdventureItems
 {
-	public class WeaponItem : AdventureItem
+    public class WeaponItem : WeaponItemWeaver
 	{
+		private string name;
+		private double cost;
+		private double weight;
+		private string description;
 		private string damage;
 		private string threatRange;
 		private string critical;
@@ -19,11 +23,10 @@ namespace AdventureItems
 
 		public WeaponItem(WeaponOrder weapon)
 		{
-			name = weapon.GetName();
-			cost = weapon.GetCost();
-			weight = weapon.GetWeight();
-			description = weapon.GetDescription();
-
+			name = weapon.Name;
+			cost = weapon.Cost;
+			weight = weapon.Weight;
+			description = weapon.Description;
 			damage = weapon.Damage;
 			threatRange = weapon.ThreatRange;
 			critical = weapon.Critical;
@@ -35,29 +38,34 @@ namespace AdventureItems
 			hitPoints = weapon.HitPoints;
 		}
 
-		internal string GetName()
+		public override string GetName()
 		{
 			return name;
 		}
 
-		public double GetCost()
+		public override double GetCost()
 		{
 			return cost;
 		}
 
-		public double GetWeight()
+		public override double GetWeight()
 		{
 			return weight;
 		}
 
-		public string GetDescription()
+		public override string GetDescription()
 		{
 			return description;
 		}
 
-		public override string GetItem()
+		public override string GetDamage()
 		{
-			return string.Format("{0}:\t'{1} gp\r\nWeight: '{2} pound(s)'\r\nDamage: '{4}'\r\n\t{3}", name, cost, weight, description, damage);
+			return damage;
+		}
+
+		public string GetItem()
+		{
+			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nDamage: '{3}'\r\n\t{4}", name, cost, weight, damage, description);
 		}
 	}
 }

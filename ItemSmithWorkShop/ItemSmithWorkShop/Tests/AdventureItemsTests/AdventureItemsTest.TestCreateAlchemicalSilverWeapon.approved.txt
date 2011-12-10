@@ -1,0 +1,6 @@
+Alchemical Silver Dagger:	'22 gp'
+Weight: '1 pound(s)'
+Damage: '1d4 -1'
+	The dagger is a common secondary weapon. You get a +2 bonus on
+	Sleight of Hand checks made to conceal a dagger on your body.
+	Alchemical Silver bypasses damage reduction on lycanthropes

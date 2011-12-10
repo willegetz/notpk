@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using AdventureItems;
+
+namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
+{
+	public class DarkwoodWeaponItem : WeaponItemWeaver
+	{
+		private const string DarkwoodNamePrefix = "Darkwood ";
+		private const int DarkwoodCostModifier = 10;
+		private const int MasterworkCostModifier = 300;
+		private const int DarkwoodWeightModifier = 2;
+		private const string ToHitModifier = "+1";
+		private double weight;
+		WeaponItemWeaver weaponItem;
+
+		public DarkwoodWeaponItem(WeaponItemWeaver weapon)
+		{
+			weaponItem = weapon;
+			weight = weaponItem.GetWeight();
+		}
+
+		public override string GetName()
+		{
+			return DarkwoodNamePrefix + weaponItem.GetName();
+		}
+
+		public override double GetCost()
+		{
+			return weaponItem.GetCost() + (weight * DarkwoodCostModifier) + MasterworkCostModifier;
+		}
+
+		public override double GetWeight()
+		{
+			
+			return weight / DarkwoodWeightModifier;
+		}
+
+		public string GetToHit()
+		{
+			return ToHitModifier;
+		}
+
+		internal string GetItem()
+		{
+			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nTo Hit: '{3}'\r\nDamage: '{4}'\r\n\t{5}", GetName(), GetCost(), GetWeight(), GetToHit(), weaponItem.GetDamage(), weaponItem.GetDescription() + "\r\n\tDarkwood weapons are always considered to be masterwork quality.");
+		}
+	}
+}

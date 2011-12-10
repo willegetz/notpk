@@ -47,9 +47,16 @@
   <ItemGroup>
     <Compile Include="AdventureItems\AdventureItem.cs" />
     <Compile Include="AdventureItems\AdventureItemShop.cs" />
-    <Compile Include="AdventureItems\DisplayUtilities\DisplayItem.cs" />
+    <Compile Include="AdventureItems\WeaponAdons\AdamantineWeaponItem.cs" />
+    <Compile Include="AdventureItems\WeaponAdons\AlchemicalSilverWeaponItem.cs" />
+    <Compile Include="AdventureItems\WeaponAdons\ColdIreonWeaponItem.cs" />
+    <Compile Include="AdventureItems\WeaponAdons\DarkwoodWeaponItem.cs" />
+    <Compile Include="AdventureItems\WeaponAdons\MagicWeaponItem.cs" />
+    <Compile Include="AdventureItems\WeaponAdons\MasterworkWeaponItem.cs" />
+    <Compile Include="AdventureItems\WeaponAdons\MithralWeaponItem.cs" />
     <Compile Include="AdventureItems\WeaponItem.cs" />
     <Compile Include="AdventureItems\WeaponItemSmith.cs" />
+    <Compile Include="AdventureItems\WeaponItemWeaver.cs" />
     <Compile Include="AdventureItems\WeaponOrder.cs" />
     <Compile Include="Material\WeaponAdamantine.cs" />
     <Compile Include="Material\WeaponAlchemicalSilver.cs" />
@@ -99,6 +106,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="PhbWeapon.txt" />
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateAdamantineWeapon.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateAlchemicalSilverWeapon.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateColdIronWeapon.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateDarkwoodWeapon.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMagicWeapon.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMasterWorkWeapon.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMithralWeapon.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateWeapon.approved.txt">
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
@@ -379,7 +407,6 @@
       <DependentUpon>WorkShopTests.cs</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\VS dll Libraries\ApprovalSource\ApprovalTests\ApprovalTests.csproj">
       <Project>{F70C9A76-F797-4167-8178-14821F8634BC}</Project>
