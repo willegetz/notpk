@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="AdventureItems\AdventureItem.cs" />
     <Compile Include="AdventureItems\AdventureItemShop.cs" />
+    <Compile Include="AdventureItems\DisplayUtilities\DisplayItem.cs" />
     <Compile Include="AdventureItems\WeaponItem.cs" />
     <Compile Include="AdventureItems\WeaponItemSmith.cs" />
     <Compile Include="AdventureItems\WeaponOrder.cs" />
@@ -57,7 +58,12 @@
     <Compile Include="Material\WeaponMithral.cs" />
     <Compile Include="Material\WeaponSteel.cs" />
     <Compile Include="NCrunchUtilities\NCrunchSilentReporter .cs" />
+    <Compile Include="NewWeaponSmithSpike\AdventureItemSpike.cs" />
+    <Compile Include="NewWeaponSmithSpike\AdventureWeaponSpike.cs" />
+    <Compile Include="NewWeaponSmithSpike\Decorators\AdventureItemDecorator.cs" />
+    <Compile Include="NewWeaponSmithSpike\Decorators\Masterwork.cs" />
     <Compile Include="Tests\AdventureItemsTests\AdventureItemsTest.cs" />
+    <Compile Include="Tests\NewWeaponSmithSpikeTests\WeaponSmithDecoratorSpikeTest.cs" />
     <Compile Include="Tests\OldWeaponSmithTests\OldWeaponSmith.cs" />
     <Compile Include="OldWeaponSmith\AdamantineMaterial.cs" />
     <Compile Include="OldWeaponSmith\Dagger.cs" />
@@ -96,6 +102,8 @@
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateWeapon.approved.txt">
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
+    <Content Include="Tests\NewWeaponSmithSpikeTests\WeaponSmithDecoratorSpikeTest.TestCreateDagger.approved.txt" />
+    <Content Include="Tests\NewWeaponSmithSpikeTests\WeaponSmithDecoratorSpikeTest.TestCreateMasterworkDagger.approved.txt" />
     <Content Include="Tests\OldWeaponSmithTests\OldWeaponSmith.TestAdamantineMaterialPassedIntoConstructor.approved.txt">
       <DependentUpon>OldWeaponSmith.cs</DependentUpon>
     </Content>
@@ -371,18 +379,16 @@
       <DependentUpon>WorkShopTests.cs</DependentUpon>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\..\Approvals\ApprovalTests\ApprovalTests.csproj">
+    <ProjectReference Include="..\..\..\..\VS dll Libraries\ApprovalSource\ApprovalTests\ApprovalTests.csproj">
       <Project>{F70C9A76-F797-4167-8178-14821F8634BC}</Project>
       <Name>ApprovalTests</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Approvals\SimpleLogger\ApprovalUtilities.csproj">
+    <ProjectReference Include="..\..\..\..\VS dll Libraries\ApprovalSource\SimpleLogger\ApprovalUtilities.csproj">
       <Project>{E9683C33-7A71-4776-B7C9-E89C565AC16B}</Project>
       <Name>ApprovalUtilities</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AdventureItems\DisplayUtilities\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
