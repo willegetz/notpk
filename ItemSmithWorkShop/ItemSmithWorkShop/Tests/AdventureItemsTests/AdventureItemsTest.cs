@@ -4,6 +4,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AdventureItems;
 using ApprovalTests;
+using ItemSmithWorkShop.AdventureItems.DisplayUtilities;
 
 namespace AdventureItemsTests
 {
@@ -15,8 +16,8 @@ namespace AdventureItemsTests
 		{
 			AdventureItemShop weaponShop = new WeaponItemSmith();
 			AdventureItem weapon = weaponShop.OrderItem("Dagger");
-			var weapon = new DisplayItem(weapon);
-			Approvals.Approve(weapon);
+			//weapon = new DisplayItem(weapon);
+			Approvals.Approve(weapon.GetItem());
 		}
 	}
 }
