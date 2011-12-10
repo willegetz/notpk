@@ -35,9 +35,19 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			return "+1";
 		}
 
+		public override string GetDescription()
+		{
+			return weaponItem.GetDescription() + "\r\n\tMithral weapons are always considered to be masterwork quality.";
+		}
+
+		public override string GetDamage()
+		{
+			return weaponItem.GetDamage();
+		}
+
 		internal string GetItem()
 		{
-			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nTo Hit: '{3}'\r\nDamage: '{4}'\r\n\t{5}", GetName(), GetCost(), GetWeight(), GetToHit(), weaponItem.GetDamage(), weaponItem.GetDescription()  + "\r\n\tMithral weapons are always considered to be masterwork quality.");
+			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nTo Hit: '{3}'\r\nDamage: '{4}'\r\n\t{5}", GetName(), GetCost(), GetWeight(), GetToHit(), GetDamage(), GetDescription());
 		}
 	}
 }

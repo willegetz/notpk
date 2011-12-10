@@ -70,7 +70,16 @@ namespace AdventureItemsTests
 		public void TestCreateMagicWeapon()
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 1);
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 3);
+			Approvals.Approve(magicWeapon.GetItem());
+		}
+
+		[TestMethod]
+		public void TestCreateMagicMithralWeapon()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			MithralWeaponItem mithralWeapon = new MithralWeaponItem(weapon);
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(mithralWeapon, 1);
 			Approvals.Approve(magicWeapon.GetItem());
 		}
 	}
