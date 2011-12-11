@@ -10,6 +10,10 @@ namespace AdventureItems
 	{
 		public static WeaponItem OrderItem(string order)
 		{
+			if (string.IsNullOrEmpty(order))
+			{
+				throw new ArgumentNullException(string.Format("Weapon Name: '{0}'", order), "The name of the weapon must be specified");
+			}
 			return new WeaponItem(new WeaponOrder(TempWeaponDictionary.GetWeaponData(order)));
 		}
 	}

@@ -70,7 +70,43 @@ namespace AdventureItemsTests
 		public void TestCreateMagicWeapon()
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 3);
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 1);
+			Approvals.Approve(magicWeapon.GetItem());
+		}
+
+		[TestMethod]
+		public void TestCreateMagicAdamantineWeapon()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			AdamantineWeaponItem adamantineWeapon = new AdamantineWeaponItem(weapon);
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(adamantineWeapon, 1);
+			Approvals.Approve(magicWeapon.GetItem());
+		}
+
+		[TestMethod]
+		public void TestCreateMagicAlchemicalSilverWeapon()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			AlchemicalSilverWeaponItem silverWeapon = new AlchemicalSilverWeaponItem(weapon);
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(silverWeapon, 1);
+			Approvals.Approve(magicWeapon.GetItem());
+		}
+
+		[TestMethod]
+		public void TestCreateMagicColdIronWeapon()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			ColdIreonWeaponItem ironWeapon = new ColdIreonWeaponItem(weapon);
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(ironWeapon, 1);
+			Approvals.Approve(magicWeapon.GetItem());
+		}
+
+		[TestMethod]
+		public void TestCreateMagicDarkwoodWeapon()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			DarkwoodWeaponItem darkwoodWeapon = new DarkwoodWeaponItem(weapon);
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(darkwoodWeapon, 1);
 			Approvals.Approve(magicWeapon.GetItem());
 		}
 

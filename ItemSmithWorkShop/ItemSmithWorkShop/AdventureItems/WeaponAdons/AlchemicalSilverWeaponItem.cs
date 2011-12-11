@@ -10,7 +10,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 	{
 		private const string SilverNmaePrefix = "Alchemical Silver ";
 		private const int SilverCostModifier = 20;
-		private const string SilverDamageModifier = " -1";
+		private const int SilverDamageModifier = -1;
 		WeaponItemWeaver weaponItem;
 
 		public AlchemicalSilverWeaponItem(WeaponItemWeaver weapon)
@@ -28,9 +28,19 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			return weaponItem.GetCost() + SilverCostModifier;
 		}
 
+		public override double GetWeight()
+		{
+			return weaponItem.GetWeight();
+		}
+
 		public override string GetDamage()
 		{
-			return weaponItem.GetDamage() + SilverDamageModifier;
+			return weaponItem.GetDamage();
+		}
+
+		public override int GetDamageModifier()
+		{
+			return SilverDamageModifier;
 		}
 
 		public override string GetDescription()
@@ -40,7 +50,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public string GetItem()
 		{
-			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nDamage: '{3}'\r\n\t{4}", GetName(), GetCost(), weaponItem.GetWeight(), GetDamage(), GetDescription());
+			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nDamage: '{3} {4}'\r\n\t{5}", GetName(), GetCost(), weaponItem.GetWeight(), GetDamage(), GetDamageModifier(), GetDescription());
 		}
 	}
 }

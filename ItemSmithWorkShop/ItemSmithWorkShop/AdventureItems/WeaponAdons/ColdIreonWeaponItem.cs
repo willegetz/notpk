@@ -10,6 +10,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 	{
 		private const string ColdIronNamePrefix = "Cold Iron ";
 		private const int ColdIronModifier = 2;
+		private const int ColdIronAdditionalMagicCost = 2000;
 		WeaponItemWeaver weaponItem;
 
 		public ColdIreonWeaponItem(WeaponItemWeaver weapon)
@@ -22,9 +23,24 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			return ColdIronNamePrefix + weaponItem.GetName();
 		}
 
+		public override double GetWeight()
+		{
+			return weaponItem.GetWeight();
+		}
+
 		public override double GetCost()
 		{
 			return weaponItem.GetCost() * ColdIronModifier;
+		}
+
+		public override string GetDamage()
+		{
+			return weaponItem.GetDamage();
+		}
+
+		public override double GetAdditionalMagicCostModifier()
+		{
+			return ColdIronAdditionalMagicCost;
 		}
 
 		public override string GetDescription()

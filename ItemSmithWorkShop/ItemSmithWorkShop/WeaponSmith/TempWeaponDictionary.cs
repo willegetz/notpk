@@ -17,7 +17,11 @@ namespace ItemSmithWorkShop.WeaponSmith
 
 		public static WeaponData GetWeaponData(string weapon)
 		{
-			return genericWeapons[weapon];
+			if (genericWeapons.ContainsKey(weapon))
+			{
+				return genericWeapons[weapon];
+			}
+			throw new KeyNotFoundException(string.Format("The Weapon '{0}' is not present in this collection of weapons.", weapon));
 		}
 
 		private static void LoadWeaponDictionary()
