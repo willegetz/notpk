@@ -27,6 +27,16 @@ namespace ItemSmithWorkShop.AdventureItems
 			return 0;
 		}
 
+		public virtual int GetDamageModifier()
+		{
+			return 0;
+		}
+
+		public virtual double GetAdditionalMagicCostModifier()
+		{
+			return 0;
+		}
+
 		public virtual string GetDamage()
 		{
 			return string.Empty;

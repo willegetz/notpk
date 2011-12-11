@@ -70,6 +70,7 @@
     <Compile Include="NewWeaponSmithSpike\Decorators\AdventureItemDecorator.cs" />
     <Compile Include="NewWeaponSmithSpike\Decorators\Masterwork.cs" />
     <Compile Include="Tests\AdventureItemsTests\AdventureItemsTest.cs" />
+    <Compile Include="Tests\AdventureItemsTests\WeaponItemExceptionTest.cs" />
     <Compile Include="Tests\NewWeaponSmithSpikeTests\WeaponSmithDecoratorSpikeTest.cs" />
     <Compile Include="Tests\OldWeaponSmithTests\OldWeaponSmith.cs" />
     <Compile Include="OldWeaponSmith\AdamantineMaterial.cs" />
@@ -116,6 +117,18 @@
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateDarkwoodWeapon.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMagicAdamantineWeapon.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMagicAlchemicalSilverWeapon.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMagicColdIronWeapon.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMagicDarkwoodWeapon.approved.txt">
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMagicMithralWeapon.approved.txt">
