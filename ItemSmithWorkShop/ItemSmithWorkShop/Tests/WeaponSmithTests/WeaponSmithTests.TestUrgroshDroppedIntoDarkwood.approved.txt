@@ -1,27 +1,0 @@
-Dwarven Urgrosh (Medium)
-Two-Handed Melee Weapon
-Exotic Weapon Proficiency
-Weight: 6 pound(s)
-Total Weapon Cost: 890 gold pieces
-
-Dwarven Urgrosh Axe Head [Darkwood] [Masterwork]
-To Hit: +1
-Damage: 1d8 [20 x2] Slashing
-Hardness: 5
-Hit Points: 10
-Axe Head Enhancement Cost: 420 gold pieces
-Weapon Text:
-	A dwarven urgrosh is a double weapon.	This is the axe head.
-	This dwarven urgrosh is masterwork quality!
-	This item is made of Darkwood!
-
-Dwarven Urgrosh Spear Head [Darkwood] [Masterwork]
-To Hit: +1
-Damage: 1d6 [20 x2] Piercing
-Hardness: 5
-Hit Points: 10
-Spear Head Enhancement Cost: 420 gold pieces
-Weapon Text:
-	A dwarven urgrosh is a double weapon.	This is the spear head.
-	This dwarven urgrosh is masterwork quality!
-	This item is made of Darkwood!
