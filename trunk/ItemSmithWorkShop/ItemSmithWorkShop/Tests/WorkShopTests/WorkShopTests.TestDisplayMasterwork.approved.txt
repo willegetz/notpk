@@ -1,1 +1,0 @@
-Weapon Name:		Masterwork Steel DaggerWeapon Proficiency:	SimpleWeapon Category:	Light MeleeWeapon Cost:		302 gold piecesWeapon To Hit:		+1Weapon Damage:		1d4 piercing or slashingWeapon Threat Range:19-20 / x2Weight:				1 poundWeapon Hardness:	10Weapon Hit Points:	2

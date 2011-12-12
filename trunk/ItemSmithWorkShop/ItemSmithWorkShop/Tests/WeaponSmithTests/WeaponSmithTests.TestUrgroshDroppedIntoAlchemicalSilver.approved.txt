@@ -1,23 +1,0 @@
-Dwarven Urgrosh (Medium)
-Two-Handed Melee Weapon
-Exotic Weapon Proficiency
-Weight: 12 pound(s)
-Total Weapon Cost: 90 gold pieces
-
-Dwarven Urgrosh Axe Head [Alchemical Silver]
-Damage: 1d8 -1 [20 x2] Slashing
-Hardness: 5
-Hit Points: 10
-Axe Head Enhancement Cost: 20 gold pieces
-Weapon Text:
-	A dwarven urgrosh is a double weapon.	This is the axe head.
-	Alchemical Silver bypasses damage reduction on lycanthropes.
-
-Dwarven Urgrosh Spear Head [Alchemical Silver]
-Damage: 1d6 -1 [20 x2] Piercing
-Hardness: 5
-Hit Points: 10
-Spear Head Enhancement Cost: 20 gold pieces
-Weapon Text:
-	A dwarven urgrosh is a double weapon.	This is the spear head.
-	Alchemical Silver bypasses damage reduction on lycanthropes.

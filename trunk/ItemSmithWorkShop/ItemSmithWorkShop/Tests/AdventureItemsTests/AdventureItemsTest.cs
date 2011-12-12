@@ -194,5 +194,8 @@ namespace AdventureItemsTests
 			EnchantedWeaponItem enchantedWeapon = new EnchantedWeaponItem(magicWeapon, "Flaming");
 			Approvals.Approve(enchantedWeapon.DisplayFullText());
 		}
+
+		// The next tests will involve concatenating another magical effect onto the weapon.
+		// There is also sizing that needs to occur.
 	}
 }

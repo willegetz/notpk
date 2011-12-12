@@ -1,25 +1,0 @@
-Dwarven Urgrosh (Medium)
-Two-Handed Melee Weapon
-Exotic Weapon Proficiency
-Weight: 12 pound(s)
-Total Weapon Cost: 150 gold pieces
-
-Dwarven Urgrosh Axe Head [Cold Iron]
-Damage: 1d8 [20 x2] Slashing
-Hardness: 5
-Hit Points: 10
-Axe Head Enhancement Cost: 50 gold pieces
-Weapon Text:
-	A dwarven urgrosh is a double weapon.	This is the axe head.
-	Cold Iron is effective against some Fey.
-	Magic enhancements cost an additional 2000 gold pieces.
-
-Dwarven Urgrosh Spear Head [Cold Iron]
-Damage: 1d6 [20 x2] Piercing
-Hardness: 5
-Hit Points: 10
-Spear Head Enhancement Cost: 50 gold pieces
-Weapon Text:
-	A dwarven urgrosh is a double weapon.	This is the spear head.
-	Cold Iron is effective against some Fey.
-	Magic enhancements cost an additional 2000 gold pieces.
