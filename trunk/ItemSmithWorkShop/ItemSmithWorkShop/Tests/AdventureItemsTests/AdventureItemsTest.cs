@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AdventureItems;
 using ApprovalTests;
 using ItemSmithWorkShop.AdventureItems.WeaponAdons;
+using ItemSmithWorkShop.AdventureItems;
 
 namespace AdventureItemsTests
 {
@@ -46,7 +47,7 @@ namespace AdventureItemsTests
 		public void TestCreateColdIronWeapon()
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			ColdIreonWeaponItem ironWeapon = new ColdIreonWeaponItem(weapon);
+			ColdIronWeaponItem ironWeapon = new ColdIronWeaponItem(weapon);
 			Approvals.Approve(ironWeapon.GetItem());
 		}
 
@@ -96,7 +97,7 @@ namespace AdventureItemsTests
 		public void TestCreateMagicColdIronWeapon()
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			ColdIreonWeaponItem ironWeapon = new ColdIreonWeaponItem(weapon);
+			ColdIronWeaponItem ironWeapon = new ColdIronWeaponItem(weapon);
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(ironWeapon, 1);
 			Approvals.Approve(magicWeapon.GetItem());
 		}
@@ -117,6 +118,81 @@ namespace AdventureItemsTests
 			MithralWeaponItem mithralWeapon = new MithralWeaponItem(weapon);
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(mithralWeapon, 1);
 			Approvals.Approve(magicWeapon.GetItem());
+		}
+
+		[TestMethod]
+		public void TestDisplayFullMagicItemText()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 1);
+			Approvals.Approve(magicWeapon.DisplayFullText());
+		}
+
+		[TestMethod]
+		public void TestDisplayMaxEnhancedWeaponItem()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 5);
+			Approvals.Approve(magicWeapon.DisplayFullText());
+		}
+
+		[TestMethod]
+		public void TestFlamingEnchantment()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 1);
+			EnchantedWeaponItem enchantedWeapon = new EnchantedWeaponItem(magicWeapon, "Flaming");
+			Approvals.Approve(enchantedWeapon.DisplayFullText());
+		}
+
+		[TestMethod]
+		public void TestFlamingAdamantineWeapon()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			AdamantineWeaponItem adamantineWeapon = new AdamantineWeaponItem(weapon);
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(adamantineWeapon, 1);
+			EnchantedWeaponItem enchantedWeapon = new EnchantedWeaponItem(magicWeapon, "Flaming");
+			Approvals.Approve(enchantedWeapon.DisplayFullText());
+		}
+
+		[TestMethod]
+		public void TestFlamingSilverWeapon()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			AlchemicalSilverWeaponItem silverWeapon = new AlchemicalSilverWeaponItem(weapon);
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(silverWeapon, 1);
+			EnchantedWeaponItem enchantedWeapon = new EnchantedWeaponItem(magicWeapon, "Flaming");
+			Approvals.Approve(enchantedWeapon.DisplayFullText());
+		}
+
+		[TestMethod]
+		public void TestFlamingColdIreonWeapon()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			ColdIronWeaponItem ironWeapon = new ColdIronWeaponItem(weapon);
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(ironWeapon, 1);
+			EnchantedWeaponItem enchantedWeapon = new EnchantedWeaponItem(magicWeapon, "Flaming");
+			Approvals.Approve(enchantedWeapon.DisplayFullText());
+		}
+
+		[TestMethod]
+		public void TestFlamingDarkwoodItem()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			DarkwoodWeaponItem darkwoodWeapon = new DarkwoodWeaponItem(weapon);
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(darkwoodWeapon, 1);
+			EnchantedWeaponItem enchantedWeapon = new EnchantedWeaponItem(magicWeapon, "Flaming");
+			Approvals.Approve(enchantedWeapon.DisplayFullText());
+		}
+
+		[TestMethod]
+		public void TestFlamingMithralItem()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			MithralWeaponItem mithralWeapon = new MithralWeaponItem(weapon);
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(mithralWeapon, 1);
+			EnchantedWeaponItem enchantedWeapon = new EnchantedWeaponItem(magicWeapon, "Flaming");
+			Approvals.Approve(enchantedWeapon.DisplayFullText());
 		}
 	}
 }
