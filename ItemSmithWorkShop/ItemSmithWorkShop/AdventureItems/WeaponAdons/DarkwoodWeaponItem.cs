@@ -27,6 +27,11 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			return DarkwoodNamePrefix + weaponItem.GetName();
 		}
 
+		public override bool IsMasterwork()
+		{
+			return true;
+		}
+
 		public override double GetCost()
 		{
 			return weaponItem.GetCost() + (weight * DarkwoodCostModifier) + MasterworkCostModifier;
@@ -46,6 +51,31 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 		public override string GetDamage()
 		{
 			return weaponItem.GetDamage();
+		}
+
+		public override string GetThreat()
+		{
+			return weaponItem.GetThreat();
+		}
+
+		public override string GetCriticalMultiplier()
+		{
+			return weaponItem.GetCriticalMultiplier();
+		}
+
+		public override string GetDamageType()
+		{
+			return weaponItem.GetDamageType();
+		}
+
+		public override double GetHardness()
+		{
+			return weaponItem.GetHardness();
+		}
+
+		public override double GetHitPoints()
+		{
+			return weaponItem.GetHitPoints();
 		}
 
 		public override string GetDescription()

@@ -48,6 +48,11 @@ namespace AdventureItems
 			return cost;
 		}
 
+		public override bool IsMasterwork()
+		{
+			return false;
+		}
+
 		public override double GetWeight()
 		{
 			return weight;
@@ -61,6 +66,31 @@ namespace AdventureItems
 		public override string GetDamage()
 		{
 			return damage;
+		}
+
+		public override string GetThreat()
+		{
+			return threatRange;
+		}
+
+		public override string GetCriticalMultiplier()
+		{
+			return critical;
+		}
+
+		public override string GetDamageType()
+		{
+			return damageType;
+		}
+
+		public override double GetHardness()
+		{
+			return hardness;
+		}
+
+		public override double GetHitPoints()
+		{
+			return hitPoints;
 		}
 
 		public string GetItem()

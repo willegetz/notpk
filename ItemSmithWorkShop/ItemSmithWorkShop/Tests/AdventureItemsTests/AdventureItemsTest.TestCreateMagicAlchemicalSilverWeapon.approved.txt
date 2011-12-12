@@ -1,4 +1,4 @@
-+1 Alchemical Silver Dagger:	'2022 gp'
++1 Alchemical Silver Dagger:	'2322 gp'
 Weight: '1 pound(s)'
 To Hit: '+1'
 Damage: '1d4 +0'

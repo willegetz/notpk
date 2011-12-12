@@ -1,4 +1,4 @@
-+1 Dagger:	'2002 gp'
++1 Dagger:	'2302 gp'
 Weight: '1 pound(s)'
 To Hit: '+1'
 Damage: '1d4 +1'

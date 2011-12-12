@@ -47,13 +47,16 @@
   <ItemGroup>
     <Compile Include="AdventureItems\AdventureItem.cs" />
     <Compile Include="AdventureItems\AdventureItemShop.cs" />
+    <Compile Include="AdventureItems\WeaponAdons\EnchantedWeaponItem.cs" />
     <Compile Include="AdventureItems\WeaponAdons\AdamantineWeaponItem.cs" />
     <Compile Include="AdventureItems\WeaponAdons\AlchemicalSilverWeaponItem.cs" />
-    <Compile Include="AdventureItems\WeaponAdons\ColdIreonWeaponItem.cs" />
+    <Compile Include="AdventureItems\WeaponAdons\ColdIronWeaponItem.cs" />
     <Compile Include="AdventureItems\WeaponAdons\DarkwoodWeaponItem.cs" />
     <Compile Include="AdventureItems\WeaponAdons\MagicWeaponItem.cs" />
     <Compile Include="AdventureItems\WeaponAdons\MasterworkWeaponItem.cs" />
     <Compile Include="AdventureItems\WeaponAdons\MithralWeaponItem.cs" />
+    <Compile Include="AdventureItems\WeaponEnchanter.cs" />
+    <Compile Include="AdventureItems\WeaponEnchantment.cs" />
     <Compile Include="AdventureItems\WeaponItem.cs" />
     <Compile Include="AdventureItems\WeaponItemSmith.cs" />
     <Compile Include="AdventureItems\WeaponItemWeaver.cs" />
@@ -144,6 +147,30 @@
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateWeapon.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestDisplayFullMagicItemText.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestDisplayMaxEnhancedWeaponItem.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestFlamingAdamantineWeapon.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestFlamingColdIreonWeapon.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestFlamingDarkwoodItem.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestFlamingEnchantment.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestFlamingMithralItem.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestFlamingSilverWeapon.approved.txt">
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
     <Content Include="Tests\NewWeaponSmithSpikeTests\WeaponSmithDecoratorSpikeTest.TestCreateDagger.approved.txt" />
