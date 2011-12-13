@@ -141,7 +141,7 @@ namespace AdventureItemsTests
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 1);
-			EnchantedWeaponItem enchantedWeapon = new EnchantedWeaponItem(magicWeapon, "Flaming");
+			EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
 			Approvals.Approve(enchantedWeapon.DisplayFullText());
 		}
 
@@ -151,7 +151,7 @@ namespace AdventureItemsTests
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			AdamantineWeaponItem adamantineWeapon = new AdamantineWeaponItem(weapon);
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(adamantineWeapon, 1);
-			EnchantedWeaponItem enchantedWeapon = new EnchantedWeaponItem(magicWeapon, "Flaming");
+			EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
 			Approvals.Approve(enchantedWeapon.DisplayFullText());
 		}
 
@@ -161,7 +161,7 @@ namespace AdventureItemsTests
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			AlchemicalSilverWeaponItem silverWeapon = new AlchemicalSilverWeaponItem(weapon);
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(silverWeapon, 1);
-			EnchantedWeaponItem enchantedWeapon = new EnchantedWeaponItem(magicWeapon, "Flaming");
+			EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
 			Approvals.Approve(enchantedWeapon.DisplayFullText());
 		}
 
@@ -171,7 +171,7 @@ namespace AdventureItemsTests
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			ColdIronWeaponItem ironWeapon = new ColdIronWeaponItem(weapon);
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(ironWeapon, 1);
-			EnchantedWeaponItem enchantedWeapon = new EnchantedWeaponItem(magicWeapon, "Flaming");
+			EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
 			Approvals.Approve(enchantedWeapon.DisplayFullText());
 		}
 
@@ -181,7 +181,7 @@ namespace AdventureItemsTests
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			DarkwoodWeaponItem darkwoodWeapon = new DarkwoodWeaponItem(weapon);
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(darkwoodWeapon, 1);
-			EnchantedWeaponItem enchantedWeapon = new EnchantedWeaponItem(magicWeapon, "Flaming");
+			EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
 			Approvals.Approve(enchantedWeapon.DisplayFullText());
 		}
 
@@ -191,9 +191,35 @@ namespace AdventureItemsTests
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			MithralWeaponItem mithralWeapon = new MithralWeaponItem(weapon);
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(mithralWeapon, 1);
-			EnchantedWeaponItem enchantedWeapon = new EnchantedWeaponItem(magicWeapon, "Flaming");
+			EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
 			Approvals.Approve(enchantedWeapon.DisplayFullText());
 		}
+
+		[TestMethod]
+		public void TestWeaponEnchanter()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 1);
+			EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
+			Approvals.Approve(enchantedWeapon.DisplayFullText());
+		}
+
+		[TestMethod]
+		public void TestDoubleWeaponEnchanter()
+		{
+			// Total Price does not compute correctly
+			// Base damage type does not display
+			// Threat and crit does not display
+			// Dagger description does not display
+			// Creation costs are not computed correctly
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 1);
+			EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
+			EnchantedWeaponItem doubleEnchantedWeapon = WeaponEnchanter.RequestEnchantment(enchantedWeapon, "Flaming");
+			Approvals.Approve(doubleEnchantedWeapon.DisplayFullText());
+		}
+
+		// EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
 
 		// Re-factor this program first.
 		// Renames must happen.

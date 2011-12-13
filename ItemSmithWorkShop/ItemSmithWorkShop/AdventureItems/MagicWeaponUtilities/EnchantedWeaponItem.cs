@@ -17,6 +17,12 @@ namespace ItemSmithWorkShop.AdventureItems
 			enchantment = new WeaponEnchantment(enchantmentType);
 		}
 
+		public EnchantedWeaponItem(WeaponItemWeaver magicWeapon, WeaponEnchantment newEnchantment)
+		{
+			weaponItem = magicWeapon;
+			enchantment = newEnchantment;
+		}
+
 		public override string GetName()
 		{
 			return string.Format("{0}, {1}", weaponItem.GetName(), enchantment.GetName());
