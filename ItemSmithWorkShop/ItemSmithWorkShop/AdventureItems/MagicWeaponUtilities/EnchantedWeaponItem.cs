@@ -49,6 +49,16 @@ namespace ItemSmithWorkShop.AdventureItems
 			return string.Format("{0} +{1}", weaponItem.GetDamage(), enchantment.GetDamage());
 		}
 
+		public override string GetThreat()
+		{
+			return weaponItem.GetThreat();
+		}
+
+		public override string GetDamageType()
+		{
+			return weaponItem.GetDamageType() + ", " + enchantment.GetDamageType();
+		}
+
 		public override double GetModifiedHardness()
 		{
 			return weaponItem.GetModifiedHardness() + (enchantment.GetEnhancementCostModifier() * 2);
@@ -73,6 +83,11 @@ namespace ItemSmithWorkShop.AdventureItems
 			return weaponItem.GetMinimumCasterLevel();
 		}
 
+		public override string GetDescription()
+		{
+			return weaponItem.GetDescription() + enchantment.GetDescription();
+		}
+
 		public override double GetDaysToCreate()
 		{
 			return GetEnhancementCost() / 1000;
@@ -88,6 +103,11 @@ namespace ItemSmithWorkShop.AdventureItems
 			return (GetEnhancementCost() / 2) + weaponItem.GetWeaponCost() + weaponItem.GetAdditionalMagicCostModifier();
 		}
 
+		public override string GetCreationRequirements()
+		{
+			return enchantment.GetCreationRequirements();
+		}
+
 		internal string DisplayFullText()
 		{
 			var sb = new StringBuilder();
@@ -96,18 +116,18 @@ namespace ItemSmithWorkShop.AdventureItems
 				GetCost(),
 				GetEnhancementBonus(),
 				GetDamage(),
-				weaponItem.GetThreat(),
-				weaponItem.GetDamageType() + ", " + enchantment.GetDamageType(),
+				GetThreat(),
+				GetDamageType(),
 				GetModifiedHardness(),
 				GetModifiedHitPoints(),
 				GetWeight(),
-				weaponItem.GetDescription() + enchantment.GetDescription()));
+				GetDescription()));
 			sb.AppendLine(string.Format("\r\nCreator Caster Level: '{0}'\r\nTime to Create: '{1} Days'\r\nCreation XP Cost: '{2}'\r\nCreation Raw Material Cost: '{3}'\r\n{4}",
 				GetMinimumCasterLevel(),
 				GetDaysToCreate(),
 				GetCreationXpCost(),
 				GetCreationRawMaterialCost(),
-				enchantment.GetCreationRequirements()));
+				GetCreationRequirements()));
 
 			return sb.ToString();
 		}
