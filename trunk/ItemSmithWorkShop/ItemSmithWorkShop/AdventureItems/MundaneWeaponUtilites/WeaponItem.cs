@@ -5,7 +5,7 @@ using ItemSmithWorkShop.AdventureItems;
 
 namespace AdventureItems
 {
-    public class WeaponItem : WeaponItemWeaver
+	public class WeaponItem : WeaponItemWeaver
 	{
 		private string name;
 		private double cost;

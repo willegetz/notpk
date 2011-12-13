@@ -8,6 +8,24 @@ namespace ItemSmithWorkShop.AdventureItems
 	class WeaponEnchantment : WeaponItemWeaver
 	{
 		private string enchantment;
+		private string name;
+		private string damage;
+		private string damageType;
+		private int casterLevel;
+		private int enhancementBonus;
+		private string requirements;
+		private string description;
+
+		public WeaponEnchantment(EnchantmentOrder enchantment)
+		{
+			name = enchantment.Name;
+			damage = enchantment.Damage;
+			damageType = enchantment.DamageType;
+			casterLevel = enchantment.CasterLevel;
+			enhancementBonus = enchantment.EnhancementBonus;
+			requirements = enchantment.Requirements;
+			description = enchantment.Description;
+		}
 
 		public WeaponEnchantment(string enchantmentType)
 		{

@@ -195,6 +195,9 @@ namespace AdventureItemsTests
 			Approvals.Approve(enchantedWeapon.DisplayFullText());
 		}
 
+		// Re-factor this program first.
+		// Renames must happen.
+		// Flow must be examined.
 		// The next tests will involve concatenating another magical effect onto the weapon.
 		// There is also sizing that needs to occur.
 	}

@@ -45,22 +45,24 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdventureItems\AdventureItem.cs" />
-    <Compile Include="AdventureItems\AdventureItemShop.cs" />
-    <Compile Include="AdventureItems\WeaponAdons\EnchantedWeaponItem.cs" />
-    <Compile Include="AdventureItems\WeaponAdons\AdamantineWeaponItem.cs" />
-    <Compile Include="AdventureItems\WeaponAdons\AlchemicalSilverWeaponItem.cs" />
-    <Compile Include="AdventureItems\WeaponAdons\ColdIronWeaponItem.cs" />
-    <Compile Include="AdventureItems\WeaponAdons\DarkwoodWeaponItem.cs" />
-    <Compile Include="AdventureItems\WeaponAdons\MagicWeaponItem.cs" />
-    <Compile Include="AdventureItems\WeaponAdons\MasterworkWeaponItem.cs" />
-    <Compile Include="AdventureItems\WeaponAdons\MithralWeaponItem.cs" />
-    <Compile Include="AdventureItems\WeaponEnchanter.cs" />
-    <Compile Include="AdventureItems\WeaponEnchantment.cs" />
-    <Compile Include="AdventureItems\WeaponItem.cs" />
-    <Compile Include="AdventureItems\WeaponItemSmith.cs" />
+    <Compile Include="AdventureItems\MundaneWeaponUtilites\AdventureItem.cs" />
+    <Compile Include="AdventureItems\MundaneWeaponUtilites\AdventureItemShop.cs" />
+    <Compile Include="AdventureItems\MagicWeaponUtilities\EnchantmentData.cs" />
+    <Compile Include="AdventureItems\MagicWeaponUtilities\EnchantmentOrder.cs" />
+    <Compile Include="AdventureItems\MagicWeaponUtilities\EnchantedWeaponItem.cs" />
+    <Compile Include="AdventureItems\WeaponSpecialQualities\AdamantineWeaponItem.cs" />
+    <Compile Include="AdventureItems\WeaponSpecialQualities\AlchemicalSilverWeaponItem.cs" />
+    <Compile Include="AdventureItems\WeaponSpecialQualities\ColdIronWeaponItem.cs" />
+    <Compile Include="AdventureItems\WeaponSpecialQualities\DarkwoodWeaponItem.cs" />
+    <Compile Include="AdventureItems\MagicWeaponUtilities\MagicWeaponItem.cs" />
+    <Compile Include="AdventureItems\WeaponSpecialQualities\MasterworkWeaponItem.cs" />
+    <Compile Include="AdventureItems\WeaponSpecialQualities\MithralWeaponItem.cs" />
+    <Compile Include="AdventureItems\MagicWeaponUtilities\WeaponEnchanter.cs" />
+    <Compile Include="AdventureItems\MagicWeaponUtilities\WeaponEnchantment.cs" />
+    <Compile Include="AdventureItems\MundaneWeaponUtilites\WeaponItem.cs" />
+    <Compile Include="AdventureItems\MundaneWeaponUtilites\WeaponItemSmith.cs" />
     <Compile Include="AdventureItems\WeaponItemWeaver.cs" />
-    <Compile Include="AdventureItems\WeaponOrder.cs" />
+    <Compile Include="AdventureItems\MundaneWeaponUtilites\WeaponOrder.cs" />
     <Compile Include="NCrunchUtilities\NCrunchSilentReporter .cs" />
     <Compile Include="Tests\AdventureItemsTests\AdventureItemsTest.cs" />
     <Compile Include="Tests\AdventureItemsTests\WeaponItemExceptionTest.cs" />
@@ -145,6 +147,7 @@
       <Name>ApprovalUtilities</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
