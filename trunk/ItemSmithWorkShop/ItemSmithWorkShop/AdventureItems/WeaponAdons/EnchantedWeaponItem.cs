@@ -22,6 +22,11 @@ namespace ItemSmithWorkShop.AdventureItems
 			return string.Format("{0}, {1}", weaponItem.GetName(), enchantment.GetName());
 		}
 
+		public override int GetEnhancementBonus()
+		{
+			return weaponItem.GetEnhancementBonus();
+		}
+
 		private double GetEnhancementCost()
 		{
 			double totalEnhancementBonus = weaponItem.GetEnhancementBonus() + enchantment.GetEnhancementCostModifier();
@@ -31,6 +36,11 @@ namespace ItemSmithWorkShop.AdventureItems
 		public override double GetCost()
 		{
 			return weaponItem.GetWeaponCost() + weaponItem.GetAdditionalMagicCostModifier() + GetEnhancementCost();
+		}
+
+		public override string GetDamage()
+		{
+			return string.Format("{0} +{1}", weaponItem.GetDamage(), enchantment.GetDamage());
 		}
 
 		public override double GetModifiedHardness()
@@ -78,8 +88,8 @@ namespace ItemSmithWorkShop.AdventureItems
 			sb.AppendLine(string.Format("{0}:\t'{1} gp'\r\nTo Hit: '+{2}'\r\nDamage: '{3}{4}' {5}\r\nHardness: '{6}'\r\nHit Points: '{7}'\r\nWeight: '{8} pound(s)'\r\n\t{9}",
 				GetName(),
 				GetCost(),
-				weaponItem.GetEnhancementBonus(),
-				weaponItem.GetDamage() + " +" + enchantment.GetDamage(),
+				GetEnhancementBonus(),
+				GetDamage(),
 				weaponItem.GetThreat(),
 				weaponItem.GetDamageType() + ", " + enchantment.GetDamageType(),
 				GetModifiedHardness(),
