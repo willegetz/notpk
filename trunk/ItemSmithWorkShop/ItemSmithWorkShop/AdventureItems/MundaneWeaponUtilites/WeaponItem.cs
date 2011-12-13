@@ -48,6 +48,11 @@ namespace AdventureItems
 			return cost;
 		}
 
+		public override double GetWeaponCost()
+		{
+			return GetCost();
+		}
+
 		public override bool IsMasterwork()
 		{
 			return false;

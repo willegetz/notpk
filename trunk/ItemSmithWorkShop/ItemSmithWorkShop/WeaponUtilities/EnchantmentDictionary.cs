@@ -22,12 +22,13 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 
 		private static void LoadWeaponEnchantments()
 		{
-			weaponEnchantments = new Dictionary<string,EnchantmentData>(StringComparer.OrdinalIgnoreCase)
+			weaponEnchantments = new Dictionary<string, EnchantmentData>(StringComparer.OrdinalIgnoreCase)
 			{
 				{"Flaming", new EnchantmentData { EnchantmentName = "Flaming", EnchantmentDamage = "1D6", MinimumCasterLevel = 10, EnhancementBonus = 1,
-				DamageType = "Fire", CreationRequirements = "\tRequired Feats: Craft Magic Arms and Armor\n\tRequired Spells: flame blade, flame strike, or fireball",
-				EnchantmentDescription = "\n\n\tUpon command, a flaming weapon is sheathed in fire.\n\tThe fire does not harm the wielder. The effect\n\tremains until another command is given."}
-			}
-		};
+				DamageType = "Fire", CreationRequirements = "\tRequired Feats: Craft Magic Arms and Armor\r\n\tRequired Spells: flame blade, flame strike, or fireball",
+				EnchantmentDescription = "\n\n\tUpon command, a flaming weapon is sheathed in fire.\r\n\tThe fire does not harm the wielder. The effect\r\n\tremains until another command is given." }
+				}
+			};
+		}
 	}
 }
