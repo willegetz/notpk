@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ItemSmithWorkShop.AdventureItems
 {
-	class WeaponEnchantment : WeaponItemWeaver
+	public class WeaponEnchantment : WeaponItemWeaver
 	{
 		private string enchantment;
 		private string name;
@@ -34,37 +34,37 @@ namespace ItemSmithWorkShop.AdventureItems
 
 		public override string GetName()
 		{
-			return enchantment;
+			return name;
 		}
 
 		public override string GetDamage()
 		{
-			return "1D6";
+			return damage;
 		}
 
 		public override int GetCasterLevelRequired()
 		{
-			return 10;
+			return casterLevel;
 		}
 
 		public override int GetEnhancementCostModifier()
 		{
-			return 1;
+			return enhancementBonus;
 		}
 
 		public override string GetDamageType()
 		{
-			return "Fire";
+			return damageType;
 		}
 
 		public override string GetCreationRequirements()
 		{
-			return "\tRequired Feats: Craft Magic Arms and Armor\n\tRequired Spells: flame blade, flame strike, or fireball";
+			return requirements;
 		}
 
 		public override string GetDescription()
 		{
-			return "\n\n\tUpon command, a flaming weapon is sheathed in fire.\n\tThe fire does not harm the wielder. The effect\n\tremains until another command is given.";
+			return description;
 		}
 	}
 }

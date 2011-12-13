@@ -9,10 +9,10 @@ namespace ItemSmithWorkShop.AdventureItems
 {
 	public class WeaponEnchanter
 	{
-
-		private WeaponEnchantment RequestEnchantment(string enchantment)
+		public static EnchantedWeaponItem RequestEnchantment(WeaponItemWeaver magicWeapon, string enchantment)
 		{
-			return new WeaponEnchantment(new EnchantmentOrder(EnchantmentDictionary.GetEnchantmentData(enchantment));
+			var newEnchantment = new WeaponEnchantment(new EnchantmentOrder(EnchantmentDictionary.GetEnchantmentData(enchantment)));
+			return new EnchantedWeaponItem(magicWeapon, newEnchantment);
 		}
 	}
 }
