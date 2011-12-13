@@ -45,9 +45,10 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="WeaponUtilities\EnchantmentDictionary.cs" />
     <Compile Include="AdventureItems\MundaneWeaponUtilites\AdventureItem.cs" />
     <Compile Include="AdventureItems\MundaneWeaponUtilites\AdventureItemShop.cs" />
-    <Compile Include="AdventureItems\MagicWeaponUtilities\EnchantmentData.cs" />
+    <Compile Include="WeaponUtilities\EnchantmentData.cs" />
     <Compile Include="AdventureItems\MagicWeaponUtilities\EnchantmentOrder.cs" />
     <Compile Include="AdventureItems\MagicWeaponUtilities\EnchantedWeaponItem.cs" />
     <Compile Include="AdventureItems\WeaponSpecialQualities\AdamantineWeaponItem.cs" />
