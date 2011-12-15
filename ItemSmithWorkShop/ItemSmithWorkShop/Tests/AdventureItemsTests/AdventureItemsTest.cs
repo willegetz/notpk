@@ -214,21 +214,6 @@ namespace AdventureItemsTests
 			Approvals.Approve(doubleEnchantedWeapon.DisplayFullText());
 		}
 
-		[TestMethod]
-		public void ProofOfConcept()
-		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			AdamantineWeaponItem adamantineWeapon = new AdamantineWeaponItem(weapon);
-			MagicWeaponItem magicWeapon = new MagicWeaponItem(adamantineWeapon, 5);
-			EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
-			EnchantedWeaponItem doubleEnchantedWeapon = WeaponEnchanter.RequestEnchantment(enchantedWeapon, "Flaming");
-			EnchantedWeaponItem tripleEnchantedWeapon = WeaponEnchanter.RequestEnchantment(doubleEnchantedWeapon, "Flaming");
-			EnchantedWeaponItem fourTimesEnchantedWeapon = WeaponEnchanter.RequestEnchantment(tripleEnchantedWeapon, "Flaming");
-			EnchantedWeaponItem fiveTimesEnchantedWeapon = WeaponEnchanter.RequestEnchantment(fourTimesEnchantedWeapon, "Flaming");
-			Approvals.Approve(fiveTimesEnchantedWeapon.DisplayFullText());
-
-		}
-
 		// Re-factor this program first.
 		// Renames must happen.
 		// Flow must be examined.
