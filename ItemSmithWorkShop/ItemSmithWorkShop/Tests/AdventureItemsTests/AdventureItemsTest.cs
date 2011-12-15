@@ -207,11 +207,6 @@ namespace AdventureItemsTests
 		[TestMethod]
 		public void TestDoubleWeaponEnchanter()
 		{
-			// Total Price does not compute correctly
-			// Base damage type does not display
-			// Threat and crit does not display
-			// Dagger description does not display
-			// Creation costs are not computed correctly
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 1);
 			EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
@@ -219,7 +214,20 @@ namespace AdventureItemsTests
 			Approvals.Approve(doubleEnchantedWeapon.DisplayFullText());
 		}
 
-		// EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
+		[TestMethod]
+		public void ProofOfConcept()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			AdamantineWeaponItem adamantineWeapon = new AdamantineWeaponItem(weapon);
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(adamantineWeapon, 5);
+			EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
+			EnchantedWeaponItem doubleEnchantedWeapon = WeaponEnchanter.RequestEnchantment(enchantedWeapon, "Flaming");
+			EnchantedWeaponItem tripleEnchantedWeapon = WeaponEnchanter.RequestEnchantment(doubleEnchantedWeapon, "Flaming");
+			EnchantedWeaponItem fourTimesEnchantedWeapon = WeaponEnchanter.RequestEnchantment(tripleEnchantedWeapon, "Flaming");
+			EnchantedWeaponItem fiveTimesEnchantedWeapon = WeaponEnchanter.RequestEnchantment(fourTimesEnchantedWeapon, "Flaming");
+			Approvals.Approve(fiveTimesEnchantedWeapon.DisplayFullText());
+
+		}
 
 		// Re-factor this program first.
 		// Renames must happen.

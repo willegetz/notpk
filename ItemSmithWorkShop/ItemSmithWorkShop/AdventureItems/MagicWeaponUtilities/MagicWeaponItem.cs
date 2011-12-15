@@ -33,6 +33,11 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			return (Math.Pow(enhancementBonus, 2) * 2000);
 		}
 
+		public override int GetEnhancementCostModifier()
+		{
+			return enhancementBonus;
+		}
+
 		public override double GetWeaponCost()
 		{
 			if (weaponItem.IsMasterwork())

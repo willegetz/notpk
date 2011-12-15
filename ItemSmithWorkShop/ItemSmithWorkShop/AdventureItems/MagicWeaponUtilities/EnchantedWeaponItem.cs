@@ -33,15 +33,29 @@ namespace ItemSmithWorkShop.AdventureItems
 			return weaponItem.GetEnhancementBonus();
 		}
 
+		public override int GetEnhancementCostModifier()
+		{
+			return weaponItem.GetEnhancementCostModifier() + enchantment.GetEnhancementBonus();
+		}
+
 		private double GetEnhancementCost()
 		{
-			double totalEnhancementBonus = weaponItem.GetEnhancementBonus() + enchantment.GetEnhancementCostModifier();
-			return (Math.Pow(totalEnhancementBonus, 2) * 2000);
+			return (Math.Pow(GetEnhancementCostModifier(), 2) * 2000);
 		}
 
 		public override double GetCost()
 		{
-			return weaponItem.GetWeaponCost() + weaponItem.GetAdditionalMagicCostModifier() + GetEnhancementCost();
+			return GetWeaponCost() + GetAdditionalMagicCostModifier() + GetEnhancementCost();
+		}
+
+		public override double GetWeaponCost()
+		{
+			return weaponItem.GetWeaponCost();
+		}
+
+		public override double GetAdditionalMagicCostModifier()
+		{
+			return weaponItem.GetAdditionalMagicCostModifier();
 		}
 
 		public override string GetDamage()
