@@ -52,6 +52,11 @@ namespace ItemSmithWorkShop.AdventureItems
 			return enhancementBonus;
 		}
 
+		public override int GetEnhancementBonus()
+		{
+			return enhancementBonus;
+		}
+
 		public override string GetDamageType()
 		{
 			return damageType;

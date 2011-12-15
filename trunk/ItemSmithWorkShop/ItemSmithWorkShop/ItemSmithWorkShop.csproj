@@ -119,6 +119,9 @@
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestDisplayMaxEnhancedWeaponItem.approved.txt">
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestDoubleWeaponEnchanter.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestFlamingAdamantineWeapon.approved.txt">
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
@@ -137,6 +140,9 @@
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestFlamingSilverWeapon.approved.txt">
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestWeaponEnchanter.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -150,6 +156,9 @@
       <Project>{E9683C33-7A71-4776-B7C9-E89C565AC16B}</Project>
       <Name>ApprovalUtilities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
