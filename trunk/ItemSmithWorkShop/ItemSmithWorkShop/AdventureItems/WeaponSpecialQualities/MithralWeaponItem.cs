@@ -14,6 +14,8 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 		private const int MithralCostModifier = 500;
 
 		private const double MithralWeightModifier = .5;
+		private const string ToHitModifier = "+1";
+		private const string MithralDescription = "\r\n\tMithral weapons are always considered to be masterwork quality.";
 
 		public MithralWeaponItem(WeaponItemWeaver weapon)
 		{
@@ -42,7 +44,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public string GetToHit()
 		{
-			return "+1";
+			return ToHitModifier;
 		}
 
 		public override string GetThreat()
@@ -72,7 +74,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override string GetDescription()
 		{
-			return weaponItem.GetDescription() + "\r\n\tMithral weapons are always considered to be masterwork quality.";
+			return weaponItem.GetDescription() + MithralDescription;
 		}
 
 		public override string GetDamage()

@@ -14,6 +14,8 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 		private const int MasterworkCost = 300;
 		
 		private const string ToHitBonus = "+1";
+		private const string MasterworkDescription = "A masterwork {0} has an additional +1 to hit.\r\n\t";
+
 
 		public MasterworkWeaponItem(WeaponItemWeaver weapon)
 		{
@@ -32,7 +34,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override string GetDescription()
 		{
-			return string.Format("A masterwork {0} has an additional +1 to hit.\r\n\t", weaponItem.GetName()) + weaponItem.GetDescription();
+			return string.Format(MasterworkDescription, weaponItem.GetName()) + weaponItem.GetDescription();
 		}
 
 		public string GetToHit()

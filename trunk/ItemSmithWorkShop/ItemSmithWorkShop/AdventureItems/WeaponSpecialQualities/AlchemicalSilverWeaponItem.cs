@@ -14,6 +14,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 		private const int SilverCostModifier = 20;
 		
 		private const int SilverDamageModifier = -1;
+		private const string SilverDescription = "\r\n\tAlchemical Silver bypasses damage reduction on lycanthropes";
 
 		public AlchemicalSilverWeaponItem(WeaponItemWeaver weapon)
 		{
@@ -77,7 +78,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override string GetDescription()
 		{
-			return weaponItem.GetDescription() + "\r\n\tAlchemical Silver bypasses damage reduction on lycanthropes";
+			return weaponItem.GetDescription() + SilverDescription;
 		}
 
 		public string GetItem()
