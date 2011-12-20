@@ -10,6 +10,11 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 	{
 		WeaponItemWeaver weaponItem;
 
+		private const string MithralNamePrefix = "Mithral ";
+		private const int MithralCostModifier = 500;
+
+		private const double MithralWeightModifier = .5;
+
 		public MithralWeaponItem(WeaponItemWeaver weapon)
 		{
 			weaponItem = weapon;
@@ -17,7 +22,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override string GetName()
 		{
-			return "Mithral " + weaponItem.GetName();
+			return MithralNamePrefix + weaponItem.GetName();
 		}
 
 		public override bool IsMasterwork()
@@ -27,12 +32,12 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override double GetCost()
 		{
-			return weaponItem.GetCost() + (weaponItem.GetWeight() * 500);
+			return weaponItem.GetCost() + (weaponItem.GetWeight() * MithralCostModifier);
 		}
 
 		public override double GetWeight()
 		{
-			return weaponItem.GetWeight() / 2;
+			return weaponItem.GetWeight() * MithralWeightModifier;
 		}
 
 		public string GetToHit()

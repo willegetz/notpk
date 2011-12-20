@@ -16,12 +16,10 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 		
 		private const double DarkwoodWeightModifier = .5;
 		private const string ToHitModifier = "+1";
-		private double weight;
 
 		public DarkwoodWeaponItem(WeaponItemWeaver weapon)
 		{
 			weaponItem = weapon;
-			weight = weaponItem.GetWeight();
 		}
 
 		public override string GetName()
@@ -36,13 +34,13 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override double GetCost()
 		{
-			return weaponItem.GetCost() + (weight * DarkwoodCostModifier) + MasterworkCostModifier;
+			return weaponItem.GetCost() + (weaponItem.GetWeight() * DarkwoodCostModifier) + MasterworkCostModifier;
 		}
 
 		public override double GetWeight()
 		{
-			
-			return weight * DarkwoodWeightModifier;
+
+			return weaponItem.GetWeight() * DarkwoodWeightModifier;
 		}
 
 		public string GetToHit()
