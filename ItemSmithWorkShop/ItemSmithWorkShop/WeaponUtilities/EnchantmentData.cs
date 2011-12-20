@@ -9,6 +9,7 @@ namespace ItemSmithWorkShop.AdventureItems
 	{
 		public string EnchantmentName;
 		public string EnchantmentDamage;
+		public string EnchantmentCriticalDamage;
 		public int MinimumCasterLevel;
 		public int EnhancementBonus;
 		public string DamageType;

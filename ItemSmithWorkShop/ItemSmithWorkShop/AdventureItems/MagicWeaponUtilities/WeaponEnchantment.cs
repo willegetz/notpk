@@ -10,6 +10,7 @@ namespace ItemSmithWorkShop.AdventureItems
 		private string enchantment;
 		private string name;
 		private string damage;
+		private string criticalDamage;
 		private string damageType;
 		private int casterLevel;
 		private int enhancementBonus;
@@ -21,6 +22,7 @@ namespace ItemSmithWorkShop.AdventureItems
 			name = enchantment.Name;
 			damage = enchantment.Damage;
 			damageType = enchantment.DamageType;
+			criticalDamage = enchantment.CriticalDamage;
 			casterLevel = enchantment.CasterLevel;
 			enhancementBonus = enchantment.EnhancementBonus;
 			requirements = enchantment.Requirements;
@@ -40,6 +42,11 @@ namespace ItemSmithWorkShop.AdventureItems
 		public override string GetDamage()
 		{
 			return damage;
+		}
+
+		public override string GetEnchantmentCriticalDamage()
+		{
+			return criticalDamage;
 		}
 
 		public override int GetCasterLevelRequired()

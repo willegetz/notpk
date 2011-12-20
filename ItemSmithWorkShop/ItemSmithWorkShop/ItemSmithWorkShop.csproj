@@ -134,6 +134,9 @@
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestFlamingEnchantment.approved.txt">
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestFlamingIcyBurstDagger.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestFlamingMithralItem.approved.txt">
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>

@@ -60,12 +60,26 @@ namespace ItemSmithWorkShop.AdventureItems
 
 		public override string GetDamage()
 		{
-			return string.Format("{0} +{1}", weaponItem.GetDamage(), enchantment.GetDamage());
+			return string.Format("{0}{1}", weaponItem.GetDamage(), enchantment.GetDamage());
 		}
 
 		public override string GetThreat()
 		{
 			return weaponItem.GetThreat();
+		}
+
+		public override string GetCriticalMultiplier()
+		{
+			return enchantment.GetCriticalMultiplier();
+		}
+
+		public override string GetEnchantmentCriticalDamage()
+		{
+			if (string.IsNullOrEmpty(enchantment.GetEnchantmentCriticalDamage()))
+			{
+				return string.Empty;
+			}
+			return string.Format("{0}", enchantment.GetEnchantmentCriticalDamage());
 		}
 
 		public override string GetDamageType()
@@ -119,18 +133,19 @@ namespace ItemSmithWorkShop.AdventureItems
 
 		public override string GetCreationRequirements()
 		{
-			return enchantment.GetCreationRequirements();
+			return string.Format("{0}{1}", weaponItem.GetCreationRequirements(), enchantment.GetCreationRequirements());
 		}
 
 		internal string DisplayFullText()
 		{
 			var sb = new StringBuilder();
-			sb.AppendLine(string.Format("{0}:\t'{1} gp'\r\nTo Hit: '+{2}'\r\nDamage: '{3}{4}' {5}\r\nHardness: '{6}'\r\nHit Points: '{7}'\r\nWeight: '{8} pound(s)'\r\n\t{9}",
+			sb.AppendLine(string.Format("{0}:\t'{1} gp'\r\nTo Hit: '+{2}'\r\nDamage: '{3}{4}{5}' {6}\r\nHardness: '{7}'\r\nHit Points: '{8}'\r\nWeight: '{9} pound(s)'\r\n\t{10}",
 				GetName(),
 				GetCost(),
 				GetEnhancementBonus(),
 				GetDamage(),
 				GetThreat(),
+				GetEnchantmentCriticalDamage(),
 				GetDamageType(),
 				GetModifiedHardness(),
 				GetModifiedHitPoints(),
