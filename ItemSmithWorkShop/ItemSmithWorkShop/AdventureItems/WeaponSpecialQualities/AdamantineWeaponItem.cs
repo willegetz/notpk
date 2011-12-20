@@ -15,6 +15,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 		private const double AdamantineWeightModifier = 1.33;
 		
 		private const string ToHitBonus = "+1";
+		private const string AdamantineDescription = "\r\n\tAdamantine weapons are always considered to be masterwork quality.\r\n\tAdamantine bypasses a damage reduction of 20.";
 
 		public AdamantineWeaponItem(WeaponItemWeaver weapon)
 		{
@@ -78,7 +79,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override string GetDescription()
 		{
-			return weaponItem.GetDescription() + "\r\n\tAdamantine weapons are always considered to be masterwork quality.\r\n\tAdamantine bypasses a damage reduction of 20.";
+			return weaponItem.GetDescription() + AdamantineDescription;
 		}
 
 		internal string GetItem()

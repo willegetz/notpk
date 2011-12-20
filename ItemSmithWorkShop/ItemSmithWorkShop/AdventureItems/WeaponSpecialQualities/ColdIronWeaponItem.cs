@@ -14,6 +14,8 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 		private const int ColdIronModifier = 2;
 		private const int ColdIronAdditionalMagicCost = 2000;
 
+		private const string ColdIronDescription = "\r\n\tCold Iron is effective against some Fey.\r\n\tMagic enhancements cost an additional 2000 gold pieces.";
+
 		public ColdIronWeaponItem(WeaponItemWeaver weapon)
 		{
 			weaponItem = weapon;
@@ -76,7 +78,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override string GetDescription()
 		{
-			return weaponItem.GetDescription() + "\r\n\tCold Iron is effective against some Fey.\r\n\tMagic enhancements cost an additional 2000 gold pieces.";
+			return weaponItem.GetDescription() + ColdIronDescription;
 		}
 
 		public string GetItem()

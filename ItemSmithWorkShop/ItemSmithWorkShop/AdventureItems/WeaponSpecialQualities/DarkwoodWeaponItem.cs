@@ -16,6 +16,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 		
 		private const double DarkwoodWeightModifier = .5;
 		private const string ToHitModifier = "+1";
+		private const string DarkwoodDescription = "\r\n\tDarkwood weapons are always considered to be masterwork quality.";
 
 		public DarkwoodWeaponItem(WeaponItemWeaver weapon)
 		{
@@ -80,7 +81,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override string GetDescription()
 		{
-			return weaponItem.GetDescription() + "\r\n\tDarkwood weapons are always considered to be masterwork quality.";
+			return weaponItem.GetDescription() + DarkwoodDescription;
 		}
 
 		public string GetItem()
