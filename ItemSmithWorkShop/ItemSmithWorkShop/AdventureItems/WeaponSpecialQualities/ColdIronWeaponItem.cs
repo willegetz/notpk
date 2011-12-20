@@ -22,24 +22,24 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			weaponItem = weapon;
 		}
 
-		public override string GetName()
-		{
-			return ColdIronNamePrefix + weaponItem.GetName();
-		}
-
 		public override bool IsMasterwork()
 		{
 			return true;
 		}
 
-		public override double GetWeight()
+		public override string GetName()
 		{
-			return weaponItem.GetWeight();
+			return ColdIronNamePrefix + weaponItem.GetName();
 		}
 
 		public override double GetCost()
 		{
 			return weaponItem.GetCost() * ColdIronModifier;
+		}
+
+		public override double GetAdditionalMagicCostModifier()
+		{
+			return ColdIronAdditionalMagicCost;
 		}
 
 		public override string GetToHit()
@@ -50,11 +50,6 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 		public override string GetDamage()
 		{
 			return weaponItem.GetDamage();
-		}
-
-		public override double GetAdditionalMagicCostModifier()
-		{
-			return ColdIronAdditionalMagicCost;
 		}
 
 		public override string GetThreat()
@@ -80,6 +75,11 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 		public override double GetHitPoints()
 		{
 			return weaponItem.GetHitPoints();
+		}
+
+		public override double GetWeight()
+		{
+			return weaponItem.GetWeight();
 		}
 
 		public override string GetDescription()
