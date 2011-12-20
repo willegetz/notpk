@@ -8,10 +8,12 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 {
 	public class AlchemicalSilverWeaponItem : WeaponItemWeaver
 	{
+		WeaponItemWeaver weaponItem;
+
 		private const string SilverNmaePrefix = "Alchemical Silver ";
 		private const int SilverCostModifier = 20;
+		
 		private const int SilverDamageModifier = -1;
-		WeaponItemWeaver weaponItem;
 
 		public AlchemicalSilverWeaponItem(WeaponItemWeaver weapon)
 		{

@@ -8,11 +8,13 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 {
 	public class AdamantineWeaponItem : WeaponItemWeaver
 	{
+		WeaponItemWeaver weaponItem;
+
 		private const string AdamantineNamePrefix = "Adamantine ";
 		private const int AdamantineCostModifier = 3000;
 		private const double AdamantineWeightModifier = 1.33;
+		
 		private const string ToHitBonus = "+1";
-		WeaponItemWeaver weaponItem;
 
 		public AdamantineWeaponItem(WeaponItemWeaver weapon)
 		{

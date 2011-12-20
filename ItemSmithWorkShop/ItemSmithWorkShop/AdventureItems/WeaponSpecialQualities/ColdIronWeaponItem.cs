@@ -8,10 +8,11 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 {
 	public class ColdIronWeaponItem : WeaponItemWeaver
 	{
+		WeaponItemWeaver weaponItem;
+
 		private const string ColdIronNamePrefix = "Cold Iron ";
 		private const int ColdIronModifier = 2;
 		private const int ColdIronAdditionalMagicCost = 2000;
-		WeaponItemWeaver weaponItem;
 
 		public ColdIronWeaponItem(WeaponItemWeaver weapon)
 		{
