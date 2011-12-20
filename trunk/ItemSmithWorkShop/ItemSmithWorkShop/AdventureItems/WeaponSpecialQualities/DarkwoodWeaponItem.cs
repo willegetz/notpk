@@ -8,13 +8,15 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 {
 	public class DarkwoodWeaponItem : WeaponItemWeaver
 	{
+		WeaponItemWeaver weaponItem;
+
 		private const string DarkwoodNamePrefix = "Darkwood ";
 		private const int DarkwoodCostModifier = 10;
 		private const int MasterworkCostModifier = 300;
-		private const int DarkwoodWeightModifier = 2;
+		
+		private const double DarkwoodWeightModifier = .5;
 		private const string ToHitModifier = "+1";
 		private double weight;
-		WeaponItemWeaver weaponItem;
 
 		public DarkwoodWeaponItem(WeaponItemWeaver weapon)
 		{
@@ -40,7 +42,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 		public override double GetWeight()
 		{
 			
-			return weight / DarkwoodWeightModifier;
+			return weight * DarkwoodWeightModifier;
 		}
 
 		public string GetToHit()

@@ -8,10 +8,12 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 {
 	public class MasterworkWeaponItem : WeaponItemWeaver
 	{
-		private const int MasterworkCost = 300;
-		private const string MasterworkNamePrefix = "Masterwork ";
-		private const string ToHitBonus = "+1";
 		WeaponItemWeaver weaponItem;
+
+		private const string MasterworkNamePrefix = "Masterwork ";
+		private const int MasterworkCost = 300;
+		
+		private const string ToHitBonus = "+1";
 
 		public MasterworkWeaponItem(WeaponItemWeaver weapon)
 		{
