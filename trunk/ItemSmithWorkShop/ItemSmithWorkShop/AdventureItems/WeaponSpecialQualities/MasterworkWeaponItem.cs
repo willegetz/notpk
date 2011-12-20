@@ -32,19 +32,29 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			return MasterworkCost + weaponItem.GetCost();
 		}
 
+		public override double GetWeight()
+		{
+			return weaponItem.GetWeight();
+		}
+
+		public override string GetDamage()
+		{
+			return weaponItem.GetDamage();
+		}
+
 		public override string GetDescription()
 		{
 			return string.Format(MasterworkDescription, weaponItem.GetName()) + weaponItem.GetDescription();
 		}
 
-		public string GetToHit()
+		public override string GetToHit()
 		{
 			return ToHitBonus;
 		}
 
 		internal string GetItem()
 		{
-			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nTo Hit: '{3}'\r\nDamage: '{4}'\r\n\t{5}", GetName(), GetCost(), weaponItem.GetWeight(), GetToHit(), weaponItem.GetDamage(), GetDescription());
+			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nTo Hit: '{3}'\r\nDamage: '{4}'\r\n\t{5}", GetName(), GetCost(), GetWeight(), GetToHit(), GetDamage(), GetDescription());
 		}
 	}
 }

@@ -42,7 +42,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			return weaponItem.GetWeight() * MithralWeightModifier;
 		}
 
-		public string GetToHit()
+		public override string  GetToHit()
 		{
 			return ToHitModifier;
 		}

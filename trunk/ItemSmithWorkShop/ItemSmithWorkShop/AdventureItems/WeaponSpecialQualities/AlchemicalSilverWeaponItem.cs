@@ -83,7 +83,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public string GetItem()
 		{
-			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nDamage: '{3} {4}'\r\n\t{5}", GetName(), GetCost(), weaponItem.GetWeight(), GetDamage(), GetDamageModifier(), GetDescription());
+			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nTo Hit: '{3}'\r\nDamage: '{4} {5}'\r\n\t{6}", GetName(), GetCost(), GetWeight(), GetToHit(), GetDamage(), GetDamageModifier(), GetDescription());
 		}
 	}
 }

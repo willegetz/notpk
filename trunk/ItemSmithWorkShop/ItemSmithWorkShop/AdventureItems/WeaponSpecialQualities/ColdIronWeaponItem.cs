@@ -41,6 +41,11 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			return weaponItem.GetCost() * ColdIronModifier;
 		}
 
+		public override string GetToHit()
+		{
+			return weaponItem.GetToHit();
+		}
+
 		public override string GetDamage()
 		{
 			return weaponItem.GetDamage();
@@ -83,7 +88,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public string GetItem()
 		{
-			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nDamage: '{3}'\r\n\t{4}", GetName(), GetCost(), weaponItem.GetWeight(), weaponItem.GetDamage(), GetDescription()); 
+			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nTo Hit: '{3}'\r\nDamage: '{4}'\r\n\t{5}", GetName(), GetCost(), GetWeight(), GetToHit(), GetDamage(), GetDescription()); 
 		}
 	}
 }

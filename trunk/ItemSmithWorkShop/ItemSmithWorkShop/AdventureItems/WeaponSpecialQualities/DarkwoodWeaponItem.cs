@@ -44,7 +44,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			return weaponItem.GetWeight() * DarkwoodWeightModifier;
 		}
 
-		public string GetToHit()
+		public override string GetToHit()
 		{
 			return ToHitModifier;
 		}
