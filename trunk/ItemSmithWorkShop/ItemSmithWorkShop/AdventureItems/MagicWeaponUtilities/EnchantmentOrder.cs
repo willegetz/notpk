@@ -9,6 +9,7 @@ namespace ItemSmithWorkShop.AdventureItems
 	{
 		public string Name { get; private set; }
 		public string Damage { get; private set; }
+		public string CriticalDamage { get; private set; }
 		public int CasterLevel { get; private set; }
 		public int EnhancementBonus { get; private set; }
 		public string DamageType { get; private set; }
@@ -24,6 +25,7 @@ namespace ItemSmithWorkShop.AdventureItems
 		{
 			Name = enchantment.EnchantmentName;
 			Damage = enchantment.EnchantmentDamage;
+			CriticalDamage = enchantment.EnchantmentCriticalDamage;
 			CasterLevel = enchantment.MinimumCasterLevel;
 			EnhancementBonus = enchantment.EnhancementBonus;
 			DamageType = enchantment.DamageType;

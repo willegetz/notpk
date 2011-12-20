@@ -62,6 +62,11 @@ namespace ItemSmithWorkShop.AdventureItems
 			return string.Empty;
 		}
 
+		public virtual string GetEnchantmentCriticalDamage()
+		{
+			return string.Empty;
+		}
+
 		public virtual double GetHardness()
 		{
 			return 0;

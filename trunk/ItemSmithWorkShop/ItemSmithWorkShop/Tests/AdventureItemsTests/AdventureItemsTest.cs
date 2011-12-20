@@ -214,6 +214,16 @@ namespace AdventureItemsTests
 			Approvals.Approve(doubleEnchantedWeapon.DisplayFullText());
 		}
 
+		[TestMethod]
+		public void TestFlamingIcyBurstDagger()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 1);
+			EnchantedWeaponItem flamingWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
+			EnchantedWeaponItem icyBurstWeapon = WeaponEnchanter.RequestEnchantment(flamingWeapon, "Icy Burst");
+			Approvals.Approve(icyBurstWeapon.DisplayFullText());
+		}
+
 		// Include cs test files, not approvals.
 		// Re-factor this program first.
 		// Renames must happen.
