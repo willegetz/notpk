@@ -42,6 +42,11 @@ namespace ItemSmithWorkShop.AdventureItems
 			return 0;
 		}
 
+		public virtual string GetToHit()
+		{
+			return string.Empty;
+		}
+
 		public virtual string GetDamage()
 		{
 			return string.Empty;
