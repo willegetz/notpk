@@ -23,14 +23,14 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			weaponItem = weapon;
 		}
 
-		public override string GetName()
-		{
-			return MithralNamePrefix + weaponItem.GetName();
-		}
-
 		public override bool IsMasterwork()
 		{
 			return true;
+		}
+
+		public override string GetName()
+		{
+			return MithralNamePrefix + weaponItem.GetName();
 		}
 
 		public override double GetCost()
@@ -38,14 +38,14 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			return weaponItem.GetCost() + (weaponItem.GetWeight() * MithralCostModifier);
 		}
 
-		public override double GetWeight()
-		{
-			return weaponItem.GetWeight() * MithralWeightModifier;
-		}
-
-		public override string  GetToHit()
+		public override string GetToHit()
 		{
 			return ToHitModifier;
+		}
+
+		public override string GetDamage()
+		{
+			return weaponItem.GetDamage();
 		}
 
 		public override string GetThreat()
@@ -73,14 +73,14 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			return weaponItem.GetHitPoints();
 		}
 
+		public override double GetWeight()
+		{
+			return weaponItem.GetWeight() * MithralWeightModifier;
+		}
+
 		public override string GetDescription()
 		{
 			return weaponItem.GetDescription() + MithralDescription;
-		}
-
-		public override string GetDamage()
-		{
-			return weaponItem.GetDamage();
 		}
 
 		internal string GetItem()

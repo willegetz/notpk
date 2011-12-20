@@ -21,14 +21,14 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			weaponItem = weapon;
 		}
 
-		public override string GetName()
-		{
-			return SilverNmaePrefix + weaponItem.GetName();
-		}
-
 		public override bool IsMasterwork()
 		{
 			return false;
+		}
+
+		public override string GetName()
+		{
+			return SilverNmaePrefix + weaponItem.GetName();
 		}
 
 		public override double GetCost()
@@ -36,10 +36,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			return weaponItem.GetCost() + SilverCostModifier;
 		}
 
-		public override double GetWeight()
-		{
-			return weaponItem.GetWeight();
-		}
+		// To Hit
 
 		public override string GetDamage()
 		{
@@ -74,6 +71,11 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 		public override double GetHitPoints()
 		{
 			return weaponItem.GetHitPoints();
+		}
+
+		public override double GetWeight()
+		{
+			return weaponItem.GetWeight();
 		}
 
 		public override string GetDescription()

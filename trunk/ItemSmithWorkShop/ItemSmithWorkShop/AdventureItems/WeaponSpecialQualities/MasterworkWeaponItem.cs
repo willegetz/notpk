@@ -33,9 +33,9 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			return MasterworkCost + weaponItem.GetCost();
 		}
 
-		public override double GetWeight()
+		public override string GetToHit()
 		{
-			return weaponItem.GetWeight();
+			return ToHitBonus;
 		}
 
 		public override string GetDamage()
@@ -43,14 +43,14 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			return weaponItem.GetDamage();
 		}
 
+		public override double GetWeight()
+		{
+			return weaponItem.GetWeight();
+		}
+
 		public override string GetDescription()
 		{
 			return string.Format(MasterworkDescription, weaponItem.GetName()) + weaponItem.GetDescription();
-		}
-
-		public override string GetToHit()
-		{
-			return ToHitBonus;
 		}
 
 		internal string GetItem()

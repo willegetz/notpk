@@ -38,12 +38,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			return weaponItem.GetCost() + AdamantineCostModifier;
 		}
 
-		public override double GetWeight()
-		{
-			return weaponItem.GetWeight() * AdamantineWeightModifier;
-		}
-
-		public string GetToHit()
+		public override string GetToHit()
 		{
 			return ToHitBonus;
 		}
@@ -76,6 +71,11 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 		public override double GetHitPoints()
 		{
 			return weaponItem.GetHitPoints();
+		}
+
+		public override double GetWeight()
+		{
+			return weaponItem.GetWeight() * AdamantineWeightModifier;
 		}
 
 		public override string GetDescription()
