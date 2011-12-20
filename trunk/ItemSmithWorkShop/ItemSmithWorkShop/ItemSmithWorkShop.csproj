@@ -45,6 +45,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="WeaponUtilities\DisplayUtilities.cs" />
     <Compile Include="WeaponUtilities\EnchantmentDictionary.cs" />
     <Compile Include="AdventureItems\MundaneWeaponUtilites\AdventureItem.cs" />
     <Compile Include="AdventureItems\MundaneWeaponUtilites\AdventureItemShop.cs" />
