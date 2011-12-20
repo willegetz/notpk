@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using AdventureItems;
+using ItemSmithWorkShop.WeaponUtilities;
 
 namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 {
@@ -86,7 +87,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public string GetItem()
 		{
-			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nTo Hit: '{3}'\r\nDamage: '{4}'\r\n\t{5}", GetName(), GetCost(), GetWeight(), GetToHit(), GetDamage(), GetDescription());
+			return DisplayUtilities.BasicDisplay(GetName(), GetCost(), GetWeight(), GetToHit(), GetDamage(), GetDescription());
 		}
 	}
 }
