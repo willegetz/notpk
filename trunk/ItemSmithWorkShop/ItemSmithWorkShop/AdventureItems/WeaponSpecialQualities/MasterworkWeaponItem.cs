@@ -11,11 +11,13 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 	{
 		WeaponItemWeaver weaponItem;
 
-		private const string MasterworkNamePrefix = "Masterwork ";
-		private const int MasterworkCost = 300;
-		
+		private const string ComponentName = "Masterwork ";
+		private const int ComponentCostModifier = 0;
+		private const int MasterworkCostModifier = 300;
+		private const double ComponentWeightModifier = 1;
 		private const string ToHitBonus = "+1";
-		private const string MasterworkDescription = "A masterwork {0} has an additional +1 to hit.\r\n\t";
+		private const int ComponentDamageModifier = 0;
+		private const string ComponentDescription = "A masterwork {0} has an additional +1 to hit.\r\n\t";
 
 
 		public MasterworkWeaponItem(WeaponItemWeaver weapon)
@@ -25,12 +27,12 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override string GetName()
 		{
-			return MasterworkNamePrefix + weaponItem.GetName();
+			return ComponentName + weaponItem.GetName();
 		}
 
 		public override double GetCost()
 		{
-			return MasterworkCost + weaponItem.GetCost();
+			return MasterworkCostModifier + weaponItem.GetCost();
 		}
 
 		public override string GetToHit()
@@ -50,7 +52,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override string GetDescription()
 		{
-			return string.Format(MasterworkDescription, weaponItem.GetName()) + weaponItem.GetDescription();
+			return string.Format(ComponentDescription, weaponItem.GetName()) + weaponItem.GetDescription();
 		}
 
 		internal string GetItem()

@@ -11,11 +11,15 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 	{
 		WeaponItemWeaver weaponItem;
 
-		private const string ColdIronNamePrefix = "Cold Iron ";
-		private const int ColdIronModifier = 2;
-		private const int ColdIronAdditionalMagicCost = 2000;
+		private const string ComponentName = "Cold Iron ";
+		private const int ComponentCostModifier = 2;
+		private const int MasterworkCostModifier = 0;
+		private const double ComponentWeightModifier = 1;
+		private const string ToHitBonus = "";
+		private const int ComponentDamageModifier = 0;
+		private const string ComponentDescription = "\r\n\tCold Iron is effective against some Fey.\r\n\tMagic enhancements cost an additional 2000 gold pieces.";
 
-		private const string ColdIronDescription = "\r\n\tCold Iron is effective against some Fey.\r\n\tMagic enhancements cost an additional 2000 gold pieces.";
+		private const int ColdIronAdditionalMagicCost = 2000;
 
 		public ColdIronWeaponItem(WeaponItemWeaver weapon)
 		{
@@ -29,12 +33,12 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override string GetName()
 		{
-			return ColdIronNamePrefix + weaponItem.GetName();
+			return ComponentName + weaponItem.GetName();
 		}
 
 		public override double GetCost()
 		{
-			return weaponItem.GetCost() * ColdIronModifier;
+			return weaponItem.GetCost() * ComponentCostModifier;
 		}
 
 		public override double GetAdditionalMagicCostModifier()
@@ -84,7 +88,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override string GetDescription()
 		{
-			return weaponItem.GetDescription() + ColdIronDescription;
+			return weaponItem.GetDescription() + ComponentDescription;
 		}
 
 		public string GetItem()

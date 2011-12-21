@@ -11,12 +11,13 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 	{
 		WeaponItemWeaver weaponItem;
 
-		private const string MithralNamePrefix = "Mithral ";
-		private const int MithralCostModifier = 500;
-
-		private const double MithralWeightModifier = .5;
-		private const string ToHitModifier = "+1";
-		private const string MithralDescription = "\r\n\tMithral weapons are always considered to be masterwork quality.";
+		private const string ComponentName = "Mithral ";
+		private const int ComponentCostModifier = 500;
+		private const int MasterworkCostModifier = 0;
+		private const double ComponentWeightModifier = .5;
+		private const string ToHitBonus = "+1";
+		private const int ComponentDamageModifier = 0;
+		private const string ComponentDescription = "\r\n\tMithral weapons are always considered to be masterwork quality.";
 
 		public MithralWeaponItem(WeaponItemWeaver weapon)
 		{
@@ -30,17 +31,17 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override string GetName()
 		{
-			return MithralNamePrefix + weaponItem.GetName();
+			return ComponentName + weaponItem.GetName();
 		}
 
 		public override double GetCost()
 		{
-			return weaponItem.GetCost() + (weaponItem.GetWeight() * MithralCostModifier);
+			return weaponItem.GetCost() + (weaponItem.GetWeight() * ComponentCostModifier);
 		}
 
 		public override string GetToHit()
 		{
-			return ToHitModifier;
+			return ToHitBonus;
 		}
 
 		public override string GetDamage()
@@ -75,12 +76,12 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override double GetWeight()
 		{
-			return weaponItem.GetWeight() * MithralWeightModifier;
+			return weaponItem.GetWeight() * ComponentWeightModifier;
 		}
 
 		public override string GetDescription()
 		{
-			return weaponItem.GetDescription() + MithralDescription;
+			return weaponItem.GetDescription() + ComponentDescription;
 		}
 
 		internal string GetItem()
