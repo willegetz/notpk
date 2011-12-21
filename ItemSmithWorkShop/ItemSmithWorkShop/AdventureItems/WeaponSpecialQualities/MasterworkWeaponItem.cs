@@ -25,6 +25,11 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			weaponItem = weapon;
 		}
 
+		public override bool IsMasterwork()
+		{
+			return true;
+		}
+
 		public override string GetName()
 		{
 			return ComponentName + weaponItem.GetName();
@@ -32,7 +37,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override double GetCost()
 		{
-			return MasterworkCostModifier + weaponItem.GetCost();
+			return weaponItem.GetCost() + MasterworkCostModifier;
 		}
 
 		public override string GetToHit()

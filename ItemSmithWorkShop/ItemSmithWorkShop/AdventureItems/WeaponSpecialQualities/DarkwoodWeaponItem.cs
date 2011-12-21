@@ -76,7 +76,6 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override double GetWeight()
 		{
-
 			return weaponItem.GetWeight() * ComponentWeightModifier;
 		}
 
