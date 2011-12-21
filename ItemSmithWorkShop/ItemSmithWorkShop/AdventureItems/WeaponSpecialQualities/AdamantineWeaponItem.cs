@@ -11,12 +11,13 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 	{
 		WeaponItemWeaver weaponItem;
 
-		private const string AdamantineNamePrefix = "Adamantine ";
-		private const int AdamantineCostModifier = 3000;
-		private const double AdamantineWeightModifier = 1.33;
-		
+		private const string ComponentName = "Adamantine ";
+		private const int ComponentCostModifier = 3000;
+		private const int MasterworkCostModifier = 0;
+		private const double ComponentWeightModifier = 1.33;
 		private const string ToHitBonus = "+1";
-		private const string AdamantineDescription = "\r\n\tAdamantine weapons are always considered to be masterwork quality.\r\n\tAdamantine bypasses a damage reduction of 20.";
+		private const int ComponentDamageModifier = 0;
+		private const string ComponentDescription = "\r\n\tAdamantine weapons are always considered to be masterwork quality.\r\n\tAdamantine bypasses a damage reduction of 20.";
 
 		public AdamantineWeaponItem(WeaponItemWeaver weapon)
 		{
@@ -30,12 +31,12 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override string GetName()
 		{
-			return AdamantineNamePrefix + weaponItem.GetName();
+			return ComponentName + weaponItem.GetName();
 		}
 
 		public override double GetCost()
 		{
-			return weaponItem.GetCost() + AdamantineCostModifier;
+			return weaponItem.GetCost() + ComponentCostModifier;
 		}
 
 		public override string GetToHit()
@@ -75,12 +76,12 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override double GetWeight()
 		{
-			return weaponItem.GetWeight() * AdamantineWeightModifier;
+			return weaponItem.GetWeight() * ComponentWeightModifier;
 		}
 
 		public override string GetDescription()
 		{
-			return weaponItem.GetDescription() + AdamantineDescription;
+			return weaponItem.GetDescription() + ComponentDescription;
 		}
 
 		internal string GetItem()

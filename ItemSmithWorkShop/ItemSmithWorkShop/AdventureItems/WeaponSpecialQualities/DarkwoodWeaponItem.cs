@@ -11,13 +11,13 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 	{
 		WeaponItemWeaver weaponItem;
 
-		private const string DarkwoodNamePrefix = "Darkwood ";
-		private const int DarkwoodCostModifier = 10;
+		private const string ComponentName = "Darkwood ";
+		private const int ComponentCostModifier = 10;
 		private const int MasterworkCostModifier = 300;
-		
-		private const double DarkwoodWeightModifier = .5;
-		private const string ToHitModifier = "+1";
-		private const string DarkwoodDescription = "\r\n\tDarkwood weapons are always considered to be masterwork quality.";
+		private const double ComponentWeightModifier = .5;
+		private const string ToHitBonus = "+1";
+		private const int ComponentDamageModifier = 0;
+		private const string ComponentDescription = "\r\n\tDarkwood weapons are always considered to be masterwork quality.";
 
 		public DarkwoodWeaponItem(WeaponItemWeaver weapon)
 		{
@@ -31,17 +31,17 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override string GetName()
 		{
-			return DarkwoodNamePrefix + weaponItem.GetName();
+			return ComponentName + weaponItem.GetName();
 		}
 
 		public override double GetCost()
 		{
-			return weaponItem.GetCost() + (weaponItem.GetWeight() * DarkwoodCostModifier) + MasterworkCostModifier;
+			return weaponItem.GetCost() + (weaponItem.GetWeight() * ComponentCostModifier) + MasterworkCostModifier;
 		}
 
 		public override string GetToHit()
 		{
-			return ToHitModifier;
+			return ToHitBonus;
 		}
 
 		public override string GetDamage()
@@ -77,12 +77,12 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 		public override double GetWeight()
 		{
 
-			return weaponItem.GetWeight() * DarkwoodWeightModifier;
+			return weaponItem.GetWeight() * ComponentWeightModifier;
 		}
 
 		public override string GetDescription()
 		{
-			return weaponItem.GetDescription() + DarkwoodDescription;
+			return weaponItem.GetDescription() + ComponentDescription;
 		}
 
 		public string GetItem()

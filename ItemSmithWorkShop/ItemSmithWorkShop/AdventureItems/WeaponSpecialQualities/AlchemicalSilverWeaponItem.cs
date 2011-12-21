@@ -10,11 +10,13 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 	{
 		WeaponItemWeaver weaponItem;
 
-		private const string SilverNmaePrefix = "Alchemical Silver ";
-		private const int SilverCostModifier = 20;
-		
-		private const int SilverDamageModifier = -1;
-		private const string SilverDescription = "\r\n\tAlchemical Silver bypasses damage reduction on lycanthropes";
+		private const string ComponentName = "Alchemical Silver ";
+		private const int ComponentCostModifier = 20;
+		private const int MasterworkCostModifier = 0;
+		private const double ComponentWeightModifier = 1;
+		private const string ToHitBonus = "";
+		private const int ComponentDamageModifier = -1;
+		private const string ComponentDescription = "\r\n\tAlchemical Silver bypasses damage reduction on lycanthropes";
 
 		public AlchemicalSilverWeaponItem(WeaponItemWeaver weapon)
 		{
@@ -28,12 +30,12 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override string GetName()
 		{
-			return SilverNmaePrefix + weaponItem.GetName();
+			return ComponentName + weaponItem.GetName();
 		}
 
 		public override double GetCost()
 		{
-			return weaponItem.GetCost() + SilverCostModifier;
+			return weaponItem.GetCost() + ComponentCostModifier;
 		}
 
 		// To Hit
@@ -45,7 +47,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override int GetDamageModifier()
 		{
-			return SilverDamageModifier;
+			return ComponentDamageModifier;
 		}
 
 		public override string GetThreat()
@@ -80,7 +82,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override string GetDescription()
 		{
-			return weaponItem.GetDescription() + SilverDescription;
+			return weaponItem.GetDescription() + ComponentDescription;
 		}
 
 		public string GetItem()
