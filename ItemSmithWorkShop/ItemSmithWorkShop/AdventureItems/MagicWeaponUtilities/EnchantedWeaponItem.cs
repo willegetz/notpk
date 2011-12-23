@@ -11,12 +11,6 @@ namespace ItemSmithWorkShop.AdventureItems
 		WeaponItemWeaver weaponItem;
 		WeaponEnchantment enchantment;
 
-		public EnchantedWeaponItem(WeaponItemWeaver magicWeapon, string enchantmentType)
-		{
-			weaponItem = magicWeapon;
-			enchantment = new WeaponEnchantment(enchantmentType);
-		}
-
 		public EnchantedWeaponItem(WeaponItemWeaver magicWeapon, WeaponEnchantment newEnchantment)
 		{
 			weaponItem = magicWeapon;

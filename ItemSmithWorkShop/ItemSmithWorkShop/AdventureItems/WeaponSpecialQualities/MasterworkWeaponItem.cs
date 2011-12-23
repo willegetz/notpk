@@ -4,25 +4,19 @@ using System.Linq;
 using System.Text;
 using AdventureItems;
 using ItemSmithWorkShop.WeaponUtilities;
+using ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites;
 
 namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 {
 	public class MasterworkWeaponItem : WeaponItemWeaver
 	{
 		WeaponItemWeaver weaponItem;
+		MaterialComponentOrder materialComponent;
 
-		private const string ComponentName = "Masterwork ";
-		private const int ComponentCostModifier = 0;
-		private const int MasterworkCostModifier = 300;
-		private const double ComponentWeightModifier = 1;
-		private const string ToHitBonus = "+1";
-		private const int ComponentDamageModifier = 0;
-		private const string ComponentDescription = "A masterwork {0} has an additional +1 to hit.\r\n\t";
-
-
-		public MasterworkWeaponItem(WeaponItemWeaver weapon)
+		public MasterworkWeaponItem(WeaponItemWeaver weapon, MaterialComponentOrder component)
 		{
 			weaponItem = weapon;
+			materialComponent = component;
 		}
 
 		public override bool IsMasterwork()
@@ -32,24 +26,26 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override string GetName()
 		{
-			return ComponentName + weaponItem.GetName();
+			return materialComponent.Name + weaponItem.GetName();
 		}
 
 		public override double GetCost()
 		{
-			return weaponItem.GetCost() + MasterworkCostModifier;
+			return weaponItem.GetCost() + materialComponent.MasterworkCost;
 		}
 
 		public override string GetToHit()
 		{
-			return ToHitBonus;
+			return materialComponent.ToHit;
 		}
 
+		// required for display
 		public override string GetDamage()
 		{
 			return weaponItem.GetDamage();
 		}
 
+		// required for display
 		public override double GetWeight()
 		{
 			return weaponItem.GetWeight();
@@ -57,7 +53,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 
 		public override string GetDescription()
 		{
-			return string.Format(ComponentDescription, weaponItem.GetName()) + weaponItem.GetDescription();
+			return string.Format(materialComponent.Description, weaponItem.GetName()) + weaponItem.GetDescription();
 		}
 
 		internal string GetItem()

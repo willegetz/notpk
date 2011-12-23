@@ -45,6 +45,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdventureItems\MundaneWeaponUtilites\MaterialComponentOrder.cs" />
     <Compile Include="WeaponUtilities\DisplayUtilities.cs" />
     <Compile Include="WeaponUtilities\EnchantmentDictionary.cs" />
     <Compile Include="AdventureItems\MundaneWeaponUtilites\AdventureItem.cs" />
@@ -69,6 +70,8 @@
     <Compile Include="Tests\AdventureItemsTests\AdventureItemsTest.cs" />
     <Compile Include="Tests\AdventureItemsTests\WeaponItemExceptionTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeaponUtilities\MaterialComponentData.cs" />
+    <Compile Include="WeaponUtilities\MaterialComponentDictionary.cs" />
     <Compile Include="WeaponUtilities\TempWeaponDictionary.cs" />
     <Compile Include="WeaponUtilities\WeaponData.cs" />
     <Compile Include="WeaponUtilities\WeaponSizing.cs" />
