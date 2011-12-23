@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites;
 
 namespace ItemSmithWorkShop.AdventureItems
 {
@@ -19,6 +20,8 @@ namespace ItemSmithWorkShop.AdventureItems
 		public string Category { get; private set; }
 		public double Hardness { get; private set; }
 		public double HitPoints { get; private set; }
+
+		public string ToHit { get; set; }
 
 		public string Part { get; private set; }
 
@@ -44,6 +47,28 @@ namespace ItemSmithWorkShop.AdventureItems
 			Hardness = data.WeaponHardness;
 			HitPoints = data.WeaponHitPoints;
 			Part = data.WeaponPart;
+			ToHit = "+0";
+		}
+
+		internal void SetName(string componentName)
+		{
+			Name = componentName + Name;
+		}
+
+		internal void SetCost(double componentCost, double masterworkCost)
+		{
+			Cost += masterworkCost;
+		}
+
+		public void SetToHit(string toHit)
+		{
+			ToHit = toHit;
+		}
+
+
+		internal void SetDescription(string description)
+		{
+			Description += string.Format("\r\n\t" + description, Name);
 		}
 	}
 }

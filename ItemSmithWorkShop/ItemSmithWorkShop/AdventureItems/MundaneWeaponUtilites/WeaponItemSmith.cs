@@ -25,5 +25,16 @@ namespace AdventureItems
 			var component = new MaterialComponentOrder(MaterialComponentDictionary.GetComponentData(materialComponent));
 			return new MasterworkWeaponItem(weapon, component);
 		}
+
+		public static MasterworkWeaponItem OrderBlah(WeaponOrder weapon, string materialComponent)
+		{
+			var component = new MaterialComponentOrder(MaterialComponentDictionary.GetComponentData(materialComponent));
+			return new MasterworkWeaponItem(weapon, component);
+		}
+
+		internal static WeaponOrder OrderBlah(string p)
+		{
+			return new WeaponOrder(TempWeaponDictionary.GetWeaponData(p));
+		}
 	}
 }

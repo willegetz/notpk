@@ -147,7 +147,13 @@
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestFlamingSilverWeapon.approved.txt">
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestMasterworkOrder.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestWeaponEnchanter.approved.txt">
+      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestWeaponOrder.approved.txt">
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
   </ItemGroup>
