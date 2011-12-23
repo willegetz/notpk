@@ -23,7 +23,8 @@ namespace AdventureItemsTests
 		public void TestCreateMasterWorkWeapon()
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			MasterworkWeaponItem masterworkWeapon = new MasterworkWeaponItem(weapon);
+			MasterworkWeaponItem masterworkWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Masterwork");
+			//MasterworkWeaponItem masterworkWeapon = new MasterworkWeaponItem(weapon);
 			Approvals.Approve(masterworkWeapon.GetItem());
 		}
 

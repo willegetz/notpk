@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using AdventureItems;
-using ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities;
+using MagicWeaponUtilities;
 
 namespace ItemSmithWorkShop.AdventureItems
 {

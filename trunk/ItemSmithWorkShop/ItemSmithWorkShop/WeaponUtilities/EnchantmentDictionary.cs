@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using AdventureItems;
+using ItemSmithWorkShop.AdventureItems;
 
-namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
+namespace MagicWeaponUtilities
 {
 	public class EnchantmentDictionary : AdventureItem
 	{
