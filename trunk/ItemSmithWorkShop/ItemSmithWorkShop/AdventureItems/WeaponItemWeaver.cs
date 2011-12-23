@@ -136,6 +136,5 @@ namespace ItemSmithWorkShop.AdventureItems
 		{
 			return 0;
 		}
-
 	}
 }

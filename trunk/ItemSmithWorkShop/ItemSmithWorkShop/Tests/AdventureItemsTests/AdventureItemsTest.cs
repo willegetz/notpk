@@ -20,12 +20,27 @@ namespace AdventureItemsTests
 		}
 
 		[TestMethod]
+		public void TestWeaponOrder()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			Approvals.Approve(weapon.ToString());
+		}
+
+		[TestMethod]
 		public void TestCreateMasterWorkWeapon()
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			MasterworkWeaponItem masterworkWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Masterwork");
-			//MasterworkWeaponItem masterworkWeapon = new MasterworkWeaponItem(weapon);
 			Approvals.Approve(masterworkWeapon.GetItem());
+		}
+
+
+		[TestMethod]
+		public void TestMasterworkOrder()
+		{
+			WeaponOrder weapon = WeaponItemSmith.OrderBlah("Dagger");
+			MasterworkWeaponItem masterworkWeapon = WeaponItemSmith.OrderBlah(weapon, "Masterwork");
+			Approvals.Approve(masterworkWeapon.ToString());
 		}
 
 		[TestMethod]

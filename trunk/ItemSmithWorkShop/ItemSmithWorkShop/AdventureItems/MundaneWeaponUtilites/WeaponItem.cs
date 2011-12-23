@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using ItemSmithWorkShop.AdventureItems;
+using ItemSmithWorkShop.WeaponUtilities;
 
 namespace AdventureItems
 {
 	public class WeaponItem : WeaponItemWeaver
 	{
+		private WeaponOrder order;
 		private string name;
 		private double cost;
 		private double weight;
@@ -23,6 +25,8 @@ namespace AdventureItems
 
 		public WeaponItem(WeaponOrder weapon)
 		{
+			order = weapon;
+
 			name = weapon.Name;
 			cost = weapon.Cost;
 			weight = weapon.Weight;
@@ -96,6 +100,11 @@ namespace AdventureItems
 		public override double GetHitPoints()
 		{
 			return hitPoints;
+		}
+
+		public override string ToString()
+		{
+			return DisplayUtilities.BasicDisplay(order);
 		}
 
 		public string GetItem()
