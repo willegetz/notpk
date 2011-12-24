@@ -5,6 +5,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AdventureItems;
 using ItemSmithWorkShop.AdventureItems.WeaponAdons;
+using MagicWeaponUtilities;
 
 namespace ItemSmithWorkShop.Tests.ExceptionTests
 {

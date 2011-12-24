@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AdventureItems;
 using ApprovalTests;
-using ItemSmithWorkShop.AdventureItems.WeaponAdons;
 using ItemSmithWorkShop.AdventureItems.ExtraordinaryWeaponUtilities;
+using MagicWeaponUtilities;
 
 namespace ItemSmithWorkShop.Tests.WeaponTests
 {
