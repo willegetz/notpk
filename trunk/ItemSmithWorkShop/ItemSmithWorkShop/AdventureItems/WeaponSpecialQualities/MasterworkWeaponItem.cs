@@ -4,23 +4,15 @@ using System.Linq;
 using System.Text;
 using AdventureItems;
 using ItemSmithWorkShop.WeaponUtilities;
-using ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites;
+using ExtraordinaryWeaponUtilities;
+
 
 namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 {
 	public class MasterworkWeaponItem : WeaponItemWeaver
 	{
-		WeaponItemWeaver weaponItem;
 		MaterialComponentOrder materialComponent;
 		WeaponOrder weaponOrder;
-		private WeaponOrder weapon;
-		private MaterialComponentOrder component;
-
-		public MasterworkWeaponItem(WeaponItemWeaver weapon, MaterialComponentOrder component)
-		{
-			weaponItem = weapon;
-			materialComponent = component;
-		}
 
 		public MasterworkWeaponItem(WeaponOrder weapon, MaterialComponentOrder component)
 		{
@@ -47,48 +39,6 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 			sb.AppendLine(string.Format("Weight: '{0}'", weaponOrder.Weight));
 			sb.AppendLine(string.Format("Description: {0}", weaponOrder.Description));
 			return sb.ToString();
-		}
-
-		public override bool IsMasterwork()
-		{
-			return true;
-		}
-
-		public override string GetName()
-		{
-			return materialComponent.Name + weaponItem.GetName();
-		}
-
-		public override double GetCost()
-		{
-			return weaponItem.GetCost() + materialComponent.MasterworkCost;
-		}
-
-		public override string GetToHit()
-		{
-			return materialComponent.ToHit;
-		}
-
-		// required for display
-		public override string GetDamage()
-		{
-			return weaponItem.GetDamage();
-		}
-
-		// required for display
-		public override double GetWeight()
-		{
-			return weaponItem.GetWeight();
-		}
-
-		public override string GetDescription()
-		{
-			return string.Format(materialComponent.Description, weaponItem.GetName()) + weaponItem.GetDescription();
-		}
-
-		internal string GetItem()
-		{
-			return DisplayUtilities.BasicDisplay(GetName(), GetCost(), GetWeight(), GetToHit(), GetDamage(), GetDescription());
 		}
 	}
 }

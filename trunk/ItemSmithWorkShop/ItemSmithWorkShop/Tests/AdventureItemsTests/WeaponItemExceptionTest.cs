@@ -32,6 +32,22 @@ namespace ItemSmithWorkShop.Tests.AdventureItemsTests
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			new MagicWeaponItem(weapon, -1);
 		}
+
+		[TestMethod]
+		[ExpectedException(typeof(ArgumentNullException))]
+		public void TestExtraordinaryNameEmptyThrowsError()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			WeaponItemSmith.OrderSpecialComponent(weapon, string.Empty);
+		}
+
+		[TestMethod]
+		[ExpectedException(typeof(KeyNotFoundException))]
+		public void TestExtraordinaryComponentNotInListThrowsException()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			WeaponItemSmith.OrderSpecialComponent(weapon, "Shiny Thing");
+		}
 	}
 	// Include cs test files, not approvals.
 }
