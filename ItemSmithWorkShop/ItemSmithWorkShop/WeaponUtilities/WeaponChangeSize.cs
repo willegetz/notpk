@@ -48,6 +48,7 @@ namespace ItemSmithWorkShop.WeaponUtilities
 			}
 
 			sizedWeapon.SetDamage(newDamage);
+			sizedWeapon.SetWeight(sizeMultiplier);
 			sizedWeapon.SetHardness(sizeMultiplier);
 			sizedWeapon.SetHitPoints(sizeMultiplier);
 			
@@ -57,12 +58,12 @@ namespace ItemSmithWorkShop.WeaponUtilities
 		{
 			scaleMultiplier = new Dictionary<string, double>
 			{
-				{"Small", 0.5},
+				{"Small", 0.5}, {"Large", 2},
 			};
 
-			d4DamageScale = new Dictionary<string,string>
+			d4DamageScale = new Dictionary<string, string>
 			{
-				{"Small", "1d3"},
+				{"Small", "1d3"}, {"Large", "1d6"}
 			};
 
 			scaledDamage = new Dictionary<string, Dictionary<string, string>>
