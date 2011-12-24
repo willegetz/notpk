@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AdventureItems;
 using ItemSmithWorkShop.AdventureItems.WeaponAdons;
 
-namespace ItemSmithWorkShop.Tests.AdventureItemsTests
+namespace ItemSmithWorkShop.Tests.ExceptionTests
 {
 	[TestClass]
 	public class WeaponItemExceptionTest

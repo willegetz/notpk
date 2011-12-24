@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ApprovalTests;
 using AdventureItems;
 
-namespace ItemSmithWorkShop.Tests.AdventureItemsTests
+namespace ItemSmithWorkShop.Tests.WeaponTests
 {
 	[TestClass]
 	public class MundaneWeaponTest

@@ -47,8 +47,8 @@
   <ItemGroup>
     <Compile Include="AdventureItems\ExtraordinaryWeaponUtilities\ExtraordinaryQualityWeapon.cs" />
     <Compile Include="AdventureItems\ExtraordinaryWeaponUtilities\MaterialComponentOrder.cs" />
-    <Compile Include="Tests\AdventureItemsTests\ExtraordinaryWeaponTest.cs" />
-    <Compile Include="Tests\AdventureItemsTests\MundaneWeaponTest.cs" />
+    <Compile Include="Tests\WeaponTests\ExtraordinaryWeaponTest.cs" />
+    <Compile Include="Tests\WeaponTests\MundaneWeaponTest.cs" />
     <Compile Include="WeaponUtilities\DisplayUtilities.cs" />
     <Compile Include="WeaponUtilities\EnchantmentDictionary.cs" />
     <Compile Include="AdventureItems\AdventureItemUtilities\AdventureItem.cs" />
@@ -71,7 +71,7 @@
     <Compile Include="AdventureItems\MundaneWeaponUtilites\WeaponOrder.cs" />
     <Compile Include="NCrunchUtilities\NCrunchSilentReporter .cs" />
     <Compile Include="Tests\AdventureItemsTests\AdventureItemsTest.cs" />
-    <Compile Include="Tests\AdventureItemsTests\WeaponItemExceptionTest.cs" />
+    <Compile Include="Tests\ExceptionTests\WeaponItemExceptionTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WeaponUtilities\MaterialComponentData.cs" />
     <Compile Include="WeaponUtilities\MaterialComponentDictionary.cs" />
@@ -138,25 +138,25 @@
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestWeaponOrder.approved.txt">
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
-    <Content Include="Tests\AdventureItemsTests\ExtraordinaryWeaponTest.TestCreateAdamantineWeapon.approved.txt">
+    <Content Include="Tests\WeaponTests\ExtraordinaryWeaponTest.TestCreateAdamantineWeapon.approved.txt">
       <DependentUpon>ExtraordinaryWeaponTest.cs</DependentUpon>
     </Content>
-    <Content Include="Tests\AdventureItemsTests\ExtraordinaryWeaponTest.TestCreateAlchemicalSilverWeapon.approved.txt">
+    <Content Include="Tests\WeaponTests\ExtraordinaryWeaponTest.TestCreateAlchemicalSilverWeapon.approved.txt">
       <DependentUpon>ExtraordinaryWeaponTest.cs</DependentUpon>
     </Content>
-    <Content Include="Tests\AdventureItemsTests\ExtraordinaryWeaponTest.TestCreateColdIronWeapon.approved.txt">
+    <Content Include="Tests\WeaponTests\ExtraordinaryWeaponTest.TestCreateColdIronWeapon.approved.txt">
       <DependentUpon>ExtraordinaryWeaponTest.cs</DependentUpon>
     </Content>
-    <Content Include="Tests\AdventureItemsTests\ExtraordinaryWeaponTest.TestCreateDarkwoodWeapon.approved.txt">
+    <Content Include="Tests\WeaponTests\ExtraordinaryWeaponTest.TestCreateDarkwoodWeapon.approved.txt">
       <DependentUpon>ExtraordinaryWeaponTest.cs</DependentUpon>
     </Content>
-    <Content Include="Tests\AdventureItemsTests\ExtraordinaryWeaponTest.TestCreateMasterWorkWeapon.approved.txt">
+    <Content Include="Tests\WeaponTests\ExtraordinaryWeaponTest.TestCreateMasterWorkWeapon.approved.txt">
       <DependentUpon>ExtraordinaryWeaponTest.cs</DependentUpon>
     </Content>
-    <Content Include="Tests\AdventureItemsTests\ExtraordinaryWeaponTest.TestCreateMithralWeapon.approved.txt">
+    <Content Include="Tests\WeaponTests\ExtraordinaryWeaponTest.TestCreateMithralWeapon.approved.txt">
       <DependentUpon>ExtraordinaryWeaponTest.cs</DependentUpon>
     </Content>
-    <Content Include="Tests\AdventureItemsTests\MundaneWeaponTest.TestCreateWeapon.approved.txt">
+    <Content Include="Tests\WeaponTests\MundaneWeaponTest.TestCreateWeapon.approved.txt">
       <DependentUpon>MundaneWeaponTest.cs</DependentUpon>
     </Content>
   </ItemGroup>
