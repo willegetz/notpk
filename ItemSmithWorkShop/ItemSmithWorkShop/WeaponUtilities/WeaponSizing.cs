@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using AdventureItems;
+using ItemSmithWorkShop.AdventureItems;
+using ItemSmithWorkShop.WeaponUtilities;
 
 namespace ItemSmithWorkShop
 {
@@ -19,15 +21,15 @@ namespace ItemSmithWorkShop
 		const string colossal = "Colossal";
 
 		private List<string> SizeIndex { get; set; }
-		private Dictionary<string, Dictionary<string, string>> DamageScale { get; set; }
-		private Dictionary<string, double> scale;
+		private static Dictionary<string, Dictionary<string, string>> NewDamage;
+		private static Dictionary<string, double> ScaleMultiplier;
 		
-		public string NewDamage { get; set; }
-		public double Multiplier { get; set; }
+		public string AlteredDamage { get; set; }
+		public double AlteredMultiplier { get; set; }
 
 		public WeaponSizing()
 		{
-			scale = new Dictionary<string, double>
+			ScaleMultiplier = new Dictionary<string, double>
 			{
 				{fine, 0.0625}, {diminutive, 0.125}, {tiny, 0.25}, {small, 0.5}, {medium, 1}, {large, 2}, {huge, 4}, {gargantuan, 8}, {colossal, 16},
 			};
@@ -80,7 +82,7 @@ namespace ItemSmithWorkShop
 			};
 
 
-			DamageScale = new Dictionary<string, Dictionary<string, string>>{
+			NewDamage = new Dictionary<string, Dictionary<string, string>>{
 						 {"1d2", damage1D2}, {"1d3", damage1D3}, {"1d4", damage1D4}, {"1d6", damage1D6},
 						 {"2d4", damage2D4}, {"1d8", damage1D8}, {"1d10", damage1D10}, {"1d12", damage1D12},
 						 {"2d6", damage2D6},
@@ -89,7 +91,7 @@ namespace ItemSmithWorkShop
 
 		public void SetSizingValues(string damage, string size)
 		{
-			if (DamageScale.ContainsKey(damage))
+			if (NewDamage.ContainsKey(damage))
 			{
 				GetNewSizingData(damage, size);
 			}
@@ -105,14 +107,14 @@ namespace ItemSmithWorkShop
 
 		public void GetNewSizingData(string damage, string size)
 		{
-			NewDamage = DamageScale[damage][size];
-			Multiplier = scale[size];
+			AlteredDamage = NewDamage[damage][size];
+			AlteredMultiplier = ScaleMultiplier[size];
 		}
 
 		public void GetNullSizingData()
 		{
-			NewDamage = "";
-			Multiplier = 0;
+			AlteredDamage = "";
+			AlteredMultiplier = 0;
 		}
 
 		public void GetOutOfRangeSizingData(string damage, string size)
@@ -124,13 +126,13 @@ namespace ItemSmithWorkShop
 			foreach (var item in multiHeadedWeapon)
 			{
 				string index = item.ToString();
-				multiHeadString.Append(DamageScale[index][size] + "/");
+				multiHeadString.Append(NewDamage[index][size] + "/");
 			}
 
 			stringIndex = multiHeadString.Length - 1;
 			multiHeadString.Remove(stringIndex, 1);
-			NewDamage = multiHeadString.ToString();
-			Multiplier = scale[size];
+			AlteredDamage = multiHeadString.ToString();
+			AlteredMultiplier = ScaleMultiplier[size];
 		}
 
 
@@ -138,7 +140,7 @@ namespace ItemSmithWorkShop
 		{
 			SetSizingValues(data.WeaponDamage, size);
 
-			data.WeaponDamage = NewDamage;
+			data.WeaponDamage = AlteredDamage;
 
 			if (size == "Small")
 			{
@@ -146,25 +148,25 @@ namespace ItemSmithWorkShop
 			}
 			else
 			{
-				data.BasePrice = data.BasePrice * Multiplier;
+				data.BasePrice = data.BasePrice * AlteredMultiplier;
 			}
 			
-			if ((data.WeaponHardness * Multiplier) <= 1)
+			if ((data.WeaponHardness * AlteredMultiplier) <= 1)
 			{
-				data.WeaponHardness = Math.Ceiling(data.WeaponHardness* Multiplier);
+				data.WeaponHardness = Math.Ceiling(data.WeaponHardness* AlteredMultiplier);
 			}
 			else
 			{
-				data.WeaponHardness = data.WeaponHardness * Multiplier;
+				data.WeaponHardness = data.WeaponHardness * AlteredMultiplier;
 			}
 
-			if ((data.WeaponHitPoints * Multiplier) <= 1)
+			if ((data.WeaponHitPoints * AlteredMultiplier) <= 1)
 			{
-				data.WeaponHitPoints = Math.Ceiling(data.WeaponHitPoints * Multiplier);
+				data.WeaponHitPoints = Math.Ceiling(data.WeaponHitPoints * AlteredMultiplier);
 			}
 			else
 			{
-				data.WeaponHitPoints = data.WeaponHitPoints * Multiplier;
+				data.WeaponHitPoints = data.WeaponHitPoints * AlteredMultiplier;
 			}
 		}
 	}

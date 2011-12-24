@@ -52,6 +52,7 @@
     <Compile Include="Tests\WeaponTests\MagicEnhancementWeaponTest.cs" />
     <Compile Include="Tests\WeaponTests\MundaneWeaponTest.cs" />
     <Compile Include="Tests\WeaponTests\ProofOfConceptTest.cs" />
+    <Compile Include="Tests\WeaponTests\SizingTest.cs" />
     <Compile Include="WeaponUtilities\DisplayUtilities.cs" />
     <Compile Include="WeaponUtilities\EnchantmentDictionary.cs" />
     <Compile Include="AdventureItems\AdventureItemUtilities\AdventureItem.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="WeaponUtilities\MaterialComponentData.cs" />
     <Compile Include="WeaponUtilities\MaterialComponentDictionary.cs" />
     <Compile Include="WeaponUtilities\TempWeaponDictionary.cs" />
+    <Compile Include="WeaponUtilities\WeaponChangeSize.cs" />
     <Compile Include="WeaponUtilities\WeaponData.cs" />
     <Compile Include="WeaponUtilities\WeaponSizing.cs" />
   </ItemGroup>
@@ -160,6 +162,9 @@
     </Content>
     <Content Include="Tests\WeaponTests\ProofOfConceptTest.TestWeaponOrder.approved.txt">
       <DependentUpon>ProofOfConceptTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\SizingTest.TestSizeWeapon.approved.txt">
+      <DependentUpon>SizingTest.cs</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
