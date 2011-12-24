@@ -47,8 +47,11 @@
   <ItemGroup>
     <Compile Include="AdventureItems\ExtraordinaryWeaponUtilities\ExtraordinaryQualityWeapon.cs" />
     <Compile Include="AdventureItems\ExtraordinaryWeaponUtilities\MaterialComponentOrder.cs" />
+    <Compile Include="Tests\WeaponTests\EnchantedWeaponTest.cs" />
     <Compile Include="Tests\WeaponTests\ExtraordinaryWeaponTest.cs" />
+    <Compile Include="Tests\WeaponTests\MagicEnhancementWeaponTest.cs" />
     <Compile Include="Tests\WeaponTests\MundaneWeaponTest.cs" />
+    <Compile Include="Tests\WeaponTests\ProofOfConceptTest.cs" />
     <Compile Include="WeaponUtilities\DisplayUtilities.cs" />
     <Compile Include="WeaponUtilities\EnchantmentDictionary.cs" />
     <Compile Include="AdventureItems\AdventureItemUtilities\AdventureItem.cs" />
@@ -138,6 +141,33 @@
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestWeaponOrder.approved.txt">
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
+    <Content Include="Tests\WeaponTests\EnchantedWeaponTest.TestDoubleWeaponEnchanter.approved.txt">
+      <DependentUpon>EnchantedWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\EnchantedWeaponTest.TestFlamingAdamantineWeapon.approved.txt">
+      <DependentUpon>EnchantedWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\EnchantedWeaponTest.TestFlamingColdIreonWeapon.approved.txt">
+      <DependentUpon>EnchantedWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\EnchantedWeaponTest.TestFlamingDarkwoodItem.approved.txt">
+      <DependentUpon>EnchantedWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\EnchantedWeaponTest.TestFlamingEnchantment.approved.txt">
+      <DependentUpon>EnchantedWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\EnchantedWeaponTest.TestFlamingIcyBurstDagger.approved.txt">
+      <DependentUpon>EnchantedWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\EnchantedWeaponTest.TestFlamingMithralItem.approved.txt">
+      <DependentUpon>EnchantedWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\EnchantedWeaponTest.TestFlamingSilverWeapon.approved.txt">
+      <DependentUpon>EnchantedWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\EnchantedWeaponTest.TestWeaponEnchanter.approved.txt">
+      <DependentUpon>EnchantedWeaponTest.cs</DependentUpon>
+    </Content>
     <Content Include="Tests\WeaponTests\ExtraordinaryWeaponTest.TestCreateAdamantineWeapon.approved.txt">
       <DependentUpon>ExtraordinaryWeaponTest.cs</DependentUpon>
     </Content>
@@ -156,8 +186,38 @@
     <Content Include="Tests\WeaponTests\ExtraordinaryWeaponTest.TestCreateMithralWeapon.approved.txt">
       <DependentUpon>ExtraordinaryWeaponTest.cs</DependentUpon>
     </Content>
+    <Content Include="Tests\WeaponTests\MagicEnhancementWeaponTest.TestCreateMagicAdamantineWeapon.approved.txt">
+      <DependentUpon>MagicEnhancementWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\MagicEnhancementWeaponTest.TestCreateMagicAlchemicalSilverWeapon.approved.txt">
+      <DependentUpon>MagicEnhancementWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\MagicEnhancementWeaponTest.TestCreateMagicColdIronWeapon.approved.txt">
+      <DependentUpon>MagicEnhancementWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\MagicEnhancementWeaponTest.TestCreateMagicDarkwoodWeapon.approved.txt">
+      <DependentUpon>MagicEnhancementWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\MagicEnhancementWeaponTest.TestCreateMagicMithralWeapon.approved.txt">
+      <DependentUpon>MagicEnhancementWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\MagicEnhancementWeaponTest.TestCreateMagicWeapon.approved.txt">
+      <DependentUpon>MagicEnhancementWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\MagicEnhancementWeaponTest.TestDisplayFullMagicItemText.approved.txt">
+      <DependentUpon>MagicEnhancementWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\MagicEnhancementWeaponTest.TestDisplayMaxEnhancedWeaponItem.approved.txt">
+      <DependentUpon>MagicEnhancementWeaponTest.cs</DependentUpon>
+    </Content>
     <Content Include="Tests\WeaponTests\MundaneWeaponTest.TestCreateWeapon.approved.txt">
       <DependentUpon>MundaneWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\ProofOfConceptTest.TestMasterworkOrder.approved.txt">
+      <DependentUpon>ProofOfConceptTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\ProofOfConceptTest.TestWeaponOrder.approved.txt">
+      <DependentUpon>ProofOfConceptTest.cs</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
