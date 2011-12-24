@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using MagicWeaponUtilities;
+using ItemSmithWorkShop.AdventureItems;
 
-namespace ItemSmithWorkShop.AdventureItems
+namespace MagicWeaponUtilities
 {
 	public class WeaponEnchanter
 	{

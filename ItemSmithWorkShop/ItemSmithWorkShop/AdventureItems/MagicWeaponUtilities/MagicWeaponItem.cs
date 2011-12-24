@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-//16194009239
-namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
+using ItemSmithWorkShop.AdventureItems;
+
+namespace MagicWeaponUtilities
 {
 	public class MagicWeaponItem : WeaponItemWeaver
 	{

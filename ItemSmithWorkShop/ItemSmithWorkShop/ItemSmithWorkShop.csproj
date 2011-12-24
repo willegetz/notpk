@@ -73,7 +73,6 @@
     <Compile Include="AdventureItems\WeaponItemWeaver.cs" />
     <Compile Include="AdventureItems\MundaneWeaponUtilites\WeaponOrder.cs" />
     <Compile Include="NCrunchUtilities\NCrunchSilentReporter .cs" />
-    <Compile Include="Tests\AdventureItemsTests\AdventureItemsTest.cs" />
     <Compile Include="Tests\ExceptionTests\WeaponItemExceptionTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WeaponUtilities\MaterialComponentData.cs" />
@@ -84,63 +83,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="PhbWeapon.txt" />
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMagicAdamantineWeapon.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMagicAlchemicalSilverWeapon.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMagicColdIronWeapon.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMagicDarkwoodWeapon.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMagicMithralWeapon.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMagicWeapon.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestDisplayFullMagicItemText.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestDisplayMaxEnhancedWeaponItem.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestDoubleWeaponEnchanter.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestFlamingAdamantineWeapon.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestFlamingColdIreonWeapon.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestFlamingDarkwoodItem.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestFlamingEnchantment.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestFlamingIcyBurstDagger.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestFlamingMithralItem.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestFlamingSilverWeapon.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestMasterworkOrder.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestWeaponEnchanter.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestWeaponOrder.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
     <Content Include="Tests\WeaponTests\EnchantedWeaponTest.TestDoubleWeaponEnchanter.approved.txt">
       <DependentUpon>EnchantedWeaponTest.cs</DependentUpon>
     </Content>
