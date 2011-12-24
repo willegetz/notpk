@@ -13,10 +13,6 @@ namespace AdventureItemsTests
 	[TestClass]
 	public class AdventureItemsTest
 	{
-
-
-		
-
 		[TestMethod]
 		public void TestCreateMagicWeapon()
 		{

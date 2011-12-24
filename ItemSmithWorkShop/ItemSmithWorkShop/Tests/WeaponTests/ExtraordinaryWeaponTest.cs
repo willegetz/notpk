@@ -8,7 +8,7 @@ using ItemSmithWorkShop.AdventureItems.WeaponAdons;
 using ItemSmithWorkShop.AdventureItems;
 using ItemSmithWorkShop.AdventureItems.ExtraordinaryWeaponUtilities;
 
-namespace ItemSmithWorkShop.Tests.AdventureItemsTests
+namespace ItemSmithWorkShop.Tests.WeaponTests
 {
 	[TestClass]
 	public class ExtraordinaryWeaponTest
