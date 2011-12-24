@@ -8,80 +8,11 @@ using ItemSmithWorkShop.AdventureItems.WeaponAdons;
 using ItemSmithWorkShop.AdventureItems;
 using ItemSmithWorkShop.AdventureItems.ExtraordinaryWeaponUtilities;
 
-namespace AdventureItemsTests
+namespace ItemSmithWorkShop.Tests.WeaponTests
 {
 	[TestClass]
-	public class AdventureItemsTest
+	public class EnchantedWeaponTest
 	{
-		[TestMethod]
-		public void TestCreateMagicWeapon()
-		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 1);
-			Approvals.Approve(magicWeapon.GetItem());
-		}
-
-		[TestMethod]
-		public void TestCreateMagicAdamantineWeapon()
-		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			ExtraordinaryQualityWeapon adamantineWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Adamantine");
-			MagicWeaponItem magicWeapon = new MagicWeaponItem(adamantineWeapon, 1);
-			Approvals.Approve(magicWeapon.GetItem());
-		}
-
-		[TestMethod]
-		public void TestCreateMagicAlchemicalSilverWeapon()
-		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			ExtraordinaryQualityWeapon silverWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Silver");
-			MagicWeaponItem magicWeapon = new MagicWeaponItem(silverWeapon, 1);
-			Approvals.Approve(magicWeapon.GetItem());
-		}
-
-		[TestMethod]
-		public void TestCreateMagicColdIronWeapon()
-		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			ExtraordinaryQualityWeapon ironWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Cold Iron");
-			MagicWeaponItem magicWeapon = new MagicWeaponItem(ironWeapon, 1);
-			Approvals.Approve(magicWeapon.GetItem());
-		}
-
-		[TestMethod]
-		public void TestCreateMagicDarkwoodWeapon()
-		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			ExtraordinaryQualityWeapon darkwoodWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Darkwood");
-			MagicWeaponItem magicWeapon = new MagicWeaponItem(darkwoodWeapon, 1);
-			Approvals.Approve(magicWeapon.GetItem());
-		}
-
-		[TestMethod]
-		public void TestCreateMagicMithralWeapon()
-		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			ExtraordinaryQualityWeapon mithralWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Mithral");
-			MagicWeaponItem magicWeapon = new MagicWeaponItem(mithralWeapon, 1);
-			Approvals.Approve(magicWeapon.GetItem());
-		}
-
-		[TestMethod]
-		public void TestDisplayFullMagicItemText()
-		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 1);
-			Approvals.Approve(magicWeapon.DisplayFullText());
-		}
-
-		[TestMethod]
-		public void TestDisplayMaxEnhancedWeaponItem()
-		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 5);
-			Approvals.Approve(magicWeapon.DisplayFullText());
-		}
-
 		[TestMethod]
 		public void TestFlamingEnchantment()
 		{
@@ -169,31 +100,5 @@ namespace AdventureItemsTests
 			EnchantedWeaponItem icyBurstWeapon = WeaponEnchanter.RequestEnchantment(flamingWeapon, "Icy Burst");
 			Approvals.Approve(icyBurstWeapon.DisplayFullText());
 		}
-
-		/*
-		 * Proofs of Concept
-		 */
-
-		[TestMethod]
-		public void TestWeaponOrder()
-		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			Approvals.Approve(weapon.ToString());
-		}
-
-		[TestMethod]
-		public void TestMasterworkOrder()
-		{
-			WeaponOrder weapon = WeaponItemSmith.OrderBlah("Dagger");
-			MasterworkWeaponItem masterworkWeapon = WeaponItemSmith.OrderBlah(weapon, "Masterwork");
-			Approvals.Approve(masterworkWeapon.ToString());
-		}
-
-		// Include cs test files, not approvals.
-		// Re-factor this program first.
-		// Renames must happen.
-		// Flow must be examined.
-		// The next tests will involve concatenating another magical effect onto the weapon.
-		// There is also sizing that needs to occur.
 	}
 }
