@@ -6,82 +6,16 @@ using AdventureItems;
 using ApprovalTests;
 using ItemSmithWorkShop.AdventureItems.WeaponAdons;
 using ItemSmithWorkShop.AdventureItems;
+using ItemSmithWorkShop.AdventureItems.ExtraordinaryWeaponUtilities;
 
 namespace AdventureItemsTests
 {
 	[TestClass]
 	public class AdventureItemsTest
 	{
-		[TestMethod]
-		public void TestCreateWeapon()
-		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			Approvals.Approve(weapon.GetItem());
-		}
-
-		[TestMethod]
-		public void TestWeaponOrder()
-		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			Approvals.Approve(weapon.ToString());
-		}
-
-		[TestMethod]
-		public void TestCreateMasterWorkWeapon()
-		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			MasterworkWeaponItem masterworkWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Masterwork");
-			Approvals.Approve(masterworkWeapon.GetItem());
-		}
 
 
-		[TestMethod]
-		public void TestMasterworkOrder()
-		{
-			WeaponOrder weapon = WeaponItemSmith.OrderBlah("Dagger");
-			MasterworkWeaponItem masterworkWeapon = WeaponItemSmith.OrderBlah(weapon, "Masterwork");
-			Approvals.Approve(masterworkWeapon.ToString());
-		}
-
-		[TestMethod]
-		public void TestCreateAdamantineWeapon()
-		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			AdamantineWeaponItem adamantineWeapon = new AdamantineWeaponItem(weapon);
-			Approvals.Approve(adamantineWeapon.GetItem());
-		}
-
-		[TestMethod]
-		public void TestCreateAlchemicalSilverWeapon()
-		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			AlchemicalSilverWeaponItem silverWeapon = new AlchemicalSilverWeaponItem(weapon);
-			Approvals.Approve(silverWeapon.GetItem());
-		}
-
-		[TestMethod]
-		public void TestCreateColdIronWeapon()
-		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			ColdIronWeaponItem ironWeapon = new ColdIronWeaponItem(weapon);
-			Approvals.Approve(ironWeapon.GetItem());
-		}
-
-		[TestMethod]
-		public void TestCreateDarkwoodWeapon()
-		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			DarkwoodWeaponItem darkwoodWeapon = new DarkwoodWeaponItem(weapon);
-			Approvals.Approve(darkwoodWeapon.GetItem());
-		}
-
-		[TestMethod]
-		public void TestCreateMithralWeapon()
-		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			MithralWeaponItem mithralWeapon = new MithralWeaponItem(weapon);
-			Approvals.Approve(mithralWeapon.GetItem());
-		}
+		
 
 		[TestMethod]
 		public void TestCreateMagicWeapon()
@@ -95,7 +29,7 @@ namespace AdventureItemsTests
 		public void TestCreateMagicAdamantineWeapon()
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			AdamantineWeaponItem adamantineWeapon = new AdamantineWeaponItem(weapon);
+			ExtraordinaryQualityWeapon adamantineWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Adamantine");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(adamantineWeapon, 1);
 			Approvals.Approve(magicWeapon.GetItem());
 		}
@@ -104,7 +38,7 @@ namespace AdventureItemsTests
 		public void TestCreateMagicAlchemicalSilverWeapon()
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			AlchemicalSilverWeaponItem silverWeapon = new AlchemicalSilverWeaponItem(weapon);
+			ExtraordinaryQualityWeapon silverWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Silver");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(silverWeapon, 1);
 			Approvals.Approve(magicWeapon.GetItem());
 		}
@@ -113,7 +47,7 @@ namespace AdventureItemsTests
 		public void TestCreateMagicColdIronWeapon()
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			ColdIronWeaponItem ironWeapon = new ColdIronWeaponItem(weapon);
+			ExtraordinaryQualityWeapon ironWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Cold Iron");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(ironWeapon, 1);
 			Approvals.Approve(magicWeapon.GetItem());
 		}
@@ -122,7 +56,7 @@ namespace AdventureItemsTests
 		public void TestCreateMagicDarkwoodWeapon()
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			DarkwoodWeaponItem darkwoodWeapon = new DarkwoodWeaponItem(weapon);
+			ExtraordinaryQualityWeapon darkwoodWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Darkwood");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(darkwoodWeapon, 1);
 			Approvals.Approve(magicWeapon.GetItem());
 		}
@@ -131,7 +65,7 @@ namespace AdventureItemsTests
 		public void TestCreateMagicMithralWeapon()
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			MithralWeaponItem mithralWeapon = new MithralWeaponItem(weapon);
+			ExtraordinaryQualityWeapon mithralWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Mithral");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(mithralWeapon, 1);
 			Approvals.Approve(magicWeapon.GetItem());
 		}
@@ -165,7 +99,7 @@ namespace AdventureItemsTests
 		public void TestFlamingAdamantineWeapon()
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			AdamantineWeaponItem adamantineWeapon = new AdamantineWeaponItem(weapon);
+			ExtraordinaryQualityWeapon adamantineWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Adamantine");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(adamantineWeapon, 1);
 			EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
 			Approvals.Approve(enchantedWeapon.DisplayFullText());
@@ -175,7 +109,7 @@ namespace AdventureItemsTests
 		public void TestFlamingSilverWeapon()
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			AlchemicalSilverWeaponItem silverWeapon = new AlchemicalSilverWeaponItem(weapon);
+			ExtraordinaryQualityWeapon silverWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Silver");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(silverWeapon, 1);
 			EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
 			Approvals.Approve(enchantedWeapon.DisplayFullText());
@@ -185,7 +119,7 @@ namespace AdventureItemsTests
 		public void TestFlamingColdIreonWeapon()
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			ColdIronWeaponItem ironWeapon = new ColdIronWeaponItem(weapon);
+			ExtraordinaryQualityWeapon ironWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Cold Iron");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(ironWeapon, 1);
 			EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
 			Approvals.Approve(enchantedWeapon.DisplayFullText());
@@ -195,7 +129,7 @@ namespace AdventureItemsTests
 		public void TestFlamingDarkwoodItem()
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			DarkwoodWeaponItem darkwoodWeapon = new DarkwoodWeaponItem(weapon);
+			ExtraordinaryQualityWeapon darkwoodWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Darkwood");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(darkwoodWeapon, 1);
 			EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
 			Approvals.Approve(enchantedWeapon.DisplayFullText());
@@ -205,7 +139,7 @@ namespace AdventureItemsTests
 		public void TestFlamingMithralItem()
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			MithralWeaponItem mithralWeapon = new MithralWeaponItem(weapon);
+			ExtraordinaryQualityWeapon mithralWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Mithral");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(mithralWeapon, 1);
 			EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
 			Approvals.Approve(enchantedWeapon.DisplayFullText());
@@ -238,6 +172,25 @@ namespace AdventureItemsTests
 			EnchantedWeaponItem flamingWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
 			EnchantedWeaponItem icyBurstWeapon = WeaponEnchanter.RequestEnchantment(flamingWeapon, "Icy Burst");
 			Approvals.Approve(icyBurstWeapon.DisplayFullText());
+		}
+
+		/*
+		 * Proofs of Concept
+		 */
+
+		[TestMethod]
+		public void TestWeaponOrder()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			Approvals.Approve(weapon.ToString());
+		}
+
+		[TestMethod]
+		public void TestMasterworkOrder()
+		{
+			WeaponOrder weapon = WeaponItemSmith.OrderBlah("Dagger");
+			MasterworkWeaponItem masterworkWeapon = WeaponItemSmith.OrderBlah(weapon, "Masterwork");
+			Approvals.Approve(masterworkWeapon.ToString());
 		}
 
 		// Include cs test files, not approvals.

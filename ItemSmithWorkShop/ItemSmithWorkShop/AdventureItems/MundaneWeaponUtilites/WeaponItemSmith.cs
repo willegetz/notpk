@@ -4,8 +4,10 @@ using System.Linq;
 using ItemSmithWorkShop.WeaponSmith;
 using ItemSmithWorkShop.AdventureItems;
 using ItemSmithWorkShop.AdventureItems.WeaponAdons;
-using ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites;
+
 using ItemSmithWorkShop.WeaponUtilities;
+using ItemSmithWorkShop.AdventureItems.ExtraordinaryWeaponUtilities;
+using ExtraordinaryWeaponUtilities;
 
 namespace AdventureItems
 {
@@ -20,11 +22,23 @@ namespace AdventureItems
 			return new WeaponItem(new WeaponOrder(TempWeaponDictionary.GetWeaponData(order)));
 		}
 
-		public static MasterworkWeaponItem OrderSpecialComponent(WeaponItemWeaver weapon, string materialComponent)
+		public static ExtraordinaryQualityWeapon OrderSpecialComponent(WeaponItemWeaver weapon, string materialComponent)
 		{
+			if (weapon == null)
+			{
+				throw new ArgumentNullException("There is no weapon to make.\r\nPlease select a weapon");
+			}
+			if (string.IsNullOrEmpty(materialComponent))
+			{
+				throw new ArgumentNullException(string.Format("Material Component Name: '{0}' for '{1}'", materialComponent, weapon.GetName()), "The name of the material must be specified");
+			}
 			var component = new MaterialComponentOrder(MaterialComponentDictionary.GetComponentData(materialComponent));
-			return new MasterworkWeaponItem(weapon, component);
+			return new ExtraordinaryQualityWeapon(weapon, component);
 		}
+
+		/*
+		 * Proofs of Concept 
+		 */
 
 		public static MasterworkWeaponItem OrderBlah(WeaponOrder weapon, string materialComponent)
 		{

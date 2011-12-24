@@ -45,11 +45,14 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdventureItems\MundaneWeaponUtilites\MaterialComponentOrder.cs" />
+    <Compile Include="AdventureItems\ExtraordinaryWeaponUtilities\ExtraordinaryQualityWeapon.cs" />
+    <Compile Include="AdventureItems\ExtraordinaryWeaponUtilities\MaterialComponentOrder.cs" />
+    <Compile Include="Tests\AdventureItemsTests\ExtraordinaryWeaponTest.cs" />
+    <Compile Include="Tests\AdventureItemsTests\MundaneWeaponTest.cs" />
     <Compile Include="WeaponUtilities\DisplayUtilities.cs" />
     <Compile Include="WeaponUtilities\EnchantmentDictionary.cs" />
-    <Compile Include="AdventureItems\MundaneWeaponUtilites\AdventureItem.cs" />
-    <Compile Include="AdventureItems\MundaneWeaponUtilites\AdventureItemShop.cs" />
+    <Compile Include="AdventureItems\AdventureItemUtilities\AdventureItem.cs" />
+    <Compile Include="AdventureItems\AdventureItemUtilities\AdventureItemShop.cs" />
     <Compile Include="WeaponUtilities\EnchantmentData.cs" />
     <Compile Include="AdventureItems\MagicWeaponUtilities\EnchantmentOrder.cs" />
     <Compile Include="AdventureItems\MagicWeaponUtilities\EnchantedWeaponItem.cs" />
@@ -78,18 +81,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="PhbWeapon.txt" />
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateAdamantineWeapon.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateAlchemicalSilverWeapon.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateColdIronWeapon.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateDarkwoodWeapon.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMagicAdamantineWeapon.approved.txt">
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
@@ -106,15 +97,6 @@
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMagicWeapon.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMasterWorkWeapon.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateMithralWeapon.approved.txt">
-      <DependentUpon>AdventureItemsTest.cs</DependentUpon>
-    </Content>
-    <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestCreateWeapon.approved.txt">
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestDisplayFullMagicItemText.approved.txt">
@@ -156,6 +138,27 @@
     <Content Include="Tests\AdventureItemsTests\AdventureItemsTest.TestWeaponOrder.approved.txt">
       <DependentUpon>AdventureItemsTest.cs</DependentUpon>
     </Content>
+    <Content Include="Tests\AdventureItemsTests\ExtraordinaryWeaponTest.TestCreateAdamantineWeapon.approved.txt">
+      <DependentUpon>ExtraordinaryWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\ExtraordinaryWeaponTest.TestCreateAlchemicalSilverWeapon.approved.txt">
+      <DependentUpon>ExtraordinaryWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\ExtraordinaryWeaponTest.TestCreateColdIronWeapon.approved.txt">
+      <DependentUpon>ExtraordinaryWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\ExtraordinaryWeaponTest.TestCreateDarkwoodWeapon.approved.txt">
+      <DependentUpon>ExtraordinaryWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\ExtraordinaryWeaponTest.TestCreateMasterWorkWeapon.approved.txt">
+      <DependentUpon>ExtraordinaryWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\ExtraordinaryWeaponTest.TestCreateMithralWeapon.approved.txt">
+      <DependentUpon>ExtraordinaryWeaponTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\AdventureItemsTests\MundaneWeaponTest.TestCreateWeapon.approved.txt">
+      <DependentUpon>MundaneWeaponTest.cs</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -170,6 +173,7 @@
       <Name>ApprovalUtilities</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
