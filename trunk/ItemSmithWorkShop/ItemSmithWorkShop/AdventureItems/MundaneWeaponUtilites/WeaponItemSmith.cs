@@ -22,6 +22,13 @@ namespace AdventureItems
 			return new WeaponItem(new WeaponOrder(TempWeaponDictionary.GetWeaponData(order)));
 		}
 
+		internal static WeaponItem SizeWeapon(WeaponItem weapon, string size)
+		{
+			var sizedWeapon = WeaponChangeSize.ChangeWeaponSize(weapon, size);
+			//var sizedWeapon = new WeaponItem(weapon, sizingInformation);
+			return sizedWeapon;
+		}
+
 		public static ExtraordinaryQualityWeapon OrderSpecialComponent(WeaponItemWeaver weapon, string materialComponent)
 		{
 			if (weapon == null)

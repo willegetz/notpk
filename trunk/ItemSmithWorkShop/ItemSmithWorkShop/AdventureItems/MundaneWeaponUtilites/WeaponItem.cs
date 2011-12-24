@@ -111,5 +111,35 @@ namespace AdventureItems
 		{
 			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nDamage: '{3}'\r\n\t{4}", name, cost, weight, damage, description);
 		}
+
+		public string DisplaySizedWeapon()
+		{
+			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nDamage: '{3}'\r\nHardness: '{4}'\r\nHit Points: '{5}' \r\n\t{6}", name, cost, weight, damage, hardness, hitPoints, description);
+		}
+
+		internal void SetName(string sizeKey)
+		{
+			name = string.Format("{0} [{1}]", name, sizeKey);
+		}
+
+		internal void SetCost(double sizeMultiplier)
+		{
+			cost = (cost * sizeMultiplier);
+		}
+
+		internal void SetHardness(double sizeMultiplier)
+		{
+			hardness = (hardness * sizeMultiplier);
+		}
+
+		internal void SetHitPoints(double sizeMultiplier)
+		{
+			hitPoints = (hitPoints * sizeMultiplier);
+		}
+
+		internal void SetDamage(string newDamage)
+		{
+			damage = newDamage;
+		}
 	}
 }
