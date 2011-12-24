@@ -163,7 +163,10 @@
     <Content Include="Tests\WeaponTests\ProofOfConceptTest.TestWeaponOrder.approved.txt">
       <DependentUpon>ProofOfConceptTest.cs</DependentUpon>
     </Content>
-    <Content Include="Tests\WeaponTests\SizingTest.TestSizeWeapon.approved.txt">
+    <Content Include="Tests\WeaponTests\SizingTest.TestLargeSizeWeapon.approved.txt">
+      <DependentUpon>SizingTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\SizingTest.TestSmallSizeWeapon.approved.txt">
       <DependentUpon>SizingTest.cs</DependentUpon>
     </Content>
   </ItemGroup>

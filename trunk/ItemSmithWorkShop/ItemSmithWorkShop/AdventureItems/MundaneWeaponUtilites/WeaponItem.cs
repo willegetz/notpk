@@ -132,6 +132,11 @@ namespace AdventureItems
 			hardness = (hardness * sizeMultiplier);
 		}
 
+		internal void SetWeight(double sizeMultiplier)
+		{
+			weight = (weight * sizeMultiplier);
+		}
+
 		internal void SetHitPoints(double sizeMultiplier)
 		{
 			hitPoints = (hitPoints * sizeMultiplier);
@@ -141,5 +146,6 @@ namespace AdventureItems
 		{
 			damage = newDamage;
 		}
+
 	}
 }
