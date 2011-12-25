@@ -37,7 +37,16 @@ namespace ItemSmithWorkShop.WeaponUtilities
 		private static void SetNewSizingProperties()
 		{
 			sizedWeapon.SetName(sizeKey);
+			DetermineCostModifier();
+			sizedWeapon.SetDamage(newDamage);
+			sizedWeapon.SetWeight(sizeMultiplier);
+			sizedWeapon.SetHardness(sizeMultiplier);
+			sizedWeapon.SetHitPoints(sizeMultiplier);
+			
+		}
 
+		private static void DetermineCostModifier()
+		{
 			if (sizeKey == "Small")
 			{
 				sizedWeapon.SetCost(1);
@@ -46,24 +55,20 @@ namespace ItemSmithWorkShop.WeaponUtilities
 			{
 				sizedWeapon.SetCost(sizeMultiplier);
 			}
-
-			sizedWeapon.SetDamage(newDamage);
-			sizedWeapon.SetWeight(sizeMultiplier);
-			sizedWeapon.SetHardness(sizeMultiplier);
-			sizedWeapon.SetHitPoints(sizeMultiplier);
-			
 		}
 
 		private static void LoadSizingDictionaries()
 		{
 			scaleMultiplier = new Dictionary<string, double>
 			{
-				{"Small", 0.5}, {"Large", 2},
+				{"Fine", 0.0625}, {"Diminutive", 0.125}, {"Tiny", 0.25}, {"Small", 0.5}, 
+				{"Large", 2}, {"Huge", 4}, {"Gargantuan", 8}, {"Colossal", 16},
 			};
 
 			d4DamageScale = new Dictionary<string, string>
 			{
-				{"Small", "1d3"}, {"Large", "1d6"}
+				{"Fine", "No Meaningful Damage"}, {"Diminutive", "1"}, {"Tiny", "1d2"},
+				{"Small", "1d3"}, {"Large", "1d6"}, {"Huge", "1d8"}, {"Gargantuan", "2d6"}, {"Colossal", "3d6"},
 			};
 
 			scaledDamage = new Dictionary<string, Dictionary<string, string>>
