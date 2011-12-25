@@ -163,6 +163,12 @@
     <Content Include="Tests\WeaponTests\ProofOfConceptTest.TestWeaponOrder.approved.txt">
       <DependentUpon>ProofOfConceptTest.cs</DependentUpon>
     </Content>
+    <Content Include="Tests\WeaponTests\SizingTest.TestLargePlus3FlamingIcyBurstWeapon.approved.txt">
+      <DependentUpon>SizingTest.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\WeaponTests\SizingTest.TestLargePlus3FlamingWeapon.approved.txt">
+      <DependentUpon>SizingTest.cs</DependentUpon>
+    </Content>
     <Content Include="Tests\WeaponTests\SizingTest.TestLargePlus3Weapon.approved.txt">
       <DependentUpon>SizingTest.cs</DependentUpon>
     </Content>
