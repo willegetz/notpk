@@ -97,7 +97,7 @@ namespace ItemSmithWorkShop.AdventureItems
 			return 0;
 		}
 
-		public virtual int GetEnhancementCostModifier()
+		public virtual int GetEnhancementBonusForCost()
 		{
 			return 1;
 		}

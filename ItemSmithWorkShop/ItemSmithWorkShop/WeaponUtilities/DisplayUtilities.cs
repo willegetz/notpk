@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using ItemSmithWorkShop.AdventureItems;
 
 namespace ItemSmithWorkShop.WeaponUtilities

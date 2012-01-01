@@ -34,7 +34,7 @@ namespace MagicWeaponUtilities
 			return (Math.Pow(enhancementBonus, 2) * 2000);
 		}
 
-		public override int GetEnhancementCostModifier()
+		public override int GetEnhancementBonusForCost()
 		{
 			return enhancementBonus;
 		}
@@ -109,7 +109,7 @@ namespace MagicWeaponUtilities
 
 		public string GetItem()
 		{
-			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nTo Hit: '+{3}'\r\nDamage: '{4}'\r\n\t{5}", GetName(), GetCost(), weaponItem.GetWeight(), enhancementBonus, GetDamage(), weaponItem.GetDescription());
+			return string.Format("{0}:\t'{1} gp'\t('+{6}')\r\nWeight: '{2} pound(s)'\r\nTo Hit: '+{3}'\r\nDamage: '{4}'\r\n\t{5}", GetName(), GetCost(), weaponItem.GetWeight(), enhancementBonus, GetDamage(), weaponItem.GetDescription(), GetEnhancementBonusForCost());
 		}
 
 		public override int GetEnhancementBonus()
@@ -145,7 +145,7 @@ namespace MagicWeaponUtilities
 		internal string DisplayFullText()
 		{
 			var sb = new StringBuilder();
-			sb.AppendLine(string.Format("{0}:\t'{1} gp'\r\nTo Hit: '+{2}'\r\nDamage: '{3}{4}' {5}\r\nHardness: '{6}'\r\nHit Points: '{7}'\r\nWeight: '{8} pound(s)'\r\n\t{9}",
+			sb.AppendLine(string.Format("{0}:\t'{1} gp'\t('+{10}')\r\nTo Hit: '+{2}'\r\nDamage: '{3}{4}' {5}\r\nHardness: '{6}'\r\nHit Points: '{7}'\r\nWeight: '{8} pound(s)'\r\n\t{9}",
 				GetName(),
 				GetCost(),
 				enhancementBonus,
@@ -155,7 +155,8 @@ namespace MagicWeaponUtilities
 				GetModifiedHardness(),
 				GetModifiedHitPoints(),
 				GetWeight(),
-				GetDescription()));
+				GetDescription(),
+				GetEnhancementBonusForCost()));
 			sb.AppendLine(string.Format("\r\nCreator Caster Level: '{0}'\r\nTime to Create: '{1} Days'\r\nCreation XP Cost: '{2}'\r\nCreation Raw Material Cost: '{3}'",
 				GetMinimumCasterLevel(),
 				GetDaysToCreate(),
