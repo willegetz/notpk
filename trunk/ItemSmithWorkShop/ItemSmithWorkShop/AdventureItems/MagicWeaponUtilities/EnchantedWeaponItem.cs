@@ -27,14 +27,14 @@ namespace MagicWeaponUtilities
 			return weaponItem.GetEnhancementBonus();
 		}
 
-		public override int GetEnhancementCostModifier()
+		public override int GetEnhancementBonusForCost()
 		{
-			return weaponItem.GetEnhancementCostModifier() + enchantment.GetEnhancementBonus();
+			return weaponItem.GetEnhancementBonusForCost() + enchantment.GetEnhancementBonus();
 		}
 
 		private double GetEnhancementCost()
 		{
-			return (Math.Pow(GetEnhancementCostModifier(), 2) * 2000);
+			return (Math.Pow(GetEnhancementBonusForCost(), 2) * 2000);
 		}
 
 		public override double GetCost()
@@ -83,12 +83,12 @@ namespace MagicWeaponUtilities
 
 		public override double GetModifiedHardness()
 		{
-			return weaponItem.GetModifiedHardness() + (enchantment.GetEnhancementCostModifier() * 2);
+			return weaponItem.GetModifiedHardness() + (enchantment.GetEnhancementBonusForCost() * 2);
 		}
 
 		public override double GetModifiedHitPoints()
 		{
-			return weaponItem.GetModifiedHitPoints() + (enchantment.GetEnhancementCostModifier() * 10);
+			return weaponItem.GetModifiedHitPoints() + (enchantment.GetEnhancementBonusForCost() * 10);
 		}
 
 		public override double GetWeight()
@@ -133,7 +133,7 @@ namespace MagicWeaponUtilities
 		internal string DisplayFullText()
 		{
 			var sb = new StringBuilder();
-			sb.AppendLine(string.Format("{0}:\t'{1} gp'\r\nTo Hit: '+{2}'\r\nDamage: '{3}{4}{5}' {6}\r\nHardness: '{7}'\r\nHit Points: '{8}'\r\nWeight: '{9} pound(s)'\r\n\t{10}",
+			sb.AppendLine(string.Format("{0}:\t'{1} gp'\t('+{11}')\r\nTo Hit: '+{2}'\r\nDamage: '{3}{4}{5}' {6}\r\nHardness: '{7}'\r\nHit Points: '{8}'\r\nWeight: '{9} pound(s)'\r\n\t{10}",
 				GetName(),
 				GetCost(),
 				GetEnhancementBonus(),
@@ -144,7 +144,8 @@ namespace MagicWeaponUtilities
 				GetModifiedHardness(),
 				GetModifiedHitPoints(),
 				GetWeight(),
-				GetDescription()));
+				GetDescription(),
+				GetEnhancementBonusForCost()));
 			sb.AppendLine(string.Format("\r\nCreator Caster Level: '{0}'\r\nTime to Create: '{1} Days'\r\nCreation XP Cost: '{2}'\r\nCreation Raw Material Cost: '{3}'\r\n{4}",
 				GetMinimumCasterLevel(),
 				GetDaysToCreate(),

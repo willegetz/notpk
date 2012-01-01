@@ -54,7 +54,7 @@ namespace MagicWeaponUtilities
 			return casterLevel;
 		}
 
-		public override int GetEnhancementCostModifier()
+		public override int GetEnhancementBonusForCost()
 		{
 			return enhancementBonus;
 		}
