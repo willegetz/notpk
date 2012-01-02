@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Text;
 using System.Collections.Generic;
 using System.Linq;
+using ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities;
+using ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using AdventureItems;
-using ItemSmithWorkShop.AdventureItems.WeaponAdons;
-using MagicWeaponUtilities;
 
 namespace ItemSmithWorkShop.Tests.ExceptionTests
 {
@@ -50,5 +48,4 @@ namespace ItemSmithWorkShop.Tests.ExceptionTests
 			WeaponItemSmith.OrderSpecialComponent(weapon, "Shiny Thing");
 		}
 	}
-	// Include cs test files, not approvals.
 }

@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ItemSmithWorkShop.AdventureItems;
+using MagicWeaponUtilities;
 
-namespace MagicWeaponUtilities
+namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 {
 	public class EnchantedWeaponItem : WeaponItemWeaver
 	{
-		WeaponItemWeaver weaponItem;
-		WeaponEnchantment enchantment;
+		readonly WeaponItemWeaver weaponItem;
+		readonly WeaponEnchantment enchantment;
 
 		public EnchantedWeaponItem(WeaponItemWeaver magicWeapon, WeaponEnchantment newEnchantment)
 		{

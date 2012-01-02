@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using AdventureItems;
+using ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites;
+
 namespace ItemSmithWorkShop.WeaponUtilities
 {
 	public class WeaponChangeSize : AdventureItem
