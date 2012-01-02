@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using ItemSmithWorkShop.WeaponUtilities;
 using MagicWeaponUtilities;
 
 namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
