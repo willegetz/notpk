@@ -1,5 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using AdventureItems;
+﻿using ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ApprovalTests;
 using ItemSmithWorkShop.AdventureItems.ExtraordinaryWeaponUtilities;
 

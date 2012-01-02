@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using ItemSmithWorkShop.AdventureItems;
 using ItemSmithWorkShop.WeaponUtilities;
 
-namespace AdventureItems
+namespace ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites
 {
 	public class WeaponItem : WeaponItemWeaver
 	{
-		private WeaponOrder order;
+		private readonly WeaponOrder order;
 		private string name;
 		private double cost;
 		private double weight;
@@ -146,6 +144,5 @@ namespace AdventureItems
 		{
 			damage = newDamage;
 		}
-
 	}
 }

@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using ItemSmithWorkShop.WeaponSmith;
-using ItemSmithWorkShop.AdventureItems;
 using ItemSmithWorkShop.AdventureItems.WeaponAdons;
-
 using ItemSmithWorkShop.WeaponUtilities;
 using ItemSmithWorkShop.AdventureItems.ExtraordinaryWeaponUtilities;
 using ExtraordinaryWeaponUtilities;
 
-namespace AdventureItems
+namespace ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites
 {
 	public class WeaponItemSmith
 	{
@@ -25,7 +21,6 @@ namespace AdventureItems
 		internal static WeaponItem SizeWeapon(WeaponItem weapon, string size)
 		{
 			var sizedWeapon = WeaponChangeSize.ChangeWeaponSize(weapon, size);
-			//var sizedWeapon = new WeaponItem(weapon, sizingInformation);
 			return sizedWeapon;
 		}
 
@@ -44,8 +39,8 @@ namespace AdventureItems
 		}
 
 		/*
-		 * Proofs of Concept 
-		 */
+		* Proofs of Concept 
+		*/
 
 		public static MasterworkWeaponItem OrderBlah(WeaponOrder weapon, string materialComponent)
 		{

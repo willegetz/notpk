@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ItemSmithWorkShop.AdventureItems;
 
-namespace MagicWeaponUtilities
+namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 {
 	public class MagicWeaponItem : WeaponItemWeaver
 	{
@@ -18,7 +16,7 @@ namespace MagicWeaponUtilities
 		{
 			if (bonus < 1 || bonus > 5)
 			{
-				throw new ArgumentOutOfRangeException( "Bonus", bonus, "The Enhancement Bonus must be between 1 and 5");
+				throw new ArgumentOutOfRangeException("Bonus", bonus, "The Enhancement Bonus must be between 1 and 5");
 			}
 			weaponItem = weapon;
 			enhancementBonus = bonus;
@@ -65,7 +63,7 @@ namespace MagicWeaponUtilities
 
 		public override string GetDamage()
 		{
-			return string.Format("{0}{1}", weaponItem.GetDamage(), GetDamageModifier(enhancementBonus,  weaponItem.GetDamageModifier()));
+			return string.Format("{0}{1}", weaponItem.GetDamage(), GetDamageModifier(enhancementBonus, weaponItem.GetDamageModifier()));
 		}
 
 		public override string GetThreat()
