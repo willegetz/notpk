@@ -109,6 +109,9 @@
     <Content Include="Tests\WeaponTests\EnchantedWeaponTest.TestFlamingSilverWeapon.approved.txt">
       <DependentUpon>EnchantedWeaponTest.cs</DependentUpon>
     </Content>
+    <Content Include="Tests\WeaponTests\EnchantedWeaponTest.TestVorpaldagger.approved.txt">
+      <DependentUpon>EnchantedWeaponTest.cs</DependentUpon>
+    </Content>
     <Content Include="Tests\WeaponTests\EnchantedWeaponTest.TestWeaponEnchanter.approved.txt">
       <DependentUpon>EnchantedWeaponTest.cs</DependentUpon>
     </Content>

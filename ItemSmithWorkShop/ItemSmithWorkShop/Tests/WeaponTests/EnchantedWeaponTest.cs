@@ -97,5 +97,14 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 			EnchantedWeaponItem icyBurstWeapon = WeaponEnchanter.RequestEnchantment(flamingWeapon, "Icy Burst");
 			Approvals.Approve(icyBurstWeapon.DisplayFullText());
 		}
+
+		[TestMethod]
+		public void TestVorpaldagger()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 1);
+			EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Vorpal");
+			Approvals.Approve(enchantedWeapon.DisplayFullText());
+		}
 	}
 }
