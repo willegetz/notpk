@@ -47,5 +47,16 @@ namespace ItemSmithWorkShop.Tests.ExceptionTests
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			WeaponItemSmith.OrderSpecialComponent(weapon, "Shiny Thing");
 		}
+
+		[TestMethod]
+		[ExpectedException(typeof(ArgumentOutOfRangeException))]
+		public void TestEnhancementBonusIsMoreThanPlusTen()
+		{
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 5);
+			EnchantedWeaponItem flamingWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
+			EnchantedWeaponItem icyBurstWeapon = WeaponEnchanter.RequestEnchantment(flamingWeapon, "Icy Burst");
+			WeaponEnchanter.RequestEnchantment(icyBurstWeapon, "Vorpal");
+		}
 	}
 }

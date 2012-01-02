@@ -12,6 +12,10 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 
 		public EnchantedWeaponItem(WeaponItemWeaver magicWeapon, WeaponEnchantment newEnchantment)
 		{
+			if ((magicWeapon.GetEnhancementBonusForCost() + newEnchantment.GetEnhancementBonusForCost()) > 10)
+			{
+				throw new ArgumentOutOfRangeException(string.Format("'{0}' enchantment of '+{1}' value cannot be added to '{2}' of '+{3}' value.\r\nEnchantment bonus cannot exceed '+10'", newEnchantment.GetName(), newEnchantment.GetEnhancementBonusForCost(), magicWeapon.GetName(), magicWeapon.GetEnhancementBonusForCost()));
+			}
 			weaponItem = magicWeapon;
 			enchantment = newEnchantment;
 		}
