@@ -6,7 +6,7 @@ namespace ItemSmithWorkShop.WeaponUtilities
 {
 	public class DisplayUtilities : WeaponItemWeaver
 	{
-		public static object BasicDisplay(WeaponItemWeaver weapon)
+		public static string BasicDisplay(WeaponItemWeaver weapon)
 		{
 			string damageMod;
 			if (weapon.GetDamageModifier() == 0)
@@ -43,6 +43,20 @@ namespace ItemSmithWorkShop.WeaponUtilities
 		internal static string BasicDisplay(WeaponOrder order)
 		{
 			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nTo Hit: '{3}'\r\nDamage: '{4}'\r\n\t{5}", order.Name, order.Cost, order.Weight, "+0", order.Damage, order.Description);
+		}
+
+		public static string BasicMagicalDisplay(WeaponItemWeaver weapon)
+		{
+			return string.Format("{0}:\t'{1} gp'\t('{2} value'\r\nWeight: '{3} pound(s)'\r\nTo Hit: '+{4}'\r\nDamage: '{5}'\r\nHardness: '{6}'\r\nHit Points: '{7}'\r\n\t{8}", 
+				weapon.GetName(), 
+				weapon.GetCost(),
+ 				weapon.GetEnhancementBonusForCost(),
+				weapon.GetWeight(),
+				weapon.GetEnhancementBonus(),
+				weapon.GetDamage(), 
+ 				weapon.GetModifiedHardness(),
+				weapon.GetModifiedHitPoints(),
+				weapon.GetDescription());
 		}
 	}
 }
