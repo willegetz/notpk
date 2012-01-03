@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using ItemSmithWorkShop.WeaponUtilities;
 using ExtraordinaryWeaponUtilities;
 
 namespace ItemSmithWorkShop.AdventureItems.ExtraordinaryWeaponUtilities
 {
 	public class ExtraordinaryQualityWeapon : WeaponItemWeaver
 	{
-		WeaponItemWeaver weapon;
-		MaterialComponentOrder component;
+		readonly WeaponItemWeaver weapon;
+		readonly MaterialComponentOrder component;
 
 		public ExtraordinaryQualityWeapon(WeaponItemWeaver weaponItem, MaterialComponentOrder materialComponent)
 		{
@@ -88,15 +85,6 @@ namespace ItemSmithWorkShop.AdventureItems.ExtraordinaryWeaponUtilities
 		public override double GetHitPoints()
 		{
 			return weapon.GetHitPoints();
-		}
-
-		internal string GetItem()
-		{
-			if (GetDamageModifier() != 0)
-			{
-				return DisplayUtilities.BasicDisplay(GetName(), GetCost(), GetWeight(), GetToHit(), GetDamage(), GetDamageModifier(), GetDescription());
-			}
-			return DisplayUtilities.BasicDisplay(GetName(), GetCost(), GetWeight(), GetToHit(), GetDamage(), GetDescription());
 		}
 	}
 }

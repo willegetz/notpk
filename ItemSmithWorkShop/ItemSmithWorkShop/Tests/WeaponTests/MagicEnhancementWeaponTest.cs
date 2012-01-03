@@ -1,5 +1,6 @@
 ﻿using ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities;
 using ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites;
+using ItemSmithWorkShop.WeaponUtilities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ApprovalTests;
 using ItemSmithWorkShop.AdventureItems.ExtraordinaryWeaponUtilities;
@@ -14,7 +15,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 1);
-			Approvals.Approve(magicWeapon.GetItem());
+			Approvals.Approve(DisplayUtilities.BasicMagicalDisplay(magicWeapon));
 		}
 
 		[TestMethod]
