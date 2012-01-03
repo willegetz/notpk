@@ -105,11 +105,6 @@ namespace ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites
 			return DisplayUtilities.BasicDisplay(order);
 		}
 
-		public string GetItem()
-		{
-			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nDamage: '{3}'\r\n\t{4}", name, cost, weight, damage, description);
-		}
-
 		public string DisplaySizedWeapon()
 		{
 			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nDamage: '{3}'\r\nHardness: '{4}'\r\nHit Points: '{5}' \r\n\t{6}", name, cost, weight, damage, hardness, hitPoints, description);

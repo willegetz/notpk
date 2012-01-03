@@ -1,5 +1,6 @@
 ﻿using ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities;
 using ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites;
+using ItemSmithWorkShop.WeaponUtilities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ApprovalTests;
 using ItemSmithWorkShop.AdventureItems.ExtraordinaryWeaponUtilities;
@@ -22,16 +23,17 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			WeaponItem sizedWeapon = WeaponItemSmith.SizeWeapon(weapon, "Large");
-			Approvals.Approve(sizedWeapon.DisplaySizedWeapon());
+			Approvals.Approve(DisplayUtilities.BasicDisplay(sizedWeapon));
+			//Approvals.Approve(sizedWeapon.DisplaySizedWeapon());
 		}
 
 		[TestMethod]
 		public void TestSmallAdamantineWeapon()
 		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			WeaponItem sizedWeapon = WeaponItemSmith.SizeWeapon(weapon, "Small");
-			ExtraordinaryQualityWeapon adamantineWeapon = WeaponItemSmith.OrderSpecialComponent(sizedWeapon, "Adamantine");
-			Approvals.Approve(adamantineWeapon.GetItem());
+			var weapon = WeaponItemSmith.OrderItem("Dagger");
+			var sizedWeapon = WeaponItemSmith.SizeWeapon(weapon, "Small");
+			var adamantineWeapon = WeaponItemSmith.OrderSpecialComponent(sizedWeapon, "Adamantine");
+			Approvals.Approve(DisplayUtilities.BasicDisplay(adamantineWeapon));
 		}
 
 		[TestMethod]
