@@ -1,6 +1,7 @@
 ﻿using ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ApprovalTests;
+using ItemSmithWorkShop.WeaponUtilities;
 
 namespace ItemSmithWorkShop.Tests.WeaponTests
 {
@@ -11,7 +12,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 		public void TestCreateWeapon()
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			Approvals.Approve(weapon.GetItem());
+			Approvals.Approve(DisplayUtilities.BasicDisplay(weapon));
 		}
 	}
 }
