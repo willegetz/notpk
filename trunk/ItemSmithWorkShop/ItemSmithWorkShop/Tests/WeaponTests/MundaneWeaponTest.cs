@@ -11,7 +11,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 		[TestMethod]
 		public void TestCreateWeapon()
 		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			var weapon = WeaponItemSmith.OrderItem("Dagger");
 			Approvals.Approve(DisplayUtilities.BasicDisplay(weapon));
 		}
 	}
