@@ -50,10 +50,10 @@ namespace ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites
 			return cost;
 		}
 
-		public override double GetWeaponCost()
-		{
-			return GetCost();
-		}
+		//public override double GetWeaponCost()
+		//{
+		//    return GetCost();
+		//}
 
 		public override bool IsMasterwork()
 		{
@@ -98,11 +98,6 @@ namespace ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites
 		public override double GetHitPoints()
 		{
 			return hitPoints;
-		}
-
-		public override string ToString()
-		{
-			return DisplayUtilities.BasicDisplay(order);
 		}
 
 		public string DisplaySizedWeapon()

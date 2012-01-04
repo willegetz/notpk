@@ -83,10 +83,5 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 		{
 			return weaponItem.GetDescription() + ComponentDescription;
 		}
-
-		internal string GetItem()
-		{
-			return DisplayUtilities.BasicDisplay(GetName(), GetCost(), GetWeight(), GetToHit(), GetDamage(), GetDescription());
-		}
 	}
 }
