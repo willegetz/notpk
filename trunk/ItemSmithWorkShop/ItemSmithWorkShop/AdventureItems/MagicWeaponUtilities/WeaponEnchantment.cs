@@ -29,11 +29,6 @@ namespace MagicWeaponUtilities
 			description = enchantment.Description;
 		}
 
-		public WeaponEnchantment(string enchantmentType)
-		{
-			enchantment = enchantmentType;
-		}
-
 		public override string GetName()
 		{
 			return name;

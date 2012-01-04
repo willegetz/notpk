@@ -15,7 +15,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			WeaponItem sizedWeapon = WeaponItemSmith.SizeWeapon(weapon, "Small");
-			Approvals.Approve(sizedWeapon.DisplaySizedWeapon());
+			Approvals.Approve(DisplayUtilities.BasicDisplay(sizedWeapon));
 		}
 
 		[TestMethod]
@@ -24,7 +24,6 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			WeaponItem sizedWeapon = WeaponItemSmith.SizeWeapon(weapon, "Large");
 			Approvals.Approve(DisplayUtilities.BasicDisplay(sizedWeapon));
-			//Approvals.Approve(sizedWeapon.DisplaySizedWeapon());
 		}
 
 		[TestMethod]
