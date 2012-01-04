@@ -1,4 +1,5 @@
 ﻿using ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites;
+using ItemSmithWorkShop.WeaponUtilities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ApprovalTests;
 using ItemSmithWorkShop.AdventureItems;
@@ -13,7 +14,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 		public void TestWeaponOrder()
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			Approvals.Approve(weapon.ToString());
+			Approvals.Approve(DisplayUtilities.BasicDisplay(weapon));
 		}
 
 		[TestMethod]

@@ -105,20 +105,20 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 			return (GetEnhancementCost() / PlayerMaterialInvestment) + (GetCost() - GetEnhancementCost());
 		}
 
-		public string GetItem()
-		{
-			return string.Format("{0}:\t'{1} gp'\t('+{6}')\r\nWeight: '{2} pound(s)'\r\nTo Hit: '+{3}'\r\nDamage: '{4}'\r\n\t{5}", GetName(), GetCost(), weaponItem.GetWeight(), enhancementBonus, GetDamage(), weaponItem.GetDescription(), GetEnhancementBonusForCost());
-		}
+		//public string GetItem()
+		//{
+		//    return string.Format("{0}:\t'{1} gp'\t('+{6}')\r\nWeight: '{2} pound(s)'\r\nTo Hit: '+{3}'\r\nDamage: '{4}'\r\n\t{5}", GetName(), GetCost(), weaponItem.GetWeight(), enhancementBonus, GetDamage(), weaponItem.GetDescription(), GetEnhancementBonusForCost());
+		//}
 
 		public override int GetEnhancementBonus()
 		{
 			return enhancementBonus;
 		}
 
-		public override double GetHardness()
-		{
-			return weaponItem.GetHardness();
-		}
+		//public override double GetHardness()
+		//{
+		//    return weaponItem.GetHardness();
+		//}
 
 		public override double GetModifiedHardness()
 		{

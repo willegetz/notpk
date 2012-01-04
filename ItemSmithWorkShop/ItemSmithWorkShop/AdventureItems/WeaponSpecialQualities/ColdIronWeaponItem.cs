@@ -90,10 +90,5 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
 		{
 			return weaponItem.GetDescription() + ComponentDescription;
 		}
-
-		public string GetItem()
-		{
-			return DisplayUtilities.BasicDisplay(GetName(), GetCost(), GetWeight(), GetToHit(), GetDamage(), GetDescription()); 
-		}
 	}
 }
