@@ -50,11 +50,6 @@ namespace ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites
 			return cost;
 		}
 
-		//public override double GetWeaponCost()
-		//{
-		//    return GetCost();
-		//}
-
 		public override bool IsMasterwork()
 		{
 			return false;
@@ -98,11 +93,6 @@ namespace ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites
 		public override double GetHitPoints()
 		{
 			return hitPoints;
-		}
-
-		public string DisplaySizedWeapon()
-		{
-			return string.Format("{0}:\t'{1} gp'\r\nWeight: '{2} pound(s)'\r\nDamage: '{3}'\r\nHardness: '{4}'\r\nHit Points: '{5}' \r\n\t{6}", name, cost, weight, damage, hardness, hitPoints, description);
 		}
 
 		internal void SetName(string sizeKey)

@@ -60,13 +60,8 @@
     <Compile Include="WeaponUtilities\EnchantmentData.cs" />
     <Compile Include="AdventureItems\MagicWeaponUtilities\EnchantmentOrder.cs" />
     <Compile Include="AdventureItems\MagicWeaponUtilities\EnchantedWeaponItem.cs" />
-    <Compile Include="AdventureItems\WeaponSpecialQualities\AdamantineWeaponItem.cs" />
-    <Compile Include="AdventureItems\WeaponSpecialQualities\AlchemicalSilverWeaponItem.cs" />
-    <Compile Include="AdventureItems\WeaponSpecialQualities\ColdIronWeaponItem.cs" />
-    <Compile Include="AdventureItems\WeaponSpecialQualities\DarkwoodWeaponItem.cs" />
     <Compile Include="AdventureItems\MagicWeaponUtilities\MagicWeaponItem.cs" />
     <Compile Include="AdventureItems\WeaponSpecialQualities\MasterworkWeaponItem.cs" />
-    <Compile Include="AdventureItems\WeaponSpecialQualities\MithralWeaponItem.cs" />
     <Compile Include="AdventureItems\MagicWeaponUtilities\WeaponEnchanter.cs" />
     <Compile Include="AdventureItems\MagicWeaponUtilities\WeaponEnchantment.cs" />
     <Compile Include="AdventureItems\MundaneWeaponUtilites\WeaponItem.cs" />

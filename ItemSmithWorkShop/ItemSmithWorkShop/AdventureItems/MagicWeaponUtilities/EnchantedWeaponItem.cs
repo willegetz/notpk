@@ -65,11 +65,6 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 			return weaponItem.GetThreat();
 		}
 
-		public override string GetCriticalMultiplier()
-		{
-			return enchantment.GetCriticalMultiplier();
-		}
-
 		public override string GetEnchantmentCriticalDamage()
 		{
 			if (string.IsNullOrEmpty(enchantment.GetEnchantmentCriticalDamage()))
@@ -131,32 +126,6 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 		public override string GetCreationRequirements()
 		{
 			return string.Format("{0}{1}", weaponItem.GetCreationRequirements(), enchantment.GetCreationRequirements());
-		}
-
-		internal string DisplayFullText()
-		{
-			var sb = new StringBuilder();
-			sb.AppendLine(string.Format("{0}:\t'{1} gp'\t('+{11}')\r\nTo Hit: '+{2}'\r\nDamage: '{3}{4}{5}' {6}\r\nHardness: '{7}'\r\nHit Points: '{8}'\r\nWeight: '{9} pound(s)'\r\n\t{10}",
-				GetName(),
-				GetCost(),
-				GetEnhancementBonus(),
-				GetDamage(),
-				GetThreat(),
-				GetEnchantmentCriticalDamage(),
-				GetDamageType(),
-				GetModifiedHardness(),
-				GetModifiedHitPoints(),
-				GetWeight(),
-				GetDescription(),
-				GetEnhancementBonusForCost()));
-			sb.AppendLine(string.Format("\r\nCreator Caster Level: '{0}'\r\nTime to Create: '{1} Days'\r\nCreation XP Cost: '{2}'\r\nCreation Raw Material Cost: '{3}'\r\n{4}",
-				GetMinimumCasterLevel(),
-				GetDaysToCreate(),
-				GetCreationXpCost(),
-				GetCreationRawMaterialCost(),
-				GetCreationRequirements()));
-
-			return sb.ToString();
 		}
 	}
 }
