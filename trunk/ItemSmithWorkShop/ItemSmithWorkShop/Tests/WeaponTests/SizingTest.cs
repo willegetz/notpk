@@ -42,7 +42,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			WeaponItem sizedWeapon = WeaponItemSmith.SizeWeapon(weapon, "Large");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(sizedWeapon, 3);
-			Approvals.Approve(magicWeapon.DisplayFullText());
+			Approvals.Approve(DisplayUtilities.FullMagicalDisplay(magicWeapon));
 		}
 
 		[TestMethod]
@@ -52,7 +52,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 			WeaponItem sizedWeapon = WeaponItemSmith.SizeWeapon(weapon, "Large");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(sizedWeapon, 3);
 			EnchantedWeaponItem enchantedWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
-			Approvals.Approve(enchantedWeapon.DisplayFullText());
+			Approvals.Approve(DisplayUtilities.FullMagicalDisplay(enchantedWeapon));
 		}
 
 		[TestMethod]
@@ -63,7 +63,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(sizedWeapon, 3);
 			EnchantedWeaponItem flamingWeapon = WeaponEnchanter.RequestEnchantment(magicWeapon, "Flaming");
 			EnchantedWeaponItem icyBurstWeapon = WeaponEnchanter.RequestEnchantment(flamingWeapon, "Icy Burst");
-			Approvals.Approve(icyBurstWeapon.DisplayFullText());
+			Approvals.Approve(DisplayUtilities.FullMagicalDisplay(icyBurstWeapon));
 		}
 	}
 }

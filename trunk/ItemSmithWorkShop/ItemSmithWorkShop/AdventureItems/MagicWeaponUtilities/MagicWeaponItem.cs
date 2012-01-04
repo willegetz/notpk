@@ -11,6 +11,7 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 		private const int MasterworkCost = 300;
 		readonly WeaponItemWeaver weaponItem;
 		private readonly int enhancementBonus;
+		private const string requiredFeats = "Craft Magic Arms and Armor";
 
 		public MagicWeaponItem(WeaponItemWeaver weapon, int bonus)
 		{
@@ -138,6 +139,11 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 		public override string GetDescription()
 		{
 			return weaponItem.GetDescription();
+		}
+
+		public override string GetCreationRequirements()
+		{
+			return string.Format("\r\n\tRequired Feats: {0}", requiredFeats);
 		}
 
 		internal string DisplayFullText()
