@@ -25,7 +25,7 @@ namespace ItemSmithWorkShop.WeaponUtilities
 				weapon.GetToHit(),
 				weapon.GetDamage(), 
 				damageMod,
- 				weapon.GetHardness(),
+				weapon.GetHardness(),
 				weapon.GetHitPoints(),
 				weapon.GetDescription());
 		}
@@ -47,14 +47,14 @@ namespace ItemSmithWorkShop.WeaponUtilities
 
 		public static string BasicMagicalDisplay(WeaponItemWeaver weapon)
 		{
-			return string.Format("{0}:\t'{1} gp'\t('{2} value'\r\nWeight: '{3} pound(s)'\r\nTo Hit: '+{4}'\r\nDamage: '{5}'\r\nHardness: '{6}'\r\nHit Points: '{7}'\r\n\t{8}", 
+			return string.Format("{0}:\t'{1} gp'\t('{2} value')\r\nWeight: '{3} pound(s)'\r\nTo Hit: '+{4}'\r\nDamage: '{5}'\r\nHardness: '{6}'\r\nHit Points: '{7}'\r\n\t{8}", 
 				weapon.GetName(), 
 				weapon.GetCost(),
- 				weapon.GetEnhancementBonusForCost(),
+				weapon.GetEnhancementBonusForCost(),
 				weapon.GetWeight(),
 				weapon.GetEnhancementBonus(),
 				weapon.GetDamage(), 
- 				weapon.GetModifiedHardness(),
+				weapon.GetModifiedHardness(),
 				weapon.GetModifiedHitPoints(),
 				weapon.GetDescription());
 		}
