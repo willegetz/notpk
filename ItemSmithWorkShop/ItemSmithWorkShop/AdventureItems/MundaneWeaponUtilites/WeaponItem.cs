@@ -1,30 +1,26 @@
 ﻿using System;
 using System.Linq;
-using ItemSmithWorkShop.WeaponUtilities;
 
 namespace ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites
 {
 	public class WeaponItem : WeaponItemWeaver
 	{
-		private readonly WeaponOrder order;
 		private string name;
 		private double cost;
 		private double weight;
-		private string description;
+		private readonly string description;
 		private string damage;
-		private string threatRange;
-		private string critical;
-		private string range;
-		private string damageType;
-		private string proficiency;
-		private string category;
+		private readonly string threatRange;
+		private readonly string critical;
+		private readonly string range;
+		private readonly string damageType;
+		private readonly string proficiency;
+		private readonly string category;
 		private double hardness;
 		private double hitPoints;
 
 		public WeaponItem(WeaponOrder weapon)
 		{
-			order = weapon;
-
 			name = weapon.Name;
 			cost = weapon.Cost;
 			weight = weapon.Weight;
@@ -38,6 +34,30 @@ namespace ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites
 			category = weapon.Category;
 			hardness = weapon.Hardness;
 			hitPoints = weapon.HitPoints;
+		}
+
+		public string Category
+		{
+			get
+			{
+				return category;
+			}
+		}
+
+		public string Proficiency
+		{
+			get
+			{
+				return proficiency;
+			}
+		}
+
+		public string Range
+		{
+			get
+			{
+				return range;
+			}
 		}
 
 		public override string GetName()

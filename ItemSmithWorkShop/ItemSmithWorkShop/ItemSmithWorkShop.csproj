@@ -68,7 +68,7 @@
     <Compile Include="AdventureItems\MundaneWeaponUtilites\WeaponItemSmith.cs" />
     <Compile Include="AdventureItems\WeaponItemWeaver.cs" />
     <Compile Include="AdventureItems\MundaneWeaponUtilites\WeaponOrder.cs" />
-    <Compile Include="NCrunchUtilities\NCrunchSilentReporter .cs" />
+    <Compile Include="NCrunchUtilities\NCrunchSilentReporter.cs" />
     <Compile Include="Tests\ExceptionTests\WeaponItemExceptionTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WeaponUtilities\MaterialComponentData.cs" />

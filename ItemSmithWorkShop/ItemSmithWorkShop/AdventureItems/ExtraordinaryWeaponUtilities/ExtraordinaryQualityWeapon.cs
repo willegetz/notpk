@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using ExtraordinaryWeaponUtilities;
 
 namespace ItemSmithWorkShop.AdventureItems.ExtraordinaryWeaponUtilities
 {

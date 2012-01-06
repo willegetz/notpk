@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
-namespace AdventureItems
+namespace ItemSmithWorkShop.AdventureItems.AdventureItemUtilities
 {
 	public abstract class AdventureItemShop
 	{
 		public AdventureItem OrderItem(string itemName)
 		{
-
 			var adventureItem = CreateItem(itemName);
 
 			return adventureItem;

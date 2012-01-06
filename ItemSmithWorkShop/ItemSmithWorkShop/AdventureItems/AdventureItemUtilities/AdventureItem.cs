@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
-namespace AdventureItems
+namespace ItemSmithWorkShop.AdventureItems.AdventureItemUtilities
 {
-	// AdventureItem should be the overall return type for a weapon.
 	public abstract class AdventureItem
 	{
 		protected string name = "Unknown Item";

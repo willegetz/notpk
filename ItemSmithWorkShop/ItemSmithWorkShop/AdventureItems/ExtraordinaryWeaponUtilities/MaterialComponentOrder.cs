@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using ItemSmithWorkShop.WeaponUtilities;
 
-namespace ExtraordinaryWeaponUtilities
+namespace ItemSmithWorkShop.AdventureItems.ExtraordinaryWeaponUtilities
 {
 	public class MaterialComponentOrder
 	{
-
 		public string Name { get; private set; }
 		public double CostModifier { get; private set; }
 		public int MasterworkCost { get; private set; }
