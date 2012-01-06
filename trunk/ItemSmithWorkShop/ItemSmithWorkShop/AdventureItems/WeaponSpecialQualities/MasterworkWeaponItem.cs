@@ -1,18 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using AdventureItems;
-using ItemSmithWorkShop.WeaponUtilities;
-using ExtraordinaryWeaponUtilities;
+using ItemSmithWorkShop.AdventureItems.ExtraordinaryWeaponUtilities;
+using ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites;
 
-
-namespace ItemSmithWorkShop.AdventureItems.WeaponAdons
+namespace ItemSmithWorkShop.AdventureItems.WeaponSpecialQualities
 {
 	public class MasterworkWeaponItem : WeaponItemWeaver
 	{
-		MaterialComponentOrder materialComponent;
-		WeaponOrder weaponOrder;
+		readonly MaterialComponentOrder materialComponent;
+		readonly WeaponOrder weaponOrder;
 
 		public MasterworkWeaponItem(WeaponOrder weapon, MaterialComponentOrder component)
 		{

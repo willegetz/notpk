@@ -1,9 +1,4 @@
-﻿The pieces of the weapon are scattered and instantiated in random ways. Therefore,
-there is no way as of now to do with them what I wish.
-I need to rework flow of the program to allow for the passing around of an object instead
-of primitives, a cost object, a material object, a combat object, etc.
-
-The statistics of the basic Dagger in D&D 3.5
+﻿The statistics of the basic Dagger in D&D 3.5
 Assumes a medium creature
 Weapon Name: 		Dagger
 Weapon Proficiency: Simple

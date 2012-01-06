@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using AdventureItems;
+using ItemSmithWorkShop.AdventureItems.AdventureItemUtilities;
 using ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites;
 
 namespace ItemSmithWorkShop.WeaponUtilities

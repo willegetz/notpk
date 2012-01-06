@@ -1,9 +1,8 @@
 ﻿using ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites;
+using ItemSmithWorkShop.AdventureItems.WeaponSpecialQualities;
 using ItemSmithWorkShop.WeaponUtilities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ApprovalTests;
-using ItemSmithWorkShop.AdventureItems;
-using ItemSmithWorkShop.AdventureItems.WeaponAdons;
 
 namespace ItemSmithWorkShop.Tests.WeaponTests
 {

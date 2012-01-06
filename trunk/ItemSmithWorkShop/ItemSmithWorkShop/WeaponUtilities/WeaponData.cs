@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
-namespace ItemSmithWorkShop
+namespace ItemSmithWorkShop.WeaponUtilities
 {
 	public class WeaponData
 	{

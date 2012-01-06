@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Linq;
-using ItemSmithWorkShop.AdventureItems.WeaponAdons;
+using ItemSmithWorkShop.AdventureItems.WeaponSpecialQualities;
 using ItemSmithWorkShop.WeaponUtilities;
 using ItemSmithWorkShop.AdventureItems.ExtraordinaryWeaponUtilities;
-using ExtraordinaryWeaponUtilities;
 
 namespace ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites
 {

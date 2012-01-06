@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using ItemSmithWorkShop.AdventureItems;
+using ItemSmithWorkShop.WeaponUtilities;
 
-namespace MagicWeaponUtilities
+namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 {
 	public class EnchantmentOrder
 	{

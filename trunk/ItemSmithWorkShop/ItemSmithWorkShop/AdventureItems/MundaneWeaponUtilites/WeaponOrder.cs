@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
+using ItemSmithWorkShop.WeaponUtilities;
 
-
-namespace ItemSmithWorkShop.AdventureItems
+namespace ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites
 {
 	public class WeaponOrder
 	{
-		public string Name { get; private set;}
-		public double Cost { get; private set;}
-		public double Weight { get; private set;}
+		public string Name { get; private set; }
+		public double Cost { get; private set; }
+		public double Weight { get; private set; }
 		public string Description { get; private set; }
 		public string Damage { get; private set; }
 		public string ThreatRange { get; private set; }
@@ -64,7 +63,6 @@ namespace ItemSmithWorkShop.AdventureItems
 		{
 			ToHit = toHit;
 		}
-
 
 		internal void SetDescription(string description)
 		{

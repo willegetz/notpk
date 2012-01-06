@@ -1,21 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using ItemSmithWorkShop.AdventureItems;
 
-namespace MagicWeaponUtilities
+namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 {
 	public class WeaponEnchantment : WeaponItemWeaver
 	{
-		private string enchantment;
-		private string name;
-		private string damage;
-		private string criticalDamage;
-		private string damageType;
-		private int casterLevel;
-		private int enhancementBonus;
-		private string requirements;
-		private string description;
+		private readonly string name;
+		private readonly string damage;
+		private readonly string criticalDamage;
+		private readonly string damageType;
+		private readonly int casterLevel;
+		private readonly int enhancementBonus;
+		private readonly string requirements;
+		private readonly string description;
 
 		public WeaponEnchantment(EnchantmentOrder enchantment)
 		{

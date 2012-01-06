@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Text;
 using ItemSmithWorkShop.AdventureItems;
-using ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities;
 
 namespace ItemSmithWorkShop.WeaponUtilities
 {
