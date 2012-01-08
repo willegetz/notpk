@@ -5,12 +5,21 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 {
 	public class EnchantedWeaponItem : WeaponItemWeaver
 	{
+		private const int MaxEnhancementBonus = 10;
+
+		private const int PlayerXpInvestment = 25;
+		private const int PlayerMaterialInvestment = 2;
+		private const int MagicWeaponCostMultiplier = 2000;
+		private const int HardnessAdjustmentForMagicMultiplier = 2;
+		private const int HitPointAdjustmentForMagicMultiplier = 10;
+		private const int GoldCostPerDay = 1000;
+		
 		readonly WeaponItemWeaver weaponItem;
 		readonly WeaponEnchantment enchantment;
 
 		public EnchantedWeaponItem(WeaponItemWeaver magicWeapon, WeaponEnchantment newEnchantment)
 		{
-			if ((magicWeapon.GetEnhancementBonusForCost() + newEnchantment.GetEnhancementBonusForCost()) > 10)
+			if ((magicWeapon.GetEnhancementBonusForCost() + newEnchantment.GetEnhancementBonusForCost()) > MaxEnhancementBonus)
 			{
 				throw new ArgumentOutOfRangeException(string.Format("'{0}' enchantment of '+{1}' value cannot be added to '{2}' of '+{3}' value.\r\nEnchantment bonus cannot exceed '+10'", newEnchantment.GetName(), newEnchantment.GetEnhancementBonusForCost(), magicWeapon.GetName(), magicWeapon.GetEnhancementBonusForCost()));
 			}
@@ -35,7 +44,7 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 
 		private double GetEnhancementCost()
 		{
-			return (Math.Pow(GetEnhancementBonusForCost(), 2) * 2000);
+			return (Math.Pow(GetEnhancementBonusForCost(), 2) * MagicWeaponCostMultiplier);
 		}
 
 		public override double GetCost()
@@ -74,17 +83,17 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 
 		public override string GetDamageType()
 		{
-			return weaponItem.GetDamageType() + ", " + enchantment.GetDamageType();
+			return string.Format("{0}, {1}", weaponItem.GetDamageType(), enchantment.GetDamageType());
 		}
 
 		public override double GetModifiedHardness()
 		{
-			return weaponItem.GetModifiedHardness() + (enchantment.GetEnhancementBonusForCost() * 2);
+			return weaponItem.GetModifiedHardness() + (enchantment.GetEnhancementBonus() * HardnessAdjustmentForMagicMultiplier);
 		}
 
 		public override double GetModifiedHitPoints()
 		{
-			return weaponItem.GetModifiedHitPoints() + (enchantment.GetEnhancementBonusForCost() * 10);
+			return weaponItem.GetModifiedHitPoints() + (enchantment.GetEnhancementBonus() * HitPointAdjustmentForMagicMultiplier);
 		}
 
 		public override double GetWeight()
@@ -108,17 +117,17 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 
 		public override double GetDaysToCreate()
 		{
-			return GetEnhancementCost() / 1000;
+			return GetEnhancementCost() / GoldCostPerDay;
 		}
 
 		public override double GetCreationXpCost()
 		{
-			return GetEnhancementCost() / 25;
+			return GetEnhancementCost() / PlayerXpInvestment;
 		}
 
 		public override double GetCreationRawMaterialCost()
 		{
-			return (GetEnhancementCost() / 2) + weaponItem.GetWeaponCost() + weaponItem.GetAdditionalMagicCostModifier();
+			return (GetEnhancementCost() / PlayerMaterialInvestment) + weaponItem.GetWeaponCost() + weaponItem.GetAdditionalMagicCostModifier();
 		}
 
 		public override string GetCreationRequirements()

@@ -16,6 +16,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 			Approvals.Approve(DisplayUtilities.BasicDisplay(weapon));
 		}
 
+		// Display Utilities does not work with this test.
 		[TestMethod]
 		public void TestMasterworkOrder()
 		{
