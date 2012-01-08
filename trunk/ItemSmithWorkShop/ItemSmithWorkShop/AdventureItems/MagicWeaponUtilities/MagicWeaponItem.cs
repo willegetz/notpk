@@ -5,10 +5,18 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 {
 	public class MagicWeaponItem : WeaponItemWeaver
 	{
+		private const int MasterworkCost = 300;
+		private const int CasterLevelMultiplier = 3;
+
 		private const int PlayerXpInvestment = 25;
 		private const int PlayerMaterialInvestment = 2;
-		private const int MasterworkCost = 300;
+		private const int MagicWeaponCostMultiplier = 2000;
+		private const int HardnessAdjustmentForMagicMultiplier = 2;
+		private const int HitPointAdjustmentForMagicMultiplier = 10;
+		private const int GoldCostPerDay = 1000;
+		
 		readonly WeaponItemWeaver weaponItem;
+
 		private readonly int enhancementBonus;
 		private const string requiredFeats = "Craft Magic Arms and Armor";
 
@@ -29,7 +37,7 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 
 		private double GetEnhancementCost()
 		{
-			return (Math.Pow(enhancementBonus, 2) * 2000);
+			return (Math.Pow(enhancementBonus, 2) * MagicWeaponCostMultiplier);
 		}
 
 		public override int GetEnhancementBonusForCost()
@@ -87,12 +95,12 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 
 		public override double GetMinimumCasterLevel()
 		{
-			return enhancementBonus * 3;
+			return enhancementBonus * CasterLevelMultiplier;
 		}
 
 		public override double GetDaysToCreate()
 		{
-			return GetEnhancementCost() / 1000;
+			return GetEnhancementCost() / GoldCostPerDay;
 		}
 
 		public override double GetCreationXpCost()
@@ -112,12 +120,12 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 
 		public override double GetModifiedHardness()
 		{
-			return weaponItem.GetHardness() + (enhancementBonus * 2);
+			return weaponItem.GetHardness() + (enhancementBonus * HardnessAdjustmentForMagicMultiplier);
 		}
 
 		public override double GetModifiedHitPoints()
 		{
-			return weaponItem.GetHitPoints() + (enhancementBonus * 10);
+			return weaponItem.GetHitPoints() + (enhancementBonus * HitPointAdjustmentForMagicMultiplier);
 		}
 
 		public override double GetWeight()
