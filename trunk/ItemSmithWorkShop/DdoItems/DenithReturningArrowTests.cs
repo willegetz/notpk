@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Text;
-using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ApprovalTests;
-using ApprovalTests.Reporters;
 
 namespace DdoItems
 {
 	[TestClass]
-	[UseReporter(typeof(DiffReporter))]
 	public class DenithReturningArrowTests
 	{
 		[TestMethod]
