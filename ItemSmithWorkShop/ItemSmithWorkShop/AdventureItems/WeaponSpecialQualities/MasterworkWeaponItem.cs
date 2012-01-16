@@ -34,7 +34,7 @@ namespace ItemSmithWorkShop.AdventureItems.WeaponSpecialQualities
 			sb.AppendLine(string.Format("To Hit: '{0}'", weaponOrder.ToHit));
 			sb.AppendLine(string.Format("Damage: '{0}'", weaponOrder.Damage));
 			sb.AppendLine(string.Format("Weight: '{0}'", weaponOrder.Weight));
-			sb.AppendLine(string.Format("Description: {0}", weaponOrder.Description));
+			sb.AppendLine(string.Format("Description:{0}{1}", Environment.NewLine, weaponOrder.Description));
 			return sb.ToString();
 		}
 	}

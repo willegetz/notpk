@@ -58,7 +58,8 @@ namespace ItemSmithWorkShop.AdventureItems.ExtraordinaryWeaponUtilities
 
 		public override string GetDescription()
 		{
-			return string.Format(component.Description, weapon.GetName()) + weapon.GetDescription();
+			return string.Format("{0}{1}{2}", weapon.GetDescription(), Environment.NewLine, string.Format(component.Description, weapon.GetName()));
+			// return weapon.GetDescription() + string.Format(component.Description, weapon.GetName());
 		}
 
 		public override string GetThreat()

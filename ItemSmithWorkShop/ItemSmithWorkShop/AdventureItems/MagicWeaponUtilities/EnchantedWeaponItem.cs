@@ -21,7 +21,7 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 		{
 			if ((magicWeapon.GetEnhancementBonusForCost() + newEnchantment.GetEnhancementBonusForCost()) > MaxEnhancementBonus)
 			{
-				throw new ArgumentOutOfRangeException(string.Format("'{0}' enchantment of '+{1}' value cannot be added to '{2}' of '+{3}' value.\r\nEnchantment bonus cannot exceed '+10'", newEnchantment.GetName(), newEnchantment.GetEnhancementBonusForCost(), magicWeapon.GetName(), magicWeapon.GetEnhancementBonusForCost()));
+				throw new ArgumentOutOfRangeException(string.Format("'{0}' enchantment of '+{1}' value cannot be added to '{2}' of '+{3}' value.{4}Enchantment bonus cannot exceed '+10'", newEnchantment.GetName(), newEnchantment.GetEnhancementBonusForCost(), magicWeapon.GetName(), magicWeapon.GetEnhancementBonusForCost(), Environment.NewLine));
 			}
 			weaponItem = magicWeapon;
 			enchantment = newEnchantment;
@@ -64,7 +64,11 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 
 		public override string GetDamage()
 		{
-			return string.Format("{0}{1}", weaponItem.GetDamage(), enchantment.GetDamage());
+			if (string.IsNullOrEmpty(enchantment.GetDamage()))
+			{
+				return string.Format("{0}", weaponItem.GetDamage());
+			}
+			return string.Format("{0}{1}({2})", weaponItem.GetDamage(), enchantment.GetDamage(), enchantment.GetDamageType());
 		}
 
 		public override string GetThreat()
@@ -78,12 +82,12 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 			{
 				return string.Empty;
 			}
-			return string.Format("{0}", enchantment.GetEnchantmentCriticalDamage());
+			return string.Format("{0}({1})", enchantment.GetEnchantmentCriticalDamage(), enchantment.GetDamageType());
 		}
 
 		public override string GetDamageType()
 		{
-			return string.Format("{0}, {1}", weaponItem.GetDamageType(), enchantment.GetDamageType());
+			return string.Format("{0}", weaponItem.GetDamageType());
 		}
 
 		public override double GetModifiedHardness()
@@ -112,7 +116,7 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 
 		public override string GetDescription()
 		{
-			return weaponItem.GetDescription() + enchantment.GetDescription();
+			return string.Format("{0}{1}{2}", weaponItem.GetDescription(), Environment.NewLine, enchantment.GetDescription());;
 		}
 
 		public override double GetDaysToCreate()
@@ -132,7 +136,7 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 
 		public override string GetCreationRequirements()
 		{
-			return string.Format("{0}{1}", weaponItem.GetCreationRequirements(), enchantment.GetCreationRequirements());
+			return string.Format("{0}{1}{2}", weaponItem.GetCreationRequirements(), Environment.NewLine, enchantment.GetCreationRequirements());
 		}
 	}
 }

@@ -27,7 +27,7 @@ namespace ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites
 		{
 			if (weapon == null)
 			{
-				throw new ArgumentNullException("There is no weapon to make.\r\nPlease select a weapon");
+				throw new ArgumentNullException(string.Format("There is no weapon to make.{0}Please select a weapon", Environment.NewLine));
 			}
 			if (string.IsNullOrEmpty(materialComponent))
 			{
