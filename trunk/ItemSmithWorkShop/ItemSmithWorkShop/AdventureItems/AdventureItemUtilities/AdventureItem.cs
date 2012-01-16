@@ -12,7 +12,7 @@ namespace ItemSmithWorkShop.AdventureItems.AdventureItemUtilities
 
 		public virtual string GetItem()
 		{
-			return string.Format("{0}:\t'{1} gp\r\nWeight: '{2} pound(s)'\r\n\t{3}", name, cost, weight, description);
+			return string.Format("{0}:\t'{1} gp{4}Weight: '{2} pound(s)'{4}\t{3}", name, cost, weight, description, Environment.NewLine);
 		}
 	}
 }

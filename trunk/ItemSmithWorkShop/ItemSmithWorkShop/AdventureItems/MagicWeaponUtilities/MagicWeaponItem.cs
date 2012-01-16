@@ -140,7 +140,7 @@ namespace ItemSmithWorkShop.AdventureItems.MagicWeaponUtilities
 
 		public override string GetCreationRequirements()
 		{
-			return string.Format("\r\n\tRequired Feats: {0}", requiredFeats);
+			return string.Format("{0}\tRequired Feats: {1}", Environment.NewLine, requiredFeats);
 		}
 	}
 }

@@ -66,7 +66,7 @@ namespace ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites
 
 		internal void SetDescription(string description)
 		{
-			Description += string.Format("\r\n\t" + description, Name);
+			Description = string.Format("{0}{1}{2}", Description, Environment.NewLine, string.Format(description, Name));
 		}
 	}
 }
