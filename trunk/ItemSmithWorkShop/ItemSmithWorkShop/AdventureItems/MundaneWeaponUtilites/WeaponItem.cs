@@ -10,7 +10,7 @@ namespace ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites
 		private double weight;
 		private readonly string description;
 		private string damage;
-		private readonly string threatRange;
+		private readonly int threatRange;
 		private readonly string critical;
 		private readonly string range;
 		private readonly string damageType;
@@ -92,7 +92,7 @@ namespace ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites
 
 		public override string GetThreat()
 		{
-			return threatRange;
+			return string.Format("{0}-20", threatRange);
 		}
 
 		public override string GetCriticalMultiplier()
