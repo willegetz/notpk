@@ -10,7 +10,7 @@ namespace ItemSmithWorkShop.WeaponUtilities
 		public string WeaponCategory { get; set; }
 		public string WeaponProficiencyRequirement { get; set; }
 		public string WeaponDamage { get; set; }
-		public string WeaponThreatRange { get; set; }
+		public int WeaponThreatRange { get; set; }
 		public string WeaponCritical { get; set; }
 		public string WeaponDamageType { get; set; }
 		public double WeaponHardness { get; set; }

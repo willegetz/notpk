@@ -11,7 +11,7 @@ namespace ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites
 		public double Weight { get; private set; }
 		public string Description { get; private set; }
 		public string Damage { get; private set; }
-		public string ThreatRange { get; private set; }
+		public int ThreatRange { get; private set; }
 		public string Critical { get; private set; }
 		public string Range { get; private set; }
 		public string DamageType { get; private set; }

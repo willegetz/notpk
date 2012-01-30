@@ -97,7 +97,7 @@ namespace ItemSmithWorkShop.AdventureItems
 
 		public virtual int GetEnhancementBonusForCost()
 		{
-			return 1;
+			return 0;
 		}
 
 		public virtual double GetModifiedHardness()
