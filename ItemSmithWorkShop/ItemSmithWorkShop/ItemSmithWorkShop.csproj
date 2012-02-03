@@ -47,6 +47,8 @@
   <ItemGroup>
     <Compile Include="AdventureItems\ExtraordinaryWeaponUtilities\ExtraordinaryQualityWeapon.cs" />
     <Compile Include="AdventureItems\ExtraordinaryWeaponUtilities\MaterialComponentOrder.cs" />
+    <Compile Include="ItemTicket.cs" />
+    <Compile Include="Tests\LineItemTests\WeaponLineItemTests.cs" />
     <Compile Include="Tests\WeaponTests\EnchantedWeaponTest.cs" />
     <Compile Include="Tests\WeaponTests\ExtraordinaryWeaponTest.cs" />
     <Compile Include="Tests\WeaponTests\MagicEnhancementWeaponTest.cs" />
