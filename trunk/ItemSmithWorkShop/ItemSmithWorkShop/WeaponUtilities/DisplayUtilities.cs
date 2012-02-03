@@ -74,5 +74,20 @@ namespace ItemSmithWorkShop.WeaponUtilities
 				weapon.GetDescription(),
 				Environment.NewLine);
 		}
+
+		public static string BasicDisplay(WeaponData weapon)
+		{
+			return string.Format("{0}:\t'{1} gp'{7}Weight: '{2} pound(s)'{7}Damage: '{3} [{8}-20]' {9}{7}Hardness: '{4}'{7}Hit Points: '{5}'{7}{6}",
+				weapon.WeaponName,
+				weapon.BasePrice,
+				weapon.WeaponWeight,
+				weapon.WeaponDamage,
+				weapon.WeaponHardness,
+				weapon.WeaponHitPoints,
+				weapon.WeaponText,
+				Environment.NewLine,
+				weapon.WeaponThreatRange,
+				weapon.WeaponDamageType);
+		}
 	}
 }
