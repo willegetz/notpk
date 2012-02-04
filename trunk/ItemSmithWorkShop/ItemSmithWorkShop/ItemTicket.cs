@@ -8,14 +8,18 @@ namespace ItemSmithWorkShop
 	{
 		internal static object GetWeaponTicket(string weaponName)
 		{
-			var weaponInfo = TempWeaponDictionary.GetWeaponData(weaponName);
-			return DisplayUtilities.BasicDisplay(weaponInfo);
+			return DisplayUtilities.BasicDisplay(TempWeaponDictionary.GetWeaponData(weaponName));
 		}
 
 		public static object GetMaterialIngot(string ingotName)
 		{
-			var ingotInfo = MaterialComponentDictionary.GetComponentData(ingotName);
-			return DisplayUtilities.BasicIngotDisplay(ingotInfo);
+			return DisplayUtilities.BasicIngotDisplay(MaterialComponentDictionary.GetComponentData(ingotName));
+		}
+
+		public static object GetSpecialAbilityTicket(string specialAbilityName)
+		{
+			var specialAbilityInfo = EnchantmentDictionary.GetEnchantmentData(specialAbilityName);
+			return DisplayUtilities.BasicSpecialAbilityDisplay(specialAbilityInfo);
 		}
 	}
 }
