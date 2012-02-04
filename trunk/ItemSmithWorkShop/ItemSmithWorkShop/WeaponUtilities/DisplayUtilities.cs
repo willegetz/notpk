@@ -89,5 +89,20 @@ namespace ItemSmithWorkShop.WeaponUtilities
 				weapon.WeaponThreatRange,
 				weapon.WeaponDamageType);
 		}
+
+		public static object BasicIngotDisplay(MaterialComponentData ingotInfo)
+		{
+			return string.Format("Name: {1}{0}Cost Modifier: '{2} gold pieces'{0}\tAdditional Cost: '{3}'{0}Weight Multiplier: '{4}'{0}Is Masterwork: '{5}'{0}Masterwork Cost: '{6}'{0}To Hit Bonus: '{7}'{0}Damage Modifier: '{8}'{0}Description:{0}\t{9}",
+				Environment.NewLine,
+				ingotInfo.Name,
+				ingotInfo.ComponentCostModifier,
+				ingotInfo.AdditionalCostModifier,
+				ingotInfo.ComponentWeightModifier,
+				ingotInfo.IsMasterwork,
+				ingotInfo.MasterworkCostModifier,
+				ingotInfo.ToHitBonus,
+				ingotInfo.ComponentDamageModifier,
+				ingotInfo.ComponentDescription);
+		}
 	}
 }
