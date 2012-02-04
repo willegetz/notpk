@@ -77,17 +77,17 @@ namespace ItemSmithWorkShop.WeaponUtilities
 
 		public static string BasicDisplay(WeaponData weapon)
 		{
-			return string.Format("{0}:\t'{1} gp'{7}Weight: '{2} pound(s)'{7}Damage: '{3} [{8}-20]' {9}{7}Hardness: '{4}'{7}Hit Points: '{5}'{7}{6}",
+			return string.Format("{1}:\t'{2} gp'{0}Weight: '{3} pound(s)'{0}Damage: '{4} [{5}-20]' {6}{0}Hardness: '{7}'{0}Hit Points: '{8}'{0}{9}",
+				Environment.NewLine,
 				weapon.WeaponName,
 				weapon.BasePrice,
 				weapon.WeaponWeight,
 				weapon.WeaponDamage,
+				weapon.WeaponThreatRange,
+				weapon.WeaponDamageType,
 				weapon.WeaponHardness,
 				weapon.WeaponHitPoints,
-				weapon.WeaponText,
-				Environment.NewLine,
-				weapon.WeaponThreatRange,
-				weapon.WeaponDamageType);
+				weapon.WeaponText);
 		}
 
 		public static object BasicIngotDisplay(MaterialComponentData ingotInfo)
@@ -103,6 +103,20 @@ namespace ItemSmithWorkShop.WeaponUtilities
 				ingotInfo.ToHitBonus,
 				ingotInfo.ComponentDamageModifier,
 				ingotInfo.ComponentDescription);
+		}
+
+		public static object BasicSpecialAbilityDisplay(EnchantmentData specialAbilityInfo)
+		{
+			return string.Format("Name: {1}{0}Enhancement Bonus: '{2}'{0}Minimum Caster Level: '{3}'{0}Damage: '{4}'{0}Critical Damage: '{5}'{0}Damage Type: '{6}'{0}Creation Requirements:{0}{7}{0}Description:{0}\t{8}",
+				Environment.NewLine,
+				specialAbilityInfo.EnchantmentName,
+				specialAbilityInfo.EnhancementBonus,
+				specialAbilityInfo.MinimumCasterLevel,
+				specialAbilityInfo.EnchantmentDamage,
+				specialAbilityInfo.EnchantmentCriticalDamage,
+				specialAbilityInfo.DamageType,
+				specialAbilityInfo.CreationRequirements,
+				specialAbilityInfo.EnchantmentDescription);
 		}
 	}
 }

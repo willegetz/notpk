@@ -49,6 +49,7 @@
     <Compile Include="AdventureItems\ExtraordinaryWeaponUtilities\MaterialComponentOrder.cs" />
     <Compile Include="ItemTicket.cs" />
     <Compile Include="Tests\LineItemTests\MaterialIngotTests.cs" />
+    <Compile Include="Tests\LineItemTests\SpecialAbilityRequestTests.cs" />
     <Compile Include="Tests\LineItemTests\WeaponLineItemTests.cs" />
     <Compile Include="Tests\WeaponTests\EnchantedWeaponTest.cs" />
     <Compile Include="Tests\WeaponTests\ExtraordinaryWeaponTest.cs" />
@@ -85,6 +86,9 @@
     <Content Include="PhbWeapon.txt" />
     <Content Include="Tests\LineItemTests\MaterialIngotTests.TestGetMithralIngot.approved.txt">
       <DependentUpon>MaterialIngotTests.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\LineItemTests\SpecialAbilityRequestTests.TestRequestSpecialAbility.approved.txt">
+      <DependentUpon>SpecialAbilityRequestTests.cs</DependentUpon>
     </Content>
     <Content Include="Tests\LineItemTests\WeaponLineItemTests.TestGetWeaponItem.approved.txt">
       <DependentUpon>WeaponLineItemTests.cs</DependentUpon>
