@@ -6,13 +6,13 @@ using ApprovalTests;
 namespace ItemSmithWorkShop.Tests.LineItemTests
 {
 	[TestClass]
-	public class WeaponLineItemTests
+	public class MaterialIngotTests
 	{
 		[TestMethod]
-		public void TestGetWeaponItem()
+		public void TestGetMithralIngot()
 		{
-			var weapon = ItemTicket.GetWeaponTicket("Dagger");
-			Approvals.Approve(weapon);
+			var ingot = ItemTicket.GetMaterialIngot("Mithral");
+			Approvals.Approve(ingot);
 		}
 	}
 }
