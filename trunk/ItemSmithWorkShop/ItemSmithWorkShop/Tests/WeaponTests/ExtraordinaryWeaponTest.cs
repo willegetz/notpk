@@ -36,7 +36,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 		[TestMethod]
 		public void TestCreateColdIronWeapon()
 		{
-			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
+			WeaponItem weapon = WeaponItemSmith.OrderItem("Short Sword");
 			ExtraordinaryQualityWeapon ironWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Cold Iron");
 			Approvals.Approve(DisplayUtilities.BasicDisplay(ironWeapon));
 		}

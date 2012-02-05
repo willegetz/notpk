@@ -2,6 +2,7 @@
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ApprovalTests;
+using ItemSmithWorkShop.WeaponUtilities;
 
 namespace ItemSmithWorkShop.Tests.LineItemTests
 {
@@ -12,7 +13,7 @@ namespace ItemSmithWorkShop.Tests.LineItemTests
 		public void TestGetWeaponItem()
 		{
 			var weapon = ItemTicket.GetWeaponTicket("Dagger");
-			Approvals.Approve(weapon);
+			Approvals.Approve(LineItemDisplayUtilites.BasicDisplay(weapon));
 		}
 	}
 }
