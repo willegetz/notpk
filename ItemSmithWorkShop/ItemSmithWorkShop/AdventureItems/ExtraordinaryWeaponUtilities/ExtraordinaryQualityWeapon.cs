@@ -26,6 +26,10 @@ namespace ItemSmithWorkShop.AdventureItems.ExtraordinaryWeaponUtilities
 
 		public override double GetCost()
 		{
+			if (component.Name == "Cold Iron ")
+			{
+				return (weapon.GetCost() * component.CostModifier) + component.MasterworkCost;
+			}
 			return weapon.GetCost() + component.MasterworkCost + component.CostModifier;
 		}
 

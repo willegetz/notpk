@@ -2,6 +2,7 @@
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ApprovalTests;
+using ItemSmithWorkShop.WeaponUtilities;
 
 namespace ItemSmithWorkShop.Tests.LineItemTests
 {
@@ -12,7 +13,7 @@ namespace ItemSmithWorkShop.Tests.LineItemTests
 		public void TestGetMithralIngot()
 		{
 			var ingot = ItemTicket.GetMaterialIngot("Mithral");
-			Approvals.Approve(ingot);
+			Approvals.Approve(LineItemDisplayUtilites.BasicIngotDisplay(ingot));
 		}
 	}
 }

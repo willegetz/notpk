@@ -1,25 +1,26 @@
 ﻿using System;
 using System.Linq;
 using ItemSmithWorkShop.WeaponUtilities;
+using ItemSmithWorkShop.AdventureItems.Interfaces;
 
 namespace ItemSmithWorkShop
 {
-	public class ItemTicket
+	public class ItemTicket : ILineItems
 	{
-		internal static object GetWeaponTicket(string weaponName)
+		internal static WeaponData GetWeaponTicket(string weaponName)
 		{
-			return DisplayUtilities.BasicDisplay(TempWeaponDictionary.GetWeaponData(weaponName));
+			return TempWeaponDictionary.GetWeaponData(weaponName);
 		}
 
-		public static object GetMaterialIngot(string ingotName)
+		public static MaterialComponentData GetMaterialIngot(string ingotName)
 		{
-			return DisplayUtilities.BasicIngotDisplay(MaterialComponentDictionary.GetComponentData(ingotName));
+			return MaterialComponentDictionary.GetComponentData(ingotName);
 		}
 
-		public static object GetSpecialAbilityTicket(string specialAbilityName)
+		public static EnchantmentData GetSpecialAbilityTicket(string specialAbilityName)
 		{
 			var specialAbilityInfo = EnchantmentDictionary.GetEnchantmentData(specialAbilityName);
-			return DisplayUtilities.BasicSpecialAbilityDisplay(specialAbilityInfo);
+			return specialAbilityInfo;
 		}
 	}
 }
