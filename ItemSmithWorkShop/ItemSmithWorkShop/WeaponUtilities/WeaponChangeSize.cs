@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
-using ItemSmithWorkShop.AdventureItems.AdventureItemUtilities;
 using ItemSmithWorkShop.AdventureItems.MundaneWeaponUtilites;
 
 namespace ItemSmithWorkShop.WeaponUtilities
 {
-	public class WeaponChangeSize : AdventureItem
+	public class WeaponChangeSize
 	{
 		private static string damageKey;
 		private static string sizeKey;
