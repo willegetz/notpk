@@ -15,7 +15,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 1);
-			Approvals.Approve(DisplayUtilities.BasicMagicalDisplay(magicWeapon));
+			Approvals.Verify(DisplayUtilities.BasicMagicalDisplay(magicWeapon));
 		}
 
 		[TestMethod]
@@ -24,7 +24,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			ExtraordinaryQualityWeapon adamantineWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Adamantine");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(adamantineWeapon, 1);
-			Approvals.Approve(DisplayUtilities.BasicMagicalDisplay(magicWeapon));
+			Approvals.Verify(DisplayUtilities.BasicMagicalDisplay(magicWeapon));
 		}
 
 		[TestMethod]
@@ -33,7 +33,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			ExtraordinaryQualityWeapon silverWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Silver");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(silverWeapon, 1);
-			Approvals.Approve(DisplayUtilities.BasicMagicalDisplay(magicWeapon));
+			Approvals.Verify(DisplayUtilities.BasicMagicalDisplay(magicWeapon));
 		}
 
 		[TestMethod]
@@ -42,7 +42,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			ExtraordinaryQualityWeapon ironWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Cold Iron");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(ironWeapon, 1);
-			Approvals.Approve(DisplayUtilities.BasicMagicalDisplay(magicWeapon));
+			Approvals.Verify(DisplayUtilities.BasicMagicalDisplay(magicWeapon));
 		}
 
 		[TestMethod]
@@ -51,7 +51,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			ExtraordinaryQualityWeapon darkwoodWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Darkwood");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(darkwoodWeapon, 1);
-			Approvals.Approve(DisplayUtilities.BasicMagicalDisplay(magicWeapon));
+			Approvals.Verify(DisplayUtilities.BasicMagicalDisplay(magicWeapon));
 		}
 
 		[TestMethod]
@@ -60,7 +60,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			ExtraordinaryQualityWeapon mithralWeapon = WeaponItemSmith.OrderSpecialComponent(weapon, "Mithral");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(mithralWeapon, 1);
-			Approvals.Approve(DisplayUtilities.BasicMagicalDisplay(magicWeapon));
+			Approvals.Verify(DisplayUtilities.BasicMagicalDisplay(magicWeapon));
 		}
 
 		[TestMethod]
@@ -68,7 +68,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 1);
-			Approvals.Approve(DisplayUtilities.FullMagicalDisplay(magicWeapon));
+			Approvals.Verify(DisplayUtilities.FullMagicalDisplay(magicWeapon));
 		}
 
 		[TestMethod]
@@ -76,7 +76,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
 			MagicWeaponItem magicWeapon = new MagicWeaponItem(weapon, 5);
-			Approvals.Approve(DisplayUtilities.FullMagicalDisplay(magicWeapon));
+			Approvals.Verify(DisplayUtilities.FullMagicalDisplay(magicWeapon));
 		}
 	}
 }

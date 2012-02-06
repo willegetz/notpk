@@ -13,7 +13,7 @@ namespace ItemSmithWorkShop.Tests.LineItemTests
 		public void TestGetMithralIngot()
 		{
 			var ingot = ItemTicket.GetMaterialIngot("Mithral");
-			Approvals.Approve(LineItemDisplayUtilites.BasicIngotDisplay(ingot));
+			Approvals.Verify(LineItemDisplayUtilites.BasicIngotDisplay(ingot));
 		}
 	}
 }

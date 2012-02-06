@@ -24,7 +24,7 @@ namespace ItemSmithWorkShop.WeaponUtilities
 
 		public override string ToString()
 		{
-			return string.Format("{1}:\t'{2} gp'{0}Weight: '{3} pound(s)'{0}Damage: '{4} [{5}-20/{6}]' {7}{0}Range Increment: '{8} feet'{0}Hardness: '{9}'{0}Hit Points: '{10}'{0}{11}",
+			return string.Format("Name: '{1}'{0}Base Price: '{2} gp'{0}Weight: '{3} pound(s)'{0}Damage: '{4} [{5}-20/{6}]' {7}{0}Range Increment: '{8} feet'{0}Hardness: '{9}'{0}Hit Points: '{10}'{0}{11}",
 				Environment.NewLine,
 				WeaponName,
 				BasePrice,

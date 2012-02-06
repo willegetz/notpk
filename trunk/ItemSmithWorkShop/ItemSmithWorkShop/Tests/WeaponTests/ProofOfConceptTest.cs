@@ -13,7 +13,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 		public void TestWeaponOrder()
 		{
 			WeaponItem weapon = WeaponItemSmith.OrderItem("Dagger");
-			Approvals.Approve(DisplayUtilities.BasicDisplay(weapon));
+			Approvals.Verify(DisplayUtilities.BasicDisplay(weapon));
 		}
 
 		// Display Utilities does not work with this test.
@@ -22,7 +22,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 		{
 			WeaponOrder weapon = WeaponItemSmith.OrderBlah("Dagger");
 			MasterworkWeaponItem masterworkWeapon = WeaponItemSmith.OrderBlah(weapon, "Masterwork");
-			Approvals.Approve(masterworkWeapon.ToString());
+			Approvals.Verify(masterworkWeapon.ToString());
 		}
 	}
 }

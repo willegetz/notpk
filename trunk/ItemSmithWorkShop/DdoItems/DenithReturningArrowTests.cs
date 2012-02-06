@@ -13,7 +13,7 @@ namespace DdoItems
 		public void TestDenithBolts()
 		{
 			var quantity = DenithBolts(1500);
-			Approvals.Approve(quantity);
+			Approvals.Verify(quantity);
 		}
 
 		private string DenithBolts(double quantity)

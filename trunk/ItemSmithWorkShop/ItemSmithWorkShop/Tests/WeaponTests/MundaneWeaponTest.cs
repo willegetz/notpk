@@ -12,7 +12,7 @@ namespace ItemSmithWorkShop.Tests.WeaponTests
 		public void TestCreateWeapon()
 		{
 			var weapon = WeaponItemSmith.OrderItem("Dagger");
-			Approvals.Approve(DisplayUtilities.BasicDisplay(weapon));
+			Approvals.Verify(DisplayUtilities.BasicDisplay(weapon));
 		}
 	}
 }

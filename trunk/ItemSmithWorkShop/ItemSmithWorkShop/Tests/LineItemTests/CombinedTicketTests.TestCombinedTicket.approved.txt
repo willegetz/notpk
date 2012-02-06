@@ -1,4 +1,5 @@
-Short Sword:	'10 gp'
+Name: 'Short Sword'
+Base Price: '10 gp'
 Weight: '2 pound(s)'
 Damage: '1d6 [19-20/x2]' Slashing
 Range Increment: ' feet'
