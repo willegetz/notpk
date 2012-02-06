@@ -13,7 +13,7 @@ namespace ItemSmithWorkShop.Tests.LineItemTests
 		public void TestRequestSpecialAbility()
 		{
 			var specialAbility = ItemTicket.GetSpecialAbilityTicket("Flaming");
-			Approvals.Approve(LineItemDisplayUtilites.BasicSpecialAbilityDisplay(specialAbility));
+			Approvals.Verify(LineItemDisplayUtilites.BasicSpecialAbilityDisplay(specialAbility));
 		}
 	}
 }

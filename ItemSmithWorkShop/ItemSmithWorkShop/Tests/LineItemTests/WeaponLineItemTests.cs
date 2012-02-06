@@ -13,7 +13,7 @@ namespace ItemSmithWorkShop.Tests.LineItemTests
 		public void TestGetWeaponItem()
 		{
 			var weapon = ItemTicket.GetWeaponTicket("Dagger");
-			Approvals.Approve(LineItemDisplayUtilites.BasicDisplay(weapon));
+			Approvals.Verify(LineItemDisplayUtilites.BasicDisplay(weapon));
 		}
 	}
 }

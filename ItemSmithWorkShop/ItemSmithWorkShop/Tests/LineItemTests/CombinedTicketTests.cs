@@ -26,7 +26,7 @@ namespace ItemSmithWorkShop.Tests.LineItemTests
 				sb.AppendLine(item.ToString() + Environment.NewLine);
 			}
 
-			Approvals.Approve(sb.ToString());
+			Approvals.Verify(sb.ToString());
 		}
 	}
 }
