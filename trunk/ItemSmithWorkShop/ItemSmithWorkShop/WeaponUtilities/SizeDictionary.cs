@@ -28,46 +28,78 @@ namespace ItemSmithWorkShop.WeaponUtilities
 		private const string d10 = "1d10";
 		private const string d12 = "1d12";
 		private const string d2d6 = "2d6";
+		private const string d3d6 = "3d6";
+		private const string d4d6 = "4d6";
+		private const string d6d6 = "6d6";
+		private const string d2d8 = "2d8";
+		private const string d3d8 = "3d8";
+		private const string d4d8 = "4d8";
+		private const string d6d8 = "6d8";
+		private const string d8d6 = "8d6";
 
 		private static Dictionary<string, double> sizeModifier;
 
-		private Dictionary<string, string> sizedDamage;
-		private static Dictionary<string, string> fineDamage;
-		private static Dictionary<string, string> diminutiveDamage;
-		private static Dictionary<string, string> tinyDamage;
-		private static Dictionary<string, string> smallDamage;
+		public Dictionary<string, string> damage1D2 { get; private set; }
+		public Dictionary<string, string> damage1D3;
+		public Dictionary<string, string> damage1D4;
+		public Dictionary<string, string> damage1D6;
+		public Dictionary<string, string> damage2D4;
+		public Dictionary<string, string> damage1D8;
+		public Dictionary<string, string> damage1D10;
+		public Dictionary<string, string> damage1D12;
+		public Dictionary<string, string> damage2D6;
 
-
-		static SizeDictionary()
+		public SizeDictionary()
 		{
-			LoadSizeDictionaries();
+			LoadDamageDictionaries();
 		}
 
-		private static void LoadSizeDictionaries()
+		private void LoadDamageDictionaries()
 		{
-			sizeModifier = new Dictionary<string, double>()
+			damage1D2 = new Dictionary<string, string>
 			{
-				{ fine, 0.0625 }, { diminutive, 0.125 }, { tiny, 0.25 }, { small, 0.5 }, { medium, 1 }, { large, 2 }, { huge, 4 }, { gargantuan, 8 }, { colossal, 16 },
+				{ fine, d0 }, { diminutive, d0 }, { tiny, d0 },
+				{ small, d1 }, { medium, d2 }, { large, d3 }, { huge, d4 }, { gargantuan, d6 }, { colossal, d8 },
 			};
-
-			fineDamage = new Dictionary<string, string>()
+			damage1D3 = new Dictionary<string, string>
 			{
-				{d2, d0}, {d3, d0}, {d4, d0}, {d6, d1}, {d2d4, d2}, {d8, d2}, {d10, d3}, {d12, d4}, {d2d6, d4}
+				{ fine, d0 }, { diminutive, d0 }, { tiny, d1 },
+				{ small, d2 }, { medium, d3 }, { large, d4 }, { huge, d6 }, { gargantuan, d8 }, { colossal, d2d6 },
 			};
-
-			diminutiveDamage = new Dictionary<string, string>()
+			damage1D4 = new Dictionary<string, string>
 			{
-				{d2, d0}, {d3, d0}, {d4, d1}, {d6, d2}, {d2d4, d3}, {d8, d3}, {d10, d4}, {d12, d6}, {d2d6, d6}
+				{ fine, d0 }, { diminutive, d1 }, { tiny, d2 },
+				{ small, d3 }, { medium, d4 }, { large, d6 }, { huge, d8 }, { gargantuan, d2d6 }, { colossal, d3d6 },
 			};
-
-			tinyDamage = new Dictionary<string, string>()
+			damage1D6 = new Dictionary<string, string>
 			{
-				{d2, d0}, {d3, d1}, {d4, d2}, {d6, d3}, {d2d4, d4}, {d8, d4}, {d10, d6}, {d12, d8}, {d2d6, d8}
+				{ fine, d1 }, { diminutive, d2 }, { tiny, d3 },
+				{ small, d4 }, { medium, d6 }, { large, d8 }, { huge, d2d6 }, { gargantuan, d3d6 }, { colossal, d4d6 },
 			};
-
-			smallDamage = new Dictionary<string, string>()
+			damage2D4 = new Dictionary<string, string>
 			{
-				{d2, d1}, {d3, d2}, {d4, d3}, {d6, d4}, {d2d4, d6}, {d8, d6}, {d10, d8}, {d12, d10}, {d2d6, d10}
+				{ fine, d2 }, { diminutive, d3 }, { tiny, d4 },
+				{ small, d6 }, { medium, d2d4 }, { large, d2d6 }, { huge, d3d6 }, { gargantuan, d4d6 }, { colossal, d6d6 },
+			};
+			damage1D8 = new Dictionary<string, string>
+			{
+				{ fine, d2 }, { diminutive, d3 }, { tiny, d4 },
+				{ small, d6 }, { medium, d8 }, { large, d2d6 }, { huge, d3d6 }, { gargantuan, d4d6 }, { colossal, d6d6 },
+			};
+			damage1D10 = new Dictionary<string, string>
+			{
+				{ fine, d3 }, { diminutive, d4 }, { tiny, d6 },
+				{ small, d8 }, { medium, d10 }, { large, d2d8 }, { huge, d3d8 }, { gargantuan, d4d8 }, { colossal, d6d8 },
+			};
+			damage1D12 = new Dictionary<string, string>
+			{
+				{ fine, d4 }, { diminutive, d6 }, { tiny, d8 },
+				{ small, d10 }, { medium, d12 }, { large, d3d6 }, { huge, d4d6 }, { gargantuan, d6d6 }, { colossal, d8d6 },
+			};
+			damage2D6 = new Dictionary<string, string>
+			{
+				{ fine, d4 }, { diminutive, d6 }, { tiny, d8 },
+				{ small, d10 }, { medium, d2d6 }, { large, d3d6 }, { huge, d4d6 }, { gargantuan, d6d6 }, { colossal, d8d6 },
 			};
 		}
 	}
