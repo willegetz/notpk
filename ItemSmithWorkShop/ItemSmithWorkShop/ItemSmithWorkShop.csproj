@@ -80,6 +80,7 @@
     <Compile Include="WeaponUtilities\LineItemDisplayUtilites.cs" />
     <Compile Include="WeaponUtilities\MaterialComponentData.cs" />
     <Compile Include="WeaponUtilities\MaterialComponentDictionary.cs" />
+    <Compile Include="WeaponUtilities\SizeDictionary.cs" />
     <Compile Include="WeaponUtilities\TempWeaponDictionary.cs" />
     <Compile Include="WeaponUtilities\WeaponChangeSize.cs" />
     <Compile Include="WeaponUtilities\WeaponData.cs" />
