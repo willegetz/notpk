@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ApprovalTests, Version=1.14.4417.31530, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ApprovalTests.1.4\lib\ApprovalTests.dll</HintPath>
+    </Reference>
+    <Reference Include="ApprovalUtilities, Version=1.14.4417.31529, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ApprovalTests.1.4\lib\ApprovalUtilities.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -204,16 +210,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ApprovalTests\ApprovalTests.csproj">
-      <Project>{F70C9A76-F797-4167-8178-14821F8634BC}</Project>
-      <Name>ApprovalTests</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SimpleLogger\ApprovalUtilities.csproj">
-      <Project>{E9683C33-7A71-4776-B7C9-E89C565AC16B}</Project>
-      <Name>ApprovalUtilities</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
