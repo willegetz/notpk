@@ -12,7 +12,7 @@ using ApprovalTests.Reporters;
 [assembly: AssemblyCopyright("Copyright ©  2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: UseReporter(typeof(QuietReporter))]
+//[assembly: UseReporter(typeof(TortoiseDiffReporter))]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
