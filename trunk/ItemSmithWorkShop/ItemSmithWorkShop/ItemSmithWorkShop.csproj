@@ -59,6 +59,7 @@
     <Compile Include="Tests\WeaponTests\MundaneWeaponTest.cs" />
     <Compile Include="Tests\WeaponTests\ProofOfConceptTest.cs" />
     <Compile Include="Tests\WeaponTests\SizingTest.cs" />
+    <Compile Include="Weapons\PhbWeapon.cs" />
     <Compile Include="WeaponUtilities\DisplayUtilities.cs" />
     <Compile Include="WeaponUtilities\EnchantmentDictionary.cs" />
     <Compile Include="AdventureItems\AdventureItemUtilities\AdventureItem.cs" />
