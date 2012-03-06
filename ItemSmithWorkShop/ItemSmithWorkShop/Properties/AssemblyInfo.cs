@@ -1,7 +1,6 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 using ApprovalTests.Reporters;
-using ItemSmithWorkShop.NCrunchUtilities;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
@@ -13,7 +12,7 @@ using ItemSmithWorkShop.NCrunchUtilities;
 [assembly: AssemblyCopyright("Copyright ©  2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: UseReporter(typeof(NCrunchSilentReporter))]
+[assembly: UseReporter(typeof(QuietReporter))]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
