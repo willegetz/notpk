@@ -47,13 +47,12 @@ namespace ItemSmithWorkShop.Weapons
 
 		public PhbWeapon()
 		{
+			WeaponName = "Dagger";
 			Proficiency = "Simple";
 			WeaponUse = "Melee";
 			WeaponCategory = "Light";
 			WeaponSubCategory = "Thrown";
 			WeaponSize = "Medium";
-
-			WeaponName = "Dagger";
 			WeaponCost = 2;
 			Damage = "1d4";
 			ThreatRange = "19-20";
@@ -68,6 +67,29 @@ namespace ItemSmithWorkShop.Weapons
 		public void NameWeapon(string name)
 		{
 			GivenName = name;
+		}
+
+		public override string ToString()
+		{
+			return string.Format
+				("Weapon: {15}['{1}']{0}Weapon Proficiency: '{2}'{0}Weapon Category: '{3}, {4}'{0}Weapon Size: '{5}'{0}Weapon Cost: '{6}' gp{0}Damage: '{7}' [{8}/{9}] {10}{0}Range Increment: '{11} feet ['{12}' feet max]'{0}Weight: '{13} pounds'{0}Special: {14}",
+				Environment.NewLine, 
+				WeaponName, 
+				Proficiency, 
+				WeaponCategory, 
+				WeaponSubCategory, 
+				WeaponSize, 
+				WeaponCost, 
+				Damage, 
+				ThreatRange, 
+				CriticalDamage, 
+				DamageType, 
+				RangeIncrement, 
+				MaxRange, 
+				Weight,
+				SpecialInfo,
+				GivenName
+				);
 		}
 	}
 }
