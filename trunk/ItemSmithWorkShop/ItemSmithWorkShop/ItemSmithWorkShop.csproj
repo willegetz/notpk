@@ -59,6 +59,7 @@
     <Compile Include="Tests\LineItemTests\MaterialIngotTests.cs" />
     <Compile Include="Tests\LineItemTests\SpecialAbilityRequestTests.cs" />
     <Compile Include="Tests\LineItemTests\WeaponLineItemTests.cs" />
+    <Compile Include="Tests\NewWeaponTests\PhbWeaponTests.cs" />
     <Compile Include="Tests\WeaponTests\EnchantedWeaponTest.cs" />
     <Compile Include="Tests\WeaponTests\ExtraordinaryWeaponTest.cs" />
     <Compile Include="Tests\WeaponTests\MagicEnhancementWeaponTest.cs" />
@@ -105,6 +106,9 @@
     </Content>
     <Content Include="Tests\LineItemTests\WeaponLineItemTests.TestGetWeaponItem.approved.txt">
       <DependentUpon>WeaponLineItemTests.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayDagger.approved.txt">
+      <DependentUpon>PhbWeaponTests.cs</DependentUpon>
     </Content>
     <Content Include="Tests\WeaponTests\EnchantedWeaponTest.TestDoubleWeaponEnchanter.approved.txt">
       <DependentUpon>EnchantedWeaponTest.cs</DependentUpon>
