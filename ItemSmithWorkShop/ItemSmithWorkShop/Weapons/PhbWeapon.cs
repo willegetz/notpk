@@ -6,7 +6,7 @@ using ItemSmithWorkShop.Weapons.Interfaces;
 
 namespace ItemSmithWorkShop.Weapons
 {
-	public class PhbWeapon : IWeapon
+	public class PhbWeapon : IWeapon1
 	{
 		// A weapon has several properties
 		//		Proficiency category: simple, martial, and exotic
@@ -90,6 +90,11 @@ namespace ItemSmithWorkShop.Weapons
 		public void NameWeapon(string name)
 		{
 			GivenName = name;
+		}
+
+		public void SetWeaponName(string forgedWeaponName)
+		{
+			
 		}
 
 		public override string ToString()

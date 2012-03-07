@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ItemSmithWorkShop.Weapons.Interfaces
 {
-	interface IWeaponEnchantment
+	public interface IWeaponEnchantment : IWeaponItem
 	{
 		string EnchantmentName { get; }
 		string Affix { get; }

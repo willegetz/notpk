@@ -3,6 +3,7 @@ using ItemSmithWorkShop.Weapons;
 using ItemSmithWorkShop.Weapons.MaterialTypes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ItemSmithWorkShop.Weapons.MagicEnchantments;
+using ItemSmithWorkShop.Weapons.Smith;
 
 namespace ItemSmithWorkShop.Tests.NewWeaponTests
 {
@@ -28,6 +29,16 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		{
 			var anarchic = new WeaponEnchantment();
 			Approvals.Verify(anarchic.ToString());
+		}
+
+		[TestMethod]
+		public void TestCombineDaggerAndMithral()
+		{
+			var dagger = new PhbWeapon();
+			var mithral = new Mithral();
+			var smith = new WeaponSmith(dagger, mithral);
+			smith.ForgeWeapon();
+			Approvals.Verify(smith.Display());
 		}
 	}
 }
