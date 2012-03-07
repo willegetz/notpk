@@ -2,6 +2,7 @@
 using ItemSmithWorkShop.Weapons;
 using ItemSmithWorkShop.Weapons.MaterialTypes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ItemSmithWorkShop.Weapons.MagicEnchantments;
 
 namespace ItemSmithWorkShop.Tests.NewWeaponTests
 {
@@ -20,6 +21,13 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		{
 			var mithral = new Mithral();
 			Approvals.Verify(mithral.ToString());
+		}
+
+		[TestMethod]
+		public void TestDisplayAnarchicEnchantment()
+		{
+			var anarchic = new WeaponEnchantment();
+			Approvals.Verify(anarchic.ToString());
 		}
 	}
 }
