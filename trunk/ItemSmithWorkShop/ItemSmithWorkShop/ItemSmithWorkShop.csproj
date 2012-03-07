@@ -34,9 +34,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ApprovalTests, Version=1.14.4417.31530, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\ApprovalTests.1.4\lib\ApprovalTests.dll</HintPath>
     </Reference>
     <Reference Include="ApprovalUtilities, Version=1.14.4417.31529, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\ApprovalTests.1.4\lib\ApprovalUtilities.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
@@ -67,7 +69,8 @@
     <Compile Include="Tests\WeaponTests\ProofOfConceptTest.cs" />
     <Compile Include="Tests\WeaponTests\SizingTest.cs" />
     <Compile Include="Weapons\Interfaces\IWeapon.cs" />
-    <Compile Include="Weapons\MagicEnchantments\WeaponEnchantments.cs" />
+    <Compile Include="Weapons\Interfaces\IWeaponEnchantment.cs" />
+    <Compile Include="Weapons\MagicEnchantments\WeaponEnchantment.cs" />
     <Compile Include="Weapons\MaterialTypes\Mithral.cs" />
     <Compile Include="Weapons\PhbWeapon.cs" />
     <Compile Include="WeaponUtilities\DisplayUtilities.cs" />
@@ -109,6 +112,9 @@
     </Content>
     <Content Include="Tests\LineItemTests\WeaponLineItemTests.TestGetWeaponItem.approved.txt">
       <DependentUpon>WeaponLineItemTests.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayAnarchicEnchantment.approved.txt">
+      <DependentUpon>PhbWeaponTests.cs</DependentUpon>
     </Content>
     <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayDagger.approved.txt">
       <DependentUpon>PhbWeaponTests.cs</DependentUpon>
@@ -222,6 +228,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
