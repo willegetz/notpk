@@ -6,7 +6,7 @@ using ItemSmithWorkShop.Weapons.Interfaces;
 
 namespace ItemSmithWorkShop.Weapons.MaterialTypes
 {
-	public class Mithral : IWeaponItem
+	public class Mithral
 	{
 		// The mithral material type is interesting.
 		// Mithral armor are one category lighter: Heavy => Medium, Medium => Light, Light => Light

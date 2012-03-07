@@ -68,14 +68,10 @@
     <Compile Include="Tests\WeaponTests\MundaneWeaponTest.cs" />
     <Compile Include="Tests\WeaponTests\ProofOfConceptTest.cs" />
     <Compile Include="Tests\WeaponTests\SizingTest.cs" />
-    <Compile Include="Weapons\ForgedWeapon.cs" />
-    <Compile Include="Weapons\Interfaces\IWeapon1.cs" />
-    <Compile Include="Weapons\Interfaces\IWeaponEnchantment.cs" />
-    <Compile Include="Weapons\Interfaces\IWeaponItem.cs" />
+    <Compile Include="Weapons\Interfaces\IWeapon.cs" />
     <Compile Include="Weapons\MagicEnchantments\WeaponEnchantment.cs" />
     <Compile Include="Weapons\MaterialTypes\Mithral.cs" />
     <Compile Include="Weapons\PhbWeapon.cs" />
-    <Compile Include="Weapons\Smith\WeaponSmith.cs" />
     <Compile Include="WeaponUtilities\DisplayUtilities.cs" />
     <Compile Include="WeaponUtilities\EnchantmentDictionary.cs" />
     <Compile Include="AdventureItems\AdventureItemUtilities\AdventureItem.cs" />

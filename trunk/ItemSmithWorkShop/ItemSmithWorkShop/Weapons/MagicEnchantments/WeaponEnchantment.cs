@@ -6,7 +6,7 @@ using ItemSmithWorkShop.Weapons.Interfaces;
 
 namespace ItemSmithWorkShop.Weapons.MagicEnchantments
 {
-	public class WeaponEnchantment : IWeaponEnchantment
+	public class WeaponEnchantment
 	{
 		// Weapon enchantments cannot be added unless the weapon is already a Plus 1 value
 		// Weapon enchantments can be either a prefix or a suffix.
