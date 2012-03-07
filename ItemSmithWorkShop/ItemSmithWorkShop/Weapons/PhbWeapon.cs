@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ItemSmithWorkShop.Weapons.Interfaces;
 
 namespace ItemSmithWorkShop.Weapons
 {
-	public class PhbWeapon
+	public class PhbWeapon : IWeapon
 	{
 		// A weapon has several properties
 		//		Proficiency category: simple, martial, and exotic
@@ -25,20 +26,43 @@ namespace ItemSmithWorkShop.Weapons
 		//		Special: A special feature of the weapon
 
 		// Where the data comes from is out of scope for the time being.
-		
+
+		private double _maximumRange;
+		private double _rangeIncrement;
+
 		public string Proficiency { get; private set; }
 		public string WeaponUse { get; private set; }
 		public string WeaponCategory { get; private set; }
 		public string WeaponSubCategory { get; private set; }
 		public string WeaponSize { get; private set; }
 
-		public string WeaponName {get; private set; }
+		public string WeaponName { get; private set; }
 		public double WeaponCost { get; private set; }
 		public string Damage { get; private set; }
 		public string ThreatRange { get; private set; }
 		public string CriticalDamage { get; private set; }
-		public double RangeIncrement { get; private set; }
-		public double MaxRange { get; private set; }
+
+		public double RangeIncrement
+		{ get { return _rangeIncrement; }
+			private set 
+			{ 
+				_rangeIncrement = value;
+				if (WeaponUse == "Ranged" || WeaponSubCategory.Contains("Projectile"))
+				{
+					_maximumRange = _rangeIncrement * 10;
+				}
+				else if (WeaponSubCategory.Contains("Thrown"))
+				{
+					_maximumRange = _rangeIncrement * 5;
+				}
+				else
+				{
+					_maximumRange = 0;
+				}
+			}
+		}
+		
+		public double MaxRange { get { return _maximumRange; } }
 		public double Weight { get; private set; }
 		public string DamageType { get; private set; }
 		public string SpecialInfo { get; private set; }
@@ -58,7 +82,6 @@ namespace ItemSmithWorkShop.Weapons
 			ThreatRange = "19-20";
 			CriticalDamage = "x2";
 			RangeIncrement = 10;
-			MaxRange = RangeIncrement * 5;
 			Weight = 1;
 			DamageType = "Piercing or Slashing";
 			SpecialInfo = "+2 bonus on Sleight of Hand checks made to conceal a dagger on your body";
@@ -72,7 +95,7 @@ namespace ItemSmithWorkShop.Weapons
 		public override string ToString()
 		{
 			return string.Format
-				("Weapon: {15}['{1}']{0}Weapon Proficiency: '{2}'{0}Weapon Category: '{3}, {4}'{0}Weapon Size: '{5}'{0}Weapon Cost: '{6}' gp{0}Damage: '{7}' [{8}/{9}] {10}{0}Range Increment: '{11} feet ['{12}' feet max]'{0}Weight: '{13} pounds'{0}Special: {14}",
+				("Given Name: '{15}'{0}Weapon: '{1}'{0}Weapon Proficiency: '{2}'{0}Weapon Category: '{3}, {4}'{0}Weapon Size: '{5}'{0}Weapon Cost: '{6}' gp{0}Damage: '{7}' [{8}/{9}] {10}{0}Range Increment: '{11} feet ['{12}' feet max]'{0}Weight: '{13} pounds'{0}Special: {14}",
 				Environment.NewLine, 
 				WeaponName, 
 				Proficiency, 
