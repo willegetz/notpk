@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ItemSmithWorkShop.Weapons.Interfaces
 {
-	interface IWeapon
+	public interface IWeapon1 : IWeaponItem
 	{
 		string Proficiency { get;}
 		string WeaponUse { get;}
@@ -25,5 +25,7 @@ namespace ItemSmithWorkShop.Weapons.Interfaces
 		string SpecialInfo { get;}
 
 		string GivenName { get;}
+
+		void SetWeaponName(string forgedWeaponName);
 	}
 }
