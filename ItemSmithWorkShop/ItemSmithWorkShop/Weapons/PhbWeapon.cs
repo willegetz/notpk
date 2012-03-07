@@ -6,7 +6,7 @@ using ItemSmithWorkShop.Weapons.Interfaces;
 
 namespace ItemSmithWorkShop.Weapons
 {
-	public class PhbWeapon : IWeapon1
+	public class PhbWeapon : IWeapon
 	{
 		// A weapon has several properties
 		//		Proficiency category: simple, martial, and exotic
