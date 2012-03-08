@@ -25,7 +25,5 @@ namespace ItemSmithWorkShop.Weapons.Interfaces
 		string SpecialInfo { get;}
 
 		string GivenName { get;}
-
-		void SetWeaponName(string forgedWeaponName);
 	}
 }

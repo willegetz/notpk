@@ -36,6 +36,7 @@ namespace ItemSmithWorkShop.Weapons.MaterialTypes
 		private const double shieldCostModifier = 1000;
 		private const double weaponCostModifier = 500;
 		private const double itemCostModifier = 500;
+		private const double itemWeightModifier = 0.5;
 		private const double spellFailureReduction = 0.1;
 		private const double maxDexReduction = -2;
 		private const double armorCheckPenaltyReduction = -3;
@@ -47,11 +48,22 @@ namespace ItemSmithWorkShop.Weapons.MaterialTypes
 		public double ShieldCostModifier { get { return shieldCostModifier; } }
 		public double WeaponCostModifier { get { return weaponCostModifier; } }
 		public double ItemCostModifier { get { return itemCostModifier; } }
+		public double ItemWeightModifier { get { return itemWeightModifier; } }
 		public double SpellFailureReduction { get { return spellFailureReduction; } }
 		public double MaxDexReduction { get { return maxDexReduction; } }
 		public double ArmorCheckPenaltyReduction { get { return armorCheckPenaltyReduction; } }
 
-		public override string ToString()
+		internal double ApplyCostModifier(IWeapon weapon)
+		{
+			return weapon.WeaponCost + (weapon.Weight * WeaponCostModifier);
+		}
+
+		internal double ApplyWeightModifier(IWeapon weapon)
+		{
+			return weapon.Weight * ItemWeightModifier;
+		}
+
+        public override string ToString()
 		{
 			string currency = "gold pieces";
 			return string.Format("Material:{1}'{3}'{0}Armor Cost Modifiers:{0}{1}Light:{1}'{4}' {2}{0}{1}Medium:{1}'{5}' {2}{0}{1}Heavy:{1}'{6}' {2}{0}Shield Cost Modifier:{1}'{7}' {2}{0}Weapon Cost Modifier:{1}'{8}' {2} per pound{0}Item Cost Modifier:{1}'{9}' {2} per pound{0}Spell Failure Reduction:{1}'{10}%'{0}Max Dex Reduction:{1}'{11}'{0}Armor Check Penalty Reduction:{1}'{12}'",
@@ -70,5 +82,7 @@ namespace ItemSmithWorkShop.Weapons.MaterialTypes
 									ArmorCheckPenaltyReduction
 								);
 		}
+
+
 	}
 }
