@@ -92,11 +92,6 @@ namespace ItemSmithWorkShop.Weapons
 			GivenName = name;
 		}
 
-		public void SetWeaponName(string forgedWeaponName)
-		{
-			
-		}
-
 		public override string ToString()
 		{
 			return string.Format
