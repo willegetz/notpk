@@ -68,6 +68,8 @@
     <Compile Include="Tests\WeaponTests\MundaneWeaponTest.cs" />
     <Compile Include="Tests\WeaponTests\ProofOfConceptTest.cs" />
     <Compile Include="Tests\WeaponTests\SizingTest.cs" />
+    <Compile Include="Weapons\Data\ItemData.cs" />
+    <Compile Include="Weapons\Data\WeaponTemplate.cs" />
     <Compile Include="Weapons\Interfaces\IWeapon.cs" />
     <Compile Include="Weapons\MagicEnchantments\WeaponEnchantment.cs" />
     <Compile Include="Weapons\MaterialTypes\Mithral.cs" />
@@ -227,9 +229,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Weapons\Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

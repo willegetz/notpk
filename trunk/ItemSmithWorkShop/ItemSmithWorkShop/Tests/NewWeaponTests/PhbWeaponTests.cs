@@ -14,7 +14,7 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		[TestMethod]
 		public void TestDisplayDagger()
 		{
-			var dagger = new PhbWeapon();
+			var dagger = new PhbWeapon("Dagger");
 			Approvals.Verify(dagger.ToString());
 		}
 
