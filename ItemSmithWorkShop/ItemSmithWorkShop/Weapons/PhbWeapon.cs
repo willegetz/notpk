@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ItemSmithWorkShop.Weapons.Data;
 using ItemSmithWorkShop.Weapons.Interfaces;
 
 namespace ItemSmithWorkShop.Weapons
@@ -26,6 +27,8 @@ namespace ItemSmithWorkShop.Weapons
 		//		Special: A special feature of the weapon
 
 		// Where the data comes from is out of scope for the time being.
+
+		private WeaponTemplate weaponTemplate;
 
 		private double _maximumRange;
 		private double _rangeIncrement;
@@ -69,22 +72,24 @@ namespace ItemSmithWorkShop.Weapons
 
 		public string GivenName { get; private set; }
 
-		public PhbWeapon()
+		public PhbWeapon(string weaponKey)
 		{
-			WeaponName = "Dagger";
-			Proficiency = "Simple";
-			WeaponUse = "Melee";
-			WeaponCategory = "Light";
-			WeaponSubCategory = "Thrown";
-			WeaponSize = "Medium";
-			WeaponCost = 2;
-			Damage = "1d4";
-			ThreatRange = "19-20";
-			CriticalDamage = "x2";
-			RangeIncrement = 10;
-			Weight = 1;
-			DamageType = "Piercing or Slashing";
-			SpecialInfo = "+2 bonus on Sleight of Hand checks made to conceal a dagger on your body";
+			weaponTemplate = ItemData.RetrieveWeaponTemplate(weaponKey);
+
+			WeaponName = weaponTemplate.weaponName;
+			Proficiency = weaponTemplate.Proficiency;
+			WeaponUse = weaponTemplate.WeaponUse;
+			WeaponCategory = weaponTemplate.WeaponCategory;
+			WeaponSubCategory = weaponTemplate.WeaponSubCategory;
+			WeaponSize = weaponTemplate.WeaponSize;
+			WeaponCost = weaponTemplate.WeaponCost;
+			Damage = weaponTemplate.Damage;
+			ThreatRange = weaponTemplate.ThreatRange;
+			CriticalDamage = weaponTemplate.CriticalDamage;
+			RangeIncrement = weaponTemplate.RangeIncrement;
+			Weight = weaponTemplate.Weight;
+			DamageType = weaponTemplate.DamageType;
+			SpecialInfo = weaponTemplate.specialInfo;
 		}
 
 		public void NameWeapon(string name)
