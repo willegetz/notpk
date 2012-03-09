@@ -1,0 +1,120 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using ItemSmithWorkShop.Weapons.Interfaces;
+
+namespace ItemSmithWorkShop.Weapons.Data
+{
+	public class WeaponEnchantmentTemplate : IWeaponEnchantment
+	{
+		public string enchantmentName;
+		public string EnchantmentName
+		{
+			get { return enchantmentName; }
+			private set { enchantmentName = value; }
+		}
+
+		public string affix;
+		public string Affix
+		{
+			get { return affix; }
+			private set { affix = value; }
+		}
+
+		public int costModifier;
+		public int CostModifier
+		{
+			get { return costModifier; }
+			private set { costModifier = value; }
+		}
+
+		public string weaponUse;
+		public string WeaponUse
+		{
+			get { return weaponUse; }
+			private set { weaponUse = value; }
+		}
+
+		public string standardDamageBonus;
+		public string StandardDamageBonus
+		{
+			get { return standardDamageBonus; }
+			private set { standardDamageBonus = value; }
+		}
+
+		public bool criticalDamageBonus;
+		public bool CriticalDamageBonus
+		{
+			get { return criticalDamageBonus; }
+			private set { criticalDamageBonus = value; }
+		}
+
+		public string damageType;
+		public string DamageType
+		{
+			get { return damageType; }
+			private set { damageType = value; }
+		}
+
+		public string magicAura;
+		public string MagicAura
+		{
+			get { return magicAura; }
+			private set { magicAura = value; }
+		}
+
+		public int minimumCasterLevel;
+		public int MinimumCasterLevel
+		{
+			get { return minimumCasterLevel; }
+			private set { minimumCasterLevel = value; }
+		}
+
+		public string requiredFeats;
+		public string RequiredFeats
+		{
+			get { return requiredFeats; }
+			private set { requiredFeats = value; }
+		}
+
+		public string requiredSpells;
+		public string RequiredSpells
+		{
+			get { return requiredSpells; }
+			private set { requiredSpells = value; }
+		}
+
+		public string additionalRequirements;
+		public string AdditionalRequirements
+		{
+			get { return additionalRequirements; }
+			private set { additionalRequirements = value; }
+		}
+
+		public string enchantmentNotes;
+		public string EnchantmentNotes
+		{
+			get { return enchantmentNotes; }
+			private set { enchantmentNotes = value; }
+		}
+
+		public WeaponEnchantmentTemplate()
+		{
+			EnchantmentName = enchantmentName;
+			Affix = affix;
+			CostModifier = costModifier;
+			WeaponUse = weaponUse;
+			StandardDamageBonus = standardDamageBonus;
+			CriticalDamageBonus = criticalDamageBonus;
+			DamageType = damageType;
+			MagicAura = magicAura;
+			MinimumCasterLevel = minimumCasterLevel;
+			RequiredFeats = requiredFeats;
+			RequiredSpells = requiredSpells;
+			AdditionalRequirements = additionalRequirements;
+			EnchantmentNotes = enchantmentNotes;
+		}
+
+	}
+}

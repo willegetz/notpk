@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ItemSmithWorkShop.Weapons.Interfaces;
+using ItemSmithWorkShop.Weapons.Data;
 
 namespace ItemSmithWorkShop.Weapons.MagicEnchantments
 {
-	public class WeaponEnchantment
+	public class WeaponEnchantment : IWeaponEnchantment
 	{
 		// Weapon enchantments cannot be added unless the weapon is already a Plus 1 value
 		// Weapon enchantments can be either a prefix or a suffix.
@@ -22,12 +23,14 @@ namespace ItemSmithWorkShop.Weapons.MagicEnchantments
 		// Enchantments have feat and spell requirements to create
 		// Enchantments may have additional requirements as well
 
+		private WeaponEnchantmentTemplate weaponEnchantmentTemplate;
+
 		public string EnchantmentName { get; private set; }
 		public string Affix { get; private set; }
 		public int CostModifier { get; private set; }
 		public string WeaponUse { get; private set; }
 		public string StandardDamageBonus { get; private set; }
-		public string CriticalDamageBonus { get; private set; }
+		public bool CriticalDamageBonus { get; private set; }
 		public string DamageType { get; private set; }
 		public string MagicAura { get; private set; }
 		public int MinimumCasterLevel { get; private set; }
@@ -36,21 +39,23 @@ namespace ItemSmithWorkShop.Weapons.MagicEnchantments
 		public string AdditionalRequirements { get; private set; }
 		public string EnchantmentNotes { get; private set; }
 
-		public WeaponEnchantment()
+		public WeaponEnchantment(string enchantmentKey)
 		{
-			EnchantmentName = "Anarchic";
-			Affix = "Pre";
-			CostModifier = 2;
-			WeaponUse = "Melee, Ranged";
-			StandardDamageBonus = "2d6 vs. Lawful Alignment";
-			CriticalDamageBonus = string.Empty;
-			DamageType = "Chaotic";
-			MagicAura = "Moderate evocation [chaotic]";
-			MinimumCasterLevel = 7;
-			RequiredFeats = "Craft Magic Arms and Armor";
-			RequiredSpells = "chaos hammer";
-			AdditionalRequirements = "Creator must be chaotic";
-			EnchantmentNotes = "-1 temporary level to any wielder of Lawful Alignment. Level loss cannot be overcome in any way while the weapon is wielded.";
+			weaponEnchantmentTemplate = EnchantmentData.RetrieveWeaponEnchantment(enchantmentKey);
+
+			EnchantmentName = weaponEnchantmentTemplate.EnchantmentName;
+			Affix = weaponEnchantmentTemplate.Affix;
+			CostModifier = weaponEnchantmentTemplate.CostModifier;
+			WeaponUse = weaponEnchantmentTemplate.WeaponUse;
+			StandardDamageBonus = weaponEnchantmentTemplate.StandardDamageBonus;
+			CriticalDamageBonus = weaponEnchantmentTemplate.CriticalDamageBonus;
+			DamageType = weaponEnchantmentTemplate.DamageType;
+			MagicAura = weaponEnchantmentTemplate.MagicAura;
+			MinimumCasterLevel = weaponEnchantmentTemplate.MinimumCasterLevel;
+			RequiredFeats = weaponEnchantmentTemplate.RequiredFeats;
+			RequiredSpells = weaponEnchantmentTemplate.RequiredSpells;
+			AdditionalRequirements = weaponEnchantmentTemplate.AdditionalRequirements;
+			EnchantmentNotes = weaponEnchantmentTemplate.EnchantmentNotes;
 		}
 
 		public override string ToString()
