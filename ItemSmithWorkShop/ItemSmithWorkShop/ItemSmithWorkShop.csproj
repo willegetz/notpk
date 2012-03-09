@@ -68,9 +68,12 @@
     <Compile Include="Tests\WeaponTests\MundaneWeaponTest.cs" />
     <Compile Include="Tests\WeaponTests\ProofOfConceptTest.cs" />
     <Compile Include="Tests\WeaponTests\SizingTest.cs" />
+    <Compile Include="Weapons\Data\EnchantmentData.cs" />
     <Compile Include="Weapons\Data\ItemData.cs" />
+    <Compile Include="Weapons\Data\WeaponEnchantmentTemplate.cs" />
     <Compile Include="Weapons\Data\WeaponTemplate.cs" />
     <Compile Include="Weapons\Interfaces\IWeapon.cs" />
+    <Compile Include="Weapons\Interfaces\IWeaponEnchantment.cs" />
     <Compile Include="Weapons\MagicEnchantments\WeaponEnchantment.cs" />
     <Compile Include="Weapons\MaterialTypes\Mithral.cs" />
     <Compile Include="Weapons\PhbWeapon.cs" />
@@ -118,6 +121,9 @@
       <DependentUpon>PhbWeaponTests.cs</DependentUpon>
     </Content>
     <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayDagger.approved.txt">
+      <DependentUpon>PhbWeaponTests.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayFlamingBurstEnchantment.approved.txt">
       <DependentUpon>PhbWeaponTests.cs</DependentUpon>
     </Content>
     <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayMithral.approved.txt">

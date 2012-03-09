@@ -5,6 +5,7 @@ using ItemSmithWorkShop.Weapons.MaterialTypes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ItemSmithWorkShop.Weapons.MagicEnchantments;
 using System;
+using System.Collections.Generic;
 
 namespace ItemSmithWorkShop.Tests.NewWeaponTests
 {
@@ -28,8 +29,15 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		[TestMethod]
 		public void TestDisplayAnarchicEnchantment()
 		{
-			var anarchic = new WeaponEnchantment();
+			var anarchic = new WeaponEnchantment("Anarchic");
 			Approvals.Verify(anarchic.ToString());
+		}
+
+		[TestMethod]
+		public void TestDisplayFlamingBurstEnchantment()
+		{
+			var flameBurst = new WeaponEnchantment("Flaming Burst");
+			Approvals.Verify(flameBurst.ToString());
 		}
 	}
 }
