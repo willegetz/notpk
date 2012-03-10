@@ -124,7 +124,13 @@
     <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayDagger.approved.txt">
       <DependentUpon>PhbWeaponTests.cs</DependentUpon>
     </Content>
+    <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayDistanceEnchantment.approved.txt">
+      <DependentUpon>PhbWeaponTests.cs</DependentUpon>
+    </Content>
     <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayFlamingBurstEnchantment.approved.txt">
+      <DependentUpon>PhbWeaponTests.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayKeenEnchantment.approved.txt">
       <DependentUpon>PhbWeaponTests.cs</DependentUpon>
     </Content>
     <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayMithral.approved.txt">

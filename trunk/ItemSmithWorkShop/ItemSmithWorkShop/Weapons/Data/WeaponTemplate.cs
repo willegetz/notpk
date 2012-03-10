@@ -64,7 +64,14 @@ namespace ItemSmithWorkShop.Weapons.Data
 			private set { damage = value; }
 		}
 
-		public string threatRange;
+		public double threatRangeLowerBound;
+		public double ThreatRangeLowerBound
+		{
+			get { return threatRangeLowerBound; }
+			private set { threatRangeLowerBound = value; }
+		}
+
+		private string threatRange;
 		public string ThreatRange
 		{
 			get { return threatRange; }
@@ -130,7 +137,7 @@ namespace ItemSmithWorkShop.Weapons.Data
 			WeaponName = weaponName;
 			WeaponCost = weaponCost;
 			Damage = damage;
-			ThreatRange = threatRange;
+			ThreatRangeLowerBound = threatRangeLowerBound;
 			CriticalDamage = criticalDamage;
 			RangeIncrement = rangeIncrement;
 			MaxRange = maxRange;

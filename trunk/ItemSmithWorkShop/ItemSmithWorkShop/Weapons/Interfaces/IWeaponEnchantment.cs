@@ -13,9 +13,11 @@ namespace ItemSmithWorkShop.Weapons.Interfaces
 		string WeaponUse { get; }
 		string StandardDamageBonus { get; }
 		bool CriticalDamageBonus { get; }
+		double ThreatRangeModifier { get; }
 		string DamageType { get; }
 		string MagicAura { get; }
 		int MinimumCasterLevel { get; }
+		double RangeIncrementModifier { get; }
 		string RequiredFeats { get; }
 		string RequiredSpells { get; }
 		string AdditionalRequirements { get; }

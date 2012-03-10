@@ -16,6 +16,7 @@ namespace ItemSmithWorkShop.Weapons.Interfaces
 		string WeaponName { get;}
 		double WeaponCost { get;}
 		string Damage { get;}
+		double ThreatRangeLowerBound { get; }
 		string ThreatRange { get;}
 		string CriticalDamage { get;}
 		double RangeIncrement { get;}

@@ -32,6 +32,8 @@ namespace ItemSmithWorkShop.Weapons
 
 		private double _maximumRange;
 		private double _rangeIncrement;
+		private double _threatRangeLowerBound;
+		private string _threatRange;
 
 		public string Proficiency { get; private set; }
 		public string WeaponUse { get; private set; }
@@ -42,7 +44,18 @@ namespace ItemSmithWorkShop.Weapons
 		public string WeaponName { get; private set; }
 		public double WeaponCost { get; private set; }
 		public string Damage { get; private set; }
-		public string ThreatRange { get; private set; }
+
+		public double ThreatRangeLowerBound
+		{ get { return _threatRangeLowerBound; }
+			private set
+			{
+				_threatRangeLowerBound = value;
+				_threatRange = string.Format("{0}-20", _threatRangeLowerBound);
+			}
+
+		}
+		public string ThreatRange { get { return _threatRange; } }
+		
 		public string CriticalDamage { get; private set; }
 
 		public double RangeIncrement
@@ -84,7 +97,7 @@ namespace ItemSmithWorkShop.Weapons
 			WeaponSize = weaponTemplate.WeaponSize;
 			WeaponCost = weaponTemplate.WeaponCost;
 			Damage = weaponTemplate.Damage;
-			ThreatRange = weaponTemplate.ThreatRange;
+			ThreatRangeLowerBound = weaponTemplate.threatRangeLowerBound;
 			CriticalDamage = weaponTemplate.CriticalDamage;
 			RangeIncrement = weaponTemplate.RangeIncrement;
 			Weight = weaponTemplate.Weight;
