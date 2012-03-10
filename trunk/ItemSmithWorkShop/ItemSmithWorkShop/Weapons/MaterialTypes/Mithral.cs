@@ -32,7 +32,9 @@ namespace ItemSmithWorkShop.Weapons.MaterialTypes
 		//		2) Weapons
 		//		3) Other items
 
-		// I don't know how I am going to apply these values.
+		// Mithral has 30 hit points per inch, and a hardness of 15
+
+		// I don't know how I am going to apply these values, yet.
 
 		private const string materialName = "Mithral";
 		private const double lightArmorCostModifier = 1000;
