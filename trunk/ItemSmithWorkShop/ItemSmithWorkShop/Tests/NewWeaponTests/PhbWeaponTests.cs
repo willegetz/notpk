@@ -55,6 +55,10 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			Approvals.Verify(keen.ToString());
 		}
 
+		// When a weapon is combined with a material component, what is produced is a new type of weapon.
+		//		Should the material component be responsible for its changes to the original weapon?
+		// A weapon needs 
+
 		[TestMethod]
 		public void TestBlah()
 		{
