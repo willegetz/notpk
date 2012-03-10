@@ -86,7 +86,13 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 
 			var highestCasterLevel = casterLevels.ToList();
 			highestCasterLevel.Add((plusEnhancement * 3));
-			
+
+			var criticalDamage = from clump in enchantmentClump
+								 where clump.CriticalDamageBonus == true
+								 select clump;
+
+			var critCount = criticalDamage.Count();
+
 
 			var sb = new StringBuilder();
 
@@ -121,8 +127,34 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 				
 			}
 
+			var critSb = new StringBuilder();
+
+			foreach (var critDie in criticalDamage)
+			{
+				while (critCount > 0)
+				{
+					string critDice = string.Empty;
+					if (dagger.CriticalDamage == "x2")
+					{
+						critDice = "1d10";
+					}
+					else if (dagger.CriticalDamage == "x3")
+					{
+						critDice = "2d10";
+					}
+					else
+					{
+						critDice = "3d10";
+					}
+					critSb.Append(string.Format(" '+{0} ({1})'", critDice, critDie.DamageType));
+					
+					critCount--;
+				}
+			}
+
 			sb.Append(string.Format("{0}Total enchantment modifier: '{1}'", Environment.NewLine, enchantmentTotal));
 			sb.Append(string.Format("{0}Required caster level: {1}", Environment.NewLine, highestCasterLevel.Max()));
+			sb.Append(string.Format("{0}Critical damage dice:{1}", Environment.NewLine, critSb));
 
 			Approvals.Verify(sb.ToString());
 		}
