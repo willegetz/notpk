@@ -28,7 +28,7 @@ namespace ItemSmithWorkShop.Weapons.Data
 			             					weaponSize = "Medium",
 			             					weaponCost = 2,
 											damage = "1d4",
-											threatRange = "19-20",
+											threatRangeLowerBound = 19,
 											criticalDamage = "x2",
 											rangeIncrement = 10,
 											maxRange = 0,

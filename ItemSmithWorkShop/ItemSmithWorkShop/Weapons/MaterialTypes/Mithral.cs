@@ -63,7 +63,7 @@ namespace ItemSmithWorkShop.Weapons.MaterialTypes
 			return weapon.Weight * ItemWeightModifier;
 		}
 
-        public override string ToString()
+		public override string ToString()
 		{
 			string currency = "gold pieces";
 			return string.Format("Material:{1}'{3}'{0}Armor Cost Modifiers:{0}{1}Light:{1}'{4}' {2}{0}{1}Medium:{1}'{5}' {2}{0}{1}Heavy:{1}'{6}' {2}{0}Shield Cost Modifier:{1}'{7}' {2}{0}Weapon Cost Modifier:{1}'{8}' {2} per pound{0}Item Cost Modifier:{1}'{9}' {2} per pound{0}Spell Failure Reduction:{1}'{10}%'{0}Max Dex Reduction:{1}'{11}'{0}Armor Check Penalty Reduction:{1}'{12}'",

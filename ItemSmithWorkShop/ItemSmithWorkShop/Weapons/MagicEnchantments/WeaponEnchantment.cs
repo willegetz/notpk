@@ -30,10 +30,12 @@ namespace ItemSmithWorkShop.Weapons.MagicEnchantments
 		public int CostModifier { get; private set; }
 		public string WeaponUse { get; private set; }
 		public string StandardDamageBonus { get; private set; }
+		public double ThreatRangeModifier { get; private set; }
 		public bool CriticalDamageBonus { get; private set; }
 		public string DamageType { get; private set; }
 		public string MagicAura { get; private set; }
 		public int MinimumCasterLevel { get; private set; }
+		public double RangeIncrementModifier { get; private set; }
 		public string RequiredFeats { get; private set; }
 		public string RequiredSpells { get; private set; }
 		public string AdditionalRequirements { get; private set; }
@@ -48,10 +50,12 @@ namespace ItemSmithWorkShop.Weapons.MagicEnchantments
 			CostModifier = weaponEnchantmentTemplate.CostModifier;
 			WeaponUse = weaponEnchantmentTemplate.WeaponUse;
 			StandardDamageBonus = weaponEnchantmentTemplate.StandardDamageBonus;
+			ThreatRangeModifier = weaponEnchantmentTemplate.ThreatRangeModifier;
 			CriticalDamageBonus = weaponEnchantmentTemplate.CriticalDamageBonus;
 			DamageType = weaponEnchantmentTemplate.DamageType;
 			MagicAura = weaponEnchantmentTemplate.MagicAura;
 			MinimumCasterLevel = weaponEnchantmentTemplate.MinimumCasterLevel;
+			RangeIncrementModifier = weaponEnchantmentTemplate.RangeIncrementModifier;
 			RequiredFeats = weaponEnchantmentTemplate.RequiredFeats;
 			RequiredSpells = weaponEnchantmentTemplate.RequiredSpells;
 			AdditionalRequirements = weaponEnchantmentTemplate.AdditionalRequirements;
@@ -61,17 +65,19 @@ namespace ItemSmithWorkShop.Weapons.MagicEnchantments
 		public override string ToString()
 		{
 			return string.Format(
-								"Enchantment: '{1}'{0}Affix: '{2}'{0}Cost Modifier: '+{3}'{0}Weapon Usage: '{4}'{0}Standard Damage Bonus: '{5}'{0}Critical Damage Bonus: '{6}'{0}Damage Type: '{7}'{0}Magic Aura: '{8}'{0}Minimum Caster Level: '{9}'{0}Required Feats: '{10}'{0}Required Spells: '{11}'{0}Additional Requirements: '{12}'{0}Notes: '{13}'",
+								"Enchantment: '{1}'{0}Affix: '{2}'{0}Cost Modifier: '+{3}'{0}Weapon Usage: '{4}'{0}Standard Damage Bonus: '{5}'{0}Threat Range Modifier: '{6}'{0}Critical Damage Bonus: '{7}'{0}Damage Type: '{8}'{0}Magic Aura: '{9}'{0}Minimum Caster Level: '{10}'{0}Range Increment Multiplier: '{11}'{0}Required Feats: '{12}'{0}Required Spells: '{13}'{0}Additional Requirements: '{14}'{0}Notes: '{15}'",
 								Environment.NewLine,
 								EnchantmentName,
 								Affix,
 								CostModifier,
 								WeaponUse,
 								StandardDamageBonus,
+								ThreatRangeModifier,
 								CriticalDamageBonus,
 								DamageType,
 								MagicAura,
 								MinimumCasterLevel,
+								RangeIncrementModifier,
 								RequiredFeats,
 								RequiredSpells,
 								AdditionalRequirements,

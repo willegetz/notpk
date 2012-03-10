@@ -42,10 +42,24 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		}
 
 		[TestMethod]
+		public void TestDisplayDistanceEnchantment()
+		{
+			var distance = new WeaponEnchantment("Distance");
+			Approvals.Verify(distance.ToString());
+		}
+
+		[TestMethod]
+		public void TestDisplayKeenEnchantment()
+		{
+			var keen = new WeaponEnchantment("Keen");
+			Approvals.Verify(keen.ToString());
+		}
+
+		[TestMethod]
 		public void TestBlah()
 		{
 			var dagger = new PhbWeapon("Dagger");
-			var anarchic = new WeaponEnchantment("Anarchic");
+			var distance = new WeaponEnchantment("Distance");
 			var anarchic1 = new WeaponEnchantment("Anarchic");
 			var anarchic2 = new WeaponEnchantment("Anarchic");
 			var flameBurst = new WeaponEnchantment("Flaming Burst");
@@ -53,7 +67,7 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			var flameBurst2 = new WeaponEnchantment("Flaming Burst");
 			var plusEnhancement = 5;
 			List<WeaponEnchantment> enchantmentClump = new List<WeaponEnchantment>();
-			enchantmentClump.Add(anarchic);
+			enchantmentClump.Add(distance);
 			enchantmentClump.Add(anarchic1);
 			enchantmentClump.Add(anarchic2);
 			enchantmentClump.Add(flameBurst);
@@ -93,6 +107,11 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 
 			var critCount = criticalDamage.Count();
 
+			var rangeMod = from clump in enchantmentClump
+						   where clump.RangeIncrementModifier != 1
+						   select clump.RangeIncrementModifier;
+			double greatestRangeIncrease = rangeMod.Max();
+									
 
 			var sb = new StringBuilder();
 
@@ -155,6 +174,7 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			sb.Append(string.Format("{0}Total enchantment modifier: '{1}'", Environment.NewLine, enchantmentTotal));
 			sb.Append(string.Format("{0}Required caster level: {1}", Environment.NewLine, highestCasterLevel.Max()));
 			sb.Append(string.Format("{0}Critical damage dice:{1}", Environment.NewLine, critSb));
+			sb.Append(string.Format("{0}Range increment: {1} feet for {2} (was {3} feet for {4} feet)", Environment.NewLine, (dagger.RangeIncrement * greatestRangeIncrease), (dagger.MaxRange * greatestRangeIncrease), dagger.RangeIncrement, dagger.MaxRange));
 
 			Approvals.Verify(sb.ToString());
 		}

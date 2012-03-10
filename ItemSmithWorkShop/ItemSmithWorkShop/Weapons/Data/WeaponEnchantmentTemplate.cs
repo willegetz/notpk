@@ -43,6 +43,13 @@ namespace ItemSmithWorkShop.Weapons.Data
 			private set { standardDamageBonus = value; }
 		}
 
+		public double threatRangeModifier;
+		public double ThreatRangeModifier
+		{
+			get { return threatRangeModifier; }
+			private set { threatRangeModifier = value; }
+		}
+
 		public bool criticalDamageBonus;
 		public bool CriticalDamageBonus
 		{
@@ -69,6 +76,13 @@ namespace ItemSmithWorkShop.Weapons.Data
 		{
 			get { return minimumCasterLevel; }
 			private set { minimumCasterLevel = value; }
+		}
+
+		public double rangeIncrementModifier;
+		public double RangeIncrementModifier
+		{
+			get { return rangeIncrementModifier; }
+			private set { rangeIncrementModifier = value; }
 		}
 
 		public string requiredFeats;
@@ -106,15 +120,16 @@ namespace ItemSmithWorkShop.Weapons.Data
 			CostModifier = costModifier;
 			WeaponUse = weaponUse;
 			StandardDamageBonus = standardDamageBonus;
+			ThreatRangeModifier = threatRangeModifier;
 			CriticalDamageBonus = criticalDamageBonus;
 			DamageType = damageType;
 			MagicAura = magicAura;
 			MinimumCasterLevel = minimumCasterLevel;
+			RangeIncrementModifier = rangeIncrementModifier;
 			RequiredFeats = requiredFeats;
 			RequiredSpells = requiredSpells;
 			AdditionalRequirements = additionalRequirements;
 			EnchantmentNotes = enchantmentNotes;
 		}
-
 	}
 }
