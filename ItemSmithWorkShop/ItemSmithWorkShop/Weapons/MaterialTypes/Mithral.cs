@@ -10,9 +10,14 @@ namespace ItemSmithWorkShop.Weapons.MaterialTypes
 	{
 		// The mithral material type is interesting.
 		// Mithral armor are one category lighter: Heavy => Medium, Medium => Light, Light => Light
+		//		Should the armor categories be an enum? Heavy = 3, Medium = 2, Light = 1?
+		//			0 could be for clothes or robes or some other non armor designation.
+		//		Mithral could check the armor category and decrease its value by 1 to no less than 1.
 		// Spell failure chances are reduced for armor and shields: 10% reduction
-		// Max dex bonus is reduced by 2
-		// Armor check penalties are reduced by 3, to a minumum of 0
+		// Max dex bonus is reduced by 2.
+		//		This means that an armor that has a "Max Dex = 2" would become "Max Dex = 4"
+		//			In essence, the max dex bonus is INCREASED, not reduced as it states in the DMG.
+		// Armor check penalties are reduced by 3, to a minimum of 0
 		// Item weight is reduced by half
 		// Weapons or armor fashioned are always masterwork
 		// Cost modifiers include masterwork price:
