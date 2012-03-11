@@ -73,6 +73,7 @@
     <Compile Include="Weapons\Data\ItemData.cs" />
     <Compile Include="Weapons\Data\WeaponEnchantmentTemplate.cs" />
     <Compile Include="Weapons\Data\WeaponTemplate.cs" />
+    <Compile Include="Weapons\Interfaces\IMaterialComponents.cs" />
     <Compile Include="Weapons\Interfaces\IWeapon.cs" />
     <Compile Include="Weapons\Interfaces\IWeaponEnchantment.cs" />
     <Compile Include="Weapons\MagicEnchantments\WeaponEnchantment.cs" />
