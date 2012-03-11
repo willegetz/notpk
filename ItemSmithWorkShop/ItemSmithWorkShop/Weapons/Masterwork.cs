@@ -6,7 +6,7 @@ using ItemSmithWorkShop.Weapons.Interfaces;
 
 namespace ItemSmithWorkShop.Weapons
 {
-	public class Masterwork
+	public class Masterwork : IMaterialComponents
 	{
 		// Masterwork applies to weapons, armor, and shields.
 		// Depending on what is needed, Masterwork will do its thing.
@@ -22,5 +22,10 @@ namespace ItemSmithWorkShop.Weapons
 		// Armor and Shields
 		// Armor check penalty is reduced by 1
 		// Cost is an additional 150 gold pieces
+
+
+		public string ComponentName { get { return "Masterwork"; } }
+		public double WeaponCostModifier { get { return 300; } }
+		public bool IsMasterwork { get { return true; } }
 	}
 }

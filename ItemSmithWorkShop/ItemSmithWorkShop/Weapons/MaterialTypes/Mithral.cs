@@ -6,7 +6,7 @@ using ItemSmithWorkShop.Weapons.Interfaces;
 
 namespace ItemSmithWorkShop.Weapons.MaterialTypes
 {
-	public class Mithral
+	public class Mithral : IMaterialComponents
 	{
 		// The mithral material type is interesting.
 		// Mithral armor are one category lighter: Heavy => Medium, Medium => Light, Light => Light
@@ -38,9 +38,9 @@ namespace ItemSmithWorkShop.Weapons.MaterialTypes
 
 		// I don't know how I am going to apply these values, yet.
 
-		private const string materialName = "Mithral";
-		private const double weaponCostModifier = 500;
-		private const bool isMasterwork = true;
+		public string ComponentName { get { return "Mithral"; } }
+		public double WeaponCostModifier { get { return 500; } }
+		public bool IsMasterwork { get { return true; } }
 
 		private const double lightArmorCostModifier = 1000;
 		private const double mediumArmorCostModifier = 4000;
@@ -51,10 +51,6 @@ namespace ItemSmithWorkShop.Weapons.MaterialTypes
 		private const double spellFailureReduction = 0.1;
 		private const double maxDexReduction = -2;
 		private const double armorCheckPenaltyReduction = -3;
-
-		public string MaterialName { get { return materialName; } }
-		public double WeaponCostModifier { get { return weaponCostModifier; } }
-		public bool IsMasterwork { get { return isMasterwork; } }
 
 		public double LightArmorCostModifier { get { return lightArmorCostModifier; } }
 		public double MediumArmorCostModifier { get { return mediumArmorCostModifier; } }
@@ -83,7 +79,7 @@ namespace ItemSmithWorkShop.Weapons.MaterialTypes
 									Environment.NewLine, 
 									"\t", 
 									currency, 
-									MaterialName, 
+									ComponentName, 
 									LightArmorCostModifier, 
 									MediumArmorCostModifier, 
 									HeavyArmorCostModifier, 
