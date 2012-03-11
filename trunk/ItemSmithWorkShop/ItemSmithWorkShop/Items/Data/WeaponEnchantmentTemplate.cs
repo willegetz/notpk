@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ItemSmithWorkShop.Weapons.Interfaces;
+using ItemSmithWorkShop.Items.Interfaces;
 
-namespace ItemSmithWorkShop.Weapons.Data
+namespace ItemSmithWorkShop.Items.Data
 {
 	public class WeaponEnchantmentTemplate : IWeaponEnchantment
 	{

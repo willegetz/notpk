@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ItemSmithWorkShop.Weapons.Interfaces;
-using ItemSmithWorkShop.Weapons.Data;
+using ItemSmithWorkShop.Items.Interfaces;
+using ItemSmithWorkShop.Items.Data;
 
-namespace ItemSmithWorkShop.Weapons.MagicEnchantments
+namespace ItemSmithWorkShop.Items.MagicEnchantments
 {
 	public class WeaponEnchantment : IWeaponEnchantment
 	{

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ItemSmithWorkShop.Weapons.Interfaces;
+using ItemSmithWorkShop.Items.Interfaces;
 
-namespace ItemSmithWorkShop.Weapons.MaterialTypes
+namespace ItemSmithWorkShop.Items.MaterialTypes
 {
-	public class ColdIron : IMaterialComponents
+	public class ColdIron : IMaterialComponent
 	{
 		// Cold iron is not for armor.
 		// Cold iron weapons cost twice as much to make.

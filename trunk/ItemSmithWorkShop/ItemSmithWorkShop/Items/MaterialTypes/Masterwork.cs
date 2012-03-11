@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ItemSmithWorkShop.Weapons.Interfaces;
+using ItemSmithWorkShop.Items.Interfaces;
 
-namespace ItemSmithWorkShop.Weapons
+namespace ItemSmithWorkShop.Items.MaterialTypes
 {
-	public class Masterwork : IMaterialComponents
+	public class Masterwork : IMaterialComponent
 	{
 		// Masterwork applies to weapons, armor, and shields.
 		// Depending on what is needed, Masterwork will do its thing.
