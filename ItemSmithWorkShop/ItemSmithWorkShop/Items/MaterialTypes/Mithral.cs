@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ItemSmithWorkShop.Weapons.Interfaces;
+using ItemSmithWorkShop.Items.Interfaces;
 
-namespace ItemSmithWorkShop.Weapons.MaterialTypes
+namespace ItemSmithWorkShop.Items.MaterialTypes
 {
-	public class Mithral : IMaterialComponents
+	public class Mithral : IMaterialComponent
 	{
 		// The mithral material type is interesting.
 		// Mithral armor are one category lighter: Heavy => Medium, Medium => Light, Light => Light

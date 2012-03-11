@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ItemSmithWorkShop.Weapons.Data;
-using ItemSmithWorkShop.Weapons.Interfaces;
+using ItemSmithWorkShop.Items.Data;
+using ItemSmithWorkShop.Items.Interfaces;
 
-namespace ItemSmithWorkShop.Weapons
+namespace ItemSmithWorkShop.Items.Weapons
 {
 	public class PhbWeapon : IWeapon
 	{
