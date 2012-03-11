@@ -66,6 +66,7 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		//		Should the material component be responsible for its changes to the original weapon?
 		// A weapon needs 
 
+		[Ignore]
 		[TestMethod]
 		public void TestBlah()
 		{

@@ -17,20 +17,25 @@ namespace ItemSmithWorkShop.Weapons.MaterialTypes
 
 		private const string materialName = "Cold Iron";
 		private const double weaponBaseCostMultiplier = 2;
+		private const bool isMasterowrk = false;
+
 		private const double magicEnchantmentCostModification = 2000;
 
 		public string MaterialName { get { return materialName; } }
 		public double WeaponBaseCostMultiplier { get { return weaponBaseCostMultiplier; } }
+		public bool IsMasterwork { get { return isMasterowrk; } }
+
 		public double MagicEnchantmentCostModification { get { return magicEnchantmentCostModification; } }
 
 		public override string ToString()
 		{
-			return string.Format("Material:{1}'{2}'{0}Cost Multiplier:{1}'x{3} to base cost'{0}Additional Cost to Enchant:{1}'{4} gold pieces'",
+			return string.Format("Material:{1}'{2}'{0}Cost Multiplier:{1}'x{3} to base cost'{0}Additional Cost to Enchant:{1}'{4} gold pieces'{0}This Material Bestows \"Masterwork\" Qualities: '{5}'",
 									Environment.NewLine,
 									"\t",
 									MaterialName,
 									WeaponBaseCostMultiplier,
-									MagicEnchantmentCostModification
+									MagicEnchantmentCostModification,
+									IsMasterwork
 								);
 		}
 	}
