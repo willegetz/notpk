@@ -76,6 +76,7 @@
     <Compile Include="Weapons\Interfaces\IWeapon.cs" />
     <Compile Include="Weapons\Interfaces\IWeaponEnchantment.cs" />
     <Compile Include="Weapons\MagicEnchantments\WeaponEnchantment.cs" />
+    <Compile Include="Weapons\Masterwork.cs" />
     <Compile Include="Weapons\MaterialTypes\ColdIron.cs" />
     <Compile Include="Weapons\MaterialTypes\Mithral.cs" />
     <Compile Include="Weapons\PhbWeapon.cs" />

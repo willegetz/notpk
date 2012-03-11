@@ -34,7 +34,7 @@ namespace ItemSmithWorkShop.Weapons.Data
 											maxRange = 0,
 											weight = 1,
 											damageType = "Piercing or Slashing",
-											specialInfo = "+2 bonus on Sleight of Hand checks made to conceal a dagger on your body"
+											specialInfo = "+2 bonus on Sleight of Hand checks made to conceal a\n\tdagger on your body"
 														}
 			             		}
 							};
