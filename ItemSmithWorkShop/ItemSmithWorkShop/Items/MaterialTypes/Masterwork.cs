@@ -27,5 +27,42 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 		public string ComponentName { get { return "Masterwork"; } }
 		public double WeaponCostModifier { get { return 300; } }
 		public bool IsMasterwork { get { return true; } }
+		public string ToHitBonus { get { return "+1"; } }
+
+
+		#region IMaterialComponent Members
+
+
+		public double ApplyCostModifier(IWeapon weaopn)
+		{
+			throw new NotImplementedException();
+		}
+
+		public double GetAdditionalEnchantmentCost()
+		{
+			throw new NotImplementedException();
+		}
+
+		public bool VerifyMasterwork(IWeapon weapon)
+		{
+			throw new NotImplementedException();
+		}
+
+		public string AppendSpecialInfo(IWeapon weapon)
+		{
+			throw new NotImplementedException();
+		}
+
+		public double ApplyWeightModifer(IWeapon weapon)
+		{
+			throw new NotImplementedException();
+		}
+
+		public string ApplyToHitModifier()
+		{
+			return ToHitBonus;
+		}
+
+		#endregion
 	}
 }

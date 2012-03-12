@@ -25,6 +25,8 @@ namespace ItemSmithWorkShop.Items.Interfaces
 		string DamageType { get;}
 		string SpecialInfo { get;}
 
+		bool IsMasterwork { get; }
+
 		string GivenName { get;}
 	}
 }

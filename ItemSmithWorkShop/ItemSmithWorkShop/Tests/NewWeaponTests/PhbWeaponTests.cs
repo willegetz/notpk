@@ -1,6 +1,5 @@
 ﻿using System.Text;
 using ApprovalTests;
-using ItemSmithWorkShop.Items;
 using ItemSmithWorkShop.Items.MaterialTypes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ItemSmithWorkShop.Items.MagicEnchantments;
@@ -8,6 +7,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using ItemSmithWorkShop.Items.TheForge;
+using ItemSmithWorkShop.Items.Weapons;
 
 namespace ItemSmithWorkShop.Tests.NewWeaponTests
 {
@@ -69,6 +69,8 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			var dagger = new PhbWeapon("Dagger");
 			var mithral = new Mithral();
 			var forgedDagger = ItemForge.ForgeWeapon(dagger, mithral);
+			forgedDagger.NameWeapon("Carlyle's Special Greeting");
+			Approvals.Verify(forgedDagger.ToString());
 		}
 
 		// When a weapon is combined with a material component, what is produced is a new type of weapon.

@@ -84,6 +84,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 		public string SpecialInfo { get; private set; }
 
 		public string GivenName { get; private set; }
+		public bool IsMasterwork { get { return false; } }
 
 		public PhbWeapon(string weaponKey)
 		{
