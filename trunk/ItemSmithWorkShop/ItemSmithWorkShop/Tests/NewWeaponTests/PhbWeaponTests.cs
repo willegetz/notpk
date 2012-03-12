@@ -73,6 +73,35 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			Approvals.Verify(forgedDagger.ToString());
 		}
 
+		[TestMethod]
+		public void TestForgeColdIronWeapon()
+		{
+			var dagger = new PhbWeapon("Dagger");
+			var coldIron = new ColdIron();
+			var forgedDagger = ItemForge.ForgeWeapon(dagger, coldIron);
+			forgedDagger.NameWeapon("Krus Hakhar");
+			Approvals.Verify(forgedDagger.ToString());
+		}
+
+		[TestMethod]
+		public void TestForgedMasterworkColdIronWeapon()
+		{
+			// Things that need to persist from one object to another:
+			//		Special components
+			//		Weapon cost
+			//		Extra cost to make an item magical
+			// Currently, the component information is not persisting.
+			//		Perhaps a list?
+
+			var dagger = new PhbWeapon("Dagger");
+			var coldIron = new ColdIron();
+			var forgedDagger = ItemForge.ForgeWeapon(dagger, coldIron);
+			var masterwork = new Masterwork();
+			var masterworkForgedDagger = ItemForge.ForgeWeapon(forgedDagger, masterwork);
+			masterworkForgedDagger.NameWeapon("Holly Thorn");
+			Approvals.Verify(masterworkForgedDagger.ToString());
+		}
+
 		// When a weapon is combined with a material component, what is produced is a new type of weapon.
 		//		Should the material component be responsible for its changes to the original weapon?
 		// A weapon needs 

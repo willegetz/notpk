@@ -20,7 +20,9 @@ namespace ItemSmithWorkShop.Items.TheForge
 			component = componentPart;
 
 			forgedWeapon.additionalEnchantmentCost = component.GetAdditionalEnchantmentCost();
+
 			forgedWeapon.componentName = component.ComponentName;
+			
 			forgedWeapon.criticalDamage = weapon.CriticalDamage;
 			forgedWeapon.damage = weapon.Damage;
 			forgedWeapon.damageType = weapon.DamageType;
@@ -33,7 +35,7 @@ namespace ItemSmithWorkShop.Items.TheForge
 			forgedWeapon.threatRange = weapon.ThreatRange;
 			forgedWeapon.weaponCategory = weapon.WeaponCategory;
 			forgedWeapon.weaponCost = component.ApplyCostModifier(weapon);
-			forgedWeapon.weaponName = weapon.WeaponName;
+			forgedWeapon.weaponName = string.Format("{0} {1}",component.ComponentName, weapon.WeaponName);
 			forgedWeapon.weaponSize = weapon.WeaponSize;
 			forgedWeapon.weaponSubCategory = weapon.WeaponSubCategory;
 			forgedWeapon.weaponUse = weapon.WeaponUse;

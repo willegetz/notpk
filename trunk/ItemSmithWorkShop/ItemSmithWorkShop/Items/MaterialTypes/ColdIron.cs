@@ -19,61 +19,66 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 		private const string componentName = "Cold Iron";
 		private const double weaponCostModifier = 2;
 		private const bool isMasterowrk = false;
-
 		private const double magicEnchantmentCostModification = 2000;
+
+		private string coldIronSpecialInfo = "This iron mined deep underground, known for its\r\teffectiveness against fey creatures, is forged at a\r\tlower temperature to preserve its delicate properties.";
 
 		public string ComponentName { get { return componentName; } }
 		public double WeaponCostModifier { get { return weaponCostModifier; } }
 		public bool IsMasterwork { get { return isMasterowrk; } }
 		public string ToHitBonus { get { return string.Empty; } }
-
+		public string ColdIronSpecialInfo { get  {return coldIronSpecialInfo; }}
+		 
 		public double MagicEnchantmentCostModification { get { return magicEnchantmentCostModification; } }
 
 		public override string ToString()
 		{
-			return string.Format("Material:{1}'{2}'{0}Cost Multiplier:{1}'x{3} to base cost'{0}Additional Cost to Enchant:{1}'{4} gold pieces'{0}This Material Bestows \"Masterwork\" Qualities: '{5}'",
+			return string.Format("Material:{1}'{2}'{0}Cost Multiplier:{1}'x{3} to base cost'{0}Additional Cost to Enchant:{1}'{4} gold pieces'{0}This Material Bestows \"Masterwork\" Qualities: '{5}'{0}Special Info: {6}",
 									Environment.NewLine,
 									"\t",
 									ComponentName,
 									WeaponCostModifier,
 									MagicEnchantmentCostModification,
-									IsMasterwork
+									IsMasterwork,
+									ColdIronSpecialInfo
 								);
 		}
 
-		#region IMaterialComponent Members
-
-
 		public double ApplyCostModifier(IWeapon weaopn)
 		{
-			throw new NotImplementedException();
+			return weaopn.WeaponCost * WeaponCostModifier;
 		}
 
 		public double GetAdditionalEnchantmentCost()
 		{
-			throw new NotImplementedException();
+			return MagicEnchantmentCostModification;
 		}
 
 		public bool VerifyMasterwork(IWeapon weapon)
 		{
-			throw new NotImplementedException();
+			if (weapon.IsMasterwork)
+			{
+				return weapon.IsMasterwork;
+			}
+			else
+			{
+				return IsMasterwork;
+			}
 		}
 
 		public string AppendSpecialInfo(IWeapon weapon)
 		{
-			throw new NotImplementedException();
+			return string.Format("{1}{0}{2}", Environment.NewLine, weapon.SpecialInfo, ColdIronSpecialInfo);
 		}
 
 		public double ApplyWeightModifer(IWeapon weapon)
 		{
-			throw new NotImplementedException();
+			return weapon.Weight;
 		}
 
 		public string ApplyToHitModifier()
 		{
 			return ToHitBonus;
 		}
-
-		#endregion
 	}
 }
