@@ -10,5 +10,13 @@ namespace ItemSmithWorkShop.Items.Interfaces
 		string ComponentName { get; }
 		double WeaponCostModifier { get; }
 		bool IsMasterwork { get; }
+		string ToHitBonus { get; }
+
+		double ApplyCostModifier(IWeapon weaopn);
+		double GetAdditionalEnchantmentCost();
+		bool VerifyMasterwork(IWeapon weapon);
+		string AppendSpecialInfo(IWeapon weapon);
+		double ApplyWeightModifer(IWeapon weapon);
+		string ApplyToHitModifier();
 	}
 }

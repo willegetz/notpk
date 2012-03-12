@@ -57,6 +57,7 @@
     <Compile Include="AdventureItems\ExtraordinaryWeaponUtilities\ExtraordinaryQualityWeapon.cs" />
     <Compile Include="AdventureItems\ExtraordinaryWeaponUtilities\MaterialComponentOrder.cs" />
     <Compile Include="AdventureItems\Interfaces\ILineItems.cs" />
+    <Compile Include="Items\Weapons\ForgedWeapon.cs" />
     <Compile Include="ItemTicket.cs" />
     <Compile Include="Tests\LineItemTests\CombinedTicketTests.cs" />
     <Compile Include="Tests\LineItemTests\MaterialIngotTests.cs" />
@@ -141,6 +142,9 @@
       <DependentUpon>PhbWeaponTests.cs</DependentUpon>
     </Content>
     <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayMithral.approved.txt">
+      <DependentUpon>PhbWeaponTests.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestForgeMithralWeapon.approved.txt">
       <DependentUpon>PhbWeaponTests.cs</DependentUpon>
     </Content>
     <Content Include="Tests\WeaponTests\EnchantedWeaponTest.TestDoubleWeaponEnchanter.approved.txt">

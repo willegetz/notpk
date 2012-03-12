@@ -127,6 +127,13 @@ namespace ItemSmithWorkShop.Items.Data
 			private set { givenName = value; }
 		}
 
+		public bool isMasterwork;
+		public bool IsMasterwork
+		{
+			get { return isMasterwork; }
+			private set { isMasterwork = value; }
+		}
+
 		public WeaponTemplate()
 		{
 			Proficiency = proficiency;
@@ -145,6 +152,7 @@ namespace ItemSmithWorkShop.Items.Data
 			DamageType = damageType;
 			SpecialInfo = specialInfo;
 			GivenName = givenName;
+			IsMasterwork = isMasterwork;
 		}
 	}
 }

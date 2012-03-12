@@ -41,6 +41,7 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 		public string ComponentName { get { return "Mithral"; } }
 		public double WeaponCostModifier { get { return 500; } }
 		public bool IsMasterwork { get { return true; } }
+		public string ToHitBonus { get { return "+1"; } }
 
 		private const double lightArmorCostModifier = 1000;
 		private const double mediumArmorCostModifier = 4000;
@@ -51,6 +52,7 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 		private const double spellFailureReduction = 0.1;
 		private const double maxDexReduction = -2;
 		private const double armorCheckPenaltyReduction = -3;
+		private string mithralSpecialInfo = string.Format("Mithral is a very rare, silvery, glistening metal{0}{1}that is lighter than iron but just as hard.", Environment.NewLine, "\t");
 
 		public double LightArmorCostModifier { get { return lightArmorCostModifier; } }
 		public double MediumArmorCostModifier { get { return mediumArmorCostModifier; } }
@@ -61,13 +63,14 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 		public double SpellFailureReduction { get { return spellFailureReduction; } }
 		public double MaxDexReduction { get { return maxDexReduction; } }
 		public double ArmorCheckPenaltyReduction { get { return armorCheckPenaltyReduction; } }
+		public string MithralSpecialInfo { get {return mithralSpecialInfo;}}
 
-		internal double ApplyCostModifier(IWeapon weapon)
+		public double ApplyCostModifier(IWeapon weapon)
 		{
 			return weapon.WeaponCost + (weapon.Weight * WeaponCostModifier);
 		}
 
-		internal double ApplyWeightModifier(IWeapon weapon)
+		public double ApplyWeightModifier(IWeapon weapon)
 		{
 			return weapon.Weight * ItemWeightModifier;
 		}
@@ -94,5 +97,41 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 		}
 
 
+		#region IMaterialComponent Members
+
+
+		public double GetAdditionalEnchantmentCost()
+		{
+			return 0;
+		}
+
+		public bool VerifyMasterwork(IWeapon weapon)
+		{
+			if (weapon.IsMasterwork)
+			{
+				return weapon.IsMasterwork;
+			}
+			else
+			{
+				return IsMasterwork;
+			}
+		}
+
+		public string AppendSpecialInfo(IWeapon weapon)
+		{
+			return string.Format("{1}{0}{2}", Environment.NewLine, weapon.SpecialInfo, MithralSpecialInfo);
+		}
+
+		public double ApplyWeightModifer(IWeapon weapon)
+		{
+			return weapon.Weight * ItemWeightModifier;
+		}
+
+		public string ApplyToHitModifier()
+		{
+			return ToHitBonus;
+		}
+
+		#endregion
 	}
 }
