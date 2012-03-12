@@ -294,7 +294,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 		public override string ToString()
 		{
 			//"
-			return string.Format("Given Name: '{1}'{0}Weapon Name: '{2} {3}'{0}This Weapon is Masterwork Quality: '{4}'{0}Weaopn Proficiency: '{5}'{0}Weapon Category: '{6}, {7}'{0}Weapon Size: '{8}'{0}Weapon Cost: '{9}' gold pieces{0}Extra Cost When Made Magical: '{10}' gold pieces{0}To Hit Bonus: '{11}'{0}Damage: '{12}' [{13}/{14}] {15}{0}Range Increment: '{16} feet ['{17}' feet max]'{0}Weight: '{18} pounds'{0}Special: {19}",
+			return string.Format("Given Name: '{1}'{0}Special Components: '{2}'{0}Weapon Name: '{3}'{0}This Weapon is Masterwork Quality: '{4}'{0}Weaopn Proficiency: '{5}'{0}Weapon Category: '{6}, {7}'{0}Weapon Size: '{8}'{0}Weapon Cost: '{9}' gold pieces{0}Extra Cost When Made Magical: '{10}' gold pieces{0}To Hit Bonus: '{11}'{0}Damage: '{12}' [{13}/{14}] {15}{0}Range Increment: '{16} feet ['{17}' feet max]'{0}Weight: '{18} pounds'{0}Special: {19}",
 									Environment.NewLine, 
 									GivenName, 
 									ComponentName, 

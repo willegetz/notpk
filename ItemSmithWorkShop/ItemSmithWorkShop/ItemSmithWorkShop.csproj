@@ -126,9 +126,6 @@
     <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayAnarchicEnchantment.approved.txt">
       <DependentUpon>PhbWeaponTests.cs</DependentUpon>
     </Content>
-    <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayColdIron.approved.txt">
-      <DependentUpon>PhbWeaponTests.cs</DependentUpon>
-    </Content>
     <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayDagger.approved.txt">
       <DependentUpon>PhbWeaponTests.cs</DependentUpon>
     </Content>

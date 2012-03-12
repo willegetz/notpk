@@ -28,6 +28,7 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 		public double WeaponCostModifier { get { return 300; } }
 		public bool IsMasterwork { get { return true; } }
 		public string ToHitBonus { get { return "+1"; } }
+		public string MasterworkSpecialInfo { get { return "This is a finely crafted weapon"; } }
 
 
 		#region IMaterialComponent Members
@@ -35,27 +36,36 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 
 		public double ApplyCostModifier(IWeapon weaopn)
 		{
-			throw new NotImplementedException();
+			return weaopn.WeaponCost + WeaponCostModifier;
 		}
 
 		public double GetAdditionalEnchantmentCost()
 		{
-			throw new NotImplementedException();
+			return 0;
 		}
 
 		public bool VerifyMasterwork(IWeapon weapon)
 		{
-			throw new NotImplementedException();
+			{
+				if (weapon.IsMasterwork)
+				{
+					return weapon.IsMasterwork;
+				}
+				else
+				{
+					return IsMasterwork;
+				}
+			}
 		}
 
 		public string AppendSpecialInfo(IWeapon weapon)
 		{
-			throw new NotImplementedException();
+			return string.Format("{1}{0}{2}", Environment.NewLine, weapon.SpecialInfo, MasterworkSpecialInfo);
 		}
 
 		public double ApplyWeightModifer(IWeapon weapon)
 		{
-			throw new NotImplementedException();
+			return weapon.Weight;
 		}
 
 		public string ApplyToHitModifier()
