@@ -27,7 +27,7 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 		public double WeaponCostModifier { get { return weaponCostModifier; } }
 		public bool IsMasterwork { get { return isMasterowrk; } }
 		public string ToHitBonus { get { return string.Empty; } }
-		public string ColdIronSpecialInfo { get  {return coldIronSpecialInfo; }}
+		public string ComponentInfo { get  {return coldIronSpecialInfo; }}
 		 
 		public double MagicEnchantmentCostModification { get { return magicEnchantmentCostModification; } }
 
@@ -40,7 +40,7 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 									WeaponCostModifier,
 									MagicEnchantmentCostModification,
 									IsMasterwork,
-									ColdIronSpecialInfo
+									ComponentInfo
 								);
 		}
 
@@ -68,7 +68,7 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 
 		public string AppendSpecialInfo(IWeapon weapon)
 		{
-			return string.Format("{1}{0}{2}", Environment.NewLine, weapon.SpecialInfo, ColdIronSpecialInfo);
+			return string.Format("{1}{0}{2}", Environment.NewLine, weapon.SpecialInfo, ComponentInfo);
 		}
 
 		public double ApplyWeightModifer(IWeapon weapon)

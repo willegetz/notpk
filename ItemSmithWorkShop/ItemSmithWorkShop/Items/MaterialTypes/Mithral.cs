@@ -52,7 +52,7 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 		private const double spellFailureReduction = 0.1;
 		private const double maxDexReduction = -2;
 		private const double armorCheckPenaltyReduction = -3;
-		private string mithralSpecialInfo = string.Format("Mithral is a very rare, silvery, glistening metal{0}{1}that is lighter than iron but just as hard.", Environment.NewLine, "\t");
+		public string componentInfo = string.Format("Mithral is a very rare, silvery, glistening metal{0}{1}that is lighter than iron but just as hard.", Environment.NewLine, "\t");
 
 		public double LightArmorCostModifier { get { return lightArmorCostModifier; } }
 		public double MediumArmorCostModifier { get { return mediumArmorCostModifier; } }
@@ -63,7 +63,7 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 		public double SpellFailureReduction { get { return spellFailureReduction; } }
 		public double MaxDexReduction { get { return maxDexReduction; } }
 		public double ArmorCheckPenaltyReduction { get { return armorCheckPenaltyReduction; } }
-		public string MithralSpecialInfo { get {return mithralSpecialInfo;}}
+		public string ComponentInfo { get {return componentInfo;}}
 
 		public double ApplyCostModifier(IWeapon weapon)
 		{
@@ -119,7 +119,7 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 
 		public string AppendSpecialInfo(IWeapon weapon)
 		{
-			return string.Format("{1}{0}{2}", Environment.NewLine, weapon.SpecialInfo, MithralSpecialInfo);
+			return string.Format("{1}{0}{2}", Environment.NewLine, weapon.SpecialInfo, ComponentInfo);
 		}
 
 		public double ApplyWeightModifer(IWeapon weapon)
