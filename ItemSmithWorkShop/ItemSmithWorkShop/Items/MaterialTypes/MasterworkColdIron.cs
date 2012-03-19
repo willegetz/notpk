@@ -6,7 +6,7 @@ using ItemSmithWorkShop.Items.Interfaces;
 
 namespace ItemSmithWorkShop.Items.MaterialTypes
 {
-	class MasterworkColdIron : IMaterialComponent
+	public class MasterworkColdIron : IMaterialComponent
 	{
 		private const double masterworkCost = 300;
 		private const double coldIronCost = 2;
