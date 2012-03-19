@@ -5,6 +5,7 @@ using System.Text;
 using ItemSmithWorkShop.Items.Interfaces;
 using ItemSmithWorkShop.Items.Weapons;
 using ItemSmithWorkShop.Items.Data;
+using ItemSmithWorkShop.Items.MaterialTypes;
 
 namespace ItemSmithWorkShop.Items.TheForge
 {
@@ -24,7 +25,16 @@ namespace ItemSmithWorkShop.Items.TheForge
 			forgedWeapon.componentName = component.ComponentName;
 			
 			forgedWeapon.criticalDamage = weapon.CriticalDamage;
-			forgedWeapon.damage = weapon.Damage;
+
+			if (component is AlchemicalSilver)
+			{
+				forgedWeapon.damage = weapon.Damage + " -1";
+			}
+			else
+			{
+				forgedWeapon.damage = weapon.Damage;
+			}
+
 			forgedWeapon.damageType = weapon.DamageType;
 			forgedWeapon.givenName = weapon.GivenName;
 			forgedWeapon.isMasterwork = component.VerifyMasterwork(weapon);
