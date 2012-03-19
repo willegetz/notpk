@@ -138,13 +138,13 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 
 			var prefixes = from clump in enchantmentClump
 						   where clump.Affix.Contains("Pre")
-						   select clump.EnchantmentName;
+						   select clump;
 
 			var prefixCount = prefixes.Count();
 
 			var suffixes = from clump in enchantmentClump
 						   where clump.Affix.Contains("Suf")
-						   select clump.EnchantmentName;
+						   select clump;
 
 			var suffixCount = suffixes.Count();
 
@@ -174,13 +174,13 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			{
 				if (prefixCount > 1)
 				{
-					sb.Append(string.Format("{0}", prefix));
+					sb.Append(string.Format("{0} (+{1} bonus)", prefix.EnchantmentName, prefix.CostModifier));
 					sb.Append(", ");
 					prefixCount--;
 				}
 				else
 				{
-					sb.Append(string.Format("{0}", prefix));
+					sb.Append(string.Format("{0} (+{1} bonus)", prefix.EnchantmentName, prefix.CostModifier));
 				}
 				
 			}
@@ -193,7 +193,7 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 				while (suffixCount > 0)
 				{
 					sb.Append(" of ");
-					sb.Append(string.Format("{0}", suffix));
+					sb.Append(string.Format("{0} (+{1} bonus)", suffix.EnchantmentName, suffix.CostModifier));
 					suffixCount--;
 				}
 				
