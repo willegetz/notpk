@@ -28,6 +28,7 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 			get { return "Alchemical Silver"; ; }
 		}
 
+		// The multiple cost modifiers based on the kind of weapon calls into question the need for this property.
 		public double WeaponCostModifier
 		{
 			get { return 0; }
@@ -64,12 +65,12 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 
 		public string ApplyToHitModifier()
 		{
-			return string.Empty;
+			return ToHitBonus;
 		}
 
 		public bool VerifyMasterwork(IWeapon weapon)
 		{
-			return false;
+			return IsMasterwork;
 		}
 
 		public double ApplyWeightModifer(IWeapon weapon)

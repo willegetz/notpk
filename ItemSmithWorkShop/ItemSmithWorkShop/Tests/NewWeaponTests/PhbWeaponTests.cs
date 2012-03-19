@@ -111,20 +111,21 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		public void TestBlah()
 		{
 			var dagger = new PhbWeapon("Dagger");
+			var forgedDagger = ItemForge.ForgeWeapon(dagger, new MasterworkColdIron());
 			var distance = new WeaponEnchantment("Distance");
-			var anarchic1 = new WeaponEnchantment("Anarchic");
-			var anarchic2 = new WeaponEnchantment("Anarchic");
+			var anarchic = new WeaponEnchantment("Anarchic");
+			var keen = new WeaponEnchantment("Keen");
 			var flameBurst = new WeaponEnchantment("Flaming Burst");
-			var flameBurst1 = new WeaponEnchantment("Flaming Burst");
-			var flameBurst2 = new WeaponEnchantment("Flaming Burst");
-			var plusEnhancement = 5;
+			//var flameBurst1 = new WeaponEnchantment("Flaming Burst");
+			//var flameBurst2 = new WeaponEnchantment("Flaming Burst");
+			var plusEnhancement = 4;
 			List<WeaponEnchantment> enchantmentClump = new List<WeaponEnchantment>();
 			enchantmentClump.Add(distance);
-			enchantmentClump.Add(anarchic1);
-			enchantmentClump.Add(anarchic2);
+			enchantmentClump.Add(anarchic);
+			enchantmentClump.Add(keen);
 			enchantmentClump.Add(flameBurst);
-			enchantmentClump.Add(flameBurst1);
-			enchantmentClump.Add(flameBurst2);
+			//enchantmentClump.Add(flameBurst1);
+			//enchantmentClump.Add(flameBurst2);
 
 			var enchantmentTotals = from clump in enchantmentClump
 								   select clump.CostModifier;
@@ -184,7 +185,7 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 				
 			}
 
-			sb.Append(string.Format(" {0}", dagger.WeaponName));
+			sb.Append(string.Format(" {0}", forgedDagger.WeaponName));
 
 			foreach (var suffix in suffixes)
 			{
@@ -205,11 +206,11 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 				while (critCount > 0)
 				{
 					string critDice = string.Empty;
-					if (dagger.CriticalDamage == "x2")
+					if (forgedDagger.CriticalDamage == "x2")
 					{
 						critDice = "1d10";
 					}
-					else if (dagger.CriticalDamage == "x3")
+					else if (forgedDagger.CriticalDamage == "x3")
 					{
 						critDice = "2d10";
 					}
@@ -224,9 +225,10 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			}
 
 			sb.Append(string.Format("{0}Total enchantment modifier: '{1}'", Environment.NewLine, enchantmentTotal));
+			sb.Append(string.Format("{0}Total enhancement cost: '{1}'", Environment.NewLine, ((Math.Pow(enchantmentTotal, 2) * 2000) + forgedDagger.WeaponCost + forgedDagger.AdditionalEnchantmentCost)));
 			sb.Append(string.Format("{0}Required caster level: {1}", Environment.NewLine, highestCasterLevel.Max()));
 			sb.Append(string.Format("{0}Critical damage dice:{1}", Environment.NewLine, critSb));
-			sb.Append(string.Format("{0}Range increment: {1} feet for {2} (was {3} feet for {4} feet)", Environment.NewLine, (dagger.RangeIncrement * greatestRangeIncrease), (dagger.MaxRange * greatestRangeIncrease), dagger.RangeIncrement, dagger.MaxRange));
+			sb.Append(string.Format("{0}Range increment: {1} feet for {2} (was {3} feet for {4} feet)", Environment.NewLine, (forgedDagger.RangeIncrement * greatestRangeIncrease), (dagger.MaxRange * greatestRangeIncrease), dagger.RangeIncrement, dagger.MaxRange));
 
 			Approvals.Verify(sb.ToString());
 		}
