@@ -13,7 +13,7 @@ namespace ItemSmithWorkShop.Items.Interfaces
 		string ToHitBonus { get; }
 		string ComponentInfo { get; }
 
-		double ApplyCostModifier(IWeapon weaopn);
+		double ApplyCostModifier(IWeapon weapon);
 		string AppendSpecialInfo(IWeapon weapon);
 		string ApplyToHitModifier();
 
