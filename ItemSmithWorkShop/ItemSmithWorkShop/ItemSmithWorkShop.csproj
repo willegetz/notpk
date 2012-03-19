@@ -57,6 +57,7 @@
     <Compile Include="AdventureItems\ExtraordinaryWeaponUtilities\ExtraordinaryQualityWeapon.cs" />
     <Compile Include="AdventureItems\ExtraordinaryWeaponUtilities\MaterialComponentOrder.cs" />
     <Compile Include="AdventureItems\Interfaces\ILineItems.cs" />
+    <Compile Include="Items\MaterialTypes\MasterworkColdIron.cs" />
     <Compile Include="Items\Weapons\ForgedWeapon.cs" />
     <Compile Include="ItemTicket.cs" />
     <Compile Include="Tests\LineItemTests\CombinedTicketTests.cs" />
@@ -126,6 +127,9 @@
     <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayAnarchicEnchantment.approved.txt">
       <DependentUpon>PhbWeaponTests.cs</DependentUpon>
     </Content>
+    <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayColdIron.approved.txt">
+      <DependentUpon>PhbWeaponTests.cs</DependentUpon>
+    </Content>
     <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayDagger.approved.txt">
       <DependentUpon>PhbWeaponTests.cs</DependentUpon>
     </Content>
@@ -139,6 +143,12 @@
       <DependentUpon>PhbWeaponTests.cs</DependentUpon>
     </Content>
     <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayMithral.approved.txt">
+      <DependentUpon>PhbWeaponTests.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestForgeColdIronWeapon.approved.txt">
+      <DependentUpon>PhbWeaponTests.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestForgedMasterworkColdIronWeapon.approved.txt">
       <DependentUpon>PhbWeaponTests.cs</DependentUpon>
     </Content>
     <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestForgeMithralWeapon.approved.txt">

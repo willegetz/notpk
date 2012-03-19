@@ -86,18 +86,9 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		[TestMethod]
 		public void TestForgedMasterworkColdIronWeapon()
 		{
-			// Things that need to persist from one object to another:
-			//		Special components
-			//		Weapon cost
-			//		Extra cost to make an item magical
-			// Currently, the component information is not persisting.
-			//		Perhaps a list?
-
 			var dagger = new PhbWeapon("Dagger");
-			var coldIron = new ColdIron();
-			var forgedDagger = ItemForge.ForgeWeapon(dagger, coldIron);
-			var masterwork = new Masterwork();
-			var masterworkForgedDagger = ItemForge.ForgeWeapon(forgedDagger, masterwork);
+			var masterworkColdIron = new MasterworkColdIron();
+			var masterworkForgedDagger = ItemForge.ForgeWeapon(dagger, masterworkColdIron);
 			masterworkForgedDagger.NameWeapon("Holly Thorn");
 			Approvals.Verify(masterworkForgedDagger.ToString());
 		}
