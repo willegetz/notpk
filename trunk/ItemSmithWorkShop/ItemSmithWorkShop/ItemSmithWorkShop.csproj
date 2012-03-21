@@ -58,6 +58,7 @@
     <Compile Include="AdventureItems\ExtraordinaryWeaponUtilities\MaterialComponentOrder.cs" />
     <Compile Include="AdventureItems\Interfaces\ILineItems.cs" />
     <Compile Include="Items\MaterialTypes\AlchemicalSilver.cs" />
+    <Compile Include="Items\MaterialTypes\MasterworkAlchemicalSilver.cs" />
     <Compile Include="Items\MaterialTypes\MasterworkColdIron.cs" />
     <Compile Include="Items\Weapons\ForgedWeapon.cs" />
     <Compile Include="ItemTicket.cs" />
@@ -150,6 +151,9 @@
       <DependentUpon>PhbWeaponTests.cs</DependentUpon>
     </Content>
     <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestForgedAlchemicalSilverWeapon.approved.txt">
+      <DependentUpon>PhbWeaponTests.cs</DependentUpon>
+    </Content>
+    <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestForgedMasterworkAlchemicalSilverWeapon.approved.txt">
       <DependentUpon>PhbWeaponTests.cs</DependentUpon>
     </Content>
     <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestForgedMasterworkColdIronWeapon.approved.txt">

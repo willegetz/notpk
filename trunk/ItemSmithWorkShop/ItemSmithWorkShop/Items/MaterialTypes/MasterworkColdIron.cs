@@ -15,32 +15,15 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 
 		public double MagicEnchantmentCostModification { get { return magicEnchantmentCostModification; } }
 
-		#region IMaterialComponent Members
+		public string ComponentName { get { return "Masterwork Cold Iron"; } }
 
-		public string ComponentName
-		{
-			get { return "Masterwork Cold Iron"; }
-		}
+		public double WeaponCostModifier { get { return coldIronCost; } }
 
-		public double WeaponCostModifier
-		{
-			get { return coldIronCost; }
-		}
+		public bool IsMasterwork { get { return true; } }
 
-		public bool IsMasterwork
-		{
-			get { return true; }
-		}
+		public string ToHitBonus { get { return "+1"; } }
 
-		public string ToHitBonus
-		{
-			get { return "+1"; }
-		}
-
-		public string ComponentInfo
-		{
-			get { return coldIronSpecialInfo; }
-		}
+		public string ComponentInfo { get { return coldIronSpecialInfo; } }
 
 		public double ApplyCostModifier(IWeapon weapon)
 		{
@@ -52,10 +35,7 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 			return string.Format("{1}{0}{2}", Environment.NewLine, weapon.SpecialInfo, ComponentInfo);
 		}
 
-		public string ApplyToHitModifier()
-		{
-			return ToHitBonus;
-		}
+		public string ApplyToHitModifier() { return ToHitBonus; }
 
 		public bool VerifyMasterwork(IWeapon weapon)
 		{
@@ -69,16 +49,8 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 			}
 		}
 
-		public double ApplyWeightModifer(IWeapon weapon)
-		{
-			return weapon.Weight;
-		}
+		public double ApplyWeightModifer(IWeapon weapon) { return weapon.Weight; }
 
-		public double GetAdditionalEnchantmentCost()
-		{
-			return MagicEnchantmentCostModification;
-		}
-
-		#endregion
+		public double GetAdditionalEnchantmentCost() { return MagicEnchantmentCostModification; }
 	}
 }

@@ -102,6 +102,15 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			Approvals.Verify(forgedDagger.ToString());
 		}
 
+		[TestMethod]
+		public void TestForgedMasterworkAlchemicalSilverWeapon()
+		{
+			var dagger = new PhbWeapon("Dagger");
+			var masterworkSilver = new MasterworkAlchemicalSilver();
+			var forgedDagger = ItemForge.ForgeWeapon(dagger, masterworkSilver);
+			Approvals.Verify(forgedDagger.ToString());
+		}
+
 		// When a weapon is combined with a material component, what is produced is a new type of weapon.
 		//		Should the material component be responsible for its changes to the original weapon?
 		// A weapon needs 
