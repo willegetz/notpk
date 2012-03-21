@@ -111,6 +111,20 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			Approvals.Verify(forgedDagger.ToString());
 		}
 
+		[TestMethod]
+		public void TestPlusEnhancementWeapon()
+		{
+			// A weapon must be masterwork before it can be magical.
+			// A magic weapon:
+			//		Has a plus enhancement from 1 to 5
+			//		Adds the plus enhancement to attack and damage
+			//		Has a cost that is: Square the plus enhancement and then multiply by 2
+			//		Adjusts the hardness and hit points based on plus modifier
+			//		Must be a plus 1 before any special qualities can be added
+			//		... more here to add
+			Assert.Fail();
+		}
+
 		// When a weapon is combined with a material component, what is produced is a new type of weapon.
 		//		Should the material component be responsible for its changes to the original weapon?
 		// A weapon needs 
