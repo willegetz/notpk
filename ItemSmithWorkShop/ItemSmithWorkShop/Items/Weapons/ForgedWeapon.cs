@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ItemSmithWorkShop.Items.Interfaces;
+using ItemSmithWorkShop.Items.MaterialTypes;
 
 namespace ItemSmithWorkShop.Items.Weapons
 {
@@ -11,280 +12,169 @@ namespace ItemSmithWorkShop.Items.Weapons
 	// 
 	public class ForgedWeapon : IWeapon
 	{
-		public string givenName;
 		public string GivenName
 		{
-			get
-			{
-				return givenName;
-			}
-			private set
-			{
-				givenName = value;
-			}
+			get;
+			private set;
 		}
 
-		public string weaponName;
 		public string WeaponName
 		{
-			get
-			{
-				return weaponName;
-			}
-			private set
-			{
-				weaponName = value;
-			}
+			get;
+			private set;
 		}
 
-		public string proficiency;
 		public string Proficiency 
 		{ 
-			get
-			{
-				return proficiency;
-			}
-			private set
-			{
-				proficiency = value;
-			}
+			get;
+			private set;
 		}
 
-		public string weaponUse;
 		public string WeaponUse 
-		{ 
-			get
-			{
-				return weaponUse;
-			}
-			private set
-			{
-				weaponUse = value;
-			}
+		{
+			get;
+			private set;
 		}
 
-		public string weaponCategory;
 		public string WeaponCategory
 		{
-			get
-			{
-				return weaponCategory;
-			}
-			private set
-			{
-				weaponCategory = value;
-			}
+			get;
+			private set;
 		}
 
-		public string weaponSubCategory;
 		public string WeaponSubCategory
 		{
-			get
-			{
-				return weaponSubCategory;
-			}
-			private set
-			{
-				weaponSubCategory = value;
-			}
+			get;
+			private set;
 		}
 
-		public string weaponSize;
 		public string WeaponSize
 		{
-			get
-			{
-				return weaponSize;
-			}
-			private set
-			{
-				weaponSize = value;
-			}
+			get;
+			private set;
 		}
 
-		public double weaponCost;
 		public double WeaponCost
 		{
-			get
-			{
-				return weaponCost;
-			}
-			private set
-			{
-				weaponCost = value;
-			}
+			get;
+			private set;
 		}
 
-		public string toHitModifier;
-		public string ToHitMidifier
+		public string ToHitModifier
 		{
-			get
-			{
-				return toHitModifier;
-			}
-			private set
-			{
-				toHitModifier = value;
-			}
+			get;
+			private set;
 		}
 
-		public string damage;
 		public string Damage
 		{
-			get
-			{
-				return damage;
-			}
-			private set
-			{
-				damage = value;
-			}
+			get;
+			private set;
 		}
 
-		public double threatRangeLowerBound;
 		public double ThreatRangeLowerBound
 		{
-			get
-			{
-				return threatRangeLowerBound;
-			}
-			private set
-			{
-				threatRangeLowerBound = value;
-			}
+			get;
+			private set;
 		}
 
-		public string threatRange;
 		public string ThreatRange
 		{
-			get
-			{
-				return threatRange;
-			}
-			private set
-			{
-				threatRange = value;
-			}
+			get;
+			private set;
 		}
 
-		public string criticalDamage;
 		public string CriticalDamage
 		{
-			get
-			{
-				return criticalDamage;
-			}
-			private set
-			{
-				criticalDamage = value;
-			}
+			get;
+			private set;
 		}
 
-		public double rangeIncrement;
 		public double RangeIncrement
 		{
-			get
-			{
-				return rangeIncrement;
-			}
-			private set
-			{
-				rangeIncrement = value;
-			}
+			get;
+			private set;
 		}
 
-		public double maxRange;
 		public double MaxRange
 		{
-			get
-			{
-				return maxRange;
-			}
-			private set
-			{
-				maxRange = value;
-			}
+			get;
+			private set;
 		}
 
-		public double weight;
 		public double Weight 
 		{
-			get
-			{
-				return weight;
-			}
-			private set
-			{
-				weight = value;
-			}
+			get;
+			private set;
 		}
 
-		public string damageType;
 		public string DamageType
 		{
-			get
-			{
-				return damageType;
-			}
-			private set
-			{
-				damageType = value;
-			}
+			get;
+			private set;
 		}
 
-		public string specialInfo;
 		public string SpecialInfo
 		{
-			get
-			{
-				return specialInfo;
-			}
-			private set
-			{
-				specialInfo = value;
-			}
+			get;
+			private set;
 		}
 
-		public string componentName;
 		public string ComponentName
-		{ 
-			get
-			{
-				return componentName;
-			}
-			private set
-			{
-				componentName = value;
-			}
+		{
+			get;
+			private set;
 		}
 
-		public bool isMasterwork;
 		public bool IsMasterwork
-		{ 
-			get
-			{
-				return isMasterwork;
-			}
-			private set
-			{
-				isMasterwork = value;
-			}
+		{
+			get;
+			private set;
 		}
 
-		public double additionalEnchantmentCost;
 		public double AdditionalEnchantmentCost 
-		{ 
-			get
-			{
-				return additionalEnchantmentCost;
-			}
-			private set
-			{
-				additionalEnchantmentCost = value;
-			}
+		{
+			get;
+			private set;
 		}
 
-		public ForgedWeapon() {}
+		public ForgedWeapon(IWeapon weapon, IMaterialComponent component)
+		{
+			//weapon = weaponPart;
+			//component = componentPart;
+
+			AdditionalEnchantmentCost = component.GetAdditionalEnchantmentCost();
+
+			ComponentName = component.ComponentName;
+
+			CriticalDamage = weapon.CriticalDamage;
+
+			if (component is AlchemicalSilver || component is MasterworkAlchemicalSilver)
+			{
+				Damage = weapon.Damage + " -1";
+			}
+			else
+			{
+				Damage = weapon.Damage;
+			}
+
+			DamageType = weapon.DamageType;
+			GivenName = weapon.GivenName;
+			IsMasterwork = component.VerifyMasterwork(weapon);
+			MaxRange = weapon.MaxRange;
+			Proficiency = weapon.Proficiency;
+			RangeIncrement = weapon.RangeIncrement;
+			SpecialInfo = component.AppendSpecialInfo(weapon);
+			ThreatRange = weapon.ThreatRange;
+			WeaponCategory = weapon.WeaponCategory;
+			WeaponCost = component.ApplyCostModifier(weapon);
+			WeaponName = string.Format("{0} {1}", component.ComponentName, weapon.WeaponName);
+			WeaponSize = weapon.WeaponSize;
+			WeaponSubCategory = weapon.WeaponSubCategory;
+			WeaponUse = weapon.WeaponUse;
+			Weight = component.ApplyWeightModifer(weapon);
+			ToHitModifier = component.ApplyToHitModifier();
+		}
 
 		public void NameWeapon(string name)
 		{
@@ -305,7 +195,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 									WeaponSize,
 									WeaponCost,
 									AdditionalEnchantmentCost,
-									ToHitMidifier,
+									ToHitModifier,
 									Damage, 
 									ThreatRange, 
 									CriticalDamage,

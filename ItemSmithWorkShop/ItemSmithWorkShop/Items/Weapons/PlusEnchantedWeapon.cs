@@ -3,11 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ItemSmithWorkShop.Items.Interfaces;
+using ItemSmithWorkShop.Items.MaterialTypes;
 
 namespace ItemSmithWorkShop.Items.Weapons
 {
 	public class PlusEnchantedWeapon : IWeapon
 	{
+
+		public PlusEnchantedWeapon(IWeapon forgedWeapon)
+		{
+			if (!(forgedWeapon is ForgedWeapon))
+			{
+				forgedWeapon = new ForgedWeapon(forgedWeapon, new Masterwork());
+			}
+		}
+
 		public string GivenName { get { throw new NotImplementedException(); } }
 
 		public string Proficiency { get { throw new NotImplementedException(); } }
