@@ -6,7 +6,7 @@ using ItemSmithWorkShop.Items.Interfaces;
 
 namespace ItemSmithWorkShop.Items.MaterialTypes
 {
-	public class MasterworkAlchemicalSilver : IMaterialComponent
+	class MasterworkAlchemicalSilver : IMaterialComponent
 	{
 		private const double ammunitionCostModifier = 2;
 		private const double lightWeaponCostModifier = 20;
@@ -14,16 +14,30 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 		private const double twoHandedWeaponCostModifier = 180;
 		private const double masterworkCostModifier = 300;
 
-		public string ComponentName { get { return "Masterwork Alchemical Silver"; } }
+		public string ComponentName
+		{
+			get { return "Masterwork Alchemical Silver"; }
+		}
 
-		// property returns '0' as the there are four different modifiers that can be applied depending on circumstance.
-		public double WeaponCostModifier { get { return 0; } }
+		public double WeaponCostModifier
+		{
+			get { return 0; }
+		}
 
-		public bool IsMasterwork { get { return true; } }
+		public bool IsMasterwork
+		{
+			get { return true; }
+		}
 
-		public string ToHitBonus { get { return "+1"; } }
+		public string ToHitBonus
+		{
+			get { return "+1"; }
+		}
 
-		public string ComponentInfo { get { return "I am a masterwork alchemical silver weapon"; } }
+		public string ComponentInfo
+		{
+			get { return "I am a masterwork alchemical silver weapon"; }
+		}
 
 		public double ApplyCostModifier(IWeapon weapon)
 		{
@@ -41,7 +55,7 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 
 		public string ApplyToHitModifier()
 		{
-			return ToHitBonus;
+			return "+1";
 		}
 
 		public bool VerifyMasterwork(IWeapon weapon)

@@ -8,7 +8,7 @@ Weapon Size: 'Medium'
 Weapon Cost: '322' gold pieces
 Extra Cost When Made Magical: '0' gold pieces
 To Hit Bonus: '+1'
-Damage: '1d4' [19-20/x2] Piercing or Slashing
+Damage: '1d4 -1' [19-20/x2] Piercing or Slashing
 Range Increment: '10 feet ['50' feet max]'
 Weight: '1 pounds'
 Special: +2 bonus on Sleight of Hand checks made to conceal a
