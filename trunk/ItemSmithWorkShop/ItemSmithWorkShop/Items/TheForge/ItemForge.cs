@@ -26,7 +26,7 @@ namespace ItemSmithWorkShop.Items.TheForge
 			
 			forgedWeapon.criticalDamage = weapon.CriticalDamage;
 
-			if (component is AlchemicalSilver)
+			if (component is AlchemicalSilver || component is MasterworkAlchemicalSilver)
 			{
 				forgedWeapon.damage = weapon.Damage + " -1";
 			}
@@ -53,6 +53,10 @@ namespace ItemSmithWorkShop.Items.TheForge
 			forgedWeapon.toHitModifier = component.ApplyToHitModifier();
 
 			return forgedWeapon;
+		}
+		public static PlusEnchantedWeapon BasicEnchantWeapon(IWeapon forgedWeapon)
+		{
+			throw new NotImplementedException();
 		}
 	}
 }

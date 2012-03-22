@@ -122,6 +122,11 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			//		Adjusts the hardness and hit points based on plus modifier
 			//		Must be a plus 1 before any special qualities can be added
 			//		... more here to add
+			//		PhbWeapon => ForgedWeapon => PlusWeapon => EnchantedWeapon
+			var weaopn = new PhbWeapon("Dagger");
+			var masterwork = new Masterwork();
+			var forgedWeapon = ItemForge.ForgeWeapon(weaopn, masterwork);
+			var plusWeapon = ItemForge.BasicEnchantWeapon(forgedWeapon);
 			Assert.Fail();
 		}
 
