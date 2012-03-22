@@ -6,7 +6,6 @@ using ItemSmithWorkShop.Items.MagicEnchantments;
 using System;
 using System.Linq;
 using System.Collections.Generic;
-using ItemSmithWorkShop.Items.TheForge;
 using ItemSmithWorkShop.Items.Weapons;
 
 namespace ItemSmithWorkShop.Tests.NewWeaponTests
@@ -68,7 +67,7 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		{
 			var dagger = new PhbWeapon("Dagger");
 			var mithral = new Mithral();
-			var forgedDagger = ItemForge.ForgeWeapon(dagger, mithral);
+			var forgedDagger = new ForgedWeapon(dagger, mithral);
 			forgedDagger.NameWeapon("Carlyle's Special Greeting");
 			Approvals.Verify(forgedDagger.ToString());
 		}
@@ -78,7 +77,7 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		{
 			var dagger = new PhbWeapon("Dagger");
 			var coldIron = new ColdIron();
-			var forgedDagger = ItemForge.ForgeWeapon(dagger, coldIron);
+			var forgedDagger = new ForgedWeapon(dagger, coldIron);
 			forgedDagger.NameWeapon("Krus Hakhar");
 			Approvals.Verify(forgedDagger.ToString());
 		}
@@ -88,7 +87,7 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		{
 			var dagger = new PhbWeapon("Dagger");
 			var masterworkColdIron = new MasterworkColdIron();
-			var masterworkForgedDagger = ItemForge.ForgeWeapon(dagger, masterworkColdIron);
+			var masterworkForgedDagger = new ForgedWeapon(dagger, masterworkColdIron);
 			masterworkForgedDagger.NameWeapon("Holly Thorn");
 			Approvals.Verify(masterworkForgedDagger.ToString());
 		}
@@ -98,7 +97,7 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		{
 			var dagger = new PhbWeapon("Dagger");
 			var silver = new AlchemicalSilver();
-			var forgedDagger = ItemForge.ForgeWeapon(dagger, silver);
+			var forgedDagger = new ForgedWeapon(dagger, silver);
 			Approvals.Verify(forgedDagger.ToString());
 		}
 
@@ -107,7 +106,7 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		{
 			var dagger = new PhbWeapon("Dagger");
 			var masterworkSilver = new MasterworkAlchemicalSilver();
-			var forgedDagger = ItemForge.ForgeWeapon(dagger, masterworkSilver);
+			var forgedDagger = new ForgedWeapon(dagger, masterworkSilver);
 			Approvals.Verify(forgedDagger.ToString());
 		}
 
@@ -125,8 +124,8 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			//		PhbWeapon => ForgedWeapon => PlusWeapon => EnchantedWeapon
 			var weaopn = new PhbWeapon("Dagger");
 			var masterwork = new Masterwork();
-			var forgedWeapon = ItemForge.ForgeWeapon(weaopn, masterwork);
-			var plusWeapon = ItemForge.BasicEnchantWeapon(forgedWeapon);
+			var forgedWeapon = new ForgedWeapon(weaopn, masterwork);
+			var plusWeapon = new PlusEnchantedWeapon(forgedWeapon);
 			Assert.Fail();
 		}
 
@@ -139,7 +138,7 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		public void TestBlah()
 		{
 			var dagger = new PhbWeapon("Dagger");
-			var forgedDagger = ItemForge.ForgeWeapon(dagger, new MasterworkColdIron());
+			var forgedDagger = new ForgedWeapon(dagger, new MasterworkColdIron());
 			var distance = new WeaponEnchantment("Distance");
 			var anarchic = new WeaponEnchantment("Anarchic");
 			var keen = new WeaponEnchantment("Keen");
