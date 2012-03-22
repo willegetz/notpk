@@ -61,6 +61,7 @@
     <Compile Include="Items\MaterialTypes\MasterworkAlchemicalSilver.cs" />
     <Compile Include="Items\MaterialTypes\MasterworkColdIron.cs" />
     <Compile Include="Items\Weapons\ForgedWeapon.cs" />
+    <Compile Include="Items\Weapons\PlusEnchantedWeapon.cs" />
     <Compile Include="ItemTicket.cs" />
     <Compile Include="Tests\LineItemTests\CombinedTicketTests.cs" />
     <Compile Include="Tests\LineItemTests\MaterialIngotTests.cs" />
