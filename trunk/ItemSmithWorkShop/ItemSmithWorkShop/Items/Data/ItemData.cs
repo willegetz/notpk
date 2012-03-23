@@ -32,8 +32,10 @@ namespace ItemSmithWorkShop.Items.Data
 											criticalDamage = "x2",
 											rangeIncrement = 10,
 											maxRange = 0,
-											weight = 1,
 											damageType = "Piercing or Slashing",
+											weight = 1,
+											hardness = 10,
+											hitPoints = 2,
 											specialInfo = "+2 bonus on Sleight of Hand checks made to conceal a\n\tdagger on your body"
 														}
 			             		}

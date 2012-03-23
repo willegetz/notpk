@@ -72,6 +72,8 @@ namespace ItemSmithWorkShop.Items.Weapons
 			private set;
 		}
 
+		public double BonusDamage { get; private set; }
+
 		public double ThreatRangeLowerBound
 		{
 			get;
@@ -103,6 +105,18 @@ namespace ItemSmithWorkShop.Items.Weapons
 		}
 
 		public double Weight 
+		{
+			get;
+			private set;
+		}
+
+		public double Hardness
+		{
+			get;
+			private set;
+		}
+
+		public double HitPoints
 		{
 			get;
 			private set;
@@ -146,13 +160,15 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 			CriticalDamage = weapon.CriticalDamage;
 
+			Damage = weapon.Damage;
+
 			if (component is AlchemicalSilver || component is MasterworkAlchemicalSilver)
 			{
-				Damage = weapon.Damage + " -1";
+				BonusDamage = -1;
 			}
 			else
 			{
-				Damage = weapon.Damage;
+				BonusDamage = 0;
 			}
 
 			DamageType = weapon.DamageType;
@@ -163,6 +179,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			RangeIncrement = weapon.RangeIncrement;
 			SpecialInfo = component.AppendSpecialInfo(weapon);
 			ThreatRange = weapon.ThreatRange;
+			ThreatRangeLowerBound = weapon.ThreatRangeLowerBound;
 			WeaponCategory = weapon.WeaponCategory;
 			WeaponCost = component.ApplyCostModifier(weapon);
 			WeaponName = string.Format("{0} {1}", component.ComponentName, weapon.WeaponName);
@@ -170,6 +187,8 @@ namespace ItemSmithWorkShop.Items.Weapons
 			WeaponSubCategory = weapon.WeaponSubCategory;
 			WeaponUse = weapon.WeaponUse;
 			Weight = component.ApplyWeightModifer(weapon);
+			Hardness = weapon.Hardness;
+			HitPoints = weapon.HitPoints;
 			ToHitModifier = component.ApplyToHitModifier();
 		}
 
@@ -178,9 +197,18 @@ namespace ItemSmithWorkShop.Items.Weapons
 			GivenName = name;
 		}
 
+		private string DisplayDamage()
+		{
+			if (!(BonusDamage == 0))
+			{
+				return string.Format("{0} {1}", Damage, BonusDamage);
+			}
+			return Damage;
+		}
+
 		public override string ToString()
 		{
-			return string.Format("Given Name: '{1}'{0}Special Components: '{2}'{0}Weapon Name: '{3}'{0}This Weapon is Masterwork Quality: '{4}'{0}Weaopn Proficiency: '{5}'{0}Weapon Category: '{6}, {7}'{0}Weapon Size: '{8}'{0}Weapon Cost: '{9}' gold pieces{0}Extra Cost When Made Magical: '{10}' gold pieces{0}To Hit Bonus: '{11}'{0}Damage: '{12}' [{13}/{14}] {15}{0}Range Increment: '{16} feet ['{17}' feet max]'{0}Weight: '{18} pounds'{0}Special: {19}",
+			return string.Format("Given Name: '{1}'{0}Special Components: '{2}'{0}Weapon Name: '{3}'{0}This Weapon is Masterwork Quality: '{4}'{0}Weaopn Proficiency: '{5}'{0}Weapon Category: '{6}, {7}'{0}Weapon Size: '{8}'{0}Weapon Cost: '{9}' gold pieces{0}Extra Cost When Made Magical: '{10}' gold pieces{0}To Hit Bonus: '{11}'{0}Damage: '{12}' [{13}/{14}] {15}{0}Range Increment: '{16} feet ['{17}' feet max]'{0}Weight: '{18} pounds'{0}Hardness: '{19}'{0}Hit Points: '{20}'{0}Special: {21}",
 									Environment.NewLine, 
 									GivenName, 
 									ComponentName, 
@@ -193,13 +221,15 @@ namespace ItemSmithWorkShop.Items.Weapons
 									WeaponCost,
 									AdditionalEnchantmentCost,
 									ToHitModifier,
-									Damage, 
+									DisplayDamage(), 
 									ThreatRange, 
 									CriticalDamage,
 									DamageType,
 									RangeIncrement,
 									MaxRange,
 									Weight,
+									Hardness,
+									HitPoints,
 									SpecialInfo
 								);
 		}

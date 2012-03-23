@@ -29,10 +29,31 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 
 		// Magic Properties
-		public int PlusEnhancement { get; private set; }
+		private double enhancementCostMultiplier = 2000;
+		private double enhancementHardmessMultiplier = 2;
+		private double enhancementHitPointMultiplier = 10;
+
+		public double PlusEnhancement { get; private set; }
+
+		private double baseEnhancementCost;
+		public double BaseEnhancementCost
+		{
+			get
+			{
+				return baseEnhancementCost;
+			}
+			set
+			{
+				baseEnhancementCost = (Math.Pow(value, 2) * enhancementCostMultiplier);
+			}
+		}
+
+		public string ToHitModifier { get; private set; }
 
 		// Weapon
 		public string GivenName { get; private set; }
+
+		public double BonusDamage { get; private set; }
 
 		public string ComponentName { get; private set; }
 
@@ -62,6 +83,10 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public string DamageType { get; private set; }
 
+		public double Hardness { get; private set; }
+
+		public double HitPoints { get; private set; }
+
 		public string SpecialInfo { get; private set; }
 
 		public bool IsMasterwork { get; private set; }
@@ -70,13 +95,41 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public double MaxRange { get; private set; }
 
-		public PlusEnchantedWeapon(IWeapon weapon, int plusEnhancement)
+		// MagicAura
+		// MinimumCasterLevel
+		// RequiredFeats
+		// Glows
+		// TimeToCreate
+		// Creation XP Cost
+		// Creation Raw Material Cost
+
+		public PlusEnchantedWeapon(IWeapon weapon, double plusEnhancement)
 		{
 			forgedWeapon = QualifyWeapon(weapon);
 			PlusEnhancement = plusEnhancement;
+			BaseEnhancementCost = plusEnhancement;
 
-			WeaponName = TrimComponentName(forgedWeapon);
-			WeaponCost = CalculateWeaponCost(forgedWeapon, plusEnhancement);
+			GivenName = forgedWeapon.GivenName;
+			WeaponName = BuildName();
+			Proficiency = forgedWeapon.Proficiency;
+			WeaponUse = forgedWeapon.WeaponUse;
+			WeaponCategory = forgedWeapon.WeaponCategory;
+			WeaponSubCategory = forgedWeapon.WeaponSubCategory;
+			WeaponSize = forgedWeapon.WeaponSize;
+			WeaponCost = CalculateWeaponCost();
+			ToHitModifier = string.Format("+{0}", plusEnhancement);
+			Damage = forgedWeapon.Damage;
+			BonusDamage = forgedWeapon.BonusDamage;
+			ThreatRangeLowerBound = forgedWeapon.ThreatRangeLowerBound;
+			ThreatRange = forgedWeapon.ThreatRange;
+			CriticalDamage = forgedWeapon.CriticalDamage;
+			RangeIncrement = forgedWeapon.RangeIncrement;
+			MaxRange = forgedWeapon.MaxRange;
+			DamageType = forgedWeapon.DamageType;
+			Weight = forgedWeapon.Weight;
+			Hardness = CalculateHardness();
+			HitPoints = CalculateHitPoints();
+			SpecialInfo = forgedWeapon.SpecialInfo;
 		}
 
 		private ForgedWeapon QualifyWeapon(IWeapon weapon)
@@ -109,22 +162,50 @@ namespace ItemSmithWorkShop.Items.Weapons
 			else return weapon;
 		}
 
-		private string TrimComponentName(ForgedWeapon weapon)
+		private string BuildName()
+		{
+			return string.Format("+{0}{1}", PlusEnhancement, TrimComponentName());
+		}
+
+		private string TrimComponentName()
 		{
 			string masterwork = "Masterwork ";
-			if (weapon.ComponentName.Contains("Masterwork"))
+			if (forgedWeapon.ComponentName.Contains("Masterwork"))
 			{
-				return weapon.WeaponName.Remove(0, masterwork.Length);
+				return forgedWeapon.WeaponName.Remove(0, masterwork.Length - 1);
 			}
 			else
 			{
-				return weapon.WeaponName;
+				return forgedWeapon.WeaponName;
 			}
 		}
 	
-		private double CalculateWeaponCost(ForgedWeapon forgedWeapon, int plusEnhancement)
+		private double CalculateWeaponCost()
 		{
-			throw new NotImplementedException();
+			return forgedWeapon.WeaponCost + forgedWeapon.AdditionalEnchantmentCost + BaseEnhancementCost;
+		}
+
+		private double CalculateHardness()
+		{
+			// Per the errata:
+			//		"Each +1 of enhancement bonus adds 2 to a weapon's or shield's hardness"
+			// The enhancement bonus of a weapon is the +1 to +5 added to the to hit and damage of a weapon only.
+
+			return forgedWeapon.Hardness + (PlusEnhancement * enhancementHardmessMultiplier);
+		}
+
+		private double CalculateHitPoints()
+		{
+			// Per the errata:
+			//		"Each +1 of enhancement bonus adds 10 to a weapon's or shield's hit points"
+			// The enhancement bonus of a weapon is the +1 to +5 added to the to hit and damage of a weapon only.
+
+			return forgedWeapon.HitPoints + (PlusEnhancement * enhancementHitPointMultiplier);
+		}
+
+		public void NameWeapon(string name)
+		{
+			GivenName = name;
 		}
 	}
 }

@@ -134,6 +134,20 @@ namespace ItemSmithWorkShop.Items.Data
 			private set { isMasterwork = value; }
 		}
 
+		public double hardness;
+		public double Hardness
+		{
+			get { return hardness; }
+			private set { hardness = value; }
+		}
+
+		public double hitPoints;
+		public double HitPoints
+		{
+			get { return hitPoints; }
+			private set { hitPoints = value; }
+		}
+
 		public WeaponTemplate()
 		{
 			Proficiency = proficiency;
@@ -148,8 +162,10 @@ namespace ItemSmithWorkShop.Items.Data
 			CriticalDamage = criticalDamage;
 			RangeIncrement = rangeIncrement;
 			MaxRange = maxRange;
-			Weight = weight;
 			DamageType = damageType;
+			Weight = weight;
+			Hardness = hardness;
+			HitPoints = hitPoints;
 			SpecialInfo = specialInfo;
 			GivenName = givenName;
 			IsMasterwork = isMasterwork;
