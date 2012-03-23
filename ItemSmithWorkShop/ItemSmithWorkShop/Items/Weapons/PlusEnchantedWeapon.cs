@@ -87,7 +87,8 @@ namespace ItemSmithWorkShop.Items.Weapons
 			}
 			else if ((weapon is ForgedWeapon) && !weapon.IsMasterwork)
 			{
-				return MasterworkVersionOfComponent(weapon);
+				
+				return MasterworkVersionOfComponent((weapon as ForgedWeapon));
 			}
 			else
 			{
@@ -97,14 +98,15 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		private ForgedWeapon MasterworkVersionOfComponent(ForgedWeapon weapon)
 		{
-			if (weapon.ComponentName = "Cold Iron")
+			if (weapon.ComponentName == "Cold Iron")
 			{
 				return new ForgedWeapon(weapon, new MasterworkColdIron());
 			}
-			else if(weapon.ComponentName = "Alchemical Silver")
+			else if (weapon.ComponentName == "Alchemical Silver")
 			{
 				return new ForgedWeapon(weapon, new MasterworkAlchemicalSilver());
 			}
+			else return weapon;
 		}
 
 		private string TrimComponentName(ForgedWeapon weapon)
