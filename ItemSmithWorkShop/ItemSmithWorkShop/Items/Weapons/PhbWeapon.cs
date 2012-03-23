@@ -78,9 +78,11 @@ namespace ItemSmithWorkShop.Items.Weapons
 			}
 		}
 		
+		public string DamageType { get; private set; }
 		public double MaxRange { get { return _maximumRange; } }
 		public double Weight { get; private set; }
-		public string DamageType { get; private set; }
+		public double Hardness { get; private set; }
+		public double HitPoints { get; private set; }
 		public string SpecialInfo { get; private set; }
 
 		public string GivenName { get; private set; }
@@ -101,8 +103,10 @@ namespace ItemSmithWorkShop.Items.Weapons
 			ThreatRangeLowerBound = weaponTemplate.threatRangeLowerBound;
 			CriticalDamage = weaponTemplate.CriticalDamage;
 			RangeIncrement = weaponTemplate.RangeIncrement;
-			Weight = weaponTemplate.Weight;
 			DamageType = weaponTemplate.DamageType;
+			Weight = weaponTemplate.Weight;
+			Hardness = weaponTemplate.Hardness;
+			HitPoints = weaponTemplate.HitPoints;
 			SpecialInfo = weaponTemplate.specialInfo;
 		}
 
@@ -114,7 +118,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 		public override string ToString()
 		{
 			return string.Format
-				("Given Name: '{15}'{0}Weapon: '{1}'{0}Weapon Proficiency: '{2}'{0}Weapon Category: '{3}, {4}'{0}Weapon Size: '{5}'{0}Weapon Cost: '{6}' gp{0}Damage: '{7}' [{8}/{9}] {10}{0}Range Increment: '{11} feet ['{12}' feet max]'{0}Weight: '{13} pounds'{0}Special: {14}",
+				("Given Name: '{17}'{0}Weapon: '{1}'{0}Weapon Proficiency: '{2}'{0}Weapon Category: '{3}, {4}'{0}Weapon Size: '{5}'{0}Weapon Cost: '{6}' gp{0}Damage: '{7}' [{8}/{9}] {10}{0}Range Increment: '{11} feet ['{12}' feet max]'{0}Weight: '{13} pounds'{0}Hardness: '{14}'{0}Hit Points: '{15}'{0}Special: {16}",
 				Environment.NewLine, 
 				WeaponName, 
 				Proficiency, 
@@ -129,6 +133,8 @@ namespace ItemSmithWorkShop.Items.Weapons
 				RangeIncrement, 
 				MaxRange, 
 				Weight,
+				Hardness,
+				HitPoints,
 				SpecialInfo,
 				GivenName
 				);

@@ -20,8 +20,10 @@ namespace ItemSmithWorkShop.Items.Interfaces
 		double ThreatRangeLowerBound { get; }
 		string ThreatRange { get;}
 		string CriticalDamage { get;}
-		double Weight { get;}
-		string DamageType { get;}
+		string DamageType { get; }
+		double Weight { get; }
+		double Hardness { get; }
+		double HitPoints { get; }
 		string SpecialInfo { get;}
 
 		bool IsMasterwork { get; }
