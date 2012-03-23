@@ -140,9 +140,6 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public ForgedWeapon(IWeapon weapon, IMaterialComponent component)
 		{
-			//weapon = weaponPart;
-			//component = componentPart;
-
 			AdditionalEnchantmentCost = component.GetAdditionalEnchantmentCost();
 
 			ComponentName = component.ComponentName;
