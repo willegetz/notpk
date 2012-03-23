@@ -27,51 +27,57 @@ namespace ItemSmithWorkShop.Items.Weapons
 		
 		ForgedWeapon forgedWeapon;
 
-		public string ComponentName { get; private set; }
 
+		// Magic Properties
+		public int PlusEnhancement { get; private set; }
+
+		// Weapon
 		public string GivenName { get; private set; }
 
-		public string Proficiency { get { throw new NotImplementedException(); } }
+		public string ComponentName { get; private set; }
 
-		public string WeaponUse { get { throw new NotImplementedException(); } }
+		public string Proficiency { get; private set; }
 
-		public string WeaponCategory { get { throw new NotImplementedException(); } }
+		public string WeaponUse { get; private set; }
 
-		public string WeaponSubCategory { get { throw new NotImplementedException(); } }
+		public string WeaponCategory { get; private set; }
 
-		public string WeaponSize { get { throw new NotImplementedException(); } }
+		public string WeaponSubCategory { get; private set; }
+
+		public string WeaponSize { get; private set; }
 
 		public string WeaponName { get; private set; }
 
-		public double WeaponCost { get { throw new NotImplementedException(); } }
+		public double WeaponCost { get; private set; }
 
-		public string Damage { get { throw new NotImplementedException(); } }
+		public string Damage { get; private set; }
 
-		public double ThreatRangeLowerBound { get { throw new NotImplementedException(); } }
+		public double ThreatRangeLowerBound { get; private set; }
 
-		public string ThreatRange { get { throw new NotImplementedException(); } }
+		public string ThreatRange { get; private set; }
 
-		public string CriticalDamage { get { throw new NotImplementedException(); } }
+		public string CriticalDamage { get; private set; }
 
-		public double Weight { get { throw new NotImplementedException(); } }
+		public double Weight { get; private set; }
 
-		public string DamageType { get { throw new NotImplementedException(); } }
+		public string DamageType { get; private set; }
 
-		public string SpecialInfo { get { throw new NotImplementedException(); } }
+		public string SpecialInfo { get; private set; }
 
-		public bool IsMasterwork { get { throw new NotImplementedException(); } }
+		public bool IsMasterwork { get; private set; }
 
-		public double RangeIncrement { get { throw new NotImplementedException(); } }
+		public double RangeIncrement { get; private set; }
 
-		public double MaxRange { get { throw new NotImplementedException(); } }
+		public double MaxRange { get; private set; }
 
 		public PlusEnchantedWeapon(IWeapon weapon, int plusEnhancement)
 		{
 			forgedWeapon = QualifyWeapon(weapon);
+			PlusEnhancement = plusEnhancement;
 
 			WeaponName = TrimComponentName(forgedWeapon);
+			WeaponCost = CalculateWeaponCost(forgedWeapon, plusEnhancement);
 		}
-
 
 		private ForgedWeapon QualifyWeapon(IWeapon weapon)
 		{
@@ -95,7 +101,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			{
 				return new ForgedWeapon(weapon, new MasterworkColdIron());
 			}
-			else
+			else if(weapon.ComponentName = "Alchemical Silver")
 			{
 				return new ForgedWeapon(weapon, new MasterworkAlchemicalSilver());
 			}
@@ -112,6 +118,11 @@ namespace ItemSmithWorkShop.Items.Weapons
 			{
 				return weapon.WeaponName;
 			}
+		}
+	
+		private double CalculateWeaponCost(ForgedWeapon forgedWeapon, int plusEnhancement)
+		{
+			throw new NotImplementedException();
 		}
 	}
 }
