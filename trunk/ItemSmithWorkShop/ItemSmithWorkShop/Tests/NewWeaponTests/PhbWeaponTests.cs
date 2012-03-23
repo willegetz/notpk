@@ -125,7 +125,7 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			var weaopn = new PhbWeapon("Dagger");
 			var masterwork = new Masterwork();
 			var forgedWeapon = new ForgedWeapon(weaopn, masterwork);
-			var plusWeapon = new PlusEnchantedWeapon(forgedWeapon);
+			var plusWeapon = new PlusEnchantedWeapon(forgedWeapon, 1);
 			Assert.Fail();
 		}
 
