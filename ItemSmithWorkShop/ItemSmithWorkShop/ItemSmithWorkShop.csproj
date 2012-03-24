@@ -128,6 +128,9 @@
     <Content Include="Tests\NewWeaponTests\EnhantedWeaponTests.TestPlusEnhancementWeapon.approved.txt">
       <DependentUpon>EnhantedWeaponTests.cs</DependentUpon>
     </Content>
+    <Content Include="Tests\NewWeaponTests\EnhantedWeaponTests.TestPlusMithralWeapon.approved.txt">
+      <DependentUpon>EnhantedWeaponTests.cs</DependentUpon>
+    </Content>
     <Content Include="Tests\NewWeaponTests\PhbWeaponTests.TestDisplayAnarchicEnchantment.approved.txt">
       <DependentUpon>PhbWeaponTests.cs</DependentUpon>
     </Content>

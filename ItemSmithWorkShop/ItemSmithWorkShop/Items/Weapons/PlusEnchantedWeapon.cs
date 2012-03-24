@@ -179,8 +179,8 @@ namespace ItemSmithWorkShop.Items.Weapons
 		public PlusEnchantedWeapon(IWeapon weapon, double plusEnhancement)
 		{
 			forgedWeapon = QualifyWeapon(weapon);
-			PlusEnhancement = plusEnhancement;
-			BaseEnhancementCost = plusEnhancement;
+			PlusEnhancement = ValidatePlusEnhancement(plusEnhancement);
+			BaseEnhancementCost = PlusEnhancement;
 
 			BaseItemCost = forgedWeapon.WeaponCost;
 
@@ -226,9 +226,23 @@ namespace ItemSmithWorkShop.Items.Weapons
 			return weapon as ForgedWeapon;
 		}
 
+		private double ValidatePlusEnhancement(double plusEnhancement)
+		{
+			// There may be a need to notify the user that values out of bounds are placed to the nearest in bound value; 1 or 5, respectively
+			if (plusEnhancement < 1)
+			{
+				return 1;
+			}
+			else if (plusEnhancement > 5)
+			{
+				return 5;
+			}
+			return plusEnhancement;
+		}
+
 		private string BuildName()
 		{
-			return string.Format("+{0}{1}", PlusEnhancement, TrimComponentName());
+			return string.Format("+{0} {1}", PlusEnhancement, TrimComponentName());
 		}
 
 		private string TrimComponentName()
@@ -236,7 +250,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			string masterwork = "Masterwork ";
 			if (forgedWeapon.WeaponName.Contains(masterwork))
 			{
-				return forgedWeapon.WeaponName.Remove(0, masterwork.Length - 1);
+				return forgedWeapon.WeaponName.Remove(0, masterwork.Length);
 			}
 			else
 			{
