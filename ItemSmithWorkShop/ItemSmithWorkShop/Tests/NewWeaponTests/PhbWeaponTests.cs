@@ -83,16 +83,6 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		}
 
 		[TestMethod]
-		public void TestForgedMasterworkColdIronWeapon()
-		{
-			var dagger = new PhbWeapon("Dagger");
-			var masterworkColdIron = new MasterworkColdIron();
-			var masterworkForgedDagger = new ForgedWeapon(dagger, masterworkColdIron);
-			masterworkForgedDagger.NameWeapon("Holly Thorn");
-			Approvals.Verify(masterworkForgedDagger.ToString());
-		}
-
-		[TestMethod]
 		public void TestMasterworkColdIronWeapon()
 		{
 			var dagger = new PhbWeapon("Dagger");
@@ -123,7 +113,6 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			Approvals.Verify(masterworkSilverDagger.ToString());
 		}
 
-		[Ignore] // Not quite ready yet
 		[TestMethod]
 		public void TestPlusEnhancementWeapon()
 		{
@@ -137,10 +126,10 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			//		... more here to add
 			//		PhbWeapon => ForgedWeapon => PlusWeapon => EnchantedWeapon
 			var weaopn = new PhbWeapon("Dagger");
-			var masterwork = new Masterwork();
-			var forgedWeapon = new ForgedWeapon(weaopn, masterwork);
-			var plusWeapon = new PlusEnchantedWeapon(forgedWeapon, 1);
-			Assert.Fail();
+			var silver = new AlchemicalSilver();
+			var forgedWeapon = new ForgedWeapon(weaopn, silver);
+			var plusWeapon = new PlusEnchantedWeapon(forgedWeapon, 5);
+			Approvals.Verify(plusWeapon.ToString());
 		}
 
 		// When a weapon is combined with a material component, what is produced is a new type of weapon.
@@ -152,7 +141,7 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		public void TestBlah()
 		{
 			var dagger = new PhbWeapon("Dagger");
-			var forgedDagger = new ForgedWeapon(dagger, new MasterworkColdIron());
+			var forgedDagger = new ForgedWeapon(new ForgedWeapon(dagger, new ColdIron()), new Masterwork());
 			var distance = new WeaponEnchantment("Distance");
 			var anarchic = new WeaponEnchantment("Anarchic");
 			var keen = new WeaponEnchantment("Keen");

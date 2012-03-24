@@ -48,6 +48,8 @@ namespace ItemSmithWorkShop.Items.Weapons
 			}
 		}
 
+		public double AdditionalEnchantmentCost { get; private set; }
+
 		public string ToHitModifier { get; private set; }
 
 		// Weapon
@@ -95,6 +97,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public double MaxRange { get; private set; }
 
+		// TODO - Need these following items
 		// MagicAura
 		// MinimumCasterLevel
 		// RequiredFeats
@@ -111,15 +114,17 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 			GivenName = forgedWeapon.GivenName;
 			WeaponName = BuildName();
+			ComponentName = forgedWeapon.ComponentName;
 			Proficiency = forgedWeapon.Proficiency;
 			WeaponUse = forgedWeapon.WeaponUse;
 			WeaponCategory = forgedWeapon.WeaponCategory;
 			WeaponSubCategory = forgedWeapon.WeaponSubCategory;
 			WeaponSize = forgedWeapon.WeaponSize;
+			AdditionalEnchantmentCost = forgedWeapon.AdditionalEnchantmentCost;
 			WeaponCost = CalculateWeaponCost();
 			ToHitModifier = string.Format("+{0}", plusEnhancement);
 			Damage = forgedWeapon.Damage;
-			BonusDamage = forgedWeapon.DamageBonus;
+			BonusDamage = (forgedWeapon.DamageBonus + PlusEnhancement);
 			ThreatRangeLowerBound = forgedWeapon.ThreatRangeLowerBound;
 			ThreatRange = forgedWeapon.ThreatRange;
 			CriticalDamage = forgedWeapon.CriticalDamage;
@@ -130,36 +135,20 @@ namespace ItemSmithWorkShop.Items.Weapons
 			Hardness = CalculateHardness();
 			HitPoints = CalculateHitPoints();
 			SpecialInfo = forgedWeapon.SpecialInfo;
+			IsMasterwork = forgedWeapon.IsMasterwork;
 		}
 
 		private ForgedWeapon QualifyWeapon(IWeapon weapon)
 		{
-			if (!(weapon is ForgedWeapon))
+			if (!weapon.IsMasterwork && (weapon is ForgedWeapon))
+			{
+				return new ForgedWeapon(weapon as ForgedWeapon, new Masterwork());
+			}
+			else if (!weapon.IsMasterwork)
 			{
 				return new ForgedWeapon(weapon, new Masterwork());
 			}
-			else if ((weapon is ForgedWeapon) && !weapon.IsMasterwork)
-			{
-				
-				return MasterworkVersionOfComponent((weapon as ForgedWeapon));
-			}
-			else
-			{
-				return weapon as ForgedWeapon;
-			}
-		}
-
-		private ForgedWeapon MasterworkVersionOfComponent(ForgedWeapon weapon)
-		{
-			if (weapon.ComponentName == "Cold Iron")
-			{
-				return new ForgedWeapon(weapon, new MasterworkColdIron());
-			}
-			else if (weapon.ComponentName == "Alchemical Silver")
-			{
-				return new ForgedWeapon(weapon, new Masterwork());
-			}
-			else return weapon;
+			return weapon as ForgedWeapon;
 		}
 
 		private string BuildName()
@@ -182,7 +171,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 	
 		private double CalculateWeaponCost()
 		{
-			return forgedWeapon.WeaponCost + forgedWeapon.AdditionalEnchantmentCost + BaseEnhancementCost;
+			return forgedWeapon.WeaponCost + AdditionalEnchantmentCost + BaseEnhancementCost;
 		}
 
 		private double CalculateHardness()
@@ -206,6 +195,48 @@ namespace ItemSmithWorkShop.Items.Weapons
 		public void NameWeapon(string name)
 		{
 			GivenName = name;
+		}
+
+		private string DisplayDamage()
+		{
+			if (BonusDamage < 0)
+			{
+				return string.Format("{0} {1}", Damage, BonusDamage);
+			}
+			else if (BonusDamage > 0)
+			{
+				return string.Format("{0} +{1}", Damage, BonusDamage);
+			}
+			return Damage;
+		}
+
+		public override string ToString()
+		{
+			return string.Format("Given Name: '{1}'{0}Special Components: '{2}'{0}Weapon Name: '{3}'{0}This Weapon is Masterwork Quality: '{4}'{0}Weaopn Proficiency: '{5}'{0}Weapon Category: '{6}, {7}'{0}Weapon Size: '{8}'{0}Weapon Cost: '{9}' gold pieces{0}Extra Cost When Made Magical: '{10}' gold pieces{0}To Hit Bonus: '{11}'{0}Damage: '{12}' [{13}/{14}] {15}{0}Range Increment: '{16} feet ['{17}' feet max]'{0}Weight: '{18} pounds'{0}Hardness: '{19}'{0}Hit Points: '{20}'{0}Special: {21}",
+								Environment.NewLine,
+								GivenName,
+								ComponentName,
+								WeaponName,
+								IsMasterwork,
+								Proficiency,
+								WeaponCategory,
+								WeaponSubCategory,
+								WeaponSize,
+								WeaponCost,
+								AdditionalEnchantmentCost,
+								ToHitModifier,
+								DisplayDamage(),
+								ThreatRange,
+								CriticalDamage,
+								DamageType,
+								RangeIncrement,
+								MaxRange,
+								Weight,
+								Hardness,
+								HitPoints,
+								SpecialInfo
+								);
+								
 		}
 	}
 }

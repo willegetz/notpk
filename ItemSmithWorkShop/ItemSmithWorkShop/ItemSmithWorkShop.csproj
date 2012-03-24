@@ -58,7 +58,6 @@
     <Compile Include="AdventureItems\ExtraordinaryWeaponUtilities\MaterialComponentOrder.cs" />
     <Compile Include="AdventureItems\Interfaces\ILineItems.cs" />
     <Compile Include="Items\MaterialTypes\AlchemicalSilver.cs" />
-    <Compile Include="Items\MaterialTypes\MasterworkColdIron.cs" />
     <Compile Include="Items\Weapons\ForgedWeapon.cs" />
     <Compile Include="Items\Weapons\PlusEnchantedWeapon.cs" />
     <Compile Include="ItemTicket.cs" />

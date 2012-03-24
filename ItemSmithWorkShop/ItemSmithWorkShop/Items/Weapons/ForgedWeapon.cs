@@ -60,6 +60,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public double AdditionalEnchantmentCost { get; private set; }
 
+		// These two constructors are indicative of a needed abstraction.
 		public ForgedWeapon(IWeapon weapon, IMaterialComponent component)
 		{
 			GivenName = weapon.GivenName;
