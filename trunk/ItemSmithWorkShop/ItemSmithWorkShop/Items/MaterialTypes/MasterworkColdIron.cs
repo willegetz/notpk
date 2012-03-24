@@ -23,6 +23,8 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 
 		public string ToHitBonus { get { return "+1"; } }
 
+		public double DamageBonus { get { return 0; } }
+
 		public string ComponentInfo { get { return coldIronSpecialInfo; } }
 
 		public double ApplyCostModifier(IWeapon weapon)

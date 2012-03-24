@@ -27,6 +27,7 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 		public double WeaponCostModifier { get { return weaponCostModifier; } }
 		public bool IsMasterwork { get { return isMasterowrk; } }
 		public string ToHitBonus { get { return string.Empty; } }
+		public double DamageBonus { get { return 0; } }
 		public string ComponentInfo { get  {return coldIronSpecialInfo; }}
 		 
 		public double MagicEnchantmentCostModification { get { return magicEnchantmentCostModification; } }

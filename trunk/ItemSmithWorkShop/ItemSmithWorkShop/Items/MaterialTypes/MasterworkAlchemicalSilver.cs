@@ -34,6 +34,8 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 			get { return "+1"; }
 		}
 
+		public double DamageBonus { get { return -1; } }
+
 		public string ComponentInfo
 		{
 			get { return "I am a masterwork alchemical silver weapon"; }
