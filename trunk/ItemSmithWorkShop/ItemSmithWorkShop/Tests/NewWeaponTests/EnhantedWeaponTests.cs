@@ -35,6 +35,13 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			Approvals.Verify(plusWeapon.ToString());
 		}
 
+		[TestMethod]
+		public void TestPlusMithralWeapon()
+		{
+			var plusWeapon = new PlusEnchantedWeapon(new ForgedWeapon(new PhbWeapon("Dagger"), new Mithral()), 3);
+			Approvals.Verify(plusWeapon.ToString());
+		}
+
 		// When a weapon is combined with a material component, what is produced is a new type of weapon.
 		//		Should the material component be responsible for its changes to the original weapon?
 		// A weapon needs 
