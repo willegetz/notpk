@@ -173,9 +173,6 @@ namespace ItemSmithWorkShop.Items.Weapons
 			} 
 		}
 
-		// TODO - Need these following items
-		// Creation XP Cost
-
 		public PlusEnchantedWeapon(IWeapon weapon, double plusEnhancement)
 		{
 			forgedWeapon = QualifyWeapon(weapon);
