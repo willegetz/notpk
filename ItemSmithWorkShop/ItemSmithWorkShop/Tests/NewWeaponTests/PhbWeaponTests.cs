@@ -93,20 +93,22 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		}
 
 		[TestMethod]
+		public void TestMasterworkColdIronWeapon()
+		{
+			var dagger = new PhbWeapon("Dagger");
+			var coldIron = new ColdIron();
+			var forgedDagger = new ForgedWeapon(dagger, coldIron);
+			var masterwork = new Masterwork();
+			var masterworkColdIronDagger = new ForgedWeapon(forgedDagger, masterwork);
+			Approvals.Verify(masterworkColdIronDagger.ToString());
+		}
+
+		[TestMethod]
 		public void TestForgedAlchemicalSilverWeapon()
 		{
 			var dagger = new PhbWeapon("Dagger");
 			var silver = new AlchemicalSilver();
 			var forgedDagger = new ForgedWeapon(dagger, silver);
-			Approvals.Verify(forgedDagger.ToString());
-		}
-
-		[TestMethod]
-		public void TestForgedMasterworkAlchemicalSilverWeapon()
-		{
-			var dagger = new PhbWeapon("Dagger");
-			var masterworkSilver = new MasterworkAlchemicalSilver();
-			var forgedDagger = new ForgedWeapon(dagger, masterworkSilver);
 			Approvals.Verify(forgedDagger.ToString());
 		}
 

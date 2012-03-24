@@ -110,7 +110,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			HitPoints = weapon.HitPoints;
 
 			WeaponCost = component.ApplyCostModifier(weapon);
-			AdditionalEnchantmentCost = component.GetAdditionalEnchantmentCost();
+			AdditionalEnchantmentCost = weapon.AdditionalEnchantmentCost;
 			ToHitModifier = component.ApplyToHitModifier();
 			DamageBonus = weapon.DamageBonus;
 			Weight = component.ApplyWeightModifer(weapon);
