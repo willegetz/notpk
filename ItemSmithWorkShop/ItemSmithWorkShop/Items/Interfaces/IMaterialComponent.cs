@@ -11,6 +11,7 @@ namespace ItemSmithWorkShop.Items.Interfaces
 		double WeaponCostModifier { get; }
 		bool IsMasterwork { get; }
 		string ToHitBonus { get; }
+		double DamageBonus { get; }
 		string ComponentInfo { get; }
 
 		double ApplyCostModifier(IWeapon weapon);

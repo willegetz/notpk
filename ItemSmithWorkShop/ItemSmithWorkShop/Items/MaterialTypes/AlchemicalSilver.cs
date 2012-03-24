@@ -20,6 +20,7 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 		private const double lightWeaponCostModifier = 20;
 		private const double oneHandedWeaponCostModifier = 90;
 		private const double twoHandedWeaponCostModifier = 180;
+		private const double weaponDamageBonus = -1;
 
 		public string ComponentName
 		{
@@ -40,6 +41,11 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 		public string ToHitBonus
 		{
 			get { return string.Empty; }
+		}
+
+		public double DamageBonus
+		{
+			get { return weaponDamageBonus; }
 		}
 
 		public string ComponentInfo
