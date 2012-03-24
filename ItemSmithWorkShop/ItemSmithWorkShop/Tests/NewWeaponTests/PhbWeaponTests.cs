@@ -111,6 +111,18 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		}
 
 		[TestMethod]
+		public void TestMasterworkAlchemicalSilverWeapon()
+		{
+			var dagger = new PhbWeapon("Dagger");
+			var silver = new AlchemicalSilver();
+			var forgedDagger = new ForgedWeapon(dagger, silver);
+			var masterwork = new Masterwork();
+			var masterworkSilverDagger = new ForgedWeapon(forgedDagger, masterwork);
+			Approvals.Verify(masterworkSilverDagger.ToString());
+		}
+
+		[Ignore] // Not quite ready yet
+		[TestMethod]
 		public void TestPlusEnhancementWeapon()
 		{
 			// A weapon must be masterwork before it can be magical.

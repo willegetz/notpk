@@ -119,7 +119,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			WeaponCost = CalculateWeaponCost();
 			ToHitModifier = string.Format("+{0}", plusEnhancement);
 			Damage = forgedWeapon.Damage;
-			BonusDamage = forgedWeapon.BonusDamage;
+			BonusDamage = forgedWeapon.DamageBonus;
 			ThreatRangeLowerBound = forgedWeapon.ThreatRangeLowerBound;
 			ThreatRange = forgedWeapon.ThreatRange;
 			CriticalDamage = forgedWeapon.CriticalDamage;

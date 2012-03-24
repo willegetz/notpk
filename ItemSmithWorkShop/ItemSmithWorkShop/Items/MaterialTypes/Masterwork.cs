@@ -28,7 +28,8 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 		public double WeaponCostModifier { get { return 300; } }
 		public bool IsMasterwork { get { return true; } }
 		public string ToHitBonus { get { return "+1"; } }
-		public string ComponentInfo { get { return "This is a finely crafted weapon"; } }
+		public double DamageBonus { get { return 0; } }
+		public string ComponentInfo { get { return "This is a finely crafted weapon of masterwork quality"; } }
 
 
 		#region IMaterialComponent Members

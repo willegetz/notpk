@@ -42,6 +42,8 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 		public double WeaponCostModifier { get { return 500; } }
 		public bool IsMasterwork { get { return true; } }
 		public string ToHitBonus { get { return "+1"; } }
+		public double DamageBonus { get { return 0; } }
+
 
 		private const double lightArmorCostModifier = 1000;
 		private const double mediumArmorCostModifier = 4000;
