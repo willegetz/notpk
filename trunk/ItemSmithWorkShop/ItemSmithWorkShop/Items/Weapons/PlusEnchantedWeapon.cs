@@ -27,6 +27,11 @@ namespace ItemSmithWorkShop.Items.Weapons
 		
 		ForgedWeapon forgedWeapon;
 
+		private string lightgenerationInfo = string.Format("This weapon generates light as per the \"Light\" spell.{0}\tThis weapon's light can't be conealed when drawn,{0}\tnor can its light be shut off.", Environment.NewLine);
+		private string noLightGeneration = "This weapon does not generate light.";
+		private double creationDaysMultiplier = 0.001;
+		private double creationCostMultiplier = 0.5;
+		private double creationXpCost = 0.04;
 
 		// Magic Properties
 		private double enhancementCostMultiplier = 2000;
@@ -47,6 +52,8 @@ namespace ItemSmithWorkShop.Items.Weapons
 				baseEnhancementCost = (Math.Pow(value, 2) * enhancementCostMultiplier);
 			}
 		}
+
+		public double BaseItemCost { get; private set; }
 
 		public double AdditionalEnchantmentCost { get; private set; }
 
@@ -97,20 +104,85 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public double MaxRange { get; private set; }
 
+		// Creation Properties
+
+		private double minimumCasterLevel;
+		public double MinimumCasterLevel
+		{
+			get { return minimumCasterLevel; }
+			private set
+			{ 
+				minimumCasterLevel = (value * 3);
+				if (minimumCasterLevel < 6)
+				{
+					MagicAura = "Faint";
+				}
+				else if (minimumCasterLevel < 12)
+				{
+					MagicAura = "Moderate";
+				}
+				else if (minimumCasterLevel < 20)
+				{
+					MagicAura = "Strong";
+				}
+				else
+				{
+					MagicAura = "Overwhelming";
+				}
+			}
+		}
+
+		public string MagicAura { get; private set; }
+
+		private bool lightGeneraton;
+		public string GeneratesLight
+		{
+			get
+			{
+				if (lightGeneraton)
+				{
+					return lightgenerationInfo;
+				}
+				return noLightGeneration;
+			}
+		}
+
+		public string RequiredFeats { get { return "Craft Magic Arms and Armor"; } }
+
+		public double CreationTime
+		{
+			get
+			{
+				return BaseEnhancementCost * creationDaysMultiplier;
+			}
+		}
+
+		public double RawMaterialCost 
+		{
+			get
+			{
+				return BaseItemCost + (BaseEnhancementCost * creationCostMultiplier);
+			}
+		}
+
+		public double CreationXpCost 
+		{ 
+			get 
+			{ 
+				return BaseEnhancementCost * creationXpCost; 
+			} 
+		}
+
 		// TODO - Need these following items
-		// MagicAura
-		// MinimumCasterLevel
-		// RequiredFeats
-		// Glows
-		// TimeToCreate
 		// Creation XP Cost
-		// Creation Raw Material Cost
 
 		public PlusEnchantedWeapon(IWeapon weapon, double plusEnhancement)
 		{
 			forgedWeapon = QualifyWeapon(weapon);
 			PlusEnhancement = plusEnhancement;
 			BaseEnhancementCost = plusEnhancement;
+
+			BaseItemCost = forgedWeapon.WeaponCost;
 
 			GivenName = forgedWeapon.GivenName;
 			WeaponName = BuildName();
@@ -122,7 +194,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			WeaponSize = forgedWeapon.WeaponSize;
 			AdditionalEnchantmentCost = forgedWeapon.AdditionalEnchantmentCost;
 			WeaponCost = CalculateWeaponCost();
-			ToHitModifier = string.Format("+{0}", plusEnhancement);
+			ToHitModifier = string.Format("+{0}", PlusEnhancement);
 			Damage = forgedWeapon.Damage;
 			BonusDamage = (forgedWeapon.DamageBonus + PlusEnhancement);
 			ThreatRangeLowerBound = forgedWeapon.ThreatRangeLowerBound;
@@ -136,6 +208,9 @@ namespace ItemSmithWorkShop.Items.Weapons
 			HitPoints = CalculateHitPoints();
 			SpecialInfo = forgedWeapon.SpecialInfo;
 			IsMasterwork = forgedWeapon.IsMasterwork;
+
+			// Creation
+			MinimumCasterLevel = PlusEnhancement;
 		}
 
 		private ForgedWeapon QualifyWeapon(IWeapon weapon)
@@ -159,7 +234,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 		private string TrimComponentName()
 		{
 			string masterwork = "Masterwork ";
-			if (forgedWeapon.ComponentName.Contains("Masterwork"))
+			if (forgedWeapon.WeaponName.Contains(masterwork))
 			{
 				return forgedWeapon.WeaponName.Remove(0, masterwork.Length - 1);
 			}
@@ -171,7 +246,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 	
 		private double CalculateWeaponCost()
 		{
-			return forgedWeapon.WeaponCost + AdditionalEnchantmentCost + BaseEnhancementCost;
+			return BaseItemCost + AdditionalEnchantmentCost + BaseEnhancementCost;
 		}
 
 		private double CalculateHardness()
@@ -192,11 +267,6 @@ namespace ItemSmithWorkShop.Items.Weapons
 			return forgedWeapon.HitPoints + (PlusEnhancement * enhancementHitPointMultiplier);
 		}
 
-		public void NameWeapon(string name)
-		{
-			GivenName = name;
-		}
-
 		private string DisplayDamage()
 		{
 			if (BonusDamage < 0)
@@ -210,9 +280,19 @@ namespace ItemSmithWorkShop.Items.Weapons
 			return Damage;
 		}
 
+		public void NameWeapon(string name)
+		{
+			GivenName = name;
+		}
+
+		public void EnableLightGeneration()
+		{
+			lightGeneraton = true;
+		}
+
 		public override string ToString()
 		{
-			return string.Format("Given Name: '{1}'{0}Special Components: '{2}'{0}Weapon Name: '{3}'{0}This Weapon is Masterwork Quality: '{4}'{0}Weaopn Proficiency: '{5}'{0}Weapon Category: '{6}, {7}'{0}Weapon Size: '{8}'{0}Weapon Cost: '{9}' gold pieces{0}Extra Cost When Made Magical: '{10}' gold pieces{0}To Hit Bonus: '{11}'{0}Damage: '{12}' [{13}/{14}] {15}{0}Range Increment: '{16} feet ['{17}' feet max]'{0}Weight: '{18} pounds'{0}Hardness: '{19}'{0}Hit Points: '{20}'{0}Special: {21}",
+			return string.Format("Given Name: '{1}'{0}Special Components: '{2}'{0}Weapon Name: '{3}'{0}This Weapon is Masterwork Quality: '{4}'{0}Weaopn Proficiency: '{5}'{0}Weapon Category: '{6}, {7}'{0}Weapon Size: '{8}'{0}Weapon Cost: '{9} gold pieces'{0}Extra Cost When Made Magical: '{10} gold pieces'{0}To Hit Bonus: '{11}'{0}Damage: '{12} [{13}/{14}] {15}'{0}Range Increment: '{16} feet [{17} feet max]'{0}Weight: '{18} pounds'{0}Hardness: '{19}'{0}Hit Points: '{20}'{0}Special: {21}{0}{0}Creation Requirements{0}Required Feats: '{22}'{0}Minimum Caster Level: '{23}'{0}Creation Time: '{24} days'{0}Raw Material Cost: '{25} gold pieces'{0}Experience Point Cost: '{26} xp'{0}Magic Aura: '{27}'{0}Light Generation: {28}",
 								Environment.NewLine,
 								GivenName,
 								ComponentName,
@@ -234,7 +314,14 @@ namespace ItemSmithWorkShop.Items.Weapons
 								Weight,
 								Hardness,
 								HitPoints,
-								SpecialInfo
+								SpecialInfo,
+								RequiredFeats,
+								MinimumCasterLevel,
+								CreationTime,
+								RawMaterialCost,
+								CreationXpCost,
+								MagicAura,
+								GeneratesLight
 								);
 								
 		}
