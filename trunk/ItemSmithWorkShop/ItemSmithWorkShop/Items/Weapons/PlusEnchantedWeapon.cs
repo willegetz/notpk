@@ -157,7 +157,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			}
 			else if (weapon.ComponentName == "Alchemical Silver")
 			{
-				return new ForgedWeapon(weapon, new MasterworkAlchemicalSilver());
+				return new ForgedWeapon(weapon, new Masterwork());
 			}
 			else return weapon;
 		}
