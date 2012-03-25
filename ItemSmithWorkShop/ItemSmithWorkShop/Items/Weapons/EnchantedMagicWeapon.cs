@@ -196,10 +196,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			get { throw new NotImplementedException(); }
 		}
 
-		public string RequiredSpells
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public string RequiredSpells { get; private set; }
 
 		public string AdditionalRequirements
 		{
@@ -213,7 +210,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		#endregion
 
-		// Non interface related properties
+		// Non interface implemented properties
 		public List<IWeaponEnchantment> prefixes
 		{
 			get
@@ -275,13 +272,20 @@ namespace ItemSmithWorkShop.Items.Weapons
 			//IWeaponEnhancement
 
 			// Properties needing method assignments
+			//		IWeapon
 			CostModifier = TallyCostModifiers();
 			ThreatRange = CalculateThreatRange();
 			RangeIncrement = CalculateRangeModifier(plusWeapon.RangeIncrement);
 			MaxRange = CalculateRangeModifier(plusWeapon.MaxRange);
+			//		IPlusWeapon and IWeaponEnchantment
 			MinimumCasterLevel = DetermineMinimumCasterLevel(plusWeapon.MinimumCasterLevel);
 			MagicAura = AssembleAuras();
+			//		IWeaponEnchantment
+			RequiredSpells = AssembleRequiredSpells();
+			//		Non interface implemented properties
 			CriticalDamageBonus = AssembleCriticalDamages();
+
+
 			
 			SpecialInfo = AppendSpecialInfo();
 		}
@@ -354,6 +358,27 @@ namespace ItemSmithWorkShop.Items.Weapons
 				auras.AppendLine(string.Format("{0}: {1}", enchantment.EnchantmentName, enchantment.MagicAura));
 			}
 			return auras.ToString();
+		}
+
+		private string AssembleRequiredSpells()
+		{
+			var enchantmentSpells = new StringBuilder();
+			var requiredSpellsList = (from enchantment in enchantments
+									 where !string.IsNullOrEmpty(enchantment.RequiredSpells)
+									 select enchantment).ToList();
+			var requiredSpellCount = requiredSpellsList.Count();
+			
+			enchantmentSpells.AppendLine("Required Spells");
+
+			while (requiredSpellCount > 0)
+			{
+				foreach (var requiredSpell in requiredSpellsList)
+				{
+					enchantmentSpells.AppendLine(string.Format("{0}{1}: {2}", "\t", requiredSpell.EnchantmentName, requiredSpell.RequiredSpells));
+					requiredSpellCount--;
+				}
+			}
+			return enchantmentSpells.ToString();
 		}
 
 		private string AssembleCriticalDamages()
