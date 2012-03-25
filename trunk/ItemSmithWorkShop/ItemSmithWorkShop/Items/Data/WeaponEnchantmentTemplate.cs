@@ -71,8 +71,8 @@ namespace ItemSmithWorkShop.Items.Data
 			private set { magicAura = value; }
 		}
 
-		public int minimumCasterLevel;
-		public int MinimumCasterLevel
+		public double minimumCasterLevel;
+		public double MinimumCasterLevel
 		{
 			get { return minimumCasterLevel; }
 			private set { minimumCasterLevel = value; }

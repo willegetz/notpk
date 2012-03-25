@@ -7,7 +7,7 @@ using ItemSmithWorkShop.Items.MaterialTypes;
 
 namespace ItemSmithWorkShop.Items.Weapons
 {
-	public class PlusEnhancedWeapon : IWeapon
+	public class PlusEnhancedWeapon : IPlusEnhancedWeapon
 	{
 		// In addition to the weapon and forged weapon properties A PlusEnchantedWeapon has
 		//		A Plus to attack and damage
@@ -62,7 +62,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 		// Weapon
 		public string GivenName { get; private set; }
 
-		public double BonusDamage { get; private set; }
+		public double DamageBonus { get; private set; }
 
 		public string ComponentName { get; private set; }
 
@@ -193,7 +193,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			WeaponCost = CalculateWeaponCost();
 			ToHitModifier = string.Format("+{0}", PlusEnhancement);
 			Damage = forgedWeapon.Damage;
-			BonusDamage = (forgedWeapon.DamageBonus + PlusEnhancement);
+			DamageBonus = (forgedWeapon.DamageBonus + PlusEnhancement);
 			ThreatRangeLowerBound = forgedWeapon.ThreatRangeLowerBound;
 			ThreatRange = forgedWeapon.ThreatRange;
 			CriticalDamage = forgedWeapon.CriticalDamage;
@@ -280,13 +280,13 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		private string DisplayDamage()
 		{
-			if (BonusDamage < 0)
+			if (DamageBonus < 0)
 			{
-				return string.Format("{0} {1}", Damage, BonusDamage);
+				return string.Format("{0} {1}", Damage, DamageBonus);
 			}
-			else if (BonusDamage > 0)
+			else if (DamageBonus > 0)
 			{
-				return string.Format("{0} +{1}", Damage, BonusDamage);
+				return string.Format("{0} +{1}", Damage, DamageBonus);
 			}
 			return Damage;
 		}

@@ -16,7 +16,7 @@ namespace ItemSmithWorkShop.Items.Interfaces
 		double ThreatRangeModifier { get; }
 		string DamageType { get; }
 		string MagicAura { get; }
-		int MinimumCasterLevel { get; }
+		double MinimumCasterLevel { get; }
 		double RangeIncrementModifier { get; }
 		string RequiredFeats { get; }
 		string RequiredSpells { get; }
