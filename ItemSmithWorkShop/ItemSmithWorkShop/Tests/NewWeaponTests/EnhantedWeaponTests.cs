@@ -30,7 +30,7 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			weaopn.NameWeapon("My Magic Friend!");
 			var silver = new AlchemicalSilver();
 			var forgedWeapon = new ForgedWeapon(weaopn, silver);
-			var plusWeapon = new PlusEnchantedWeapon(forgedWeapon, 1);
+			var plusWeapon = new PlusEnhancedWeapon(forgedWeapon, 1);
 			plusWeapon.EnableLightGeneration();
 			Approvals.Verify(plusWeapon.ToString());
 		}
@@ -38,13 +38,14 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		[TestMethod]
 		public void TestPlusMithralWeapon()
 		{
-			var plusWeapon = new PlusEnchantedWeapon(new ForgedWeapon(new PhbWeapon("Dagger"), new Mithral()), 3);
+			var plusWeapon = new PlusEnhancedWeapon(new ForgedWeapon(new PhbWeapon("Dagger"), new Mithral()), 3);
 			Approvals.Verify(plusWeapon.ToString());
 		}
 
-		// When a weapon is combined with a material component, what is produced is a new type of weapon.
-		//		Should the material component be responsible for its changes to the original weapon?
-		// A weapon needs 
+		// Once we have a PlusEnchantedWeapon object we can proceed to enchant it with weapon special abilities.
+		// An enchanted weapon should be able to have enchantments added to it one at a time
+		// An enchanted weapon should be able to have enchantments removed from it at any time
+		// When should the enchanted weapon be instantiated?
 
 		[Ignore]
 		[TestMethod]
