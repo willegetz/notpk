@@ -60,15 +60,9 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public bool IsMasterwork { get { return true; } }
 
-		public double RangeIncrement
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public double RangeIncrement { get; private set; }
 
-		public double MaxRange
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public double MaxRange { get; private set; }
 
 		#endregion
 
@@ -240,6 +234,9 @@ namespace ItemSmithWorkShop.Items.Weapons
 			PlusEnhancement = plusWeapon.PlusEnhancement;
 			CostModifier = TallyCostModifiers();
 			ThreatRange = CalculateThreatRange();
+			RangeIncrement = CalculateRangeModifier(plusWeapon.RangeIncrement);
+			MaxRange = CalculateRangeModifier(plusWeapon.MaxRange);
+			
 			SpecialInfo = AppendSpecialInfo();
 		}
 
@@ -260,12 +257,27 @@ namespace ItemSmithWorkShop.Items.Weapons
 		private string CalculateThreatRange()
 		{
 			var threatModifer = (from enchantment in enchantments
-								 where enchantment.ThreatRangeModifier > 1
 								 select enchantment.ThreatRangeModifier).ToList().Max();
 
-			var newLowerBound = 21 - (((20 - ThreatRangeLowerBound) + 1) * threatModifer);
+			if (threatModifer != 0)
+			{
+				var newLowerBound = 21 - (((20 - ThreatRangeLowerBound) + 1) * threatModifer);
+				return string.Format("{0}-20", newLowerBound);
+			}
 	
-			return string.Format("{0}-20", newLowerBound);
+			return string.Format("{0}-20", ThreatRangeLowerBound);
+		}
+
+		private double CalculateRangeModifier(double range)
+		{
+			var incrementModifier = (from enchantment in enchantments
+									 select enchantment.RangeIncrementModifier).ToList().Max();
+
+			if (incrementModifier != 0)
+			{
+				return range * incrementModifier;
+			}
+			return range;
 		}
 
 		private string AppendSpecialInfo()

@@ -55,9 +55,10 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			var flamingBurst = new WeaponEnchantment("Flaming Burst");
 			var keen = new WeaponEnchantment("Keen");
 			var anarchic = new WeaponEnchantment("Anarchic");
-			List<IWeaponEnchantment> enchantments = new List<IWeaponEnchantment>() { flamingBurst, anarchic, keen};
+			var distance = new WeaponEnchantment("Distance");
+			List<IWeaponEnchantment> enchantments = new List<IWeaponEnchantment>() { flamingBurst, anarchic, keen, };
 			var flamingBurstDagger = new EnchantedMagicWeapon(plusWeapon, enchantments);
-			Approvals.Verify(flamingBurstDagger.ThreatRange);
+			Approvals.Verify(flamingBurstDagger.RangeIncrement + " / " + flamingBurstDagger.MaxRange);
 		}
 
 		[Ignore]
