@@ -117,19 +117,19 @@ namespace ItemSmithWorkShop.Items.Weapons
 				minimumCasterLevel = (value * 3);
 				if (minimumCasterLevel < 6)
 				{
-					MagicAura = "Faint";
+					MagicAura = "Faint evocation";
 				}
 				else if (minimumCasterLevel < 12)
 				{
-					MagicAura = "Moderate";
+					MagicAura = "Moderate evocation";
 				}
 				else if (minimumCasterLevel < 20)
 				{
-					MagicAura = "Strong";
+					MagicAura = "Strong evocation";
 				}
 				else
 				{
-					MagicAura = "Overwhelming";
+					MagicAura = "Overwhelming evocation";
 				}
 			}
 		}

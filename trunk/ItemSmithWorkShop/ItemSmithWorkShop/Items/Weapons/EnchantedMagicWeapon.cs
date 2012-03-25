@@ -20,6 +20,10 @@ namespace ItemSmithWorkShop.Items.Weapons
 		private List<IWeaponEnchantment> enchantments;
 
 		private double enhancementCostMultiplier = 2000;
+		private double creationDaysMultiplier = 0.001;
+		private double creationCostMultiplier = 0.5;
+		private double creationXpCost = 0.04;
+
 
 
 		#region IWeapon Members
@@ -82,39 +86,27 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public double PlusEnhancement { get; private set; }
 
-		public double MinimumCasterLevel
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public double MinimumCasterLevel { get; private set; }
 
-		public string MagicAura
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public string MagicAura { get; private set; }
 
-		public string GeneratesLight
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public string GeneratesLight { get; private set; }
 
-		public string RequiredFeats
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public string RequiredFeats { get; private set; }
 
 		public double CreationTime
 		{
-			get { throw new NotImplementedException(); }
+			get { return BaseEnhancementCost * creationDaysMultiplier; }
 		}
 
 		public double RawMaterialCost
 		{
-			get { throw new NotImplementedException(); }
+			get { return WeaponCost + (BaseEnhancementCost * creationCostMultiplier); }
 		}
 
 		public double CreationXpCost
 		{
-			get { throw new NotImplementedException(); }
+			get { return BaseEnhancementCost * creationXpCost; }
 		}
 
 		private double baseEnhancementCost;
@@ -228,6 +220,8 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 			//IPlusEnhancedWeapon
 			PlusEnhancement = plusWeapon.PlusEnhancement;
+			GeneratesLight = plusWeapon.GeneratesLight;
+			RequiredFeats = plusWeapon.RequiredFeats;
 
 			//IWeaponEnhancement
 
@@ -236,6 +230,8 @@ namespace ItemSmithWorkShop.Items.Weapons
 			ThreatRange = CalculateThreatRange();
 			RangeIncrement = CalculateRangeModifier(plusWeapon.RangeIncrement);
 			MaxRange = CalculateRangeModifier(plusWeapon.MaxRange);
+			MinimumCasterLevel = DetermineMinimumCasterLevel(plusWeapon.MinimumCasterLevel);
+			MagicAura = AssembleAuras();
 			
 			SpecialInfo = AppendSpecialInfo();
 		}
@@ -278,6 +274,29 @@ namespace ItemSmithWorkShop.Items.Weapons
 				return range * incrementModifier;
 			}
 			return range;
+		}
+
+		private double DetermineMinimumCasterLevel(double enhancementCasterLevel)
+		{
+			var minimumEnchantmentCasterLevel = (from enchantment in enchantments
+												 select enchantment.MinimumCasterLevel).ToList().Max();
+
+			if (enhancementCasterLevel > minimumEnchantmentCasterLevel)
+			{
+				return enhancementCasterLevel;
+			}
+			return minimumEnchantmentCasterLevel;
+		}
+
+		private string AssembleAuras()
+		{
+			var auras = new StringBuilder();
+			auras.AppendLine(string.Format("Enhancement: {0}", plusWeapon.MagicAura));
+			foreach (var enchantment in enchantments)
+			{
+				auras.AppendLine(string.Format("{0}: {1}", enchantment.EnchantmentName, enchantment.MagicAura));
+			}
+			return auras.ToString();
 		}
 
 		private string AppendSpecialInfo()

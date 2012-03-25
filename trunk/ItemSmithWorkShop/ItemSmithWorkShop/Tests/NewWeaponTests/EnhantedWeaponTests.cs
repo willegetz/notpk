@@ -58,7 +58,7 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			var distance = new WeaponEnchantment("Distance");
 			List<IWeaponEnchantment> enchantments = new List<IWeaponEnchantment>() { flamingBurst, anarchic, keen, };
 			var flamingBurstDagger = new EnchantedMagicWeapon(plusWeapon, enchantments);
-			Approvals.Verify(flamingBurstDagger.RangeIncrement + " / " + flamingBurstDagger.MaxRange);
+			Approvals.Verify("Weapon Base Price: " + flamingBurstDagger.WeaponCost + "\r\nWeapon Enchantment Price: +" + flamingBurstDagger.CostModifier + " is " + flamingBurstDagger.BaseEnhancementCost + " gp" + "\r\nRaw Materials Cost " + flamingBurstDagger.RawMaterialCost + "\r\nXp Cost: " + flamingBurstDagger.CreationXpCost + " xp");
 		}
 
 		[Ignore]
