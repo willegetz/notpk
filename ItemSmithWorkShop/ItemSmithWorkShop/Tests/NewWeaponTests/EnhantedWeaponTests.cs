@@ -53,11 +53,11 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		{
 			var plusWeapon = new PlusEnhancedWeapon(new ForgedWeapon(new PhbWeapon("Dagger"), new Masterwork()), 5);
 			var flamingBurst = new WeaponEnchantment("Flaming Burst");
-			//var keen = new WeaponEnchantment("Keen");
+			var keen = new WeaponEnchantment("Keen");
 			var anarchic = new WeaponEnchantment("Anarchic");
-			List<IWeaponEnchantment> enchantments = new List<IWeaponEnchantment>() { flamingBurst, anarchic, };
+			List<IWeaponEnchantment> enchantments = new List<IWeaponEnchantment>() { flamingBurst, anarchic, keen};
 			var flamingBurstDagger = new EnchantedMagicWeapon(plusWeapon, enchantments);
-			Approvals.Verify(flamingBurstDagger.ThreatRange.ToString());
+			Approvals.Verify(flamingBurstDagger.ThreatRange);
 		}
 
 		[Ignore]
