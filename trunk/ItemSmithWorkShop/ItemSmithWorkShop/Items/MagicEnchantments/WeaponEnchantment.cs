@@ -31,7 +31,7 @@ namespace ItemSmithWorkShop.Items.MagicEnchantments
 		public string WeaponUse { get; private set; }
 		public string StandardDamageBonus { get; private set; }
 		public double ThreatRangeModifier { get; private set; }
-		public bool CriticalDamageBonus { get; private set; }
+		public bool DoesCriticalDamage { get; private set; }
 		public string DamageType { get; private set; }
 		public string MagicAura { get; private set; }
 		public double MinimumCasterLevel { get; private set; }
@@ -51,7 +51,7 @@ namespace ItemSmithWorkShop.Items.MagicEnchantments
 			WeaponUse = weaponEnchantmentTemplate.WeaponUse;
 			StandardDamageBonus = weaponEnchantmentTemplate.StandardDamageBonus;
 			ThreatRangeModifier = weaponEnchantmentTemplate.ThreatRangeModifier;
-			CriticalDamageBonus = weaponEnchantmentTemplate.CriticalDamageBonus;
+			DoesCriticalDamage = weaponEnchantmentTemplate.DoesCriticalDamage;
 			DamageType = weaponEnchantmentTemplate.DamageType;
 			MagicAura = weaponEnchantmentTemplate.MagicAura;
 			MinimumCasterLevel = weaponEnchantmentTemplate.MinimumCasterLevel;
@@ -73,7 +73,7 @@ namespace ItemSmithWorkShop.Items.MagicEnchantments
 								WeaponUse,
 								StandardDamageBonus,
 								ThreatRangeModifier,
-								CriticalDamageBonus,
+								DoesCriticalDamage,
 								DamageType,
 								MagicAura,
 								MinimumCasterLevel,

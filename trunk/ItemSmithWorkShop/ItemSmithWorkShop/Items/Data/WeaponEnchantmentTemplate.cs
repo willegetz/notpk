@@ -50,11 +50,11 @@ namespace ItemSmithWorkShop.Items.Data
 			private set { threatRangeModifier = value; }
 		}
 
-		public bool criticalDamageBonus;
-		public bool CriticalDamageBonus
+		public bool doesCriticalDamage;
+		public bool DoesCriticalDamage
 		{
-			get { return criticalDamageBonus; }
-			private set { criticalDamageBonus = value; }
+			get { return doesCriticalDamage; }
+			private set { doesCriticalDamage = value; }
 		}
 
 		public string damageType;
@@ -121,7 +121,7 @@ namespace ItemSmithWorkShop.Items.Data
 			WeaponUse = weaponUse;
 			StandardDamageBonus = standardDamageBonus;
 			ThreatRangeModifier = threatRangeModifier;
-			CriticalDamageBonus = criticalDamageBonus;
+			DoesCriticalDamage = doesCriticalDamage;
 			DamageType = damageType;
 			MagicAura = magicAura;
 			MinimumCasterLevel = minimumCasterLevel;

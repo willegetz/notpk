@@ -58,7 +58,7 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			var distance = new WeaponEnchantment("Distance");
 			List<IWeaponEnchantment> enchantments = new List<IWeaponEnchantment>() { flamingBurst, anarchic, keen, };
 			var flamingBurstDagger = new EnchantedMagicWeapon(plusWeapon, enchantments);
-			Approvals.Verify("Weapon Base Price: " + flamingBurstDagger.WeaponCost + "\r\nWeapon Enchantment Price: +" + flamingBurstDagger.CostModifier + " is " + flamingBurstDagger.BaseEnhancementCost + " gp" + "\r\nRaw Materials Cost " + flamingBurstDagger.RawMaterialCost + "\r\nXp Cost: " + flamingBurstDagger.CreationXpCost + " xp");
+			Approvals.Verify("Bonuses to Damage:" + flamingBurstDagger.StandardDamageBonus);
 		}
 
 		[Ignore]
@@ -110,7 +110,7 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			highestCasterLevel.Add((plusEnhancement * 3));
 
 			var criticalDamage = from clump in enchantmentClump
-								 where clump.CriticalDamageBonus == true
+								 where clump.DoesCriticalDamage == true
 								 select clump;
 
 			var critCount = criticalDamage.Count();
