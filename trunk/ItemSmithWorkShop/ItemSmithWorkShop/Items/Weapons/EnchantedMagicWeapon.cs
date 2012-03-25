@@ -46,40 +46,19 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public string ThreatRange { get; private set; }
 
-		public string CriticalDamage
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public string CriticalDamage { get; private set; }
 
-		public string DamageType
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public string DamageType { get; private set; }
 
-		public double Weight
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public double Weight { get; private set; }
 
-		public double Hardness
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public double Hardness { get; private set; }
 
-		public double HitPoints
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public double HitPoints { get; private set; }
 
-		public string SpecialInfo
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public string SpecialInfo { get; private set; }
 
-		public bool IsMasterwork
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public bool IsMasterwork { get { return true; } }
 
 		public double RangeIncrement
 		{
@@ -171,7 +150,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			get { throw new NotImplementedException(); }
 		}
 
-		public bool IsMagical { get; private set; }
+		public bool IsMagical { get { return true; } }
 
 		#endregion
 
@@ -252,10 +231,16 @@ namespace ItemSmithWorkShop.Items.Weapons
 			WeaponCost = plusWeapon.WeaponCost;
 			Damage = plusWeapon.Damage;
 			ThreatRangeLowerBound = plusWeapon.ThreatRangeLowerBound;
+			CriticalDamage = plusWeapon.CriticalDamage;
+			DamageType = plusWeapon.DamageType;
+			Weight = plusWeapon.Weight;
+			Hardness = plusWeapon.Hardness;
+			HitPoints = plusWeapon.HitPoints;
 			
 			PlusEnhancement = plusWeapon.PlusEnhancement;
 			CostModifier = TallyCostModifiers();
 			ThreatRange = CalculateThreatRange();
+			SpecialInfo = AppendSpecialInfo();
 		}
 
 		private PlusEnhancedWeapon QualifyWeapon(IWeapon weapon)
@@ -274,21 +259,23 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		private string CalculateThreatRange()
 		{
-			string keen = "Keen";
-			bool isKeen = (from enchantment in enchantments select enchantment.EnchantmentName).ToList().Contains(keen);
-			if (isKeen)
+			var threatModifer = (from enchantment in enchantments
+								 where enchantment.ThreatRangeModifier > 1
+								 select enchantment.ThreatRangeModifier).ToList().Max();
+
+			var newLowerBound = 21 - (((20 - ThreatRangeLowerBound) + 1) * threatModifer);
+	
+			return string.Format("{0}-20", newLowerBound);
+		}
+
+		private string AppendSpecialInfo()
+		{
+			var notesCollection = new StringBuilder();
+			foreach (var enchantment in enchantments)
 			{
-				// Crit Upper Bound = 20;
-				double upperBound = 20;
-				// spread = upperBound - lowerBound; ex. 1 = 20 - 19
-				double spread = upperBound - ThreatRangeLowerBound;
-				// keenSpread = (spread + 1) * 2; 4 = (1 + 1) * 2
-				double keenSpread = (spread + 1) * 2;
-				// modifiedLowerBound = 21 - keenSpread
-				double modifiedLowerBound = 21 - keenSpread;
-				return string.Format("{0}-20", modifiedLowerBound);
+				notesCollection.AppendLine(string.Format("{0}: {1}", enchantment.EnchantmentName, enchantment.EnchantmentNotes));
 			}
-			return string.Format("{0}-20", ThreatRangeLowerBound);
+			return string.Format("{1}{0}{2}", Environment.NewLine, plusWeapon.SpecialInfo, notesCollection);
 		}
 	}
 }
