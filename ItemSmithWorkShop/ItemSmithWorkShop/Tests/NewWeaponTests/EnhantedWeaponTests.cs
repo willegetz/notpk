@@ -7,6 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ItemSmithWorkShop.Items.Weapons;
 using ItemSmithWorkShop.Items.MaterialTypes;
 using ItemSmithWorkShop.Items.MagicEnchantments;
+using ItemSmithWorkShop.Items.Interfaces;
 
 namespace ItemSmithWorkShop.Tests.NewWeaponTests
 {
@@ -46,6 +47,18 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		// An enchanted weapon should be able to have enchantments added to it one at a time
 		// An enchanted weapon should be able to have enchantments removed from it at any time
 		// When should the enchanted weapon be instantiated?
+
+		[TestMethod]
+		public void TestKeenAnarchicFlamingBurstDagger()
+		{
+			var plusWeapon = new PlusEnhancedWeapon(new ForgedWeapon(new PhbWeapon("Dagger"), new Masterwork()), 5);
+			var flamingBurst = new WeaponEnchantment("Flaming Burst");
+			//var keen = new WeaponEnchantment("Keen");
+			var anarchic = new WeaponEnchantment("Anarchic");
+			List<IWeaponEnchantment> enchantments = new List<IWeaponEnchantment>() { flamingBurst, anarchic, };
+			var flamingBurstDagger = new EnchantedMagicWeapon(plusWeapon, enchantments);
+			Approvals.Verify(flamingBurstDagger.ThreatRange.ToString());
+		}
 
 		[Ignore]
 		[TestMethod]

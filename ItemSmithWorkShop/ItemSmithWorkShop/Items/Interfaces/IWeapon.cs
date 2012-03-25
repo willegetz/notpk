@@ -27,6 +27,7 @@ namespace ItemSmithWorkShop.Items.Interfaces
 		string SpecialInfo { get;}
 
 		bool IsMasterwork { get; }
+		bool IsMagical { get; }
 
 		// Ranged weapons have a range increment.
 		//		Although all weapons can be used as improvised ranged weaopns.

@@ -58,6 +58,8 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public bool IsMasterwork { get; private set; }
 
+		public bool IsMagical { get { return false; } }
+
 		public double AdditionalEnchantmentCost { get; private set; }
 
 		// These two constructors are indicative of a needed abstraction.

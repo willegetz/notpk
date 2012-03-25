@@ -15,62 +15,36 @@ namespace ItemSmithWorkShop.Items.Weapons
 		// DamageBonus (IForgedWeapon) and StandardDamageBonus (IWeaponEnchantment) seem to be the same.
 		//		Will have to see how it plays out
 
+		private PlusEnhancedWeapon plusWeapon;
+
+		private List<IWeaponEnchantment> enchantments;
+
+		private double enhancementCostMultiplier = 2000;
+
+
 		#region IWeapon Members
 
-		public string GivenName
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public string WeaponName { get; private set; }
 
-		public string Proficiency
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public string GivenName { get; private set; }
 
-		public string WeaponUse
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public string Proficiency { get; private set; }
 
-		public string WeaponCategory
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public string WeaponUse { get; private set; }
 
-		public string WeaponSubCategory
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public string WeaponCategory { get; private set; }
 
-		public string WeaponSize
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public string WeaponSubCategory { get; private set; }
 
-		public string WeaponName
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public string WeaponSize { get; private set; }
 
-		public double WeaponCost
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public double WeaponCost { get; private set; }
 
-		public string Damage
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public string Damage { get; private set; }
 
-		public double ThreatRangeLowerBound
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public double ThreatRangeLowerBound { get; private set; }
 
-		public string ThreatRange
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public string ThreatRange { get; private set; }
 
 		public string CriticalDamage
 		{
@@ -145,10 +119,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		#region IPlusEnhancedWeapon Members
 
-		public double PlusEnhancement
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public double PlusEnhancement { get; private set; }
 
 		public double MinimumCasterLevel
 		{
@@ -185,15 +156,22 @@ namespace ItemSmithWorkShop.Items.Weapons
 			get { throw new NotImplementedException(); }
 		}
 
-		public double BaseEnhancementCost
+		private double baseEnhancementCost;
+		public double BaseEnhancementCost 
 		{
-			get { throw new NotImplementedException(); }
+			get { return baseEnhancementCost; }
+			private set
+			{
+				baseEnhancementCost = Math.Pow(costModifier, 2) * enhancementCostMultiplier;
+			}
 		}
 
 		public double BaseItemCost
 		{
 			get { throw new NotImplementedException(); }
 		}
+
+		public bool IsMagical { get; private set; }
 
 		#endregion
 
@@ -209,9 +187,15 @@ namespace ItemSmithWorkShop.Items.Weapons
 			get { throw new NotImplementedException(); }
 		}
 
-		public int CostModifier
+		private double costModifier;
+		public double CostModifier
 		{
-			get { throw new NotImplementedException(); }
+			get { return costModifier; } 
+			private set
+			{
+				costModifier = value;
+				BaseEnhancementCost = value;
+			}
 		}
 
 		public string StandardDamageBonus
@@ -250,5 +234,61 @@ namespace ItemSmithWorkShop.Items.Weapons
 		}
 
 		#endregion
+	
+		public EnchantedMagicWeapon(IWeapon weapon, List<IWeaponEnchantment> weaponEnchantments)
+		{
+			enchantments = new List<IWeaponEnchantment>();
+
+			plusWeapon = QualifyWeapon(weapon);
+			enchantments.AddRange(weaponEnchantments);
+
+			WeaponName = plusWeapon.WeaponName;
+			GivenName = plusWeapon.GivenName;
+			Proficiency = plusWeapon.Proficiency;
+			WeaponUse = plusWeapon.WeaponUse;
+			WeaponCategory = plusWeapon.WeaponCategory;
+			WeaponSubCategory = plusWeapon.WeaponSubCategory;
+			WeaponSize = plusWeapon.WeaponSize;
+			WeaponCost = plusWeapon.WeaponCost;
+			Damage = plusWeapon.Damage;
+			ThreatRangeLowerBound = plusWeapon.ThreatRangeLowerBound;
+			
+			PlusEnhancement = plusWeapon.PlusEnhancement;
+			CostModifier = TallyCostModifiers();
+			ThreatRange = CalculateThreatRange();
+		}
+
+		private PlusEnhancedWeapon QualifyWeapon(IWeapon weapon)
+		{
+			if (!weapon.IsMagical)
+			{
+				return new PlusEnhancedWeapon(weapon, 1);
+			}
+			return weapon as PlusEnhancedWeapon;
+		}
+
+		private double TallyCostModifiers()
+		{
+			return (from enchantment in enchantments select enchantment.CostModifier).ToList().Sum() + PlusEnhancement;
+		}
+
+		private string CalculateThreatRange()
+		{
+			string keen = "Keen";
+			bool isKeen = (from enchantment in enchantments select enchantment.EnchantmentName).ToList().Contains(keen);
+			if (isKeen)
+			{
+				// Crit Upper Bound = 20;
+				double upperBound = 20;
+				// spread = upperBound - lowerBound; ex. 1 = 20 - 19
+				double spread = upperBound - ThreatRangeLowerBound;
+				// keenSpread = (spread + 1) * 2; 4 = (1 + 1) * 2
+				double keenSpread = (spread + 1) * 2;
+				// modifiedLowerBound = 21 - keenSpread
+				double modifiedLowerBound = 21 - keenSpread;
+				return string.Format("{0}-20", modifiedLowerBound);
+			}
+			return string.Format("{0}-20", ThreatRangeLowerBound);
+		}
 	}
 }

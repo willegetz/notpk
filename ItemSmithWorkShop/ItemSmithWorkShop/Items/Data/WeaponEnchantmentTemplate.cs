@@ -22,8 +22,8 @@ namespace ItemSmithWorkShop.Items.Data
 			private set { affix = value; }
 		}
 
-		public int costModifier;
-		public int CostModifier
+		public double costModifier;
+		public double CostModifier
 		{
 			get { return costModifier; }
 			private set { costModifier = value; }

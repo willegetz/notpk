@@ -7,6 +7,6 @@ namespace ItemSmithWorkShop.Items.Interfaces
 {
 	interface IEnchantedMagicWeapon : IPlusEnhancedWeapon, IWeaponEnchantment
 	{
-
+		
 	}
 }
