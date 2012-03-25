@@ -57,7 +57,11 @@
     <Compile Include="AdventureItems\ExtraordinaryWeaponUtilities\ExtraordinaryQualityWeapon.cs" />
     <Compile Include="AdventureItems\ExtraordinaryWeaponUtilities\MaterialComponentOrder.cs" />
     <Compile Include="AdventureItems\Interfaces\ILineItems.cs" />
+    <Compile Include="Items\Interfaces\IEnchantedMagicWeapon.cs" />
+    <Compile Include="Items\Interfaces\IForgedWeapon.cs" />
+    <Compile Include="Items\Interfaces\IPlusEnhancedWeapon.cs" />
     <Compile Include="Items\MaterialTypes\AlchemicalSilver.cs" />
+    <Compile Include="Items\Weapons\EnchantedMagicWeapon.cs" />
     <Compile Include="Items\Weapons\ForgedWeapon.cs" />
     <Compile Include="Items\Weapons\PlusEnhancedWeapon.cs" />
     <Compile Include="ItemTicket.cs" />

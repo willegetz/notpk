@@ -10,7 +10,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 	// A forged weapon needs to keep track of its weapon attributes.
 	// A forged weapon also needs to keep track of its material component parts.
 	// 
-	public class ForgedWeapon : IWeapon
+	public class ForgedWeapon : IForgedWeapon
 	{
 		public string GivenName { get; private set; }
 

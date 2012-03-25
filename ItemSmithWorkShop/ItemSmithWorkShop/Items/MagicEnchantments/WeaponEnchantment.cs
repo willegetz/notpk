@@ -34,7 +34,7 @@ namespace ItemSmithWorkShop.Items.MagicEnchantments
 		public bool CriticalDamageBonus { get; private set; }
 		public string DamageType { get; private set; }
 		public string MagicAura { get; private set; }
-		public int MinimumCasterLevel { get; private set; }
+		public double MinimumCasterLevel { get; private set; }
 		public double RangeIncrementModifier { get; private set; }
 		public string RequiredFeats { get; private set; }
 		public string RequiredSpells { get; private set; }
