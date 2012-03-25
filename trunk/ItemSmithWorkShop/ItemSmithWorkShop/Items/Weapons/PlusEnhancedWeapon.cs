@@ -7,7 +7,7 @@ using ItemSmithWorkShop.Items.MaterialTypes;
 
 namespace ItemSmithWorkShop.Items.Weapons
 {
-	public class PlusEnchantedWeapon : IWeapon
+	public class PlusEnhancedWeapon : IWeapon
 	{
 		// In addition to the weapon and forged weapon properties A PlusEnchantedWeapon has
 		//		A Plus to attack and damage
@@ -173,7 +173,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			} 
 		}
 
-		public PlusEnchantedWeapon(IWeapon weapon, double plusEnhancement)
+		public PlusEnhancedWeapon(IWeapon weapon, double plusEnhancement)
 		{
 			forgedWeapon = QualifyWeapon(weapon);
 			PlusEnhancement = ValidatePlusEnhancement(plusEnhancement);

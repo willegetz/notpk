@@ -59,7 +59,7 @@
     <Compile Include="AdventureItems\Interfaces\ILineItems.cs" />
     <Compile Include="Items\MaterialTypes\AlchemicalSilver.cs" />
     <Compile Include="Items\Weapons\ForgedWeapon.cs" />
-    <Compile Include="Items\Weapons\PlusEnchantedWeapon.cs" />
+    <Compile Include="Items\Weapons\PlusEnhancedWeapon.cs" />
     <Compile Include="ItemTicket.cs" />
     <Compile Include="Tests\LineItemTests\CombinedTicketTests.cs" />
     <Compile Include="Tests\LineItemTests\MaterialIngotTests.cs" />
