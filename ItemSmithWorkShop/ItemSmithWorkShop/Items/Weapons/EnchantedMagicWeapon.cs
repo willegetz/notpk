@@ -143,7 +143,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 		private double costModifier;
 		public double CostModifier
 		{
-			get { return costModifier; } 
+			get { return costModifier; }
 			private set
 			{
 				costModifier = value;
@@ -153,17 +153,41 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public string StandardDamageBonus
 		{
-			get { throw new NotImplementedException(); }
+			get 
+			{
+				var damageBonusList = new StringBuilder();
+				
+				var damageBonusGroup = (from enchantment in enchantments
+										where !string.IsNullOrEmpty(enchantment.StandardDamageBonus)
+										select enchantment).ToList();
+				
+				var count = damageBonusGroup.Count;
+				
+				while (count > 0)
+				{
+					foreach (var bonus in damageBonusGroup) 
+					{
+						damageBonusList.Append(string.Format(" +{0} ({1})", bonus.StandardDamageBonus, bonus.DamageType));
+						count--;
+					}
+					
+				}
+				return damageBonusList.ToString();
+			}
 		}
 
-		public bool CriticalDamageBonus
+		public bool DoesCriticalDamage
 		{
 			get { throw new NotImplementedException(); }
 		}
 
 		public double ThreatRangeModifier
 		{
-			get { throw new NotImplementedException(); }
+			get
+			{
+				return (from enchantment in enchantments
+						select enchantment.ThreatRangeModifier).ToList().Max();
+			}
 		}
 
 		public double RangeIncrementModifier
@@ -187,7 +211,28 @@ namespace ItemSmithWorkShop.Items.Weapons
 		}
 
 		#endregion
-	
+
+		// Non interface related properties
+		public List<IWeaponEnchantment> prefixes
+		{
+			get
+			{
+				return (from enchantment in enchantments
+						where enchantment.Affix.Contains("Pre")
+						select enchantment).ToList();
+			}
+		}
+
+		public List<IWeaponEnchantment> suffixes
+		{
+			get
+			{
+				return (from enchantment in enchantments
+						where enchantment.Affix.Contains("Suf")
+						select enchantment).ToList();
+			}
+		}
+
 		public EnchantedMagicWeapon(IWeapon weapon, List<IWeaponEnchantment> weaponEnchantments)
 		{
 			enchantments = new List<IWeaponEnchantment>();
@@ -252,12 +297,9 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		private string CalculateThreatRange()
 		{
-			var threatModifer = (from enchantment in enchantments
-								 select enchantment.ThreatRangeModifier).ToList().Max();
-
-			if (threatModifer != 0)
+			if (ThreatRangeModifier != 0)
 			{
-				var newLowerBound = 21 - (((20 - ThreatRangeLowerBound) + 1) * threatModifer);
+				var newLowerBound = 21 - (((20 - ThreatRangeLowerBound) + 1) * ThreatRangeModifier);
 				return string.Format("{0}-20", newLowerBound);
 			}
 	

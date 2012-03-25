@@ -12,7 +12,7 @@ namespace ItemSmithWorkShop.Items.Interfaces
 		double CostModifier { get; }
 		string WeaponUse { get; }
 		string StandardDamageBonus { get; }
-		bool CriticalDamageBonus { get; }
+		bool DoesCriticalDamage { get; }
 		double ThreatRangeModifier { get; }
 		string DamageType { get; }
 		string MagicAura { get; }
