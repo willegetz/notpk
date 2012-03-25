@@ -58,7 +58,7 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			var distance = new WeaponEnchantment("Distance");
 			List<IWeaponEnchantment> enchantments = new List<IWeaponEnchantment>() { flamingBurst, anarchic, keen, };
 			var flamingBurstDagger = new EnchantedMagicWeapon(plusWeapon, enchantments);
-			var sb = new StringBuilder(string.Format("Bonuses to Damage:{1}{0}Bonuses to Critical Hits:{2}", Environment.NewLine, flamingBurstDagger.StandardDamageBonus, flamingBurstDagger.CriticalDamageBonus));
+			var sb = new StringBuilder(string.Format("{0}", flamingBurstDagger.RequiredSpells));
 			Approvals.Verify(sb.ToString());
 		}
 
