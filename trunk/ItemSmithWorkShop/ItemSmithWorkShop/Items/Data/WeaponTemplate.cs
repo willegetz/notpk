@@ -148,6 +148,8 @@ namespace ItemSmithWorkShop.Items.Data
 			private set { hitPoints = value; }
 		}
 
+		public bool IsMagical { get { return false; } }
+
 		public WeaponTemplate()
 		{
 			Proficiency = proficiency;

@@ -27,7 +27,7 @@ namespace ItemSmithWorkShop.Items.MagicEnchantments
 
 		public string EnchantmentName { get; private set; }
 		public string Affix { get; private set; }
-		public int CostModifier { get; private set; }
+		public double CostModifier { get; private set; }
 		public string WeaponUse { get; private set; }
 		public string StandardDamageBonus { get; private set; }
 		public double ThreatRangeModifier { get; private set; }

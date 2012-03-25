@@ -9,7 +9,7 @@ namespace ItemSmithWorkShop.Items.Interfaces
 	{
 		string EnchantmentName { get; }
 		string Affix { get; }
-		int CostModifier { get; }
+		double CostModifier { get; }
 		string WeaponUse { get; }
 		string StandardDamageBonus { get; }
 		bool CriticalDamageBonus { get; }

@@ -47,7 +47,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			{
 				return baseEnhancementCost;
 			}
-			set
+			private set
 			{
 				baseEnhancementCost = (Math.Pow(value, 2) * enhancementCostMultiplier);
 			}
@@ -99,6 +99,8 @@ namespace ItemSmithWorkShop.Items.Weapons
 		public string SpecialInfo { get; private set; }
 
 		public bool IsMasterwork { get; private set; }
+
+		public bool IsMagical { get { return true; } }
 
 		public double RangeIncrement { get; private set; }
 
@@ -173,6 +175,8 @@ namespace ItemSmithWorkShop.Items.Weapons
 			} 
 		}
 
+		public double TotalCost { get; private set; }
+
 		public PlusEnhancedWeapon(IWeapon weapon, double plusEnhancement)
 		{
 			forgedWeapon = QualifyWeapon(weapon);
@@ -190,10 +194,10 @@ namespace ItemSmithWorkShop.Items.Weapons
 			WeaponSubCategory = forgedWeapon.WeaponSubCategory;
 			WeaponSize = forgedWeapon.WeaponSize;
 			AdditionalEnchantmentCost = forgedWeapon.AdditionalEnchantmentCost;
-			WeaponCost = CalculateWeaponCost();
+			WeaponCost = forgedWeapon.WeaponCost;
 			ToHitModifier = string.Format("+{0}", PlusEnhancement);
 			Damage = forgedWeapon.Damage;
-			DamageBonus = (forgedWeapon.DamageBonus + PlusEnhancement);
+			DamageBonus = forgedWeapon.DamageBonus;
 			ThreatRangeLowerBound = forgedWeapon.ThreatRangeLowerBound;
 			ThreatRange = forgedWeapon.ThreatRange;
 			CriticalDamage = forgedWeapon.CriticalDamage;
@@ -208,6 +212,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 			// Creation
 			MinimumCasterLevel = PlusEnhancement;
+			TotalCost = CalculateWeaponCost();
 		}
 
 		private ForgedWeapon QualifyWeapon(IWeapon weapon)
@@ -280,13 +285,14 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		private string DisplayDamage()
 		{
-			if (DamageBonus < 0)
+			double modifiedDamage = DamageBonus + PlusEnhancement;
+			if (modifiedDamage < 0)
 			{
-				return string.Format("{0} {1}", Damage, DamageBonus);
+				return string.Format("{0} {1}", Damage, modifiedDamage);
 			}
-			else if (DamageBonus > 0)
+			else if (modifiedDamage > 0)
 			{
-				return string.Format("{0} +{1}", Damage, DamageBonus);
+				return string.Format("{0} +{1}", Damage, modifiedDamage);
 			}
 			return Damage;
 		}
@@ -303,17 +309,18 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public override string ToString()
 		{
-			return string.Format("Given Name: '{1}'{0}Special Components: '{2}'{0}Weapon Name: '{3}'{0}This Weapon is Masterwork Quality: '{4}'{0}Weaopn Proficiency: '{5}'{0}Weapon Category: '{6}, {7}'{0}Weapon Size: '{8}'{0}Weapon Cost: '{9} gold pieces'{0}Extra Cost When Made Magical: '{10} gold pieces'{0}To Hit Bonus: '{11}'{0}Damage: '{12} [{13}/{14}] {15}'{0}Range Increment: '{16} feet [{17} feet max]'{0}Weight: '{18} pounds'{0}Hardness: '{19}'{0}Hit Points: '{20}'{0}Special: {21}{0}{0}Creation Requirements{0}Required Feats: '{22}'{0}Minimum Caster Level: '{23}'{0}Creation Time: '{24} days'{0}Raw Material Cost: '{25} gold pieces'{0}Experience Point Cost: '{26} xp'{0}Magic Aura: '{27}'{0}Light Generation: {28}",
+			return string.Format("Given Name: '{1}'{0}Special Components: '{2}'{0}Weapon Name: '{3}'{0}This Weapon is Masterwork Quality: '{4}'{0}This Weapon is Magical :'{5}'{0}Weaopn Proficiency: '{6}'{0}Weapon Category: '{7}, {8}'{0}Weapon Size: '{9}'{0}Weapon Cost: '{10} gold pieces'{0}Extra Cost When Made Magical: '{11} gold pieces'{0}To Hit Bonus: '{12}'{0}Damage: '{13} [{14}/{15}] {16}'{0}Range Increment: '{17} feet [{18} feet max]'{0}Weight: '{19} pounds'{0}Hardness: '{20}'{0}Hit Points: '{21}'{0}Special: {22}{0}{0}Creation Requirements{0}Required Feats: '{23}'{0}Minimum Caster Level: '{24}'{0}Creation Time: '{25} days'{0}Raw Material Cost: '{26} gold pieces'{0}Experience Point Cost: '{27} xp'{0}Magic Aura: '{28}'{0}Light Generation: {29}",
 								Environment.NewLine,
 								GivenName,
 								ComponentName,
 								WeaponName,
 								IsMasterwork,
+								IsMagical,
 								Proficiency,
 								WeaponCategory,
 								WeaponSubCategory,
 								WeaponSize,
-								WeaponCost,
+								TotalCost,
 								AdditionalEnchantmentCost,
 								ToHitModifier,
 								DisplayDamage(),
