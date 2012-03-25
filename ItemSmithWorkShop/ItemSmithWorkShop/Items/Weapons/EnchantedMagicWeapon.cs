@@ -193,15 +193,16 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public double RangeIncrementModifier
 		{
-			get { throw new NotImplementedException(); }
+			get
+			{
+				return (from enchantment in enchantments
+						select enchantment.RangeIncrementModifier).ToList().Max();
+			}
 		}
 
 		public string RequiredSpells { get; private set; }
 
-		public string AdditionalRequirements
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public string AdditionalRequirements { get; private set; }
 
 		public string EnchantmentNotes
 		{
@@ -233,6 +234,10 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public string CriticalDamageBonus { get; private set; }
 
+		public double ModifiedRangeIncrement { get; private set; }
+
+		public double ModifiedMaxRange { get; private set; }
+
 		public EnchantedMagicWeapon(IWeapon weapon, List<IWeaponEnchantment> weaponEnchantments)
 		{
 			enchantments = new List<IWeaponEnchantment>();
@@ -257,6 +262,8 @@ namespace ItemSmithWorkShop.Items.Weapons
 			Weight = plusWeapon.Weight;
 			Hardness = plusWeapon.Hardness;
 			HitPoints = plusWeapon.HitPoints;
+			RangeIncrement = plusWeapon.RangeIncrement;
+			MaxRange = plusWeapon.MaxRange;
 			
 			//IForgedWeapon
 			AdditionalEnchantmentCost = plusWeapon.AdditionalEnchantmentCost;
@@ -275,18 +282,17 @@ namespace ItemSmithWorkShop.Items.Weapons
 			//		IWeapon
 			CostModifier = TallyCostModifiers();
 			ThreatRange = CalculateThreatRange();
-			RangeIncrement = CalculateRangeModifier(plusWeapon.RangeIncrement);
-			MaxRange = CalculateRangeModifier(plusWeapon.MaxRange);
 			//		IPlusWeapon and IWeaponEnchantment
 			MinimumCasterLevel = DetermineMinimumCasterLevel(plusWeapon.MinimumCasterLevel);
 			MagicAura = AssembleAuras();
 			//		IWeaponEnchantment
 			RequiredSpells = AssembleRequiredSpells();
+			AdditionalRequirements = AssembleAdditionalRequirements();
 			//		Non interface implemented properties
+			ModifiedRangeIncrement = CalculateRangeModifier(plusWeapon.RangeIncrement);
+			ModifiedMaxRange = CalculateRangeModifier(plusWeapon.MaxRange);
 			CriticalDamageBonus = AssembleCriticalDamages();
 
-
-			
 			SpecialInfo = AppendSpecialInfo();
 		}
 
@@ -311,7 +317,8 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		private double TallyCostModifiers()
 		{
-			return (from enchantment in enchantments select enchantment.CostModifier).ToList().Sum() + PlusEnhancement;
+			return (from enchantment in enchantments 
+					select enchantment.CostModifier).ToList().Sum() + PlusEnhancement;
 		}
 
 		private string CalculateThreatRange()
@@ -327,12 +334,9 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		private double CalculateRangeModifier(double range)
 		{
-			var incrementModifier = (from enchantment in enchantments
-									 select enchantment.RangeIncrementModifier).ToList().Max();
-
-			if (incrementModifier != 0)
+			if (RangeIncrementModifier != 0)
 			{
-				return range * incrementModifier;
+				return range * RangeIncrementModifier;
 			}
 			return range;
 		}
@@ -340,13 +344,10 @@ namespace ItemSmithWorkShop.Items.Weapons
 		private double DetermineMinimumCasterLevel(double enhancementCasterLevel)
 		{
 			var minimumEnchantmentCasterLevel = (from enchantment in enchantments
-												 select enchantment.MinimumCasterLevel).ToList().Max();
+												 select enchantment.MinimumCasterLevel).ToList();
+			minimumEnchantmentCasterLevel.Add(enhancementCasterLevel);
 
-			if (enhancementCasterLevel > minimumEnchantmentCasterLevel)
-			{
-				return enhancementCasterLevel;
-			}
-			return minimumEnchantmentCasterLevel;
+			return minimumEnchantmentCasterLevel.Max();
 		}
 
 		private string AssembleAuras()
@@ -366,17 +367,11 @@ namespace ItemSmithWorkShop.Items.Weapons
 			var requiredSpellsList = (from enchantment in enchantments
 									 where !string.IsNullOrEmpty(enchantment.RequiredSpells)
 									 select enchantment).ToList();
-			var requiredSpellCount = requiredSpellsList.Count();
 			
 			enchantmentSpells.AppendLine("Required Spells");
-
-			while (requiredSpellCount > 0)
+			foreach (var requiredSpell in requiredSpellsList)
 			{
-				foreach (var requiredSpell in requiredSpellsList)
-				{
-					enchantmentSpells.AppendLine(string.Format("{0}{1}: {2}", "\t", requiredSpell.EnchantmentName, requiredSpell.RequiredSpells));
-					requiredSpellCount--;
-				}
+				enchantmentSpells.AppendLine(string.Format("{0}{1}: {2}", "\t", requiredSpell.EnchantmentName, requiredSpell.RequiredSpells));
 			}
 			return enchantmentSpells.ToString();
 		}
@@ -388,20 +383,28 @@ namespace ItemSmithWorkShop.Items.Weapons
 			var critDamages = (from enchantment in enchantments
 							   where enchantment.DoesCriticalDamage == true
 							   select enchantment).ToList();
-			var critDamagesCount = critDamages.Count();
 
 			string critDamageBonus = criticalDamages[plusWeapon.CriticalDamage];
-			
-			while (critDamagesCount > 0)
+			foreach (var damgeBonus in critDamages)
 			{
-				foreach (var damgeBonus in critDamages)
-				{
-					critDamageList.Append(string.Format(" {0} ({1})", critDamageBonus, damgeBonus.DamageType));
-					critDamagesCount--;
-				}
+				critDamageList.Append(string.Format(" {0} ({1})", critDamageBonus, damgeBonus.DamageType));
 			}
-
 			return critDamageList.ToString();
+		}
+
+		private string AssembleAdditionalRequirements()
+		{
+			var additionalRequirementsCollection = new StringBuilder();
+			var requirements = (from enchantment in enchantments
+								where !string.IsNullOrEmpty(enchantment.AdditionalRequirements)
+								select enchantment).ToList();
+
+			additionalRequirementsCollection.AppendLine("Additional Creation Requirements");
+			foreach (var requirement in requirements)
+			{
+				additionalRequirementsCollection.AppendLine(string.Format("{0}{1}: {2}", "\t", requirement.EnchantmentName, requirement.AdditionalRequirements));
+			}
+			return additionalRequirementsCollection.ToString();
 		}
 
 		private string AppendSpecialInfo()

@@ -56,9 +56,9 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			var keen = new WeaponEnchantment("Keen");
 			var anarchic = new WeaponEnchantment("Anarchic");
 			var distance = new WeaponEnchantment("Distance");
-			List<IWeaponEnchantment> enchantments = new List<IWeaponEnchantment>() { flamingBurst, anarchic, keen, };
+			List<IWeaponEnchantment> enchantments = new List<IWeaponEnchantment>() { flamingBurst, anarchic, keen, distance,};
 			var flamingBurstDagger = new EnchantedMagicWeapon(plusWeapon, enchantments);
-			var sb = new StringBuilder(string.Format("{0}", flamingBurstDagger.RequiredSpells));
+			var sb = new StringBuilder(string.Format("Min. Caster Lvl: {0}", flamingBurstDagger.MinimumCasterLevel));
 			Approvals.Verify(sb.ToString());
 		}
 
