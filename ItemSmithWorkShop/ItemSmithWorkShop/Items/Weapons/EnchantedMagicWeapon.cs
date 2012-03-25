@@ -68,25 +68,13 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		#region IForgedWeapon Members
 
-		public double AdditionalEnchantmentCost
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public double AdditionalEnchantmentCost { get; private set; }
 
-		public string ToHitModifier
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public string ToHitModifier { get; private set; }
 
-		public double DamageBonus
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public double DamageBonus { get; private set; }
 
-		public string ComponentName
-		{
-			get { throw new NotImplementedException(); }
-		}
+		public string ComponentName { get; private set; }
 
 		#endregion
 
@@ -215,6 +203,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			plusWeapon = QualifyWeapon(weapon);
 			enchantments.AddRange(weaponEnchantments);
 
+			// IWeapon
 			WeaponName = plusWeapon.WeaponName;
 			GivenName = plusWeapon.GivenName;
 			Proficiency = plusWeapon.Proficiency;
@@ -231,7 +220,18 @@ namespace ItemSmithWorkShop.Items.Weapons
 			Hardness = plusWeapon.Hardness;
 			HitPoints = plusWeapon.HitPoints;
 			
+			//IForgedWeapon
+			AdditionalEnchantmentCost = plusWeapon.AdditionalEnchantmentCost;
+			ToHitModifier = plusWeapon.ToHitModifier;
+			DamageBonus = plusWeapon.DamageBonus;
+			ComponentName = plusWeapon.ComponentName;
+
+			//IPlusEnhancedWeapon
 			PlusEnhancement = plusWeapon.PlusEnhancement;
+
+			//IWeaponEnhancement
+
+			// Properties needing method assignments
 			CostModifier = TallyCostModifiers();
 			ThreatRange = CalculateThreatRange();
 			RangeIncrement = CalculateRangeModifier(plusWeapon.RangeIncrement);
