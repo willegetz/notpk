@@ -90,7 +90,12 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public double Weight { get; private set; }
 
-		public string DamageType { get; private set; }
+		private string damageType;
+		public string DamageType
+		{
+			get { return string.Format("{0}, Magic", damageType); }
+			private set { damageType = value; }
+		}
 
 		public double Hardness { get; private set; }
 
@@ -186,7 +191,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			BaseItemCost = forgedWeapon.WeaponCost;
 
 			GivenName = forgedWeapon.GivenName;
-			WeaponName = BuildName();
+			WeaponName = TrimMasterworkFromName();
 			ComponentName = forgedWeapon.ComponentName;
 			Proficiency = forgedWeapon.Proficiency;
 			WeaponUse = forgedWeapon.WeaponUse;
@@ -244,10 +249,10 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		private string BuildName()
 		{
-			return string.Format("+{0} {1}", PlusEnhancement, TrimComponentName());
+			return string.Format("+{0} {1}", PlusEnhancement, WeaponName);
 		}
 
-		private string TrimComponentName()
+		private string TrimMasterworkFromName()
 		{
 			string masterwork = "Masterwork ";
 			if (forgedWeapon.WeaponName.Contains(masterwork))
@@ -313,7 +318,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 								Environment.NewLine,
 								GivenName,
 								ComponentName,
-								WeaponName,
+								BuildName(),
 								IsMasterwork,
 								IsMagical,
 								Proficiency,
