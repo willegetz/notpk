@@ -416,5 +416,17 @@ namespace ItemSmithWorkShop.Items.Weapons
 			}
 			return string.Format("{1}{0}{2}", Environment.NewLine, plusWeapon.SpecialInfo, notesCollection);
 		}
+
+		public override string ToString()
+		{
+			var displayWeapon = new StringBuilder();
+			// Given Name; "Doom's Dagger!"
+			// Weapon Name: +n Prefix Dagger Suffix
+			// Total Plus: +n for enhancement, +n for Prefix, +n for Suffix
+			// Weapon Cost: xk gold pieces
+			// To Hit: +n
+			// Damage: Base Damage +n enhancement +n damage type [Threat range/crit mod] +n crit bonus damage type, constant damage types
+			return base.ToString();
+		}
 	}
 }
