@@ -18,6 +18,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 		private PlusEnhancedWeapon plusWeapon;
 
 		private List<IWeaponEnchantment> enchantments;
+		private Dictionary<string, string> criticalDamages;
 
 		private double enhancementCostMultiplier = 2000;
 		private double creationDaysMultiplier = 0.001;
@@ -233,9 +234,12 @@ namespace ItemSmithWorkShop.Items.Weapons
 			}
 		}
 
+		public string CriticalDamageBonus { get; private set; }
+
 		public EnchantedMagicWeapon(IWeapon weapon, List<IWeaponEnchantment> weaponEnchantments)
 		{
 			enchantments = new List<IWeaponEnchantment>();
+			LoadCriticalDamageDictionary();
 
 			plusWeapon = QualifyWeapon(weapon);
 			enchantments.AddRange(weaponEnchantments);
@@ -277,8 +281,19 @@ namespace ItemSmithWorkShop.Items.Weapons
 			MaxRange = CalculateRangeModifier(plusWeapon.MaxRange);
 			MinimumCasterLevel = DetermineMinimumCasterLevel(plusWeapon.MinimumCasterLevel);
 			MagicAura = AssembleAuras();
+			CriticalDamageBonus = AssembleCriticalDamages();
 			
 			SpecialInfo = AppendSpecialInfo();
+		}
+
+		private void LoadCriticalDamageDictionary()
+		{
+			criticalDamages = new Dictionary<string, string>()
+			{
+						 {"x2", "+1d10"},
+						 {"x3", "+2d10"},
+						 {"x4", "+3d10"},
+			};
 		}
 
 		private PlusEnhancedWeapon QualifyWeapon(IWeapon weapon)
@@ -339,6 +354,29 @@ namespace ItemSmithWorkShop.Items.Weapons
 				auras.AppendLine(string.Format("{0}: {1}", enchantment.EnchantmentName, enchantment.MagicAura));
 			}
 			return auras.ToString();
+		}
+
+		private string AssembleCriticalDamages()
+		{
+			var critDamageList = new StringBuilder();
+
+			var critDamages = (from enchantment in enchantments
+							   where enchantment.DoesCriticalDamage == true
+							   select enchantment).ToList();
+			var critDamagesCount = critDamages.Count();
+
+			string critDamageBonus = criticalDamages[plusWeapon.CriticalDamage];
+			
+			while (critDamagesCount > 0)
+			{
+				foreach (var damgeBonus in critDamages)
+				{
+					critDamageList.Append(string.Format(" {0} ({1})", critDamageBonus, damgeBonus.DamageType));
+					critDamagesCount--;
+				}
+			}
+
+			return critDamageList.ToString();
 		}
 
 		private string AppendSpecialInfo()
