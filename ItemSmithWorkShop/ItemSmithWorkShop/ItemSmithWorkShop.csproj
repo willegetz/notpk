@@ -129,6 +129,9 @@
     <Content Include="Tests\LineItemTests\WeaponLineItemTests.TestGetWeaponItem.approved.txt">
       <DependentUpon>WeaponLineItemTests.cs</DependentUpon>
     </Content>
+    <Content Include="Tests\NewWeaponTests\EnhantedWeaponTests.TestKeenAnarchicFlamingBurstDagger.approved.txt">
+      <DependentUpon>EnhantedWeaponTests.cs</DependentUpon>
+    </Content>
     <Content Include="Tests\NewWeaponTests\EnhantedWeaponTests.TestPlusEnhancementWeapon.approved.txt">
       <DependentUpon>EnhantedWeaponTests.cs</DependentUpon>
     </Content>

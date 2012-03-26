@@ -51,15 +51,18 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 		[TestMethod]
 		public void TestKeenAnarchicFlamingBurstDagger()
 		{
-			var plusWeapon = new PlusEnhancedWeapon(new ForgedWeapon(new PhbWeapon("Dagger"), new Masterwork()), 5);
+			var plusWeapon = new PlusEnhancedWeapon(new ForgedWeapon(new PhbWeapon("Dagger"), new Masterwork()), 4);
+			plusWeapon.NameWeapon("Boring dagger");
 			var flamingBurst = new WeaponEnchantment("Flaming Burst");
 			var keen = new WeaponEnchantment("Keen");
 			var anarchic = new WeaponEnchantment("Anarchic");
 			var distance = new WeaponEnchantment("Distance");
-			List<IWeaponEnchantment> enchantments = new List<IWeaponEnchantment>() { flamingBurst, anarchic, keen, distance,};
+			plusWeapon.EnableLightGeneration();
+			List<IWeaponEnchantment> enchantments = new List<IWeaponEnchantment>() { anarchic, distance, flamingBurst, keen, };
 			var flamingBurstDagger = new EnchantedMagicWeapon(plusWeapon, enchantments);
+			flamingBurstDagger.NameWeapon("Totally Awesome Slashy Pokey Death from Far Far Away!");
 			var sb = new StringBuilder(string.Format("Min. Caster Lvl: {0}", flamingBurstDagger.MinimumCasterLevel));
-			Approvals.Verify(sb.ToString());
+			Approvals.Verify(flamingBurstDagger.ToString());
 		}
 
 		[Ignore]

@@ -116,7 +116,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			get { return baseEnhancementCost; }
 			private set
 			{
-				baseEnhancementCost = Math.Pow(costModifier, 2) * enhancementCostMultiplier;
+				baseEnhancementCost = Math.Pow(CostModifier, 2) * enhancementCostMultiplier;
 			}
 		}
 
@@ -208,7 +208,6 @@ namespace ItemSmithWorkShop.Items.Weapons
 		{
 			get { throw new NotImplementedException(); }
 		}
-
 		#endregion
 
 		// Non interface implemented properties
@@ -232,11 +231,53 @@ namespace ItemSmithWorkShop.Items.Weapons
 			}
 		}
 
-		public string CriticalDamageBonus { get; private set; }
+		public string CriticalDamageBonus
+		{ 
+			get
+			{
+				var critDamageList = new StringBuilder();
+
+				var critDamages = (from enchantment in enchantments
+								   where enchantment.DoesCriticalDamage == true
+								   select enchantment).ToList();
+
+				string critDamageBonus = criticalDamages[plusWeapon.CriticalDamage];
+				foreach (var damgeBonus in critDamages)
+				{
+					critDamageList.Append(string.Format(" {0} ({1})", critDamageBonus, damgeBonus.DamageType));
+				}
+				return critDamageList.ToString();
+			}
+		}
 
 		public double ModifiedRangeIncrement { get; private set; }
 
 		public double ModifiedMaxRange { get; private set; }
+
+		public double TotalCost
+		{
+			get
+			{
+				return WeaponCost + BaseEnhancementCost + AdditionalEnchantmentCost;
+			}
+		}
+
+		public string ModifiedDamage
+		{
+			get
+			{
+				var modifiedDamage = DamageBonus + PlusEnhancement;
+				if (modifiedDamage == 0)
+				{
+					return string.Empty;
+				}
+				else if (modifiedDamage > 0)
+				{
+					return string.Format(" +{0}", modifiedDamage);
+				}
+				return modifiedDamage.ToString();
+			}
+		}
 
 		public EnchantedMagicWeapon(IWeapon weapon, List<IWeaponEnchantment> weaponEnchantments)
 		{
@@ -291,7 +332,6 @@ namespace ItemSmithWorkShop.Items.Weapons
 			//		Non interface implemented properties
 			ModifiedRangeIncrement = CalculateRangeModifier(plusWeapon.RangeIncrement);
 			ModifiedMaxRange = CalculateRangeModifier(plusWeapon.MaxRange);
-			CriticalDamageBonus = AssembleCriticalDamages();
 
 			SpecialInfo = AppendSpecialInfo();
 		}
@@ -313,6 +353,11 @@ namespace ItemSmithWorkShop.Items.Weapons
 				return new PlusEnhancedWeapon(weapon, 1);
 			}
 			return weapon as PlusEnhancedWeapon;
+		}
+
+		public void NameWeapon(string givenName)
+		{
+			GivenName = givenName;
 		}
 
 		private double TallyCostModifiers()
@@ -353,10 +398,11 @@ namespace ItemSmithWorkShop.Items.Weapons
 		private string AssembleAuras()
 		{
 			var auras = new StringBuilder();
-			auras.AppendLine(string.Format("Enhancement: {0}", plusWeapon.MagicAura));
+			auras.AppendLine("Magic Auras");
+			auras.AppendLine(string.Format("{0}Enhancement: {1}", "\t", plusWeapon.MagicAura));
 			foreach (var enchantment in enchantments)
 			{
-				auras.AppendLine(string.Format("{0}: {1}", enchantment.EnchantmentName, enchantment.MagicAura));
+				auras.AppendLine(string.Format("{0}{1}: {2}", "\t", enchantment.EnchantmentName, enchantment.MagicAura));
 			}
 			return auras.ToString();
 		}
@@ -374,22 +420,6 @@ namespace ItemSmithWorkShop.Items.Weapons
 				enchantmentSpells.AppendLine(string.Format("{0}{1}: {2}", "\t", requiredSpell.EnchantmentName, requiredSpell.RequiredSpells));
 			}
 			return enchantmentSpells.ToString();
-		}
-
-		private string AssembleCriticalDamages()
-		{
-			var critDamageList = new StringBuilder();
-
-			var critDamages = (from enchantment in enchantments
-							   where enchantment.DoesCriticalDamage == true
-							   select enchantment).ToList();
-
-			string critDamageBonus = criticalDamages[plusWeapon.CriticalDamage];
-			foreach (var damgeBonus in critDamages)
-			{
-				critDamageList.Append(string.Format(" {0} ({1})", critDamageBonus, damgeBonus.DamageType));
-			}
-			return critDamageList.ToString();
 		}
 
 		private string AssembleAdditionalRequirements()
@@ -414,19 +444,126 @@ namespace ItemSmithWorkShop.Items.Weapons
 			{
 				notesCollection.AppendLine(string.Format("{0}: {1}", enchantment.EnchantmentName, enchantment.EnchantmentNotes));
 			}
-			return string.Format("{1}{0}{2}", Environment.NewLine, plusWeapon.SpecialInfo, notesCollection);
+			return string.Format("{1}{0}{0}Enchantment Information{0}{2}", Environment.NewLine, plusWeapon.SpecialInfo, notesCollection);
+		}
+
+		private string BuildWeaponName()
+		{
+			var name = new StringBuilder();
+			
+			var prefixes = BuildPrefixes();
+			var suffixes = BuildSuffixes();
+			
+			name.Append(string.Format("+{0}{1}{2}{3}", PlusEnhancement, prefixes, WeaponName, suffixes));
+			return name.ToString();
+		}
+
+		private string BuildPrefixes()
+		{
+			var prefixList = (from enchantment in enchantments
+							  where enchantment.Affix.Contains("Pre")
+							  select enchantment).ToList();
+			var prefixCount = prefixList.Count();
+			var prefixes = new StringBuilder();
+
+			foreach (var prefix in prefixList)
+			{
+				if (prefixCount > 1)
+				{
+					prefixes.Append(string.Format(" {0},", prefix.EnchantmentName));
+					prefixCount--;
+				}
+				else
+				{
+					prefixes.Append(string.Format(" {0} ", prefix.EnchantmentName));
+				}
+			}
+			return prefixes.ToString();
+		}
+
+		private string BuildSuffixes()
+		{
+			var suffixList = (from enchantment in enchantments
+							  where enchantment.Affix.Contains("Suf")
+							  select enchantment).ToList();
+			var suffixCount = suffixList.Count();
+			var suffixes = new StringBuilder();
+			foreach (var suffix in suffixList)
+			{
+				if (suffixCount > 0)
+				{
+					suffixes.Append(string.Format(" of {0}", suffix.EnchantmentName));
+					suffixCount--;
+				}
+			}
+			return suffixes.ToString();
+		}
+
+		private string BuildEnhancementBreakdown()
+		{
+			var breakdown = new StringBuilder();
+			var enchantmentCount = enchantments.Count();
+			breakdown.Append(string.Format("+{0} [", CostModifier));
+			breakdown.Append(string.Format("+{0} for Plus Enhancement,", PlusEnhancement));
+
+			foreach (var enchantment in enchantments)
+			{
+				if (enchantmentCount > 1)
+				{
+					breakdown.Append(string.Format(" +{0} for {1},", enchantment.CostModifier, enchantment.EnchantmentName));
+					enchantmentCount--;
+				}
+				else
+				{
+					breakdown.Append(string.Format(" +{0} for {1}]", enchantment.CostModifier, enchantment.EnchantmentName));
+				}
+			}
+
+			return breakdown.ToString();
+		}
+
+		private string BuildDamageOutput()
+		{
+			return string.Format("{0}{1}{2} [{3}/{4}]{5}, {6}", Damage, ModifiedDamage, StandardDamageBonus, ThreatRange, CriticalDamage, CriticalDamageBonus, DamageType);
+		}
+
+		private string BuildRangeInfo()
+		{
+			if (RangeIncrementModifier != 1)
+			{
+				return string.Format("{0} foot increment (was {1} foot increment) for {2} total feet (was {3} total feet)", ModifiedRangeIncrement, RangeIncrement, ModifiedMaxRange, MaxRange);
+			}
+			return string.Format("{0} foot increment for {1} total feet", RangeIncrement, MaxRange);
 		}
 
 		public override string ToString()
 		{
 			var displayWeapon = new StringBuilder();
-			// Given Name; "Doom's Dagger!"
-			// Weapon Name: +n Prefix Dagger Suffix
-			// Total Plus: +n for enhancement, +n for Prefix, +n for Suffix
-			// Weapon Cost: xk gold pieces
-			// To Hit: +n
-			// Damage: Base Damage +n enhancement +n damage type [Threat range/crit mod] +n crit bonus damage type, constant damage types
-			return base.ToString();
+			displayWeapon.AppendLine(string.Format("Given Name: {0}", GivenName));
+			displayWeapon.AppendLine(string.Format("Weapon: {0}", BuildWeaponName()));
+			displayWeapon.AppendLine(string.Format("Weapon Size: {0}", WeaponSize));
+			displayWeapon.AppendLine(string.Format("Enhancement Total: {0}", BuildEnhancementBreakdown()));
+			displayWeapon.AppendLine(string.Format("Weapon Cost: {0} gold pieces", TotalCost));
+			displayWeapon.AppendLine(string.Format("To Hit: +{0}", PlusEnhancement));
+			displayWeapon.AppendLine(string.Format("Standard Damage: {0}", BuildDamageOutput()));
+			displayWeapon.AppendLine(string.Format("Range: {0}", BuildRangeInfo()));
+			displayWeapon.AppendLine(string.Format("Weight: {0} pound(s)", Weight));
+			displayWeapon.AppendLine(string.Format("Hardness: {0}", Hardness));
+			displayWeapon.AppendLine(string.Format("Hit Points: {0}", HitPoints));
+			displayWeapon.AppendLine();
+			displayWeapon.AppendLine("Special Information");
+			displayWeapon.Append(SpecialInfo);
+			displayWeapon.AppendLine(GeneratesLight);
+			displayWeapon.AppendLine();
+			displayWeapon.AppendLine("Creation Information");
+			displayWeapon.AppendLine(string.Format("Required Feats: {0}", RequiredFeats));
+			displayWeapon.AppendLine(string.Format("Minimum Caster Level: {0}", MinimumCasterLevel));
+			displayWeapon.Append(RequiredSpells);
+			displayWeapon.Append(MagicAura);
+			displayWeapon.AppendLine(string.Format("Material Cost: {0} gp", RawMaterialCost));
+			displayWeapon.AppendLine(string.Format("Experience Cost: {0} xp", CreationXpCost));
+			displayWeapon.AppendLine(string.Format("Time Cost: {0} days", CreationTime));
+			return displayWeapon.ToString();
 		}
 	}
 }
