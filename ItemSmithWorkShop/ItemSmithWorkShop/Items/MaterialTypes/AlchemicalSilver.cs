@@ -72,6 +72,15 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 			return ToHitBonus;
 		}
 
+		public double ApplyDamageModifier(IWeapon weapon)
+		{
+			if (weapon.IsBow)
+			{
+				return 0;
+			}
+			return DamageBonus;
+		}
+
 		public bool VerifyMasterwork(IWeapon weapon)
 		{
 			return IsMasterwork;

@@ -62,6 +62,8 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public double AdditionalEnchantmentCost { get; private set; }
 
+		public bool IsBow { get; private set; }
+
 		// These two constructors are indicative of a needed abstraction.
 		public ForgedWeapon(IWeapon weapon, IMaterialComponent component)
 		{
@@ -81,13 +83,14 @@ namespace ItemSmithWorkShop.Items.Weapons
 			WeaponUse = weapon.WeaponUse;
 			Hardness = weapon.Hardness;
 			HitPoints = weapon.HitPoints;
+			IsBow = weapon.IsBow;
 
 			Weight = component.ApplyWeightModifer(weapon);
 			ToHitModifier = component.ApplyToHitModifier();
 			WeaponCost = component.ApplyCostModifier(weapon);
 			SpecialInfo = component.AppendSpecialInfo(weapon);
 			IsMasterwork = component.VerifyMasterwork(weapon);
-			DamageBonus = component.DamageBonus;
+			DamageBonus = component.ApplyDamageModifier(weapon);
 			ComponentName = component.ComponentName;
 			AdditionalEnchantmentCost = component.GetAdditionalEnchantmentCost();
 		}
@@ -137,13 +140,14 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public override string ToString()
 		{
-			return string.Format("Given Name: '{1}'{0}Special Components: '{2}'{0}Weapon Name: '{3}'{0}This Weapon is Masterwork Quality: '{4}'{0}Weaopn Proficiency: '{5}'{0}Weapon Category: '{6}, {7}'{0}Weapon Size: '{8}'{0}Weapon Cost: '{9}' gold pieces{0}Extra Cost When Made Magical: '{10}' gold pieces{0}To Hit Bonus: '{11}'{0}Damage: '{12}' [{13}/{14}] {15}{0}Range Increment: '{16} feet ['{17}' feet max]'{0}Weight: '{18} pounds'{0}Hardness: '{19}'{0}Hit Points: '{20}'{0}Special: {21}",
+			return string.Format("Given Name: '{1}'{0}Special Components: '{2}'{0}Weapon Name: '{3}'{0}This Weapon is Masterwork Quality: '{4}'{0}Weaopn Proficiency: '{5}'{0}Weapon Category: '{7} {6}, {8}'{0}Weapon Size: '{9}'{0}Weapon Cost: '{10}' gold pieces{0}Extra Cost When Made Magical: '{11}' gold pieces{0}To Hit Bonus: '{12}'{0}Damage: '{13}' [{14}/{15}] {16}{0}Range Increment: '{17} feet ['{18}' feet max]'{0}Weight: '{19} pounds'{0}Hardness: '{20}'{0}Hit Points: '{21}'{0}Special: {22}",
 									Environment.NewLine, 
 									GivenName, 
 									ComponentName, 
 									WeaponName,
 									IsMasterwork,
 									Proficiency,
+									WeaponUse,
 									WeaponCategory,
 									WeaponSubCategory,
 									WeaponSize,

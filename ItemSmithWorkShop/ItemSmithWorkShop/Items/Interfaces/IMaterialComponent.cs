@@ -17,6 +17,7 @@ namespace ItemSmithWorkShop.Items.Interfaces
 		double ApplyCostModifier(IWeapon weapon);
 		string AppendSpecialInfo(IWeapon weapon);
 		string ApplyToHitModifier();
+		double ApplyDamageModifier(IWeapon weaopn);
 
 		// These methods do not belong in all classes implementing IMaterialComponent
 		//		Cold Iron has an additional enchantment cost

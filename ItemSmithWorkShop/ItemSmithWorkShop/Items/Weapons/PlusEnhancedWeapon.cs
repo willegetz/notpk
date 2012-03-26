@@ -111,6 +111,8 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public double MaxRange { get; private set; }
 
+		public bool IsBow { get; private set; }
+
 		// Creation Properties
 
 		private double minimumCasterLevel;
@@ -214,6 +216,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			HitPoints = CalculateHitPoints();
 			SpecialInfo = forgedWeapon.SpecialInfo;
 			IsMasterwork = forgedWeapon.IsMasterwork;
+			IsBow = forgedWeapon.IsBow;
 
 			// Creation
 			MinimumCasterLevel = PlusEnhancement;
@@ -314,7 +317,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public override string ToString()
 		{
-			return string.Format("Given Name: '{1}'{0}Special Components: '{2}'{0}Weapon Name: '{3}'{0}This Weapon is Masterwork Quality: '{4}'{0}This Weapon is Magical :'{5}'{0}Weaopn Proficiency: '{6}'{0}Weapon Category: '{7}, {8}'{0}Weapon Size: '{9}'{0}Weapon Cost: '{10} gold pieces'{0}Extra Cost When Made Magical: '{11} gold pieces'{0}To Hit Bonus: '{12}'{0}Damage: '{13} [{14}/{15}] {16}'{0}Range Increment: '{17} feet [{18} feet max]'{0}Weight: '{19} pounds'{0}Hardness: '{20}'{0}Hit Points: '{21}'{0}Special: {22}{0}{0}Creation Requirements{0}Required Feats: '{23}'{0}Minimum Caster Level: '{24}'{0}Creation Time: '{25} days'{0}Raw Material Cost: '{26} gold pieces'{0}Experience Point Cost: '{27} xp'{0}Magic Aura: '{28}'{0}Light Generation: {29}",
+			return string.Format("Given Name: '{1}'{0}Special Components: '{2}'{0}Weapon Name: '{3}'{0}This Weapon is Masterwork Quality: '{4}'{0}This Weapon is Magical :'{5}'{0}Weaopn Proficiency: '{6}'{0}Weapon Category: '{7} {8}, {9}'{0}Weapon Size: '{10}'{0}Weapon Cost: '{11} gold pieces'{0}Extra Cost When Made Magical: '{12} gold pieces'{0}To Hit Bonus: '{13}'{0}Damage: '{14} [{15}/{16}] {17}'{0}Range Increment: '{18} feet [{19} feet max]'{0}Weight: '{20} pounds'{0}Hardness: '{21}'{0}Hit Points: '{22}'{0}Special: {23}{0}{0}Creation Requirements{0}Required Feats: '{24}'{0}Minimum Caster Level: '{25}'{0}Creation Time: '{26} days'{0}Raw Material Cost: '{27} gold pieces'{0}Experience Point Cost: '{28} xp'{0}Magic Aura: '{29}'{0}Light Generation: {30}",
 								Environment.NewLine,
 								GivenName,
 								ComponentName,
@@ -323,6 +326,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 								IsMagical,
 								Proficiency,
 								WeaponCategory,
+								WeaponUse,
 								WeaponSubCategory,
 								WeaponSize,
 								TotalCost,

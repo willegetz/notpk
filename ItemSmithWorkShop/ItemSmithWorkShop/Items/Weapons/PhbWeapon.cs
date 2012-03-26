@@ -88,6 +88,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 		public string GivenName { get; private set; }
 		public bool IsMasterwork { get { return false; } }
 		public bool IsMagical { get { return false; } }
+		public bool IsBow { get; private set; }
 
 		public PhbWeapon(string weaponKey)
 		{
@@ -109,6 +110,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			Hardness = weaponTemplate.Hardness;
 			HitPoints = weaponTemplate.HitPoints;
 			SpecialInfo = weaponTemplate.specialInfo;
+			IsBow = weaponTemplate.IsBow;
 		}
 
 		public void NameWeapon(string name)
@@ -119,10 +121,11 @@ namespace ItemSmithWorkShop.Items.Weapons
 		public override string ToString()
 		{
 			return string.Format
-				("Given Name: '{17}'{0}Weapon: '{1}'{0}Weapon Proficiency: '{2}'{0}Weapon Category: '{3}, {4}'{0}Weapon Size: '{5}'{0}Weapon Cost: '{6}' gp{0}Damage: '{7}' [{8}/{9}] {10}{0}Range Increment: '{11} feet ['{12}' feet max]'{0}Weight: '{13} pounds'{0}Hardness: '{14}'{0}Hit Points: '{15}'{0}Special: {16}",
+				("Given Name: '{17}'{0}Weapon: '{1}'{0}Weapon Proficiency: '{2}'{0}Weapon Category: '{4} {3}, {5}'{0}Weapon Size: '{6}'{0}Weapon Cost: '{7}' gp{0}Damage: '{8}' [{9}/{10}] {11}{0}Range Increment: '{12} feet ['{13}' feet max]'{0}Weight: '{14} pounds'{0}Hardness: '{15}'{0}Hit Points: '{16}'{0}Special: {17}",
 				Environment.NewLine, 
 				WeaponName, 
-				Proficiency, 
+				Proficiency,
+				WeaponUse,
 				WeaponCategory, 
 				WeaponSubCategory, 
 				WeaponSize, 

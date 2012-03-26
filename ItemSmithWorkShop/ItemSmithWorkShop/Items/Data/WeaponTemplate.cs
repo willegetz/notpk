@@ -150,6 +150,13 @@ namespace ItemSmithWorkShop.Items.Data
 
 		public bool IsMagical { get { return false; } }
 
+		public bool isBow;
+		public bool IsBow 
+		{
+			get { return isBow; }
+			private set { isBow = value; } 
+		}
+
 		public WeaponTemplate()
 		{
 			Proficiency = proficiency;
@@ -171,6 +178,7 @@ namespace ItemSmithWorkShop.Items.Data
 			SpecialInfo = specialInfo;
 			GivenName = givenName;
 			IsMasterwork = isMasterwork;
+			IsBow = isBow;
 		}
 	}
 }
