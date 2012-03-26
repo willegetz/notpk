@@ -26,6 +26,7 @@ namespace ItemSmithWorkShop.Items.Interfaces
 		double HitPoints { get; }
 		string SpecialInfo { get;}
 
+		bool IsBow { get; }
 		bool IsMasterwork { get; }
 		bool IsMagical { get; }
 

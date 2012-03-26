@@ -69,6 +69,8 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		public double MaxRange { get; private set; }
 
+		public bool IsBow { get; private set; }
+
 		#endregion
 
 		#region IForgedWeapon Members
@@ -305,6 +307,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			HitPoints = plusWeapon.HitPoints;
 			RangeIncrement = plusWeapon.RangeIncrement;
 			MaxRange = plusWeapon.MaxRange;
+			IsBow = plusWeapon.IsBow;
 			
 			//IForgedWeapon
 			AdditionalEnchantmentCost = plusWeapon.AdditionalEnchantmentCost;
@@ -536,12 +539,24 @@ namespace ItemSmithWorkShop.Items.Weapons
 			return string.Format("{0} foot increment for {1} total feet", RangeIncrement, MaxRange);
 		}
 
+		private string BuildType()
+		{
+			if (!string.IsNullOrEmpty(WeaponSubCategory))
+			{
+				return string.Format("{0} {1}, {2}", WeaponCategory, WeaponUse, WeaponSubCategory);
+			}
+			return string.Format("{0} {1}", WeaponCategory, WeaponUse);
+		}
+
 		public override string ToString()
 		{
 			var displayWeapon = new StringBuilder();
 			displayWeapon.AppendLine(string.Format("Given Name: {0}", GivenName));
 			displayWeapon.AppendLine(string.Format("Weapon: {0}", BuildWeaponName()));
+			displayWeapon.AppendLine(string.Format("Special Component(s): {0}", ComponentName));
 			displayWeapon.AppendLine(string.Format("Weapon Size: {0}", WeaponSize));
+			displayWeapon.AppendLine(string.Format("Proficiency: {0}", Proficiency));
+			displayWeapon.AppendLine(string.Format("Type: {0}", BuildType()));
 			displayWeapon.AppendLine(string.Format("Enhancement Total: {0}", BuildEnhancementBreakdown()));
 			displayWeapon.AppendLine(string.Format("Weapon Cost: {0} gold pieces", TotalCost));
 			displayWeapon.AppendLine(string.Format("To Hit: +{0}", PlusEnhancement));

@@ -81,5 +81,10 @@ namespace ItemSmithWorkShop.Items.MaterialTypes
 		{
 			return ToHitBonus;
 		}
+
+		public double ApplyDamageModifier(IWeapon weapon)
+		{
+			return 0;
+		}
 	}
 }

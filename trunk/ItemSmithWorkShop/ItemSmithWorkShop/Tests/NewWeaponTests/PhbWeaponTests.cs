@@ -7,6 +7,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using ItemSmithWorkShop.Items.Weapons;
+using ItemSmithWorkShop.Items.Interfaces;
 
 namespace ItemSmithWorkShop.Tests.NewWeaponTests
 {
@@ -111,6 +112,19 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			var masterwork = new Masterwork();
 			var masterworkSilverDagger = new ForgedWeapon(forgedDagger, masterwork);
 			Approvals.Verify(masterworkSilverDagger.ToString());
+		}
+
+		[TestMethod]
+		public void TestHeavyCrossbow()
+		{
+			var xbow = new PhbWeapon("Heavy Crossbow");
+			var mithral = new AlchemicalSilver();
+			var forgedXbow = new ForgedWeapon(xbow, mithral);
+			var plusXbow = new PlusEnhancedWeapon(forgedXbow, 3);
+			var distance = new WeaponEnchantment("Distance");
+			List<IWeaponEnchantment> stuff = new List<IWeaponEnchantment>() { distance, };
+			var enchXbow = new EnchantedMagicWeapon(plusXbow, stuff);
+			Approvals.Verify(enchXbow.ToString());
 		}
 	}
 }
