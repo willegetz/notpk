@@ -65,15 +65,6 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			Approvals.Verify(flamingBurstDagger.ToString());
 		}
 
-		[TestMethod]
-		public void TestShortSword()
-		{
-			var plusWeapon = new PlusEnhancedWeapon(new ForgedWeapon(new PhbWeapon("Short Sword"), new Masterwork()), 4);
-			var anarchic = new WeaponEnchantment("Anarchic");
-			List<IWeaponEnchantment> enchantments = new List<IWeaponEnchantment>() { anarchic, };
-			Approvals.Verify(new EnchantedMagicWeapon(plusWeapon, enchantments).ToString());
-		}
-
 		[Ignore]
 		[TestMethod]
 		public void TestBlah()

@@ -121,7 +121,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 		public override string ToString()
 		{
 			return string.Format
-				("Given Name: '{17}'{0}Weapon: '{1}'{0}Weapon Proficiency: '{2}'{0}Weapon Category: '{4} {3}, {5}'{0}Weapon Size: '{6}'{0}Weapon Cost: '{7}' gp{0}Damage: '{8}' [{9}/{10}] {11}{0}Range Increment: '{12} feet ['{13}' feet max]'{0}Weight: '{14} pounds'{0}Hardness: '{15}'{0}Hit Points: '{16}'{0}Special: {17}",
+				("Given Name: '{18}'{0}Weapon: '{1}'{0}Weapon Proficiency: '{2}'{0}Weapon Category: '{4} {3}, {5}'{0}Weapon Size: '{6}'{0}Weapon Cost: '{7}' gp{0}Damage: '{8}' [{9}/{10}] {11}{0}Range Increment: '{12} feet ['{13}' feet max]'{0}Weight: '{14} pounds'{0}Hardness: '{15}'{0}Hit Points: '{16}'{0}Special: {17}",
 				Environment.NewLine, 
 				WeaponName, 
 				Proficiency,
