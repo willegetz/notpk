@@ -86,13 +86,15 @@ namespace ItemSmithWorkShop.Tests.NewWeaponTests
 			//enchantmentClump.Add(flameBurst1);
 			//enchantmentClump.Add(flameBurst2);
 
-			var enchantmentTotals = from clump in enchantmentClump
-									select clump.CostModifier;
+			//var enchantmentTotals = from clump in enchantmentClump
+			//                        select clump.CostModifier;
 
-			var totalEnchantmentModifier = enchantmentTotals.ToList();
-			totalEnchantmentModifier.Add(plusEnhancement);
+			var enchantmentTotals = enchantmentClump.Select(c => c.CostModifier).ToList();
 
-			var enchantmentTotal = totalEnchantmentModifier.Sum();
+			//var totalEnchantmentModifier = enchantmentTotals.ToList();
+			enchantmentTotals.Add(plusEnhancement);
+
+			var enchantmentTotal = enchantmentTotals.Sum();
 
 
 			var prefixes = from clump in enchantmentClump
