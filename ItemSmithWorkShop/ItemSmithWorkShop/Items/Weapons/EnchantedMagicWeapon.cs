@@ -160,9 +160,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			{
 				var damageBonusList = new StringBuilder();
 				
-				var damageBonusGroup = (from enchantment in enchantments
-										where !string.IsNullOrEmpty(enchantment.StandardDamageBonus)
-										select enchantment).ToList();
+				var damageBonusGroup = enchantments.Where(d => !string.IsNullOrEmpty(d.StandardDamageBonus)).ToList();
 				
 				var count = damageBonusGroup.Count;
 				
@@ -188,8 +186,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 		{
 			get
 			{
-				return (from enchantment in enchantments
-						select enchantment.ThreatRangeModifier).ToList().Max();
+				return enchantments.Select(t => t.ThreatRangeModifier).ToList().Max();
 			}
 		}
 
@@ -197,8 +194,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 		{
 			get
 			{
-				return (from enchantment in enchantments
-						select enchantment.RangeIncrementModifier).ToList().Max();
+				return enchantments.Select(r => r.RangeIncrementModifier).ToList().Max();
 			}
 		}
 
@@ -217,9 +213,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 		{
 			get
 			{
-				return (from enchantment in enchantments
-						where enchantment.Affix.Contains("Pre")
-						select enchantment).ToList();
+				return	enchantments.Where(p => p.Affix.Contains("Pre")).ToList();
 			}
 		}
 
@@ -227,9 +221,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 		{
 			get
 			{
-				return (from enchantment in enchantments
-						where enchantment.Affix.Contains("Suf")
-						select enchantment).ToList();
+				return enchantments.Where(s => s.Affix.Contains("Suf")).ToList();
 			}
 		}
 
@@ -239,9 +231,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			{
 				var critDamageList = new StringBuilder();
 
-				var critDamages = (from enchantment in enchantments
-								   where enchantment.DoesCriticalDamage == true
-								   select enchantment).ToList();
+				var critDamages = enchantments.Where(c => c.DoesCriticalDamage.Equals(true)).ToList();
 
 				string critDamageBonus = criticalDamages[plusWeapon.CriticalDamage];
 				foreach (var damgeBonus in critDamages)
@@ -351,11 +341,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		private PlusEnhancedWeapon QualifyWeapon(IWeapon weapon)
 		{
-			if (!weapon.IsMagical)
-			{
-				return new PlusEnhancedWeapon(weapon, 1);
-			}
-			return weapon as PlusEnhancedWeapon;
+			return weapon.IsMagical ? weapon as PlusEnhancedWeapon : new PlusEnhancedWeapon(weapon, 1);
 		}
 
 		public void NameWeapon(string givenName)
@@ -365,8 +351,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		private double TallyCostModifiers()
 		{
-			return (from enchantment in enchantments 
-					select enchantment.CostModifier).ToList().Sum() + PlusEnhancement;
+			return enchantments.Select(c => c.CostModifier).ToList().Sum() + PlusEnhancement;
 		}
 
 		private string CalculateThreatRange()
@@ -382,17 +367,12 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		private double CalculateRangeModifier(double range)
 		{
-			if (RangeIncrementModifier != 0)
-			{
-				return range * RangeIncrementModifier;
-			}
-			return range;
+			return RangeIncrementModifier == 0 ? range : (range * RangeIncrementModifier);
 		}
 
 		private double DetermineMinimumCasterLevel(double enhancementCasterLevel)
 		{
-			var minimumEnchantmentCasterLevel = (from enchantment in enchantments
-												 select enchantment.MinimumCasterLevel).ToList();
+			var minimumEnchantmentCasterLevel = enchantments.Select(e => e.MinimumCasterLevel).ToList();
 			minimumEnchantmentCasterLevel.Add(enhancementCasterLevel);
 
 			return minimumEnchantmentCasterLevel.Max();
@@ -403,28 +383,25 @@ namespace ItemSmithWorkShop.Items.Weapons
 			var auras = new StringBuilder();
 			auras.AppendLine("Magic Auras");
 			auras.AppendLine(string.Format("{0}Enhancement: {1}", "\t", plusWeapon.MagicAura));
-			foreach (var enchantment in enchantments)
-			{
-				auras.AppendLine(string.Format("{0}{1}: {2}", "\t", enchantment.EnchantmentName, enchantment.MagicAura));
-			}
+
+			enchantments.ForEach(e => auras.AppendLine(string.Format("{0}{1}: {2}", "\t", e.EnchantmentName, e.MagicAura)));
 			return auras.ToString();
 		}
 
 		private string AssembleRequiredSpells()
 		{
 			var enchantmentSpells = new StringBuilder();
-			var requiredSpellsList = (from enchantment in enchantments
-									 where !string.IsNullOrEmpty(enchantment.RequiredSpells)
-									 select enchantment).ToList();
-			
+
+			var requiredSpellsList = enchantments.Where(e => !string.IsNullOrEmpty(e.RequiredSpells)).ToList();
+
 			enchantmentSpells.AppendLine("Required Spells");
-			foreach (var requiredSpell in requiredSpellsList)
-			{
-				enchantmentSpells.AppendLine(string.Format("{0}{1}: {2}", "\t", requiredSpell.EnchantmentName, requiredSpell.RequiredSpells));
-			}
+
+			requiredSpellsList.ForEach(e => enchantmentSpells.AppendLine(string.Format("{0}{1}: {2}", "\t", e.EnchantmentName, e.RequiredSpells)));
+
 			return enchantmentSpells.ToString();
 		}
 
+		// TODO : Continue conversion of query syntax to fluent syntax, in line ifs, and lambda fun!
 		private string AssembleAdditionalRequirements()
 		{
 			var additionalRequirementsCollection = new StringBuilder();
