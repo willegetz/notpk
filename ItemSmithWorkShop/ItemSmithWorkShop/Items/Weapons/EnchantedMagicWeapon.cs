@@ -382,48 +382,38 @@ namespace ItemSmithWorkShop.Items.Weapons
 		{
 			var auras = new StringBuilder();
 			auras.AppendLine("Magic Auras");
-			auras.AppendLine(string.Format("{0}Enhancement: {1}", "\t", plusWeapon.MagicAura));
 
-			enchantments.ForEach(e => auras.AppendLine(string.Format("{0}{1}: {2}", "\t", e.EnchantmentName, e.MagicAura)));
+			AssembledInformationDisplay(auras, "Enhancement", plusWeapon.MagicAura);
+			enchantments.ForEach(e => AssembledInformationDisplay(auras, e.EnchantmentName, e.MagicAura));
 			return auras.ToString();
 		}
 
 		private string AssembleRequiredSpells()
 		{
 			var enchantmentSpells = new StringBuilder();
-
 			var requiredSpellsList = enchantments.Where(e => !string.IsNullOrEmpty(e.RequiredSpells)).ToList();
 
 			enchantmentSpells.AppendLine("Required Spells");
-
-			requiredSpellsList.ForEach(e => enchantmentSpells.AppendLine(string.Format("{0}{1}: {2}", "\t", e.EnchantmentName, e.RequiredSpells)));
-
+			requiredSpellsList.ForEach(e => AssembledInformationDisplay(enchantmentSpells, e.EnchantmentName, e.RequiredSpells));
 			return enchantmentSpells.ToString();
 		}
 
-		// TODO : Continue conversion of query syntax to fluent syntax, in line ifs, and lambda fun!
 		private string AssembleAdditionalRequirements()
 		{
 			var additionalRequirementsCollection = new StringBuilder();
-			var requirements = (from enchantment in enchantments
-								where !string.IsNullOrEmpty(enchantment.AdditionalRequirements)
-								select enchantment).ToList();
+			var requirements = enchantments.Where(e => !string.IsNullOrEmpty(e.AdditionalRequirements)).ToList();
 
 			additionalRequirementsCollection.AppendLine("Additional Creation Requirements");
-			foreach (var requirement in requirements)
-			{
-				additionalRequirementsCollection.AppendLine(string.Format("{0}{1}: {2}", "\t", requirement.EnchantmentName, requirement.AdditionalRequirements));
-			}
+
+			requirements.ForEach(e => AssembledInformationDisplay(additionalRequirementsCollection, e.EnchantmentName, e.AdditionalRequirements));
 			return additionalRequirementsCollection.ToString();
 		}
 
 		private string AppendSpecialInfo()
 		{
 			var notesCollection = new StringBuilder();
-			foreach (var enchantment in enchantments)
-			{
-				notesCollection.AppendLine(string.Format("{0}: {1}", enchantment.EnchantmentName, enchantment.EnchantmentNotes));
-			}
+
+			enchantments.ForEach(e => notesCollection.AppendLine(string.Format("{0}: {1}", e.EnchantmentName, e.EnchantmentNotes)));
 			return string.Format("{1}{0}{0}Enchantment Information{0}{2}", Environment.NewLine, plusWeapon.SpecialInfo, notesCollection);
 		}
 
@@ -431,82 +421,75 @@ namespace ItemSmithWorkShop.Items.Weapons
 		{
 			var name = new StringBuilder();
 			
-			var prefixes = BuildPrefixes();
-			var suffixes = BuildSuffixes();
+			var namePrefixes = BuildWeaponNamePrefixes();
+			var nameSuffixes = BuildWeaponNameSuffixes();
 			
-			name.Append(string.Format("+{0}{1}{2}{3}", PlusEnhancement, prefixes, WeaponName, suffixes));
+			name.Append(string.Format("+{0}{1}{2}{3}", PlusEnhancement, namePrefixes, WeaponName, nameSuffixes));
 			return name.ToString();
 		}
 
-		private string BuildPrefixes()
+		private string BuildWeaponNamePrefixes()
 		{
-			var prefixList = (from enchantment in enchantments
-							  where enchantment.Affix.Contains("Pre")
-							  select enchantment).ToList();
-			var prefixCount = prefixList.Count();
-			var prefixes = new StringBuilder();
+			var pCount = prefixes.Count();
+			var prefixes1 = new StringBuilder();
 
-			foreach (var prefix in prefixList)
+			foreach (var prefix in prefixes)
 			{
-				if (prefixCount > 1)
+				if (pCount > 1)
 				{
-					prefixes.Append(string.Format(" {0},", prefix.EnchantmentName));
-					prefixCount--;
+					prefixes1.Append(string.Format(" {0},", prefix.EnchantmentName));
+					pCount--;
 				}
 				else
 				{
-					prefixes.Append(string.Format(" {0} ", prefix.EnchantmentName));
+					prefixes1.Append(string.Format(" {0} ", prefix.EnchantmentName));
 				}
 			}
-			return prefixes.ToString();
+			return prefixes1.ToString();
 		}
 
-		private string BuildSuffixes()
+		private string BuildWeaponNameSuffixes()
 		{
-			var suffixList = (from enchantment in enchantments
-							  where enchantment.Affix.Contains("Suf")
-							  select enchantment).ToList();
-			var suffixCount = suffixList.Count();
-			var suffixes = new StringBuilder();
-			foreach (var suffix in suffixList)
+			var sCount = suffixes.Count();
+			var suffixes1 = new StringBuilder();
+
+			foreach (var suffix in suffixes)
 			{
-				if (suffixCount > 0)
+				if (sCount > 0)
 				{
-					suffixes.Append(string.Format(" of {0}", suffix.EnchantmentName));
-					suffixCount--;
+					suffixes1.Append(string.Format(" of {0}", suffix.EnchantmentName));
+					sCount--;
 				}
 			}
-			return suffixes.ToString();
+			return suffixes1.ToString();
 		}
 
+		// Display related
 		private string BuildEnhancementBreakdown()
 		{
 			var breakdown = new StringBuilder();
-			var enchantmentCount = enchantments.Count();
 			breakdown.Append(string.Format("+{0} [", CostModifier));
 			breakdown.Append(string.Format("+{0} for Plus Enhancement,", PlusEnhancement));
-
-			foreach (var enchantment in enchantments)
-			{
-				if (enchantmentCount > 1)
-				{
-					breakdown.Append(string.Format(" +{0} for {1},", enchantment.CostModifier, enchantment.EnchantmentName));
-					enchantmentCount--;
-				}
-				else
-				{
-					breakdown.Append(string.Format(" +{0} for {1}]", enchantment.CostModifier, enchantment.EnchantmentName));
-				}
-			}
+			enchantments.ForEach(e => EnhancementBreakdownLogic(breakdown, e));
+			breakdown.Remove(breakdown.Length - 1, 1).Append("]");
 
 			return breakdown.ToString();
 		}
 
+		// Display related
+		private string EnhancementBreakdownLogic(StringBuilder breakdown, IWeaponEnchantment enchantment)
+		{
+			breakdown.Append(string.Format(" +{0} for {1},", enchantment.CostModifier, enchantment.EnchantmentName));
+			return breakdown.ToString();
+		}
+
+		// Display related
 		private string BuildDamageOutput()
 		{
 			return string.Format("{0}{1}{2} [{3}/{4}]{5}, {6}", Damage, ModifiedDamage, StandardDamageBonus, ThreatRange, CriticalDamage, CriticalDamageBonus, DamageType);
 		}
 
+		// Display related
 		private string BuildRangeInfo()
 		{
 			if (RangeIncrementModifier != 1)
@@ -516,6 +499,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 			return string.Format("{0} foot increment for {1} total feet", RangeIncrement, MaxRange);
 		}
 
+		// Display related
 		private string BuildType()
 		{
 			if (!string.IsNullOrEmpty(WeaponSubCategory))
@@ -525,6 +509,13 @@ namespace ItemSmithWorkShop.Items.Weapons
 			return string.Format("{0} {1}", WeaponCategory, WeaponUse);
 		}
 
+		// Display related
+		private StringBuilder AssembledInformationDisplay(StringBuilder builderName, string enchantmentName, string enchantmentProperty)
+		{
+			return builderName.AppendLine(string.Format("{0}{1}: {2}", "\t", enchantmentName, enchantmentProperty));
+		}
+
+		// Display related
 		public override string ToString()
 		{
 			var displayWeapon = new StringBuilder();
