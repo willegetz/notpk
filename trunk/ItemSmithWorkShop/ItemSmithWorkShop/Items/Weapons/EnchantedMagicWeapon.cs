@@ -161,18 +161,7 @@ namespace ItemSmithWorkShop.Items.Weapons
 				var damageBonusList = new StringBuilder();
 				
 				var damageBonusGroup = enchantments.Where(d => !string.IsNullOrEmpty(d.StandardDamageBonus)).ToList();
-				
-				var count = damageBonusGroup.Count;
-				
-				while (count > 0)
-				{
-					foreach (var bonus in damageBonusGroup) 
-					{
-						damageBonusList.Append(string.Format(" +{0} ({1})", bonus.StandardDamageBonus, bonus.DamageType));
-						count--;
-					}
-					
-				}
+				damageBonusGroup.ForEach(d =>  AppendBonusDamageInfo(damageBonusList, d.StandardDamageBonus, d.DamageType));
 				return damageBonusList.ToString();
 			}
 		}
@@ -230,14 +219,8 @@ namespace ItemSmithWorkShop.Items.Weapons
 			get
 			{
 				var critDamageList = new StringBuilder();
-
 				var critDamages = enchantments.Where(c => c.DoesCriticalDamage.Equals(true)).ToList();
-
-				string critDamageBonus = criticalDamages[plusWeapon.CriticalDamage];
-				foreach (var damgeBonus in critDamages)
-				{
-					critDamageList.Append(string.Format(" {0} ({1})", critDamageBonus, damgeBonus.DamageType));
-				}
+				critDamages.ForEach(c => AppendBonusDamageInfo(critDamageList, criticalDamages[plusWeapon.CriticalDamage], c.DamageType));
 				return critDamageList.ToString();
 			}
 		}
@@ -333,9 +316,9 @@ namespace ItemSmithWorkShop.Items.Weapons
 		{
 			criticalDamages = new Dictionary<string, string>()
 			{
-						 {"x2", "+1d10"},
-						 {"x3", "+2d10"},
-						 {"x4", "+3d10"},
+						 {"x2", "1d10"},
+						 {"x3", "2d10"},
+						 {"x4", "3d10"},
 			};
 		}
 
@@ -356,13 +339,17 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 		private string CalculateThreatRange()
 		{
-			if (ThreatRangeModifier != 0)
-			{
-				var newLowerBound = 21 - (((20 - ThreatRangeLowerBound) + 1) * ThreatRangeModifier);
-				return string.Format("{0}-20", newLowerBound);
-			}
-	
-			return string.Format("{0}-20", ThreatRangeLowerBound);
+			return ThreatRangeModifier == 0 ? FormattedThreatRange(ThreatRangeLowerBound) : FormattedThreatRange(NewLowerBound());
+		}
+
+		private string FormattedThreatRange(double lowerBound)
+		{
+			return string.Format("{0}-20", lowerBound);
+		}
+
+		private double NewLowerBound()
+		{
+			return 21 - (((20 - ThreatRangeLowerBound) + 1) * ThreatRangeModifier);
 		}
 
 		private double CalculateRangeModifier(double range)
@@ -383,8 +370,8 @@ namespace ItemSmithWorkShop.Items.Weapons
 			var auras = new StringBuilder();
 			auras.AppendLine("Magic Auras");
 
-			AssembledInformationDisplay(auras, "Enhancement", plusWeapon.MagicAura);
-			enchantments.ForEach(e => AssembledInformationDisplay(auras, e.EnchantmentName, e.MagicAura));
+			AssembledInformationDisplay(auras, "\t", "Enhancement", plusWeapon.MagicAura);
+			enchantments.ForEach(e => AssembledInformationDisplay(auras, "\t", e.EnchantmentName, e.MagicAura));
 			return auras.ToString();
 		}
 
@@ -394,10 +381,11 @@ namespace ItemSmithWorkShop.Items.Weapons
 			var requiredSpellsList = enchantments.Where(e => !string.IsNullOrEmpty(e.RequiredSpells)).ToList();
 
 			enchantmentSpells.AppendLine("Required Spells");
-			requiredSpellsList.ForEach(e => AssembledInformationDisplay(enchantmentSpells, e.EnchantmentName, e.RequiredSpells));
+			requiredSpellsList.ForEach(e => AssembledInformationDisplay(enchantmentSpells, "\t", e.EnchantmentName, e.RequiredSpells));
 			return enchantmentSpells.ToString();
 		}
 
+		// Display related
 		private string AssembleAdditionalRequirements()
 		{
 			var additionalRequirementsCollection = new StringBuilder();
@@ -405,18 +393,20 @@ namespace ItemSmithWorkShop.Items.Weapons
 
 			additionalRequirementsCollection.AppendLine("Additional Creation Requirements");
 
-			requirements.ForEach(e => AssembledInformationDisplay(additionalRequirementsCollection, e.EnchantmentName, e.AdditionalRequirements));
+			requirements.ForEach(e => AssembledInformationDisplay(additionalRequirementsCollection, "\t", e.EnchantmentName, e.AdditionalRequirements));
 			return additionalRequirementsCollection.ToString();
 		}
 
+		// Display related
 		private string AppendSpecialInfo()
 		{
 			var notesCollection = new StringBuilder();
 
-			enchantments.ForEach(e => notesCollection.AppendLine(string.Format("{0}: {1}", e.EnchantmentName, e.EnchantmentNotes)));
+			enchantments.ForEach(e =>  AssembledInformationDisplay(notesCollection, "", e.EnchantmentName, e.EnchantmentNotes));
 			return string.Format("{1}{0}{0}Enchantment Information{0}{2}", Environment.NewLine, plusWeapon.SpecialInfo, notesCollection);
 		}
 
+		// Display related
 		private string BuildWeaponName()
 		{
 			var name = new StringBuilder();
@@ -428,40 +418,20 @@ namespace ItemSmithWorkShop.Items.Weapons
 			return name.ToString();
 		}
 
+		// Display related
 		private string BuildWeaponNamePrefixes()
 		{
-			var pCount = prefixes.Count();
-			var prefixes1 = new StringBuilder();
-
-			foreach (var prefix in prefixes)
-			{
-				if (pCount > 1)
-				{
-					prefixes1.Append(string.Format(" {0},", prefix.EnchantmentName));
-					pCount--;
-				}
-				else
-				{
-					prefixes1.Append(string.Format(" {0} ", prefix.EnchantmentName));
-				}
-			}
-			return prefixes1.ToString();
+			var weaponNamePrefixes = new StringBuilder();
+			prefixes.ForEach(p => weaponNamePrefixes.Append(string.Format(" {0},", p.EnchantmentName)));
+			return weaponNamePrefixes.Remove(weaponNamePrefixes.Length - 1, 1).Append(" ").ToString();
 		}
 
+		// Display related
 		private string BuildWeaponNameSuffixes()
 		{
-			var sCount = suffixes.Count();
-			var suffixes1 = new StringBuilder();
-
-			foreach (var suffix in suffixes)
-			{
-				if (sCount > 0)
-				{
-					suffixes1.Append(string.Format(" of {0}", suffix.EnchantmentName));
-					sCount--;
-				}
-			}
-			return suffixes1.ToString();
+			var weaopnNameSuffixes = new StringBuilder();
+			suffixes.ForEach(s => weaopnNameSuffixes.Append(string.Format(" of {0}", s.EnchantmentName)));
+			return weaopnNameSuffixes.ToString();
 		}
 
 		// Display related
@@ -510,9 +480,15 @@ namespace ItemSmithWorkShop.Items.Weapons
 		}
 
 		// Display related
-		private StringBuilder AssembledInformationDisplay(StringBuilder builderName, string enchantmentName, string enchantmentProperty)
+		private StringBuilder AssembledInformationDisplay(StringBuilder builderName, string formatter,  string enchantmentName, string enchantmentProperty)
 		{
-			return builderName.AppendLine(string.Format("{0}{1}: {2}", "\t", enchantmentName, enchantmentProperty));
+			return builderName.AppendLine(string.Format("{0}{1}: {2}", formatter, enchantmentName, enchantmentProperty));
+		}
+
+		// Display related
+		private StringBuilder AppendBonusDamageInfo(StringBuilder builderName, string bonusDamage, string damageType)
+		{
+			return builderName.Append(string.Format(" +{0} ({1})", bonusDamage, damageType));
 		}
 
 		// Display related
