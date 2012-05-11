@@ -4,8 +4,6 @@
 
 	$("#15388572").hide();
 
-	$("#containedBanner").append("<br/><h3>No Total Party Kill</h3>");
-
 	$("#calculateButton").click(function () {
 		var inputValue = $("#givenMeasurement").val();
 		var calcType = $("#givenParameter").val();
