@@ -1,10 +1,10 @@
 ﻿$(document).ready(function () {
 
-	$("#15388571").hide();
+	$("#gpWidget15388571").hide();
 
-	$("#15388572").hide();
+	$("#gpWidget15388572").hide();
 
-	$("#-1").hide();
+	$("#gpWidget-1").hide();
 
 	$("#calculateButton").click(function () {
 		var inputValue = $("#givenMeasurement").val();
