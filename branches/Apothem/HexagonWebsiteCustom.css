@@ -51,6 +51,11 @@
 	width:600px;
 }
 
+#LeftPane
+{
+	width:440px;
+}
+
 /* Additions to standard */
 
 #bannerCell {

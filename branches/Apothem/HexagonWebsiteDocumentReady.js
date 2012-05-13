@@ -1,10 +1,8 @@
 ﻿$(document).ready(function () {
 
-	$("#gpWidget15388571").hide();
+	//$("#gpWidget-1").hide();
 
-	$("#gpWidget15388572").hide();
-
-	$("#gpWidget-1").hide();
+	hideAll();
 
 	$("#calculateButton").click(function () {
 		var inputValue = $("#givenMeasurement").val();
@@ -47,8 +45,35 @@
 		$("#pointToPoint").text(vertexToVertexFromSide(derivedSideLength));
 
 		$("#side").text(sideLengthFromSideLength(derivedSideLength));
-
-
 	});
 
+	$("#givenParameter").change(function () {
+		var calcType = $("#givenParameter").val();
+		switch (calcType) {
+			case "emptySelect":
+				hideAll();
+				break;
+			case "selectApothem":
+				showApothem();
+				break;
+			case "selectArea":
+				showArea();
+				break;
+			case "selectCenterToPoint":
+				showCenterToPoint();
+				break;
+			case "selectFlatToFlat":
+				showFlatToFlat();
+				break;
+			case "selectPerimeter":
+				showPerimeter();
+				break;
+			case "selectPointToPoint":
+				showPointToPoint();
+				break;
+			case "selectSide":
+				showSide();
+				break;
+		}
+	});
 });

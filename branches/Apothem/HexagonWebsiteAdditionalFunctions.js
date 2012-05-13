@@ -76,4 +76,95 @@ var vertexToVertexFromSide = function(sideLength){
 	return 2 * sideLength;
 }
 
+var hideAll = function(){
+	$("#HexagonApothem").hide();
+	$("#BaseHexagon").show();
+	$("#HexagonArea").hide();
+	$("#HexagonCenterToVertex").hide();
+	$("#HexagonPerimeter").hide();
+	$("#HexagonSideLength").hide();
+	$("#HexagonSideToSide").hide();
+	$("#HexagonVertexToVertex").hide();
+}
+
+//Show Apothem image
+var showApothem = function(){
+	$("#HexagonApothem").show();
+	$("#BaseHexagon").hide();
+	$("#HexagonArea").hide();
+	$("#HexagonCenterToVertex").hide();
+	$("#HexagonPerimeter").hide();
+	$("#HexagonSideLength").hide();
+	$("#HexagonSideToSide").hide();
+	$("#HexagonVertexToVertex").hide();
+}
+
+//Show Area image
+var showArea = function(){
+	$("#HexagonArea").show();
+	$("#HexagonApothem").hide();
+	$("#BaseHexagon").hide();
+	$("#HexagonCenterToVertex").hide();
+	$("#HexagonPerimeter").hide();
+	$("#HexagonSideLength").hide();
+	$("#HexagonSideToSide").hide();
+	$("#HexagonVertexToVertex").hide();
+}
+
+//Show Center to Point
+var showCenterToPoint = function(){
+	$("#HexagonArea").hide();
+	$("#HexagonApothem").hide();
+	$("#BaseHexagon").hide();
+	$("#HexagonCenterToVertex").show();
+	$("#HexagonPerimeter").hide();
+	$("#HexagonSideLength").hide();
+	$("#HexagonSideToSide").hide();
+	$("#HexagonVertexToVertex").hide();
+}
+
+var showFlatToFlat = function(){
+	$("#HexagonArea").hide();
+	$("#HexagonApothem").hide();
+	$("#BaseHexagon").hide();
+	$("#HexagonCenterToVertex").hide();
+	$("#HexagonPerimeter").hide();
+	$("#HexagonSideLength").hide();
+	$("#HexagonSideToSide").show();
+	$("#HexagonVertexToVertex").hide();
+}
+
+var showPerimeter = function(){
+	$("#HexagonArea").hide();
+	$("#HexagonApothem").hide();
+	$("#BaseHexagon").hide();
+	$("#HexagonCenterToVertex").hide();
+	$("#HexagonPerimeter").show();
+	$("#HexagonSideLength").hide();
+	$("#HexagonSideToSide").hide();
+	$("#HexagonVertexToVertex").hide();
+}
+
+var showPointToPoint = function(){
+	$("#HexagonArea").hide();
+	$("#HexagonApothem").hide();
+	$("#BaseHexagon").hide();
+	$("#HexagonCenterToVertex").hide();
+	$("#HexagonPerimeter").hide();
+	$("#HexagonSideLength").hide();
+	$("#HexagonSideToSide").hide();
+	$("#HexagonVertexToVertex").show();
+}
+
+var showSide = function(){
+	$("#HexagonArea").hide();
+	$("#HexagonApothem").hide();
+	$("#BaseHexagon").hide();
+	$("#HexagonCenterToVertex").hide();
+	$("#HexagonPerimeter").hide();
+	$("#HexagonSideLength").show();
+	$("#HexagonSideToSide").hide();
+	$("#HexagonVertexToVertex").hide();
+}
+
 </script>
