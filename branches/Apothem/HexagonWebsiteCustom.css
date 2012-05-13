@@ -9,17 +9,20 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 25px;
+  width:85%;
 }
 
 #parameterInputs
 {
-  width:100%;
+  width:85%;
   margin-top:15px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 #givenParameter
 {
-  width:40%;
+  width:50%;
   margin: 5px;
 }
 
@@ -35,7 +38,7 @@
 
 #calculateButton
 {
-  width:30%;
+  width:20%;
  margin:10px;
 }
 
@@ -51,9 +54,14 @@
 	width:600px;
 }
 
-#LeftPane
+#gpWidget15388571
 {
 	width:440px;
+}
+
+#hexImages
+{
+  margin-top:74px;
 }
 
 /* Additions to standard */
