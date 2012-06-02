@@ -1,0 +1,83 @@
+Loyal Bon
+Un personnage d'alignement loyal bon a le comportement que l'on attenddes défenseurs de l'ordre et de la Loi.
+Déterminés à lutter contre le Mal, il montre également la discipline nécessaire pour ne jamais cesser le combat.
+Il dit toujours la vérité, reste fidèle à la parole donnée, aide ceux qui sont dans le besoin et s'élève contre l'injustice.
+Il déteste voir les coupable impunis.
+C'est le meilleur alignement qui soit car il combine honneur et compassion.
+finsonAlign;
+Neutre Bon
+Un personnage neutre bon fait de son mieux pour dispenser des actions bienfesantes.
+Il aide les autres autant que possible.
+Il travaille main dans la main avec les rois et les juges, mais ne se sent pas obligé de leur obéir systématiquement.
+Cet alignement est le meilleur qui soit, car il permet de faire le bien sans être enfermé dans le carcan de la Loi.
+finsonAlign;
+Chaotique Bon
+Un personnage chaotique bon agit selon sa conscience, san faire cas de ce que les autres peuvent penser de lui.
+Il vit sa vie, mais celà ne l'empêche pas d'être gentil et bienveillant.
+Il croit en la bonté et au droit de chacun, mais n'aprécies guère les lois ou les règles.
+Il déteste les gens qui intimident les autres et leur disent quoi faire.
+Il suit ses propres préceptes moraux qui, bien que bons, ne sont pas forcéments en accord avec la société.
+C'est le meilleur alignement qui soit, car il fait rimer bonté et liberté.
+finsonAlign;
+Loyal Neutre
+Un personnage loyal neutre agit comme la loi, la tradition ou son code de conduite personnel le lui dictent.
+L'ordre et l'organisation sont vitaux pour lui.
+Il se peut qu'il suive un code constitué de ses propres règles, ou qu'il pense que l'ordre est nécessaire pour tous (auquel cas il est favorable à un gouvernement fort et organisé).
+Cet alignement est le meilleur qui soit, car il signifie que l'on est fiable et honorable, sans pour autant être fanatique.
+finsonAlign;
+Neutre
+Un personnage neutre fait ce qui lui semble bien.
+Il n'a pas vraiment d'opinion lorsqu'il s'agit de trancher entre le Bien et le Mal ou entre la Loi et le Chaos.
+Dans la plupart des cas, la neutralité représente une absence de convictions plutôt qu'un choix conscient.
+Le personnage a alors tendance à penser que le Bien vaut mieux que le Mal, car il préfère que ses voisons se montrent bienveillants plutôt que malveillants.
+Celà étant, il ne se sent nullement obligé de défendre la cause du bien.
+En revanche, chez certains, la neutralité est une philosophie, un choix conscient.
+Pour eux, le Bien, le Mal, la Loi et le Chaos sont dangereux, comme tous les extrêmes.
+Ils pronent donc l'équilibre, qui leur paraît être le meilleur choix à long terme.
+C'est le meilleur alignement qui soit, car il permet d'agir naturellement, sans se laisser guider par ses préjugés ou ses impulsions.
+finsonAlign;
+Chaotique Neutre
+Un personnage chaotique neutre agit comme bon lui semble.
+C'est d'abord et avant tout un individualiste.
+Il accorde une immense valeur à sa liberté mais ne se sent pas concerné par la défense de celle des autres.
+Il évite l'autorité, déteste les restrictions et remet toujours en cause la tadition.
+Sa lutte contre la société organisée n'est pas motivée par des désirs d'anarchie, car un tel engagement devrait s'accompagner d'idées nobles (libérer les opprimer du joug de l'autorité) ou mauvaises (faire souffir ceux qui sont différents de lui).
+Le personnage peut parfois être imprévisible, mais son comportement n'est pas totalement aléatoire. Face à un pont, il l'utilise : il ne lui viendrait pas à l'idée de sauter dans la rivière.
+Cet alignement est le meilleur qui soit, car il permet de profiter de la vraie liberté, celle qui ne suit pas les restrictions imposées par la société et n'oblige pas de faire le bien à tout prix.
+finsonAlign;
+Loyal Mauvais
+Un individu loyal mauvais prend tout ce qu'il désire, dans les limites de son code de conduite, mais sans se soucier de ceux à qui il peut faire du mal.
+Pour lui, les traditions, la loyauté et l'obéissance ont de l'importance, mais pas la liberté, la dignité ou la vie.
+Il suit les règles existantes, mais sans pitié ni compassion.
+Il accepte la hiérarchie, et même si il préfère diriger, il est tout à fait disposé à obéir.
+Il condamne tous les autres, non pas en fonction de leurs actes, mais en fonction de leur race, leur religion, leur nationalité ou leur rang social.
+Il répugne à violer la loi ou à revenir sur ses promesses, en partie par sa nature, mais aussi parce qu'il fait confiance à l'ordre établi pour le protéger de ceux qui s'opposent à lui sur des questions d'ordre moral.
+Certains loyaux mauvais se fixent eux-mêmes des limites, telles que de ne jamais tuer de sang froid (ils chargent leurs sbires de le faire à leur place) ou ne pas maltraiter les enfants (sauf lorsqu'il n'est pas possible de faire ça autrement).
+Ils pensent que ces règles de conduite les placent au-dessus des malfaisants sans scrupule.
+Il arrive que des individus ou des créatures appliquent les préceptes de cet alignement avec un zèle que ne renieraient pas les croisés des forces du Bien.
+Ils n'hésitent pas à nuire aux autres s'ils y trouvent leur intérêt et prennent plaisir à promouvoir la cause du Mal.
+Il est possible qu'ils y voient l'accomplissement de leur devoir vis-à-vis de leur dieu ou de leur maître.
+Les êtres loyaux mauvais sont parfois dits "diaboliques", pour la simple raison que les diables sont l'incarnation de cet alignement.
+C'est l'alignement le plus dangereux qui soit, car il applique le mal avec raison intentionnelle et souvent, avec succès.
+finsonAlign;
+Neutre Mauvais
+Un individu neutre mauvais se livre à tous les actes qu'on lui laisse faire.
+Il ne pense qu'à lui.
+Il se moque des gens qu'il tue, par profit, pour le plaisir, ou tout simplement parce qu'ils le dérangent.
+Il n'apprécie pas particulièrement l'ordre ; il se dit que le fait de respecter la loi, un code de conduite ou les traditions ne le rendra pas meilleur ou plus noble.
+Il ,'affiche pas pour autant cette recherche permanente de l'affrontementqui est la marque des êtres chaotiques mauvais.
+Le criminel qui vole et tue pour satisfaire ses envies est neutre mauvais.
+Certains malfaisants érigent le Mal en idéal et le propagent avec acharnement.
+La plupart du temps, ils sont dévoués à un dieu ou à une société secrète maléfique.
+Cet alignement est le plus dangereux qui soit, car il représente le mal à l'état brut, sans honneur ni nuance.
+finsonAlign;
+Chaotique Mauvais
+Un individu chaotique mauvais fait tout ce que lui dicte sa cupidité, sa haine, ou sa soif de destruction.
+Il s'énerve facilement, est sadique, violent et totalement imprévisible.
+Quand il veut quelque chose, il se montre brutal et impitoyable.
+S'il est donnée pour but de propager le Mal et le Chaos, c'est encore pire.
+Fort heureusement, ses plans sont tout sauf bien préparés et les groupes qu'il constitue ou auxquels il se joint sont très mal organisés.
+La plupart du temps, les êtres chaotiques mauvais ne coopèrent que sous la menace et leur chef ne reste en place que tant qu'il peut contrer les tentatives visant à le renverser ou l'assassiner.
+Les individus chaotiques mauvais sont parfois dits "démoniaques" pour la simple raison que les démons sont l'incarnation de cet alignement.
+C'est l'alignement le plus dangereux qui soit, car il représente la destruction, non seulement de la beauté et de la vie, mais aussi de l'ordre sur lequel cette beauté et cette vie s'appuient.
+finsonAlign;

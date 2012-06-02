@@ -1,0 +1,684 @@
+Berceuse (Barde 0)
+Enchantement
+Rends les sujets somnolents ; -5 aux tests de Détection et de Perception auditive, -2 aux jets de Volonté contre sommeil.
+finSort
+Convocation d'instruments (Barde 0)
+Invocation
+Convoque un instrument de musique au choix.
+finSort
+Hébétement (Barde 0)
+Enchantement
+Fait perdre 1 action à un humaoïde de 4 DV ou moins.
+finSort
+Illumination (Barde 0)
+évocation
+éblouit 1 créature (-1 aux jets d'attaque).
+finSort
+Lecture de la magie (Barde 0)
+Divination
+Permet de lire parchemins et livres de sorts.
+finSort
+Lumière (Barde 0)
+évocation
+Fait briller un objet comme une torche.
+finSort
+Lumières dansantes (Barde 0)
+évocation
+Crée torches ou autres lueurs.
+finSort
+Manipulation à distance (Barde 0)
+Transmutation
+Télékinésie limitée (2,5 kg max dans un rayon de 4,50 m).
+finSort
+Message (Barde 0)
+Transmutation
+Conversation chuchotée à distance (30 m + 3 m par niveau).
+finSort
+Ouverture/Fermeture (Barde 0)
+Transmutation
+Ouvre ou ferme portes, fenêtres ou objets (15 Kg max).
+finSort
+Prestidigitation (Barde 0)
+Universel
+Tours de passe-passe.
+finSort
+Réparation (Barde 0)
+Transmutation
+Répare sommairement un objet.
+finSort
+Repérage (Barde 0)
+Divinitation
+Le PJ sait où se trouve le nord.
+finSort
+Résistance (Barde 0)
+Abjuration
+Confère +1 aux jets de sauvegarde.
+finSort
+Son imaginaire (Barde 0)
+Illusion
+Sons illusoires (7,50 m + 1,50 m tous les deux niveaux).
+finSort
+Alarme (Barde 1)
+Abjuration
+Protège une zone pendant 2 h par niveau.
+finSort
+Alignement indétectable (Barde 1)
+Abjuration
+Masque l'alignement pendant 24 h.
+finSort
+Aura magique de Nystul (Barde 1)
+Illusion
+Altère l'aura magique d'un objet.
+finSort
+Bouche magique taille M (Barde 1)
+Illusion
+Délivre un message quand on la déclenche.
+finSort
+Charme-personne (Barde 1)
+Enchantement
+La cible devient l'ami du PJ.
+finSort
+Convocation de monstres I (Barde 1)
+Invocation
+Appelle une créature extraplanaire luttant pour le PJ.
+finSort
+Déguisement (Barde 1)
+Illusion
+Modifie l'apparence du PJ.
+finSort
+Soins légers (Barde 1)
+Invocation
+Rend 1d8 de pv au sujet + 1 par niveau (max +5).
+finSort
+Convocation de monstres II (Barde 2)
+Convocation
+Appelle une ou plusieurs créatures extraplanaires luttant pour le PJ.
+finSort
+Détection de pensées (Barde 2)
+Divination
+Permet "d'écouter" les pensées superficielles.
+finSort
+Image Mirroir (Barde 2)
+Illusion
+Crée des doubles illusoires du PJ (1d4 +1 tous les 3 niveaux, max 8).
+finSort
+Invisibilité (Barde 2)
+Illusion
+Sujet invisible pendant 1 minute par niveau ou jusqu'à ce qu'il attaque.
+finSort
+Silence (Barde 2)
+évocation
+Obscurité surnaturelle sur 6 m de rayon.
+finSort
+Charme-monstre (Barde 3)
+Enchantement
+Le monstre croît être l'allié du PJ.
+finSort
+Convocation de monstres III (Barde 3)
+Invocation
+Appelle une ou plusieurs créatures extraplanaires luttant pour le PJ.
+finSort
+Détection de l'invisibilité (Barde 3)
+Divnination
+Révèle les créatures et objets invisibles.
+finSort
+Dissipation de la magie (Barde 3)
+Abjuration
+Annule sorts et effets magiques.
+finSort
+état gazeux (Barde 3)
+Transmutation
+Le sujet devient intangible et peut voler lentement.
+finSort
+Lumière du jour (Barde 3)
+évocation
+Vive lumière sur 18 m de rayon.
+finSort
+Soins importants (Barde 3)
+Invocation
+Rend 3d8 pv au sujet +1 par niveau (max +15).
+finSort
+Convocation de monstre IV (Barde 4)
+Invocation
+Appelle une ou plusieurs créatures extraplanaires luttant pour le PJ.
+finSort
+Invisibilité suprême (Barde 4)
+Illusion
+Comme invisibilité mais continue quand le sujet attaque.
+finSort
+Liberté de mouvement (Barde 4)
+Abjuration
+La cible bouge normalement malgré les entraves.
+finSort
+Refuge de Léomund (Barde 4)
+Invocation
+Crée une solide maisonnette.
+finSort
+Soints intensifs (Barde 4)
+Invocation
+Rends 4d8 de pv au sujet +1 par niveau (max +20).
+finSort
+Zone de silence (Barde 4)
+Illusion
+Empêche les espions d'entendre les conversations (rayon d'écoute 1m50 autour du lanceur de sort).
+finSort
+Brume mentale (Barde 5)
+Enchantement
+Malus de -10 aux jets de sagesse et de volonté.
+finSort
+Chant de discorde (Barde 5)
+Enchantement
+Force les cibles à s'entretuer.
+finSort
+Convocation de monstres V (Barde 5)
+Invocation
+Appelle une ou plusieurs créatures extraplanaires luttant pour le PJ.
+finSort
+Dissipation suprême (Barde 5)
+Abjuration
+omme dissipation de la magie mais jusquà + 20.
+finSort
+Soins légers de groupe (Barde 5)
+Invocation
+Rends 1d8 pv à de nombreuses créatures, +1 pv par niveau (max +25). 
+finSort
+Animation d'objets (Barde 6)
+Transmutation
+Les objets attaquent l'adversaire du PJ.
+finSort
+Convocation de monstres VI (Barde 6)
+Invocation
+Appelle une ou plusieurs créatures extraplanaires luttant pour le PJ.
+finSort
+Danse irrésistible d'Otto (Barde 6)
+Enchantement
+Force le sujet à danser et cabrioler.
+finSort
+Soins modérés de groupes (Barde 6)
+Invocation
+Rends 2d8 de pv à de nombreuses créatures, +1 pv par niveau (max +30).
+finSort
+Orientation (Barde 6)
+Divination
+Indique comment se rendre à l'endroit choisi.
+finSort
+Assistance divine (Druide 0)
+Divination
++1 à un jet d'attaque, jet de sauvegarde ou test de compétence. 
+finSort
+Illumibation (Druide 0)
+évocation
+éblouit la cible (-1 aux jets d'attaque).
+finSort
+Soins superficiels (Druide 0)
+Invocation
+Rends 1 pv à la cible.
+finSort
+Charme-animal (Druide 1)
+Enchantement
+L'animal devient l'ami du PJ.
+finSort
+Enchevêtrement (Druide 1)
+Transmutation
+La végétation immobilise tout dans un rayon de 12 m.
+finSort
+Flammes (Druide 1)
+évocation
+1d6 dégâts de feu , +1 par niveau (max +5) au contact ou au lancer.
+finSort
+Soins légers (Druide 1)
+Invocation
+Rend 1d8 pv +1 par niveau (max +5) à la cible.
+finSort
+Convocation d'alliés naturels II (Druide 2)
+Invocation
+Appelle une u plusieurs créatures luttant pour le PJ.
+finSort
+Force de Taureau (Druide 2)
+Transmutation
+Confère +4 en force pendant 1 minute par niveau.
+finSort
+Sphère de feu (Druide 2)
+évocation
+Roule au sol, 2d6 points de dégâts (feu), dur 1 round par niveau
+finSort
+Appel de la foudre (Druide 3)
+évocation
+Appelle la foudre (3d6 dégâts électriques par éclair).
+finSort
+Communication avec les plantes (Druide 3)
+Divination
+Permet de communiquer avec les plantes et les créatures végétales.
+finSort
+Respiration aquatique (Druide 3)
+Transmutation
+Permet de respirer sous l'eau 2 h par niveau.
+finSort
+Soins modérés (Druide 3)
+Invocation
+Rends 2d8 pv au sujet +1 par niveau (max +10).
+finSort
+Colonne de feu (Druide 4)
+évocation
+Feu divin (1d6 points de dégâts par niveau).
+finSort
+Convocationd'alliés naturels ( Druide 4)
+Invocation
+Appelle une ou plusieurs créatures luttant pour le PJ.
+finSort
+Liberté de mouvement (Druide 4)
+Abjuration
+La cible bouge normalement malgré les entraves.
+finSort
+Marche dans les airs (Druide 4)
+Transmutation
+Le sujet marche dans les airs comme sur la terre ferme (10 minutes par niveau).
+finSort
+Soins importants (Druide 4)
+Invocation
+Rend 3d8 pv au sujet, +1 (max +15).
+finSort
+Appel de la tempête (Druide 5)
+évocation
+comme appel de la foudre mais 5d6 dégâts par éclair.
+finSort
+Convocation d'alliés naturels V (Druide 5)
+Invocation
+Appelle une ou plusieurs créatures luttant pour le PJ.
+finSort
+Soins intensifs (Druide 5)
+Invocation
+Rend 4d8 de pv au sujet, +1 (max +20).
+finSort
+Convocation d'alliés naturels VI (Druide 6)
+Invocation
+Appelle une ou plusieurs créatures luttant pour le PJ.
+finSort
+Bois de fer (Druide 6)
+Transmutation
+Rend le bois aussi dur que le fer.
+finSort
+Soins légers de groupe (Druide 6)
+Invocation
+Rends 1d8 pv à plusieurs créatures, +1 par niveau (max +25).
+finSort
+Convocation d'alliés naturel VII (Druide 7)
+Invocation
+Appelle une ou plusieurs créatures luttant pour le PJ.
+finSort
+Guérison suprême (Druide 7)
+Invocation
+Soigne 10 points de dégâts par niveau, les maladies et les troubles mentaux.
+finSort
+Soins modérés de groupe (Druide 7)
+Invocation
+Rend 2d8 pv à plusieurs créatures, +1 par niveau (max +30).
+finSort
+Convocation d'alliés naturels VIII (Druide 8)
+Invocation
+Appelle une ou plusieurs créatures luttant pour le PJ.
+finSort
+Doigt de mort (Druide 8)
+Nécromancie
+Tue la cible.
+finSort
+Explosion de lumière (Druide 8)
+évocation
+Aveugle à moins de 3m, 6d6 points de dégâts.
+finSort
+Mot de rappel (Druide 8)
+Invocation
+Téléporte le PJ à un endroit choisi à l'avance.
+finSort
+Convocation d'alliés IX (Druide 9)
+Invocation
+Appelle une ou plusieurs créatures luttant pour le PJ.
+finSort
+Régénération
+Invocation
+Fait repousser les membres tranchés, rend 4d8 pv +1 par niveau (max +35).
+finSort
+Soins intensifs de groupe (Druide 9)
+Invocation
+Rend 4d8 pv à plusieurs créatures, +1 par niveau (max +40).
+finSort
+Rayon de givre (Ensorceleur/Magicien 0)
+évocation
+Rayon infligeant 1d3 de dégâts (froids).
+finSort
+Aspersion d'acide (Ensorceleur/Magicien 0)
+Invocation
+Orbe d'acide infligeant 1d3 dégâts (acide).
+finSort
+Destruction de mort-vivant (Ensorceleur/Magicien 0)
+Nécromancie
+1d6 de dégâts à un mort-vivant.
+finSort
+Décharger électrique (Ensorceleur/Magicien 1)
+évocation
+1d6 dégâts électriques par niveau (max 5d6).
+finSort
+Projectile magique (Ensorceleur/Magicien 1)
+évocation
+1d4+1 points de dégâts, 1 projectile tous les 2 niveaux au-delà du niveau 1 (max 5).
+finSort
+Armure de mage (Ensorceleur/Magicien 1)
+Invocation
+Confère un bonus d'armure de +4.
+finSort
+Rayon ardent (Ensorceleur/Magicien 2)
+évocation
+Attaque à distance infligeant 4d6 points de dégâts de feu, +1 rayon tous les 4 niveaux (max 3).
+finSort
+Flèche d'acide de Melf (Ensorceleur/Magicien 2)
+Invocation
+Attaque de contact à distance; 2d4 points de dégâts pendant 1 round + 1 round tous les 3 niveaux.
+finSort
+Vision dans le noir (Ensorceleur/Magicien 2)
+Transmutation
+Permet de voir à 18 m sans la moindre luminosité.
+finSort
+Boule de feu (Ensorceleur/Magicien 3)
+évocation
+1d6 points de dégâts de feu/niveau, 6 m de rayon.
+finSort
+éclair (Ensorceleur/Magicien 3)
+évocation
+1d6 points de dégâts d'électricité par niveau.
+finSort
+Runes explosives (Ensorceleur/Magicien 3)
+Abjuration
+6d6 de dégâts à qui les lit.
+finSort
+Désespoir foudroyant (Ensorceleur/Magicien 4)
+Enchantement
+Les sujets subissent -2 aux jets d'attaque, de dégâts, de sauvegarde et tests.
+finSort
+Assasin imaginaire (Ensorceleur/Magicien 4)
+Illusion
+Illusion tuant ou infligeant 3d6 de dégâts à la cible.
+finSort
+Animation de morts (Ensorceleur/Magicien 4)
+Nécromancie
+Crée squelettes ou zombis morts-vivants (2 DV par niveau de lanceur de sort).
+finSort
+Cône de froid (Ensorceleur/Magicien 5)
+évocation
+1d6 de dégâts de froid par niveau.
+finSort
+Téléportation (Ensorceleur/Magicien 5)
+Invocation
+Transporte instantannéement le PJ jusqu'à 150 km par niveau.
+finSort
+Passe-muraille (Ensorceleur/Magicien 5)
+Transmutation
+Permet de se tailler un chemin au travers du bois ou de la pierre.
+finSort
+Zone d'antimagie (Ensorceleur/Magicien 6)
+Abjuration
+Réprime toute magie à moins de 3 m.
+finSort
+éclaire multiple (Ensorceleur/Magicien 6)
+évocation
+1d6 points de dégâts par niveau ; 1 éclair secondaire par niveau infligeant demi-dégâts.
+finSort
+Cercle de mort (Ensorceleur/Magicien 6)
+Nécromancie
+Tue 1d4 DV de créatures par niveau.
+finSort
+Téléportation suprême (Ensorceleur/Magicien 7)
+Invocation
+Comme téléportation mais sans limite de distance et sans risque d'erreur.
+finSort
+Doigt de mort (Ensorceleur/Magicien 7)
+Nécromancie
+Tue la cible.
+finSort
+cContrôle des morts-vivants (Ensorceleur/Magicien 7)
+Nécromancie
+Contrôle 2 DV par niveau de morts-vivants (portée 7m50 + 1m50 tous les 2 niveaux). distants de moins de 9 m les uns des autres.
+finSort
+Danse irrésistible d'Otto (Ensorceleur/Magicien 8)
+Enchantement
+Force le sujet à danser.
+finSort
+Explosion de lumière (Ensorceleur/Magicien 8)
+évocation
+Aveugle à moins de 3 m, 6d6 points de dégâts.
+finSort
+Métamorphose universelle (Ensorceleur/Magicien 8)
+Transmutation
+Transforme n'importe quoi en n'importe quoi d'autre.
+finSort
+Mot de pouvoir mortel (Ensorceleur/Magicien 9)
+Enchantement
+Tue un adversaire doté de 100 pv ou moins.
+finSort
+Nuée de météores (Ensorceleur/Magicien 9)
+évocation
+Quatre sphères explosives infligeant 6d6 chacunes.
+finSort
+Plainte d'outre-tombe (Ensorceleur/Magicien 9)
+Nécromancie
+Tue une créature par niveau.
+finSort
+Arme magique (Paladin 1)
+Transmutation
+Confère un bonus de +1 à une arme.
+finSort
+Faveur divine (Paladin 1)
+évocation
+Confère une bonus de +1 aux jets d'attaque et de dégâts.
+finSort
+Soins légers (Paladin 1)
+Invocation
+Rend 1d8 pv au sujet, +1 (max +5).
+finSort
+Force de taureau (Paladin 2)
+Transmutation
+Confère un bonus de +4 en force pendant 1 minute par niveau.
+finSort
+Ralentissement du poison (Paladin 2)
+Invocation
+Neutralise le poison pendant 1 heure par niveau.
+finSort
+Délivrance de la paralysie (Paladin 2)
+Invocation
+Délivre de la paralysie, d'immobilisation et de lenteur.
+finSort
+Arme magique suprême (Paladin 3)
+Transmutation
+Confère un bonus de +1 tous les 4 niveaux à une arme (max +5).
+finSort
+Dissipation de la magie (Paladin 3)
+Abjuration
+Annule sorts et effets magiques.
+finSort
+Soins modérés (Paladin 3)
+Invocation
+Rend 2d8 pv au sujet, +1 par niveau (max +10).
+finSort
+épée sainte (Paladin 4)
+évocation
+L'arme devient +5 et inflige 2d6 de dégâts contre le Mal.
+finSort
+Neutralisation du poison (Paladin 4)
+Invocation
+Rend le poison inoffensif.
+finSort
+Soins importants (Paladin 4)
+Invocation
+Rend 3d8 pv au sujet, +1 (max +15).
+finSort
+Soins superficiels (Prêtre 0)
+Invocation
+Rend 1pv au sujet.
+finSort
+Assistance divine (Prêtre 0)
+Divination
+Confère un bonus de +1 sur un jet d'attaque, de sauvegarde ou test de compétence.
+finSort
+Lumière (Prêtre 0)
+évocation
+Fait briller un objet comme une torche pendant 10 minutes par niveau.
+finSort
+Blessure légère (Prêtre 1)
+Nécromancie
+Inflige 1d8 de dégâts, +1 par niveau (max 5).
+finSort
+Soins légers (Prêtre 1)
+Invocation
+Rend 1d8 de dégâts, +1 par niveau (max 5).
+finSort
+Faveur divine (Prêtre 1)
+évocation
+Confère un bonus de +1 tous les 3 niveaux aux jets d'attaque et de dégâts.
+finSort
+Blessure modérée (Prêtre 2)
+Nécromancie
+Inflige 2d8 points de dégâts,+1 (max +10).
+finSort
+Soins modérés (Prêtre 2)
+Invocation
+Rend 2d8 pv,+1 (max +10).
+finSort
+Réparation intégrale (Prêtre 2)
+Transmutation
+Répare totalement un objet.
+finSort
+Blessure grave (Prêtre 3)
+Nécromancie
+Inflige 3d8 de dégâts, +1 (max +15).
+finSort
+Soins importants (Prêtre 3)
+Invocation
+Rend 3d8 pv, +1 (max +15).
+finSort
+Guérison des maladies (Prêtre 3)
+Invocation
+Guérit tous les maux du sujet.
+finSort
+Blessure critique (Prêtre 4)
+Nécromancie
+Inflige 4d8 dégats, +1 (max +20).
+finSort
+Soins intensifs (Prêtre 4)
+Invocation
+Rends 4d8 pv, +1 (max +20).
+finSort
+Immunité contre les sorts (Prêtre 4)
+Abjuration
+Immunise le sujet contre 1 sort tous les 4 niveaux.
+finSort
+Blessure légère de groupe (Prêtre 5)
+Nécromancie
+Inflige 1d8 dégâts à plusieurs créatures, +1 par niveau (max +25).
+finSort
+Soins légers de groupe (Prêtre 5)
+Invocation
+Rends 1d8 pv à plusieurs créatures, +1 par niveau (max +25).
+finSort
+Rappel à la vie (Prêtre 5)
+Invocation
+Ressucite quelqu'un mort depuis 1 jour par niveau max.
+finSort
+Blessure modérée de groupe (Prêtre 6)
+Nécromancie
+Inflige 2d8 dégats à plusieurs créatures, +1 par niveau (max +30).
+finSort
+Soins modérés de groupe (Prêtre 6)
+Invocation
+Rend 2d8 pv à plusieurs créatures, +1 par niveau (max +30).
+finSort
+Mise à mal (Prêtre 6)
+Nécromancie
+Inflige 10 points de dégâts par niveau.
+finSort
+Blessure importante de groupe (Prêtre 7)
+Nécromancie
+Inflige 3d8 points de dégâts à plusieurs créatures, +1 par niveau (max 35).
+finSort
+Soins importants de groupe (Prêtre 7)
+Invocation
+Rend 3d8 pv à plusieurs créatures, +1 par niveau (max 35).
+finSort
+Régénération (Prêtre 7)
+Invocation
+Fait repousser les membres tranchés, rends 4d8 pv, +1 par niveau (max 35).
+finSort
+Résurrection (Prêtre 7)
+Invocation
+Ramène un mort à la vie.
+finSort
+Blessure critique de groupe (Prêtre 8)
+Nécromancie
+Inflige 4d8 dégâts à plusieurs créatures, +1 par niveau (max +40).
+finSort
+Soins critiques de groupe (Prêtre 8)
+Invocation
+Rend 4d8 pv à plusieurs créatures, +1 par niveau (max +40).
+finSort
+Immunité contre les sorts suprême (Prêtre 8)
+Abjuration
+Comme immunité contre les sorts mais jusqu'au 8ème niveau.
+finSort
+Implosion (Prêtre 9)
+évocation
+Tue une créature par round (jusqu'à 4 round).
+finSort
+Miracle (Prêtre 9)
+évocation
+Intercède auprès d'un dieu.
+finSort
+Résurrection suprême (Prêtre 9)
+Invocation
+Comme résurrection mais sans avoir besoin du corps.
+finSort
+Enchevêtrement (Rôdeur 1)
+Transmutation
+La végétation immobilise tout dans un rayon de 12 m.
+finSort
+Morsure magique (Rôdeur 1)
+Transmutation
+Une arme naturelle du sujet gagne +1 aux jets d'attaque et de dégâts.
+finSort
+Ralentissement du poison (Rôdeur 1)
+Invocation
+Neutralise le poison pendant 1 h par niveau.
+finSort
+Convocation d'alliés naturels (Rôdeur 2)
+Invocation
+Appelle une ou plusieurs créatures luttant pour le PJ.
+finSort
+Grâce féline (Rôdeur 2)
+Transmutation
+Confère un bonus de +4 en Dex pendant 1 minute par niveau.
+finSort
+Communication avec les plantes (Rôdeur 2)
+Divination
+Permet de communiquer avec les plantes et les créatures végétales.
+finSort
+Soins modérés (Rôdeur 3)
+Invocation
+Rend 2d8 pv au sujet, +1 par niveau (max +10).
+finSort
+Morsure magique suprême (Rôdeur 3)
+Transmutation
+Une arme naturelle du sujet gagne +1 à l'attaque et aux dégâts tous les 3 niveaux (max +5).
+finSort
+Marche sur l'onde (Rôdeur 3)
+Transmutation
+Permet de marcher sur l'eau (10 minutes par niveau).
+finSort
+Soins importants (Rôdeur 4)
+Invocation
+Rend 3d8 pv au sujet, +1 (max +15).
+finSort
+Communion avec la nature (Rôdeur 4)
+Divination
+Permet de connaître les environs (1,5 km par niveau).
+finSort
+Liberté de mouvement (Rôdeur 4)
+Abjuration
+La cible bouge normalement malgré les entraves.
+finSort
