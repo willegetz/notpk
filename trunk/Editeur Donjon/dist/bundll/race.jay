@@ -1,0 +1,151 @@
+Humain
+Humanoïde
+Taille moyenne.
+Vitesse de déplacement de base : 9 m.
+1 don supplémentaire au niveau 1.
+4 points de compétence supplémentaire au niveau 1 et 1 point de compétence supplémentaire à chaque niveau par la suite.
+Langues parlées d'office : commun, supplémentaire : au choix.
+Classe de prédilection : spécial, la classe la plus élevée d'un humain multiclassé n'est pas prise en compte quand on détermine s'il subit ou non un malus de points d'expérience.
+finRace
+Demi-elfe
+Humanoïde
+Taille moyenne.
+Vitesse de déplacement de base : 9 m.
+Immunité contre les sorts et effets magiques de type sommeil.
+Bonus racial de +2 aux jets de sauvegarde contre les sorts et effets magiques de l'école des enchantements.
+Vision nocturne.
+Bonus racial de +1 aux tests de détection, fouille et perception auditive.
+Bonus racial de +2 aux tests de diplomatie et renseignement.
+Sang elfique : les demi-elfes sont considérés comme des elfes à part entière.
+Langues parlées d'office : commun et elfe, supplémentaire : au choix.
+Classe de prédilection : spécial, la classe la plus élevée d'un demi-elfe multiclassé n'est pas prise en compte quand on détermine s'il subit ou non un malus de points d'expérience.
+finRace
+Demi-orque
+Humanoïde
++2 Force, -2 Intelligence, -2 Charisme.
+Taille moyenne.
+Vitesse de déplacement de base : 9 m.
+Vision dans le noir.
+Sang orque : les demi-orques sont considérés comme des orques à part entière.
+Langues parlées d'office : Commun et orque, supplémentaires : abyssal, draconien, géant, gnoll et gobelin.
+Classe de prédilection : Barbare.
+finRace
+Elfe
+Humanoïde
++2 Dextérité, -2 Constitution.
+Taille moyenne.
+vitesse de déplacement de base : 9 m.
+Immunité contre les sorts et effets magiques de type sommeil.
+Bonus racial de + 2 aux jets de sauvegarde contre les sorts et effets magiques de l'école des enchantements.
+Vision nocturne.
+Maniement des armes : Tous les elfes possèdent d'office le don maniement des armes de guerre pour l'épée longue, la rapière l'arc long et l'arc court.
+Bonus racial de +2 aux test de détection, fouille et perception auditive.
+Détection des passages secrets : test de fouille automatique lorsqu'ils passent à 1m50 ou moins d'un passage secret.
+Langues parlées d'office : commun et elfe, supplémentaires : draconien, gnoll, gnome, gobelin, orque et sylvestre.
+Classe de prédilection : Magicien.
+finRace
+Gnome
+Humanoïde
++2 Constitution, -2 Force.
+Taille petite.
+Vitesse de déplacement de base : 6 m.
+Vision nocturne.
+Armes familières : les gnomes peuvent considérer le marteau piloet comme une arme de guerre plutôt que comme une arme éxotique.
+Bonus racial de +2 aux jets de sauvegarde contre les illusions.
+Bonus de +1 au DD de sauvegarde contre tous les sorts de l'école de l'illusion lancés par un gnome.
+Bonus racial de +1 aux jets d'attaque contre les kobolds et les gobelinoïdes.
+Bonus d'esquive de +4 contre les créatures de type géant.
+Bonus racial de +2 aux tests de perception auditive.
+Bonus racial de +2 aux tests d'artisanat (Alchimie).
+Langues parlées d'office : commun et gnome, supplémentaires : draconien, elfe, géant, gobelin, nain et orque.
+Pouvoirs magiques : communication avec les animaux 1 fois par jour, lumières dansantes, prestidigitation et son imaginaire 1 fois par jour.
+CLasse de prédilection : Barde.
+finRace
+Halfelin
+Humanoïde
++2 Dextérité, -2 Force.
+Taille Petite.
+Vitesse de déplacement de base : 6 m.
+Bonus racial de +2 aux tests de déplacement silencieux, escalade et saut.
+Bonus racial de +1 à tous les jets de sauvegarde.
+Bonus de moral de +2 aux jets de sauvegarde contre la terreur (en cumul du +1 ci-dessus).
+Bonus racial de +1 aux jets d'attaque avec les armes de jet et les frondes.
+Bonus racial de +2 aux tests de perception auditive.
+Langues parlées d'office : commun et halfelin, supplémentaires : elfe, gnome, gobelin, nain et orque.
+Classe de prédilection : Roublard.
+finRace
+Nain
+Humanoïde
++2 Constitution, -2 Charisme.
+Taille moyenne.
+Vitesse de déplacement de base : 6 m. Pas de gêne quelque soit l'armure portée.
+Vision dans le noir.
+Connaissance de la pierre (+2 tests de fouille pour voir si la pierre est travaillée ou non).
+Armes familières : Hache de guerre naine et Urgrosh nain considérés comme des armes de guerre plutôt que des armes éxotiques.
+Stabilité : Bonus racial de +4 pour résister aux bousculades et crocs en jambe.
+Bonus racial de +2 aux jets de sauvegarde contre le poison.
+Bonus racial de +2 aux jets de sauvegarde contre tous les sorts.
+Bonus racial de +1 aux jets d'attaque contre les orques, et les gobelinoïdes.
+Bonus d'esquive de +4 contre les créatures de type géant.
+Bonus racial de +2 aux tests d'estimation liés aux objets métalliques ou en pierre.
+Bonus racial de +2 aux tests d'artisanats liés à la pierre ou aux métaux.
+Langues parlées d'office : commun et nain, supplémentaires : commun des profondeurs, géant, gnome, gobelin, orque et terreux.
+Classe de prédilection : Guerrier.
+finRace
+Ogre
+Géant
++10 Force, -2 Dextérité, +4 Constitution, -4 Intelligence, -4 Charisme
+Grande taille.
+Vitesse de déplacement de base : 12m.
+Vision dans le noir, vision nocturne.
+Bonus d'armure naturelle de +5.
+Langues parlées d'office : commun et géant, supplémentaire : nain, orque, gobelin, terreux.
+Classe de prédilection : Barbare.
+finRace
+Orque
+Humanoïde
++4 Force, -2 Intelligence, -2 Sagesse, -2 Charisme.
+Taille moyenne.
+Vitesse de déplacement de base : 9m.
+Vision dans le noir.
+Sensibilité à la lumière. Les orques sont éblouis par temps clair.
+Langues d'office : commun et orque, supplémentaires : commun des profondeurs, géans, gnoll, gobelin, nain.
+Classe de prédilection : Barbare.
+finRace
+Gobelin
+Gobelinoïde
+-2 Force, +2 Dextérité, -2 Charisme.
+Petite taille.
+Vitesse de déplacement de base : 9m.
+Vision dans le noir.
+Bonus racial de +4 au déplacement silencieux et équitation.
+Langues d'office : commun et gobelin, supplémentaire : draconien, elfe, gnoll, géant, orque.
+Classe de prédilection : Roublard.
+finRace
+Satyre
+Fée
++2 Dextérité, +2 Constitution, +2 Intelligence, +2 Sagesse, +2 Charisme
+Taille Moyenne.
+Vitesse de déplacement de base : 12m.
+Vision nocturne.
+Dés de vie raciaux : le satyre commence avec 5 niveau de fée qui lui confèrent 5d8 de vie, bonus de base à l'attaque de +2 et bonus de sauvegarde : Réf +4, Vig +1 et Vol+4.
+Bonus d'armure naturelle +4.
+Arme naturelle. Coup de tête(1d6).
+Attaque spéciale. Flûte de Pan. (le Satyre joue de sa flûte et affecte les personnes dans un rayon de 18m de : charme-personne, sommeil ou terreur. jet de volonté : 13)
+Particularité : Réduction des dégâts(5/fer froid).
+Langues d'office : sylvestre, supplémentaire : commun, elfe, gnome.
+Classe de prédilection. Barde.
+finRace
+Kobold
+Humanoïde(reptilien)
+-4 Force, +2 Dextérité, -2 Constitution.
+Petite taille.
+Vitesse de déplacement de base : 9m.
+Vision dans le noir.
+Bonus racial de +2 en artisanat(piège), fouille et profession(mineur).
+Bonus d'armure naturelle +1.
+Sensibilité à la lumière. Les Kobold sont éblouis par temps clair et par les sorts lumineux.
+Langues d'office : draconien, supplémentaire : commun, commun des profondeurs.
+Classe de prédilection : Ensorceleur.
+finRace
+
