@@ -1,5 +1,5 @@
 /**
-    Copyright 2007, Aurélien Pêcheur, Jonathan Mondon, Yannick Balla
+    Copyright 2007, Aurï¿½lien Pï¿½cheur, Jonathan Mondon, Yannick Balla
  
     This file is part of Editeur Donjon.
 
@@ -31,9 +31,9 @@ import org.jvnet.substance.*;
 public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListener{
 
 	private UneCarte saCarte;//carte en cours
-	private String sonTypeSelectionne;//type sélectionné, utile pour le mode CHANGER_TERRAIN
+	private String sonTypeSelectionne;//type sï¿½lectionnï¿½, utile pour le mode CHANGER_TERRAIN
 
-	//les différents panneaux
+	//les diffï¿½rents panneaux
 	private JSplitPane lePanneauDeBase;
 	private JPanel sonPanneauContexte;
 	private JPanel saZoneCarte;
@@ -48,7 +48,7 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
      */
 	public final static int JOUER = 0;
     /**
-     * mode éditer
+     * mode ï¿½diter
      */
 	public final static int EDITER = 1;
     /**
@@ -56,14 +56,14 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
      */
 	public final static int CHANGER_TERRAIN = 2;
     /**
-     * mode intermédiaire, permet dans certains cas d'éviter des erreurs
+     * mode intermï¿½diaire, permet dans certains cas d'ï¿½viter des erreurs
      */
 	public final static int ETAT_INTER = 3;
 
 
 	UnEditeurDonjon(){
-		//Cree la fenêtre
-		super("Gestionnaire de Campagne Donjons et Dragons");
+		//Cree la fenï¿½tre
+		super("Manager of Dungeons and Dragons Campaign");
 		Toolkit leToolkit = Toolkit.getDefaultToolkit();
 		Image lImage = leToolkit.getImage("./aide/perso.gif");
 		setIconImage(lImage);
@@ -76,7 +76,7 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 
 		setJMenuBar(creeLaBarreDeMenu());
 		setContentPane(creeLesPanneaux());
-		//Créer le sélectionneur de fichier
+		//Crï¿½er le sï¿½lectionneur de fichier
 		sonSelectionneurDeFichier = new JFileChooser("./Campagnes/");
 		sonSelectionneurDeFichier.setFileFilter(new javax.swing.filechooser.FileFilter(){
 			public boolean accept(File telFic) {
@@ -87,7 +87,7 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 					return false;
 			}
 
-			public String getDescription() { return "Fichier de Carte - Editeur Donjons et Dragons (.cjay)"; }
+			public String getDescription() { return "Map File - Editor Dungeons and Dragons (.cjay)"; }
 		});
 		sonSelectionneurDeFichier.setAcceptAllFileFilterUsed(false);
 
@@ -104,87 +104,87 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 		JMenuItem lOption;
 		JRadioButtonMenuItem lOptionRadio;
 
-		//création de la barre de menu
+		//crï¿½ation de la barre de menu
 		laBarreDeMenu = new JMenuBar();
 
-		//création du premier menu : fichier
-		leMenu = new JMenu("Fichier");
+		//crï¿½ation du premier menu : fichier
+		leMenu = new JMenu("File");
 		laBarreDeMenu.add(leMenu);
 
 		//ajouts de choix dans le menu
-		lOption = new JMenuItem("Nouveau", KeyEvent.VK_N);
+		lOption = new JMenuItem("New", KeyEvent.VK_N);
 		lOption.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, ActionEvent.CTRL_MASK));//raccourcis clavier ctrl+N
-		lOption.addActionListener(this);//préviens qu'une action a lieux
+		lOption.addActionListener(this);//prï¿½viens qu'une action a lieux
 		leMenu.add(lOption);
-		lOption = new JMenuItem("Ouvrir", KeyEvent.VK_O);
+		lOption = new JMenuItem("Open", KeyEvent.VK_O);
 		lOption.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, ActionEvent.CTRL_MASK));
 		lOption.addActionListener(this);
 		leMenu.add(lOption);
 		leMenu.addSeparator();
-		lOption = new JMenuItem("Enregistrer", KeyEvent.VK_S);
+		lOption = new JMenuItem("Save", KeyEvent.VK_S);
 		lOption.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, ActionEvent.CTRL_MASK));
 		lOption.addActionListener(this);
 		leMenu.add(lOption);
 		leMenu.addSeparator();
-		lOption = new JMenuItem("Quitter", KeyEvent.VK_Q);
+		lOption = new JMenuItem("Quit", KeyEvent.VK_Q);
 		lOption.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, ActionEvent.CTRL_MASK));
 		lOption.addActionListener(this);
 		leMenu.add(lOption);
 
-		//création du deuxième menu : mode
+		//crï¿½ation du deuxiï¿½me menu : mode
 		leMenu = new JMenu("Mode");
 		leMenu.setEnabled(false);
 		laBarreDeMenu.add(leMenu);
 
 		//ajouts de boutons radio (choix du mode)
 		ButtonGroup leGroupeDeBouton = new ButtonGroup();
-		lOptionRadio = new JRadioButtonMenuItem("Edition");
+		lOptionRadio = new JRadioButtonMenuItem("Edit");
 		lOptionRadio.setSelected(true);
 		leGroupeDeBouton.add(lOptionRadio);
-		lOptionRadio.addItemListener(this);//préviens qu'un objet change de statut
+		lOptionRadio.addItemListener(this);//prï¿½viens qu'un objet change de statut
 		leMenu.add(lOptionRadio);
 
-		lOptionRadio = new JRadioButtonMenuItem("Changer le terrain");
+		lOptionRadio = new JRadioButtonMenuItem("Change the field");
 		leGroupeDeBouton.add(lOptionRadio);
 		lOptionRadio.addItemListener(this);
 		leMenu.add(lOptionRadio);
 
-		lOptionRadio = new JRadioButtonMenuItem("Jouer");
+		lOptionRadio = new JRadioButtonMenuItem("Play");
 		leGroupeDeBouton.add(lOptionRadio);
 		lOptionRadio.addItemListener(this);
 		leMenu.add(lOptionRadio);
 
-		//création du troisième menu : edition
-		leMenu = new JMenu("Edition");
+		//crï¿½ation du troisiï¿½me menu : edition
+		leMenu = new JMenu("Edit");
 		leMenu.setEnabled(false);
 		laBarreDeMenu.add(leMenu);
 
 		//Premier sous menu : Personnages
-		leSousMenu = new JMenu("Personnages...");
-		lOption = new JMenuItem("Créer un personnage joueur");
+		leSousMenu = new JMenu("Characters...");
+		lOption = new JMenuItem("Create a character player");
 		lOption.addActionListener(this);
 		leSousMenu.add(lOption);
-		lOption = new JMenuItem("Créer un personnage non-joueur");
+		lOption = new JMenuItem("Create a non-player character");
 		lOption.addActionListener(this);
 		leSousMenu.add(lOption);
-		lOption = new JMenuItem("Editer un personnage");
+		lOption = new JMenuItem("Edit character");
 		lOption.addActionListener(this);
 		leSousMenu.add(lOption);
 		leMenu.add(leSousMenu);
 
-		//Deuxième sous menu : Objet
-		leSousMenu = new JMenu("Objets...");
+		//Deuxiï¿½me sous menu : Objet
+		leSousMenu = new JMenu("Objects...");
 
-		lOption = new JMenuItem("Poser un objet simple");
+		lOption = new JMenuItem("Poser a simple object");
 		lOption.addActionListener(this);
 		leSousMenu.add(lOption);
-		lOption = new JMenuItem("Poser une arme");
+		lOption = new JMenuItem("Poser a weapon");
 		lOption.addActionListener(this);
 		leSousMenu.add(lOption);
-		lOption = new JMenuItem("Poser une armure");
+		lOption = new JMenuItem("Poser an armour");
 		lOption.addActionListener(this);
 		leSousMenu.add(lOption);
-		lOption = new JMenuItem("Poser un consommable");
+		lOption = new JMenuItem("Poser a consumable");
 		lOption.addActionListener(this);
 		leSousMenu.add(lOption);
 		leMenu.add(leSousMenu);
@@ -195,76 +195,76 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 		leMenu.add(lOption);
 
 
-		//création du quatrième menu : création (pour tout ce qui peut se créer sans avoir de carte)
-		leMenu = new JMenu("Création");
+		//crï¿½ation du quatriï¿½me menu : crï¿½ation (pour tout ce qui peut se crï¿½er sans avoir de carte)
+		leMenu = new JMenu("Creation");
 		laBarreDeMenu.add(leMenu);
-		leSousMenu = new JMenu("Objets...");
-		lOption = new JMenuItem("Créer un objet simple");
+		leSousMenu = new JMenu("Objects...");
+		lOption = new JMenuItem("Create a simple object");
 		lOption.addActionListener(this);
 		leSousMenu.add(lOption);
-		lOption = new JMenuItem("Créer une arme");
+		lOption = new JMenuItem("Create a weapon");
 		lOption.addActionListener(this);
 		leSousMenu.add(lOption);
-		lOption = new JMenuItem("Créer un consommable");
+		lOption = new JMenuItem("Create a consumable");
 		lOption.addActionListener(this);
 		leSousMenu.add(lOption);
-		lOption = new JMenuItem("Créer une armure");
+		lOption = new JMenuItem("Create an armour");
 		lOption.addActionListener(this);
 		leSousMenu.add(lOption);
 		leSousMenu.addSeparator();
-		lOption = new JMenuItem("Editer un objet simple");
+		lOption = new JMenuItem("Edit a simple object");
 		lOption.addActionListener(this);
 		leSousMenu.add(lOption);
-		lOption = new JMenuItem("Editer une arme");
+		lOption = new JMenuItem("Edit a weapon");
 		lOption.addActionListener(this);
 		leSousMenu.add(lOption);
-		lOption = new JMenuItem("Editer une armure");
+		lOption = new JMenuItem("Edit an armour");
 		lOption.addActionListener(this);
 		leSousMenu.add(lOption);
-		lOption = new JMenuItem("Editer un consommable");
+		lOption = new JMenuItem("Edit a consumable");
 		lOption.addActionListener(this);
 		leSousMenu.add(lOption);
 		leMenu.add(leSousMenu);
-		lOption = new JMenuItem("Créer un type de case");
+		lOption = new JMenuItem("Create a type of box(?)");
 		lOption.addActionListener(this);
 		leMenu.add(lOption);
-                lOption = new JMenuItem("Créer une race");
+        lOption = new JMenuItem("Create a race");
 		lOption.addActionListener(this);
 		leMenu.add(lOption);
-		lOption = new JMenuItem("Créer une classe");
+		lOption = new JMenuItem("Create a class");
 		lOption.addActionListener(this);
 		leMenu.add(lOption);
-		lOption = new JMenuItem("Créer un sort");
+		lOption = new JMenuItem("Create a spell");
 		lOption.addActionListener(this);
 		leMenu.add(lOption);
-		lOption = new JMenuItem("Créer une capacité");
+		lOption = new JMenuItem("Build capacity");
 		lOption.addActionListener(this);
 		leMenu.add(lOption);
                 
 
-		//création du quatrième menu : jouer
-		leMenu = new JMenu("Jouer");
+		//crï¿½ation du quatriï¿½me menu : jouer
+		leMenu = new JMenu("Play");
 		leMenu.setEnabled(false);
 		laBarreDeMenu.add(leMenu);
 		
-		leSousMenu = new JMenu("Voir la liste...");
-		lOption = new JMenuItem("des événements");
+		leSousMenu = new JMenu("See the list...");
+		lOption = new JMenuItem("events");
 		lOption.addActionListener(this);
 		leSousMenu.add(lOption);
-		lOption = new JMenuItem("des personnages");
+		lOption = new JMenuItem("characters");
 		lOption.addActionListener(this);
 		leSousMenu.add(lOption);
 		leMenu.add(leSousMenu);
 
-		lOption = new JMenuItem("Déplacer un personnage", KeyEvent.VK_D);
+		lOption = new JMenuItem("Move one character", KeyEvent.VK_D);
 		lOption.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_D, ActionEvent.CTRL_MASK));//raccourcis clavier ctrl+D
 		lOption.addActionListener(this);
 		leMenu.add(lOption);
-		lOption = new JMenuItem("Editer des stats", KeyEvent.VK_E);
+		lOption = new JMenuItem("Edit the stats", KeyEvent.VK_E);
 		lOption.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_E, ActionEvent.CTRL_MASK));//raccourcis clavier ctrl+D
 		lOption.addActionListener(this);
 		leMenu.add(lOption);
-		lOption = new JMenuItem("Lancer des dés", KeyEvent.VK_L);
+		lOption = new JMenuItem("Roll dice", KeyEvent.VK_L);
 		lOption.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_L, ActionEvent.CTRL_MASK));//raccourcis clavier ctrl+L
 		lOption.addActionListener(this);
 		leMenu.add(lOption);
@@ -272,7 +272,7 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 
 
 
-		//création du sixième menu : à propos
+		//crï¿½ation du sixiï¿½me menu : ï¿½ propos
 		leMenu = new JMenu("?");
 		laBarreDeMenu.add(leMenu);
 		lOption = new JMenuItem("Aide");
@@ -292,7 +292,7 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 		//Cree le Panneau Contextuel
 		sonPanneauContexte = new JPanel();
 
-		//On met les 2 panneaux dans la fenêtre
+		//On met les 2 panneaux dans la fenï¿½tre
 		//JSplitPane
 		lePanneauDeBase = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, true, saZoneCarte, sonPanneauContexte);
 		lePanneauDeBase.setOneTouchExpandable(false);
@@ -302,7 +302,7 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 		saZoneCarte.setMinimumSize(new Dimension(500, 100));
 		sonPanneauContexte.setMinimumSize(new Dimension(300, 100));
 
-		//Taille préférée pour le panneau principal
+		//Taille prï¿½fï¿½rï¿½e pour le panneau principal
 		lePanneauDeBase.setPreferredSize(new Dimension(1024, 700));
 
 		return lePanneauDeBase;
@@ -311,13 +311,13 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 
 	//Capture d'action dans les menus
     /**
-     * réaction des menus
-     * @param telleAction menu activé
+     * rï¿½action des menus
+     * @param telleAction menu activï¿½
      */
 	public void actionPerformed(ActionEvent telleAction){
 		JMenuItem laSource = (JMenuItem)(telleAction.getSource());
 		String leChoix = laSource.getText();
-		if(leChoix=="Nouveau"){
+		if(leChoix=="New"){
 			UneCarte laCarte = new UneCarte(this,this);
 			if (!laCarte.getsonNom().equals("")){
 				saCarte = laCarte;
@@ -330,7 +330,7 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 			}
 		}
 
-		if (leChoix == "Ouvrir"){
+		if (leChoix == "Open"){
 			 int leRetour = sonSelectionneurDeFichier.showOpenDialog(UnEditeurDonjon.this);
 			 if (leRetour == JFileChooser.APPROVE_OPTION) {
 				//Ouverture du fichier
@@ -348,7 +348,7 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 			 }
 		}
 
-		if (leChoix == "Enregistrer"){
+		if (leChoix == "Save"){
 			int leRetour = sonSelectionneurDeFichier.showSaveDialog(UnEditeurDonjon.this);
 			if (leRetour == JFileChooser.APPROVE_OPTION) {
 			    //Ouvre le fichier (pour enregistrer)
@@ -357,8 +357,8 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 			}
 		}
 
-		if (leChoix == "Quitter"){
-			int laDecision = JOptionPane.showConfirmDialog(this, "Désirez-vous sauvegarder avant de quitter?\n", "Quitter", JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE);
+		if (leChoix == "Quit"){
+			int laDecision = JOptionPane.showConfirmDialog(this, "Dï¿½sirez-vous sauvegarder avant de quitter?\n", "Quit", JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE);
 			if (laDecision == JOptionPane.YES_OPTION) {
 				int leRetour = sonSelectionneurDeFichier.showSaveDialog(UnEditeurDonjon.this);
 				if (leRetour == JFileChooser.APPROVE_OPTION) {
@@ -371,40 +371,40 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 			if (laDecision == JOptionPane.NO_OPTION) { System.exit(0); }
 		}
 
-		if (leChoix == "Créer un personnage joueur"){
+		if (leChoix == "Create a character player"){
 			afficheEnContexte(new UnJoueur(this).afficheToi());
 		}
-		if (leChoix == "Créer un personnage non-joueur"){
+		if (leChoix == "Create a non-player character"){
 			afficheEnContexte(new UnNonJoueur(this).afficheToi());
 		}
-		if (leChoix == "Créer un objet simple"){
+		if (leChoix == "Create a simple object"){
 			afficheEnContexte(new UnObjet().afficheToi());
 		}
-		if (leChoix == "Créer une armure"){
+		if (leChoix == "Create an armour"){
 			afficheEnContexte(new UneArmure().afficheToi());
 		}
-		if (leChoix == "Créer une arme"){
+		if (leChoix == "Create a weapon"){
 			afficheEnContexte(new UneArme().afficheToi());
 		}
-		if (leChoix == "Créer un consommable"){
+		if (leChoix == "Create a consumable"){
 			afficheEnContexte(new UnConsommable().afficheToi());
 		}
-		if (leChoix == "Créer un type de case"){
+		if (leChoix == "Create a type of box(?)"){
 			afficheEnContexte(new UnType());
 		}
-		if (leChoix == "Créer une classe"){
+		if (leChoix == "Create a class"){
 			afficheEnContexte(new UneClasse().afficheToi());
 		}
-		if (leChoix == "Créer un sort") {
+		if (leChoix == "Create a spell") {
 			afficheEnContexte(new UnSort().afficheToi());
 		}
-                if (leChoix == "Créer une race"){
+                if (leChoix == "Create a race"){
 			afficheEnContexte(new UneRace().creeToi());
 		}
-		if (leChoix == "Créer une capacité"){
+		if (leChoix == "Build capacity"){
 			afficheEnContexte(new UneCapacite().afficheToi());
 		}
-		if ((leChoix == "Editer un personnage") || (leChoix == "Editer des stats")){
+		if ((leChoix == "Edit character") || (leChoix == "Edit the stats")){
 			Vector<UneCreature> lesCreatures = saCarte.getsesCreatures();
 			String[] lesChoixPossibles = new String[lesCreatures.size()];
 			for (int i = 0; i < lesCreatures.size(); i++) {
@@ -415,7 +415,7 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 				if (leChoixCrea != null) {
 					int i=0;
 					while (!leChoixCrea.equals(lesChoixPossibles[i])) i++;
-					if (leChoix == "Editer un personnage")
+					if (leChoix == "Edit character")
 						afficheEnContexte(lesCreatures.get(i).afficheToi());
 					else
 						afficheEnContexte(lesCreatures.get(i).editeTesStats());
@@ -423,34 +423,34 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 			}
 			catch (Exception lException) { JOptionPane.showMessageDialog(null, "Il n'y a aucun personnage sur la carte.", "Edition Personnage", JOptionPane.WARNING_MESSAGE); }
 		}
-		if (leChoix == "Editer un objet simple"){
-			String choix = JOptionPane.showInputDialog(null, "Un objet nommé?", "Editer objet", JOptionPane.QUESTION_MESSAGE);
+		if (leChoix == "Edit a simple object"){
+			String choix = JOptionPane.showInputDialog(null, "Un objet nommï¿½?", "Editer objet", JOptionPane.QUESTION_MESSAGE);
 			if(choix!=null)
 				afficheEnContexte(new UnObjet(choix).afficheToi());
 		}
-		if (leChoix == "Editer une armure"){
-			String choix =JOptionPane.showInputDialog(null, "Un armure nommé?", "Editer objet", JOptionPane.QUESTION_MESSAGE);
+		if (leChoix == "Edit an armour"){
+			String choix =JOptionPane.showInputDialog(null, "Un armure nommï¿½?", "Editer objet", JOptionPane.QUESTION_MESSAGE);
 			if (choix != null)
                                 try{
                                     afficheEnContexte(new UneArmure(choix).afficheToi());
                                 }catch(Exception lException){ JOptionPane.showMessageDialog(null,"Ceci n'est pas une armure.","Erreur",JOptionPane.WARNING_MESSAGE);}
 		}
-		if (leChoix == "Editer une arme"){
-			String choix =JOptionPane.showInputDialog(null, "Un arme nommé?", "Editer objet", JOptionPane.QUESTION_MESSAGE);
+		if (leChoix == "Edit a weapon"){
+			String choix =JOptionPane.showInputDialog(null, "Un arme nommï¿½?", "Editer objet", JOptionPane.QUESTION_MESSAGE);
 			if (choix != null)
                             try{
 				afficheEnContexte(new UneArme(choix).afficheToi());
                            }catch(Exception lException){ JOptionPane.showMessageDialog(null,"Ceci n'est pas une arme","Erreur",JOptionPane.WARNING_MESSAGE);}
 		}
-		if (leChoix == "Editer un consommable"){
-			String choix = JOptionPane.showInputDialog(null, "Un consommable nommé?", "Editer objet", JOptionPane.QUESTION_MESSAGE);
+		if (leChoix == "Edit a consumable"){
+			String choix = JOptionPane.showInputDialog(null, "Un consommable nommï¿½?", "Editer objet", JOptionPane.QUESTION_MESSAGE);
 			if (choix != null)
                             try{
 				afficheEnContexte(new UnConsommable(choix).afficheToi());
                             }catch(Exception lException){ JOptionPane.showMessageDialog(null,"Ceci n'est pas un consommable","Erreur",JOptionPane.WARNING_MESSAGE);}
 		}
-		if (leChoix == "Poser un objet simple"){
-			String laChaine = JOptionPane.showInputDialog(null, "Quel objet pose-t-on et où?\nDonnez les informations au format suivant : nom,X,Y", "Poser un objet", JOptionPane.QUESTION_MESSAGE);
+		if (leChoix == "Poser a simple object"){
+			String laChaine = JOptionPane.showInputDialog(null, "Quel objet pose-t-on et oï¿½?\nDonnez les informations au format suivant : nom,X,Y", "Poser un objet", JOptionPane.QUESTION_MESSAGE);
 			if (laChaine!=null)
 				try{
 					int X = Integer.parseInt(laChaine.split(",")[1]);
@@ -458,10 +458,10 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 					saCarte.getsesCases()[Y][X].addUnObjet(new UnObjet(laChaine.split(",")[0]));
 					afficheLaCarte();
 				}
-				catch (Exception lException) { JOptionPane.showMessageDialog(null, "Format de donnée non reconnu ou case inexistante", "ERREUR", JOptionPane.ERROR_MESSAGE); }
+				catch (Exception lException) { JOptionPane.showMessageDialog(null, "Format de donnï¿½e non reconnu ou case inexistante", "ERREUR", JOptionPane.ERROR_MESSAGE); }
 		}
-		if (leChoix == "Poser une armure"){
-			String laChaine = JOptionPane.showInputDialog(null, "Quelle armure pose-t-on et où?\nDonnez les informations au format suivant : nom,X,Y", "Poser un objet", JOptionPane.QUESTION_MESSAGE);
+		if (leChoix == "Poser an armour"){
+			String laChaine = JOptionPane.showInputDialog(null, "Quelle armure pose-t-on et oï¿½?\nDonnez les informations au format suivant : nom,X,Y", "Poser un objet", JOptionPane.QUESTION_MESSAGE);
 				if (laChaine!=null)
 				try{
 					int X = Integer.parseInt(laChaine.split(",")[1]);
@@ -469,10 +469,10 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 					saCarte.getsesCases()[Y][X].addUnObjet(new UneArmure(laChaine.split(",")[0]));
 					afficheLaCarte();
 				}
-				catch (Exception lException) { JOptionPane.showMessageDialog(null, "Format de donnée non reconnu ou case inexistante", "ERREUR", JOptionPane.ERROR_MESSAGE); }
+				catch (Exception lException) { JOptionPane.showMessageDialog(null, "Format de donnï¿½e non reconnu ou case inexistante", "ERREUR", JOptionPane.ERROR_MESSAGE); }
 		}
-		if (leChoix == "Poser une arme"){
-			String laChaine = JOptionPane.showInputDialog(null, "Quelle arme pose-t-on et où?\nDonnez les informations au format suivant : nom,X,Y", "Poser un objet", JOptionPane.QUESTION_MESSAGE);
+		if (leChoix == "Poser a weapon"){
+			String laChaine = JOptionPane.showInputDialog(null, "Quelle arme pose-t-on et oï¿½?\nDonnez les informations au format suivant : nom,X,Y", "Poser un objet", JOptionPane.QUESTION_MESSAGE);
 			if (laChaine!=null)
 				try{
 					int X = Integer.parseInt(laChaine.split(",")[1]);
@@ -480,10 +480,10 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 					saCarte.getsesCases()[Y][X].addUnObjet(new UneArme(laChaine.split(",")[0]));
 					afficheLaCarte();
 				}
-				catch (Exception lException) { JOptionPane.showMessageDialog(null, "Format de donnée non reconnu ou case inexistante", "ERREUR", JOptionPane.ERROR_MESSAGE); }
+				catch (Exception lException) { JOptionPane.showMessageDialog(null, "Format de donnï¿½e non reconnu ou case inexistante", "ERREUR", JOptionPane.ERROR_MESSAGE); }
 		}
-		if (leChoix == "Poser un consommable"){
-			String laChaine = JOptionPane.showInputDialog(null, "Quel consommable pose-t-on et où?\nDonnez les informations au format suivant : nom,X,Y", "Poser un objet", JOptionPane.QUESTION_MESSAGE);
+		if (leChoix == "Poser a consumable"){
+			String laChaine = JOptionPane.showInputDialog(null, "Quel consommable pose-t-on et oï¿½?\nDonnez les informations au format suivant : nom,X,Y", "Poser un objet", JOptionPane.QUESTION_MESSAGE);
 			if (laChaine!=null)
 				try{
 					int X = Integer.parseInt(laChaine.split(",")[1]);
@@ -491,17 +491,17 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 					saCarte.getsesCases()[Y][X].addUnObjet(new UnConsommable(laChaine.split(",")[0]));
 					afficheLaCarte();
 				}
-				catch (Exception lException) { JOptionPane.showMessageDialog(null, "Format de donnée non reconnu ou case inexistante", "ERREUR", JOptionPane.ERROR_MESSAGE); }
+				catch (Exception lException) { JOptionPane.showMessageDialog(null, "Format de donnï¿½e non reconnu ou case inexistante", "ERREUR", JOptionPane.ERROR_MESSAGE); }
 		}
-		if (leChoix == "Déplacer un personnage") {
+		if (leChoix == "Move one character") {
 			Vector<UnJoueur> lesJoueurs = saCarte.getsesJoueurs();
 			String[] lesChoixPossibles = new String[lesJoueurs.size()+1];
-			lesChoixPossibles[0] = "Tous les joueurs";
+			lesChoixPossibles[0] = "All players";
 			for (int i = 1; i <= lesJoueurs.size(); i++){
 				lesChoixPossibles[i] = lesJoueurs.get(i-1).getsonNom();
 			}
 			try{
-				String leChoixCrea = (String)JOptionPane.showInputDialog(this, "Qui déplace-t-on?", "Deplacement Personnage", JOptionPane.QUESTION_MESSAGE, null, lesChoixPossibles, lesChoixPossibles[0]);
+				String leChoixCrea = (String)JOptionPane.showInputDialog(this, "Qui dï¿½place-t-on?", "Deplacement Personnage", JOptionPane.QUESTION_MESSAGE, null, lesChoixPossibles, lesChoixPossibles[0]);
 				if (leChoixCrea != null){
 					String laDest = JOptionPane.showInputDialog(this, "Veuillez indiquer la destination de " + leChoixCrea + ".\nUtilisez le format suivant : direction,distance.\nDirections possibles : N,S,E,O,NE,NO,SE,SO.\nLa distance est en case (rappel : 1 case = 1,5m)", "Deplacement", JOptionPane.QUESTION_MESSAGE);
 					if (leChoixCrea.equals(lesChoixPossibles[0])){
@@ -521,34 +521,34 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 			}
 			catch (Exception lException) { JOptionPane.showMessageDialog(this, "Il n'y a aucun joueur sur la carte.", "Edition Personnage", JOptionPane.WARNING_MESSAGE); }		
 		}
-		if (leChoix == "Lancer des dés"){
-			String lesDes = JOptionPane.showInputDialog(this, "Vous êtes sur le point de lancer des dés.\nUtilisez la syntaxe suivante : xdy, où x est le nombre de dés, et y leur valeur.", "Lancer de dés", JOptionPane.QUESTION_MESSAGE);
+		if (leChoix == "Roll dice"){
+			String lesDes = JOptionPane.showInputDialog(this, "You are about to launch the dice.\nUse the following syntax: x y, f x is the number of dice, and their value.", "Roll dice", JOptionPane.QUESTION_MESSAGE);
 			if(lesDes!=null){
 				if (lesDes.split("[dD]").length != 2)
-					JOptionPane.showMessageDialog(null, "Erreur : vous n'avez pas respecté le format.", "Erreur : mauvaise saisie!", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "Erreur : vous n'avez pas respectï¿½ le format.", "Erreur : mauvaise saisie!", JOptionPane.ERROR_MESSAGE);
 				else{
 					try{
 						int[] leResultat = lanceLesDes(lesDes);
 						int total = 0;
-						String laChaine = "Résultat : \n";
+						String laChaine = "Rï¿½sultat : \n";
 						for (int i = 0; i < leResultat.length; i++){
-							laChaine += "Dé " + (i + 1) + " : " + leResultat[i] + "\n";
+							laChaine += "Dï¿½ " + (i + 1) + " : " + leResultat[i] + "\n";
 							total += leResultat[i];
 						}
 						laChaine += "total : " + total;
 						JOptionPane.showMessageDialog(null, laChaine);
 					}
 					catch (Exception lException){
-						JOptionPane.showMessageDialog(null, "Erreur : vous n'avez pas respecté le format.", "Erreur : mauvaise saisie!", JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(null, "Erreur : vous n'avez pas respectï¿½ le format.", "Erreur : mauvaise saisie!", JOptionPane.ERROR_MESSAGE);
 					}
 				}
 			}
 		}
-		if (leChoix == "des événements") {
+		if (leChoix == "events") {
 			Vector<UnEvenement> lesEvenements = saCarte.getsesEvenements();
-			String laChaine = "<HTML>Liste des événements : <br>";
+			String laChaine = "<HTML>List of events : <br>";
 			if (lesEvenements.size() == 0)
-				laChaine += "Il n'y a pas d'événements sur la carte";
+				laChaine += "There are no events on the map";
 			else
 				for (int i = 0; i < lesEvenements.size(); i++){
 					laChaine += lesEvenements.get(i).sonNom + " (" + lesEvenements.get(i).saCase.getsonX() + "," + lesEvenements.get(i).saCase.getsonY() + ")<br>";
@@ -558,11 +558,11 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 			lePanneau.add(new JLabel(laChaine));
 			afficheEnContexte(lePanneau);
 		}
-		if (leChoix == "des personnages"){
+		if (leChoix == "characters"){
 			Vector<UneCreature> lesCreatures = saCarte.getsesCreatures();
-			String laChaine = "<HTML>Liste des personnages : <br>";
+			String laChaine = "<HTML>List of characters: <br>";
 			if (lesCreatures.size() == 0)
-				laChaine += "Il n'y a pas de personnages sur la carte";
+				laChaine += "There are no characters on the map";
 			else
 				for (int i = 0; i < lesCreatures.size(); i++){
 					laChaine += lesCreatures.get(i).getsonNom() + " (" + lesCreatures.get(i).getsaPosX() + "," + lesCreatures.get(i).getsaPosY() + ")<br>";
@@ -575,21 +575,21 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 		if (leChoix == "A propos...")
 			JOptionPane.showMessageDialog(this, "<html><table border='0'><tr><td><img src='http://wankin.net/perso_coffre_evt_exemple.jpg' width='60' height='60'></td><th><div align='left'><p>L'&eacute;diteur Donjons et Dragons - version beta 0.7<br>Copyright &copy; 2007, Aur&eacute;lien P&ecirc;cheur, Jonathan Mondon, Yannick Balla<br>L'&eacute;diteur Donjons et Dragons est un logiciel d'aide &agrave; la gestion de campagne pour le jeu &quot;Donjons et Dragons&quot;.<br>Merci &agrave; Jean-Philippe Farrugia l'ensemble du corps enseignant de l'IUT A - Lyon 1 pour leur aide et formation.</p></div></th></tr></table><p><br>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General<br>Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option)<br>any later version.</p><p><br>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without <br>even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the<br>GNU General Public License for more details.</p><p><br>You should have received a copy of the GNU General Public License along with this program. <br></p><p>If not, see <a href='http://www.gnu.org/licenses/'>http://www.gnu.org/licenses/</a>.</p></html>", "A propos...", JOptionPane.PLAIN_MESSAGE);
 		if (leChoix == "Aide")
-			JOptionPane.showMessageDialog(this, "Vous trouverez les fichiers d'aide et tutoriaux dans le répertoire \"Aide\" là où vous avez installé l'Editeur Donjon et Dragon.","A propos...", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(this, "Vous trouverez les fichiers d'aide et tutoriaux dans le rï¿½pertoire \"Aide\" lï¿½ oï¿½ vous avez installï¿½ l'Editeur Donjon et Dragon.","A propos...", JOptionPane.INFORMATION_MESSAGE);
 		if (leChoix == "Modifier la description")
 			saCarte.changeSaDescription();
 	}
 
     /**
-     * réaction du menu mode
-     * @param telleAction mode activé
+     * rï¿½action du menu mode
+     * @param telleAction mode activï¿½
      */
 	public void itemStateChanged(ItemEvent telleAction){
 
-		//on gère les changements de mode
+		//on gï¿½re les changements de mode
 		JMenuItem laSource = (JMenuItem)(telleAction.getSource());
 		String leChoix = laSource.getText();
-		if ((leChoix == "Jouer") && (telleAction.getStateChange() == ItemEvent.SELECTED)) {
+		if ((leChoix == "Play") && (telleAction.getStateChange() == ItemEvent.SELECTED)) {
 			getJMenuBar().getMenu(2).setEnabled(false);
                         getJMenuBar().getMenu(3).setEnabled(true);
 			getJMenuBar().getMenu(4).setEnabled(true);
@@ -597,9 +597,9 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 			afficheEnContexte(new JPanel());
 			getJMenuBar().updateUI();
 			JOptionPane.showMessageDialog(this, saCarte.getsaDescription(), saCarte.getsonNom(), JOptionPane.PLAIN_MESSAGE);
-			afficheLaCarte();//à voir
+			afficheLaCarte();//ï¿½ voir
 		}
-		if ((leChoix == "Changer le terrain") && (telleAction.getStateChange() == ItemEvent.SELECTED)){
+		if ((leChoix == "Change the field") && (telleAction.getStateChange() == ItemEvent.SELECTED)){
 			getJMenuBar().getMenu(2).setEnabled(false);
                         getJMenuBar().getMenu(3).setEnabled(false);
 			getJMenuBar().getMenu(4).setEnabled(false);
@@ -607,7 +607,7 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 			changeLeTerrain();
 			getJMenuBar().updateUI();
 		}
-		if ((leChoix == "Edition") && (telleAction.getStateChange() == ItemEvent.SELECTED)){
+		if ((leChoix == "Edit") && (telleAction.getStateChange() == ItemEvent.SELECTED)){
 			getJMenuBar().getMenu(2).setEnabled(true);
                         getJMenuBar().getMenu(3).setEnabled(true);
 			getJMenuBar().getMenu(4).setEnabled(false);
@@ -618,7 +618,7 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 	}
 
     /**
-     * Méthode permettant en mode CHANGER_TERRAIN de savoir quel terrain doit être appliqué sur les cases
+     * Mï¿½thode permettant en mode CHANGER_TERRAIN de savoir quel terrain doit ï¿½tre appliquï¿½ sur les cases
      * @param telleAction clic sur un terrain du menu contextuel
      */
 	public void selectionneLeTerrain(ItemEvent telleAction){
@@ -627,12 +627,12 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 			sonTypeSelectionne = laSource.getText().split("/")[0];
 	}
 
-	//méthodes permettant l'affichage dans les différents panneaux
+	//mï¿½thodes permettant l'affichage dans les diffï¿½rents panneaux
     /**
-     * Méthode permettant le rafraichissement de la carte.
+     * Mï¿½thode permettant le rafraichissement de la carte.
      */
 	public void afficheLaCarte(){
-		//méthode de mise à jour du panneau carte, utilisée par la carte
+		//mï¿½thode de mise ï¿½ jour du panneau carte, utilisï¿½e par la carte
 		saZoneCarte = saCarte.afficheToi();
 		JPanel lePanneau2 = new JPanel();
 		lePanneau2.add(saZoneCarte);
@@ -642,8 +642,8 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 	}
 
     /**
-     * Méthode permettant d'afficher un panneau  dans le menu contextuel.
-     * @param telPanneau le panneau à afficher
+     * Mï¿½thode permettant d'afficher un panneau  dans le menu contextuel.
+     * @param telPanneau le panneau ï¿½ afficher
      */
 	public void afficheEnContexte(JPanel telPanneau){
 		JPanel lePanneau = new JPanel();
@@ -682,31 +682,31 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 
 	//quelques accesseurs
     /**
-     * Méthode permettant de savoir dans quel mode on se trouve.
+     * Mï¿½thode permettant de savoir dans quel mode on se trouve.
      * @return Renvoie une constante (JOUER,EDITER,MODE_INTER ou CHANGER_TERRAIN)
      */
 	public int getsonMode() { return sonMode; }
     /**
-     * Renvoie le type de terrain  sélectionné pendant le changement de terrain.
-     * @return type de terrain sélectionné
+     * Renvoie le type de terrain  sï¿½lectionnï¿½ pendant le changement de terrain.
+     * @return type de terrain sï¿½lectionnï¿½
      */
 	public String getsonTypeSelectionne() { return sonTypeSelectionne; }
     /**
      * accesseur vers la carte
-     * @return renvoie l'objet UneCarte associé.
+     * @return renvoie l'objet UneCarte associï¿½.
      */
 	public UneCarte getsaCarte(){return saCarte;}
         public void setsaCarte(UneCarte telleCarte){saCarte = telleCarte;}
     /**
-     * change le mode de l'éditeur
+     * change le mode de l'ï¿½diteur
      * @param telMode Constante correspondant au mode.
      */
 	public void setsonMode(int telMode) { sonMode=telMode; }
-	//méthodes utiles pour plusieurs classes
+	//mï¿½thodes utiles pour plusieurs classes
     /**
-     * Lance des dés à l'aide d'une chaine et renvoie le résultat sous forme de tableau.
+     * Lance des dï¿½s ï¿½ l'aide d'une chaine et renvoie le rï¿½sultat sous forme de tableau.
      * @param lesDes Chaine de type "xDy"
-     * @return les résultats
+     * @return les rï¿½sultats
      */
 	public static int[] lanceLesDes(String lesDes){
 		int leNb = Integer.parseInt(lesDes.split("[dD]")[0]);
@@ -719,8 +719,8 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 	}
 
     /**
-     * Déplace un personnage dans la direction voulue
-     * @param telleCreature le personnage à déplacer
+     * Dï¿½place un personnage dans la direction voulue
+     * @param telleCreature le personnage ï¿½ dï¿½placer
      * @param telleDestination chaine de type Direction,Destance
      */
 	public void deplaceLePerso(UneCreature telleCreature, String telleDestination) {
@@ -782,12 +782,12 @@ public class UnEditeurDonjon extends JFrame implements ActionListener, ItemListe
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(null, "Destination inconnue.\nDéplacement annulé.", "Erreur", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "Destination inconnue.\nDï¿½placement annulï¿½.", "Erreur", JOptionPane.ERROR_MESSAGE);
 				}
 			}
-			catch (NumberFormatException lException) { JOptionPane.showMessageDialog(null, "La distance a été mal saisie.\nDéplacement annulé.", "Erreur", JOptionPane.ERROR_MESSAGE); }
+			catch (NumberFormatException lException) { JOptionPane.showMessageDialog(null, "La distance a ï¿½tï¿½ mal saisie.\nDï¿½placement annulï¿½.", "Erreur", JOptionPane.ERROR_MESSAGE); }
 			catch (Exception lException) { 
-                            JOptionPane.showMessageDialog(null, "Format non reconnus ou trop grande distance.\nDéplacement annulé.", "Erreur", JOptionPane.ERROR_MESSAGE);
+                            JOptionPane.showMessageDialog(null, "Format non reconnus ou trop grande distance.\nDï¿½placement annulï¿½.", "Erreur", JOptionPane.ERROR_MESSAGE);
                         }               
 		}
 	}
