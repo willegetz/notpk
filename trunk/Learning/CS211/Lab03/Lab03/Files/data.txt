@@ -6,3 +6,11 @@ M
 ArtHistory 0101
 Calc1 0211
 Philosphy2 0321
+,Nancy Claire
+22
+F
+999-88-777
+15926
+English1 0501
+Calc1 0211
+PhysEd1 0701
