@@ -1,50 +1,21 @@
-//#include <fstream>
-//#include <iostream>
-//#include <iomanip>
-//using namespace std;
-//using std::cout;
-//using std::endl;
-//
-//
-//int main() {
-//  const char* filename = "..\\..\\Files\\data.txt";
-//  std::ifstream inFile(filename);
-//
-//  // Make sure the file stream is good
-//  if(!inFile) {
-//    cout << endl << "Failed to open file " << filename;
-//    return 1;
-//  }
-//
-//  long n = 0;
-//  while(!inFile.eof()) {
-//    inFile >> n;
-//    cout << std::setw(10) << n;
-//  }
-//  cout << endl;
-//  cin.get();
-//  return 0;
-//}
-
 #include <iostream>
 #include <fstream>
 #include <string>
 using namespace std;
 
 	const int studentArraySize = 7;
-	int student1[studentArraySize]; // Student Id, test 1, test 2, test 3, min, max, average
+	int student1[studentArraySize];
 	int student2[studentArraySize];
 	int student3[studentArraySize];
 
 	void ProcessARow(int[]);
 
-//------------------------------------
 int main()
 {
 	const int arraySize = 12;
 	int studentScores[arraySize];
 	int testArray[4];
-
+	"\"
 	ifstream classScores;
 	classScores.open("..\\..\\\\Files\\data.txt");
 	while(!classScores.eof())
@@ -104,42 +75,3 @@ void ProcessARow(int scoreArray[])
 	scoreArray[5] = maxScore;
 	scoreArray[6] = averageScore;
 }
-//------------------------------------
-//
-////// reading a text file
-////#include <iostream>
-////#include <fstream>
-////#include <string>
-////using namespace std;
-////
-////int main () {
-////  string line;
-////  
-////  //the variable of type ifstream:
-////  ifstream myfile;
-////  myfile.open("C:\\Users\\William\\Documents\\Visual Studio 2010\\NoTPK\\trunk\\Learning\\CS211\\Lab01\\Files\\data.txt");
-////  
-////  //check to see if the file is opened:
-////  if (myfile.is_open())
-////  {
-////	//while there are still lines in the
-////	//file, keep reading:
-////	while (! myfile.eof() )
-////	{
-////	  //place the line from myfile into the
-////	  //line variable:
-////	  getline (myfile,line);
-////
-////	  //display the line we gathered:
-////	  cout << line << endl;
-////	  std::cin.get();
-////	}
-////
-////	//close the stream:
-////	myfile.close();
-////  }
-////
-////  else cout << "Unable to open file";
-////
-////  return 0;
-////}
