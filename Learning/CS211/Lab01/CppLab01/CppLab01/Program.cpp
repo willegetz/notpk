@@ -12,10 +12,6 @@ using namespace std;
 
 int main()
 {
-	const int arraySize = 12;
-	int studentScores[arraySize];
-	int testArray[4];
-	"\"
 	ifstream classScores;
 	classScores.open("..\\..\\\\Files\\data.txt");
 	while(!classScores.eof())
