@@ -31,52 +31,78 @@
 #include <string>
 using namespace std;
 
-	const int studentArraySize = 4;
-	int student1[studentArraySize];
+	const int studentArraySize = 7;
+	int student1[studentArraySize]; // Student Id, test 1, test 2, test 3, min, max, average
 	int student2[studentArraySize];
 	int student3[studentArraySize];
 
-void ProcessARow (int scoreArray[ ]);
+	void ProcessARow(int[]);
+
 //------------------------------------
 int main()
 {
 	const int arraySize = 12;
-	int scores[arraySize];
-	int count = 0;
-	int item;
+	int studentScores[arraySize];
+	int testArray[4];
 
-
-
-	ifstream myFile;
-	myFile.open("..\\..\\\\Files\\data.txt");
-	myFile >> item;
-	while(myFile && count < arraySize)
+	ifstream classScores;
+	classScores.open("..\\..\\\\Files\\data.txt");
+	while(!classScores.eof())
 	{
-		scores[count] = item; // stick the item in the array
-		count++;
-		myFile >> item;
+		classScores >> student1[0];
+		classScores >> student1[1];
+		classScores >> student1[2];
+		classScores >> student1[3];
+		ProcessARow(student1);
+
+		classScores >> student2[0];
+		classScores >> student2[1];
+		classScores >> student2[2];
+		classScores >> student2[3];
+		ProcessARow(student2);
+
+		classScores >> student3[0];
+		classScores >> student3[1];
+		classScores >> student3[2];
+		classScores >> student3[3];
+		ProcessARow(student3);
 	}
-	myFile.close();
-	ProcessARow(scores);
+	classScores.close();
+	cout << "Std Id\tA1\tA2\tA3\tMin\tMax\tAverage" << endl;
+	cout << "-------------------------------------------------------" << endl;
+	cout << student1[0] << "\t" << student1[1] << "\t" << student1[2] << "\t" << student1[3] << "\t" << student1[4] << "\t" << student1[5] << "\t" << student1[6] << ".0" << endl;
+	cout << student2[0] << "\t" << student2[1] << "\t" << student2[2] << "\t" << student2[3] << "\t" << student2[4] << "\t" << student2[5] << "\t" << student2[6] << ".0" << endl;
+	cout << student3[0] << "\t" << student3[1] << "\t" << student3[2] << "\t" << student3[3] << "\t" << student3[4] << "\t" << student3[5] << "\t" << student3[6] << ".0" << endl;
 	std::cin.get();
 }
 
 void ProcessARow(int scoreArray[])
 {
-	student1[0] = scoreArray[0];
-	student1[1] = scoreArray[1];
-	student1[2] = scoreArray[2];
-	student1[3] = scoreArray[3];
+	int numberOfTests = 3;
+	int minScore = scoreArray[1];
+	int maxScore = scoreArray[1];
+	int sumOfScores = scoreArray[1];
+	int averageScore = 0;
 
-	student2[0] = scoreArray[4];
-	student2[1] = scoreArray[5];
-	student2[2] = scoreArray[6];
-	student2[3] = scoreArray[7];
+	for (int i = 2; i <= numberOfTests; i++)
+	{
+		if (scoreArray[i] < minScore)
+		{
+			minScore = scoreArray[i];
+		}
+		else if (scoreArray[i] > maxScore)
+		{
+			maxScore = scoreArray[i];
+		}
 
-	student3[0] = scoreArray[8];
-	student3[1] = scoreArray[9];
-	student3[2] = scoreArray[10];
-	student3[3] = scoreArray[11];
+		sumOfScores = sumOfScores + scoreArray[i];
+	}
+	
+	averageScore = sumOfScores / numberOfTests;
+
+	scoreArray[4] = minScore;
+	scoreArray[5] = maxScore;
+	scoreArray[6] = averageScore;
 }
 //------------------------------------
 //
