@@ -7,6 +7,7 @@ using namespace std;
 	int student1[studentArraySize];
 	int student2[studentArraySize];
 	int student3[studentArraySize];
+	const char tab = '\t';
 
 	void ProcessARow(int[]);
 
@@ -37,9 +38,9 @@ int main()
 	classScores.close();
 	cout << "Std Id\tA1\tA2\tA3\tMin\tMax\tAverage" << endl;
 	cout << "-------------------------------------------------------" << endl;
-	cout << student1[0] << "\t" << student1[1] << "\t" << student1[2] << "\t" << student1[3] << "\t" << student1[4] << "\t" << student1[5] << "\t" << student1[6] << ".0" << endl;
-	cout << student2[0] << "\t" << student2[1] << "\t" << student2[2] << "\t" << student2[3] << "\t" << student2[4] << "\t" << student2[5] << "\t" << student2[6] << ".0" << endl;
-	cout << student3[0] << "\t" << student3[1] << "\t" << student3[2] << "\t" << student3[3] << "\t" << student3[4] << "\t" << student3[5] << "\t" << student3[6] << ".0" << endl;
+	cout << student1[0] << tab << student1[1] << tab << student1[2] << tab << student1[3] << tab << student1[4] << tab << student1[5] << tab << student1[6] << ".0" << endl;
+	cout << student2[0] << tab << student2[1] << tab << student2[2] << tab << student2[3] << tab << student2[4] << tab << student2[5] << tab << student2[6] << ".0" << endl;
+	cout << student3[0] << tab << student3[1] << tab << student3[2] << tab << student3[3] << tab << student3[4] << tab << student3[5] << tab << student3[6] << ".0" << endl;
 	std::cin.get();
 }
 

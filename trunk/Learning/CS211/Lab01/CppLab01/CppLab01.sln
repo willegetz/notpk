@@ -5,6 +5,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppLab01", "CppLab01\CppLab
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppLab01b", "CppLab01b\CppLab01b.vcxproj", "{33EF3629-D8AF-45A3-A98C-6DFE86B418ED}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppLabc", "CppLabc\CppLabc.vcxproj", "{9A57A77A-C6F2-481C-AFE6-F68D4CE77C6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -19,6 +21,10 @@ Global
 		{33EF3629-D8AF-45A3-A98C-6DFE86B418ED}.Debug|Win32.Build.0 = Debug|Win32
 		{33EF3629-D8AF-45A3-A98C-6DFE86B418ED}.Release|Win32.ActiveCfg = Release|Win32
 		{33EF3629-D8AF-45A3-A98C-6DFE86B418ED}.Release|Win32.Build.0 = Release|Win32
+		{9A57A77A-C6F2-481C-AFE6-F68D4CE77C6F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9A57A77A-C6F2-481C-AFE6-F68D4CE77C6F}.Debug|Win32.Build.0 = Debug|Win32
+		{9A57A77A-C6F2-481C-AFE6-F68D4CE77C6F}.Release|Win32.ActiveCfg = Release|Win32
+		{9A57A77A-C6F2-481C-AFE6-F68D4CE77C6F}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
