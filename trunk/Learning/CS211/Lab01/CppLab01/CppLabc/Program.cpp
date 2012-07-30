@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 using namespace std;
 
 	const int arraySize = 10;
@@ -8,16 +9,14 @@ using namespace std;
 	
 	int arrayA[arraySize];
 	int arrayB[arraySize];
-	int modulo5Array[arraySize];
-
+	vector<int> modulo5Array;
 
 	void ReverseCopyOneArrayToAnother(int[], int[]);
 	void PrintArrayToScreen(int[]);
 	int MeetingCriteriaE(int[]);
-	// Split F and G up into two methods.
-	// New method for G will return the indices for meeting G's criteria.
+	// TODO Combine f and g into one method.  Use the vector to store the indices of Mod5 values
 	int MeetingCriteriaFAndG(int[]);
-	double GetArrayMean(int[]);
+	int GetArrayMean(int[]);
 	int GetArrayMin(int[]);
 
 int main()
@@ -26,12 +25,11 @@ int main()
 	
 	int criteriaE = 0; //Find the number of elements in array A that are >= 80 and <=100.
 	int criteriaF = 0; //Find the number of the elements in array A in which their contents are divisible by 5
-	int criteriaG = 0; //Find the index of the elements in array A in which their contents are divisible by 5.
 	double arrayMean = 0;
 	int arrayMin = 0; //Find the minimum number in array A.
 	bool numberExists = false; // setup for criteria j
 
-	dataFromFile.open("..\\..\\\\Files\\data1.txt");
+	dataFromFile.open("..\\..\\Files\\data1.txt");
 	
 	while(!dataFromFile.eof())
 	{
@@ -51,9 +49,10 @@ int main()
 	PrintArrayToScreen(arrayA);
 	PrintArrayToScreen(arrayB);
 	cin.get();
-
+	
 	criteriaE = MeetingCriteriaE(arrayA);
 	criteriaF = MeetingCriteriaFAndG(arrayA);
+
 	arrayMean = GetArrayMean(arrayA);
 	arrayMin = GetArrayMin(arrayA);
 
@@ -95,7 +94,6 @@ int MeetingCriteriaE(int arrayToCheck[])
 int MeetingCriteriaFAndG(int arrayToCheck[])
 {
 	int elementsMeetingCriteriaF = 0;
-	int modulo5Index = 0;
 
 	for (int i = 0; i < arraySize; i++)
 	{
@@ -103,16 +101,14 @@ int MeetingCriteriaFAndG(int arrayToCheck[])
 		if (elementToCheck % 5 == 0)
 		{
 			elementsMeetingCriteriaF++;
-			
-			modulo5Array[modulo5Index] = i;
-			modulo5Index++;
+			modulo5Array.push_back(i);
 		}
 	}
 
 	return elementsMeetingCriteriaF;
 }
 
-double GetArrayMean(int arrayToCheck[])
+int GetArrayMean(int arrayToCheck[])
 {
 	int arraySum = 0;
 	for (int i = 0; i < arraySize; i++)
