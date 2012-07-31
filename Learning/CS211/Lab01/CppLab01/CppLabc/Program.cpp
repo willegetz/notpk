@@ -10,14 +10,18 @@ using namespace std;
 	int arrayA[arraySize];
 	int arrayB[arraySize];
 	vector<int> modulo5Array;
+	bool numberExists = false;
 
 	void ReverseCopyOneArrayToAnother(int[], int[]);
 	void PrintArrayToScreen(int[]);
 	int MeetingCriteriaE(int[]);
-	// TODO Combine f and g into one method.  Use the vector to store the indices of Mod5 values
 	int MeetingCriteriaFAndG(int[]);
 	int GetArrayMean(int[]);
 	int GetArrayMin(int[]);
+	void SearchIntArray();
+	bool ArraySearch(int);
+	string DisplayNumberExists(bool, int);
+	void PrintVectorToScreen(vector<int>);
 
 int main()
 {
@@ -46,15 +50,29 @@ int main()
 	}
 
 	ReverseCopyOneArrayToAnother(arrayA, arrayB);
+	cout << "The numbers in 'arrayA' are:" << endl;
 	PrintArrayToScreen(arrayA);
+
+	cout << "The numbers in 'arrayB' are:" << endl;
 	PrintArrayToScreen(arrayB);
 	cin.get();
 	
 	criteriaE = MeetingCriteriaE(arrayA);
+	cout << "\nThere are '" << criteriaE << "' numbers that are >= 80 and <= 100 in the array." << endl;
+
 	criteriaF = MeetingCriteriaFAndG(arrayA);
+	cout << "\nThere are '" << criteriaF << "' numbers where their Mod5 is 0." << endl;
+	cout << "\nThe indices of  those number are:" << endl;
+	PrintVectorToScreen(modulo5Array);
+
 
 	arrayMean = GetArrayMean(arrayA);
+	cout << "\nThe mean of the array is '" << arrayMean << "'." << endl;
+
 	arrayMin = GetArrayMin(arrayA);
+	cout << "\nThe minimum value in  the array is '" << arrayMin << "'." << endl;
+
+	SearchIntArray();
 
 	return 0;
 }
@@ -66,11 +84,25 @@ void ReverseCopyOneArrayToAnother(int firstArray[], int secondArray[])
 	{
 		secondArray[i] = firstArray[(arraySize - 1) - i];
 	}
+	cout << "\n";
 }
 
 void PrintArrayToScreen(int arrayToPrint[])
 {
-	cout << arrayToPrint[0] << tab << arrayToPrint[1] << tab << arrayToPrint[2] << tab << arrayToPrint[3] << tab << arrayToPrint[4] << tab << arrayToPrint[5] << tab << arrayToPrint[6] << tab << arrayToPrint[7] << tab << arrayToPrint[8] << tab << arrayToPrint[9] << endl;
+	for (int i = 0; i < arraySize; i++)
+	{
+		cout << arrayToPrint[i] << tab;
+	}
+	cout << "\n";
+}
+
+void PrintVectorToScreen(vector<int> vectorToPrint)
+{
+	for (int i = 0; i < vectorToPrint.size(); i++)
+	{
+		cout << vectorToPrint[i] << tab;
+	}
+	cout << "\n";
 }
 
 int MeetingCriteriaE(int arrayToCheck[])
@@ -132,4 +164,76 @@ int GetArrayMin(int arrayToCheck[])
 	}
 
 	return potentialMin;
+}
+
+void SearchIntArray()
+{
+	int numberToSearchFor = 0;
+	string userEntry;
+	string continueSearch;
+
+	cout << "\nWould you like to search for a number? (Yes or No)" << endl;
+	cin >> continueSearch;
+	
+	if (continueSearch == "Yes")
+	{
+		do
+		{
+			cout << "\nPlease enter a number: ";
+			cin >> userEntry;
+
+			if (atoi(userEntry.c_str()))
+			{
+				numberToSearchFor = atoi(userEntry.c_str());
+				numberExists = ArraySearch(numberToSearchFor);
+				continueSearch = DisplayNumberExists(numberExists, numberToSearchFor);
+			}
+			else
+			{
+				cout << "\n'" << userEntry << "'" << " is not a valid number." << endl;
+				cout << "Would you like to search again? (Yes or No)" << endl;
+				cin >> continueSearch;
+			}
+
+		} while (continueSearch == "Yes");
+		cout << "Good bye" << endl;
+		cin.get();
+		return;
+	}
+	else
+	{
+		cout << "Good bye" << endl;
+		cin.get();
+	}
+}
+
+bool ArraySearch(int numberToSearch)
+{
+	for (int i = 0; i < arraySize; i++)
+	{
+		if (arrayA[i] == numberToSearch)
+		{
+			return true;
+		}
+	}
+}
+
+string DisplayNumberExists(bool itExists, int numberSearchedFor)
+{
+	string userInput;
+
+	if (itExists)
+	{
+		cout << "\nThe number '" << numberSearchedFor << "' exists in the array." << endl;
+		cout << "Would you like to search for another number? (Yes or No)" << endl;
+		cin >> userInput;
+		return userInput;
+	}
+	else
+	{
+		cout << "\nThe number '" << numberSearchedFor << "' does not exist in the array." << endl;
+		cout << "Would you like to search for another number? (Yes or No)" << endl;
+		cin >> userInput;
+		return userInput;
+	}
 }
