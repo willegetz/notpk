@@ -98,7 +98,7 @@ void PrintArrayToScreen(int arrayToPrint[])
 
 void PrintVectorToScreen(vector<int> vectorToPrint)
 {
-	for (int i = 0; i < vectorToPrint.size(); i++)
+	for (int i = 0; i < (int) vectorToPrint.size(); i++)
 	{
 		cout << vectorToPrint[i] << tab;
 	}
@@ -216,6 +216,7 @@ bool ArraySearch(int numberToSearch)
 			return true;
 		}
 	}
+	return false;
 }
 
 string DisplayNumberExists(bool itExists, int numberSearchedFor)
