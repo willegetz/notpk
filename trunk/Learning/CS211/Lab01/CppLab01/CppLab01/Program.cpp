@@ -14,32 +14,32 @@
 
 int main()
 {
-	std::vector<int> student1V;
-	std::vector<int> student2V;
-	std::vector<int> student3V;
-	std::string studentLine;
+	std::vector<int> student1;
+	std::vector<int> student2;
+	std::vector<int> student3;
+	std::string studentScoreLine;
 
 	std::ifstream classScores;
 	classScores.open("..\\..\\Files\\data.txt");
 	while(!classScores.eof())
 	{
-		std::getline(classScores, studentLine);
-		ProcessARow(studentLine, student1V);
+		std::getline(classScores, studentScoreLine);
+		ProcessARow(studentScoreLine, student1);
 
-		std::getline(classScores, studentLine);
-		ProcessARow(studentLine, student2V);
+		std::getline(classScores, studentScoreLine);
+		ProcessARow(studentScoreLine, student2);
 
-		std::getline(classScores, studentLine);
-		ProcessARow(studentLine, student3V);
+		std::getline(classScores, studentScoreLine);
+		ProcessARow(studentScoreLine, student3);
 	}
 	classScores.close();
 	
 	std::cout << header  << std::endl;
 	std::cout << divider << std::endl;
 	
-	DisplayScores(student1V);
-	DisplayScores(student2V);
-	DisplayScores(student3V);
+	DisplayScores(student1);
+	DisplayScores(student2);
+	DisplayScores(student3);
 
 	std::cin.get();
 }
