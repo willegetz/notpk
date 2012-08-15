@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-using namespace std;
 
 	const int studentArraySize = 7;
 	int student1[studentArraySize];
@@ -17,7 +16,7 @@ using namespace std;
 
 int main()
 {
-	ifstream classScores;
+	std::ifstream classScores;
 	classScores.open("..\\..\\\\Files\\data.txt");
 
 	while(!classScores.eof())
@@ -41,11 +40,11 @@ int main()
 		ProcessARow(student3);
 	}
 	classScores.close();
-	cout << "Std Id\tA1\tA2\tA3\tMin\tMax\tAverage" << endl;
-	cout << "-------------------------------------------------------" << endl;
-	cout << student1[0] << tab << student1[1] << tab << student1[2] << tab << student1[3] << tab << student1[4] << tab << student1[5] << tab << student1[6] << ".0" << endl;
-	cout << student2[0] << tab << student2[1] << tab << student2[2] << tab << student2[3] << tab << student2[4] << tab << student2[5] << tab << student2[6] << ".0" << endl;
-	cout << student3[0] << tab << student3[1] << tab << student3[2] << tab << student3[3] << tab << student3[4] << tab << student3[5] << tab << student3[6] << ".0" << endl;
+	std::cout << "Std Id\tA1\tA2\tA3\tMin\tMax\tAverage" << std::endl;
+	std::cout << "-------------------------------------------------------" << std::endl;
+	std::cout << student1[0] << tab << student1[1] << tab << student1[2] << tab << student1[3] << tab << student1[4] << tab << student1[5] << tab << student1[6] << ".0" << std::endl;
+	std::cout << student2[0] << tab << student2[1] << tab << student2[2] << tab << student2[3] << tab << student2[4] << tab << student2[5] << tab << student2[6] << ".0" << std::endl;
+	std::cout << student3[0] << tab << student3[1] << tab << student3[2] << tab << student3[3] << tab << student3[4] << tab << student3[5] << tab << student3[6] << ".0" << std::endl;
 	std::cin.get();
 }
 
