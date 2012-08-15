@@ -1,74 +1,76 @@
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <string>
-using namespace std;
+#include <vector>
 
-	const int studentArraySize = 7;
-	int student1[studentArraySize];
-	int student2[studentArraySize];
-	int student3[studentArraySize];
 	const char tab = '\t';
 
-	void ProcessARow(int[]);
+	std::vector<int> ProcessARow(std::string);
 
 int main()
 {
-	ifstream classScores;
-	classScores.open("..\\..\\\\Files\\data.txt");
+	std::vector<int> student1V;
+	std::vector<int> student2V;
+	std::vector<int> student3V;
+	std::string studentLine;
+
+	std::ifstream classScores;
+	classScores.open("..\\..\\Files\\data.txt");
 	while(!classScores.eof())
 	{
-		classScores >> student1[0];
-		classScores >> student1[1];
-		classScores >> student1[2];
-		classScores >> student1[3];
-		ProcessARow(student1);
+		std::getline(classScores, studentLine);
+		student1V = ProcessARow(studentLine);
 
-		classScores >> student2[0];
-		classScores >> student2[1];
-		classScores >> student2[2];
-		classScores >> student2[3];
-		ProcessARow(student2);
+		std::getline(classScores, studentLine);
+		student2V = ProcessARow(studentLine);
 
-		classScores >> student3[0];
-		classScores >> student3[1];
-		classScores >> student3[2];
-		classScores >> student3[3];
-		ProcessARow(student3);
+		std::getline(classScores, studentLine);
+		student3V = ProcessARow(studentLine);
 	}
 	classScores.close();
-	cout << "Std Id\tA1\tA2\tA3\tMin\tMax\tAverage" << endl;
-	cout << "-------------------------------------------------------" << endl;
-	cout << student1[0] << tab << student1[1] << tab << student1[2] << tab << student1[3] << tab << student1[4] << tab << student1[5] << tab << student1[6] << ".0" << endl;
-	cout << student2[0] << tab << student2[1] << tab << student2[2] << tab << student2[3] << tab << student2[4] << tab << student2[5] << tab << student2[6] << ".0" << endl;
-	cout << student3[0] << tab << student3[1] << tab << student3[2] << tab << student3[3] << tab << student3[4] << tab << student3[5] << tab << student3[6] << ".0" << endl;
+	std::cout << "Std Id\tA1\tA2\tA3\tMin\tMax\tAverage" << std::endl;
+	std::cout << "-------------------------------------------------------" << std::endl;
+	std::cout << student1V[0] << tab << student1V[1] << tab << student1V[2] << tab << student1V[3] << tab << student1V[4] << tab << student1V[5] << tab << student1V[6] << ".0" << std::endl;
+	std::cout << student2V[0] << tab << student2V[1] << tab << student2V[2] << tab << student2V[3] << tab << student2V[4] << tab << student2V[5] << tab << student2V[6] << ".0" << std::endl;
+	std::cout << student3V[0] << tab << student3V[1] << tab << student3V[2] << tab << student3V[3] << tab << student3V[4] << tab << student3V[5] << tab << student3V[6] << ".0" << std::endl;
 	std::cin.get();
 }
 
-void ProcessARow(int scoreArray[])
+std::vector<int> ProcessARow(std::string lineInput)
 {
+	std::stringstream ss(lineInput);
+	std::vector<int> temp;
+	std::string item;
+	while(std::getline(ss, item, tab))
+	{
+		temp.push_back(atoi(item.c_str()));
+	}
+	
 	int numberOfTests = 3;
-	int minScore = scoreArray[1];
-	int maxScore = scoreArray[1];
-	int sumOfScores = scoreArray[1];
+	int minScore = temp[1];
+	int maxScore = temp[1];
+	int sumOfScores = temp[1];
 	int averageScore = 0;
 
 	for (int i = 2; i <= numberOfTests; i++)
 	{
-		if (scoreArray[i] < minScore)
+		if (temp[i] < minScore)
 		{
-			minScore = scoreArray[i];
+			minScore = temp[i];
 		}
-		else if (scoreArray[i] > maxScore)
+		else if (temp[i] > maxScore)
 		{
-			maxScore = scoreArray[i];
+			maxScore = temp[i];
 		}
 
-		sumOfScores = sumOfScores + scoreArray[i];
+		sumOfScores = sumOfScores + temp[i];
 	}
 	
 	averageScore = sumOfScores / numberOfTests;
 
-	scoreArray[4] = minScore;
-	scoreArray[5] = maxScore;
-	scoreArray[6] = averageScore;
+	temp.push_back(minScore);
+	temp.push_back(maxScore);
+	temp.push_back(averageScore);
+	return temp;
 }
