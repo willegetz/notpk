@@ -5,8 +5,12 @@
 #include <vector>
 
 	const char tab = '\t';
+	const std::string header = "Std Id\tA1\tA2\tA3\tMin\tMax\tAverage";
+	const std::string divider = "-------------------------------------------------------";
 
-	std::vector<int> ProcessARow(std::string);
+	void ProcessARow(std::string, std::vector<int>&);
+	void CalculateScoreMetrics(std::vector<int>&);
+	void DisplayScores(std::vector<int>);
 
 int main()
 {
@@ -20,57 +24,73 @@ int main()
 	while(!classScores.eof())
 	{
 		std::getline(classScores, studentLine);
-		student1V = ProcessARow(studentLine);
+		ProcessARow(studentLine, student1V);
 
 		std::getline(classScores, studentLine);
-		student2V = ProcessARow(studentLine);
+		ProcessARow(studentLine, student2V);
 
 		std::getline(classScores, studentLine);
-		student3V = ProcessARow(studentLine);
+		ProcessARow(studentLine, student3V);
 	}
 	classScores.close();
-	std::cout << "Std Id\tA1\tA2\tA3\tMin\tMax\tAverage" << std::endl;
-	std::cout << "-------------------------------------------------------" << std::endl;
-	std::cout << student1V[0] << tab << student1V[1] << tab << student1V[2] << tab << student1V[3] << tab << student1V[4] << tab << student1V[5] << tab << student1V[6] << ".0" << std::endl;
-	std::cout << student2V[0] << tab << student2V[1] << tab << student2V[2] << tab << student2V[3] << tab << student2V[4] << tab << student2V[5] << tab << student2V[6] << ".0" << std::endl;
-	std::cout << student3V[0] << tab << student3V[1] << tab << student3V[2] << tab << student3V[3] << tab << student3V[4] << tab << student3V[5] << tab << student3V[6] << ".0" << std::endl;
+	
+	std::cout << header  << std::endl;
+	std::cout << divider << std::endl;
+	
+	DisplayScores(student1V);
+	DisplayScores(student2V);
+	DisplayScores(student3V);
+
 	std::cin.get();
 }
 
-std::vector<int> ProcessARow(std::string lineInput)
+void ProcessARow(std::string scoreLine, std::vector<int>& scores)
 {
-	std::stringstream ss(lineInput);
-	std::vector<int> temp;
-	std::string item;
-	while(std::getline(ss, item, tab))
+	std::stringstream ss(scoreLine);
+	std::string score;
+	while(std::getline(ss, score, tab))
 	{
-		temp.push_back(atoi(item.c_str()));
+		scores.push_back(atoi(score.c_str()));
 	}
-	
+
+	CalculateScoreMetrics(scores);
+}
+
+void CalculateScoreMetrics(std::vector<int>& scores)
+{
 	int numberOfTests = 3;
-	int minScore = temp[1];
-	int maxScore = temp[1];
-	int sumOfScores = temp[1];
+	int minScore = scores[1];
+	int maxScore = scores[1];
+	int sumOfScores = scores[1];
 	int averageScore = 0;
 
 	for (int i = 2; i <= numberOfTests; i++)
 	{
-		if (temp[i] < minScore)
+		if (scores[i] < minScore)
 		{
-			minScore = temp[i];
+			minScore = scores[i];
 		}
-		else if (temp[i] > maxScore)
+		else if (scores[i] > maxScore)
 		{
-			maxScore = temp[i];
+			maxScore = scores[i];
 		}
 
-		sumOfScores = sumOfScores + temp[i];
+		sumOfScores = sumOfScores + scores[i];
 	}
 	
 	averageScore = sumOfScores / numberOfTests;
 
-	temp.push_back(minScore);
-	temp.push_back(maxScore);
-	temp.push_back(averageScore);
-	return temp;
+	scores.push_back(minScore);
+	scores.push_back(maxScore);
+	scores.push_back(averageScore);
+}
+
+void DisplayScores(std::vector<int> scores)
+{
+	int size = scores.size() - 1;
+	for (int i = 0; i < (size); i++)
+	{
+		std::cout << scores[i] << tab;
+	}
+	std::cout << scores[size] << ".0" << std::endl;
 }
