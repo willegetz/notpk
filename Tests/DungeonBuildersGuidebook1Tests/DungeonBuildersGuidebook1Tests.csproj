@@ -41,6 +41,9 @@
     <Reference Include="RJK.CSharp.CustomLists">
       <HintPath>..\..\DungeonBuildersGuidebook1\Libraries\RJK.CSharp.CustomLists.dll</HintPath>
     </Reference>
+    <Reference Include="RJK.RpgTools">
+      <HintPath>..\..\DungeonBuildersGuidebook1\Libraries\RJK.RpgTools.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

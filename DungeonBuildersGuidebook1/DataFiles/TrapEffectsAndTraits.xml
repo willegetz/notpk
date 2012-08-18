@@ -7,7 +7,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>2</RollUpperBound>
-		<EffectDescription>Ages victim 10d10 years</EffectDescription>
+		<EffectDescription>Ages victim 10d10 ({0}) years</EffectDescription>
 		<EffectRollRequired>true</EffectRollRequired>
 		<EffectDiceToRoll>10d10</EffectDiceToRoll>
 	</Effect>
