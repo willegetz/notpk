@@ -1,0 +1,22 @@
+<Root>
+	<Effect>
+		<RollUpperBound>1</RollUpperBound>
+		<EffectDescription>Absorbs victim into two-dimensional fresco or painting</EffectDescription>
+		<EffectRollRequired>false</EffectRollRequired>
+		<EffectDiceToRoll></EffectDiceToRoll>
+	</Effect>
+	<Effect>
+		<RollUpperBound>2</RollUpperBound>
+		<EffectDescription>Ages victim 10d10 years</EffectDescription>
+		<EffectRollRequired>true</EffectRollRequired>
+		<EffectDiceToRoll>10d10</EffectDiceToRoll>
+	</Effect>
+	<Effect>
+		<RollUpperBound>3</RollUpperBound>
+		<EffectDescription>Lots of Randomness!!</EffectDescription>
+		<EffectRollRequired>true</EffectRollRequired>
+		<EffectDiceToRoll>10d10</EffectDiceToRoll>
+		<EffectDiceToRoll>20d4</EffectDiceToRoll>
+		<EffectDiceToRoll>6d6</EffectDiceToRoll>
+	</Effect>
+</Root>
