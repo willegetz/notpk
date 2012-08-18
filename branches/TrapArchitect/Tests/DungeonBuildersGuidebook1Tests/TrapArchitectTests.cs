@@ -9,6 +9,7 @@ using ApprovalTests.Reporters;
 using System.Threading;
 using System.Xml.Linq;
 using DungeonBuildersGuidebook1;
+using RpgTools.Dice;
 
 namespace DungeonBuildersGuidebook1Tests
 {
@@ -118,7 +119,27 @@ namespace DungeonBuildersGuidebook1Tests
 																		EffectDiceToRoll = p.Elements("EffectDiceToRoll").Select(e => e.Value).ToList(),
 																	}
 															);
-			var blah = 4;
+
+			var sb = new StringBuilder();
+			var results = new List<int>();
+			foreach (var item in effects.Where(r => r.EffectRollRequired == true))
+			{
+				foreach (var die in item.EffectDiceToRoll)
+				{
+					var bag = new DiceCup(DiceDefinition.Parse(die));
+					results.Add(bag.Roll());
+				}
+
+				var blah = string.Format(item.EffectDescription, results[0]);
+
+				item.EffectDescription = blah;
+			}
+
+			foreach (var item in effects)
+			{
+				sb.AppendLine(item.EffectDescription);
+			}
+			Approvals.Verify(sb.ToString());
 		}
 
 		[TestMethod]

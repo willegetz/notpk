@@ -68,17 +68,8 @@
     <Reference Include="RJK.CSharp.CustomLists.RangeDictionary">
       <HintPath>Libraries\RJK.CSharp.CustomLists.RangeDictionary.dll</HintPath>
     </Reference>
-    <Reference Include="RJK.CSharp.Dice">
-      <HintPath>..\..\..\..\VS dll Libraries\RJK_Randomizers\RJK\CSharp\Dice\bin\Debug\RJK.CSharp.Dice.dll</HintPath>
-    </Reference>
-    <Reference Include="RJK.CSharp.GeneralUtilities">
-      <HintPath>..\..\..\..\VS dll Libraries\RJK_Randomizers\RJK\CSharp\GeneralUtilities\Loops\bin\Debug\RJK.CSharp.GeneralUtilities.dll</HintPath>
-    </Reference>
-    <Reference Include="RJK.CSharp.GeneralUtilities.Loops">
-      <HintPath>..\..\..\..\VS dll Libraries\RJK_Randomizers\RJK\CSharp\GeneralUtilities\Loops\bin\Debug\RJK.CSharp.GeneralUtilities.Loops.dll</HintPath>
-    </Reference>
-    <Reference Include="RJK.CSharp.Randomizers">
-      <HintPath>..\..\..\..\VS dll Libraries\RJK_Randomizers\RJK\CSharp\Randomizers\bin\Debug\RJK.CSharp.Randomizers.dll</HintPath>
+    <Reference Include="RJK.RpgTools">
+      <HintPath>Libraries\RJK.RpgTools.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
