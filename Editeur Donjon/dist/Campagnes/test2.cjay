@@ -1,9 +1,0 @@
-nom :test
-largeur :10
-hauteur :10
-type de terrain :herbe
-description :Saisissez l'introduction de votre scénario ici (vous pouvez la modifier plus tard).
-FinDescCarte
-case :0,4
-    type :herbe
-    evenement:Passage vers une carte mère.:1:carte:null
