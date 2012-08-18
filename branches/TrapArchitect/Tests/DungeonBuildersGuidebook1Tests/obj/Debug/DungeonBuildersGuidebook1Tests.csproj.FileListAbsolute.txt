@@ -1,0 +1,13 @@
+C:\Users\William\Documents\Visual Studio 2010\Projects\DungeonBuildersGuidebook1\Tests\DungeonBuildersGuidebook1Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\William\Documents\Visual Studio 2010\Projects\DungeonBuildersGuidebook1\Tests\DungeonBuildersGuidebook1Tests\bin\Debug\DungeonBuildersGuidebook1Tests.dll
+C:\Users\William\Documents\Visual Studio 2010\Projects\DungeonBuildersGuidebook1\Tests\DungeonBuildersGuidebook1Tests\bin\Debug\DungeonBuildersGuidebook1Tests.pdb
+C:\Users\William\Documents\Visual Studio 2010\Projects\DungeonBuildersGuidebook1\Tests\DungeonBuildersGuidebook1Tests\bin\Debug\ApprovalTests.dll
+C:\Users\William\Documents\Visual Studio 2010\Projects\DungeonBuildersGuidebook1\Tests\DungeonBuildersGuidebook1Tests\bin\Debug\ApprovalUtilities.dll
+C:\Users\William\Documents\Visual Studio 2010\Projects\DungeonBuildersGuidebook1\Tests\DungeonBuildersGuidebook1Tests\bin\Debug\DungeonBuildersGuidebook1.exe
+C:\Users\William\Documents\Visual Studio 2010\Projects\DungeonBuildersGuidebook1\Tests\DungeonBuildersGuidebook1Tests\bin\Debug\RJK.CSharp.CustomLists.dll
+C:\Users\William\Documents\Visual Studio 2010\Projects\DungeonBuildersGuidebook1\Tests\DungeonBuildersGuidebook1Tests\bin\Debug\DungeonBuildersGuidebook1.pdb
+C:\Users\William\Documents\Visual Studio 2010\Projects\DungeonBuildersGuidebook1\Tests\DungeonBuildersGuidebook1Tests\bin\Debug\RJK.CSharp.CustomLists.pdb
+C:\Users\William\Documents\Visual Studio 2010\Projects\DungeonBuildersGuidebook1\Tests\DungeonBuildersGuidebook1Tests\obj\Debug\DungeonBuildersGuidebook1Tests.dll
+C:\Users\William\Documents\Visual Studio 2010\Projects\DungeonBuildersGuidebook1\Tests\DungeonBuildersGuidebook1Tests\obj\Debug\DungeonBuildersGuidebook1Tests.pdb
+C:\Users\William\Documents\Visual Studio 2010\Projects\DungeonBuildersGuidebook1\Tests\DungeonBuildersGuidebook1Tests\bin\Debug\RJK.CSharp.CustomLists.RangeDictionary.dll
+C:\Users\William\Documents\Visual Studio 2010\Projects\DungeonBuildersGuidebook1\Tests\DungeonBuildersGuidebook1Tests\bin\Debug\RJK.CSharp.CustomLists.RangeDictionary.pdb
