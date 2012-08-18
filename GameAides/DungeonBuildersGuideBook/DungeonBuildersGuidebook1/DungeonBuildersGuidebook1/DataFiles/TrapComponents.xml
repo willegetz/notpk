@@ -1,0 +1,502 @@
+<Root>
+	<TrapBase>
+		<RollUpperBound>1</RollUpperBound>
+		<TrappedObjectOrArea>The air itself</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>2</RollUpperBound>
+		<TrappedObjectOrArea>The alcove</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>3</RollUpperBound>
+		<TrappedObjectOrArea>The altar</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>4</RollUpperBound>
+		<TrappedObjectOrArea>The aquarium</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>5</RollUpperBound>
+		<TrappedObjectOrArea>The arch</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>6</RollUpperBound>
+		<TrappedObjectOrArea>The armoire</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>7</RollUpperBound>
+		<TrappedObjectOrArea>The armor</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>8</RollUpperBound>
+		<TrappedObjectOrArea>The balcony</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>9</RollUpperBound>
+		<TrappedObjectOrArea>The barrel</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>10</RollUpperBound>
+		<TrappedObjectOrArea>The basin</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>11</RollUpperBound>
+		<TrappedObjectOrArea>The bathtub</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>12</RollUpperBound>
+		<TrappedObjectOrArea>The bed</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>13</RollUpperBound>
+		<TrappedObjectOrArea>The bell</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>14</RollUpperBound>
+		<TrappedObjectOrArea>The bookcase</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>15</RollUpperBound>
+		<TrappedObjectOrArea>The brazier</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>16</RollUpperBound>
+		<TrappedObjectOrArea>The bridge</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>17</RollUpperBound>
+		<TrappedObjectOrArea>The button/switch</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>18</RollUpperBound>
+		<TrappedObjectOrArea>The cabinet</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>19</RollUpperBound>
+		<TrappedObjectOrArea>The cage</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>20</RollUpperBound>
+		<TrappedObjectOrArea>The caldron</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>21</RollUpperBound>
+		<TrappedObjectOrArea>The candelabra</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>22</RollUpperBound>
+		<TrappedObjectOrArea>The cask</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>23</RollUpperBound>
+		<TrappedObjectOrArea>The catwalk</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>24</RollUpperBound>
+		<TrappedObjectOrArea>The ceiling</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>25</RollUpperBound>
+		<TrappedObjectOrArea>The ceiling fan</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>26</RollUpperBound>
+		<TrappedObjectOrArea>The chair</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>27</RollUpperBound>
+		<TrappedObjectOrArea>The chandelier</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>28</RollUpperBound>
+		<TrappedObjectOrArea>The chest</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>29</RollUpperBound>
+		<TrappedObjectOrArea>The chute</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>30</RollUpperBound>
+		<TrappedObjectOrArea>The column</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>31</RollUpperBound>
+		<TrappedObjectOrArea>The crate</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>32</RollUpperBound>
+		<TrappedObjectOrArea>The crystal ball</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>33</RollUpperBound>
+		<TrappedObjectOrArea>The dais</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>34</RollUpperBound>
+		<TrappedObjectOrArea>The desk</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>35</RollUpperBound>
+		<TrappedObjectOrArea>The divan</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>36</RollUpperBound>
+		<TrappedObjectOrArea>The door</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>37</RollUpperBound>
+		<TrappedObjectOrArea>The concealed door</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>38</RollUpperBound>
+		<TrappedObjectOrArea>The secret door</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>39</RollUpperBound>
+		<TrappedObjectOrArea>The drum</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>40</RollUpperBound>
+		<TrappedObjectOrArea>The elevator</TrappedObjectOrArea>
+		<MechanismTypeSpecified>true</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>41</RollUpperBound>
+		<TrappedObjectOrArea>The escalator</TrappedObjectOrArea>
+		<MechanismTypeSpecified>true</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>42</RollUpperBound>
+		<TrappedObjectOrArea>The fireplace</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>43</RollUpperBound>
+		<TrappedObjectOrArea>The floor</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>44</RollUpperBound>
+		<TrappedObjectOrArea>The forcefield</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>45</RollUpperBound>
+		<TrappedObjectOrArea>The fountain</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>46</RollUpperBound>
+		<TrappedObjectOrArea>The fresco</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>47</RollUpperBound>
+		<TrappedObjectOrArea>The furnace</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>48</RollUpperBound>
+		<TrappedObjectOrArea>The glass case</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>49</RollUpperBound>
+		<TrappedObjectOrArea>The harp</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>50</RollUpperBound>
+		<TrappedObjectOrArea>The holy/unholy font</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>51</RollUpperBound>
+		<TrappedObjectOrArea>The hook</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>52</RollUpperBound>
+		<TrappedObjectOrArea>The hourglass</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>53</RollUpperBound>
+		<TrappedObjectOrArea>The idol</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>54</RollUpperBound>
+		<TrappedObjectOrArea>The illusion</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>55</RollUpperBound>
+		<TrappedObjectOrArea>The interdimensional portal</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>56</RollUpperBound>
+		<TrappedObjectOrArea>The iron maiden</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>57</RollUpperBound>
+		<TrappedObjectOrArea>The jar</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>58</RollUpperBound>
+		<TrappedObjectOrArea>The lamp</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>59</RollUpperBound>
+		<TrappedObjectOrArea>The ladder</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>60</RollUpperBound>
+		<TrappedObjectOrArea>The lectern</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>61</RollUpperBound>
+		<TrappedObjectOrArea>The lever</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>62</RollUpperBound>
+		<TrappedObjectOrArea>The magic circle</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>63</RollUpperBound>
+		<TrappedObjectOrArea>The manacles</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>64</RollUpperBound>
+		<TrappedObjectOrArea>The mirror</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>65</RollUpperBound>
+		<TrappedObjectOrArea>The mosaic</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>66</RollUpperBound>
+		<TrappedObjectOrArea>The organ</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>67</RollUpperBound>
+		<TrappedObjectOrArea>The painting</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>68</RollUpperBound>
+		<TrappedObjectOrArea>The passage</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>69</RollUpperBound>
+		<TrappedObjectOrArea>The pedestal</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>70</RollUpperBound>
+		<TrappedObjectOrArea>The pendulum</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>71</RollUpperBound>
+		<TrappedObjectOrArea>The pews</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>72</RollUpperBound>
+		<TrappedObjectOrArea>The pillar</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>73</RollUpperBound>
+		<TrappedObjectOrArea>The pit</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>74</RollUpperBound>
+		<TrappedObjectOrArea>The pool</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>75</RollUpperBound>
+		<TrappedObjectOrArea>The portcullis</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>76</RollUpperBound>
+		<TrappedObjectOrArea>The railing</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>77</RollUpperBound>
+		<TrappedObjectOrArea>The room</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>78</RollUpperBound>
+		<TrappedObjectOrArea>The rug</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>79</RollUpperBound>
+		<TrappedObjectOrArea>The inset shelf</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>80</RollUpperBound>
+		<TrappedObjectOrArea>The slide</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>81</RollUpperBound>
+		<TrappedObjectOrArea>The sliding walkway</TrappedObjectOrArea>
+		<MechanismTypeSpecified>true</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>82</RollUpperBound>
+		<TrappedObjectOrArea>The stairway</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>83</RollUpperBound>
+		<TrappedObjectOrArea>The statue</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>84</RollUpperBound>
+		<TrappedObjectOrArea>The stuffed animal/head</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>85</RollUpperBound>
+		<TrappedObjectOrArea>The table</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>86</RollUpperBound>
+		<TrappedObjectOrArea>The tapestry</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>87</RollUpperBound>
+		<TrappedObjectOrArea>The telescope</TrappedObjectOrArea>
+		<MechanismTypeSpecified>true</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>88</RollUpperBound>
+		<TrappedObjectOrArea>The throne</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>89</RollUpperBound>
+		<TrappedObjectOrArea>The trophy</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>90</RollUpperBound>
+		<TrappedObjectOrArea>The trunk</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>91</RollUpperBound>
+		<TrappedObjectOrArea>The tunnel mouth</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>92</RollUpperBound>
+		<TrappedObjectOrArea>The urn</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>93</RollUpperBound>
+		<TrappedObjectOrArea>The vase</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>94</RollUpperBound>
+		<TrappedObjectOrArea>The vegetation</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>95</RollUpperBound>
+		<TrappedObjectOrArea>The waterclock</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>96</RollUpperBound>
+		<TrappedObjectOrArea>The wall</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>97</RollUpperBound>
+		<TrappedObjectOrArea>The weapon</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>98</RollUpperBound>
+		<TrappedObjectOrArea>The well</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>99</RollUpperBound>
+		<TrappedObjectOrArea>The wheel</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+	<TrapBase>
+		<RollUpperBound>100</RollUpperBound>
+		<TrappedObjectOrArea>The window</TrappedObjectOrArea>
+		<MechanismTypeSpecified>false</MechanismTypeSpecified>
+	</TrapBase>
+</Root>
