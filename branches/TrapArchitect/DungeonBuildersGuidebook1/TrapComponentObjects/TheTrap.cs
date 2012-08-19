@@ -4,37 +4,35 @@ namespace DungeonBuildersGuidebook1.TrapComponentObjects
 {
 	public class TheTrap
 	{
-		private string TrapBase { get; set; }
-		private string TrapEffect { get; set; }
-		private string TrapDamage { get; set; }
-		private string MechanismType { get; set; }
+		private TrapBases TrapBase { get; set; }
+		private TrapEffects TrapEffect { get; set; }
+		private TrapDamages TrapDamage { get; set; }
 
 		public void SetTrapBase(TrapBases trapBase)
 		{
-			TrapBase = trapBase.TrappedObjectOrArea;
-			MechanismType = trapBase.MechanismType;
+				TrapBase = trapBase;
 		}
 
 		public void SetTrapEffect(TrapEffects trapEffect)
 		{
-			TrapEffect = trapEffect.EffectDescription.ToLower();
+			TrapEffect = trapEffect;
 		}
 
 		public void SetTrapDamage(TrapDamages trapDamages)
 		{
-			TrapDamage = trapDamages.DamageDescription.ToLower();
+			TrapDamage = trapDamages;
 		}
 
 		public override string ToString()
 		{
-			return string.Format("{0}{1} {2} and {3}", TrapBase, MechanismType, TrapEffect, TrapDamage);
+			return string.Format("{0}{1} {2} and {3}", TrapBase.TrappedObjectOrArea, TrapBase.MechanismType.ToLower(), TrapEffect.EffectDescription.ToLower(), TrapDamage.DamageDescription.ToLower());
 		}
 
 		public void ChangeMechanismType(string newMechanismType)
 		{
-			if (!string.IsNullOrEmpty(MechanismType))
+			if (!string.IsNullOrEmpty(TrapBase.MechanismType))
 			{
-				MechanismType = string.Format(" ({0})", newMechanismType);
+				TrapBase.MechanismType = string.Format(" ({0})", newMechanismType);
 			}
 		}
 	}

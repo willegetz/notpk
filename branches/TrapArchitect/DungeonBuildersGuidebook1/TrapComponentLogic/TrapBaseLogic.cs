@@ -15,6 +15,7 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 		private XElement trapBasesXml;
 		private IEnumerable<TrapBases> trapBases;
 		private RangeDictionary<int, TrapBases> trapBasesTable;
+		private DiceDefinition diceDefinition;
 		private string xmlTrapComponentsFilePath = @"..\..\..\..\DungeonBuildersGuidebook1\DataFiles\TrapComponents.xml";
 
 		public TrapBaseLogic()
@@ -22,6 +23,7 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 			trapBasesXml = XElement.Load(xmlTrapComponentsFilePath);
 			trapBasesTable = new RangeDictionary<int, TrapBases>();
 			LoadTrappedObjecs();
+			diceDefinition = DiceDefinition.Parse(tableDieRoll);
 		}
 
 		private void LoadTrappedObjecs()
@@ -57,9 +59,32 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 
 		public TrapBases GetSpecificTrapBase(int specificResult)
 		{
-			var trapBase = trapBasesTable[specificResult];
-			trapBase.MechanismType = DetermineMechanismType(trapBase);
-			return trapBase;
+			if (WithinBounds(specificResult))
+			{
+				var trapBase = trapBasesTable[specificResult];
+				trapBase.MechanismType = DetermineMechanismType(trapBase);
+				return trapBase;
+			}
+			else
+			{
+				return new NullTrapBase();
+			}
+
+		}
+
+		private bool WithinBounds(int specificResult)
+		{
+			var min = diceDefinition.NumberOfDice;
+			var max = (diceDefinition.NumberOfDice * diceDefinition.NumberOfSides);
+
+			if (specificResult > min && specificResult < max)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 
 		public static string DetermineMechanismType(TrapBases trapBase)
