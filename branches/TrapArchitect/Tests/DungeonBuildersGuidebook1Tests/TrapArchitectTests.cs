@@ -31,6 +31,7 @@ namespace DungeonBuildersGuidebook1Tests
 		// The trap has a damage potential
 
 		[TestMethod]
+		[Ignore] //Integration
 		public void TestFirstTrap()
 		{
 			var architect = new TrapArchitect();
@@ -39,9 +40,9 @@ namespace DungeonBuildersGuidebook1Tests
 			theTrap.SetTrapBase(architect.GetRandomTrapBase());
 			theTrap.SetTrapEffect(architect.GetRandomTrapEffect());
 			// Trap damages table is calculated using 3d6
-			//theTrap.SetTrapDamage(architect.GetRandomTrapDamage());
+			theTrap.SetTrapDamage(architect.GetRandomTrapDamage());
 			//There is a human input element
-			var blah = 5 + 4;
+			Approvals.Verify(theTrap.ToString());
 		}
 
 		[TestMethod]

@@ -10,6 +10,7 @@ namespace DungeonBuildersGuidebook1
 		private Random randomNumber;
 		protected TrapBaseLogic trapBaseLogic;
 		protected TrapEffectLogic trapEffectLogic;
+		protected TrapDamageLogic trapDamageLogic;
 
 		public TrapArchitect()
 		{
@@ -17,6 +18,7 @@ namespace DungeonBuildersGuidebook1
 			DiceCup.SetRandom(randomNumber);
 			trapBaseLogic = new TrapBaseLogic();
 			trapEffectLogic = new TrapEffectLogic();
+			trapDamageLogic = new TrapDamageLogic();
 		}
 
 		public void SetRandomNumber()
@@ -48,8 +50,7 @@ namespace DungeonBuildersGuidebook1
 
 		public TrapDamages GetRandomTrapDamage()
 		{
-
-			throw new NotImplementedException();
+			return trapDamageLogic.GetRandomTrapDamage();
 		}
 	}
 }

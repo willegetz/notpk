@@ -64,6 +64,7 @@
     <Compile Include="TrapComponentObjects\TrapEffects.cs" />
     <Compile Include="ConsoleApp\TrapEffectsTable10b.cs" />
     <Compile Include="TrapComponentLogic\TrapEffectLogic.cs" />
+    <Compile Include="TrapDamageLogic.cs" />
     <Compile Include="TrapDamages.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataFiles\TrapComponents.xml" />
+    <Content Include="DataFiles\TrapDamages.xml" />
     <Content Include="DataFiles\TrapEffectsAndTraits.xml" />
   </ItemGroup>
   <ItemGroup>
