@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DungeonBuildersGuidebook1
+namespace DungeonBuildersGuidebook1.ConsoleApp
 {
 	class TrapArchitectConsole
 	{

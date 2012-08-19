@@ -11,7 +11,8 @@
     <RootNamespace>DungeonBuildersGuidebook1</RootNamespace>
     <AssemblyName>DungeonBuildersGuidebook1</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -56,6 +57,7 @@
     <Compile Include="ConsoleApp\TrapArchitectConsole.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="TrapComponentObjects\TheTrap.cs" />
     <Compile Include="TrapComponentObjects\TrapBases.cs" />
     <Compile Include="ConsoleApp\TrapBasicsTable10a.cs" />
     <Compile Include="TrapComponentLogic\TrapBaseLogic.cs" />
@@ -107,7 +109,9 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DungeonBuildersGuidebook1.TrapComponentLogic
+namespace DungeonBuildersGuidebook1.TrapComponentObjects
 {
-	public class TrapEffectLogic
+	class TheTrap
 	{
 	}
 }
