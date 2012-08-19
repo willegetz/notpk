@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using RJK.CSharp.CustomLists;
 using ApprovalTests;
 using ApprovalTests.Reporters;
-using System.Threading;
 using System.Xml.Linq;
 using DungeonBuildersGuidebook1;
 using RpgTools.Dice;
@@ -36,25 +33,15 @@ namespace DungeonBuildersGuidebook1Tests
 		[TestMethod]
 		public void TestFirstTrap()
 		{
-			int objectIndex = 40;
-			int result = 60;
-			
-			var trapArchitect = new FakeTrapArchitect();
-			var trapBase = trapArchitect.FakeGetRandomTrapBase(objectIndex);
-			var mechanism = trapArchitect.FakegetMechanismType(trapBase, result);
+			var architect = new TrapArchitect();
+			var theTrap = new TheTrap();
 
-			var firstTrap = new StringBuilder();
-			if (string.IsNullOrEmpty(mechanism))
-			{
-				firstTrap.Append(trapBase.TrappedObjectOrArea);
-			}
-			else
-			{
-				firstTrap.Append(string.Format("{0} ({1})", trapBase.TrappedObjectOrArea, mechanism));
-			}
-
-			Approvals.Verify(firstTrap.ToString());
+			theTrap.SetTrapBase(architect.GetRandomTrapBase());
+			theTrap.SetTrapEffect(architect.GetRandomTrapEffect());
+			// Trap damages table is calculated using 3d6
+			//theTrap.SetTrapDamage(architect.GetRandomTrapDamage());
 			//There is a human input element
+			var blah = 5 + 4;
 		}
 
 		[TestMethod]
@@ -121,25 +108,25 @@ namespace DungeonBuildersGuidebook1Tests
 																	{
 																		RollUpperBound = int.Parse(p.Element("RollUpperBound").Value),
 																		EffectDescription = p.Element("EffectDescription").Value,
-																		EffectRollRequired = bool.Parse(p.Element("EffectRollRequired").Value),
-																		EffectDiceToRoll = p.Elements("EffectDiceToRoll").Select(e => e.Value).ToList(),
+																		//EffectRollRequired = bool.Parse(p.Element("EffectRollRequired").Value),
+																		//EffectDiceToRoll = p.Elements("EffectDiceToRoll").Select(e => e.Value).ToList(),
 																	}
 															);
 
 			var sb = new StringBuilder();
 			var results = new List<int>();
-			foreach (var item in effects.Where(r => r.EffectRollRequired == true))
-			{
-				foreach (var die in item.EffectDiceToRoll)
-				{
-					var bag = new DiceCup(DiceDefinition.Parse(die));
-					results.Add(bag.Roll());
-				}
+			//foreach (var item in effects.Where(r => r.EffectRollRequired == true))
+			//{
+			//    foreach (var die in item.EffectDiceToRoll)
+			//    {
+			//        var bag = new DiceCup(DiceDefinition.Parse(die));
+			//        results.Add(bag.Roll());
+			//    }
 
-				var blah = string.Format(item.EffectDescription, results[0]);
+			//    var blah = string.Format(item.EffectDescription, results[0]);
 
-				item.EffectDescription = blah;
-			}
+			//    item.EffectDescription = blah;
+			//}
 
 			foreach (var item in effects)
 			{
@@ -195,7 +182,7 @@ namespace DungeonBuildersGuidebook1Tests
 	{
 		public TrapBases FakeGetRandomTrapBase(int objectIndex)
 		{
-			return base.trapBaseLogic.GetRandomTrapBase(objectIndex);
+			return base.trapBaseLogic.GetRandomTrapBase();
 		}
 
 		public string FakegetMechanismType(TrapBases trapBase, int result)

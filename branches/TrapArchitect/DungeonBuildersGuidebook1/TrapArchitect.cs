@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using DungeonBuildersGuidebook1.TrapComponentLogic;
 using DungeonBuildersGuidebook1.TrapComponentObjects;
-using DungeonBuildersGuidebook1.ConsoleApp;
+using RpgTools.Dice;
 
 namespace DungeonBuildersGuidebook1
 {
@@ -16,6 +13,8 @@ namespace DungeonBuildersGuidebook1
 
 		public TrapArchitect()
 		{
+			SetRandomNumber();
+			DiceCup.SetRandom(randomNumber);
 			trapBaseLogic = new TrapBaseLogic();
 			trapEffectLogic = new TrapEffectLogic();
 		}
@@ -27,7 +26,7 @@ namespace DungeonBuildersGuidebook1
 
 		public TrapBases GetRandomTrapBase()
 		{
-			return trapBaseLogic.GetRandomTrapBase(randomNumber.Next(1, 100));
+			return trapBaseLogic.GetRandomTrapBase();
 		}
 
 		public string DetermineMechanicalOrMagical(TrapBases trapBase)
@@ -44,7 +43,13 @@ namespace DungeonBuildersGuidebook1
 
 		public TrapEffects GetRandomTrapEffect()
 		{
-			return trapEffectLogic.GetRandomTrapEffect(randomNumber.Next(1, 100));
+			return trapEffectLogic.GetRandomTrapEffect();
+		}
+
+		public TrapDamages GetRandomTrapDamage()
+		{
+
+			throw new NotImplementedException();
 		}
 	}
 }
