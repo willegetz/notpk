@@ -52,5 +52,10 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 		{
 			return trapDamagesTable[DiceCup.Roll(tableDieRoll)];
 		}
+
+		public TrapDamages GetSpecificTrapDamage(int specificResult)
+		{
+			return trapDamagesTable[specificResult];
+		}
 	}
 }

@@ -7,10 +7,12 @@ namespace DungeonBuildersGuidebook1.TrapComponentObjects
 		private string TrapBase { get; set; }
 		private string TrapEffect { get; set; }
 		private string TrapDamage { get; set; }
+		private string MechanismType { get; set; }
 
 		public void SetTrapBase(TrapBases trapBase)
 		{
 			TrapBase = trapBase.TrappedObjectOrArea;
+			MechanismType = trapBase.MechanismType;
 		}
 
 		public void SetTrapEffect(TrapEffects trapEffect)
@@ -25,7 +27,15 @@ namespace DungeonBuildersGuidebook1.TrapComponentObjects
 
 		public override string ToString()
 		{
-			return string.Format("{0} {1} and {2}", TrapBase, TrapEffect, TrapDamage);
+			return string.Format("{0}{1} {2} and {3}", TrapBase, MechanismType, TrapEffect, TrapDamage);
+		}
+
+		public void ChangeMechanismType(string newMechanismType)
+		{
+			if (!string.IsNullOrEmpty(MechanismType))
+			{
+				MechanismType = string.Format(" ({0})", newMechanismType);
+			}
 		}
 	}
 }

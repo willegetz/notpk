@@ -31,16 +31,11 @@ namespace DungeonBuildersGuidebook1
 			return trapBaseLogic.GetRandomTrapBase();
 		}
 
-		public string DetermineMechanicalOrMagical(TrapBases trapBase)
+
+		public TrapBases GetSpecificTrapBase(int specificResult)
 		{
-			if (trapBase.MechanismTypeSpecified)
-			{
-				return randomNumber.Next(1, 100) > 50 ? "magical" : "mechanical";
-			}
-			else
-			{
-				return string.Empty;
-			}
+			//TODO Add check to validate range.
+			return trapBaseLogic.GetSpecificTrapBase(specificResult);
 		}
 
 		public TrapEffects GetRandomTrapEffect()
@@ -48,9 +43,21 @@ namespace DungeonBuildersGuidebook1
 			return trapEffectLogic.GetRandomTrapEffect();
 		}
 
+		public TrapEffects GetSpecificTrapEffect(int specificResult)
+		{
+			//TODO Add check to validate range.
+			return trapEffectLogic.GetSpecificTrapEffect(specificResult);
+		}
+
 		public TrapDamages GetRandomTrapDamage()
 		{
 			return trapDamageLogic.GetRandomTrapDamage();
+		}
+
+		public TrapDamages GetSpecificTrapDamage(int specificResult)
+		{
+			//TODO Add check to validate range.
+			return trapDamageLogic.GetSpecificTrapDamage(specificResult);
 		}
 	}
 }

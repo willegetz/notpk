@@ -50,7 +50,29 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 
 		public TrapBases GetRandomTrapBase()
 		{
-			return trapBasesTable[DiceCup.Roll(tableDieRoll)];
+			var trapBase = trapBasesTable[DiceCup.Roll(tableDieRoll)];
+			trapBase.MechanismType = DetermineMechanismType(trapBase);
+			return trapBase;
 		}
+
+		public TrapBases GetSpecificTrapBase(int specificResult)
+		{
+			var trapBase = trapBasesTable[specificResult];
+			trapBase.MechanismType = DetermineMechanismType(trapBase);
+			return trapBase;
+		}
+
+		public static string DetermineMechanismType(TrapBases trapBase)
+		{
+			if (trapBase.MechanismTypeSpecified)
+			{
+				return DiceCup.Roll(tableDieRoll) > 50 ? " (magical)" : " (mechanical)";
+			}
+			else
+			{
+				return string.Empty;
+			}
+		}
+
 	}
 }

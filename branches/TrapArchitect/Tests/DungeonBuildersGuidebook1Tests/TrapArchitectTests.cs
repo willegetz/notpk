@@ -15,85 +15,109 @@ namespace DungeonBuildersGuidebook1Tests
 	[UseReporter(typeof(DiffReporter))]
 	public class TrapArchitectTests
 	{
-		// Part 1:
-		// Generate a random number from 1 to 100
-		// Submit the number to retrieve a Trap Basic
-		// Check if the Trap Basic can be either mechanical or magical
-		// 		Randomly determine if it is mechanical or magical
-		   
-		// The user will be allowed to input a value instead of generating one randomly
-		// The user will be allowed to re-roll if they do not like their result
 		// The user should also be allowed to pick their Trap Basic
-
-
-		// The trap has a base
-		// The trap has a description of its effect(s)
-		// The trap has a damage potential
+		//		Some form of display to pick from
 
 		[TestMethod]
-		[Ignore] //Integration
-		public void TestFirstTrap()
+		[Ignore] // Test 
+		public void TestGenerateRandomTrapsTest()
 		{
 			var architect = new TrapArchitect();
-			var theTrap = new TheTrap();
+			var traps = new List<TheTrap>();
 
-			theTrap.SetTrapBase(architect.GetRandomTrapBase());
-			theTrap.SetTrapEffect(architect.GetRandomTrapEffect());
-			// Trap damages table is calculated using 3d6
-			theTrap.SetTrapDamage(architect.GetRandomTrapDamage());
-			//There is a human input element
-			Approvals.Verify(theTrap.ToString());
+			var numberOfTraps = 100;
+			for (int i = 1; i <= numberOfTraps; i++)
+			{
+				var theTrap = new TheTrap();
+
+				theTrap.SetTrapEffect(architect.GetRandomTrapEffect());
+				theTrap.SetTrapDamage(architect.GetRandomTrapDamage());
+				traps.Add(theTrap);
+			}
+
+			var sb = new StringBuilder();
+			foreach (var trap in traps)
+			{
+				sb.AppendLine(trap.ToString());
+				sb.AppendLine();
+			}
+			Approvals.VerifyAll(traps, "Traps");
 		}
 
 		[TestMethod]
-		public void TestReRollTrap()
+		public void GetSpecificTrapsTest()
 		{
-			var trapArchitect = new FakeTrapArchitect();
+			var architect = new TrapArchitect();
+			var traps = new List<TheTrap>();
 			
-			int firstTrapBaseRoll = 40;
-			int firstMechanismRoll = 60;
-			int secondTrapBaseRoll = 82;
-			int secondMechanismRoll = 38;
+			int tableMax = 100;
 
-			var firstTrapBase = trapArchitect.FakeGetRandomTrapBase(firstTrapBaseRoll);
-			var firstMechanism = trapArchitect.FakegetMechanismType(firstTrapBase, firstMechanismRoll);
-			var rerolledMechanism = trapArchitect.FakegetMechanismType(firstTrapBase, secondMechanismRoll);
-
-			var trap = new StringBuilder();
-			trap.AppendLine("First Trap");
-			if (string.IsNullOrEmpty(firstMechanism))
+			var trapDiceRolls = new List<int>();
+			for (int i = 1; i < tableMax; i += 2)
 			{
-				trap.AppendLine(firstTrapBase.TrappedObjectOrArea);
-			}
-			else
-			{
-				trap.AppendLine(string.Format("{0} ({1})", firstTrapBase.TrappedObjectOrArea, firstMechanism));
+				trapDiceRolls.Add(i);
 			}
 
-			trap.AppendLine();
-			trap.AppendLine("Mechanism Change");
-			trap.AppendLine(string.Format("{0} ({1})", firstTrapBase.TrappedObjectOrArea, rerolledMechanism));
-
-			trap.AppendLine();
-			trap.AppendLine("Second Trap");
-
-			var secondTrapBase = trapArchitect.FakeGetRandomTrapBase(secondTrapBaseRoll);
-			var secondMechanism = trapArchitect.FakegetMechanismType(secondTrapBase, secondMechanismRoll);
-
-			if (string.IsNullOrEmpty(secondMechanism))
+			var damageDiceRolls = new List<int>();
+			var damageResult = 3;
+			for (int i = 0; i < trapDiceRolls.Count; i++)
 			{
-				trap.AppendLine(secondTrapBase.TrappedObjectOrArea);
-			}
-			else
-			{
-				trap.AppendLine(string.Format("{0} ({1})", secondTrapBase.TrappedObjectOrArea, secondMechanism));
+				if (damageResult <= 18)
+				{
+					damageDiceRolls.Add(damageResult);
+					damageResult++;
+				}
+				else
+				{
+					damageResult = 3;
+					damageDiceRolls.Add(damageResult);
+					damageResult++;
+				}
 			}
 
-			Approvals.Verify(trap.ToString());
+			for (int i = 0; i < trapDiceRolls.Count; i++)
+			{
+				var theTrap = new TheTrap();
+				theTrap.SetTrapBase(architect.GetSpecificTrapBase(trapDiceRolls[i]));
+				theTrap.ChangeMechanismType("magical");
+				theTrap.SetTrapEffect(architect.GetSpecificTrapEffect(trapDiceRolls[i]));
+				theTrap.SetTrapDamage(architect.GetSpecificTrapDamage(damageDiceRolls[i]));
+				traps.Add(theTrap);
+			}
 
+			Approvals.VerifyAll(traps, "Traps");
 		}
 
 		[TestMethod]
+		public void RerollTrapTest()
+		{
+			var architect = new TrapArchitect();
+			var trap = new TheTrap();
+			var sb = new StringBuilder();
+
+			int firstTrapBase = 2;
+			int firstTrapEffect = 75;
+			int firstDamageEffect = 10;
+
+			trap.SetTrapBase(architect.GetSpecificTrapBase(firstTrapBase));
+			trap.SetTrapEffect(architect.GetSpecificTrapEffect(firstTrapEffect));
+			trap.SetTrapDamage(architect.GetSpecificTrapDamage(firstDamageEffect));
+
+			sb.AppendLine("Initial Trap");
+			sb.AppendLine(trap.ToString());
+			sb.AppendLine();
+
+			int rerollTrapBase = 67;
+			trap.SetTrapBase(architect.GetSpecificTrapBase(rerollTrapBase));
+			
+			sb.AppendLine("New Trap Base");
+			sb.AppendLine(trap.ToString());
+			
+			Approvals.Verify(sb.ToString());
+		}
+
+		[TestMethod]
+		[Ignore] // Experiment workspace
 		public void TrapEffectsTest()
 		{
 			// A trap effect has at minimum an effect name and an upper bound on the range
