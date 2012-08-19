@@ -41,5 +41,10 @@ namespace DungeonBuildersGuidebook1
 				return string.Empty;
 			}
 		}
+
+		public TrapEffects GetRandomTrapEffect()
+		{
+			return trapEffectLogic.GetRandomTrapEffect(randomNumber.Next(1, 100));
+		}
 	}
 }
