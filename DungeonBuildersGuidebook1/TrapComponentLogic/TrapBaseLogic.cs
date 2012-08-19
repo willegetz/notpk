@@ -6,8 +6,9 @@ using System.Xml.Linq;
 using RJK.CSharp.CustomLists.RangeDictionary;
 using System.Windows.Forms;
 using DungeonBuildersGuidebook1;
+using DungeonBuildersGuidebook1.TrapComponentObjects;
 
-namespace DungeonBuildersGuidebook1
+namespace DungeonBuildersGuidebook1.TrapComponentLogic
 {
 	public class TrapBaseLogic
 	{

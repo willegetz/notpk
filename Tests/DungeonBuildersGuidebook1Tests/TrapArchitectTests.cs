@@ -10,6 +10,7 @@ using System.Threading;
 using System.Xml.Linq;
 using DungeonBuildersGuidebook1;
 using RpgTools.Dice;
+using DungeonBuildersGuidebook1.TrapComponentObjects;
 
 namespace DungeonBuildersGuidebook1Tests
 {
@@ -26,6 +27,11 @@ namespace DungeonBuildersGuidebook1Tests
 		// The user will be allowed to input a value instead of generating one randomly
 		// The user will be allowed to re-roll if they do not like their result
 		// The user should also be allowed to pick their Trap Basic
+
+
+		// The trap has a base
+		// The trap has a description of its effect(s)
+		// The trap has a damage potential
 
 		[TestMethod]
 		public void TestFirstTrap()

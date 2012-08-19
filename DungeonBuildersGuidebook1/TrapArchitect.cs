@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DungeonBuildersGuidebook1.TrapComponentLogic;
+using DungeonBuildersGuidebook1.TrapComponentObjects;
+using DungeonBuildersGuidebook1.ConsoleApp;
 
 namespace DungeonBuildersGuidebook1
 {
@@ -11,14 +14,10 @@ namespace DungeonBuildersGuidebook1
 		protected TrapBaseLogic trapBaseLogic;
 		protected TrapEffectLogic trapEffectLogic;
 
-		private List<string> eitherMagicalOrMechanical { get; set; }
-
 		public TrapArchitect()
 		{
 			trapBaseLogic = new TrapBaseLogic();
 			trapEffectLogic = new TrapEffectLogic();
-			eitherMagicalOrMechanical = new List<string>();
-			eitherMagicalOrMechanical.AddRange(TrapBasicsTable10a.GetMagicalOrMechanicalList());
 		}
 
 		public void SetRandomNumber()
