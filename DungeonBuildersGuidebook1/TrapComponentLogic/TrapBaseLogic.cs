@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Xml.Linq;
 using RJK.CSharp.CustomLists.RangeDictionary;
 using System.Windows.Forms;
-using DungeonBuildersGuidebook1;
 using DungeonBuildersGuidebook1.TrapComponentObjects;
+using RpgTools.Dice;
 
 namespace DungeonBuildersGuidebook1.TrapComponentLogic
 {
 	public class TrapBaseLogic
 	{
+		private const string tableDieRoll = "1d100";
 		private XElement trapBasesXml;
 		private IEnumerable<TrapBases> trapBases;
 		private RangeDictionary<int, TrapBases> trapBasesTable;
@@ -48,9 +48,9 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 			}
 		}
 
-		public TrapBases GetRandomTrapBase(int resultNumber)
+		public TrapBases GetRandomTrapBase()
 		{
-			return trapBasesTable[resultNumber];
+			return trapBasesTable[DiceCup.Roll(tableDieRoll)];
 		}
 	}
 }
