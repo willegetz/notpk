@@ -57,6 +57,7 @@
     <Compile Include="ConsoleApp\TrapArchitectConsole.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="TrapComponentLogic\NullTrapBase.cs" />
     <Compile Include="TrapComponentObjects\TheTrap.cs" />
     <Compile Include="TrapComponentObjects\TrapBases.cs" />
     <Compile Include="ConsoleApp\TrapBasicsTable10a.cs" />

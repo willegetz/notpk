@@ -34,7 +34,6 @@ namespace DungeonBuildersGuidebook1
 
 		public TrapBases GetSpecificTrapBase(int specificResult)
 		{
-			//TODO Add check to validate range.
 			return trapBaseLogic.GetSpecificTrapBase(specificResult);
 		}
 
