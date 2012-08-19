@@ -1,0 +1,5 @@
+Initial Trap
+The alcove slides to reveal dangerous monster(s) and inflicts 2d6 points of damage
+
+New Trap Base
+The painting slides to reveal dangerous monster(s) and inflicts 2d6 points of damage

@@ -78,5 +78,10 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 		{
 			return trapEffectsTable[DiceCup.Roll(tableDieRoll)];
 		}
+
+		public TrapEffects GetSpecificTrapEffect(int specificResult)
+		{
+			return trapEffectsTable[specificResult];
+		}
 	}
 }
