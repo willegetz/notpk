@@ -12,11 +12,11 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 {
 	public class TrapDamageLogic
 	{
-		private const string tableDieRoll = "3d6";
 		private XElement trapDamagesXml;
 		private IEnumerable<TrapDamages> trapDamages;
 		private RangeDictionary<int, TrapDamages> trapDamagesTable;
 		private DiceDefinition diceDefinition;
+		private string tableDieRoll;
 		private int minimumBounds;
 		private int maximumBounds;
 		private string xmlTrapDamagesFilePath = @"..\..\..\..\DungeonBuildersGuidebook1\DataFiles\TrapDamages.xml";
@@ -33,6 +33,8 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 		{
 			try
 			{
+				tableDieRoll = trapDamagesXml.Descendants("TableDieRoll").Select(d => d.Element("DiceDefinition").Value).Single();
+
 				trapDamages = trapDamagesXml.Descendants("Damage").Select(tD => new TrapDamages()
 																			{
 																				RollUpperBound = int.Parse(tD.Element("RollUpperBound").Value),

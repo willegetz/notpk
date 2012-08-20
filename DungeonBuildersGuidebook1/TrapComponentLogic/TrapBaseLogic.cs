@@ -11,11 +11,11 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 {
 	public class TrapBaseLogic
 	{
-		private const string tableDieRoll = "1d100";
 		private XElement trapBasesXml;
 		private IEnumerable<TrapBases> trapBases;
 		private RangeDictionary<int, TrapBases> trapBasesTable;
 		private DiceDefinition diceDefinition;
+		private string tableDieRoll;
 		private int minimumBounds;
 		private int maximumBounds;
 		private string xmlTrapComponentsFilePath = @"..\..\..\..\DungeonBuildersGuidebook1\DataFiles\TrapComponents.xml";
@@ -32,6 +32,8 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 		{
 			try
 			{
+				tableDieRoll = trapBasesXml.Descendants("TableDieRoll").Select(d => d.Element("DiceDefinition").Value).Single();
+
 				trapBases = trapBasesXml.Descendants("TrapBase").Select(tB => new TrapBases()
 																			{
 																				RollUpperBound = int.Parse(tB.Element("RollUpperBound").Value),
@@ -89,7 +91,7 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 			}
 		}
 
-		public static string DetermineMechanismType(TrapBases trapBase)
+		public string DetermineMechanismType(TrapBases trapBase)
 		{
 			if (trapBase.MechanismTypeSpecified)
 			{

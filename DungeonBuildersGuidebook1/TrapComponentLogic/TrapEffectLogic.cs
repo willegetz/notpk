@@ -11,11 +11,11 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 {
 	public class TrapEffectLogic
 	{
-		private const string tableDieRoll = "1d100";
 		private XElement trapEffectsXml;
 		private IEnumerable<TrapEffects> trapEffects;
 		private RangeDictionary<int, TrapEffects> trapEffectsTable;
 		private DiceDefinition diceDefinition;
+		private string tableDieRoll;
 		private int minimumBounds;
 		private int maximumBounds;
 		private string xmlTrapEffectsFilePath = @"..\..\..\..\DungeonBuildersGuidebook1\DataFiles\TrapEffectsAndTraits.xml";
@@ -32,6 +32,8 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 		{
 			try
 			{
+				tableDieRoll = trapEffectsXml.Descendants("TableDieRoll").Select(d => d.Element("DiceDefinition").Value).Single();
+
 				trapEffects = trapEffectsXml.Descendants("Effect").Select(tE => new TrapEffects()
 																				{
 																					RollUpperBound = int.Parse(tE.Element("RollUpperBound").Value),

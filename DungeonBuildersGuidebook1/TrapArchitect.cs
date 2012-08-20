@@ -54,7 +54,6 @@ namespace DungeonBuildersGuidebook1
 
 		public TrapDamages GetSpecificTrapDamage(int specificResult)
 		{
-			//TODO Add check to validate range.
 			return trapDamageLogic.GetSpecificTrapDamage(specificResult);
 		}
 	}

@@ -1,4 +1,7 @@
 <Root>
+	<TableDieRoll>
+		<DiceDefinition>1d100</DiceDefinition>
+	</TableDieRoll>
 	<Effect>
 		<RollUpperBound>1</RollUpperBound>
 		<EffectDescription>Absorbs victim into two-dimensional fresco or painting</EffectDescription>

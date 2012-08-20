@@ -1,4 +1,7 @@
 ﻿<Root>
+	<TableDieRoll>
+		<DiceDefinition>3d6</DiceDefinition>
+	</TableDieRoll>
 	<Damage>
 		<RollUpperBound>3</RollUpperBound>
 		<DamageDescription>Inflicts 1d2 points of damage</DamageDescription>
