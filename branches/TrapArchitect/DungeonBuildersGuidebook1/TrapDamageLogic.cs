@@ -16,6 +16,9 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 		private XElement trapDamagesXml;
 		private IEnumerable<TrapDamages> trapDamages;
 		private RangeDictionary<int, TrapDamages> trapDamagesTable;
+		private DiceDefinition diceDefinition;
+		private int minimumBounds;
+		private int maximumBounds;
 		private string xmlTrapDamagesFilePath = @"..\..\..\..\DungeonBuildersGuidebook1\DataFiles\TrapDamages.xml";
 
 		public TrapDamageLogic()
@@ -23,6 +26,7 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 			trapDamagesXml = XElement.Load(xmlTrapDamagesFilePath);
 			trapDamagesTable = new RangeDictionary<int, TrapDamages>();
 			LoadTrapDamages();
+			diceDefinition = DiceDefinition.Parse(tableDieRoll);
 		}
 
 		private void LoadTrapDamages()
@@ -55,7 +59,29 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 
 		public TrapDamages GetSpecificTrapDamage(int specificResult)
 		{
-			return trapDamagesTable[specificResult];
+			if (WithinBounds(specificResult))
+			{
+				return trapDamagesTable[specificResult];
+			}
+			else
+			{
+				return new NullTrapDamage(specificResult, minimumBounds, maximumBounds);
+			}
+		}
+
+		private bool WithinBounds(int specificResult)
+		{
+			minimumBounds = diceDefinition.NumberOfDice;
+			maximumBounds = (diceDefinition.NumberOfDice * diceDefinition.NumberOfSides);
+
+			if (specificResult >= minimumBounds && specificResult <= maximumBounds)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 	}
 }
