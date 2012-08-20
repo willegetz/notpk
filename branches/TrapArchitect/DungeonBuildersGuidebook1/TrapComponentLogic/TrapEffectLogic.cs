@@ -80,20 +80,39 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 			}
 		}
 
-		public TrapEffects GetRandomTrapEffect()
+		public IEnumerable<TrapEffects> GetRandomTrapEffect()
 		{
-			return trapEffectsTable[DiceCup.Roll(tableDieRoll)];
+			var effects = new List<TrapEffects>();
+			effects.Add(trapEffectsTable[DiceCup.Roll(tableDieRoll)]);
+			effects.AddRange(CheckForMultipleRolls(effects));
+			return effects;
 		}
 
-		public TrapEffects GetSpecificTrapEffect(int specificResult)
+		private IEnumerable<TrapEffects> CheckForMultipleRolls(IEnumerable<TrapEffects> effects)
 		{
+			var multipleEffects = new List<TrapEffects>();
+			foreach (var effect in effects.Where(e => e.RollAgain))
+			{
+				for (int i = 0; i < effect.NumberOfReRolls; i++)
+				{
+					multipleEffects.AddRange(GetRandomTrapEffect());
+				}
+			}
+			return multipleEffects;
+		}
+
+		public IEnumerable<TrapEffects> GetSpecificTrapEffect(int specificResult)
+		{
+			var effects = new List<TrapEffects>();
 			if (WithinBounds(specificResult))
 			{
-				return trapEffectsTable[specificResult];
+				effects.Add(trapEffectsTable[specificResult]);
+				effects.AddRange(CheckForMultipleRolls(effects));
+				return effects;
 			}
 			else
 			{
-				return new NullTrapEffect(specificResult, minimumBounds, maximumBounds);
+				return new List<TrapEffects> {new NullTrapEffect(specificResult, minimumBounds, maximumBounds)};
 			}
 		}
 
