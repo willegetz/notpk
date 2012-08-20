@@ -16,6 +16,8 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 		private IEnumerable<TrapBases> trapBases;
 		private RangeDictionary<int, TrapBases> trapBasesTable;
 		private DiceDefinition diceDefinition;
+		private int minimumBounds;
+		private int maximumBounds;
 		private string xmlTrapComponentsFilePath = @"..\..\..\..\DungeonBuildersGuidebook1\DataFiles\TrapComponents.xml";
 
 		public TrapBaseLogic()
@@ -67,17 +69,17 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 			}
 			else
 			{
-				return new NullTrapBase();
+				return new NullTrapBase(specificResult, minimumBounds, maximumBounds);
 			}
 
 		}
 
 		private bool WithinBounds(int specificResult)
 		{
-			var min = diceDefinition.NumberOfDice;
-			var max = (diceDefinition.NumberOfDice * diceDefinition.NumberOfSides);
+			minimumBounds = diceDefinition.NumberOfDice;
+			maximumBounds = (diceDefinition.NumberOfDice * diceDefinition.NumberOfSides);
 
-			if (specificResult > min && specificResult < max)
+			if (specificResult > minimumBounds && specificResult < maximumBounds)
 			{
 				return true;
 			}

@@ -7,12 +7,12 @@ namespace DungeonBuildersGuidebook1.TrapComponentObjects
 {
 	public class NullTrapBase : TrapBases
 	{
-		public NullTrapBase()
+		public NullTrapBase(int spcificResult, int minimumBounds, int maximumBounds)
 		{
-			TrappedObjectOrArea = "Invalid trap selection";
-			RollUpperBound = -1;
-			MechanismTypeSpecified = false;
-			MechanismType = string.Empty;
+			base.TrappedObjectOrArea = string.Format("Invalid trap base selection. '{0}' is not within the bounds '{1} - {2}'", spcificResult, minimumBounds, maximumBounds);
+			base.RollUpperBound = -1;
+			base.MechanismTypeSpecified = false;
+			base.MechanismType = string.Empty;
 		}
 	}
 }
