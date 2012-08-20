@@ -86,6 +86,11 @@ namespace DungeonBuildersGuidebook1Tests
 				traps.Add(theTrap);
 			}
 
+			traps[2].ChangeAnEffect(1, architect.GetSpecificTrapEffect(20));
+			traps[23].ChangeAnEffect(1, architect.GetSpecificTrapEffect(30));
+			traps[49].ChangeAnEffect(1, architect.GetSpecificTrapEffect(40));
+			traps[49].ChangeAnEffect(2, architect.GetSpecificTrapEffect(50));
+
 			Approvals.VerifyAll(traps, "Traps");
 		}
 
