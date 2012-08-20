@@ -53,13 +53,13 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="NullTrapDamage.cs" />
+    <Compile Include="TrapComponentObjects\NullTrapDamage.cs" />
     <Compile Include="TrapArchitect.cs" />
     <Compile Include="ConsoleApp\TrapArchitectConsole.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="TrapComponentLogic\NullTrapBase.cs" />
-    <Compile Include="TrapComponentLogic\NullTrapEffect.cs" />
+    <Compile Include="TrapComponentObjects\NullTrapBase.cs" />
+    <Compile Include="TrapComponentObjects\NullTrapEffect.cs" />
     <Compile Include="TrapComponentObjects\TheTrap.cs" />
     <Compile Include="TrapComponentObjects\TrapBases.cs" />
     <Compile Include="ConsoleApp\TrapBasicsTable10a.cs" />
@@ -67,8 +67,8 @@
     <Compile Include="TrapComponentObjects\TrapEffects.cs" />
     <Compile Include="ConsoleApp\TrapEffectsTable10b.cs" />
     <Compile Include="TrapComponentLogic\TrapEffectLogic.cs" />
-    <Compile Include="TrapDamageLogic.cs" />
-    <Compile Include="TrapDamages.cs" />
+    <Compile Include="TrapComponentLogic\TrapDamageLogic.cs" />
+    <Compile Include="TrapComponentObjects\TrapDamages.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />

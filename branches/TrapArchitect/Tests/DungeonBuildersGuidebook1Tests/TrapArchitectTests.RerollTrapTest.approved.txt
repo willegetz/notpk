@@ -1,5 +1,9 @@
 Initial Trap
-The alcove slides to reveal dangerous monster(s) and inflicts 2d6 points of damage
+The alcove
+	discordant music eventually drives victim insane
+	And inflicts 2d6 points of damage
 
 New Trap Base
-The painting slides to reveal dangerous monster(s) and inflicts 2d6 points of damage
+The painting
+	teleports victim to lethal/distant area
+	And inflicts 2d6 points of damage

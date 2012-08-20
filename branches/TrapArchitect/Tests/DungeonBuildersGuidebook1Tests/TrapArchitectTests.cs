@@ -20,7 +20,7 @@ namespace DungeonBuildersGuidebook1Tests
 
 		[TestMethod]
 		[Ignore] // Test 
-		public void TestGenerateRandomTrapsTest()
+		public void GenerateRandomTrapsTest()
 		{
 			var architect = new TrapArchitect();
 			var traps = new List<TheTrap>();
