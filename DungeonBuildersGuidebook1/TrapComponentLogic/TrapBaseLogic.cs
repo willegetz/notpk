@@ -79,7 +79,7 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 			minimumBounds = diceDefinition.NumberOfDice;
 			maximumBounds = (diceDefinition.NumberOfDice * diceDefinition.NumberOfSides);
 
-			if (specificResult > minimumBounds && specificResult < maximumBounds)
+			if (specificResult >= minimumBounds && specificResult <= maximumBounds)
 			{
 				return true;
 			}

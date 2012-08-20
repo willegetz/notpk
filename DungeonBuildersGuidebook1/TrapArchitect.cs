@@ -44,7 +44,6 @@ namespace DungeonBuildersGuidebook1
 
 		public TrapEffects GetSpecificTrapEffect(int specificResult)
 		{
-			//TODO Add check to validate range.
 			return trapEffectLogic.GetSpecificTrapEffect(specificResult);
 		}
 

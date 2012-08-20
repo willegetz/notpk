@@ -53,6 +53,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="NullTrapDamage.cs" />
     <Compile Include="TrapArchitect.cs" />
     <Compile Include="ConsoleApp\TrapArchitectConsole.cs">
       <SubType>Code</SubType>
