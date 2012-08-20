@@ -54,6 +54,21 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 			}
 		}
 
+		private bool WithinBounds(int specificResult)
+		{
+			minimumBounds = diceDefinition.NumberOfDice;
+			maximumBounds = (diceDefinition.NumberOfDice * diceDefinition.NumberOfSides);
+
+			if (specificResult >= minimumBounds && specificResult <= maximumBounds)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
 		public TrapBases GetRandomTrapBase()
 		{
 			var trapBase = trapBasesTable[DiceCup.Roll(tableDieRoll)];
@@ -74,21 +89,6 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 				return new NullTrapBase(specificResult, minimumBounds, maximumBounds);
 			}
 
-		}
-
-		private bool WithinBounds(int specificResult)
-		{
-			minimumBounds = diceDefinition.NumberOfDice;
-			maximumBounds = (diceDefinition.NumberOfDice * diceDefinition.NumberOfSides);
-
-			if (specificResult >= minimumBounds && specificResult <= maximumBounds)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
 		}
 
 		public string DetermineMechanismType(TrapBases trapBase)

@@ -32,25 +32,24 @@ namespace DungeonBuildersGuidebook1
 			return trapBaseLogic.GetRandomTrapBase();
 		}
 
+		public IEnumerable<TrapEffects> GetRandomTrapEffect()
+		{
+			return trapEffectLogic.GetRandomTrapEffect();
+		}
+
+		public TrapDamages GetRandomTrapDamage()
+		{
+			return trapDamageLogic.GetRandomTrapDamage();
+		}
 
 		public TrapBases GetSpecificTrapBase(int specificResult)
 		{
 			return trapBaseLogic.GetSpecificTrapBase(specificResult);
 		}
 
-		public IEnumerable<TrapEffects> GetRandomTrapEffect()
-		{
-			return trapEffectLogic.GetRandomTrapEffect();
-		}
-
 		public IEnumerable<TrapEffects> GetSpecificTrapEffect(int specificResult)
 		{
 			return trapEffectLogic.GetSpecificTrapEffect(specificResult);
-		}
-
-		public TrapDamages GetRandomTrapDamage()
-		{
-			return trapDamageLogic.GetRandomTrapDamage();
 		}
 
 		public TrapDamages GetSpecificTrapDamage(int specificResult)

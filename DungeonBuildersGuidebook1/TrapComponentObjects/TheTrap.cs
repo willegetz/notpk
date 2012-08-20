@@ -14,25 +14,6 @@ namespace DungeonBuildersGuidebook1.TrapComponentObjects
 		{
 			TrapEffect = new List<TrapEffects>();
 		}
-		public void SetTrapBase(TrapBases trapBase)
-		{
-				TrapBase = trapBase;
-		}
-
-		public void SetTrapEffect(IEnumerable<TrapEffects> trapEffects)
-		{
-			TrapEffect.AddRange(trapEffects);
-		}
-
-		public void SetTrapDamage(TrapDamages trapDamages)
-		{
-			TrapDamage = trapDamages;
-		}
-
-		public override string ToString()
-		{
-			return string.Format("{0}{1}{2}\r\n\tAnd {3}", TrapBase.TrappedObjectOrArea, TrapBase.MechanismType.ToLower(), FormatEffects(), TrapDamage.DamageDescription.ToLower());
-		}
 
 		private object FormatEffects()
 		{
@@ -59,6 +40,32 @@ namespace DungeonBuildersGuidebook1.TrapComponentObjects
 			return sb.ToString();
 		}
 
+		private bool IsValidIndex(int indexOfEffectToChange)
+		{
+			int firstIndex = 0;
+			int lastIindex = TrapEffect.Count - 1;
+			if (indexOfEffectToChange < firstIndex || indexOfEffectToChange > lastIindex)
+			{
+				return false;
+			}
+			return true;
+		}
+
+		public void SetTrapBase(TrapBases trapBase)
+		{
+				TrapBase = trapBase;
+		}
+
+		public void SetTrapEffect(IEnumerable<TrapEffects> trapEffects)
+		{
+			TrapEffect.AddRange(trapEffects);
+		}
+
+		public void SetTrapDamage(TrapDamages trapDamages)
+		{
+			TrapDamage = trapDamages;
+		}
+
 		public void ChangeMechanismType(string newMechanismType)
 		{
 			if (!string.IsNullOrEmpty(TrapBase.MechanismType))
@@ -66,7 +73,6 @@ namespace DungeonBuildersGuidebook1.TrapComponentObjects
 				TrapBase.MechanismType = string.Format(" ({0})", newMechanismType);
 			}
 		}
-
 
 		public bool ChangeAnEffect(int indexOfEffectToChange, IEnumerable<TrapEffects> newEffect)
 		{
@@ -79,15 +85,9 @@ namespace DungeonBuildersGuidebook1.TrapComponentObjects
 			return false;
 		}
 
-		private bool IsValidIndex(int indexOfEffectToChange)
+		public override string ToString()
 		{
-			int firstIndex = 0;
-			int lastIindex = TrapEffect.Count - 1;
-			if (indexOfEffectToChange < firstIndex || indexOfEffectToChange > lastIindex)
-			{
-				return false;
-			}
-			return true;
+			return string.Format("{0}{1}{2}\r\n\tAnd {3}", TrapBase.TrappedObjectOrArea, TrapBase.MechanismType.ToLower(), FormatEffects(), TrapDamage.DamageDescription.ToLower());
 		}
 	}
 }
