@@ -15,6 +15,9 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 		private XElement trapEffectsXml;
 		private IEnumerable<TrapEffects> trapEffects;
 		private RangeDictionary<int, TrapEffects> trapEffectsTable;
+		private DiceDefinition diceDefinition;
+		private int minimumBounds;
+		private int maximumBounds;
 		private string xmlTrapEffectsFilePath = @"..\..\..\..\DungeonBuildersGuidebook1\DataFiles\TrapEffectsAndTraits.xml";
 
 		public TrapEffectLogic()
@@ -22,6 +25,7 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 			trapEffectsXml = XElement.Load(xmlTrapEffectsFilePath);
 			trapEffectsTable = new RangeDictionary<int, TrapEffects>();
 			LoadTrapEffects();
+			diceDefinition = DiceDefinition.Parse(tableDieRoll);
 		}
 
 		private void LoadTrapEffects()
@@ -81,7 +85,29 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 
 		public TrapEffects GetSpecificTrapEffect(int specificResult)
 		{
-			return trapEffectsTable[specificResult];
+			if (WithinBounds(specificResult))
+			{
+				return trapEffectsTable[specificResult];
+			}
+			else
+			{
+				return new NullTrapEffect(specificResult, minimumBounds, maximumBounds);
+			}
+		}
+
+		private bool WithinBounds(int specificResult)
+		{
+			minimumBounds = diceDefinition.NumberOfDice;
+			maximumBounds = (diceDefinition.NumberOfDice * diceDefinition.NumberOfSides);
+
+			if (specificResult > minimumBounds && specificResult < maximumBounds)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 	}
 }
