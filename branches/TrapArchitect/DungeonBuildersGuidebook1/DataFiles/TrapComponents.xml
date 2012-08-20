@@ -1,4 +1,7 @@
 <Root>
+	<TableDieRoll>
+		<DiceDefinition>1d100</DiceDefinition>
+	</TableDieRoll>
 	<TrapBase>
 		<RollUpperBound>1</RollUpperBound>
 		<TrappedObjectOrArea>The air itself</TrappedObjectOrArea>
