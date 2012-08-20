@@ -111,6 +111,7 @@
     <Content Include="DataFiles\TrapComponents.xml" />
     <Content Include="DataFiles\TrapDamages.xml" />
     <Content Include="DataFiles\TrapEffectsAndTraits.xml" />
+    <Content Include="DataFiles\TrapEffectsSubtables.xml" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

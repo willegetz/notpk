@@ -1,0 +1,68 @@
+<Root>
+	<GasTrap>
+		<TableDieRoll>
+			<DiceDefinition>1d8</DiceDefinition>
+		</TableDieRoll>
+		<GasType>
+			<RollUpperBound>1</RollUpperBound>
+			<GasName>Blinding</GasName>
+		</GasType>
+		<GasType>
+			<RollUpperBound>2</RollUpperBound>
+			<GasName>Corroding</GasName>
+		</GasType>
+		<GasType>
+			<RollUpperBound>3</RollUpperBound>
+			<GasName>Terrifying</GasName>
+		</GasType>
+		<GasType>
+			<RollUpperBound>4</RollUpperBound>
+			<GasName>Nauseating</GasName>
+		</GasType>
+		<GasType>
+			<RollUpperBound>5</RollUpperBound>
+			<GasName>Obscuring</GasName>
+		</GasType>
+		<GasType>
+			<RollUpperBound>6</RollUpperBound>
+			<GasName>Poisonous</GasName>
+		</GasType>
+		<GasType>
+			<RollUpperBound>7</RollUpperBound>
+			<GasName>Sleep Inducing</GasName>
+		</GasType>
+		<GasType>
+			<RollUpperBound>8</RollUpperBound>
+			<GasName>Weakening</GasName>
+		</GasType>
+	</GasTrap>
+	<PitContents>
+		<TableDieRoll>
+			<DiceDefinition>1d6</DiceDefinition>
+		</TableDieRoll>
+		<ContentType>
+			<RollUpperBound>1</RollUpperBound>
+			<ContentName>Acid</ContentName>
+		</ContentType>
+		<ContentType>
+			<RollUpperBound>2</RollUpperBound>
+			<ContentName>Freezing water</ContentName>
+		</ContentType>
+		<ContentType>
+			<RollUpperBound>3</RollUpperBound>
+			<ContentName>Giant ants</ContentName>
+		</ContentType>
+		<ContentType>
+			<RollUpperBound>4</RollUpperBound>
+			<ContentName>Green slime</ContentName>
+		</ContentType>
+		<ContentType>
+			<RollUpperBound>5</RollUpperBound>
+			<ContentName>Magma</ContentName>
+		</ContentType>
+		<ContentType>
+			<RollUpperBound>6</RollUpperBound>
+			<ContentName>Quicksand</ContentName>
+		</ContentType>
+	</PitContents>
+</Root>
