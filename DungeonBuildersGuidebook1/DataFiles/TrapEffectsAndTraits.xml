@@ -104,8 +104,8 @@
 		<RollUpperBound>15</RollUpperBound>
 		<EffectDescription>Curses victim with disease (-3 to actions)</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
-		<RollAgain>true</RollAgain>
-		<NumberOfReRolls>1</NumberOfReRolls>
+		<RollAgain>false</RollAgain>
+		<NumberOfReRolls></NumberOfReRolls>
 	</Effect>
 	<Effect>
 		<RollUpperBound>16</RollUpperBound>
@@ -174,8 +174,8 @@
 		<RollUpperBound>25</RollUpperBound>
 		<EffectDescription>Disintegrates victim's possessions</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
-		<RollAgain>true</RollAgain>
-		<NumberOfReRolls>1</NumberOfReRolls>
+		<RollAgain>false</RollAgain>
+		<NumberOfReRolls></NumberOfReRolls>
 	</Effect>
 	<Effect>
 		<RollUpperBound>26</RollUpperBound>
@@ -244,8 +244,8 @@
 		<RollUpperBound>35</RollUpperBound>
 		<EffectDescription>Fires poisoned arrow(s)/dart(s)/spear(s)</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
-		<RollAgain>true</RollAgain>
-		<NumberOfReRolls>1</NumberOfReRolls>
+		<RollAgain>false</RollAgain>
+		<NumberOfReRolls></NumberOfReRolls>
 	</Effect>
 	<Effect>
 		<RollUpperBound>36</RollUpperBound>
@@ -314,20 +314,20 @@
 		<RollUpperBound>45</RollUpperBound>
 		<EffectDescription>Infects victim with split personality disorder</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
-		<RollAgain>true</RollAgain>
-		<NumberOfReRolls>1</NumberOfReRolls>
+		<RollAgain>false</RollAgain>
+		<NumberOfReRolls></NumberOfReRolls>
 	</Effect>
 	<Effect>
 		<RollUpperBound>46</RollUpperBound>
-		<EffectDescription>Locks entrance to chamber/area; roll again for another effect</EffectDescription>
-		<AdditionalInformation></AdditionalInformation>
+		<EffectDescription>Locks entrance to chamber/area</EffectDescription>
+		<AdditionalInformation>roll again for another effect</AdditionalInformation>
 		<RollAgain>true</RollAgain>
 		<NumberOfReRolls>1</NumberOfReRolls>
 	</Effect>
 	<Effect>
 		<RollUpperBound>47</RollUpperBound>
-		<EffectDescription>Locks exits from chamber/area; roll again for another effect</EffectDescription>
-		<AdditionalInformation></AdditionalInformation>
+		<EffectDescription>Locks exits from chamber/area</EffectDescription>
+		<AdditionalInformation>roll again for another effect</AdditionalInformation>
 		<RollAgain>true</RollAgain>
 		<NumberOfReRolls>1</NumberOfReRolls>
 	</Effect>
@@ -690,15 +690,15 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>99</RollUpperBound>
-		<EffectDescription>Roll two more times, combine both effects</EffectDescription>
-		<AdditionalInformation></AdditionalInformation>
+		<EffectDescription></EffectDescription>
+		<AdditionalInformation>Roll two more times, combine both effects</AdditionalInformation>
 		<RollAgain>true</RollAgain>
 		<NumberOfReRolls>2</NumberOfReRolls>
 	</Effect>
 	<Effect>
 		<RollUpperBound>100</RollUpperBound>
-		<EffectDescription>Roll three more times, combine all effects</EffectDescription>
-		<AdditionalInformation></AdditionalInformation>
+		<EffectDescription></EffectDescription>
+		<AdditionalInformation>Roll three more times, combine all effects</AdditionalInformation>
 		<RollAgain>true</RollAgain>
 		<NumberOfReRolls>3</NumberOfReRolls>
 	</Effect>

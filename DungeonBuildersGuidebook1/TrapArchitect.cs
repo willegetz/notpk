@@ -2,6 +2,7 @@
 using DungeonBuildersGuidebook1.TrapComponentLogic;
 using DungeonBuildersGuidebook1.TrapComponentObjects;
 using RpgTools.Dice;
+using System.Collections.Generic;
 
 namespace DungeonBuildersGuidebook1
 {
@@ -37,12 +38,12 @@ namespace DungeonBuildersGuidebook1
 			return trapBaseLogic.GetSpecificTrapBase(specificResult);
 		}
 
-		public TrapEffects GetRandomTrapEffect()
+		public IEnumerable<TrapEffects> GetRandomTrapEffect()
 		{
 			return trapEffectLogic.GetRandomTrapEffect();
 		}
 
-		public TrapEffects GetSpecificTrapEffect(int specificResult)
+		public IEnumerable<TrapEffects> GetSpecificTrapEffect(int specificResult)
 		{
 			return trapEffectLogic.GetSpecificTrapEffect(specificResult);
 		}

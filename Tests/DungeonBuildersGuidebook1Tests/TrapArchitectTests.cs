@@ -30,6 +30,7 @@ namespace DungeonBuildersGuidebook1Tests
 			{
 				var theTrap = new TheTrap();
 
+				theTrap.SetTrapBase(architect.GetRandomTrapBase());
 				theTrap.SetTrapEffect(architect.GetRandomTrapEffect());
 				theTrap.SetTrapDamage(architect.GetRandomTrapDamage());
 				traps.Add(theTrap);
@@ -96,7 +97,7 @@ namespace DungeonBuildersGuidebook1Tests
 			var sb = new StringBuilder();
 
 			int firstTrapBase = 2;
-			int firstTrapEffect = 75;
+			int firstTrapEffect = 24;
 			int firstDamageEffect = 10;
 
 			trap.SetTrapBase(architect.GetSpecificTrapBase(firstTrapBase));
@@ -108,7 +109,10 @@ namespace DungeonBuildersGuidebook1Tests
 			sb.AppendLine();
 
 			int rerollTrapBase = 67;
+			int rerollTrapEffect = 84;
+			int indexOfEffectToChange = 0;
 			trap.SetTrapBase(architect.GetSpecificTrapBase(rerollTrapBase));
+			trap.ChangeAnEffect(indexOfEffectToChange, architect.GetSpecificTrapEffect(rerollTrapEffect));
 			
 			sb.AppendLine("New Trap Base");
 			sb.AppendLine(trap.ToString());
@@ -140,7 +144,7 @@ namespace DungeonBuildersGuidebook1Tests
 
 			var sb = new StringBuilder();
 			var results = new List<int>();
-			//foreach (var item in effects.Where(r => r.EffectRollRequired == true))
+			//foreach (var item in effects.Where(r => r.RollAgain))
 			//{
 			//    foreach (var die in item.EffectDiceToRoll)
 			//    {
