@@ -27,8 +27,8 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 		private string pitContentTableDieRoll;
 		private int minimumBounds;
 		private int maximumBounds;
-		private string xmlTrapEffectsFilePath = @"..\..\..\..\DungeonBuildersGuidebook1\DataFiles\TrapEffectsAndTraits.xml";
-		private string xmlTrapSubtablesFilePath = @"..\..\..\..\DungeonBuildersGuidebook1\DataFiles\TrapEffectsSubtables.xml";
+		private string xmlTrapEffectsFilePath = DataConstants.DataFilesPath + "TrapEffectsAndTraits.xml";
+		private string xmlTrapSubtablesFilePath = DataConstants.DataFilesPath + "TrapEffectsSubtables.xml";
 
 		public TrapEffectLogic()
 		{

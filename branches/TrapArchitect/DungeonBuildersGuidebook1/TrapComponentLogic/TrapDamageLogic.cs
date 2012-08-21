@@ -19,7 +19,7 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 		private string tableDieRoll;
 		private int minimumBounds;
 		private int maximumBounds;
-		private string xmlTrapDamagesFilePath = @"..\..\..\..\DungeonBuildersGuidebook1\DataFiles\TrapDamages.xml";
+		private string xmlTrapDamagesFilePath = DataConstants.DataFilesPath + "TrapDamages.xml";
 
 		public TrapDamageLogic()
 		{
