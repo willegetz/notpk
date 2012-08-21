@@ -7,43 +7,46 @@ namespace DungeonBuildersGuidebook1.TrapComponentObjects
 	public class TheTrap
 	{
 		private TrapBases TrapBase { get; set; }
-		private List<TrapEffects> TrapEffect { get; set; }
+		private List<TrapEffects> TrapEffects { get; set; }
 		private TrapDamages TrapDamage { get; set; }
 
 		public TheTrap()
 		{
-			TrapEffect = new List<TrapEffects>();
+			TrapEffects = new List<TrapEffects>();
 		}
 
-		private object FormatEffects()
+		private string FormatEffects()
 		{
-
-
 			var sb = new StringBuilder();
-			if (TrapEffect.Count <= 1)
+			if (TrapEffects.Count <= 1)
 			{
-				return "\r\n\t" + TrapEffect[0].EffectDescription.ToLower();
+				return "\r\n\t" + TrapEffects[0].EffectDescription.ToLower() + ValidSubtableDescription();
 			}
 			else
 			{
-				int lastTrapEffectIndex = TrapEffect.Count - 1;
+				int lastTrapEffectIndex = TrapEffects.Count - 1;
 				for (int i = 0; i < lastTrapEffectIndex; i++)
 				{
-					if (string.IsNullOrEmpty(TrapEffect[i].EffectDescription))
+					if (string.IsNullOrEmpty(TrapEffects[i].EffectDescription))
 					{
 						continue;
 					}
-					sb.Append("\r\n\t" + TrapEffect[i].EffectDescription.ToLower() + ",");
+					sb.Append("\r\n\t" + TrapEffects[i].EffectDescription.ToLower() + ",");
 				}
-				sb.Append("\r\n\t" + TrapEffect[lastTrapEffectIndex].EffectDescription.ToLower());
+				sb.Append("\r\n\t" + TrapEffects[lastTrapEffectIndex].EffectDescription.ToLower());
 			}
 			return sb.ToString();
+		}
+
+		private string ValidSubtableDescription()
+		{
+			return string.IsNullOrEmpty(TrapEffects[0].SubtableEffectDescription) ? string.Empty : TrapEffects[0].SubtableEffectDescription.ToLower();
 		}
 
 		private bool IsValidIndex(int indexOfEffectToChange)
 		{
 			int firstIndex = 0;
-			int lastIindex = TrapEffect.Count - 1;
+			int lastIindex = TrapEffects.Count - 1;
 			if (indexOfEffectToChange < firstIndex || indexOfEffectToChange > lastIindex)
 			{
 				return false;
@@ -58,7 +61,7 @@ namespace DungeonBuildersGuidebook1.TrapComponentObjects
 
 		public void SetTrapEffect(IEnumerable<TrapEffects> trapEffects)
 		{
-			TrapEffect.AddRange(trapEffects);
+			TrapEffects.AddRange(trapEffects);
 		}
 
 		public void SetTrapDamage(TrapDamages trapDamages)
@@ -78,8 +81,8 @@ namespace DungeonBuildersGuidebook1.TrapComponentObjects
 		{
 			if (IsValidIndex(indexOfEffectToChange))
 			{
-				TrapEffect.RemoveAt(indexOfEffectToChange);
-				TrapEffect.InsertRange(indexOfEffectToChange, newEffect);
+				TrapEffects.RemoveAt(indexOfEffectToChange);
+				TrapEffects.InsertRange(indexOfEffectToChange, newEffect);
 				return true;
 			}
 			return false;
@@ -88,6 +91,21 @@ namespace DungeonBuildersGuidebook1.TrapComponentObjects
 		public override string ToString()
 		{
 			return string.Format("{0}{1}{2}\r\n\tAnd {3}", TrapBase.TrappedObjectOrArea, TrapBase.MechanismType.ToLower(), FormatEffects(), TrapDamage.DamageDescription.ToLower());
+		}
+
+		public string GetSubtableType(int effectIndex)
+		{
+			return TrapEffects[effectIndex].SubtableName;
+		}
+
+		public bool ChangeAnEffectSubtableDescription(int effectIndex, string newSubtableDescription)
+		{
+			if (IsValidIndex(effectIndex))
+			{
+				TrapEffects[effectIndex].SubtableEffectDescription = newSubtableDescription;
+				return true;
+			}
+			return false;
 		}
 	}
 }

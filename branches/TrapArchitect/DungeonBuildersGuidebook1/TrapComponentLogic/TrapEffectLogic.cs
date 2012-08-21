@@ -19,7 +19,8 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 		private RangeDictionary<int, TrapEffects> trapEffectsTable;
 		private RangeDictionary<int, string> gasTrapTable;
 		private RangeDictionary<int, string> pitContentsTable;
-		private DiceDefinition diceDefinition;
+		private DiceDefinition effectsTableDefinition;
+		private DiceDefinition gasTableDefinition;
 		private string effectsTableDieRoll;
 		private string gasTableDieRoll;
 		private string pitContentTableDieRoll;
@@ -36,7 +37,8 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 			gasTrapTable = new RangeDictionary<int, string>();
 			pitContentsTable = new RangeDictionary<int, string>();
 			LoadTrapTables();
-			diceDefinition = DiceDefinition.Parse(effectsTableDieRoll);
+			effectsTableDefinition = DiceDefinition.Parse(effectsTableDieRoll);
+			gasTableDefinition = DiceDefinition.Parse(gasTableDieRoll);
 		}
 
 		private void LoadTrapTables()
@@ -80,6 +82,8 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 																					AdditionalInformation = ValidateElement(tE.Element("AdditionalInformation").Value),
 																					RollAgain = bool.Parse(tE.Element("RollAgain").Value),
 																					NumberOfReRolls = ValidateIntElement(tE.Element("NumberOfReRolls").Value),
+																					HasSubtable = bool.Parse(tE.Element("HasSubtable").Value),
+																					SubtableName = tE.Element("SubtableName").Value,
 																				}
 																		).OrderBy(r => r.RollUpperBound);
 
@@ -133,8 +137,8 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 
 		private bool WithinBounds(int specificResult)
 		{
-			minimumBounds = diceDefinition.NumberOfDice;
-			maximumBounds = (diceDefinition.NumberOfDice * diceDefinition.NumberOfSides);
+			minimumBounds = effectsTableDefinition.NumberOfDice;
+			maximumBounds = (effectsTableDefinition.NumberOfDice * effectsTableDefinition.NumberOfSides);
 
 			if (specificResult >= minimumBounds && specificResult <= maximumBounds)
 			{
@@ -151,6 +155,7 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 			var effects = new List<TrapEffects>();
 			effects.Add(trapEffectsTable[DiceCup.Roll(effectsTableDieRoll)]);
 			effects.AddRange(CheckForMultipleRolls(effects));
+			CheckForSubtables(effects);
 
 			return effects;
 		}
@@ -162,11 +167,40 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 			{
 				effects.Add(trapEffectsTable[specificResult]);
 				effects.AddRange(CheckForMultipleRolls(effects));
+				CheckForSubtables(effects);
 				return effects;
 			}
 			else
 			{
 				return new List<TrapEffects> {new NullTrapEffect(specificResult, minimumBounds, maximumBounds)};
+			}
+		}
+
+		public void CheckForSubtables(IEnumerable<TrapEffects> effects)
+		{
+			foreach (var effect in effects.Where(e => e.HasSubtable && e.SubtableName.Contains("GasType")))
+			{
+				effect.SubtableEffectDescription = " " + gasTrapTable[DiceCup.Roll(gasTableDieRoll)];
+			}
+		}
+
+		public string GetSpecificSubtableEffect(string subtable, int gasTypeRoll)
+		{
+			switch (subtable)
+			{
+				case "GasType":
+					minimumBounds = gasTableDefinition.NumberOfDice;
+					maximumBounds = (gasTableDefinition.NumberOfDice * gasTableDefinition.NumberOfSides);
+					if (gasTypeRoll >= minimumBounds && gasTypeRoll <= maximumBounds)
+					{
+						return " " + gasTrapTable[gasTypeRoll];
+					}
+					else
+					{
+						return string.Format("{0} is out of bounds of {1} for {2}", gasTypeRoll, gasTableDieRoll, subtable);
+					}
+				default:
+					return string.Format("{0} is an invalid subtable.", subtable);
 			}
 		}
 	}
