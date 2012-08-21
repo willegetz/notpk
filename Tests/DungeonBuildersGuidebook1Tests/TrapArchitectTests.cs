@@ -165,6 +165,16 @@ namespace DungeonBuildersGuidebook1Tests
 		}
 
 		[TestMethod]
+		public void GetGasTrapTwiceTest()
+		{
+			var architect = new TrapArchitect();
+
+			var effect = architect.GetSpecificSubtableEffect("GasType", 4);
+
+			Approvals.Verify(effect);
+		}
+
+		[TestMethod]
 		[Ignore] // Experiment workspace
 		public void TrapEffectsTest()
 		{
@@ -209,6 +219,7 @@ namespace DungeonBuildersGuidebook1Tests
 		}
 
 		[TestMethod]
+		[Ignore] // Playgrounds
 		public void TestLoadXmlElement()
 		{
 			var trapArchitect = new TrapArchitect();
