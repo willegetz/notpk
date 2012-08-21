@@ -8,6 +8,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>2</RollUpperBound>
@@ -15,6 +17,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>3</RollUpperBound>
@@ -22,6 +26,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>4</RollUpperBound>
@@ -29,6 +35,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>5</RollUpperBound>
@@ -36,6 +44,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>true</RollAgain>
 		<NumberOfReRolls>1</NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>6</RollUpperBound>
@@ -43,6 +53,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>7</RollUpperBound>
@@ -50,6 +62,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>8</RollUpperBound>
@@ -57,6 +71,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>9</RollUpperBound>
@@ -64,6 +80,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>10</RollUpperBound>
@@ -71,6 +89,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>11</RollUpperBound>
@@ -78,6 +98,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>12</RollUpperBound>
@@ -85,6 +107,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>13</RollUpperBound>
@@ -92,6 +116,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>14</RollUpperBound>
@@ -99,6 +125,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>15</RollUpperBound>
@@ -106,6 +134,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>16</RollUpperBound>
@@ -113,6 +143,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>17</RollUpperBound>
@@ -120,6 +152,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>18</RollUpperBound>
@@ -127,6 +161,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>19</RollUpperBound>
@@ -134,6 +170,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>20</RollUpperBound>
@@ -141,6 +179,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>21</RollUpperBound>
@@ -148,6 +188,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>22</RollUpperBound>
@@ -155,6 +197,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>23</RollUpperBound>
@@ -162,6 +206,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>24</RollUpperBound>
@@ -169,6 +215,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>25</RollUpperBound>
@@ -176,6 +224,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>26</RollUpperBound>
@@ -183,6 +233,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>27</RollUpperBound>
@@ -190,6 +242,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>28</RollUpperBound>
@@ -197,6 +251,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>29</RollUpperBound>
@@ -204,6 +260,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>30</RollUpperBound>
@@ -211,6 +269,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>31</RollUpperBound>
@@ -218,6 +278,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>32</RollUpperBound>
@@ -225,6 +287,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>33</RollUpperBound>
@@ -232,6 +296,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>34</RollUpperBound>
@@ -239,6 +305,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>35</RollUpperBound>
@@ -246,6 +314,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>36</RollUpperBound>
@@ -253,6 +323,8 @@
 		<AdditionalInformation>Additional table required</AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>true</HasSubtable>
+		<SubtableName>ContentType</SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>37</RollUpperBound>
@@ -260,13 +332,17 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>38</RollUpperBound>
-		<EffectDescription>Gas released</EffectDescription>
+		<EffectDescription>Releases a gas:</EffectDescription>
 		<AdditionalInformation>Additional table required</AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>true</HasSubtable>
+		<SubtableName>GasType</SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>39</RollUpperBound>
@@ -274,6 +350,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>40</RollUpperBound>
@@ -281,6 +359,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>41</RollUpperBound>
@@ -288,6 +368,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>42</RollUpperBound>
@@ -295,6 +377,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>43</RollUpperBound>
@@ -302,6 +386,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>44</RollUpperBound>
@@ -309,6 +395,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>45</RollUpperBound>
@@ -316,6 +404,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>46</RollUpperBound>
@@ -323,6 +413,8 @@
 		<AdditionalInformation>roll again for another effect</AdditionalInformation>
 		<RollAgain>true</RollAgain>
 		<NumberOfReRolls>1</NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>47</RollUpperBound>
@@ -330,6 +422,8 @@
 		<AdditionalInformation>roll again for another effect</AdditionalInformation>
 		<RollAgain>true</RollAgain>
 		<NumberOfReRolls>1</NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>48</RollUpperBound>
@@ -337,6 +431,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>49</RollUpperBound>
@@ -344,6 +440,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>50</RollUpperBound>
@@ -351,6 +449,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>51</RollUpperBound>
@@ -358,6 +458,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>52</RollUpperBound>
@@ -365,6 +467,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>53</RollUpperBound>
@@ -372,6 +476,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>54</RollUpperBound>
@@ -379,6 +485,8 @@
 		<AdditionalInformation>Additional table required</AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>55</RollUpperBound>
@@ -386,6 +494,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>56</RollUpperBound>
@@ -393,6 +503,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>57</RollUpperBound>
@@ -400,6 +512,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>58</RollUpperBound>
@@ -407,6 +521,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>59</RollUpperBound>
@@ -414,6 +530,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>60</RollUpperBound>
@@ -421,6 +539,8 @@
 		<AdditionalInformation>Additional table required</AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>61</RollUpperBound>
@@ -428,6 +548,8 @@
 		<AdditionalInformation>Additional table required</AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>62</RollUpperBound>
@@ -435,6 +557,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>63</RollUpperBound>
@@ -442,6 +566,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>64</RollUpperBound>
@@ -449,6 +575,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>65</RollUpperBound>
@@ -456,6 +584,8 @@
 		<AdditionalInformation>Additional table required</AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>66</RollUpperBound>
@@ -463,6 +593,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>67</RollUpperBound>
@@ -470,6 +602,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>68</RollUpperBound>
@@ -477,6 +611,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>69</RollUpperBound>
@@ -484,13 +620,17 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>70</RollUpperBound>
 		<EffectDescription>Puts victim in stasis for 1d100 years</EffectDescription>
-		<AdditionalInformation>Additional table required</AdditionalInformation>
+		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>71</RollUpperBound>
@@ -498,6 +638,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>72</RollUpperBound>
@@ -505,6 +647,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>73</RollUpperBound>
@@ -512,6 +656,8 @@
 		<AdditionalInformation>Additional table required</AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>74</RollUpperBound>
@@ -519,6 +665,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>75</RollUpperBound>
@@ -526,6 +674,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>76</RollUpperBound>
@@ -533,6 +683,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>77</RollUpperBound>
@@ -540,6 +692,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>78</RollUpperBound>
@@ -547,6 +701,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>79</RollUpperBound>
@@ -554,6 +710,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>80</RollUpperBound>
@@ -561,6 +719,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>81</RollUpperBound>
@@ -568,6 +728,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>82</RollUpperBound>
@@ -575,6 +737,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>83</RollUpperBound>
@@ -582,6 +746,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>84</RollUpperBound>
@@ -589,6 +755,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>85</RollUpperBound>
@@ -596,6 +764,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>86</RollUpperBound>
@@ -603,6 +773,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>87</RollUpperBound>
@@ -610,6 +782,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>88</RollUpperBound>
@@ -617,6 +791,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>89</RollUpperBound>
@@ -624,6 +800,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>90</RollUpperBound>
@@ -631,6 +809,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>91</RollUpperBound>
@@ -638,6 +818,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>92</RollUpperBound>
@@ -645,6 +827,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>93</RollUpperBound>
@@ -652,6 +836,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>94</RollUpperBound>
@@ -659,6 +845,8 @@
 		<AdditionalInformation>Additional table required</AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>true</HasSubtable>
+		<SubtableName>ContentType</SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>95</RollUpperBound>
@@ -666,6 +854,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>96</RollUpperBound>
@@ -673,6 +863,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>97</RollUpperBound>
@@ -680,6 +872,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>98</RollUpperBound>
@@ -687,6 +881,8 @@
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>99</RollUpperBound>
@@ -694,6 +890,8 @@
 		<AdditionalInformation>Roll two more times, combine both effects</AdditionalInformation>
 		<RollAgain>true</RollAgain>
 		<NumberOfReRolls>2</NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>100</RollUpperBound>
@@ -701,5 +899,7 @@
 		<AdditionalInformation>Roll three more times, combine all effects</AdditionalInformation>
 		<RollAgain>true</RollAgain>
 		<NumberOfReRolls>3</NumberOfReRolls>
+		<HasSubtable>false</HasSubtable>
+		<SubtableName></SubtableName>
 	</Effect>
 </Root>

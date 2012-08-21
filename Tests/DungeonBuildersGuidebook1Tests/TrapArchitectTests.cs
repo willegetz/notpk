@@ -6,7 +6,6 @@ using ApprovalTests;
 using ApprovalTests.Reporters;
 using System.Xml.Linq;
 using DungeonBuildersGuidebook1;
-using RpgTools.Dice;
 using DungeonBuildersGuidebook1.TrapComponentObjects;
 
 namespace DungeonBuildersGuidebook1Tests
@@ -123,6 +122,26 @@ namespace DungeonBuildersGuidebook1Tests
 			sb.AppendLine(trap.ToString());
 			
 			Approvals.Verify(sb.ToString());
+		}
+
+		[TestMethod]
+		public void GasSubtableTest()
+		{
+			var architect = new TrapArchitect();
+			var trap = new TheTrap();
+
+			int trapBaseRoll = 25;
+			int trapEffectRoll = 38;
+			int trapDamageRoll = 6;
+			int effectIndex = 0;
+			int gasTypeRoll = 3;
+
+			trap.SetTrapBase(architect.GetSpecificTrapBase(trapBaseRoll));
+			trap.SetTrapEffect(architect.GetSpecificTrapEffect(trapEffectRoll));
+			trap.ChangeAnEffectSubtableDescription(effectIndex, architect.GetSpecificSubtableEffect(trap.GetSubtableType(effectIndex), gasTypeRoll));
+			trap.SetTrapDamage(architect.GetSpecificTrapDamage(trapDamageRoll));
+
+			Approvals.Approve(trap.ToString());
 		}
 
 		[TestMethod]
