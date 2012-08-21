@@ -841,12 +841,12 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>94</RollUpperBound>
-		<EffectDescription>Tumbles victim into pit</EffectDescription>
+		<EffectDescription>Tumbles victim into a pit</EffectDescription>
 		<AdditionalInformation>Additional table required</AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
 		<HasSubtable>true</HasSubtable>
-		<SubtableName>ContentType</SubtableName>
+		<SubtableName>PitContents</SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>95</RollUpperBound>

@@ -57,9 +57,9 @@ namespace DungeonBuildersGuidebook1
 			return trapDamageLogic.GetSpecificTrapDamage(specificResult);
 		}
 
-		public string GetSpecificSubtableEffect(string subtable, int gasTypeRoll)
+		public string GetSpecificSubtableEffect(string subtable, int subtableRoll)
 		{
-			return trapEffectLogic.GetSpecificSubtableEffect(subtable, gasTypeRoll);
+			return trapEffectLogic.GetSpecificSubtableEffect(subtable, subtableRoll);
 		}
 	}
 }
