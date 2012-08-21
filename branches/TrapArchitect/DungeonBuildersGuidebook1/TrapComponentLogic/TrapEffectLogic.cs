@@ -21,6 +21,7 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 		private RangeDictionary<int, string> pitContentsTable;
 		private DiceDefinition effectsTableDefinition;
 		private DiceDefinition gasTableDefinition;
+		private DiceDefinition pitContentDefinition;
 		private string effectsTableDieRoll;
 		private string gasTableDieRoll;
 		private string pitContentTableDieRoll;
@@ -39,6 +40,7 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 			LoadTrapTables();
 			effectsTableDefinition = DiceDefinition.Parse(effectsTableDieRoll);
 			gasTableDefinition = DiceDefinition.Parse(gasTableDieRoll);
+			pitContentDefinition = DiceDefinition.Parse(pitContentTableDieRoll);
 		}
 
 		private void LoadTrapTables()
@@ -182,22 +184,37 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 			{
 				effect.SubtableEffectDescription = " " + gasTrapTable[DiceCup.Roll(gasTableDieRoll)];
 			}
+			foreach (var effect in effects.Where(e => e.HasSubtable && e.SubtableName.Contains("PitContents")))
+			{
+				effect.SubtableEffectDescription = " full of " + pitContentsTable[DiceCup.Roll(pitContentTableDieRoll)];
+			}
 		}
 
-		public string GetSpecificSubtableEffect(string subtable, int gasTypeRoll)
+		public string GetSpecificSubtableEffect(string subtable, int subtableRoll)
 		{
 			switch (subtable)
 			{
 				case "GasType":
 					minimumBounds = gasTableDefinition.NumberOfDice;
 					maximumBounds = (gasTableDefinition.NumberOfDice * gasTableDefinition.NumberOfSides);
-					if (gasTypeRoll >= minimumBounds && gasTypeRoll <= maximumBounds)
+					if (subtableRoll >= minimumBounds && subtableRoll <= maximumBounds)
 					{
-						return " " + gasTrapTable[gasTypeRoll];
+						return " " + gasTrapTable[subtableRoll];
 					}
 					else
 					{
-						return string.Format("{0} is out of bounds of {1} for {2}", gasTypeRoll, gasTableDieRoll, subtable);
+						return string.Format("{0} is out of bounds of {1} for {2}", subtableRoll, gasTableDieRoll, subtable);
+					}
+				case "PitContents":
+					minimumBounds = pitContentDefinition.NumberOfDice;
+					maximumBounds = (pitContentDefinition.NumberOfDice * pitContentDefinition.NumberOfSides);
+					if (subtableRoll >= minimumBounds && subtableRoll <= maximumBounds)
+					{
+						return " full of " + pitContentsTable[subtableRoll];
+					}
+					else
+					{
+						return string.Format("{0} is out of bounds of {1} for {2}", subtableRoll, gasTableDieRoll, subtable);
 					}
 				default:
 					return string.Format("{0} is an invalid subtable.", subtable);

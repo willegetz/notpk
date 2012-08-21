@@ -76,6 +76,9 @@
     <Content Include="TrapArchitectTests.GetSpecificTrapsTest.approved.txt">
       <DependentUpon>TrapArchitectTests.cs</DependentUpon>
     </Content>
+    <Content Include="TrapArchitectTests.PitContentsSubtableTest.approved.txt">
+      <DependentUpon>TrapArchitectTests.cs</DependentUpon>
+    </Content>
     <Content Include="TrapArchitectTests.RerollTrapTest.approved.txt">
       <DependentUpon>TrapArchitectTests.cs</DependentUpon>
     </Content>

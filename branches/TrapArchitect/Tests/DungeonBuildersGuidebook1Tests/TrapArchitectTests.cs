@@ -141,7 +141,27 @@ namespace DungeonBuildersGuidebook1Tests
 			trap.ChangeAnEffectSubtableDescription(effectIndex, architect.GetSpecificSubtableEffect(trap.GetSubtableType(effectIndex), gasTypeRoll));
 			trap.SetTrapDamage(architect.GetSpecificTrapDamage(trapDamageRoll));
 
-			Approvals.Approve(trap.ToString());
+			Approvals.Verify(trap.ToString());
+		}
+
+		[TestMethod]
+		public void PitContentsSubtableTest()
+		{
+			var architect = new TrapArchitect();
+			var trap = new TheTrap();
+
+			int trapBaseRoll = 84;
+			int TrapEffectRoll = 94;
+			int trapDamageRoll = 15;
+			int effectIndex = 0;
+			int pitContentsRoll = 5;
+
+			trap.SetTrapBase(architect.GetSpecificTrapBase(trapBaseRoll));
+			trap.SetTrapEffect(architect.GetSpecificTrapEffect(TrapEffectRoll));
+			trap.ChangeAnEffectSubtableDescription(effectIndex, architect.GetSpecificSubtableEffect(trap.GetSubtableType(effectIndex), pitContentsRoll));
+			trap.SetTrapDamage(architect.GetSpecificTrapDamage(trapDamageRoll));
+
+			Approvals.Verify(trap.ToString());
 		}
 
 		[TestMethod]
