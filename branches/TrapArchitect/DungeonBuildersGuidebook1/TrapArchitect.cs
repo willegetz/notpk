@@ -26,8 +26,8 @@ namespace DungeonBuildersGuidebook1
 
 		public TrapArchitect()
 		{
-			SetRandomNumber();
-			DiceCup.SetRandom(randomNumber);
+			//SetRandomNumber();
+			//DiceCup.SetRandom(randomNumber);
 
 			LoadTable();
 
@@ -78,18 +78,9 @@ namespace DungeonBuildersGuidebook1
 			return trapEffectLogic.GetSpecificSubtableEffect(subtable, subtableRoll);
 		}
 
-		public IEnumerable<TrapEffects> GetSpecificTrapEffect1(int specificResult)
+		public string GetSpecificTrapEffect1(int specificResult)
 		{
-			if (specificResult <= 2)
-			{
-				var listEffects = new List<TrapEffects>();
-				listEffects.Add(new TrapEffects { EffectDescription = simpleEffectFactory.GetFactory(specificResult).Get() });
-				return listEffects;
-			}
-			else
-			{
-				return GetSpecificTrapEffect(specificResult);
-			}
+				return simpleEffectFactory.GetFactory(specificResult).Get();
 		}
 
 		private void LoadTable()
@@ -98,8 +89,6 @@ namespace DungeonBuildersGuidebook1
 			trapEffectsTable1 = new RangeDictionary<int, SpecificTrapFactory>();
 			// TODO add another dictionary
 
-			trapEffectsTable1.Add(1, new SpecificTrapFactory("Absorbs victim into two-dimensional fresco or painting"));
-			trapEffectsTable1.Add(2, new SpecificTrapFactory("Ages victim 10d10 years"));
 			trapEffectsXml = XElement.Load(xmlTrapEffectsFilePath);
 			try
 			{
@@ -119,6 +108,7 @@ namespace DungeonBuildersGuidebook1
 				foreach (var trapEffect in trapEffects)
 				{
 					trapEffectsTable.Add(trapEffect.RollUpperBound, trapEffect);
+					trapEffectsTable1.Add(trapEffect.RollUpperBound, new SpecificTrapFactory(trapEffect.EffectDescription));
 				}
 			}
 			catch (Exception ex)

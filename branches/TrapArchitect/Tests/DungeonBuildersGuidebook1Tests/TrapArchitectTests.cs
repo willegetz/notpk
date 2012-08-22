@@ -7,6 +7,8 @@ using ApprovalTests.Reporters;
 using System.Xml.Linq;
 using DungeonBuildersGuidebook1;
 using DungeonBuildersGuidebook1.TrapComponentObjects;
+using RpgTools.Dice;
+using System;
 
 namespace DungeonBuildersGuidebook1Tests
 {
@@ -168,14 +170,38 @@ namespace DungeonBuildersGuidebook1Tests
 		public void TrapEffectFactoryTest()
 		{
 			var architect = new TrapArchitect();
-			var factoryEffect1 = architect.GetSpecificTrapEffect1(1).First().EffectDescription;
-			var factoryEffect2 = architect.GetSpecificTrapEffect1(2).First().EffectDescription;
+			var factoryEffect1 = architect.GetSpecificTrapEffect1(1);
+			var factoryEffect2 = architect.GetSpecificTrapEffect1(2);
 
 			var logicEffect1 = architect.GetSpecificTrapEffect(1).First().EffectDescription.ToLower();
 			var logicEffect2 = architect.GetSpecificTrapEffect(2).First().EffectDescription.ToLower();
 
 			Assert.AreEqual(factoryEffect1, logicEffect1);
 			Assert.AreEqual(factoryEffect2, logicEffect2);
+		}
+
+		[TestMethod]
+		public void RandomEntryTest()
+		{
+			DiceCup.SetRandom(new Random(4));
+			var diceCup = new DiceCup();
+			var architect = new TrapArchitect();
+
+			var factoryList = new List<string>();
+			var firstList = new List<string>();
+
+			int repeat = 100;
+
+			for (int i = 1; i <= repeat; i++)
+			{
+				var result = DiceCup.Roll("1d100");
+				factoryList.Add(architect.GetSpecificTrapEffect1(result));
+				firstList.Add(architect.GetSpecificTrapEffect(result).First().EffectDescription.ToLower());
+			}
+
+			//Approvals.VerifyAll(factoryList, "Factory List");
+			Approvals.VerifyAll(firstList, "First List");
+
 		}
 
 		[TestMethod]
