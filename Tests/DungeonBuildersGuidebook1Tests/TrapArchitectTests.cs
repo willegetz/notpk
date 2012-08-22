@@ -165,13 +165,17 @@ namespace DungeonBuildersGuidebook1Tests
 		}
 
 		[TestMethod]
-		public void GetGasTrapTwiceTest()
+		public void TrapEffectFactoryTest()
 		{
 			var architect = new TrapArchitect();
+			var factoryEffect1 = architect.GetSpecificTrapEffect1(1).First().EffectDescription;
+			var factoryEffect2 = architect.GetSpecificTrapEffect1(2).First().EffectDescription;
 
-			var effect = architect.GetSpecificSubtableEffect("GasType", 4);
+			var logicEffect1 = architect.GetSpecificTrapEffect(1).First().EffectDescription.ToLower();
+			var logicEffect2 = architect.GetSpecificTrapEffect(2).First().EffectDescription.ToLower();
 
-			Approvals.Verify(effect);
+			Assert.AreEqual(factoryEffect1, logicEffect1);
+			Assert.AreEqual(factoryEffect2, logicEffect2);
 		}
 
 		[TestMethod]
