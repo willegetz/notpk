@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DungeonBuildersGuidebook1.Factories
 {
-	public class SpecificTrapFactory
+	public class SpecificTrapFactory : ISpecificTrapFactory
 	{
 		private string effectDescription;
 

@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ApprovalTests;
 using ApprovalTests.Reporters;
 using System.Xml.Linq;
@@ -9,18 +8,19 @@ using DungeonBuildersGuidebook1;
 using DungeonBuildersGuidebook1.TrapComponentObjects;
 using RpgTools.Dice;
 using System;
+using NUnit.Framework;
 
 namespace DungeonBuildersGuidebook1Tests
 {
-	[TestClass]
+	[TestFixture]
 	[UseReporter(typeof(DiffReporter))]
 	public class TrapArchitectTests
 	{
 		// The user should also be allowed to pick their Trap Basic
 		//		Some form of display to pick from
 
-		[TestMethod]
-		[Ignore] // Test 
+		[Test]
+		[Ignore("Completely Random, different results each time.")]
 		public void GenerateRandomTrapsTest()
 		{
 			var architect = new TrapArchitect();
@@ -46,7 +46,7 @@ namespace DungeonBuildersGuidebook1Tests
 			Approvals.VerifyAll(traps, "Traps");
 		}
 
-		[TestMethod]
+		[Test]
 		public void GetSpecificTrapsTest()
 		{
 			var architect = new TrapArchitect();
@@ -95,7 +95,7 @@ namespace DungeonBuildersGuidebook1Tests
 			Approvals.VerifyAll(traps, "Traps");
 		}
 
-		[TestMethod]
+		[Test]
 		public void RerollTrapTest()
 		{
 			var architect = new TrapArchitect();
@@ -126,7 +126,7 @@ namespace DungeonBuildersGuidebook1Tests
 			Approvals.Verify(sb.ToString());
 		}
 
-		[TestMethod]
+		[Test]
 		public void GasSubtableTest()
 		{
 			var architect = new TrapArchitect();
@@ -146,7 +146,7 @@ namespace DungeonBuildersGuidebook1Tests
 			Approvals.Verify(trap.ToString());
 		}
 
-		[TestMethod]
+		[Test]
 		public void PitContentsSubtableTest()
 		{
 			var architect = new TrapArchitect();
@@ -166,12 +166,12 @@ namespace DungeonBuildersGuidebook1Tests
 			Approvals.Verify(trap.ToString());
 		}
 
-		[TestMethod]
+		[Test]
 		public void TrapEffectFactoryTest()
 		{
 			var architect = new TrapArchitect();
 			var factoryEffect1 = architect.GetSpecificTrapEffect1(1);
-			var factoryEffect2 = architect.GetSpecificTrapEffect1(2);
+			var factoryEffect2 = architect.GetSpecificTrapEffect1(5);
 
 			var logicEffect1 = architect.GetSpecificTrapEffect(1).First().EffectDescription.ToLower();
 			var logicEffect2 = architect.GetSpecificTrapEffect(2).First().EffectDescription.ToLower();
@@ -180,32 +180,33 @@ namespace DungeonBuildersGuidebook1Tests
 			Assert.AreEqual(factoryEffect2, logicEffect2);
 		}
 
-		[TestMethod]
+		[Test]
 		public void RandomEntryTest()
 		{
 			DiceCup.SetRandom(new Random(4));
-			var diceCup = new DiceCup();
 			var architect = new TrapArchitect();
 
 			var factoryList = new List<string>();
 			var firstList = new List<string>();
 
-			int repeat = 100;
+			int repeat = 1000;
 
+			// roll 455 gave an interesting result
 			for (int i = 1; i <= repeat; i++)
 			{
 				var result = DiceCup.Roll("1d100");
-				factoryList.Add(architect.GetSpecificTrapEffect1(result));
-				firstList.Add(architect.GetSpecificTrapEffect(result).First().EffectDescription.ToLower());
+					factoryList.Add(architect.GetSpecificTrapEffect1(result));
+				
+				//firstList.Add(architect.GetSpecificTrapEffect(result).First().EffectDescription.ToLower());
 			}
 
-			//Approvals.VerifyAll(factoryList, "Factory List");
-			Approvals.VerifyAll(firstList, "First List");
+			Approvals.VerifyAll(factoryList, "List");
+			//Approvals.VerifyAll(firstList, "List");
 
 		}
 
-		[TestMethod]
-		[Ignore] // Experiment workspace
+		[Test]
+		[Ignore("Experiment Workspace")]
 		public void TrapEffectsTest()
 		{
 			// A trap effect has at minimum an effect name and an upper bound on the range
@@ -248,7 +249,7 @@ namespace DungeonBuildersGuidebook1Tests
 			Approvals.Verify(sb.ToString());
 		}
 
-		[TestMethod]
+		[Test]
 		[Ignore] // Playgrounds
 		public void TestLoadXmlElement()
 		{

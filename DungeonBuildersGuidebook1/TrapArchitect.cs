@@ -7,6 +7,7 @@ using System.Linq;
 using System.Xml.Linq;
 using RJK.CSharp.CustomLists.RangeDictionary;
 using DungeonBuildersGuidebook1.Factories;
+using RpgTools.Dice.Extensions;
 
 namespace DungeonBuildersGuidebook1
 {
@@ -21,18 +22,18 @@ namespace DungeonBuildersGuidebook1
 		private IEnumerable<TrapEffects> trapEffects;
 		private string xmlTrapEffectsFilePath = DataConstants.DataFilesPath + "TrapEffectsAndTraits.xml";
 		private RangeDictionary<int, TrapEffects> trapEffectsTable;
-		private RangeDictionary<int, SpecificTrapFactory> trapEffectsTable1;
-		private SimpleTrapEffectFactory simpleEffectFactory;
+		private RangeDictionary<int, ISpecificTrapFactory> trapEffectsTable1;
+		private TrapEffectFactory effectFactory;
+		private DiceCup mainTableDice;
+		private string effectsTableDieRoll;
 
 		public TrapArchitect()
 		{
-			//SetRandomNumber();
-			//DiceCup.SetRandom(randomNumber);
+			effectFactory = new TrapEffectFactory();
 
-			LoadTable();
-
-			simpleEffectFactory = new SimpleTrapEffectFactory(trapEffectsTable1);
-
+			LoadTables();
+			
+			
 			trapBaseLogic = new TrapBaseLogic();
 			trapEffectLogic = new TrapEffectLogic();
 			trapDamageLogic = new TrapDamageLogic();
@@ -80,18 +81,19 @@ namespace DungeonBuildersGuidebook1
 
 		public string GetSpecificTrapEffect1(int specificResult)
 		{
-				return simpleEffectFactory.GetFactory(specificResult).Get();
+				return effectFactory.GetFactory(specificResult).Get();
 		}
 
-		private void LoadTable()
+		private void LoadTables()
 		{
 			trapEffectsTable = new RangeDictionary<int, TrapEffects>();
-			trapEffectsTable1 = new RangeDictionary<int, SpecificTrapFactory>();
+			trapEffectsTable1 = new RangeDictionary<int, ISpecificTrapFactory>();
 			// TODO add another dictionary
 
 			trapEffectsXml = XElement.Load(xmlTrapEffectsFilePath);
 			try
 			{
+				mainTableDice = new DiceCup(DiceDefinition.Parse(trapEffectsXml.Descendants("TableDieRoll").Select(d => d.Element("DiceDefinition").Value).Single()));
 				trapEffects = new List<TrapEffects>();
 				trapEffects = trapEffectsXml.Descendants("Effect").Select(tE => new TrapEffects()
 																						{
@@ -108,7 +110,14 @@ namespace DungeonBuildersGuidebook1
 				foreach (var trapEffect in trapEffects)
 				{
 					trapEffectsTable.Add(trapEffect.RollUpperBound, trapEffect);
-					trapEffectsTable1.Add(trapEffect.RollUpperBound, new SpecificTrapFactory(trapEffect.EffectDescription));
+					if (trapEffect.RollAgain)
+					{
+						effectFactory.Add(trapEffect.RollUpperBound, new ComplexTrapEffectFactory(effectFactory, mainTableDice, trapEffect.EffectDescription));
+					}
+					else
+					{
+						effectFactory.Add(trapEffect.RollUpperBound, new SpecificTrapFactory(trapEffect.EffectDescription));
+					}
 				}
 			}
 			catch (Exception ex)
