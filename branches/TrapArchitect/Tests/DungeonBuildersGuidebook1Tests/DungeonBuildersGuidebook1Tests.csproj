@@ -38,6 +38,10 @@
       <HintPath>..\..\packages\ApprovalTests.2.0\lib\ApprovalUtilities.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="nunit.framework, Version=2.6.1.12217, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DungeonBuildersGuidebook1\Libraries\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="RJK.CSharp.CustomLists">
       <HintPath>..\..\DungeonBuildersGuidebook1\Libraries\RJK.CSharp.CustomLists.dll</HintPath>
     </Reference>
@@ -77,6 +81,9 @@
       <DependentUpon>TrapArchitectTests.cs</DependentUpon>
     </Content>
     <Content Include="TrapArchitectTests.PitContentsSubtableTest.approved.txt">
+      <DependentUpon>TrapArchitectTests.cs</DependentUpon>
+    </Content>
+    <Content Include="TrapArchitectTests.RandomEntryTest.approved.txt">
       <DependentUpon>TrapArchitectTests.cs</DependentUpon>
     </Content>
     <Content Include="TrapArchitectTests.RerollTrapTest.approved.txt">

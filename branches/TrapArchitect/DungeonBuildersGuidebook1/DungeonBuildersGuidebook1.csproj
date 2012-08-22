@@ -53,7 +53,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Factories\SimpleTrapEffectFactory.cs" />
+    <Compile Include="Factories\ComplexTrapEffectFactory.cs" />
+    <Compile Include="Factories\ISpecificTrapFactory.cs" />
+    <Compile Include="Factories\TrapEffectFactory.cs" />
     <Compile Include="Factories\SpecificTrapFactory.cs" />
     <Compile Include="TrapComponentLogic\DataConstants.cs" />
     <Compile Include="TrapComponentObjects\NullTrapDamage.cs" />
