@@ -233,17 +233,19 @@ namespace DungeonBuildersGuidebook1Tests
 		public void RandomTrapConstructionTest()
 		{
 			var architect = new TrapArchitect();
-			var traps = new List<StringBuilder>();
-			var iterator = 1000;
+			var traps = new List<string>();
+			var iterator = 5000000;
 			for (int i = 0; i < iterator; i++)
 			{
 				var sb = new StringBuilder();
 				sb.AppendLine(architect.GetTrapBaseFactory());
 				sb.AppendLine(architect.GetTrapEffectFactory());
-				traps.Add(sb);
+				sb.AppendLine(architect.GetTrapDamageFactory());
+				traps.Add(sb.ToString());
 			}
 
-			Approvals.VerifyAll(traps, "Traps");
+			Approvals.VerifyAll(traps.Where(t => t.Length > 255), "Traps");
+				//Approvals.Verify(sb);
 		}
 
 		[Test]
