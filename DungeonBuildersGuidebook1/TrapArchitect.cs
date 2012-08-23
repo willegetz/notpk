@@ -18,22 +18,28 @@ namespace DungeonBuildersGuidebook1
 		protected TrapEffectLogic trapEffectLogic;
 		protected TrapDamageLogic trapDamageLogic;
 
+		private XElement trapBasesXml;
 		private XElement trapEffectsXml;
 		private XElement trapSubtablesXml;
+		private IEnumerable<TrapBases> trapBases;
 		private IEnumerable<PitContents> pitContents;
 		private IEnumerable<TrapEffects> trapEffects;
 		private IEnumerable<GasTypes> gasTypes;
+		private string xmlTrapComponentsFilePath = DataConstants.DataFilesPath + "TrapComponents.xml";
 		private string xmlTrapEffectsFilePath = DataConstants.DataFilesPath + "TrapEffectsAndTraits.xml";
 		private string xmlTrapSubtablesFilePath = DataConstants.DataFilesPath + "TrapEffectsSubtables.xml";
+		private TrapEffectFactory trapBaseFactory;
 		private TrapEffectFactory effectFactory;
 		private TrapEffectFactory pitContentEffectFactory;
 		private TrapEffectFactory gasTrapContentFactory;
+		private DiceCup basePrimaryTableDie;
 		private DiceCup effectPrimaryTableDie;
 		private DiceCup pitTrapTableDie;
 		private DiceCup gasTrapTableDie;
 
 		public TrapArchitect()
 		{
+			trapBaseFactory = new TrapEffectFactory();
 			effectFactory = new TrapEffectFactory();
 			pitContentEffectFactory = new TrapEffectFactory();
 			gasTrapContentFactory = new TrapEffectFactory();
@@ -97,14 +103,31 @@ namespace DungeonBuildersGuidebook1
 			return effectFactory.GetFactory(effectPrimaryTableDie.Roll()).Get();
 		}
 
+		public string GetTrapBaseFactory()
+		{
+			return trapBaseFactory.GetFactory(basePrimaryTableDie.Roll()).Get();
+		}
+
+
 		private void LoadTables()
 		{
-			// TODO add another dictionary
-
+			trapBasesXml = XElement.Load(xmlTrapComponentsFilePath);
 			trapEffectsXml = XElement.Load(xmlTrapEffectsFilePath);
 			trapSubtablesXml = XElement.Load(xmlTrapSubtablesFilePath);
 			try
 			{
+				basePrimaryTableDie = new DiceCup(DiceDefinition.Parse(trapBasesXml.Descendants("TableDieRoll").Select(d => d.Element("DiceDefinition").Value).Single()));
+
+				trapBases = new List<TrapBases>();
+				trapBases = trapBasesXml.Descendants("TrapBase").Select(tB => new TrapBases()
+				{
+					RollUpperBound = int.Parse(tB.Element("RollUpperBound").Value),
+					TrappedObjectOrArea = tB.Element("TrappedObjectOrArea").Value,
+					MechanismTypeSpecified = bool.Parse(tB.Element("MechanismTypeSpecified").Value)
+				}
+																		)
+																.OrderBy(r => r.RollUpperBound);
+
 				effectPrimaryTableDie = new DiceCup(DiceDefinition.Parse(trapEffectsXml.Descendants("TableDieRoll").Select(d => d.Element("DiceDefinition").Value).Single()));
 
 				trapEffects = new List<TrapEffects>();
@@ -130,10 +153,7 @@ namespace DungeonBuildersGuidebook1
 																							}
 																		).OrderBy(r => r.RollUpperBound);
 
-				foreach (var content in pitContents)
-				{
-					pitContentEffectFactory.Add(content.RollUpperBound, new SpecificTrapFactory(content.PitContent));
-				}
+				
 
 				// Gas trap info here
 				gasTrapTableDie = new DiceCup(DiceDefinition.Parse(trapSubtablesXml.Descendants("GasTrap").Select(d => d.Element("TableDieRoll").Element("DiceDefinition").Value).Single()));
@@ -146,6 +166,16 @@ namespace DungeonBuildersGuidebook1
 																}
 																		  ).OrderBy(r => r.RollUpperBound);
 
+				foreach (var trapBase in trapBases)
+				{
+					trapBaseFactory.Add(trapBase.RollUpperBound, new SpecificTrapFactory(trapBase.TrappedObjectOrArea));
+				}
+
+				foreach (var content in pitContents)
+				{
+					pitContentEffectFactory.Add(content.RollUpperBound, new SpecificTrapFactory(content.PitContent));
+				}
+
 				foreach (var gas in gasTypes)
 				{
 					gasTrapContentFactory.Add(gas.RollUpperBound, new SpecificTrapFactory(gas.GasName));
@@ -153,9 +183,13 @@ namespace DungeonBuildersGuidebook1
 
 				foreach (var trapEffect in trapEffects)
 				{
-					if (trapEffect.RollAgain)
+					if (trapEffect.RollAgain && trapEffect.NumberOfReRolls == 1)
 					{
 						effectFactory.Add(trapEffect.RollUpperBound, new ComplexTrapEffectFactory(effectFactory, effectPrimaryTableDie, trapEffect.EffectDescription));
+					}
+					else if (trapEffect.RollAgain && trapEffect.NumberOfReRolls > 1)
+					{
+						effectFactory.Add(trapEffect.RollUpperBound, new MultiRollEffectFactory(effectFactory, effectPrimaryTableDie, trapEffect.NumberOfReRolls, trapEffect.EffectDescription));
 					}
 					else if (trapEffect.HasSubtable && trapEffect.SubtableName == "PitContents")
 					{
@@ -201,5 +235,6 @@ namespace DungeonBuildersGuidebook1
 				return elementValue;
 			}
 		}
+
 	}
 }

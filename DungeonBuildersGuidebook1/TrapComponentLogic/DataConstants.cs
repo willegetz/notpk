@@ -11,7 +11,8 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 	{
 		public static string DataFilesPath
 		{
-			get { return Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\DataFiles\"; }
+//			get { return Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\DataFiles\"; }
+			get { return @"DataFiles\"; }
 		}
 	}
 }
