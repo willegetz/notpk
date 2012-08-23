@@ -22,17 +22,21 @@ namespace DungeonBuildersGuidebook1
 		private XElement trapSubtablesXml;
 		private IEnumerable<PitContents> pitContents;
 		private IEnumerable<TrapEffects> trapEffects;
+		private IEnumerable<GasTypes> gasTypes;
 		private string xmlTrapEffectsFilePath = DataConstants.DataFilesPath + "TrapEffectsAndTraits.xml";
 		private string xmlTrapSubtablesFilePath = DataConstants.DataFilesPath + "TrapEffectsSubtables.xml";
 		private TrapEffectFactory effectFactory;
 		private TrapEffectFactory pitContentEffectFactory;
+		private TrapEffectFactory gasTrapContentFactory;
 		private DiceCup effectPrimaryTableDie;
 		private DiceCup pitTrapTableDie;
+		private DiceCup gasTrapTableDie;
 
 		public TrapArchitect()
 		{
 			effectFactory = new TrapEffectFactory();
 			pitContentEffectFactory = new TrapEffectFactory();
+			gasTrapContentFactory = new TrapEffectFactory();
 
 			LoadTables();
 			
@@ -131,6 +135,21 @@ namespace DungeonBuildersGuidebook1
 					pitContentEffectFactory.Add(content.RollUpperBound, new SpecificTrapFactory(content.PitContent));
 				}
 
+				// Gas trap info here
+				gasTrapTableDie = new DiceCup(DiceDefinition.Parse(trapSubtablesXml.Descendants("GasTrap").Select(d => d.Element("TableDieRoll").Element("DiceDefinition").Value).Single()));
+
+				gasTypes = new List<GasTypes>();
+				gasTypes = trapSubtablesXml.Descendants("GasType").Select(gT => new GasTypes()
+																{
+																	RollUpperBound = int.Parse(gT.Element("RollUpperBound").Value),
+																	GasName = gT.Element("GasName").Value,
+																}
+																		  ).OrderBy(r => r.RollUpperBound);
+
+				foreach (var gas in gasTypes)
+				{
+					gasTrapContentFactory.Add(gas.RollUpperBound, new SpecificTrapFactory(gas.GasName));
+				}
 
 				foreach (var trapEffect in trapEffects)
 				{
@@ -141,6 +160,10 @@ namespace DungeonBuildersGuidebook1
 					else if (trapEffect.HasSubtable && trapEffect.SubtableName == "PitContents")
 					{
 						effectFactory.Add(trapEffect.RollUpperBound, new PitTrapEffectFactory(pitContentEffectFactory, pitTrapTableDie, trapEffect.EffectDescription));
+					}
+					else if (trapEffect.HasSubtable && trapEffect.SubtableName == "GasType")
+					{
+						effectFactory.Add(trapEffect.RollUpperBound, new GasTrapEffectFactory(gasTrapContentFactory, gasTrapTableDie, trapEffect.EffectDescription));
 					}
 					else
 					{

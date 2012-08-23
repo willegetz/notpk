@@ -170,7 +170,7 @@ namespace DungeonBuildersGuidebook1Tests
 		public void TrapEffectFactoryTest()
 		{
 			var architect = new TrapArchitect();
-			var factoryEffect1 = architect.GetSpecificTrapEffect1(36);
+			var factoryEffect1 = architect.GetSpecificTrapEffect1(38);
 			var factoryEffect2 = architect.GetSpecificTrapEffect1(38);
 
 			var logicEffect1 = architect.GetSpecificTrapEffect(1).First().EffectDescription.ToLower();
@@ -211,7 +211,7 @@ namespace DungeonBuildersGuidebook1Tests
 		{
 			var architect = new TrapArchitect();
 			var factoryList = new List<string>();
-			int repeat = 200;
+			int repeat = 20000;
 			for (int i = 0; i < repeat; i++)
 			{
 				factoryList.Add(architect.GetTrapEffectFactory());
