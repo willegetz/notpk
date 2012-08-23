@@ -19,20 +19,24 @@ namespace DungeonBuildersGuidebook1
 		protected TrapDamageLogic trapDamageLogic;
 
 		private XElement trapEffectsXml;
+		private XElement trapSubtablesXml;
+		private IEnumerable<PitContents> pitContents;
 		private IEnumerable<TrapEffects> trapEffects;
 		private string xmlTrapEffectsFilePath = DataConstants.DataFilesPath + "TrapEffectsAndTraits.xml";
-		private RangeDictionary<int, TrapEffects> trapEffectsTable;
-		private RangeDictionary<int, ISpecificTrapFactory> trapEffectsTable1;
+		private string xmlTrapSubtablesFilePath = DataConstants.DataFilesPath + "TrapEffectsSubtables.xml";
 		private TrapEffectFactory effectFactory;
-		private DiceCup mainTableDice;
-		private string effectsTableDieRoll;
+		private TrapEffectFactory pitContentEffectFactory;
+		private DiceCup effectPrimaryTableDie;
+		private DiceCup pitTrapTableDie;
 
 		public TrapArchitect()
 		{
 			effectFactory = new TrapEffectFactory();
+			pitContentEffectFactory = new TrapEffectFactory();
 
 			LoadTables();
 			
+
 			
 			trapBaseLogic = new TrapBaseLogic();
 			trapEffectLogic = new TrapEffectLogic();
@@ -84,16 +88,21 @@ namespace DungeonBuildersGuidebook1
 				return effectFactory.GetFactory(specificResult).Get();
 		}
 
+		public string GetTrapEffectFactory()
+		{
+			return effectFactory.GetFactory(effectPrimaryTableDie.Roll()).Get();
+		}
+
 		private void LoadTables()
 		{
-			trapEffectsTable = new RangeDictionary<int, TrapEffects>();
-			trapEffectsTable1 = new RangeDictionary<int, ISpecificTrapFactory>();
 			// TODO add another dictionary
 
 			trapEffectsXml = XElement.Load(xmlTrapEffectsFilePath);
+			trapSubtablesXml = XElement.Load(xmlTrapSubtablesFilePath);
 			try
 			{
-				mainTableDice = new DiceCup(DiceDefinition.Parse(trapEffectsXml.Descendants("TableDieRoll").Select(d => d.Element("DiceDefinition").Value).Single()));
+				effectPrimaryTableDie = new DiceCup(DiceDefinition.Parse(trapEffectsXml.Descendants("TableDieRoll").Select(d => d.Element("DiceDefinition").Value).Single()));
+
 				trapEffects = new List<TrapEffects>();
 				trapEffects = trapEffectsXml.Descendants("Effect").Select(tE => new TrapEffects()
 																						{
@@ -107,12 +116,31 @@ namespace DungeonBuildersGuidebook1
 																						}
 																		).OrderBy(r => r.RollUpperBound);
 
+				pitTrapTableDie = new DiceCup(DiceDefinition.Parse(trapSubtablesXml.Descendants("PitContents").Select(d => d.Element("TableDieRoll").Element("DiceDefinition").Value).Single()));
+
+				pitContents = new List<PitContents>();
+				pitContents = trapSubtablesXml.Descendants("ContentType").Select(pC => new PitContents()
+																							{
+																								RollUpperBound = int.Parse(pC.Element("RollUpperBound").Value),
+																								PitContent = pC.Element("ContentName").Value,
+																							}
+																		).OrderBy(r => r.RollUpperBound);
+
+				foreach (var content in pitContents)
+				{
+					pitContentEffectFactory.Add(content.RollUpperBound, new SpecificTrapFactory(content.PitContent));
+				}
+
+
 				foreach (var trapEffect in trapEffects)
 				{
-					trapEffectsTable.Add(trapEffect.RollUpperBound, trapEffect);
 					if (trapEffect.RollAgain)
 					{
-						effectFactory.Add(trapEffect.RollUpperBound, new ComplexTrapEffectFactory(effectFactory, mainTableDice, trapEffect.EffectDescription));
+						effectFactory.Add(trapEffect.RollUpperBound, new ComplexTrapEffectFactory(effectFactory, effectPrimaryTableDie, trapEffect.EffectDescription));
+					}
+					else if (trapEffect.HasSubtable && trapEffect.SubtableName == "PitContents")
+					{
+						effectFactory.Add(trapEffect.RollUpperBound, new PitTrapEffectFactory(pitContentEffectFactory, pitTrapTableDie, trapEffect.EffectDescription));
 					}
 					else
 					{

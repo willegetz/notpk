@@ -170,8 +170,8 @@ namespace DungeonBuildersGuidebook1Tests
 		public void TrapEffectFactoryTest()
 		{
 			var architect = new TrapArchitect();
-			var factoryEffect1 = architect.GetSpecificTrapEffect1(1);
-			var factoryEffect2 = architect.GetSpecificTrapEffect1(5);
+			var factoryEffect1 = architect.GetSpecificTrapEffect1(36);
+			var factoryEffect2 = architect.GetSpecificTrapEffect1(38);
 
 			var logicEffect1 = architect.GetSpecificTrapEffect(1).First().EffectDescription.ToLower();
 			var logicEffect2 = architect.GetSpecificTrapEffect(2).First().EffectDescription.ToLower();
@@ -195,13 +195,29 @@ namespace DungeonBuildersGuidebook1Tests
 			for (int i = 1; i <= repeat; i++)
 			{
 				var result = DiceCup.Roll("1d100");
-					factoryList.Add(architect.GetSpecificTrapEffect1(result));
+				factoryList.Add(architect.GetSpecificTrapEffect1(result));
 				
 				//firstList.Add(architect.GetSpecificTrapEffect(result).First().EffectDescription.ToLower());
 			}
 
 			Approvals.VerifyAll(factoryList, "List");
 			//Approvals.VerifyAll(firstList, "List");
+
+		}
+
+		[Test]
+		//[Ignore("Completely random")]
+		public void RandomFactoryTest()
+		{
+			var architect = new TrapArchitect();
+			var factoryList = new List<string>();
+			int repeat = 200;
+			for (int i = 0; i < repeat; i++)
+			{
+				factoryList.Add(architect.GetTrapEffectFactory());
+			}
+
+			Approvals.VerifyAll(factoryList, "Trap Effects");
 
 		}
 
