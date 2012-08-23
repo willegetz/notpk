@@ -54,6 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Factories\ComplexTrapEffectFactory.cs" />
+    <Compile Include="Factories\GasTrapEffectFactory.cs" />
     <Compile Include="Factories\ISpecificTrapFactory.cs" />
     <Compile Include="Factories\PitTrapEffectFactory.cs" />
     <Compile Include="Factories\TrapEffectFactory.cs" />
