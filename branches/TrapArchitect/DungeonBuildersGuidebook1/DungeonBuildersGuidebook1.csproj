@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Factories\ComplexTrapEffectFactory.cs" />
     <Compile Include="Factories\ISpecificTrapFactory.cs" />
+    <Compile Include="Factories\PitTrapEffectFactory.cs" />
     <Compile Include="Factories\TrapEffectFactory.cs" />
     <Compile Include="Factories\SpecificTrapFactory.cs" />
     <Compile Include="TrapComponentLogic\DataConstants.cs" />
