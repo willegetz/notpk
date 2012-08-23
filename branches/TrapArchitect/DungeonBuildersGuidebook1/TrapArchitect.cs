@@ -21,21 +21,26 @@ namespace DungeonBuildersGuidebook1
 		private XElement trapBasesXml;
 		private XElement trapEffectsXml;
 		private XElement trapSubtablesXml;
+		private XElement trapDamageXml;
 		private IEnumerable<TrapBases> trapBases;
 		private IEnumerable<PitContents> pitContents;
 		private IEnumerable<TrapEffects> trapEffects;
 		private IEnumerable<GasTypes> gasTypes;
+		private IEnumerable<TrapDamages> trapDamages;
 		private string xmlTrapComponentsFilePath = DataConstants.DataFilesPath + "TrapComponents.xml";
 		private string xmlTrapEffectsFilePath = DataConstants.DataFilesPath + "TrapEffectsAndTraits.xml";
 		private string xmlTrapSubtablesFilePath = DataConstants.DataFilesPath + "TrapEffectsSubtables.xml";
+		private string xmlTrapDamagesFilePath = DataConstants.DataFilesPath + "TrapDamages.xml";
 		private TrapEffectFactory trapBaseFactory;
 		private TrapEffectFactory effectFactory;
 		private TrapEffectFactory pitContentEffectFactory;
 		private TrapEffectFactory gasTrapContentFactory;
+		private TrapEffectFactory trapDamagesFactory;
 		private DiceCup basePrimaryTableDie;
 		private DiceCup effectPrimaryTableDie;
 		private DiceCup pitTrapTableDie;
 		private DiceCup gasTrapTableDie;
+		private DiceCup trapDamageTableDie;
 
 		public TrapArchitect()
 		{
@@ -43,6 +48,7 @@ namespace DungeonBuildersGuidebook1
 			effectFactory = new TrapEffectFactory();
 			pitContentEffectFactory = new TrapEffectFactory();
 			gasTrapContentFactory = new TrapEffectFactory();
+			trapDamagesFactory = new TrapEffectFactory();
 
 			LoadTables();
 			
@@ -98,22 +104,28 @@ namespace DungeonBuildersGuidebook1
 				return effectFactory.GetFactory(specificResult).Get();
 		}
 
+		public string GetTrapBaseFactory()
+		{
+			return trapBaseFactory.GetFactory(basePrimaryTableDie.Roll()).Get();
+		}
+		
 		public string GetTrapEffectFactory()
 		{
 			return effectFactory.GetFactory(effectPrimaryTableDie.Roll()).Get();
 		}
 
-		public string GetTrapBaseFactory()
+		public string GetTrapDamageFactory()
 		{
-			return trapBaseFactory.GetFactory(basePrimaryTableDie.Roll()).Get();
+			return trapDamagesFactory.GetFactory(trapDamageTableDie.Roll()).Get();
 		}
-
 
 		private void LoadTables()
 		{
 			trapBasesXml = XElement.Load(xmlTrapComponentsFilePath);
 			trapEffectsXml = XElement.Load(xmlTrapEffectsFilePath);
 			trapSubtablesXml = XElement.Load(xmlTrapSubtablesFilePath);
+			trapDamageXml = XElement.Load(xmlTrapDamagesFilePath);
+
 			try
 			{
 				basePrimaryTableDie = new DiceCup(DiceDefinition.Parse(trapBasesXml.Descendants("TableDieRoll").Select(d => d.Element("DiceDefinition").Value).Single()));
@@ -165,6 +177,21 @@ namespace DungeonBuildersGuidebook1
 																	GasName = gT.Element("GasName").Value,
 																}
 																		  ).OrderBy(r => r.RollUpperBound);
+
+				trapDamageTableDie = new DiceCup(DiceDefinition.Parse(trapDamageXml.Descendants("TableDieRoll").Select(d => d.Element("DiceDefinition").Value).Single()));
+
+				trapDamages = trapDamageXml.Descendants("Damage").Select(tD => new TrapDamages()
+																				{
+																					RollUpperBound = int.Parse(tD.Element("RollUpperBound").Value),
+																					DamageDescription = tD.Element("DamageDescription").Value,
+																				}
+																		)
+																.OrderBy(r => r.RollUpperBound);
+
+				foreach (var damage in trapDamages)
+				{
+					trapDamagesFactory.Add(damage.RollUpperBound, new SpecificTrapFactory(damage.DamageDescription));
+				}
 
 				foreach (var trapBase in trapBases)
 				{
@@ -235,6 +262,5 @@ namespace DungeonBuildersGuidebook1
 				return elementValue;
 			}
 		}
-
 	}
 }
