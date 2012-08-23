@@ -40,7 +40,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>5</RollUpperBound>
-		<EffectDescription>Asks riddle; wrong answer triggers another effect</EffectDescription>
+		<EffectDescription>Asks riddle; wrong answer</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>true</RollAgain>
 		<NumberOfReRolls>1</NumberOfReRolls>
@@ -796,12 +796,12 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>89</RollUpperBound>
-		<EffectDescription>Triggers pit open</EffectDescription>
+		<EffectDescription>Triggers a pit to open, full of</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
-		<HasSubtable>false</HasSubtable>
-		<SubtableName></SubtableName>
+		<HasSubtable>true</HasSubtable>
+		<SubtableName>PitContents</SubtableName>
 	</Effect>
 	<Effect>
 		<RollUpperBound>90</RollUpperBound>

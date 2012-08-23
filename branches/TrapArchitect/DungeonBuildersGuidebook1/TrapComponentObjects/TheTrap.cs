@@ -10,6 +10,8 @@ namespace DungeonBuildersGuidebook1.TrapComponentObjects
 		private List<TrapEffects> TrapEffects { get; set; }
 		private TrapDamages TrapDamage { get; set; }
 
+		private string effects { get; set; }
+
 		public TheTrap()
 		{
 			TrapEffects = new List<TrapEffects>();
@@ -64,6 +66,11 @@ namespace DungeonBuildersGuidebook1.TrapComponentObjects
 			TrapEffects.AddRange(trapEffects);
 		}
 
+		public void SetTrapEffect(string effect)
+		{
+			effects = effect;
+		}
+
 		public void SetTrapDamage(TrapDamages trapDamages)
 		{
 			TrapDamage = trapDamages;
@@ -90,7 +97,8 @@ namespace DungeonBuildersGuidebook1.TrapComponentObjects
 
 		public override string ToString()
 		{
-			return string.Format("{0}{1}{2}\r\n\tAnd {3}", TrapBase.TrappedObjectOrArea, TrapBase.MechanismType.ToLower(), FormatEffects(), TrapDamage.DamageDescription.ToLower());
+			//return string.Format("{0}{1}{2}\r\n\tAnd {3}", TrapBase.TrappedObjectOrArea, TrapBase.MechanismType.ToLower(), FormatEffects(), TrapDamage.DamageDescription.ToLower());
+			return string.Format("{0}{1}{2}\r\n\tAnd {3}", TrapBase.TrappedObjectOrArea, TrapBase.MechanismType.ToLower(), effects.ToLower(), TrapDamage.DamageDescription.ToLower());
 		}
 
 		public string GetSubtableType(int effectIndex)
