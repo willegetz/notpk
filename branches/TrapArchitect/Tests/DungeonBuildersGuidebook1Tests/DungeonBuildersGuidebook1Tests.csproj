@@ -74,13 +74,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TrapArchitectTests.RandomEntryTest.approved.txt">
-      <DependentUpon>TrapArchitectTests.cs</DependentUpon>
-    </Content>
     <Content Include="TrapArchitectTests.RandomFactoryTest.approved.txt">
       <DependentUpon>TrapArchitectTests.cs</DependentUpon>
     </Content>
     <Content Include="TrapArchitectTests.RandomTrapConstructionTest.approved.txt">
+      <DependentUpon>TrapArchitectTests.cs</DependentUpon>
+    </Content>
+    <Content Include="TrapArchitectTests.SpeceficTrapTest.approved.txt">
       <DependentUpon>TrapArchitectTests.cs</DependentUpon>
     </Content>
     <Content Include="TrapArchitectTests.TrapObjectTest.approved.txt">

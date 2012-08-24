@@ -17,23 +17,17 @@ namespace DungeonBuildersGuidebook1Tests
 		//		Some form of display to pick from
 
 		[Test]
-		public void RandomEntryTest()
+		public void SpeceficTrapTest()
 		{
 			DiceCup.SetRandom(new Random(4));
 			var architect = new TrapArchitect();
 
-			var factoryList = new List<string>();
-			var firstList = new List<string>();
+			var trapBase = architect.GetSpecificTrapBase(15);
+			var trapEffect = architect.GetSpecificTrapEffect(33);
+			var trapDamage = architect.GetSpecificTrapDamage(8);
+			var trap = new Trap(trapBase, trapEffect, trapDamage);
 
-			int repeat = 100;
-
-			for (int i = 1; i <= repeat; i++)
-			{
-				var result = DiceCup.Roll("1d100");
-				factoryList.Add(architect.GetSpecificTrapEffect1(result));
-			}
-
-			Approvals.VerifyAll(factoryList, "List");
+			Approvals.Verify(trap);
 		}
 
 		[Test]

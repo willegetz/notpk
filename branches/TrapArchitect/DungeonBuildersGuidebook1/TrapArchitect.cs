@@ -1,5 +1,5 @@
 ﻿using System;
-using DungeonBuildersGuidebook1.TrapComponentLogic;
+using DungeonBuildersGuidebook1.TrapLoaders;
 using DungeonBuildersGuidebook1.TrapComponentObjects;
 using RpgTools.Dice;
 using System.Collections.Generic;
@@ -14,9 +14,6 @@ namespace DungeonBuildersGuidebook1
 	public class TrapArchitect
 	{
 		private Random randomNumber;
-		protected TrapBaseLogic trapBaseLogic;
-		protected TrapEffectLogic trapEffectLogic;
-		protected TrapDamageLogic trapDamageLogic;
 
 		private XElement trapBasesXml;
 		private XElement trapEffectsXml;
@@ -55,12 +52,6 @@ namespace DungeonBuildersGuidebook1
 			mechanismFactory = new TrapEffectFactory();
 
 			LoadTables();
-			
-
-			
-			trapBaseLogic = new TrapBaseLogic();
-			trapEffectLogic = new TrapEffectLogic();
-			trapDamageLogic = new TrapDamageLogic();
 		}
 
 		public void SetRandomNumber()
@@ -68,44 +59,19 @@ namespace DungeonBuildersGuidebook1
 			randomNumber = new Random((int)DateTime.UtcNow.Ticks);
 		}
 
-		public TrapBases GetRandomTrapBase()
+		public string GetSpecificTrapBase(int specificResult)
 		{
-			return trapBaseLogic.GetRandomTrapBase();
+			return trapBaseFactory.GetFactory(specificResult).Get();
 		}
 
-		public IEnumerable<TrapEffects> GetRandomTrapEffect()
+		public string GetSpecificTrapEffect(int specificResult)
 		{
-			return trapEffectLogic.GetRandomTrapEffect();
+			return effectFactory.GetFactory(specificResult).Get();
 		}
 
-		public TrapDamages GetRandomTrapDamage()
+		public string GetSpecificTrapDamage(int specificResult)
 		{
-			return trapDamageLogic.GetRandomTrapDamage();
-		}
-
-		public TrapBases GetSpecificTrapBase(int specificResult)
-		{
-			return trapBaseLogic.GetSpecificTrapBase(specificResult);
-		}
-
-		public IEnumerable<TrapEffects> GetSpecificTrapEffect(int specificResult)
-		{
-			return trapEffectLogic.GetSpecificTrapEffect(specificResult);
-		}
-
-		public TrapDamages GetSpecificTrapDamage(int specificResult)
-		{
-			return trapDamageLogic.GetSpecificTrapDamage(specificResult);
-		}
-
-		public string GetSpecificSubtableEffect(string subtable, int subtableRoll)
-		{
-			return trapEffectLogic.GetSpecificSubtableEffect(subtable, subtableRoll);
-		}
-
-		public string GetSpecificTrapEffect1(int specificResult)
-		{
-				return effectFactory.GetFactory(specificResult).Get();
+			return trapDamagesFactory.GetFactory(specificResult).Get();
 		}
 
 		public string GetTrapBaseFactory()
