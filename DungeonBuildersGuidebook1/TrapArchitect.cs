@@ -5,16 +5,14 @@ using RpgTools.Dice;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
-using RJK.CSharp.CustomLists.RangeDictionary;
 using DungeonBuildersGuidebook1.Factories;
-using RpgTools.Dice.Extensions;
 
 namespace DungeonBuildersGuidebook1
 {
 	public class TrapArchitect
 	{
 		private Random randomNumber;
-
+		private TableLoader tableLoader;
 		private XElement trapBasesXml;
 		private XElement trapEffectsXml;
 		private XElement trapSubtablesXml;
@@ -44,6 +42,8 @@ namespace DungeonBuildersGuidebook1
 
 		public TrapArchitect()
 		{
+			tableLoader = new TableLoader();
+			
 			trapBaseFactory = new TrapEffectFactory();
 			effectFactory = new TrapEffectFactory();
 			pitContentEffectFactory = new TrapEffectFactory();
@@ -123,6 +123,7 @@ namespace DungeonBuildersGuidebook1
 				mechanismTypes = new List<KeyValuePair<int, string>>();
 				mechanismTypes = trapBasesXml.Descendants("Mechanism").ToDictionary(m => int.Parse(m.Element("RollUpperBound").Value), m => m.Element("MechanismType").Value).ToList();
 
+				
 				effectPrimaryTableDie = new DiceCup(DiceDefinition.Parse(trapEffectsXml.Descendants("TableDieRoll").Select(d => d.Element("DiceDefinition").Value).Single()));
 
 				trapEffects = new List<TrapEffects>();
@@ -138,7 +139,9 @@ namespace DungeonBuildersGuidebook1
 																						}
 																		).OrderBy(r => r.RollUpperBound);
 
-				pitTrapTableDie = new DiceCup(DiceDefinition.Parse(trapSubtablesXml.Descendants("PitContents").Select(d => d.Element("TableDieRoll").Element("DiceDefinition").Value).Single()));
+				//pitTrapTableDie1 = new DiceCup(DiceDefinition.Parse(trapSubtablesXml.Descendants("PitContents").Select(d => d.Element("TableDieRoll").Element("DiceDefinition").Value).Single()));
+				
+				pitTrapTableDie = tableLoader.GetPitTrapTableDie();
 
 				pitContents = new List<PitContents>();
 				pitContents = trapSubtablesXml.Descendants("ContentType").Select(pC => new PitContents()

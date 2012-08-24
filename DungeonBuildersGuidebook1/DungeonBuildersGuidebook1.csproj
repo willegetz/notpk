@@ -74,6 +74,7 @@
     <Compile Include="TrapComponentObjects\TrapEffects.cs" />
     <Compile Include="ConsoleApp\TrapEffectsTable10b.cs" />
     <Compile Include="TrapComponentObjects\TrapDamages.cs" />
+    <Compile Include="TrapLoaders\TableLoader.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
