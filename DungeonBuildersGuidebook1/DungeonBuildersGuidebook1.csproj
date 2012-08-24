@@ -62,6 +62,8 @@
     <Compile Include="Factories\TrapEffectFactory.cs" />
     <Compile Include="Factories\SimpleFactory.cs" />
     <Compile Include="Trap.cs" />
+    <Compile Include="TrapComponentObjects\GasTypes.cs" />
+    <Compile Include="TrapComponentObjects\PitContents.cs" />
     <Compile Include="TrapLoaders\DataConstants.cs" />
     <Compile Include="TrapArchitect.cs" />
     <Compile Include="ConsoleApp\TrapArchitectConsole.cs">
