@@ -1,9 +1,0 @@
-Initial Trap
-The alcove
-	discordant music eventually drives victim insane
-	And inflicts 2d6 points of damage
-
-New Trap Base
-The painting
-	teleports victim to lethal/distant area
-	And inflicts 2d6 points of damage

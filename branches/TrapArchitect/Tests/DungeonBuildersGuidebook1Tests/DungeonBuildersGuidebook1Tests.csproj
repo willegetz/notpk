@@ -74,22 +74,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TrapArchitectTests.GasSubtableTest.approved.txt">
-      <DependentUpon>TrapArchitectTests.cs</DependentUpon>
-    </Content>
-    <Content Include="TrapArchitectTests.GetSpecificTrapsTest.approved.txt">
-      <DependentUpon>TrapArchitectTests.cs</DependentUpon>
-    </Content>
-    <Content Include="TrapArchitectTests.PitContentsSubtableTest.approved.txt">
-      <DependentUpon>TrapArchitectTests.cs</DependentUpon>
-    </Content>
     <Content Include="TrapArchitectTests.RandomEntryTest.approved.txt">
       <DependentUpon>TrapArchitectTests.cs</DependentUpon>
     </Content>
-    <Content Include="TrapArchitectTests.RerollTrapTest.approved.txt">
+    <Content Include="TrapArchitectTests.RandomFactoryTest.approved.txt">
       <DependentUpon>TrapArchitectTests.cs</DependentUpon>
     </Content>
-    <Content Include="TrapArchitectTests.TestLoadXmlElement.approved.txt">
+    <Content Include="TrapArchitectTests.RandomTrapConstructionTest.approved.txt">
+      <DependentUpon>TrapArchitectTests.cs</DependentUpon>
+    </Content>
+    <Content Include="TrapArchitectTests.TrapObjectTest.approved.txt">
       <DependentUpon>TrapArchitectTests.cs</DependentUpon>
     </Content>
   </ItemGroup>
