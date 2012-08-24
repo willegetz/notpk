@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using RpgTools.Dice;
+﻿using RpgTools.Dice;
 
 namespace DungeonBuildersGuidebook1.Factories
 {
 	public class ComplexTrapEffectFactory : ISpecificTrapFactory
 	{
-		private TrapEffectFactory effectFactory;
-		private DiceCup mainTableDice;
-		private string effectDescription;
+		private readonly TrapEffectFactory effectFactory;
+		private readonly DiceCup mainTableDice;
+		private readonly string effectDescription;
 
 		public ComplexTrapEffectFactory(TrapEffectFactory effectFactory, DiceCup mainTableDice, string effectDescription)
 		{
-			// TODO: Complete member initialization
 			this.effectFactory = effectFactory;
 			this.mainTableDice = mainTableDice;
 			this.effectDescription = effectDescription;
@@ -22,7 +17,7 @@ namespace DungeonBuildersGuidebook1.Factories
 
 		public string Get()
 		{
-			return effectDescription + ", and " + effectFactory.GetFactory(mainTableDice.Roll()).Get();
+			return effectDescription + "\r\n" + effectFactory.GetFactory(mainTableDice.Roll()).Get();
 		}
 	}
 }

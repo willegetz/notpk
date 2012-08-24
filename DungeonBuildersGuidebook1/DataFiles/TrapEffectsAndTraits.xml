@@ -4,7 +4,7 @@
 	</TableDieRoll>
 	<Effect>
 		<RollUpperBound>1</RollUpperBound>
-		<EffectDescription>Absorbs victim into two-dimensional fresco or painting</EffectDescription>
+		<EffectDescription>Absorbs the victim into a two-dimensional fresco or painting</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -13,7 +13,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>2</RollUpperBound>
-		<EffectDescription>Ages victim 10d10 years</EffectDescription>
+		<EffectDescription>Ages the victim 10d10 years</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -22,7 +22,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>3</RollUpperBound>
-		<EffectDescription>Animates and attacks victim</EffectDescription>
+		<EffectDescription>Animates and attacks the victim</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -31,7 +31,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>4</RollUpperBound>
-		<EffectDescription>Animates victim's weapon, which attacks victim</EffectDescription>
+		<EffectDescription>Animates the victim's weapon, which then attacks the victim</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -40,7 +40,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>5</RollUpperBound>
-		<EffectDescription>Asks riddle; wrong answer</EffectDescription>
+		<EffectDescription>Asks riddle... A wrong answer triggers the trap.</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>true</RollAgain>
 		<NumberOfReRolls>1</NumberOfReRolls>
@@ -49,7 +49,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>6</RollUpperBound>
-		<EffectDescription>Casts wizard spells at victim (12th level of ability)</EffectDescription>
+		<EffectDescription>Casts wizard spells at the victim (12th level of ability)</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -58,7 +58,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>7</RollUpperBound>
-		<EffectDescription>Casts priest spells at a victim (12th level of ability)</EffectDescription>
+		<EffectDescription>Casts priest spells at the victim (12th level of ability)</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -67,7 +67,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>8</RollUpperBound>
-		<EffectDescription>Collapses structure on victim(s)</EffectDescription>
+		<EffectDescription>Collapses the structure on the victim(s)</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -76,7 +76,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>9</RollUpperBound>
-		<EffectDescription>Creates vacuum</EffectDescription>
+		<EffectDescription>Creates a vacuum</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -85,7 +85,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>10</RollUpperBound>
-		<EffectDescription>Curses victim to lie always</EffectDescription>
+		<EffectDescription>Curses the victim to lie always</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -94,7 +94,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>11</RollUpperBound>
-		<EffectDescription>Curses victim to speak truth always</EffectDescription>
+		<EffectDescription>Curses the victim to speak truth always</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -103,7 +103,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>12</RollUpperBound>
-		<EffectDescription>Curses victim to never eat animal matter</EffectDescription>
+		<EffectDescription>Curses the victim to never eat animal matter</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -112,7 +112,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>13</RollUpperBound>
-		<EffectDescription>Curses victim to never eat vegetable matter</EffectDescription>
+		<EffectDescription>Curses the victim to never eat vegetable matter</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -121,7 +121,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>14</RollUpperBound>
-		<EffectDescription>Curses victim with constant nausea (-2 to actions)</EffectDescription>
+		<EffectDescription>Curses the victim with constant nausea (-2 to actions)</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -130,7 +130,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>15</RollUpperBound>
-		<EffectDescription>Curses victim with disease (-3 to actions)</EffectDescription>
+		<EffectDescription>Curses the victim with disease (-3 to actions)</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -139,7 +139,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>16</RollUpperBound>
-		<EffectDescription>Curses victim with headaches (-2 to actions)</EffectDescription>
+		<EffectDescription>Curses the victim with headaches (-2 to actions)</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -148,7 +148,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>17</RollUpperBound>
-		<EffectDescription>Curses victim with lycanthropy</EffectDescription>
+		<EffectDescription>Curses the victim with lycanthropy</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -157,7 +157,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>18</RollUpperBound>
-		<EffectDescription>Curses victim to gain sustenance only from blood</EffectDescription>
+		<EffectDescription>Curses the victim to gain sustenance only from blood</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -166,7 +166,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>19</RollUpperBound>
-		<EffectDescription>Curses victim to become mute</EffectDescription>
+		<EffectDescription>Curses the victim to become mute</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -175,7 +175,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>20</RollUpperBound>
-		<EffectDescription>Curses victim to speak only in falsetto</EffectDescription>
+		<EffectDescription>Curses the victim to speak only in falsetto</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -184,7 +184,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>21</RollUpperBound>
-		<EffectDescription>Curses victim to attempt to kill friends while asleep</EffectDescription>
+		<EffectDescription>Curses the victim to attempt to kill their friends while asleep</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -202,7 +202,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>23</RollUpperBound>
-		<EffectDescription>Devours/steals victim's soul</EffectDescription>
+		<EffectDescription>Devours or steals the victim's soul</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -211,7 +211,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>24</RollUpperBound>
-		<EffectDescription>Discordant music eventually drives victim insane</EffectDescription>
+		<EffectDescription>Discordant music eventually drives the victim insane</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -220,7 +220,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>25</RollUpperBound>
-		<EffectDescription>Disintegrates victim's possessions</EffectDescription>
+		<EffectDescription>Disintegrates the victim's possessions</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -229,7 +229,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>26</RollUpperBound>
-		<EffectDescription>Disintegrates victim</EffectDescription>
+		<EffectDescription>Disintegrates the victim</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -238,7 +238,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>27</RollUpperBound>
-		<EffectDescription>Draws demonic/devilish attention to victim</EffectDescription>
+		<EffectDescription>Draws demonic or devilish attention to victim</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -247,7 +247,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>28</RollUpperBound>
-		<EffectDescription>Drops victim to long fall</EffectDescription>
+		<EffectDescription>Drops the victim to long fall</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -256,7 +256,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>29</RollUpperBound>
-		<EffectDescription>Enlarges victim</EffectDescription>
+		<EffectDescription>Enlarges the victim</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -265,7 +265,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>30</RollUpperBound>
-		<EffectDescription>Enrages victim</EffectDescription>
+		<EffectDescription>Enrages the victim</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -301,7 +301,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>34</RollUpperBound>
-		<EffectDescription>Fires lightning bolt</EffectDescription>
+		<EffectDescription>Fires a lightning bolt</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -319,7 +319,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>36</RollUpperBound>
-		<EffectDescription>Floods area with water or</EffectDescription>
+		<EffectDescription>Floods the area with water, or</EffectDescription>
 		<AdditionalInformation>Additional table required</AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -328,7 +328,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>37</RollUpperBound>
-		<EffectDescription>Fulfills the reverse of victim's wish</EffectDescription>
+		<EffectDescription>Fulfills the reverse of the victim's wish</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -346,7 +346,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>39</RollUpperBound>
-		<EffectDescription>Illusionary</EffectDescription>
+		<EffectDescription>Is illusionary</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -355,7 +355,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>40</RollUpperBound>
-		<EffectDescription>Imbues victim's skeleton with desire to "get out"</EffectDescription>
+		<EffectDescription>Imbues the victim's skeleton with the desire to "get out"</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -364,7 +364,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>41</RollUpperBound>
-		<EffectDescription>Implants victim with vegetable matter</EffectDescription>
+		<EffectDescription>Implants the victim with vegetable matter</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -391,7 +391,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>44</RollUpperBound>
-		<EffectDescription>Infects victim with rot grubs</EffectDescription>
+		<EffectDescription>Infects the victim with rot grubs</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -400,7 +400,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>45</RollUpperBound>
-		<EffectDescription>Infects victim with split personality disorder</EffectDescription>
+		<EffectDescription>Infects the victim with split personality disorder</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -409,7 +409,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>46</RollUpperBound>
-		<EffectDescription>Locks entrance to chamber/area</EffectDescription>
+		<EffectDescription>Locks the entrance(s) to the chamber/area</EffectDescription>
 		<AdditionalInformation>roll again for another effect</AdditionalInformation>
 		<RollAgain>true</RollAgain>
 		<NumberOfReRolls>1</NumberOfReRolls>
@@ -418,7 +418,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>47</RollUpperBound>
-		<EffectDescription>Locks exits from chamber/area</EffectDescription>
+		<EffectDescription>Locks the exit(s) from the chamber/area</EffectDescription>
 		<AdditionalInformation>roll again for another effect</AdditionalInformation>
 		<RollAgain>true</RollAgain>
 		<NumberOfReRolls>1</NumberOfReRolls>
@@ -427,7 +427,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>48</RollUpperBound>
-		<EffectDescription>Lops off victim's head then animates head to attack friends</EffectDescription>
+		<EffectDescription>Lops off thevictim's head, then animates the head to attack the vicim's friends</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -436,7 +436,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>49</RollUpperBound>
-		<EffectDescription>Lowers 1d6 of victim's stats by 1d4 points</EffectDescription>
+		<EffectDescription>Lowers 1d6 of the victim's stats by 1d4 points</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -445,7 +445,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>50</RollUpperBound>
-		<EffectDescription>Reduces victim in size by 1d4 feet</EffectDescription>
+		<EffectDescription>Reduces the victim in size by 1d4 feet</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -454,7 +454,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>51</RollUpperBound>
-		<EffectDescription>Releases/contains a black pudding</EffectDescription>
+		<EffectDescription>Releases (or contains) a black pudding</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -463,7 +463,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>52</RollUpperBound>
-		<EffectDescription>Releases/contains caltrops/spikes</EffectDescription>
+		<EffectDescription>Releases (or contains) caltrops or spikes</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -472,7 +472,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>53</RollUpperBound>
-		<EffectDescription>Releases/contains poisoned caltrops/spikes</EffectDescription>
+		<EffectDescription>Releases (or contains) poisoned caltrops or spikes</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -481,7 +481,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>54</RollUpperBound>
-		<EffectDescription>Releases/coated with poison (see Table 51 in the DMG)</EffectDescription>
+		<EffectDescription>Releases (or coated with) poison (see Table 51 in the DMG)</EffectDescription>
 		<AdditionalInformation>Additional table required</AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -490,7 +490,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>55</RollUpperBound>
-		<EffectDescription>Releases heavy weight/block</EffectDescription>
+		<EffectDescription>Releases a heavy weight or block</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -499,7 +499,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>56</RollUpperBound>
-		<EffectDescription>Removes victim's ability to cast spells</EffectDescription>
+		<EffectDescription>Removes the victim's ability to cast spells</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -508,7 +508,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>57</RollUpperBound>
-		<EffectDescription>Removes victim's ability to read</EffectDescription>
+		<EffectDescription>Removes the victim's ability to read</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -517,7 +517,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>58</RollUpperBound>
-		<EffectDescription>Removes victim's ability to comprehend languages</EffectDescription>
+		<EffectDescription>Removes the victim's ability to comprehend languages</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -526,7 +526,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>59</RollUpperBound>
-		<EffectDescription>Renders victim deaf</EffectDescription>
+		<EffectDescription>Renders the victim deaf</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -535,7 +535,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>60</RollUpperBound>
-		<EffectDescription>Replaces random internal organ with cobwebs</EffectDescription>
+		<EffectDescription>Replaces a random internal organ with cobwebs</EffectDescription>
 		<AdditionalInformation>Additional table required</AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -544,7 +544,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>61</RollUpperBound>
-		<EffectDescription>Replaces random internal organ with fire ants</EffectDescription>
+		<EffectDescription>Replaces a random internal organ with fire ants</EffectDescription>
 		<AdditionalInformation>Additional table required</AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -553,7 +553,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>62</RollUpperBound>
-		<EffectDescription>Reverses victim age by 1d100 years</EffectDescription>
+		<EffectDescription>Reverses the victim's age by 1d100 years</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -562,7 +562,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>63</RollUpperBound>
-		<EffectDescription>Reverses victim's alignment</EffectDescription>
+		<EffectDescription>Reverses the victim's alignment</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -571,7 +571,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>64</RollUpperBound>
-		<EffectDescription>Reverses victim's gender</EffectDescription>
+		<EffectDescription>Reverses the victim's gender</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -580,7 +580,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>65</RollUpperBound>
-		<EffectDescription>Rots random internal organ of victim</EffectDescription>
+		<EffectDescription>Rots a random internal organ of victim</EffectDescription>
 		<AdditionalInformation>Additional table required</AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -589,7 +589,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>66</RollUpperBound>
-		<EffectDescription>Petrifies victim's possessions</EffectDescription>
+		<EffectDescription>Petrifies the victim's possessions</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -598,7 +598,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>67</RollUpperBound>
-		<EffectDescription>Petrifies victim</EffectDescription>
+		<EffectDescription>Petrifies the victim</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -607,7 +607,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>68</RollUpperBound>
-		<EffectDescription>Plane shifts victim to lower plane</EffectDescription>
+		<EffectDescription>Plane shifts the victim to a lower plane</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -616,7 +616,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>69</RollUpperBound>
-		<EffectDescription>Polymorphs victim to small reptile or insect</EffectDescription>
+		<EffectDescription>Polymorphs the victim into a small reptile or insect</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -625,7 +625,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>70</RollUpperBound>
-		<EffectDescription>Puts victim in stasis for 1d100 years</EffectDescription>
+		<EffectDescription>Puts the victim in stasis for 1d100 years</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -634,7 +634,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>71</RollUpperBound>
-		<EffectDescription>'Quests' victim to attempt difficult task</EffectDescription>
+		<EffectDescription>'Quests' the victim to attempt a difficult task</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -643,7 +643,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>72</RollUpperBound>
-		<EffectDescription>Secretly "steals" victim's wealth or items</EffectDescription>
+		<EffectDescription>Secretly "steals" the victim's wealth (or items)</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -652,7 +652,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>73</RollUpperBound>
-		<EffectDescription>Shrivels random limb of victim</EffectDescription>
+		<EffectDescription>Shrivels a random limb of the victim</EffectDescription>
 		<AdditionalInformation>Additional table required</AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -661,7 +661,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>74</RollUpperBound>
-		<EffectDescription>Shunts victim to deep Ethereal</EffectDescription>
+		<EffectDescription>Shunts the victim to the deep Ethereal</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -679,7 +679,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>76</RollUpperBound>
-		<EffectDescription>Sprays green slime in devastating aerosol effect</EffectDescription>
+		<EffectDescription>Sprays green slime in a devastating aerosol effect</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -697,7 +697,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>78</RollUpperBound>
-		<EffectDescription>Sprays super cold (colder than freezing) water at victim</EffectDescription>
+		<EffectDescription>Sprays super cold (colder than freezing) water at the victim</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -706,7 +706,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>79</RollUpperBound>
-		<EffectDescription>Sprays burning, jellied kerosene on victim</EffectDescription>
+		<EffectDescription>Sprays burning, jellied kerosene on the victim</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -715,7 +715,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>80</RollUpperBound>
-		<EffectDescription>Slowly leaches oxygen from air</EffectDescription>
+		<EffectDescription>Slowly leaches oxygen from the air</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -733,7 +733,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>82</RollUpperBound>
-		<EffectDescription>Switches victim's mind with nearby/distant buried corpse</EffectDescription>
+		<EffectDescription>Switches the victim's mind with a nearby (or distant) buried corpse</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -742,7 +742,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>83</RollUpperBound>
-		<EffectDescription>Symbiotically attaches to victim (removal kills victim)</EffectDescription>
+		<EffectDescription>Symbiotically attaches to the victim (removal kills victim)</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -751,7 +751,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>84</RollUpperBound>
-		<EffectDescription>Teleports victim to lethal/distant area</EffectDescription>
+		<EffectDescription>Teleports the victim to a lethal (or distant) area</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -760,7 +760,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>85</RollUpperBound>
-		<EffectDescription>Traps victim in iron cage</EffectDescription>
+		<EffectDescription>Traps the victim in an iron cage</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -769,7 +769,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>86</RollUpperBound>
-		<EffectDescription>Traps victim in magical force field</EffectDescription>
+		<EffectDescription>Traps the victim in a magical force field</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -778,7 +778,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>87</RollUpperBound>
-		<EffectDescription>Triggers chute beneath victim</EffectDescription>
+		<EffectDescription>Triggers a chute to open beneath the victim</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -787,7 +787,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>88</RollUpperBound>
-		<EffectDescription>Triggers hidden bear trap</EffectDescription>
+		<EffectDescription>Triggers a hidden bear trap</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -805,7 +805,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>90</RollUpperBound>
-		<EffectDescription>Triggers scything blade</EffectDescription>
+		<EffectDescription>Triggers a scything blade</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -814,7 +814,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>91</RollUpperBound>
-		<EffectDescription>Triggers anti-magic; victim's items lose enchantment</EffectDescription>
+		<EffectDescription>Triggers anti-magic; the victim's items lose thier enchantment</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -823,7 +823,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>92</RollUpperBound>
-		<EffectDescription>Triggers release of thousands of beetles</EffectDescription>
+		<EffectDescription>Triggers the release of thousands of beetles</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -841,7 +841,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>94</RollUpperBound>
-		<EffectDescription>Tumbles victim into a pit of</EffectDescription>
+		<EffectDescription>Tumbles the victim into a pit of</EffectDescription>
 		<AdditionalInformation>Additional table required</AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -859,7 +859,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>96</RollUpperBound>
-		<EffectDescription>Vents fire/magma</EffectDescription>
+		<EffectDescription>Vents fire (or magma)</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>
@@ -877,7 +877,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>98</RollUpperBound>
-		<EffectDescription>Victim loses memory of preceding 1d10 days</EffectDescription>
+		<EffectDescription>Victim loses memory of the preceding 1d10 days</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>

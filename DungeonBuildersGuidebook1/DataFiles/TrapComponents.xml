@@ -502,4 +502,16 @@
 		<TrappedObjectOrArea>The window</TrappedObjectOrArea>
 		<MechanismTypeSpecified>false</MechanismTypeSpecified>
 	</TrapBase>
+	<MechanismDieRoll>
+		<DiceDefinition>1d2</DiceDefinition>
+	</MechanismDieRoll>
+	<Mechanism>
+		<RollUpperBound>1</RollUpperBound>
+		<MechanismType>Magical</MechanismType>
+	</Mechanism>
+	<Mechanism>
+		<RollUpperBound>2</RollUpperBound>
+		<MechanismType>Mechanical</MechanismType>
+	</Mechanism>
+		
 </Root>

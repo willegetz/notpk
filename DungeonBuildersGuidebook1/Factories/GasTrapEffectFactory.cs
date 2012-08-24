@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using RpgTools.Dice;
+﻿using RpgTools.Dice;
 
 namespace DungeonBuildersGuidebook1.Factories
 {

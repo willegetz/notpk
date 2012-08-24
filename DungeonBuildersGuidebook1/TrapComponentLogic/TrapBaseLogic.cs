@@ -11,14 +11,14 @@ namespace DungeonBuildersGuidebook1.TrapComponentLogic
 {
 	public class TrapBaseLogic
 	{
-		private XElement trapBasesXml;
+		private readonly XElement trapBasesXml;
 		private IEnumerable<TrapBases> trapBases;
-		private RangeDictionary<int, TrapBases> trapBasesTable;
-		private DiceDefinition diceDefinition;
+		private readonly RangeDictionary<int, TrapBases> trapBasesTable;
+		private readonly DiceDefinition diceDefinition;
 		private string tableDieRoll;
 		private int minimumBounds;
 		private int maximumBounds;
-		private string xmlTrapComponentsFilePath = DataConstants.DataFilesPath + "TrapComponents.xml";
+		private readonly string xmlTrapComponentsFilePath = DataConstants.DataFilesPath + "TrapComponents.xml";
 
 		public TrapBaseLogic()
 		{
