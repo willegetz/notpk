@@ -62,22 +62,15 @@
     <Compile Include="Factories\TrapEffectFactory.cs" />
     <Compile Include="Factories\SimpleFactory.cs" />
     <Compile Include="Trap.cs" />
-    <Compile Include="TrapComponentLogic\DataConstants.cs" />
-    <Compile Include="TrapComponentObjects\NullTrapDamage.cs" />
+    <Compile Include="TrapLoaders\DataConstants.cs" />
     <Compile Include="TrapArchitect.cs" />
     <Compile Include="ConsoleApp\TrapArchitectConsole.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="TrapComponentObjects\NullTrapBase.cs" />
-    <Compile Include="TrapComponentObjects\NullTrapEffect.cs" />
-    <Compile Include="TrapComponentObjects\TheTrap.cs" />
     <Compile Include="TrapComponentObjects\TrapBases.cs" />
     <Compile Include="ConsoleApp\TrapBasicsTable10a.cs" />
-    <Compile Include="TrapComponentLogic\TrapBaseLogic.cs" />
     <Compile Include="TrapComponentObjects\TrapEffects.cs" />
     <Compile Include="ConsoleApp\TrapEffectsTable10b.cs" />
-    <Compile Include="TrapComponentLogic\TrapEffectLogic.cs" />
-    <Compile Include="TrapComponentLogic\TrapDamageLogic.cs" />
     <Compile Include="TrapComponentObjects\TrapDamages.cs" />
   </ItemGroup>
   <ItemGroup>
