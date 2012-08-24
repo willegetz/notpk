@@ -139,19 +139,8 @@ namespace DungeonBuildersGuidebook1
 																						}
 																		).OrderBy(r => r.RollUpperBound);
 
-				//pitTrapTableDie1 = new DiceCup(DiceDefinition.Parse(trapSubtablesXml.Descendants("PitContents").Select(d => d.Element("TableDieRoll").Element("DiceDefinition").Value).Single()));
-				
 				pitTrapTableDie = tableLoader.GetPitTrapTableDie();
-
-				pitContents = new List<PitContents>();
-				pitContents = trapSubtablesXml.Descendants("ContentType").Select(pC => new PitContents()
-																							{
-																								RollUpperBound = int.Parse(pC.Element("RollUpperBound").Value),
-																								PitContent = pC.Element("ContentName").Value,
-																							}
-																		).OrderBy(r => r.RollUpperBound);
-
-				
+				var pitContents = tableLoader.GetPitTrapContents();
 
 				// Gas trap info here
 				gasTrapTableDie = new DiceCup(DiceDefinition.Parse(trapSubtablesXml.Descendants("GasTrap").Select(d => d.Element("TableDieRoll").Element("DiceDefinition").Value).Single()));
