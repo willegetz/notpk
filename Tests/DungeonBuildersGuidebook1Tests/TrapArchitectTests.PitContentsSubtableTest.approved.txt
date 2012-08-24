@@ -1,3 +1,0 @@
-The stuffed animal/head
-	tumbles victim into a pit full of magma
-	And inflicts 6d6 points of damage

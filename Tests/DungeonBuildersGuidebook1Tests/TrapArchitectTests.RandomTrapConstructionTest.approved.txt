@@ -1,0 +1,403 @@
+Traps[0] = The cask
+Releases (or contains) a black pudding
+Inflicts 2d6 points of damage
+
+Traps[1] = The desk
+Releases (or contains) caltrops or spikes
+Inflicts 2d6 points of damage
+
+Traps[2] = The mirror
+Reverses the victim's age by 1d100 years
+Inflicts 2d6 points of damage
+
+Traps[3] = The vegetation
+Tumbles the victim into a pit of Quicksand
+Inflicts 2d6 points of damage
+
+Traps[4] = The urn
+Slowly leaches oxygen from the air
+Inflicts 2d6 points of damage
+
+Traps[5] = The trophy
+Replaces a random internal organ with fire ants
+Inflicts 1d8 points of damage
+
+Traps[6] = The bookcase
+Shrivels a random limb of the victim
+Inflicts 1d8 points of damage
+
+Traps[7] = The pews
+Polymorphs the victim into a small reptile or insect
+Inflicts 2d6 points of damage
+
+Traps[8] = The chute
+Releases a heavy weight or block
+Inflicts 6d6 points of damage
+
+Traps[9] = The drum
+Replaces a random internal organ with cobwebs
+Inflicts 3d6 points of damage
+
+Traps[10] = The tapestry
+Victim loses memory of the preceding 1d10 days
+Inflicts 1d8 points of damage
+
+Traps[11] = The pews
+Petrifies the victim
+Inflicts 3d6 points of damage
+
+Traps[12] = The tunnel mouth
+Removes the victim's ability to read
+Absorbs the victim into a two-dimensional fresco or painting
+Inflicts 2d6 points of damage
+
+Traps[13] = The arch
+Releases a heavy weight or block
+Inflicts 1d8 points of damage
+
+Traps[14] = The lamp
+Secretly "steals" the victim's wealth (or items)
+Inflicts 2d6 points of damage
+
+Traps[15] = The interdimensional portal
+Releases a gas: Sleep Inducing
+Inflicts 2d6 points of damage
+
+Traps[16] = The hook
+Curses the victim with lycanthropy
+Inflicts 2d6 points of damage
+
+Traps[17] = The cage
+Shrivels a random limb of the victim
+Inflicts 2d6 points of damage
+
+Traps[18] = The armor
+Curses the victim with constant nausea (-2 to actions)
+Inflicts 4d6 points of damage
+
+Traps[19] = The tapestry
+Animates the victim's weapon, which then attacks the victim
+Inflicts 1d8 points of damage
+
+Traps[20] = The floor
+Imbues the victim's skeleton with the desire to "get out"
+Inflicts 2d6 points of damage
+
+Traps[21] = The bookcase
+Triggers compressing walls
+Inflicts 2d6 points of damage
+
+Traps[22] = The iron maiden
+Curses the victim with headaches (-2 to actions)
+Inflicts 3d6 points of damage
+
+Traps[23] = The stuffed animal/head
+Fires a lightning bolt
+Inflicts 3d6 points of damage
+
+Traps[24] = The statue
+Curses the victim to speak only in falsetto
+Inflicts 2d6 points of damage
+
+Traps[25] = The lamp
+Switches the victim's mind with a nearby (or distant) buried corpse
+Inflicts 4d6 points of damage
+
+Traps[26] = The divan
+Releases (or contains) poisoned caltrops or spikes
+Inflicts 6d6 points of damage
+
+Traps[27] = The bed
+'Quests' the victim to attempt a difficult task
+Inflicts 6d6 points of damage
+
+Traps[28] = The chair
+Triggers anti-magic; the victim's items lose thier enchantment
+Inflicts 3d6 points of damage
+
+Traps[29] = The urn
+Curses the victim with headaches (-2 to actions)
+Inflicts 2d6 points of damage
+
+Traps[30] = The hourglass
+Reverses the victim's gender
+Inflicts 3d6 points of damage
+
+Traps[31] = The catwalk
+Triggers a hidden bear trap
+Inflicts 4d6 points of damage
+
+Traps[32] = The crystal ball
+Releases a heavy weight or block
+Inflicts 2d6 points of damage
+
+Traps[33] = The aquarium
+Implants the victim with vegetable matter
+Inflicts 2d6 points of damage
+
+Traps[34] = The bookcase
+Removes the victim's ability to comprehend languages
+Inflicts 3d6 points of damage
+
+Traps[35] = The vase
+Drops the victim to long fall
+Inflicts 2d6 points of damage
+
+Traps[36] = The floor
+Is illusionary
+Inflicts 2d6 points of damage
+
+Traps[37] = The pews
+Reverses the victim's age by 1d100 years
+Inflicts 1d8 points of damage
+
+Traps[38] = The ceiling fan
+Imbues the victim's skeleton with the desire to "get out"
+Inflicts 2d6 points of damage
+
+Traps[39] = The pillar
+Casts priest spells at the victim (12th level of ability)
+Inflicts 4d6 points of damage
+
+Traps[40] = The hook
+Vents fire (or magma)
+Inflicts 4d6 points of damage
+
+Traps[41] = The vegetation
+Curses the victim to attempt to kill their friends while asleep
+Inflicts 1d8 points of damage
+
+Traps[42] = The waterclock
+Releases (or contains) poisoned caltrops or spikes
+Inflicts 3d6 points of damage
+
+Traps[43] = The vase
+Collapses the structure on the victim(s)
+Inflicts 3d6 points of damage
+
+Traps[44] = The floor
+Fires poisoned arrow(s)/dart(s)/spear(s)
+Inflicts 4d6 points of damage
+
+Traps[45] = The pool
+'Quests' the victim to attempt a difficult task
+Inflicts 3d6 points of damage
+
+Traps[46] = The telescope (Mechanical)
+Implants the victim with vegetable matter
+Inflicts 2d6 points of damage
+
+Traps[47] = The barrel
+Reduces the victim in size by 1d4 feet
+Inflicts 3d6 points of damage
+
+Traps[48] = The fountain
+Victim loses memory of the preceding 1d10 days
+Inflicts 2d6 points of damage
+
+Traps[49] = The interdimensional portal
+Removes the victim's ability to comprehend languages
+Inflicts 2d6 points of damage
+
+Traps[50] = The bookcase
+Draws demonic or devilish attention to victim
+Inflicts 1d8 points of damage
+
+Traps[51] = The cask
+Rots a random internal organ of victim
+Inflicts 1d8 points of damage
+
+Traps[52] = The inset shelf
+Sprays iron shrapnel
+Inflicts 2d6 points of damage
+
+Traps[53] = The bed
+Casts wizard spells at the victim (12th level of ability)
+Inflicts 2d6 points of damage
+
+Traps[54] = The ladder
+Vents acid
+Inflicts 3d6 points of damage
+
+Traps[55] = The concealed door
+Petrifies the victim's possessions
+Inflicts 2d6 points of damage
+
+Traps[56] = The bell
+Triggers the release of thousands of beetles
+Inflicts 2d6 points of damage
+
+Traps[57] = The hourglass
+Victim loses memory of the preceding 1d10 days
+Inflicts 3d6 points of damage
+
+Traps[58] = The fountain
+Devours or steals the victim's soul
+Inflicts 2d6 points of damage
+
+Traps[59] = The passage
+Sprays burning, jellied kerosene on the victim
+Inflicts 2d6 points of damage
+
+Traps[60] = The harp
+Fulfills the reverse of the victim's wish
+Inflicts 2d6 points of damage
+
+Traps[61] = The cage
+Enlarges the victim
+Inflicts 2d6 points of damage
+
+Traps[62] = The jar
+Releases (or coated with) poison (see Table 51 in the DMG)
+Inflicts 1d4 points of damage
+
+Traps[63] = The throne
+Sprays green slime in a devastating aerosol effect
+Inflicts 6d6 points of damage
+
+Traps[64] = The brazier
+Reduces the victim in size by 1d4 feet
+Inflicts 2d6 points of damage
+
+Traps[65] = The door
+Curses the victim to gain sustenance only from blood
+Inflicts 2d6 points of damage
+
+Traps[66] = The ladder
+Curses the victim to never eat animal matter
+Inflicts 3d6 points of damage
+
+Traps[67] = The railing
+Lops off thevictim's head, then animates the head to attack the vicim's friends
+Inflicts 2d6 points of damage
+
+Traps[68] = The ceiling
+Removes the victim's ability to cast spells
+Inflicts 2d6 points of damage
+
+Traps[69] = The urn
+Vents acid
+Inflicts 10d6 points of damage
+
+Traps[70] = The vase
+Traps the victim in a magical force field
+Inflicts 3d6 points of damage
+
+Traps[71] = The window
+Curses the victim to lie always
+Inflicts 2d6 points of damage
+
+Traps[72] = The alcove
+Explodes
+Inflicts 2d6 points of damage
+
+Traps[73] = The fountain
+Switches victims' minds
+Inflicts 2d6 points of damage
+
+Traps[74] = The elevator (Magical)
+Shrivels a random limb of the victim
+Inflicts 2d6 points of damage
+
+Traps[75] = The cage
+Curses the victim with constant nausea (-2 to actions)
+Inflicts 1d8 points of damage
+
+Traps[76] = The fireplace
+Casts priest spells at the victim (12th level of ability)
+Inflicts 2d6 points of damage
+
+Traps[77] = The secret door
+Absorbs the victim into a two-dimensional fresco or painting
+Inflicts 6d6 points of damage
+
+Traps[78] = The statue
+Enrages the victim
+Inflicts 4d6 points of damage
+
+Traps[79] = The floor
+Floods the area with water, or Quicksand
+Inflicts 1d4 points of damage
+
+Traps[80] = The fountain
+Releases a heavy weight or block
+Inflicts 2d6 points of damage
+
+Traps[81] = The glass case
+Enrages the victim
+Inflicts 10d6 points of damage
+
+Traps[82] = The interdimensional portal
+Polymorphs the victim into a small reptile or insect
+Inflicts 2d6 points of damage
+
+Traps[83] = The pendulum
+Removes the victim's ability to read
+Inflicts 2d6 points of damage
+
+Traps[84] = The wall
+Replaces a random internal organ with fire ants
+Inflicts 6d6 points of damage
+
+Traps[85] = The catwalk
+Shunts the victim to the deep Ethereal
+Inflicts 2d6 points of damage
+
+Traps[86] = The candelabra
+Traps the victim in a magical force field
+Inflicts 3d6 points of damage
+
+Traps[87] = The hourglass
+Sprays green slime in a devastating aerosol effect
+Replaces a random internal organ with cobwebs
+Inflicts 3d6 points of damage
+
+Traps[88] = The trunk
+'Quests' the victim to attempt a difficult task
+Inflicts 2d6 points of damage
+
+Traps[89] = The vegetation
+Plane shifts the victim to a lower plane
+Inflicts 3d6 points of damage
+
+Traps[90] = The cage
+Explodes
+Inflicts 3d6 points of damage
+
+Traps[91] = The trophy
+Reverses the victim's gender
+Inflicts 8d6 points of damage
+
+Traps[92] = The pews
+Sprays green slime in a devastating aerosol effect
+Polymorphs the victim into a small reptile or insect
+Inflicts 3d6 points of damage
+
+Traps[93] = The pit
+'Quests' the victim to attempt a difficult task
+Inflicts 3d6 points of damage
+
+Traps[94] = The barrel
+Triggers a scything blade
+Inflicts 3d6 points of damage
+
+Traps[95] = The drum
+Ages the victim 10d10 years
+Inflicts 3d6 points of damage
+
+Traps[96] = The altar
+Sprays green slime in a devastating aerosol effect
+Inflicts 2d6 points of damage
+
+Traps[97] = The bookcase
+Petrifies the victim
+Inflicts 1d8 points of damage
+
+Traps[98] = The cabinet
+Triggers compressing walls
+Inflicts 6d6 points of damage
+
+Traps[99] = The lectern
+Enrages the victim
+Inflicts 2d6 points of damage
+
