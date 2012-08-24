@@ -249,6 +249,23 @@ namespace DungeonBuildersGuidebook1Tests
 		}
 
 		[Test]
+		public void TrapObjectTest()
+		{
+			var architect = new TrapArchitect();
+			var traps = new List<Trap>();
+
+			var iterator = 500000;
+			for (int i = 0; i < iterator; i++)
+			{
+				traps.Add(architect.GetTrap());
+			}
+//			var trap = architect.GetTrap();
+
+//			Approvals.Verify(trap);
+			Approvals.VerifyAll(traps.Where(t => t.trapEffect.Length > 150), "Trap");
+		}
+
+		[Test]
 		[Ignore("Experiment Workspace")]
 		public void TrapEffectsTest()
 		{

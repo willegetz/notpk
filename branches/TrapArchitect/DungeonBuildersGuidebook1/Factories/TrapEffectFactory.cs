@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using RJK.CSharp.CustomLists.RangeDictionary;
+﻿using RJK.CSharp.CustomLists.RangeDictionary;
 
 namespace DungeonBuildersGuidebook1.Factories
 {

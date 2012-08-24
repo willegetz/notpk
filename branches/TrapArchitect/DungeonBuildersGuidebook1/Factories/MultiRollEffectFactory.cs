@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 using RpgTools.Dice;
 
 namespace DungeonBuildersGuidebook1.Factories
@@ -26,13 +23,13 @@ namespace DungeonBuildersGuidebook1.Factories
 			var sb = new StringBuilder();
 			if (!string.IsNullOrEmpty(effectDescription))
 			{
-				sb.Append(effectDescription + ", and ");
+				sb.Append(effectDescription + "\r\n");
 			}
 
 			int i = 0;
 			while (i < (numberOfReRolls -1))
 			{
-				sb.Append(effectFactory.GetFactory(tableDiceRoll.Roll()).Get() + ", and ");
+				sb.Append(effectFactory.GetFactory(tableDiceRoll.Roll()).Get() + "\r\n");
 				i++;
 			}
 			sb.Append(effectFactory.GetFactory(tableDiceRoll.Roll()).Get());
