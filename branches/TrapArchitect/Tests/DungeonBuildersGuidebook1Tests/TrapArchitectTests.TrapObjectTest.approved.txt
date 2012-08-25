@@ -171,7 +171,7 @@ Reduces the victim in size by 1d4 feet
 Inflicts 1d8 points of damage
 
 Trap[43] = The window
-Asks riddle... A wrong answer triggers the trap.
+Asks riddle... A wrong answer triggers the trap
 Renders the victim deaf
 Inflicts 2d6 points of damage
 

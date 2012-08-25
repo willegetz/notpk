@@ -40,7 +40,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>5</RollUpperBound>
-		<EffectDescription>Asks riddle... A wrong answer triggers the trap.</EffectDescription>
+		<EffectDescription>Asks riddle... A wrong answer triggers the trap</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>true</RollAgain>
 		<NumberOfReRolls>1</NumberOfReRolls>

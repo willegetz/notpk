@@ -18,14 +18,11 @@ namespace DungeonBuildersGuidebook1
 		private XElement trapSubtablesXml;
 		private XElement trapDamageXml;
 		private IEnumerable<TrapBases> trapBases;
-		private IEnumerable<PitContents> pitContents;
 		private IEnumerable<TrapEffects> trapEffects;
-		private IEnumerable<GasTypes> gasTypes;
 		private IEnumerable<TrapDamages> trapDamages;
 		private List<KeyValuePair<int, string>> mechanismTypes;
 		private string xmlTrapComponentsFilePath = DataConstants.DataFilesPath + "TrapComponents.xml";
 		private string xmlTrapEffectsFilePath = DataConstants.DataFilesPath + "TrapEffectsAndTraits.xml";
-		private string xmlTrapSubtablesFilePath = DataConstants.DataFilesPath + "TrapEffectsSubtables.xml";
 		private string xmlTrapDamagesFilePath = DataConstants.DataFilesPath + "TrapDamages.xml";
 		private TrapEffectFactory trapBaseFactory;
 		private TrapEffectFactory effectFactory;
@@ -101,7 +98,6 @@ namespace DungeonBuildersGuidebook1
 		{
 			trapBasesXml = XElement.Load(xmlTrapComponentsFilePath);
 			trapEffectsXml = XElement.Load(xmlTrapEffectsFilePath);
-			trapSubtablesXml = XElement.Load(xmlTrapSubtablesFilePath);
 			trapDamageXml = XElement.Load(xmlTrapDamagesFilePath);
 
 			try
@@ -142,18 +138,11 @@ namespace DungeonBuildersGuidebook1
 				pitTrapTableDie = tableLoader.GetPitTrapTableDie();
 				var pitContents = tableLoader.GetPitTrapContents();
 
-				// Gas trap info here
-				gasTrapTableDie = new DiceCup(DiceDefinition.Parse(trapSubtablesXml.Descendants("GasTrap").Select(d => d.Element("TableDieRoll").Element("DiceDefinition").Value).Single()));
+				gasTrapTableDie = tableLoader.GetGasTrapTableDie();
+				var gasTypes = tableLoader.GetGasTrpContents();
 
-				gasTypes = new List<GasTypes>();
-				gasTypes = trapSubtablesXml.Descendants("GasType").Select(gT => new GasTypes()
-																{
-																	RollUpperBound = int.Parse(gT.Element("RollUpperBound").Value),
-																	GasName = gT.Element("GasName").Value,
-																}
-																		  ).OrderBy(r => r.RollUpperBound);
-
-				trapDamageTableDie = new DiceCup(DiceDefinition.Parse(trapDamageXml.Descendants("TableDieRoll").Select(d => d.Element("DiceDefinition").Value).Single()));
+				//trapDamageTableDie = new DiceCup(DiceDefinition.Parse(trapDamageXml.Descendants("TableDieRoll").Select(d => d.Element("DiceDefinition").Value).Single()));
+				trapDamageTableDie = tableLoader.GetTrapDamageTableDie();
 				trapDamages = trapDamageXml.Descendants("Damage").Select(tD => new TrapDamages()
 																				{
 																					RollUpperBound = int.Parse(tD.Element("RollUpperBound").Value),
