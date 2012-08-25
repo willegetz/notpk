@@ -1,36 +1,24 @@
 ﻿using System;
 using DungeonBuildersGuidebook1.TrapLoaders;
-using DungeonBuildersGuidebook1.TrapComponentObjects;
 using RpgTools.Dice;
 using System.Collections.Generic;
 using System.Linq;
-using System.Xml.Linq;
 using DungeonBuildersGuidebook1.Factories;
 
 namespace DungeonBuildersGuidebook1
 {
 	public class TrapArchitect
 	{
-		private Random randomNumber;
-		private TableLoader tableLoader;
-		private XElement trapBasesXml;
-		private XElement trapEffectsXml;
-		private XElement trapSubtablesXml;
-		private XElement trapDamageXml;
-		private IEnumerable<TrapBases> trapBases;
-		private IEnumerable<TrapEffects> trapEffects;
-		private IEnumerable<TrapDamages> trapDamages;
-		private List<KeyValuePair<int, string>> mechanismTypes;
-		private string xmlTrapComponentsFilePath = DataConstants.DataFilesPath + "TrapComponents.xml";
-		private string xmlTrapEffectsFilePath = DataConstants.DataFilesPath + "TrapEffectsAndTraits.xml";
-		private string xmlTrapDamagesFilePath = DataConstants.DataFilesPath + "TrapDamages.xml";
-		private TrapEffectFactory trapBaseFactory;
-		private TrapEffectFactory effectFactory;
-		private TrapEffectFactory pitContentEffectFactory;
-		private TrapEffectFactory gasTrapContentFactory;
-		private TrapEffectFactory trapDamagesFactory;
-		private TrapEffectFactory mechanismFactory;
+		private static TableLoader tableLoader;
+		private static TrapEffectFactory trapBaseFactory;
+		private static TrapEffectFactory effectFactory;
+		private static TrapEffectFactory pitContentEffectFactory;
+		private static TrapEffectFactory gasTrapContentFactory;
+		private static TrapEffectFactory trapDamagesFactory;
+		private static TrapEffectFactory mechanismFactory;
+		
 		private DiceCup basePrimaryTableDie;
+		private Random randomNumber;
 		private DiceCup effectPrimaryTableDie;
 		private DiceCup pitTrapTableDie;
 		private DiceCup gasTrapTableDie;
@@ -96,60 +84,26 @@ namespace DungeonBuildersGuidebook1
 
 		private void LoadTables()
 		{
-			trapBasesXml = XElement.Load(xmlTrapComponentsFilePath);
-			trapEffectsXml = XElement.Load(xmlTrapEffectsFilePath);
-			trapDamageXml = XElement.Load(xmlTrapDamagesFilePath);
-
 			try
 			{
-				basePrimaryTableDie = new DiceCup(DiceDefinition.Parse(trapBasesXml.Descendants("TableDieRoll").Select(d => d.Element("DiceDefinition").Value).Single()));
+				basePrimaryTableDie = TableLoader.GetTrapBaseTableDie();
+				var trapBases = TableLoader.GetTrapBaseContents();
 
-				trapBases = new List<TrapBases>();
-				trapBases = trapBasesXml.Descendants("TrapBase").Select(tB => new TrapBases()
-																			{
-																				RollUpperBound = int.Parse(tB.Element("RollUpperBound").Value),
-																				TrappedObjectOrArea = tB.Element("TrappedObjectOrArea").Value,
-																				MechanismTypeSpecified = bool.Parse(tB.Element("MechanismTypeSpecified").Value)
-																			}
-																		)
-																.OrderBy(r => r.RollUpperBound);
-
-				mechanismTableDie = new DiceCup(DiceDefinition.Parse(trapBasesXml.Descendants("MechanismDieRoll").Select(d => d.Element("DiceDefinition").Value).Single()));
-
-				mechanismTypes = new List<KeyValuePair<int, string>>();
-				mechanismTypes = trapBasesXml.Descendants("Mechanism").ToDictionary(m => int.Parse(m.Element("RollUpperBound").Value), m => m.Element("MechanismType").Value).ToList();
+				mechanismTableDie = TableLoader.GetTrapMechanismTableDie();
+				var mechanismTypes = TableLoader.GetTrapMechanismContents();
 
 				
-				effectPrimaryTableDie = new DiceCup(DiceDefinition.Parse(trapEffectsXml.Descendants("TableDieRoll").Select(d => d.Element("DiceDefinition").Value).Single()));
+				effectPrimaryTableDie = TableLoader.GetTrapEffectsTableDie();
+				var trapEffects = TableLoader.GetTrapEffectsContents();
 
-				trapEffects = new List<TrapEffects>();
-				trapEffects = trapEffectsXml.Descendants("Effect").Select(tE => new TrapEffects()
-																						{
-																							RollUpperBound = int.Parse(tE.Element("RollUpperBound").Value),
-																							EffectDescription = tE.Element("EffectDescription").Value,
-																							AdditionalInformation = ValidateElement(tE.Element("AdditionalInformation").Value),
-																							RollAgain = bool.Parse(tE.Element("RollAgain").Value),
-																							NumberOfReRolls = ValidateIntElement(tE.Element("NumberOfReRolls").Value),
-																							HasSubtable = bool.Parse(tE.Element("HasSubtable").Value),
-																							SubtableName = tE.Element("SubtableName").Value,
-																						}
-																		).OrderBy(r => r.RollUpperBound);
+				pitTrapTableDie = TableLoader.GetPitTrapTableDie();
+				var pitContents = TableLoader.GetPitTrapContents();
 
-				pitTrapTableDie = tableLoader.GetPitTrapTableDie();
-				var pitContents = tableLoader.GetPitTrapContents();
+				gasTrapTableDie = TableLoader.GetGasTrapTableDie();
+				var gasTypes = TableLoader.GetGasTrpContents();
 
-				gasTrapTableDie = tableLoader.GetGasTrapTableDie();
-				var gasTypes = tableLoader.GetGasTrpContents();
-
-				//trapDamageTableDie = new DiceCup(DiceDefinition.Parse(trapDamageXml.Descendants("TableDieRoll").Select(d => d.Element("DiceDefinition").Value).Single()));
-				trapDamageTableDie = tableLoader.GetTrapDamageTableDie();
-				trapDamages = trapDamageXml.Descendants("Damage").Select(tD => new TrapDamages()
-																				{
-																					RollUpperBound = int.Parse(tD.Element("RollUpperBound").Value),
-																					DamageDescription = tD.Element("DamageDescription").Value,
-																				}
-																		)
-																.OrderBy(r => r.RollUpperBound);
+				trapDamageTableDie = TableLoader.GetTrapDamageTableDie();
+				var trapDamages = TableLoader.GetTrapDamages();
 
 				foreach (var damage in trapDamages)
 				{
@@ -214,29 +168,6 @@ namespace DungeonBuildersGuidebook1
 			}
 		}
 
-		private int ValidateIntElement(string intElementValue)
-		{
-			if (string.IsNullOrEmpty(intElementValue))
-			{
-				return 0;
-			}
-			else
-			{
-				return int.Parse(intElementValue);
-			}
-		}
-
-		private string ValidateElement(string elementValue)
-		{
-			if (string.IsNullOrEmpty(elementValue))
-			{
-				return string.Empty;
-			}
-			else
-			{
-				return elementValue;
-			}
-		}
 
 	}
 }
