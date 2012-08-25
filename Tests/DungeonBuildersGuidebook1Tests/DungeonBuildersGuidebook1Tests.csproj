@@ -74,6 +74,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="TrapArchitectTests.AddNotesToTrap.approved.txt">
+      <DependentUpon>TrapArchitectTests.cs</DependentUpon>
+    </Content>
     <Content Include="TrapArchitectTests.GasTrapTest.approved.txt">
       <DependentUpon>TrapArchitectTests.cs</DependentUpon>
     </Content>

@@ -180,5 +180,21 @@ namespace DungeonBuildersGuidebook1Tests
 
 			Approvals.VerifyAll(traps, "Nested Trap!");
 		}
+
+		[Test]
+		public void AddNotesToTrap()
+		{
+			DiceCup.SetRandom(new Random(700));
+			var architect = new TrapArchitect();
+
+			var trapBase = architect.GetTrapBaseFactory();
+			var trapEffect = architect.GetTrapEffectFactory();
+			var trapDamage = architect.GetTrapDamageFactory();
+			var trap = new Trap(trapBase, trapEffect, trapDamage);
+			trap.AddNotes("This trap is a test of the note application system.");
+
+			Approvals.Verify(trap);
+
+		}
 	}
 }
