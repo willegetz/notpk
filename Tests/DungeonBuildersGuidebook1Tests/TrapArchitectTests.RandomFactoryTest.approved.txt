@@ -58,7 +58,7 @@ Traps[53] = Animates the victim's weapon, which then attacks the victim
 Traps[54] = Casts priest spells at the victim (12th level of ability)
 Traps[55] = Infects the victim with split personality disorder
 Traps[56] = Shunts the victim to the deep Ethereal
-Traps[57] = Asks riddle... A wrong answer triggers the trap.
+Traps[57] = Asks riddle... A wrong answer triggers the trap
 Curses the victim to gain sustenance only from blood
 Traps[58] = Animates and attacks the victim
 Traps[59] = Triggers a pit to open, full of Quicksand
@@ -68,7 +68,7 @@ Traps[62] = Releases (or contains) poisoned caltrops or spikes
 Traps[63] = Rots a random internal organ of victim
 Traps[64] = Sprays iron shrapnel
 Traps[65] = Replaces a random internal organ with fire ants
-Traps[66] = Asks riddle... A wrong answer triggers the trap.
+Traps[66] = Asks riddle... A wrong answer triggers the trap
 Erases victim's gender
 Traps[67] = Fires a lightning bolt
 Traps[68] = Rots a random internal organ of victim

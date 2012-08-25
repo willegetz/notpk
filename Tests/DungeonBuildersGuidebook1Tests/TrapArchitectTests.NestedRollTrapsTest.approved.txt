@@ -1,0 +1,530 @@
+Nested Trap![0] = The cage
+Asks riddle... A wrong answer triggers the trap
+Triggers a chute to open beneath the victim
+Inflicts 1d8 points of damage
+
+Nested Trap![1] = The trunk
+Locks the entrance(s) to the chamber/area
+Slides to reveal dangerous monster(s)
+Inflicts 2d6 points of damage
+
+Nested Trap![2] = The desk
+Locks the exit(s) from the chamber/area
+Triggers a scything blade
+Inflicts 2d6 points of damage
+
+Nested Trap![3] = The portcullis
+Collapses the structure on the victim(s)
+Triggers the release of thousands of beetles
+Reverses the victim's gender
+Releases (or coated with) poison (see Table 51 in the DMG)
+Inflicts 2d6 points of damage
+
+Nested Trap![4] = The hook
+Infects the victim with rot grubs
+Slowly leaches oxygen from the air
+Locks the entrance(s) to the chamber/area
+Drops the victim to long fall
+Inflicts 2d6 points of damage
+
+Nested Trap![5] = The lamp
+Asks riddle... A wrong answer triggers the trap
+Animates the victim's weapon, which then attacks the victim
+Inflicts 1d8 points of damage
+
+Nested Trap![6] = The chute
+Locks the entrance(s) to the chamber/area
+Curses the victim to lie always
+Inflicts 2d6 points of damage
+
+Nested Trap![7] = The escalator (Magical)
+Locks the exit(s) from the chamber/area
+Disintegrates the victim's possessions
+Inflicts 2d6 points of damage
+
+Nested Trap![8] = The room
+Releases (or contains) poisoned caltrops or spikes
+Curses the victim to never eat animal matter
+Inflicts 2d6 points of damage
+
+Nested Trap![9] = The desk
+Curses the victim with constant nausea (-2 to actions)
+Lops off thevictim's head, then animates the head to attack the vicim's friends
+Releases (or contains) poisoned caltrops or spikes
+Inflicts 1d8 points of damage
+
+Nested Trap![10] = The chute
+Asks riddle... A wrong answer triggers the trap
+Curses the victim to gain sustenance only from blood
+Inflicts 8d6 points of damage
+
+Nested Trap![11] = The dais
+Locks the entrance(s) to the chamber/area
+Collapses the structure on the victim(s)
+Inflicts 2d6 points of damage
+
+Nested Trap![12] = The slide
+Locks the exit(s) from the chamber/area
+Triggers anti-magic; the victim's items lose thier enchantment
+Inflicts 1d8 points of damage
+
+Nested Trap![13] = The mosaic
+Devours or steals the victim's soul
+Imbues the victim's skeleton with the desire to "get out"
+Inflicts 4d6 points of damage
+
+Nested Trap![14] = The pedestal
+Sprays green slime in a devastating aerosol effect
+Curses the victim to gain sustenance only from blood
+Removes the victim's ability to cast spells
+Inflicts 8d6 points of damage
+
+Nested Trap![15] = The alcove
+Asks riddle... A wrong answer triggers the trap
+Enrages the victim
+Inflicts 2d6 points of damage
+
+Nested Trap![16] = The illusion
+Locks the entrance(s) to the chamber/area
+Teleports the victim to a lethal (or distant) area
+Inflicts 2d6 points of damage
+
+Nested Trap![17] = The fireplace
+Locks the exit(s) from the chamber/area
+Traps the victim in a magical force field
+Inflicts 2d6 points of damage
+
+Nested Trap![18] = The statue
+Fires arrow(s)/dart(s)/spear(s)
+Discordant music eventually drives the victim insane
+Inflicts 1d8 points of damage
+
+Nested Trap![19] = The harp
+Disintegrates the victim
+Curses the victim to never eat vegetable matter
+Slowly leaches oxygen from the air
+Inflicts 2d6 points of damage
+
+Nested Trap![20] = The floor
+Asks riddle... A wrong answer triggers the trap
+Shunts the victim to the deep Ethereal
+Inflicts 1d8 points of damage
+
+Nested Trap![21] = The secret door
+Locks the entrance(s) to the chamber/area
+Locks the entrance(s) to the chamber/area
+Triggers anti-magic; the victim's items lose thier enchantment
+Inflicts 2d6 points of damage
+
+Nested Trap![22] = The portcullis
+Locks the exit(s) from the chamber/area
+Plane shifts the victim to a lower plane
+Inflicts 3d6 points of damage
+
+Nested Trap![23] = The well
+Lops off thevictim's head, then animates the head to attack the vicim's friends
+Removes the victim's ability to read
+Inflicts 2d6 points of damage
+
+Nested Trap![24] = The tapestry
+Explodes
+Increases gravity
+Reverses the victim's gender
+Inflicts 2d6 points of damage
+
+Nested Trap![25] = The elevator (Magical)
+Asks riddle... A wrong answer triggers the trap
+Shunts the victim to the deep Ethereal
+Inflicts 2d6 points of damage
+
+Nested Trap![26] = The room
+Locks the entrance(s) to the chamber/area
+Casts priest spells at the victim (12th level of ability)
+Inflicts 1d8 points of damage
+
+Nested Trap![27] = The vase
+Locks the exit(s) from the chamber/area
+Petrifies the victim's possessions
+Inflicts 4d6 points of damage
+
+Nested Trap![28] = The mosaic
+Releases (or contains) poisoned caltrops or spikes
+Erases victim's gender
+Inflicts 1d8 points of damage
+
+Nested Trap![29] = The dais
+Curses the victim to never eat vegetable matter
+Reverses the victim's age by 1d100 years
+Lops off thevictim's head, then animates the head to attack the vicim's friends
+Inflicts 6d6 points of damage
+
+Nested Trap![30] = The ladder
+Asks riddle... A wrong answer triggers the trap
+Teleports the victim to a lethal (or distant) area
+Inflicts 10d10points of damage
+
+Nested Trap![31] = The slide
+Locks the entrance(s) to the chamber/area
+Drops the victim to long fall
+Inflicts 2d6 points of damage
+
+Nested Trap![32] = The basin
+Locks the exit(s) from the chamber/area
+Is illusionary
+Inflicts 2d6 points of damage
+
+Nested Trap![33] = The interdimensional portal
+Reverses the victim's alignment
+Locks the exit(s) from the chamber/area
+Enrages the victim
+Inflicts 2d6 points of damage
+
+Nested Trap![34] = The bathtub
+Curses the victim to become mute
+Curses the victim to become mute
+Plane shifts the victim to a lower plane
+Inflicts 1d8 points of damage
+
+Nested Trap![35] = The railing
+Asks riddle... A wrong answer triggers the trap
+Sprays iron shrapnel
+Inflicts 2d6 points of damage
+
+Nested Trap![36] = The statue
+Locks the entrance(s) to the chamber/area
+Releases (or coated with) poison (see Table 51 in the DMG)
+Inflicts 1d8 points of damage
+
+Nested Trap![37] = The table
+Locks the exit(s) from the chamber/area
+Implants the victim with vegetable matter
+Inflicts 1d4 points of damage
+
+Nested Trap![38] = The cask
+Vents fire (or magma)
+Removes the victim's ability to cast spells
+Inflicts 2d6 points of damage
+
+Nested Trap![39] = The window
+Absorbs the victim into a two-dimensional fresco or painting
+Curses the victim to speak only in falsetto
+Puts the victim in stasis for 1d100 years
+Inflicts 3d6 points of damage
+
+Nested Trap![40] = The pendulum
+Asks riddle... A wrong answer triggers the trap
+Shunts the victim to the deep Ethereal
+Inflicts 2d6 points of damage
+
+Nested Trap![41] = The bed
+Locks the entrance(s) to the chamber/area
+Reverses the victim's alignment
+Inflicts 3d6 points of damage
+
+Nested Trap![42] = The pillar
+Locks the exit(s) from the chamber/area
+Slides to reveal dangerous monster(s)
+Inflicts 2d6 points of damage
+
+Nested Trap![43] = The passage
+Locks the entrance(s) to the chamber/area
+Sprays iron shrapnel
+Releases (or contains) a black pudding
+Inflicts 2d6 points of damage
+
+Nested Trap![44] = The catwalk
+Curses the victim to never eat vegetable matter
+Petrifies the victim's possessions
+Switches victims' minds
+Inflicts 2d6 points of damage
+
+Nested Trap![45] = The bed
+Asks riddle... A wrong answer triggers the trap
+Curses the victim to speak only in falsetto
+Inflicts 2d6 points of damage
+
+Nested Trap![46] = The fresco
+Locks the entrance(s) to the chamber/area
+Drops the victim to long fall
+Inflicts 2d6 points of damage
+
+Nested Trap![47] = The vase
+Locks the exit(s) from the chamber/area
+Rots a random internal organ of victim
+Inflicts 2d6 points of damage
+
+Nested Trap![48] = The table
+Traps the victim in an iron cage
+Plane shifts the victim to a lower plane
+Inflicts 1d8 points of damage
+
+Nested Trap![49] = The portcullis
+Triggers compressing walls
+Triggers anti-magic; the victim's items lose thier enchantment
+Enrages the victim
+Inflicts 4d6 points of damage
+
+Nested Trap![50] = The balcony
+Asks riddle... A wrong answer triggers the trap
+Triggers anti-magic; the victim's items lose thier enchantment
+Inflicts 2d6 points of damage
+
+Nested Trap![51] = The urn
+Locks the entrance(s) to the chamber/area
+Petrifies the victim
+Inflicts 2d6 points of damage
+
+Nested Trap![52] = The portcullis
+Locks the exit(s) from the chamber/area
+Vents acid
+Inflicts 1d4 points of damage
+
+Nested Trap![53] = The lectern
+Renders the victim deaf
+Triggers a chute to open beneath the victim
+Inflicts 3d6 points of damage
+
+Nested Trap![54] = The chest
+Switches the victim's mind with a nearby (or distant) buried corpse
+Curses the victim to never eat vegetable matter
+Traps the victim in an iron cage
+Inflicts 2d6 points of damage
+
+Nested Trap![55] = The chandelier
+Asks riddle... A wrong answer triggers the trap
+Sprays burning, jellied kerosene on the victim
+Inflicts 2d6 points of damage
+
+Nested Trap![56] = The room
+Locks the entrance(s) to the chamber/area
+Releases (or contains) poisoned caltrops or spikes
+Inflicts 3d6 points of damage
+
+Nested Trap![57] = The room
+Locks the exit(s) from the chamber/area
+Reduces the victim in size by 1d4 feet
+Inflicts 3d6 points of damage
+
+Nested Trap![58] = The bell
+Tumbles the victim into a pit of Freezing water
+Animates and attacks the victim
+Inflicts 2d6 points of damage
+
+Nested Trap![59] = The dais
+Increases gravity
+Curses the victim to lie always
+Curses the victim to become mute
+Inflicts 2d6 points of damage
+
+Nested Trap![60] = The crate
+Asks riddle... A wrong answer triggers the trap
+Disintegrates the victim's possessions
+Inflicts 2d6 points of damage
+
+Nested Trap![61] = The altar
+Locks the entrance(s) to the chamber/area
+Discordant music eventually drives the victim insane
+Inflicts 3d6 points of damage
+
+Nested Trap![62] = The ladder
+Locks the exit(s) from the chamber/area
+Removes the victim's ability to cast spells
+Inflicts 8d6 points of damage
+
+Nested Trap![63] = The basin
+Curses the victim to never eat vegetable matter
+Sprays super cold (colder than freezing) water at the victim
+Inflicts 3d6 points of damage
+
+Nested Trap![64] = The caldron
+Reverses the victim's age by 1d100 years
+Floods the area with water, or Freezing water
+Sprays burning, jellied kerosene on the victim
+Inflicts 2d6 points of damage
+
+Nested Trap![65] = The air itself
+Asks riddle... A wrong answer triggers the trap
+Releases a heavy weight or block
+Inflicts 2d6 points of damage
+
+Nested Trap![66] = The fountain
+Locks the entrance(s) to the chamber/area
+Replaces a random internal organ with cobwebs
+Inflicts 1d8 points of damage
+
+Nested Trap![67] = The bridge
+Locks the exit(s) from the chamber/area
+Replaces a random internal organ with cobwebs
+Inflicts 1d4 points of damage
+
+Nested Trap![68] = The fountain
+Polymorphs the victim into a small reptile or insect
+Slowly leaches oxygen from the air
+Inflicts 2d6 points of damage
+
+Nested Trap![69] = The weapon
+Implodes
+Curses the victim with lycanthropy
+Fires a lightning bolt
+Inflicts 2d6 points of damage
+
+Nested Trap![70] = The bookcase
+Asks riddle... A wrong answer triggers the trap
+Enlarges the victim
+Inflicts 2d6 points of damage
+
+Nested Trap![71] = The passage
+Locks the entrance(s) to the chamber/area
+Reverses the victim's gender
+Inflicts 4d6 points of damage
+
+Nested Trap![72] = The holy/unholy font
+Locks the exit(s) from the chamber/area
+Implodes
+Inflicts 1d8 points of damage
+
+Nested Trap![73] = The crystal ball
+Infects the victim with rot grubs
+Triggers a chute to open beneath the victim
+Inflicts 4d6 points of damage
+
+Nested Trap![74] = The tunnel mouth
+Releases (or contains) a black pudding
+Locks the entrance(s) to the chamber/area
+Triggers a pit to open, full of Quicksand
+Animates the victim's weapon, which then attacks the victim
+Curses the victim with constant nausea (-2 to actions)
+Inflicts 6d6 points of damage
+
+Nested Trap![75] = The desk
+Asks riddle... A wrong answer triggers the trap
+Victim gains the disfavor of a demipower
+Inflicts 3d6 points of damage
+
+Nested Trap![76] = The armor
+Locks the entrance(s) to the chamber/area
+Switches the victim's mind with a nearby (or distant) buried corpse
+Inflicts 2d6 points of damage
+
+Nested Trap![77] = The trophy
+Locks the exit(s) from the chamber/area
+Triggers a chute to open beneath the victim
+Inflicts 1d8 points of damage
+
+Nested Trap![78] = The hook
+Traps the victim in a magical force field
+Curses the victim to lie always
+Inflicts 4d6 points of damage
+
+Nested Trap![79] = The caldron
+Ages the victim 10d10 years
+Discordant music eventually drives the victim insane
+Sprays super cold (colder than freezing) water at the victim
+Inflicts 4d6 points of damage
+
+Nested Trap![80] = The pedestal
+Asks riddle... A wrong answer triggers the trap
+Replaces a random internal organ with fire ants
+Inflicts 3d6 points of damage
+
+Nested Trap![81] = The lever
+Locks the entrance(s) to the chamber/area
+Collapses the structure on the victim(s)
+Inflicts 2d6 points of damage
+
+Nested Trap![82] = The secret door
+Locks the exit(s) from the chamber/area
+Releases a gas: Blinding
+Inflicts 1d4 points of damage
+
+Nested Trap![83] = The alcove
+Rots a random internal organ of victim
+Polymorphs the victim into a small reptile or insect
+Inflicts 2d6 points of damage
+
+Nested Trap![84] = The cage
+Animates the victim's weapon, which then attacks the victim
+Curses the victim to never eat vegetable matter
+Triggers the release of thousands of beetles
+Inflicts 2d6 points of damage
+
+Nested Trap![85] = The tunnel mouth
+Asks riddle... A wrong answer triggers the trap
+Vents acid
+Inflicts 3d6 points of damage
+
+Nested Trap![86] = The rug
+Locks the entrance(s) to the chamber/area
+Asks riddle... A wrong answer triggers the trap
+Switches the victim's mind with a nearby (or distant) buried corpse
+Inflicts 2d6 points of damage
+
+Nested Trap![87] = The window
+Locks the exit(s) from the chamber/area
+Decreases gravity
+Inflicts 3d6 points of damage
+
+Nested Trap![88] = The door
+Increases gravity
+Slides to reveal dangerous monster(s)
+Inflicts 3d6 points of damage
+
+Nested Trap![89] = The bookcase
+Traps the victim in an iron cage
+Disintegrates the victim's possessions
+Implants the victim with vegetable matter
+Inflicts 2d6 points of damage
+
+Nested Trap![90] = The lamp
+Asks riddle... A wrong answer triggers the trap
+Releases (or contains) caltrops or spikes
+Inflicts 3d6 points of damage
+
+Nested Trap![91] = The rug
+Locks the entrance(s) to the chamber/area
+Infects the victim with split personality disorder
+Inflicts 3d6 points of damage
+
+Nested Trap![92] = The dais
+Locks the exit(s) from the chamber/area
+Devours or steals the victim's soul
+Inflicts 2d6 points of damage
+
+Nested Trap![93] = The window
+Imbues the victim's skeleton with the desire to "get out"
+Draws demonic or devilish attention to victim
+Inflicts 2d6 points of damage
+
+Nested Trap![94] = The rug
+Lowers 1d6 of the victim's stats by 1d4 points
+Erases victim's gender
+Curses the victim to attempt to kill their friends while asleep
+Inflicts 3d6 points of damage
+
+Nested Trap![95] = The iron maiden
+Asks riddle... A wrong answer triggers the trap
+Curses the victim to become mute
+Inflicts 3d6 points of damage
+
+Nested Trap![96] = The crystal ball
+Locks the entrance(s) to the chamber/area
+Replaces a random internal organ with cobwebs
+Inflicts 2d6 points of damage
+
+Nested Trap![97] = The well
+Locks the exit(s) from the chamber/area
+Asks riddle... A wrong answer triggers the trap
+Ages the victim 10d10 years
+Inflicts 2d6 points of damage
+
+Nested Trap![98] = The fireplace
+'Quests' the victim to attempt a difficult task
+Enrages the victim
+Inflicts 6d6 points of damage
+
+Nested Trap![99] = The tapestry
+Curses the victim with disease (-3 to actions)
+Releases (or coated with) poison (see Table 51 in the DMG)
+'Quests' the victim to attempt a difficult task
+Inflicts 2d6 points of damage
+
