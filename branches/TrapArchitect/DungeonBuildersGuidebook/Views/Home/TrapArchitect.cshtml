@@ -1,0 +1,23 @@
+﻿@model DungeonBuildersGuidebook.Models.TrapArchitectModel
+@{
+    ViewBag.Title = "Trap Architect";
+}
+
+<div id="TrapComponents">
+	<table>
+		<tbody>
+			<tr>
+				<td>Trap Base</td>
+				<td>@Model.GetTrapBase()</td>
+			</tr>
+			<tr>
+				<td>Trap Effects</td>
+				<td>@Model.GetTrapEffects()</td>
+			</tr>
+			<tr>
+				<td>Trap Damage</td>
+				<td>@Model.GetTrapDamage()</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
