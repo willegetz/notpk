@@ -6,18 +6,21 @@
 	<script type="text/javascript">
 		$(document).ready(function () {
 			$('#refreshButton').click(function () {
-				UpdateTrapBase();
+				GenerateNewTrap();
 			});
 
-			function UpdateTrapBase() {
+			function GenerateNewTrap() {
 				$.ajax({
 					type: "GET",
-					url: "home/UpdateBase",
-					success: function (nb) {
-						$("#trapBase").text(nb);
+					url: "home/GenerateNewTrap",
+					success: function (newTrap) {
+						$("#trapBase").text(newTrap[0]);
+						$("#trapEffects").text(newTrap[1]);
+						$("#trapDamage").text(newTrap[2]);
 					}
 				});
 			};
+
 		});
 	</script>
 
