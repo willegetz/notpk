@@ -3,21 +3,32 @@
     ViewBag.Title = "Trap Architect";
 }
 
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#refreshButton').live("click", function () {
+				$('#trapBase').text("@Model.GetTrapBase()");
+			});
+		});
+	</script>
+
 <div id="TrapComponents">
-	<table>
+	<table id="assembledTrap">
 		<tbody>
 			<tr>
 				<td>Trap Base</td>
-				<td>@Model.GetTrapBase()</td>
+				<td id="trapBase">@Model.GetTrapBase()</td>
 			</tr>
 			<tr>
 				<td>Trap Effects</td>
-				<td>@Model.GetTrapEffects()</td>
+				<td id="trapEffects">@Model.GetTrapEffects()</td>
 			</tr>
 			<tr>
 				<td>Trap Damage</td>
-				<td>@Model.GetTrapDamage()</td>
+				<td id="trapDamage">@Model.GetTrapDamage()</td>
 			</tr>
 		</tbody>
 	</table>
+	<div id="refreshTraps">
+		<input type="button" id="refreshButton" value="Generate New Trap" />
+	</div>
 </div>

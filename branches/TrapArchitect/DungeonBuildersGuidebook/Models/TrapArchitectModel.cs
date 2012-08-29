@@ -23,6 +23,7 @@ namespace DungeonBuildersGuidebook.Models
 
 		public MvcHtmlString GetTrapEffects()
 		{
+			//var effects = trapArchitect.GetTrapEffectFactory();
 			var effects = trapArchitect.GetSpecificTrapEffect(100);
 			var effectString = string.Empty;
 			var splitEffects = effects.Split('\r');
