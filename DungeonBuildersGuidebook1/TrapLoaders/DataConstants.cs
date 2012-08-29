@@ -11,9 +11,7 @@ namespace DungeonBuildersGuidebook1.TrapLoaders
 	{
 		public static string DataFilesPath
 		{
-			//get { return Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\DataFiles\"; }
-			//get { return @"DataFiles\"; }
-			get { return @"C:\Documents and Settings\wgetz\Experiments\NoTPK\branches\TrapArchitect\DungeonBuildersGuidebook1\bin\Debug\DataFiles\"; }
+			get { return Path.GetDirectoryName(Assembly.GetCallingAssembly().CodeBase) + @"\DataFiles\"; }
 		}
 	}
 }
