@@ -13,7 +13,7 @@ namespace DungeonBuildersGuidebook.Models
 		
 		public TrapArchitectModel()
 		{
-			trapArchitect = new DungeonBuildersGuidebook1.TrapArchitect();
+			trapArchitect = new TrapArchitect();
 		}
 
 		public string GetTrapBase()
@@ -21,20 +21,9 @@ namespace DungeonBuildersGuidebook.Models
 			return trapArchitect.GetTrapBaseFactory();
 		}
 
-		public MvcHtmlString GetTrapEffects()
+		public string GetTrapEffects()
 		{
-			//var effects = trapArchitect.GetTrapEffectFactory();
-			var effects = trapArchitect.GetSpecificTrapEffect(100);
-			var effectString = string.Empty;
-			var splitEffects = effects.Split('\r');
-			for (int i = 0; i < splitEffects.Length; i++)
-			{
-				effectString += splitEffects[i] + "<br />";
-			}
-
-			var converted = MvcHtmlString.Create(effectString);
-
-			return converted;
+			return trapArchitect.GetTrapEffectFactory();;
 		}
 
 		public string GetTrapDamage()

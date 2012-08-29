@@ -29,7 +29,7 @@ namespace DungeonBuildersGuidebook1.Factories
 			int i = 0;
 			while (i < (numberOfReRolls -1))
 			{
-				sb.Append(effectFactory.GetFactory(tableDiceRoll.Roll()).Get() + "\r\n");
+				sb.Append(effectFactory.GetFactory(tableDiceRoll.Roll()).Get() + "; ");
 				i++;
 			}
 			sb.Append(effectFactory.GetFactory(tableDiceRoll.Roll()).Get());
