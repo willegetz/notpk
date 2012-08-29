@@ -23,5 +23,13 @@ namespace DungeonBuildersGuidebook.Controllers
 		{
 			return View(new TrapArchitectModel());
 		}
+
+		[HttpGet]
+		public ActionResult UpdateBase()
+		{
+			var newBase = new TrapArchitectModel();
+			return new JsonResult() { Data = newBase.GetTrapBase(), JsonRequestBehavior = JsonRequestBehavior.AllowGet};
+			
+		}
 	}
 }
