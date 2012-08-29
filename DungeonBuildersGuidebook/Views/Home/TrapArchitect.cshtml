@@ -5,9 +5,19 @@
 
 	<script type="text/javascript">
 		$(document).ready(function () {
-			$('#refreshButton').live("click", function () {
-				$('#trapBase').text("@Model.GetTrapBase()");
+			$('#refreshButton').click(function () {
+				UpdateTrapBase();
 			});
+
+			function UpdateTrapBase() {
+				$.ajax({
+					type: "GET",
+					url: "home/UpdateBase",
+					success: function (nb) {
+						$("#trapBase").text(nb);
+					}
+				});
+			};
 		});
 	</script>
 
