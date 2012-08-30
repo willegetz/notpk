@@ -27,11 +27,12 @@ namespace DungeonBuildersGuidebook.Controllers
 		[HttpGet]
 		public ActionResult GenerateNewTrap()
 		{
-			var newTrap = new List<string>();
             var trapArchitect = new TrapArchitectModel();
-			newTrap.Add(trapArchitect.GetTrapBase());
-			newTrap.Add(trapArchitect.GetTrapEffects());
-			newTrap.Add(trapArchitect.GetTrapDamage());
+			var newTrap = trapArchitect.GetEmptyTrap();
+
+			newTrap.AddTrapBase(trapArchitect.GetTrapBase());
+			newTrap.AddTrapEffects(trapArchitect.GetTrapEffects());
+			newTrap.AddTrapDamage(trapArchitect.GetTrapDamage());
 			return new JsonResult() { Data = newTrap, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
 		}
 	}

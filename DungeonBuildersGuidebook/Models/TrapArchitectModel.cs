@@ -30,5 +30,10 @@ namespace DungeonBuildersGuidebook.Models
 		{
 			return trapArchitect.GetTrapDamageFactory();
 		}
+
+		public Trap GetEmptyTrap()
+		{
+			return new Trap();
+		}
 	}
 }

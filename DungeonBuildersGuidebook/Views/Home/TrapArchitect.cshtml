@@ -3,8 +3,13 @@
     ViewBag.Title = "Trap Architect";
 }
 
+	<script src="@Url.Content("~/Scripts/jquery.tmpl.min.js")" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
+
+			var newTrapMarkup = "<tbody><tr><td>Trap Base</td><td>${TrapBase}</td></tr><tr><td>Trap Effects</td><td>${TrapEffects}</td></tr><tr><td>Trap Damage</td><td>${TrapDamage}</td></tr><tr><td></td></tr></tbody>";
+			$.template("newTrapTemplate", newTrapMarkup);
+
 			$('#refreshButton').click(function () {
 				GenerateNewTrap();
 			});
@@ -23,9 +28,9 @@
 					type: "GET",
 					url: "home/GenerateNewTrap",
 					success: function (newTrap) {
-						$("#trapBase").text(newTrap[0]);
-						$("#trapEffects").text(newTrap[1]);
-						$("#trapDamage").text(newTrap[2]);
+						$("#trapBase").text(newTrap.TrapBase);
+						$("#trapEffects").text(newTrap.TrapEffects);
+						$("#trapDamage").text(newTrap.TrapDamage);
 					}
 				});
 			};
@@ -35,7 +40,7 @@
 					type: "Get",
 					url: "home/GenerateNewTrap",
 					success: function (newTrap) {
-						$("#addedTraps").append("<tbody><tr><td>Trap Base</td><td>" + newTrap[0] + "</td></tr><tr><td>Trap Effects</td><td>" + newTrap[1] + "</td></tr><tr><td>Trap Damage</td><td>" + newTrap[2] + "</td></tr></tbody>");
+						$.tmpl("newTrapTemplate", newTrap).appendTo("#addedTraps");
 					}
 				});
 
