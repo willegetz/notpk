@@ -4,31 +4,51 @@ namespace DungeonBuildersGuidebook1
 {
 	public class Trap
 	{
-		private readonly string trapBase;
-		public string trapEffect { get; private set; }
-		private readonly string trapDamage;
-		private string notes;
+		public string TrapBase { get; private set; }
+		public string TrapEffects { get; private set; }
+		public string TrapDamage { get; private set; }
+		public string Notes { get; private set; }
+
+		public Trap()
+		{
+
+		}
 
 		public Trap(string trapBase, string trapEffect, string trapDamage)
 		{
-			this.trapBase = trapBase;
-			this.trapEffect = trapEffect;
-			this.trapDamage = trapDamage;
+			TrapBase = trapBase;
+			TrapEffects = trapEffect;
+			TrapDamage = trapDamage;
+		}
+
+		public void AddTrapBase(string trapBase)
+		{
+			TrapBase = trapBase;
+		}
+
+		public void AddTrapEffects(string trapEffects)
+		{
+			TrapEffects = trapEffects;
+		}
+       
+		public void AddTrapDamage(string trapDamage)
+		{
+			TrapDamage = trapDamage;
 		}
 
 		public void AddNotes(string notes)
 		{
-			this.notes = notes;
+			Notes = notes;
 		}
 		public override string ToString()
 		{
 			var sb = new StringBuilder();
-			sb.AppendLine(trapBase);
-			sb.AppendLine(trapEffect);
-			sb.AppendLine(trapDamage);
-			if (!string.IsNullOrEmpty(notes))
+			sb.AppendLine(TrapBase);
+			sb.AppendLine(TrapEffects);
+			sb.AppendLine(TrapDamage);
+			if (!string.IsNullOrEmpty(Notes))
 			{
-				sb.AppendLine(notes);
+				sb.AppendLine(Notes);
 			}
 			return sb.ToString();
 		}

@@ -23,7 +23,7 @@ namespace DungeonBuildersGuidebook1.Factories
 			var sb = new StringBuilder();
 			if (!string.IsNullOrEmpty(effectDescription))
 			{
-				sb.Append(effectDescription + "\r\n");
+				sb.Append(effectDescription + "; ");
 			}
 
 			int i = 0;
