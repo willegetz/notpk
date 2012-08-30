@@ -217,6 +217,7 @@ input[type="submit"] {
 table {
     border: solid 1px #e8eef4;
     border-collapse: collapse;
+    margin: 5px;
 }
 
 table td {
@@ -231,6 +232,10 @@ table th {
     border: solid 1px #e8eef4;
 }
 
+#addedTraps
+{
+	margin: 10px;
+}
 /* MISC  
 ----------------------------------------------------------*/
 .clear {
@@ -282,6 +287,7 @@ div#refreshTraps
 	margin-bottom: 10px;
 	position:relative;
 }
+
 
 /* Styles for validation helpers
 -----------------------------------------------------------*/

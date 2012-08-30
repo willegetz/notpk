@@ -9,6 +9,15 @@
 				GenerateNewTrap();
 			});
 
+			$("#addNewTrap").click(function () {
+				AddTrap();
+			});
+
+			$("#resetTraps").click(function () {
+				$("#addedTraps tr").remove();
+				GenerateNewTrap();
+			});
+
 			function GenerateNewTrap() {
 				$.ajax({
 					type: "GET",
@@ -21,10 +30,27 @@
 				});
 			};
 
+			function AddTrap() {
+				$.ajax({
+					type: "Get",
+					url: "home/GenerateNewTrap",
+					success: function (newTrap) {
+						$("#addedTraps").append("<tbody><tr><td>Trap Base</td><td>" + newTrap[0] + "</td></tr><tr><td>Trap Effects</td><td>" + newTrap[1] + "</td></tr><tr><td>Trap Damage</td><td>" + newTrap[2] + "</td></tr></tbody>");
+					}
+				});
+
+			};
+
 		});
 	</script>
 
+
 <div id="TrapComponents">
+	<div id="refreshTraps">
+		<input type="button" id="refreshButton" value="Generate New Trap" />
+		<input type="button" id="addNewTrap" value="Add A New Trap" />
+		<input type="button" id="resetTraps" value="Reset" />
+	</div>
 	<table id="assembledTrap">
 		<tbody>
 			<tr>
@@ -41,7 +67,6 @@
 			</tr>
 		</tbody>
 	</table>
-	<div id="refreshTraps">
-		<input type="button" id="refreshButton" value="Generate New Trap" />
-	</div>
+	<table id="addedTraps">
+	</table>
 </div>
