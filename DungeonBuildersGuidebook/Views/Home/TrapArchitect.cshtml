@@ -7,7 +7,7 @@
 	<script type="text/javascript">
 		$(document).ready(function () {
 
-			var newTrapMarkup = "<tbody><tr><td>Trap Base</td><td>${TrapBase}</td></tr><tr><td>Trap Effects</td><td>${TrapEffects}</td></tr><tr><td>Trap Damage</td><td>${TrapDamage}</td></tr><tr><td></td></tr></tbody>";
+			var newTrapMarkup = "<div " + <text>class="newTrap" style="margin-top: 15px;"</text> + "><table><tbody><tr><td " + <text>id="columnOne"</text> + ">Trap Base</td><td>${TrapBase}</td></tr><tr><td " + <text>id="columnOne"</text> + ">Trap Effects</td><td>${TrapEffects}</td></tr><tr><td " + <text>id="columnOne"</text> + ">Trap Damage</td><td>${TrapDamage}</td></tr></tbody></table></div>";
 			$.template("newTrapTemplate", newTrapMarkup);
 
 			$('#refreshButton').click(function () {
@@ -19,7 +19,7 @@
 			});
 
 			$("#resetTraps").click(function () {
-				$("#addedTraps tr").remove();
+				$(".newTrap").remove();
 				GenerateNewTrap();
 			});
 
@@ -40,7 +40,7 @@
 					type: "Get",
 					url: "home/GenerateNewTrap",
 					success: function (newTrap) {
-						$.tmpl("newTrapTemplate", newTrap).appendTo("#addedTraps");
+						$.tmpl("newTrapTemplate", newTrap).appendTo("#TrapComponents");
 					}
 				});
 
@@ -56,22 +56,22 @@
 		<input type="button" id="addNewTrap" value="Add A New Trap" />
 		<input type="button" id="resetTraps" value="Reset" />
 	</div>
-	<table id="assembledTrap">
-		<tbody>
-			<tr>
-				<td>Trap Base</td>
-				<td id="trapBase">@Model.GetTrapBase()</td>
-			</tr>
-			<tr>
-				<td>Trap Effects</td>
-				<td id="trapEffects">@Model.GetTrapEffects()</td>
-			</tr>
-			<tr>
-				<td>Trap Damage</td>
-				<td id="trapDamage">@Model.GetTrapDamage()</td>
-			</tr>
-		</tbody>
-	</table>
-	<table id="addedTraps">
-	</table>
+	<div id="initialTrap">
+		<table id="assembledTrap">
+			<tbody>
+				<tr>
+					<td id="columnOne">Trap Base</td>
+					<td id="trapBase">@Model.GetTrapBase()</td>
+				</tr>
+				<tr>
+					<td id="columnOne">Trap Effects</td>
+					<td id="trapEffects">@Model.GetTrapEffects()</td>
+				</tr>
+				<tr>
+					<td id="columnOne">Trap Damage</td>
+					<td id="trapDamage">@Model.GetTrapDamage()</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </div>
