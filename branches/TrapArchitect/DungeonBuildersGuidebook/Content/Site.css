@@ -218,24 +218,23 @@ table {
     border: solid 1px #e8eef4;
     border-collapse: collapse;
     margin: 5px;
+    font-size: 1.2em;
 }
 
 table td {
     padding: 5px;
-    border: solid 1px #e8eef4;
 }
 
 table th {
     padding: 6px 5px;
     text-align: left;
     background-color: #e8eef4;
-    border: solid 1px #e8eef4;
 }
 
-#addedTraps
+#columnOne
 {
-	margin: 5px;
-}
+	background-color: #f4f4f2;
+	}
 /* MISC  
 ----------------------------------------------------------*/
 .clear {
