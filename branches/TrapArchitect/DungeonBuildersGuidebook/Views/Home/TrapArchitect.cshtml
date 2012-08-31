@@ -9,7 +9,7 @@
 	<script type="text/javascript">
 		$(document).ready(function () {
 
-			var newTrapMarkup = "<div class='newTrap draggableTable sortableTrap' style='margin-top: 15px;'><table><tbody><tr><td id='columnOne'>Trap Base</td><td>${TrapBase}</td></tr><tr><td id='columnOne'>Trap Effects</td><td>${TrapEffects}</td></tr><tr><td id='columnOne'>Trap Damage</td><td>${TrapDamage}</td></tr></tbody></table></div>";
+			var newTrapMarkup = "<div class='newTrap draggableTable' style='margin-top: 15px;'><table><tbody><tr><td id='columnOne'>Trap Base</td><td>${TrapBase}</td></tr><tr><td id='columnOne'>Trap Effects</td><td>${TrapEffects}</td></tr><tr><td id='columnOne'>Trap Damage</td><td>${TrapDamage}</td></tr></tbody></table></div>";
 			$.template("newTrapTemplate", newTrapMarkup);
 
 			$(function () {
@@ -24,9 +24,9 @@
 					out: function () {
 						$(this).removeClass("dropHover");
 					},
-				});
-				$(".draggableTable, .droppableDiv").sortable({
-					connectWith: ".sortableTrap"
+					drop: function (event, ui) {
+						$(this).append(ui.draggable);
+					}
 				});
 			});
 
@@ -39,7 +39,12 @@
 			});
 
 			$("#resetTraps").click(function () {
+				var div = $("#initialTrap").detach();
+				$("#TrapComponents").append(div);
 				$(".newTrap").remove();
+				$(".droppableDiv").removeClass("dropHover");
+
+
 				GenerateNewTrap();
 			});
 
@@ -78,8 +83,8 @@
 	<input type="button" id="resetTraps" value="Reset" />
 </div>
 <div id="TrapComponents">
-	<div id="initialTrap" class="sortableTrap">
-		<table id="assembledTrap" class="draggableTable">
+	<div id="initialTrap" class="draggableTable">
+		<table id="assembledTrap" >
 			<tbody>
 				<tr>
 					<td id="columnOne">Trap Base</td>
@@ -96,8 +101,9 @@
 			</tbody>
 		</table>
 	</div>
+	&nbsp;
 </div>
-<div id="TrapBox" class="droppableDiv sortableTrap">
+<div id="TrapBox" class="droppableDiv">
 	<table id="trapsToKeep">
 		<tbody>
 			<tr>
