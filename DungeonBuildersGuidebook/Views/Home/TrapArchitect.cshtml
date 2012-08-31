@@ -5,11 +5,30 @@
 
 @section PageScripts {
 	<script src="@Url.Content("~/Scripts/jquery.tmpl.min.js")" type="text/javascript"></script>
+	<script src="@Url.Content("~/Scripts/jquery-ui-1.8.11.min.js")" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
 
-			var newTrapMarkup = "<div class='newTrap' style='margin-top: 15px;'><table><tbody><tr><td id='columnOne'>Trap Base</td><td>${TrapBase}</td></tr><tr><td id='columnOne'>Trap Effects</td><td>${TrapEffects}</td></tr><tr><td id='columnOne'>Trap Damage</td><td>${TrapDamage}</td></tr></tbody></table></div>";
+			var newTrapMarkup = "<div class='newTrap draggableTable sortableTrap' style='margin-top: 15px;'><table><tbody><tr><td id='columnOne'>Trap Base</td><td>${TrapBase}</td></tr><tr><td id='columnOne'>Trap Effects</td><td>${TrapEffects}</td></tr><tr><td id='columnOne'>Trap Damage</td><td>${TrapDamage}</td></tr></tbody></table></div>";
 			$.template("newTrapTemplate", newTrapMarkup);
+
+			$(function () {
+				$(".draggableTable").draggable({
+					revert: true
+				});
+				$(".droppableDiv").droppable({
+					tolerance: "touch",
+					over: function () {
+						$(this).addClass("dropHover");
+					},
+					out: function () {
+						$(this).removeClass("dropHover");
+					},
+				});
+				$(".draggableTable, .droppableDiv").sortable({
+					connectWith: ".sortableTrap"
+				});
+			});
 
 			$('#refreshButton').click(function () {
 				GenerateNewTrap();
@@ -41,7 +60,7 @@
 					type: "Get",
 					url: "home/GenerateNewTrap",
 					success: function (newTrap) {
-						$.tmpl("newTrapTemplate", newTrap).appendTo("#TrapComponents");
+						$.tmpl("newTrapTemplate", newTrap).appendTo("#TrapComponents").draggable({ revert: true });
 					}
 				});
 
@@ -59,8 +78,8 @@
 	<input type="button" id="resetTraps" value="Reset" />
 </div>
 <div id="TrapComponents">
-	<div id="initialTrap">
-		<table id="assembledTrap">
+	<div id="initialTrap" class="sortableTrap">
+		<table id="assembledTrap" class="draggableTable">
 			<tbody>
 				<tr>
 					<td id="columnOne">Trap Base</td>
@@ -78,7 +97,7 @@
 		</table>
 	</div>
 </div>
-<div id="TrapBox">
+<div id="TrapBox" class="droppableDiv sortableTrap">
 	<table id="trapsToKeep">
 		<tbody>
 			<tr>
