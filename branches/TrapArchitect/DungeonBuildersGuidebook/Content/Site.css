@@ -315,6 +315,10 @@ div#refreshTraps
 	background-color:Purple;
 }
 
+.dropHover
+{
+	background-color:Blue;	
+}
 
 /* Styles for validation helpers
 -----------------------------------------------------------*/
