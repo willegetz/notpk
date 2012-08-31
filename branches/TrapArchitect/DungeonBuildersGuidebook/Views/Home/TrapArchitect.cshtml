@@ -9,43 +9,35 @@
 	<script type="text/javascript">
 		$(document).ready(function () {
 
-			var newTrapMarkup = "<div class='newTrap draggableTable' style='margin-top: 15px;'><table><tbody><tr><td id='columnOne'>Trap Base</td><td>${TrapBase}</td></tr><tr><td id='columnOne'>Trap Effects</td><td>${TrapEffects}</td></tr><tr><td id='columnOne'>Trap Damage</td><td>${TrapDamage}</td></tr></tbody></table></div>";
+			var newTrapMarkup = "<div class='newTrap draggableTable' style='margin: 10px;'><table><tbody style='cursor: move'><tr><td id='columnOne'>Trap Base</td><td>${TrapBase}</td></tr><tr><td id='columnOne'>Trap Effects</td><td>${TrapEffects}</td></tr><tr><td id='columnOne'>Trap Damage</td><td>${TrapDamage}</td></tr></tbody></table></div>";
 			$.template("newTrapTemplate", newTrapMarkup);
 
 			$(function () {
 				$(".draggableTable").draggable({
-					revert: true
+					revert: true,
+					handle: "tbody",
 				});
 				$(".droppableDiv").droppable({
 					tolerance: "touch",
-					over: function () {
-						$(this).addClass("dropHover");
-					},
-					out: function () {
-						$(this).removeClass("dropHover");
-					},
 					drop: function (event, ui) {
+						(ui.draggable).removeClass("newTrap");
+						(ui.draggable).addClass("keptTrap");
 						$(this).append(ui.draggable);
 					}
 				});
-			});
-
-			$('#refreshButton').click(function () {
-				GenerateNewTrap();
 			});
 
 			$("#addNewTrap").click(function () {
 				AddTrap();
 			});
 
-			$("#resetTraps").click(function () {
-				var div = $("#initialTrap").detach();
-				$("#TrapComponents").append(div);
+			$("#ResetGeneratedTraps").click(function () {
 				$(".newTrap").remove();
-				$(".droppableDiv").removeClass("dropHover");
-
-
 				GenerateNewTrap();
+			});
+
+			$("#clearPreservedTraps").click(function (){
+				$(".keptTrap").remove();
 			});
 
 			function GenerateNewTrap() {
@@ -77,38 +69,36 @@
 }
 
 
-<div id="refreshTraps">
-	<input type="button" id="refreshButton" value="Generate New Trap" />
-	<input type="button" id="addNewTrap" value="Add A New Trap" />
-	<input type="button" id="resetTraps" value="Reset" />
-</div>
-<div id="TrapComponents">
-	<div id="initialTrap" class="draggableTable">
-		<table id="assembledTrap" >
+<div id="TrapWrapper">
+	<div id="RandomTrapOperations">
+		<input type="button" id="addNewTrap" value="Add A New Trap" />
+		<input type="button" id="ResetGeneratedTraps" value="Reset Generated Traps" />
+	</div>
+	<div id="Spacer">
+	&nbsp
+	</div>
+	<div id="PreservedTrapOperations">
+		<input type="button" id="clearPreservedTraps" value="Remove Kept Traps" />
+	</div>
+	<div id="TrapComponents">
+		<table id="GeneratedTraps">
 			<tbody>
 				<tr>
-					<td id="columnOne">Trap Base</td>
-					<td id="trapBase">@Model.GetTrapBase()</td>
-				</tr>
-				<tr>
-					<td id="columnOne">Trap Effects</td>
-					<td id="trapEffects">@Model.GetTrapEffects()</td>
-				</tr>
-				<tr>
-					<td id="columnOne">Trap Damage</td>
-					<td id="trapDamage">@Model.GetTrapDamage()</td>
+					<td>Generated Traps</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
-	&nbsp;
-</div>
-<div id="TrapBox" class="droppableDiv">
-	<table id="trapsToKeep">
-		<tbody>
-			<tr>
-				<td>ADD MORE TRAPS!</td>
-			</tr>
-		</tbody>
-	</table>
+	<div id="Spacer">
+	&nbsp
+	</div>
+	<div id="TrapBox" class="droppableDiv">
+		<table id="trapsToKeep">
+			<tbody>
+				<tr >
+					<td>Traps to Keep</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </div>

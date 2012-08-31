@@ -218,10 +218,10 @@ input[type="submit"] {
 /* TABLE
 ----------------------------------------------------------*/
 
-table {
+#newTrap table   {
     border: solid 1px #e8eef4;
     border-collapse: collapse;
-    margin: 5px;
+    padding: 10px;
     font-size: 1.2em;
 }
 
@@ -283,22 +283,27 @@ div#title {
     text-decoration: none;
 }
 
-div#refreshTraps 
+div#RandomTrapOperations, div#PreservedTrapOperations
 {
 	display: block;
+	float:left;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	position:relative;
+	width: 48%;
+	
 }
 
 #TrapComponents 
 {
 	display:block;
-	background-color: #fff;
-    border-radius: 4px 0 0 0;
+	/*background-color: #fff;*/
+	background-color: #C6F66F;
+    border-radius: 10px 10px 0 0;
     float:left;
     margin-left:auto;
-    width:65%;
+    width:48%;
+    position: relative;
 }
 
 #TrapBox
@@ -307,17 +312,22 @@ div#refreshTraps
 	position:relative;
 	float:left;
 	margin-left:auto;
-	width:35%
+	width:48%;
+	background-color: #5EC4CD;
+	border-radius: 10px 10px 0 0;
 }
 
-#trapsToKeep
+#Spacer
 {
-	background-color:Purple;
+	float: left;
+	position: relative;
+	width: 4%;
 }
 
-.dropHover
+#trapsToKeep, #GeneratedTraps
 {
-	background-color:Blue;	
+	width: 90%;
+	margin: 5px;
 }
 
 /* Styles for validation helpers
