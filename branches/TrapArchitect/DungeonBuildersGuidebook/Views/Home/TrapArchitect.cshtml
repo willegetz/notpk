@@ -3,11 +3,12 @@
     ViewBag.Title = "Trap Architect";
 }
 
+@section PageScripts {
 	<script src="@Url.Content("~/Scripts/jquery.tmpl.min.js")" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
 
-			var newTrapMarkup = "<div " + <text>class="newTrap" style="margin-top: 15px;"</text> + "><table><tbody><tr><td " + <text>id="columnOne"</text> + ">Trap Base</td><td>${TrapBase}</td></tr><tr><td " + <text>id="columnOne"</text> + ">Trap Effects</td><td>${TrapEffects}</td></tr><tr><td " + <text>id="columnOne"</text> + ">Trap Damage</td><td>${TrapDamage}</td></tr></tbody></table></div>";
+			var newTrapMarkup = "<div class='newTrap' style='margin-top: 15px;'><table><tbody><tr><td id='columnOne'>Trap Base</td><td>${TrapBase}</td></tr><tr><td id='columnOne'>Trap Effects</td><td>${TrapEffects}</td></tr><tr><td id='columnOne'>Trap Damage</td><td>${TrapDamage}</td></tr></tbody></table></div>";
 			$.template("newTrapTemplate", newTrapMarkup);
 
 			$('#refreshButton').click(function () {
@@ -49,13 +50,15 @@
 		});
 	</script>
 
+}
 
+
+<div id="refreshTraps">
+	<input type="button" id="refreshButton" value="Generate New Trap" />
+	<input type="button" id="addNewTrap" value="Add A New Trap" />
+	<input type="button" id="resetTraps" value="Reset" />
+</div>
 <div id="TrapComponents">
-	<div id="refreshTraps">
-		<input type="button" id="refreshButton" value="Generate New Trap" />
-		<input type="button" id="addNewTrap" value="Add A New Trap" />
-		<input type="button" id="resetTraps" value="Reset" />
-	</div>
 	<div id="initialTrap">
 		<table id="assembledTrap">
 			<tbody>
@@ -74,4 +77,13 @@
 			</tbody>
 		</table>
 	</div>
+</div>
+<div id="TrapBox">
+	<table id="trapsToKeep">
+		<tbody>
+			<tr>
+				<td>ADD MORE TRAPS!</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
