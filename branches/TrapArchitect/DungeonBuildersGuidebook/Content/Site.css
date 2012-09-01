@@ -44,13 +44,15 @@ section {
 
 /* HEADINGS   
 ----------------------------------------------------------*/
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
     font-size: 1.5em;
     color: #000;
 }
 
-h1 {
-    font-size: 2em;
+h1 
+{
+	font-family: "book antiqua";
+	font-variant:small-caps;
     padding-bottom: 0;
     margin-bottom: 0;
 }
@@ -250,7 +252,6 @@ table th {
     color: Red;
 }
 
-nav, 
 #menucontainer {
     margin-top: 40px;
 }
@@ -258,29 +259,6 @@ nav,
 div#title {
     display: block;
     text-align: left;
-}
-
-#logindisplay {
-    font-size: 1.1em;
-    display: block;
-    text-align: right;
-    margin: 10px;
-    color: White;
-}
-
-#logindisplay a:link {
-    color: white;
-    text-decoration: underline;
-}
-
-#logindisplay a:visited {
-    color: white;
-    text-decoration: underline;
-}
-
-#logindisplay a:hover {
-    color: white;
-    text-decoration: none;
 }
 
 div#RandomTrapOperations, div#PreservedTrapOperations
