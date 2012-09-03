@@ -1,0 +1,59 @@
+﻿body 
+{
+	background-color: White;
+}
+
+#main
+{
+	padding: 0px 0px 0px 0px;
+	width: 100%;
+}
+
+#RandomTrapOperations, 
+#PreservedTrapOperations, 
+#TrapComponents, 
+#addNewTrap, 
+#ResetGeneratedTraps, 
+#Spacer, 
+#clearPreservedTraps, 
+#exportPreservedTraps, 
+#title,
+#title h1,
+#menu
+{
+	display: none;	
+}
+
+
+#TrapBox
+{
+	display:block;
+	position:relative;
+	float:left;
+	margin-left:auto;
+	width:90%;
+	background-color: White;
+	color:Black;
+	font-size: 12pt;
+	
+}
+
+#columnOne
+{
+	background-color:White;
+	padding: 0px;
+	width: 15%;
+}
+
+#keptTrap table
+{
+	margin: 0px;
+	border-collapse:collapse;
+	border-color:Black;
+	border-width:1px;
+}
+
+#keptTrap td
+{
+	width: 80%;
+}

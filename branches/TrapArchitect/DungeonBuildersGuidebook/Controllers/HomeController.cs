@@ -35,5 +35,16 @@ namespace DungeonBuildersGuidebook.Controllers
 			newTrap.AddTrapDamage(trapArchitect.GetTrapDamage());
 			return new JsonResult() { Data = newTrap, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
 		}
+
+		[HttpPost]
+		public ActionResult DisplayPreservedTraps(string[] keptTraps)
+		{
+			foreach (var item in keptTraps)
+			{
+				var blah = item;
+			}
+
+			return null;
+		}
 	}
 }
