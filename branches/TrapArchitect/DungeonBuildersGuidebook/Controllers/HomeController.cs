@@ -31,20 +31,24 @@ namespace DungeonBuildersGuidebook.Controllers
 			var newTrap = trapArchitect.GetEmptyTrap();
 
 			newTrap.AddTrapBase(trapArchitect.GetTrapBase());
-			newTrap.AddTrapEffects(trapArchitect.GetTrapEffects());
-			newTrap.AddTrapDamage(trapArchitect.GetTrapDamage());
+			newTrap.AddTrapEffects(trapArchitect.GetTrapEffects().ToLower());
+			newTrap.AddTrapDamage(trapArchitect.GetTrapDamage().ToLower());
+
 			return new JsonResult() { Data = newTrap, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
 		}
 
 		[HttpPost]
 		public ActionResult DisplayPreservedTraps(string[] keptTraps)
 		{
-			foreach (var item in keptTraps)
+			string traps = "";
+			var openElement = "<div id='keptTrap'><table><tr><td>";
+			var closeElement = "</td></dr></table></div>";
+			foreach (var trap in keptTraps)
 			{
-				var blah = item;
+				traps += openElement + trap + closeElement;
 			}
-
-			return null;
+			//return View(traps);
+			return new JsonResult() { Data = traps, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
 		}
 	}
 }
