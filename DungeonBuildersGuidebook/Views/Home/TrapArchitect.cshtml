@@ -8,11 +8,16 @@
 @section PageScripts {
 	<script src="@Url.Content("~/Scripts/jquery.tmpl.min.js")" type="text/javascript"></script>
 	<script src="@Url.Content("~/Scripts/jquery-ui-1.8.11.min.js")" type="text/javascript"></script>
+
 	<script type="text/javascript">
 		$(document).ready(function () {
 
-			var newTrapMarkup = "<div class='newTrap draggableTable' style='margin: 10px;'><table><tbody style='cursor: move'><tr><td id='columnOne' style='width: 85px !important'>Trap Base</td><td>${TrapBase}</td></tr><tr><td id='columnOne' style='width: 85px !important'>Trap Effects</td><td>${TrapEffects}</td></tr><tr><td id='columnOne' style='width: 85px !important'>Trap Damage</td><td>${TrapDamage}</td></tr></tbody></table></div>";
+			var newTrapTableMarkup = "<div class='newTrap draggableTable' style='margin: 10px;'><table><tbody style='cursor: move'><tr><td id='columnOne' style='width: 85px !important'>Trap Base</td><td>${TrapBase}</td></tr><tr><td id='columnOne' style='width: 85px !important'>Trap Effects</td><td>${TrapEffects}</td></tr><tr><td id='columnOne' style='width: 85px !important'>Trap Damage</td><td>${TrapDamage}</td></tr></tbody></table></div>";
+			$.template("newTrapTableTemplate", newTrapTableMarkup);
+
+			var newTrapMarkup = "<div class='newTrap draggableTable' style='margin: 5px; background-color: white; border-radius: 10px;'><table><tbody style='cursor: move'><tr><td>${TrapBase} ${TrapEffects} ${TrapDamage}</td></tr></tbody></table></div>";
 			$.template("newTrapTemplate", newTrapMarkup);
+
 
 			$(function () {
 				$(".draggableTable").draggable({
@@ -43,16 +48,21 @@
 			});
 
 			$("#exportPreservedTraps").click(function (){
-				var $trapArray = $(".keptTrap");
+				var keptTraps = $(".keptTrap").toArray();
+				var keptTrapArray = new Array()
+				for (var i = 0; i < keptTraps.length; i++) {
+				keptTrapArray.push(keptTraps[i].textContent);
+				}
+							
 				$.ajax({
-					type: "GET",
-					input: $trapArray,
+					type: "Post",
 					url: "home/DisplayPreservedTraps",
+					data: {keptTraps: keptTrapArray},
+					traditional: true,
 					success: function (traps){
 						KeptTrapPrintWindow(traps);
 					}
 				});
-				KeptTrapPrintWindow($(".keptTrap").text());
 			});
 
 			function GenerateNewTrap() {
@@ -100,7 +110,7 @@
 	</div>
 	<div id="PreservedTrapOperations">
 		<input type="button" id="clearPreservedTraps" value="Remove Kept Traps" />
-		<!--<input type="button" id="exportPreservedTraps" value="Export Traps" />-->
+		<input type="button" id="exportPreservedTraps" value="Export Traps" />
 	</div>
 	<div id="TrapComponents">
 		<table id="GeneratedTraps">

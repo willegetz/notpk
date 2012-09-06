@@ -10,6 +10,7 @@ namespace DungeonBuildersGuidebook.Models
 	public class TrapArchitectModel
 	{
 		public TrapArchitect trapArchitect;
+		public Trap trap { get; set; }
 		
 		public TrapArchitectModel()
 		{
@@ -34,6 +35,11 @@ namespace DungeonBuildersGuidebook.Models
 		public Trap GetEmptyTrap()
 		{
 			return new Trap();
+		}
+		
+		public Trap GetRandomTrap()
+		{
+			return new Trap(trapArchitect.GetTrapBaseFactory(), trapArchitect.GetTrapEffectFactory(), trapArchitect.GetTrapDamageFactory());
 		}
 	}
 }
