@@ -40,7 +40,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>5</RollUpperBound>
-		<EffectDescription>Asks riddle... A wrong answer triggers the trap</EffectDescription>
+		<EffectDescription>Asks a riddle which triggers the following trap if answered wrong.</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>true</RollAgain>
 		<NumberOfReRolls>1</NumberOfReRolls>
@@ -427,7 +427,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>48</RollUpperBound>
-		<EffectDescription>Lops off thevictim's head, then animates the head to attack the vicim's friends</EffectDescription>
+		<EffectDescription>Lops off the victim's head, then animates the head to attack the vicim's friends</EffectDescription>
 		<AdditionalInformation></AdditionalInformation>
 		<RollAgain>false</RollAgain>
 		<NumberOfReRolls></NumberOfReRolls>

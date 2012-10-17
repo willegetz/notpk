@@ -8,102 +8,14 @@
 @section PageScripts {
 	<script src="@Url.Content("~/Scripts/jquery.tmpl.min.js")" type="text/javascript"></script>
 	<script src="@Url.Content("~/Scripts/jquery-ui-1.8.11.min.js")" type="text/javascript"></script>
-
-	<script type="text/javascript">
-		$(document).ready(function () {
-
-			var newTrapTableMarkup = "<div class='newTrap draggableTable' style='margin: 10px;'><table><tbody style='cursor: move'><tr><td id='columnOne' style='width: 85px !important'>Trap Base</td><td>${TrapBase}</td></tr><tr><td id='columnOne' style='width: 85px !important'>Trap Effects</td><td>${TrapEffects}</td></tr><tr><td id='columnOne' style='width: 85px !important'>Trap Damage</td><td>${TrapDamage}</td></tr></tbody></table></div>";
-			$.template("newTrapTableTemplate", newTrapTableMarkup);
-
-			var newTrapMarkup = "<div class='newTrap draggableTable' style='margin: 5px; background-color: white; border-radius: 10px;'><table><tbody style='cursor: move'><tr><td>${TrapBase} ${TrapEffects} ${TrapDamage}</td></tr></tbody></table></div>";
-			$.template("newTrapTemplate", newTrapMarkup);
-
-
-			$(function () {
-				$(".draggableTable").draggable({
-					revert: true,
-					handle: "tbody",
-				});
-				$(".droppableDiv").droppable({
-					tolerance: "touch",
-					drop: function (event, ui) {
-						(ui.draggable).removeClass("newTrap");
-						(ui.draggable).addClass("keptTrap");
-						$(this).append(ui.draggable);
-					}
-				});
-			});
-
-			$("#addNewTrap").click(function () {
-				AddTrap();
-			});
-
-			$("#ResetGeneratedTraps").click(function () {
-				$(".newTrap").remove();
-				GenerateNewTrap();
-			});
-
-			$("#clearPreservedTraps").click(function (){
-				$(".keptTrap").remove();
-			});
-
-			$("#exportPreservedTraps").click(function (){
-				var keptTraps = $(".keptTrap").toArray();
-				var keptTrapArray = new Array()
-				for (var i = 0; i < keptTraps.length; i++) {
-				keptTrapArray.push(keptTraps[i].textContent);
-				}
-							
-				$.ajax({
-					type: "Post",
-					url: "home/DisplayPreservedTraps",
-					data: {keptTraps: keptTrapArray},
-					traditional: true,
-					success: function (traps){
-						KeptTrapPrintWindow(traps);
-					}
-				});
-			});
-
-			function GenerateNewTrap() {
-				$.ajax({
-					type: "GET",
-					url: "home/GenerateNewTrap",
-					success: function (newTrap) {
-						$("#trapBase").text(newTrap.TrapBase);
-						$("#trapEffects").text(newTrap.TrapEffects);
-						$("#trapDamage").text(newTrap.TrapDamage);
-					}
-				});
-			};
-
-			function AddTrap() {
-				$.ajax({
-					type: "GET",
-					url: "home/GenerateNewTrap",
-					success: function (newTrap) {
-						$.tmpl("newTrapTemplate", newTrap).appendTo("#TrapComponents").draggable({ revert: true });
-					}
-				});
-			};
-
-			function KeptTrapPrintWindow(keptTraps){
-				var trapWindow = window.open("", "Kept Traps", "height=400,width=600");
-				trapWindow.document.write("<html><head><title>Kept Traps</title></head><body>");
-				trapWindow.document.write(keptTraps);
-				trapWindow.document.write("</body></html>");
-			};
-
-		});
-	</script>
-
+	<script src="@Url.Content("~/Scripts/Custom/TrapArchitectLogic.js")" type="text/javascript"></script>
 }
 
 
 <div id="TrapWrapper">
 	<div id="RandomTrapOperations">
 		<input type="button" id="addNewTrap" value="Add A New Trap" />
-		<input type="button" id="ResetGeneratedTraps" value="Reset Generated Traps" />
+		<input type="button" id="ClearGeneratedTraps" value="Clear Generated Traps" />
 	</div>
 	<div id="Spacer">
 	&nbsp
@@ -112,11 +24,11 @@
 		<input type="button" id="clearPreservedTraps" value="Remove Kept Traps" />
 		<input type="button" id="exportPreservedTraps" value="Export Traps" />
 	</div>
-	<div id="TrapComponents">
+	<div id="TrapComponents" class="droppableDiv">
 		<table id="GeneratedTraps">
 			<tbody>
 				<tr>
-					<td>Generated Traps</td>
+					<td class="trapColumnTitle">Generated Traps</td>
 				</tr>
 			</tbody>
 		</table>
@@ -128,7 +40,7 @@
 		<table id="trapsToKeep">
 			<tbody>
 				<tr >
-					<td>Traps to Keep</td>
+					<td class="trapColumnTitle">Traps to Keep</td>
 				</tr>
 			</tbody>
 		</table>
