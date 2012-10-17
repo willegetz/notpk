@@ -24,7 +24,7 @@ namespace DungeonBuildersGuidebook.Models
 
 		public string GetTrapEffects()
 		{
-			return trapArchitect.GetTrapEffectFactory();;
+			return trapArchitect.GetTrapEffectFactory();
 		}
 
 		public string GetTrapDamage()

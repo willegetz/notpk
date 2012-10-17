@@ -4,12 +4,13 @@ to use a different color start by replacing all instances of
 #5c87b2 with your new color.
 ----------------------------------------------------------*/
 body {
-    background-color: #5c87b2;
+    /*background-color: #5c87b2;*/
+    background-color: #009B95;
     font-size: .85em;
     font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
     margin: 0;
     padding: 0;
-    color: #696969;
+    color: #3F3F3F;
 }
 
 a:link {
@@ -276,7 +277,8 @@ div#RandomTrapOperations, div#PreservedTrapOperations
 {
 	display:block;
 	/*background-color: #fff;*/
-	background-color: #C6F66F;
+	/*background-color: #C6F66F;*/
+	background-color: #FFE273;
     border-radius: 10px 10px 0 0;
     float:left;
     margin-left:auto;
@@ -291,7 +293,8 @@ div#RandomTrapOperations, div#PreservedTrapOperations
 	float:left;
 	margin-left:auto;
 	width:48%;
-	background-color: #5EC4CD;
+	/*background-color: #5EC4CD;*/
+	background-color: #FFCA00;
 	border-radius: 10px 10px 0 0;
 }
 
@@ -306,6 +309,11 @@ div#RandomTrapOperations, div#PreservedTrapOperations
 {
 	width: 90%;
 	margin: 5px;
+}
+
+.trapColumnTitle
+{
+	color:Black;
 }
 
 /* Styles for validation helpers
