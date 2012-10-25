@@ -38,12 +38,13 @@ namespace DungeonBuildersGuidebook.Controllers
 		}
 
 		[HttpPost]
-		public ActionResult DisplayPreservedTraps(string[] keptTraps)
+		public ActionResult DisplayPreservedTraps(string[] mykeptTraps)
 		{
+			
 			string traps = "";
 			var openElement = "<div id='keptTrap'><table><tr><td>";
 			var closeElement = "</td></dr></table></div>";
-			foreach (var trap in keptTraps)
+			foreach (var trap in mykeptTraps)
 			{
 				traps += openElement + trap + closeElement;
 			}
