@@ -1,3 +1,0 @@
-The brazier
-Fires arrow(s)/dart(s)/spear(s)
-Inflicts 2d6 points of damage
