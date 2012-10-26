@@ -409,7 +409,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>46</RollUpperBound>
-		<EffectDescription>Locks the entrance(s) to the chamber/area</EffectDescription>
+		<EffectDescription>Locks the entrance(s) to the chamber/area and</EffectDescription>
 		<AdditionalInformation>roll again for another effect</AdditionalInformation>
 		<RollAgain>true</RollAgain>
 		<NumberOfReRolls>1</NumberOfReRolls>
@@ -418,7 +418,7 @@
 	</Effect>
 	<Effect>
 		<RollUpperBound>47</RollUpperBound>
-		<EffectDescription>Locks the exit(s) from the chamber/area</EffectDescription>
+		<EffectDescription>Locks the exit(s) from the chamber/area and</EffectDescription>
 		<AdditionalInformation>roll again for another effect</AdditionalInformation>
 		<RollAgain>true</RollAgain>
 		<NumberOfReRolls>1</NumberOfReRolls>
