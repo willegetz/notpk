@@ -1,0 +1,4 @@
+The floor
+Decreases gravity
+Infliciting 2d6 points of damage in addition to the other effects listed
+This trap is a test of the note application system.
