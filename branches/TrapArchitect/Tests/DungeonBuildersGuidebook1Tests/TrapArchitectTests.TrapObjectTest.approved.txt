@@ -1,0 +1,405 @@
+Trap[0] = The fresco
+Traps the victim in an iron cage
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[1] = The pit
+Fires arrow(s)/dart(s)/spear(s)
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[2] = The crystal ball
+Polymorphs the victim into a small reptile or insect
+Infliciting 8d6 points of damage in addition to the other effects listed
+
+Trap[3] = The drum
+Victim loses memory of the preceding 1d10 days
+Infliciting 4d6 points of damage in addition to the other effects listed
+
+Trap[4] = The passage
+Infects the victim with split personality disorder
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[5] = The harp
+Triggers a chute to open beneath the victim
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[6] = The waterclock
+Lops off the victim's head, then animates the head to attack the vicim's friends
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[7] = The room
+Releases (or coated with) poison (see Table 51 in the DMG)
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[8] = The stairway
+Casts priest spells at the victim (12th level of ability)
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[9] = The wheel
+Implants the victim with vegetable matter
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[10] = The chandelier
+Triggers compressing walls
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[11] = The air itself
+Curses the victim with disease (-3 to actions)
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[12] = The telescope (Mechanical)
+Releases (or coated with) poison (see Table 51 in the DMG)
+Infliciting 6d6 points of damage in addition to the other effects listed
+
+Trap[13] = The portcullis
+Floods the area with water, or Acid
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[14] = The chest
+Reduces the victim in size by 1d4 feet
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[15] = The glass case
+Sprays green slime in a devastating aerosol effect
+Infliciting 1d8 points of damage in addition to the other effects listed
+
+Trap[16] = The bed
+Releases (or coated with) poison (see Table 51 in the DMG)
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[17] = The dais
+Disintegrates the victim's possessions
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[18] = The divan
+Releases a heavy weight or block
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[19] = The door
+Draws demonic or devilish attention to victim
+Infliciting 1d4 points of damage in addition to the other effects listed
+
+Trap[20] = The air itself
+Disintegrates the victim's possessions
+Infliciting 1d8 points of damage in addition to the other effects listed
+
+Trap[21] = The brazier
+Vents acid
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[22] = The telescope (Magical)
+Curses the victim to lie always
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[23] = The well
+Vents acid
+Infliciting 1d4 points of damage in addition to the other effects listed
+
+Trap[24] = The railing
+Replaces a random internal organ with cobwebs
+Infliciting 8d6 points of damage in addition to the other effects listed
+
+Trap[25] = The armor
+Replaces a random internal organ with fire ants
+Infliciting 1d4 points of damage in addition to the other effects listed
+
+Trap[26] = The hourglass
+Triggers a hidden bear trap
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[27] = The hourglass
+Erases victim's gender
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[28] = The lectern
+Collapses the structure on the victim(s)
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[29] = The fresco
+Drops the victim to long fall
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[30] = The crystal ball
+Discordant music eventually drives the victim insane
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[31] = The organ
+Collapses the structure on the victim(s)
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[32] = The divan
+Removes the victim's ability to read
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[33] = The holy/unholy font
+Casts priest spells at the victim (12th level of ability)
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[34] = The passage
+Renders the victim deaf
+Infliciting 1d8 points of damage in addition to the other effects listed
+
+Trap[35] = The pedestal
+Petrifies the victim's possessions
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[36] = The slide
+Curses the victim to gain sustenance only from blood
+Infliciting 8d6 points of damage in addition to the other effects listed
+
+Trap[37] = The chute
+Casts wizard spells at the victim (12th level of ability)
+Infliciting 1d8 points of damage in addition to the other effects listed
+
+Trap[38] = The fountain
+Victim loses memory of the preceding 1d10 days
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[39] = The aquarium
+Creates a vacuum
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[40] = The elevator (Mechanical)
+Petrifies the victim's possessions
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[41] = The tunnel mouth
+Sprays burning, jellied kerosene on the victim
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[42] = The button/switch
+Reduces the victim in size by 1d4 feet
+Infliciting 1d8 points of damage in addition to the other effects listed
+
+Trap[43] = The window
+Asks a riddle which triggers the following trap if answered wrong.
+Renders the victim deaf
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[44] = The air itself
+Removes the victim's ability to cast spells
+Infliciting 1d8 points of damage in addition to the other effects listed
+
+Trap[45] = The pit
+Lops off the victim's head, then animates the head to attack the vicim's friends; Replaces a random internal organ with fire ants; Curses the victim to speak only in falsetto
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[46] = The well
+Releases (or contains) poisoned caltrops or spikes
+Infliciting 1d8 points of damage in addition to the other effects listed
+
+Trap[47] = The secret door
+Draws demonic or devilish attention to victim
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[48] = The chest
+Lops off the victim's head, then animates the head to attack the vicim's friends
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[49] = The aquarium
+Animates the victim's weapon, which then attacks the victim
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[50] = The forcefield
+Switches victims' minds
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[51] = The lamp
+Curses the victim to become mute
+Infliciting 10d6 points of damage in addition to the other effects listed
+
+Trap[52] = The slide
+Vents acid
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[53] = The mosaic
+Lowers 1d6 of the victim's stats by 1d4 points
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[54] = The cabinet
+Drops the victim to long fall
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[55] = The catwalk
+Fulfills the reverse of the victim's wish
+Infliciting 1d8 points of damage in addition to the other effects listed
+
+Trap[56] = The lamp
+Explodes
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[57] = The button/switch
+Implodes
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[58] = The caldron
+Lops off the victim's head, then animates the head to attack the vicim's friends
+Infliciting 4d6 points of damage in addition to the other effects listed
+
+Trap[59] = The dais
+Fires poisoned arrow(s)/dart(s)/spear(s)
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[60] = The interdimensional portal
+Discordant music eventually drives the victim insane
+Infliciting 6d6 points of damage in addition to the other effects listed
+
+Trap[61] = The bridge
+Polymorphs the victim into a small reptile or insect
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[62] = The candelabra
+Sprays iron shrapnel
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[63] = The harp
+Fires a lightning bolt
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[64] = The catwalk
+Removes the victim's ability to read; Teleports the victim to a lethal (or distant) area
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[65] = The caldron
+Triggers a scything blade
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[66] = The floor
+Triggers a hidden bear trap
+Infliciting 6d6 points of damage in addition to the other effects listed
+
+Trap[67] = The pendulum
+Reduces the victim in size by 1d4 feet
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[68] = The chandelier
+Locks the exit(s) from the chamber/area and
+Releases a gas: Nauseating
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[69] = The waterclock
+Removes the victim's ability to cast spells; Polymorphs the victim into a small reptile or insect
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[70] = The passage
+Reverses the victim's alignment
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[71] = The holy/unholy font
+Triggers a pit to open, full of Magma
+Infliciting 6d6 points of damage in addition to the other effects listed
+
+Trap[72] = The slide
+Replaces a random internal organ with fire ants
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[73] = The crate
+Animates the victim's weapon, which then attacks the victim
+Infliciting 4d6 points of damage in addition to the other effects listed
+
+Trap[74] = The basin
+Locks the exit(s) from the chamber/area and
+Creates a vacuum
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[75] = The wall
+Locks the entrance(s) to the chamber/area and
+Explodes
+Infliciting 6d6 points of damage in addition to the other effects listed
+
+Trap[76] = The dais
+Petrifies the victim
+Infliciting 1d8 points of damage in addition to the other effects listed
+
+Trap[77] = The passage
+Sprays green slime in a devastating aerosol effect; Locks the exit(s) from the chamber/area and
+Removes the victim's ability to read
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[78] = The mirror
+Lowers 1d6 of the victim's stats by 1d4 points
+Infliciting 1d8 points of damage in addition to the other effects listed
+
+Trap[79] = The mosaic
+Curses the victim to gain sustenance only from blood
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[80] = The button/switch
+Fires arrow(s)/dart(s)/spear(s)
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[81] = The vase
+Fires poisoned arrow(s)/dart(s)/spear(s)
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[82] = The vegetation
+Enlarges the victim
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[83] = The wall
+Fulfills the reverse of the victim's wish
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[84] = The idol
+Tumbles the victim into a pit of Acid
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[85] = The mosaic
+Curses the victim to never eat animal matter
+Infliciting 1d4 points of damage in addition to the other effects listed
+
+Trap[86] = The floor
+Lowers 1d6 of the victim's stats by 1d4 points
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[87] = The basin
+Floods the area with water, or Acid
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[88] = The door
+Explodes
+Infliciting 1d4 points of damage in addition to the other effects listed
+
+Trap[89] = The tunnel mouth
+Enrages the victim; Enlarges the victim; Lowers 1d6 of the victim's stats by 1d4 points
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[90] = The catwalk
+Explodes
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[91] = The chest
+Discordant music eventually drives the victim insane
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[92] = The hourglass
+Slowly leaches oxygen from the air
+Infliciting 1d8 points of damage in addition to the other effects listed
+
+Trap[93] = The telescope (Magical)
+Releases a heavy weight or block
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[94] = The ladder
+Puts the victim in stasis for 1d100 years
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[95] = The pool
+Curses the victim to never eat animal matter
+Infliciting 8d6 points of damage in addition to the other effects listed
+
+Trap[96] = The stairway
+Triggers a scything blade
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Trap[97] = The portcullis
+Polymorphs the victim into a small reptile or insect
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Trap[98] = The furnace
+Curses the victim to speak only in falsetto
+Infliciting 4d6 points of damage in addition to the other effects listed
+
+Trap[99] = The stairway
+Removes the victim's ability to comprehend languages
+Infliciting 2d6 points of damage in addition to the other effects listed
+
