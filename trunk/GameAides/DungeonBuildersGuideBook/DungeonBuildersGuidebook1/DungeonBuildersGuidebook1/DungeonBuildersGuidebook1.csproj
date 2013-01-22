@@ -11,7 +11,8 @@
     <RootNamespace>DungeonBuildersGuidebook1</RootNamespace>
     <AssemblyName>DungeonBuildersGuidebook1</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -52,36 +53,40 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Factories\ComplexTrapEffectFactory.cs" />
+    <Compile Include="Factories\GasTrapEffectFactory.cs" />
+    <Compile Include="Factories\ISpecificTrapFactory.cs" />
+    <Compile Include="Factories\MechanizedBaseFactory.cs" />
+    <Compile Include="Factories\MultiRollEffectFactory.cs" />
+    <Compile Include="Factories\PitTrapEffectFactory.cs" />
+    <Compile Include="Factories\TrapEffectFactory.cs" />
+    <Compile Include="Factories\SimpleFactory.cs" />
+    <Compile Include="Trap.cs" />
+    <Compile Include="TrapComponentObjects\GasTypes.cs" />
+    <Compile Include="TrapComponentObjects\PitContents.cs" />
+    <Compile Include="TrapLoaders\DataConstants.cs" />
     <Compile Include="TrapArchitect.cs" />
     <Compile Include="ConsoleApp\TrapArchitectConsole.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TrapComponentObjects\TrapBases.cs" />
     <Compile Include="ConsoleApp\TrapBasicsTable10a.cs" />
-    <Compile Include="TrapComponentLogic\TrapBaseLogic.cs" />
     <Compile Include="TrapComponentObjects\TrapEffects.cs" />
     <Compile Include="ConsoleApp\TrapEffectsTable10b.cs" />
-    <Compile Include="TrapComponentLogic\TrapEffectLogic.cs" />
+    <Compile Include="TrapComponentObjects\TrapDamages.cs" />
+    <Compile Include="TrapLoaders\TableLoader.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="RJK.CSharp.CustomLists.RangeDictionary">
       <HintPath>Libraries\RJK.CSharp.CustomLists.RangeDictionary.dll</HintPath>
     </Reference>
-    <Reference Include="RJK.CSharp.Dice">
-      <HintPath>..\..\..\..\VS dll Libraries\RJK_Randomizers\RJK\CSharp\Dice\bin\Debug\RJK.CSharp.Dice.dll</HintPath>
-    </Reference>
-    <Reference Include="RJK.CSharp.GeneralUtilities">
-      <HintPath>..\..\..\..\VS dll Libraries\RJK_Randomizers\RJK\CSharp\GeneralUtilities\Loops\bin\Debug\RJK.CSharp.GeneralUtilities.dll</HintPath>
-    </Reference>
-    <Reference Include="RJK.CSharp.GeneralUtilities.Loops">
-      <HintPath>..\..\..\..\VS dll Libraries\RJK_Randomizers\RJK\CSharp\GeneralUtilities\Loops\bin\Debug\RJK.CSharp.GeneralUtilities.Loops.dll</HintPath>
-    </Reference>
-    <Reference Include="RJK.CSharp.Randomizers">
-      <HintPath>..\..\..\..\VS dll Libraries\RJK_Randomizers\RJK\CSharp\Randomizers\bin\Debug\RJK.CSharp.Randomizers.dll</HintPath>
+    <Reference Include="RJK.RpgTools">
+      <HintPath>Libraries\RJK.RpgTools.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -110,13 +115,25 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataFiles\TrapComponents.xml" />
-    <Content Include="DataFiles\TrapEffectsAndTraits.xml" />
+    <None Include="DataFiles\TrapComponents.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataFiles\TrapDamages.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataFiles\TrapEffectsAndTraits.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataFiles\TrapEffectsSubtables.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,0 +1,29 @@
+﻿body,
+div#TrapBox
+{
+	background-color: White;
+	padding: 0px;
+}
+
+header,
+#TrapComponents,
+div#RandomTrapOperations,
+div#PreservedTrapOperations,
+div#Spacer
+{
+	display: none;	
+}
+
+.page,
+div#TrapBox,
+div#main
+{
+	width: 100%;
+}
+
+div#TrapBox
+{
+	font-family:"Times New Roman",Georgia,Serif;
+	color:Black;
+	font-size: 12pt;
+}
