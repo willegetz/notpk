@@ -1,0 +1,45 @@
+﻿<Root>
+	<TableDieRoll>
+		<DiceDefinition>3d6</DiceDefinition>
+	</TableDieRoll>
+	<Damage>
+		<RollUpperBound>3</RollUpperBound>
+		<DamageDescription>Infliciting 1d2 points of damage in addition to the other effects listed</DamageDescription>
+	</Damage>
+	<Damage>
+		<RollUpperBound>5</RollUpperBound>
+		<DamageDescription>Infliciting 1d4 points of damage in addition to the other effects listed</DamageDescription>
+	</Damage>
+	<Damage>
+		<RollUpperBound>7</RollUpperBound>
+		<DamageDescription>Infliciting 1d8 points of damage in addition to the other effects listed</DamageDescription>
+	</Damage>
+	<Damage>
+		<RollUpperBound>11</RollUpperBound>
+		<DamageDescription>Infliciting 2d6 points of damage in addition to the other effects listed</DamageDescription>
+	</Damage>
+	<Damage>
+		<RollUpperBound>13</RollUpperBound>
+		<DamageDescription>Infliciting 3d6 points of damage in addition to the other effects listed</DamageDescription>
+	</Damage>
+	<Damage>
+		<RollUpperBound>14</RollUpperBound>
+		<DamageDescription>Infliciting 4d6 points of damage in addition to the other effects listed</DamageDescription>
+	</Damage>
+	<Damage>
+		<RollUpperBound>15</RollUpperBound>
+		<DamageDescription>Infliciting 6d6 points of damage in addition to the other effects listed</DamageDescription>
+	</Damage>
+	<Damage>
+		<RollUpperBound>16</RollUpperBound>
+		<DamageDescription>Infliciting 8d6 points of damage in addition to the other effects listed</DamageDescription>
+	</Damage>
+	<Damage>
+		<RollUpperBound>17</RollUpperBound>
+		<DamageDescription>Infliciting 10d6 points of damage in addition to the other effects listed</DamageDescription>
+	</Damage>
+	<Damage>
+		<RollUpperBound>18</RollUpperBound>
+		<DamageDescription>Infliciting 10d10points of damage in addition to the other effects listed</DamageDescription>
+	</Damage>
+</Root>

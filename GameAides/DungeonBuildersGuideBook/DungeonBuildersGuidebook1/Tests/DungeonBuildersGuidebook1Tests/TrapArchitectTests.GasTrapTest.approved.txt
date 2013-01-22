@@ -1,0 +1,400 @@
+Gas Trap![0] = The vegetation
+Releases a gas: Obscuring
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![1] = The hook
+Releases a gas: Weakening
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![2] = The organ
+Releases a gas: Sleep Inducing
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![3] = The column
+Releases a gas: Blinding
+Infliciting 4d6 points of damage in addition to the other effects listed
+
+Gas Trap![4] = The chair
+Releases a gas: Obscuring
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![5] = The bed
+Releases a gas: Sleep Inducing
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![6] = The rug
+Releases a gas: Corroding
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![7] = The forcefield
+Releases a gas: Corroding
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![8] = The door
+Releases a gas: Poisonous
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![9] = The bed
+Releases a gas: Nauseating
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![10] = The holy/unholy font
+Releases a gas: Blinding
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![11] = The floor
+Releases a gas: Blinding
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![12] = The pendulum
+Releases a gas: Nauseating
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![13] = The hook
+Releases a gas: Nauseating
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![14] = The barrel
+Releases a gas: Weakening
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![15] = The manacles
+Releases a gas: Terrifying
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![16] = The painting
+Releases a gas: Obscuring
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![17] = The pews
+Releases a gas: Corroding
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![18] = The elevator (Mechanical)
+Releases a gas: Obscuring
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![19] = The window
+Releases a gas: Blinding
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![20] = The magic circle
+Releases a gas: Weakening
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![21] = The arch
+Releases a gas: Poisonous
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![22] = The elevator (Magical)
+Releases a gas: Weakening
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![23] = The chute
+Releases a gas: Sleep Inducing
+Infliciting 1d8 points of damage in addition to the other effects listed
+
+Gas Trap![24] = The manacles
+Releases a gas: Obscuring
+Infliciting 1d8 points of damage in addition to the other effects listed
+
+Gas Trap![25] = The trophy
+Releases a gas: Corroding
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![26] = The organ
+Releases a gas: Corroding
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![27] = The arch
+Releases a gas: Corroding
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![28] = The catwalk
+Releases a gas: Obscuring
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![29] = The jar
+Releases a gas: Weakening
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![30] = The crate
+Releases a gas: Sleep Inducing
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![31] = The concealed door
+Releases a gas: Terrifying
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![32] = The fresco
+Releases a gas: Corroding
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![33] = The catwalk
+Releases a gas: Blinding
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![34] = The bridge
+Releases a gas: Corroding
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![35] = The basin
+Releases a gas: Sleep Inducing
+Infliciting 1d8 points of damage in addition to the other effects listed
+
+Gas Trap![36] = The urn
+Releases a gas: Corroding
+Infliciting 10d6 points of damage in addition to the other effects listed
+
+Gas Trap![37] = The table
+Releases a gas: Nauseating
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![38] = The pillar
+Releases a gas: Terrifying
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![39] = The barrel
+Releases a gas: Nauseating
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![40] = The hourglass
+Releases a gas: Sleep Inducing
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![41] = The button/switch
+Releases a gas: Terrifying
+Infliciting 10d10points of damage in addition to the other effects listed
+
+Gas Trap![42] = The idol
+Releases a gas: Corroding
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![43] = The chest
+Releases a gas: Nauseating
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![44] = The portcullis
+Releases a gas: Terrifying
+Infliciting 1d4 points of damage in addition to the other effects listed
+
+Gas Trap![45] = The stairway
+Releases a gas: Poisonous
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![46] = The manacles
+Releases a gas: Blinding
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![47] = The aquarium
+Releases a gas: Poisonous
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![48] = The idol
+Releases a gas: Obscuring
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![49] = The idol
+Releases a gas: Poisonous
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![50] = The mosaic
+Releases a gas: Terrifying
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![51] = The cask
+Releases a gas: Sleep Inducing
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![52] = The furnace
+Releases a gas: Terrifying
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![53] = The holy/unholy font
+Releases a gas: Terrifying
+Infliciting 1d8 points of damage in addition to the other effects listed
+
+Gas Trap![54] = The illusion
+Releases a gas: Sleep Inducing
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![55] = The bell
+Releases a gas: Obscuring
+Infliciting 4d6 points of damage in addition to the other effects listed
+
+Gas Trap![56] = The barrel
+Releases a gas: Poisonous
+Infliciting 6d6 points of damage in addition to the other effects listed
+
+Gas Trap![57] = The column
+Releases a gas: Corroding
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![58] = The candelabra
+Releases a gas: Poisonous
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![59] = The candelabra
+Releases a gas: Obscuring
+Infliciting 4d6 points of damage in addition to the other effects listed
+
+Gas Trap![60] = The caldron
+Releases a gas: Corroding
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![61] = The statue
+Releases a gas: Obscuring
+Infliciting 1d8 points of damage in addition to the other effects listed
+
+Gas Trap![62] = The pews
+Releases a gas: Weakening
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![63] = The rug
+Releases a gas: Obscuring
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![64] = The crate
+Releases a gas: Sleep Inducing
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![65] = The trunk
+Releases a gas: Blinding
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![66] = The ladder
+Releases a gas: Obscuring
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![67] = The telescope (Mechanical)
+Releases a gas: Poisonous
+Infliciting 6d6 points of damage in addition to the other effects listed
+
+Gas Trap![68] = The magic circle
+Releases a gas: Nauseating
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![69] = The bridge
+Releases a gas: Obscuring
+Infliciting 4d6 points of damage in addition to the other effects listed
+
+Gas Trap![70] = The furnace
+Releases a gas: Poisonous
+Infliciting 6d6 points of damage in addition to the other effects listed
+
+Gas Trap![71] = The hourglass
+Releases a gas: Sleep Inducing
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![72] = The secret door
+Releases a gas: Obscuring
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![73] = The wall
+Releases a gas: Blinding
+Infliciting 8d6 points of damage in addition to the other effects listed
+
+Gas Trap![74] = The vase
+Releases a gas: Terrifying
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![75] = The concealed door
+Releases a gas: Blinding
+Infliciting 6d6 points of damage in addition to the other effects listed
+
+Gas Trap![76] = The illusion
+Releases a gas: Corroding
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![77] = The statue
+Releases a gas: Blinding
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![78] = The basin
+Releases a gas: Obscuring
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![79] = The window
+Releases a gas: Poisonous
+Infliciting 1d4 points of damage in addition to the other effects listed
+
+Gas Trap![80] = The barrel
+Releases a gas: Sleep Inducing
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![81] = The brazier
+Releases a gas: Blinding
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![82] = The fountain
+Releases a gas: Blinding
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![83] = The bridge
+Releases a gas: Corroding
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![84] = The table
+Releases a gas: Obscuring
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![85] = The crystal ball
+Releases a gas: Weakening
+Infliciting 8d6 points of damage in addition to the other effects listed
+
+Gas Trap![86] = The pit
+Releases a gas: Blinding
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![87] = The railing
+Releases a gas: Blinding
+Infliciting 10d10points of damage in addition to the other effects listed
+
+Gas Trap![88] = The pool
+Releases a gas: Nauseating
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![89] = The armor
+Releases a gas: Terrifying
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![90] = The table
+Releases a gas: Terrifying
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![91] = The illusion
+Releases a gas: Corroding
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![92] = The catwalk
+Releases a gas: Nauseating
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![93] = The escalator (Magical)
+Releases a gas: Weakening
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![94] = The chandelier
+Releases a gas: Nauseating
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![95] = The ceiling
+Releases a gas: Obscuring
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![96] = The bed
+Releases a gas: Weakening
+Infliciting 3d6 points of damage in addition to the other effects listed
+
+Gas Trap![97] = The holy/unholy font
+Releases a gas: Poisonous
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![98] = The crystal ball
+Releases a gas: Corroding
+Infliciting 2d6 points of damage in addition to the other effects listed
+
+Gas Trap![99] = The mirror
+Releases a gas: Sleep Inducing
+Infliciting 4d6 points of damage in addition to the other effects listed
+

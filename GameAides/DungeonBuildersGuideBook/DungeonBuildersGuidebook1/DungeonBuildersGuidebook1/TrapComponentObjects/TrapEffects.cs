@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace DungeonBuildersGuidebook1
+﻿namespace DungeonBuildersGuidebook1.TrapComponentObjects
 {
 	public class TrapEffects
 	{
-		public int RollUpperBound { get; set; }
+		public bool RollAgain { get; set; } 
+		public bool HasSubtable { get; set; } // Subtable
+		public int RollUpperBound { get; set; }  // Setting the top of the range in the dictionary
+		public int NumberOfReRolls { get; set; }
 		public string EffectDescription { get; set; }
-		public bool EffectRollRequired { get; set; }
-		public List<string> EffectDiceToRoll { get; set; }
-		public bool AdditionalTablesToConsult { get; set; }
-		public string AdditionalTableName { get; set; }
-		public bool AddAdditionalEffects { get; set; }
-		public int NumberOfAdditonalEffects { get; set; }
+		public string AdditionalInformation { get; set; }
+		public string SubtableName { get; set; } // Subtable
+		public string SubtableEffectDescription { get; set; } // Subtable
 	}
 }

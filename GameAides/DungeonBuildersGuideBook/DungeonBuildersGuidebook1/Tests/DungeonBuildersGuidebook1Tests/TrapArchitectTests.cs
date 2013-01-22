@@ -1,186 +1,200 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Text;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using RJK.CSharp.CustomLists;
 using ApprovalTests;
 using ApprovalTests.Reporters;
-using System.Threading;
-using System.Xml.Linq;
 using DungeonBuildersGuidebook1;
+using RpgTools.Dice;
+using System;
+using NUnit.Framework;
 
 namespace DungeonBuildersGuidebook1Tests
 {
-	[TestClass]
+	[TestFixture]
 	[UseReporter(typeof(DiffReporter))]
 	public class TrapArchitectTests
 	{
-		// Part 1:
-		// Generate a random number from 1 to 100
-		// Submit the number to retrieve a Trap Basic
-		// Check if the Trap Basic can be either mechanical or magical
-		// 		Randomly determine if it is mechanical or magical
-		   
-		// The user will be allowed to input a value instead of generating one randomly
-		// The user will be allowed to re-roll if they do not like their result
 		// The user should also be allowed to pick their Trap Basic
+		//		Some form of display to pick from
 
-		[TestMethod]
-		public void TestFirstTrap()
+		[Test]
+		public void SpeceficTrapTest()
 		{
-			int objectIndex = 40;
-			int result = 60;
-			
-			var trapArchitect = new FakeTrapArchitect();
-			var trapBase = trapArchitect.FakeGetRandomTrapBase(objectIndex);
-			var mechanism = trapArchitect.FakegetMechanismType(trapBase, result);
+			DiceCup.SetRandom(new Random(4));
+			var architect = new TrapArchitect();
 
-			var firstTrap = new StringBuilder();
-			if (string.IsNullOrEmpty(mechanism))
-			{
-				firstTrap.Append(trapBase.TrappedObjectOrArea);
-			}
-			else
-			{
-				firstTrap.Append(string.Format("{0} ({1})", trapBase.TrappedObjectOrArea, mechanism));
-			}
+			var trapBase = architect.GetSpecificTrapBase(15);
+			var trapEffect = architect.GetSpecificTrapEffect(33);
+			var trapDamage = architect.GetSpecificTrapDamage(8);
+			var trap = new Trap(trapBase, trapEffect, trapDamage);
 
-			Approvals.Verify(firstTrap.ToString());
-			//There is a human input element
+			Approvals.Verify(trap);
 		}
 
-		[TestMethod]
-		public void TestReRollTrap()
+		[Test]
+		public void RandomFactoryTest()
 		{
-			var trapArchitect = new FakeTrapArchitect();
-			
-			int firstTrapBaseRoll = 40;
-			int firstMechanismRoll = 60;
-			int secondTrapBaseRoll = 82;
-			int secondMechanismRoll = 38;
+			DiceCup.SetRandom(new Random(100));
 
-			var firstTrapBase = trapArchitect.FakeGetRandomTrapBase(firstTrapBaseRoll);
-			var firstMechanism = trapArchitect.FakegetMechanismType(firstTrapBase, firstMechanismRoll);
-			var rerolledMechanism = trapArchitect.FakegetMechanismType(firstTrapBase, secondMechanismRoll);
-
-			var trap = new StringBuilder();
-			trap.AppendLine("First Trap");
-			if (string.IsNullOrEmpty(firstMechanism))
+			var architect = new TrapArchitect();
+			var effectList = new List<string>();
+			int repeat = 100;
+			for (int i = 0; i < repeat; i++)
 			{
-				trap.AppendLine(firstTrapBase.TrappedObjectOrArea);
-			}
-			else
-			{
-				trap.AppendLine(string.Format("{0} ({1})", firstTrapBase.TrappedObjectOrArea, firstMechanism));
+				effectList.Add(architect.GetTrapEffectFactory());
 			}
 
-			trap.AppendLine();
-			trap.AppendLine("Mechanism Change");
-			trap.AppendLine(string.Format("{0} ({1})", firstTrapBase.TrappedObjectOrArea, rerolledMechanism));
-
-			trap.AppendLine();
-			trap.AppendLine("Second Trap");
-
-			var secondTrapBase = trapArchitect.FakeGetRandomTrapBase(secondTrapBaseRoll);
-			var secondMechanism = trapArchitect.FakegetMechanismType(secondTrapBase, secondMechanismRoll);
-
-			if (string.IsNullOrEmpty(secondMechanism))
-			{
-				trap.AppendLine(secondTrapBase.TrappedObjectOrArea);
-			}
-			else
-			{
-				trap.AppendLine(string.Format("{0} ({1})", secondTrapBase.TrappedObjectOrArea, secondMechanism));
-			}
-
-			Approvals.Verify(trap.ToString());
-
+			Approvals.VerifyAll(effectList, "Traps");
 		}
 
-		[TestMethod]
-		public void TrapEffectsTest()
+		[Test]
+		public void RandomTrapConstructionTest()
 		{
-			// A trap effect has at minimum an effect name and an upper bound on the range
-			// A trap effect may have additional rolls 
-			//	These rolls will be for random values defined by the trap effect
-			// A trap effect may require the consultation of another table
-			//	These consultations will be performed on tables that are named
-			//		These tables handle their own information
-			var filePath = @"..\..\..\..\DungeonBuildersGuidebook1\DataFiles\TrapEffectsAndTraits.xml";
-			var root = XElement.Load(filePath);
+			DiceCup.SetRandom(new Random(200));
 
-			var effects = root.Descendants("Effect").Select(p => new TrapEffects()
-																	{
-																		RollUpperBound = int.Parse(p.Element("RollUpperBound").Value),
-																		EffectDescription = p.Element("EffectDescription").Value,
-																		EffectRollRequired = bool.Parse(p.Element("EffectRollRequired").Value),
-																		EffectDiceToRoll = p.Elements("EffectDiceToRoll").Select(e => e.Value).ToList(),
-																	}
-															);
-			var blah = 4;
+			var architect = new TrapArchitect();
+			var traps = new List<string>();
+			var iterator = 100;
+			for (int i = 0; i < iterator; i++)
+			{
+				var sb = new StringBuilder();
+				sb.AppendLine(architect.GetTrapBaseFactory());
+				sb.AppendLine(architect.GetTrapEffectFactory());
+				sb.AppendLine(architect.GetTrapDamageFactory());
+				traps.Add(sb.ToString());
+			}
+
+			Approvals.VerifyAll(traps, "Traps");
 		}
 
-		[TestMethod]
-		public void TestLoadXmlElement()
+		[Test]
+		public void TrapObjectTest()
 		{
-			var trapArchitect = new TrapArchitect();
-			var filePath = @"..\..\..\data.xml";
+			DiceCup.SetRandom(new Random(300));
+			var architect = new TrapArchitect();
+			var traps = new List<Trap>();
 
-			var root = XElement.Load(filePath);
-			var blah = root.Descendants("Data").Select(p => new FakeProduct()
-												{
-													Category = p.Element("Category").Value,
-													Quantity = int.Parse(p.Element("Quantity").Value),
-													Price = double.Parse(p.Element("Price").Value),
-												}
-									);
-
-			var blah3 = blah.Where(c => c.Category == "A");
-
-
-			var sb = new StringBuilder();
-			foreach (var item in blah)
+			var iterator = 100;
+			for (int i = 0; i < iterator; i++)
 			{
-				sb.AppendLine(item.ToString());
+				traps.Add(architect.GetTrap());
 			}
 
-			sb.AppendLine();
-
-			sb.AppendLine("The items from Category A");
-			foreach (var item in blah3)
-			{
-				sb.AppendLine(item.ToString());
-			}
-			
-			IEnumerable<decimal> prices1 =
-				from el in root.Elements("Data")
-				let price = (decimal)el.Element("Price")
-				orderby price
-				select price;
-			foreach (decimal el in prices1) ;
-
-			Approvals.Verify(sb.ToString());
-		}
-	}
-
-	class FakeTrapArchitect : TrapArchitect
-	{
-		public TrapBases FakeGetRandomTrapBase(int objectIndex)
-		{
-			return base.trapBaseLogic.GetRandomTrapBase(objectIndex);
+			Approvals.VerifyAll(traps, "Trap");
 		}
 
-		public string FakegetMechanismType(TrapBases trapBase, int result)
+		[Test]
+		public void PitTrapTest()
 		{
-			if (trapBase.MechanismTypeSpecified)
+			DiceCup.SetRandom(new Random(400));
+			var architect = new TrapArchitect();
+			var traps = new List<Trap>();
+
+			var floodAreaKey = 36; // Flood area uses the pit trap subtable
+			var pitTrapOpenKey = 89;
+			var pitTrapTumbleKey = 94;
+
+			var iterator = 33;
+			for (int i = 0; i < iterator; i++)
 			{
-				return result > 50 ? "magical" : "mechanical";
+
+				var floodTrapBase = architect.GetTrapBaseFactory();
+				var floodTrapEffect = architect.GetSpecificTrapEffect(floodAreaKey);
+				var floodTrapDamage = architect.GetTrapDamageFactory();
+				traps.Add(new Trap(floodTrapBase, floodTrapEffect, floodTrapDamage));
+
+				var pitTrapOpenBase = architect.GetTrapBaseFactory();
+				var pitTrapOpenEffect = architect.GetSpecificTrapEffect(pitTrapOpenKey);
+				var pitTrapOpenDamage = architect.GetTrapDamageFactory();
+				traps.Add(new Trap(pitTrapOpenBase, pitTrapOpenEffect, pitTrapOpenDamage));
+
+				var pitTrapTumbleBase = architect.GetTrapBaseFactory();
+				var pitTrapTumbleEffect = architect.GetSpecificTrapEffect(pitTrapTumbleKey);
+				var pitTrapTumbleDamage = architect.GetTrapDamageFactory();
+				traps.Add(new Trap(pitTrapTumbleBase, pitTrapTumbleEffect, pitTrapTumbleDamage));
 			}
-			else
+
+			Approvals.VerifyAll(traps, "Pit Trap!");
+		}
+
+		[Test]
+		public void GasTrapTest()
+		{
+			DiceCup.SetRandom(new Random(500));
+			var architect = new TrapArchitect();
+			var traps = new List<Trap>();
+
+			var gasTrapKey = 38;
+			var iterator = 100;
+			for (int i = 0; i < iterator; i++)
 			{
-				return string.Empty;
+				var gasTrapBase = architect.GetTrapBaseFactory();
+				var gasTrapEffect = architect.GetSpecificTrapEffect(gasTrapKey);
+				var gasTrapDamage = architect.GetTrapDamageFactory();
+				traps.Add(new Trap(gasTrapBase, gasTrapEffect, gasTrapDamage));
 			}
+
+			Approvals.VerifyAll(traps, "Gas Trap!");
+		}
+
+		[Test]
+		public void NestedRollTrapsTest()
+		{
+			DiceCup.SetRandom(new Random(600));
+			var architect = new TrapArchitect();
+			var traps = new List<Trap>();
+
+			var riddleTrapKey = 5;
+			var lockEntranceKey = 46;
+			var lockExitKey = 47;
+			var rollTwiceKey = 99;
+			var rollThriceKey = 100;
+
+			var iterator = 20;
+			for (int i = 0; i < iterator; i++)
+			{
+				var riddleTrapBase = architect.GetTrapBaseFactory();
+				var riddleTrapEffect = architect.GetSpecificTrapEffect(riddleTrapKey);
+				var riddleTrapDamage = architect.GetTrapDamageFactory();
+				traps.Add(new Trap(riddleTrapBase, riddleTrapEffect, riddleTrapDamage));
+
+				var lockEntranceBase = architect.GetTrapBaseFactory();
+				var lockEntranceEffect = architect.GetSpecificTrapEffect(lockEntranceKey);
+				var lockEntranceDamage = architect.GetTrapDamageFactory();
+				traps.Add(new Trap(lockEntranceBase, lockEntranceEffect, lockEntranceDamage));
+
+				var lockExitBase = architect.GetTrapBaseFactory();
+				var lockExitEffect = architect.GetSpecificTrapEffect(lockExitKey);
+				var lockExitDamage = architect.GetTrapDamageFactory();
+				traps.Add(new Trap(lockExitBase, lockExitEffect, lockExitDamage));
+
+				var rollTwiceBase = architect.GetTrapBaseFactory();
+				var rollTwiceEffect = architect.GetSpecificTrapEffect(rollTwiceKey);
+				var rollTwiceDamage = architect.GetTrapDamageFactory();
+				traps.Add(new Trap(rollTwiceBase, rollTwiceEffect, rollTwiceDamage));
+
+				var rollThriceBase = architect.GetTrapBaseFactory();
+				var rollThriceEffect = architect.GetSpecificTrapEffect(rollThriceKey);
+				var rollThriceDamage = architect.GetTrapDamageFactory();
+				traps.Add(new Trap(rollThriceBase, rollThriceEffect, rollThriceDamage));
+			}
+
+			Approvals.VerifyAll(traps, "Nested Trap!");
+		}
+
+		[Test]
+		public void AddNotesToTrap()
+		{
+			DiceCup.SetRandom(new Random(700));
+			var architect = new TrapArchitect();
+
+			var trapBase = architect.GetTrapBaseFactory();
+			var trapEffect = architect.GetTrapEffectFactory();
+			var trapDamage = architect.GetTrapDamageFactory();
+			var trap = new Trap(trapBase, trapEffect, trapDamage);
+			trap.AddNotes("This trap is a test of the note application system.");
+
+			Approvals.Verify(trap);
+
 		}
 	}
 }
