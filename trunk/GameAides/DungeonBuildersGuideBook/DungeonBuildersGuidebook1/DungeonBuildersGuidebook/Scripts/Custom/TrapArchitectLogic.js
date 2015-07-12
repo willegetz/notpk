@@ -4,7 +4,8 @@ $.template("newTrapTemplate", newTrapMarkup);
 function AddTrap() {
 	"use strict";
 	$.ajax({
-		type: "GET",
+	    type: "GET",
+        cache: false,
 		url: "home/GenerateNewTrap",
 		success: function (newTrap) {
 			$.tmpl("newTrapTemplate", newTrap).appendTo("#TrapComponents").draggable({ revert: true });
@@ -28,7 +29,7 @@ $(function () {
 	$(".droppableDiv").droppable({
 		tolerance: "pointer",
 		drop: function (event, ui) {
-			debugger;
+			//debugger;
 			$(this).append(ui.draggable);
 		}
 	});
