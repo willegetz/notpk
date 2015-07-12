@@ -29,7 +29,7 @@ $(function () {
 	$(".droppableDiv").droppable({
 		tolerance: "pointer",
 		drop: function (event, ui) {
-			debugger;
+			//debugger;
 			$(this).append(ui.draggable);
 		}
 	});
