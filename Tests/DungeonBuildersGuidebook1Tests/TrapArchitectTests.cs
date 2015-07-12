@@ -5,18 +5,18 @@ using ApprovalTests.Reporters;
 using DungeonBuildersGuidebook1;
 using RpgTools.Dice;
 using System;
-using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DungeonBuildersGuidebook1Tests
 {
-	[TestFixture]
+	[TestClass]
 	[UseReporter(typeof(DiffReporter))]
 	public class TrapArchitectTests
 	{
 		// The user should also be allowed to pick their Trap Basic
 		//		Some form of display to pick from
 
-		[Test]
+		[TestMethod]
 		public void SpeceficTrapTest()
 		{
 			DiceCup.SetRandom(new Random(4));
@@ -30,7 +30,7 @@ namespace DungeonBuildersGuidebook1Tests
 			Approvals.Verify(trap);
 		}
 
-		[Test]
+		[TestMethod]
 		public void RandomFactoryTest()
 		{
 			DiceCup.SetRandom(new Random(100));
@@ -46,7 +46,7 @@ namespace DungeonBuildersGuidebook1Tests
 			Approvals.VerifyAll(effectList, "Traps");
 		}
 
-		[Test]
+		[TestMethod]
 		public void RandomTrapConstructionTest()
 		{
 			DiceCup.SetRandom(new Random(200));
@@ -66,7 +66,7 @@ namespace DungeonBuildersGuidebook1Tests
 			Approvals.VerifyAll(traps, "Traps");
 		}
 
-		[Test]
+		[TestMethod]
 		public void TrapObjectTest()
 		{
 			DiceCup.SetRandom(new Random(300));
@@ -82,7 +82,7 @@ namespace DungeonBuildersGuidebook1Tests
 			Approvals.VerifyAll(traps, "Trap");
 		}
 
-		[Test]
+		[TestMethod]
 		public void PitTrapTest()
 		{
 			DiceCup.SetRandom(new Random(400));
@@ -116,7 +116,7 @@ namespace DungeonBuildersGuidebook1Tests
 			Approvals.VerifyAll(traps, "Pit Trap!");
 		}
 
-		[Test]
+		[TestMethod]
 		public void GasTrapTest()
 		{
 			DiceCup.SetRandom(new Random(500));
@@ -136,7 +136,7 @@ namespace DungeonBuildersGuidebook1Tests
 			Approvals.VerifyAll(traps, "Gas Trap!");
 		}
 
-		[Test]
+		[TestMethod]
 		public void NestedRollTrapsTest()
 		{
 			DiceCup.SetRandom(new Random(600));
@@ -181,7 +181,7 @@ namespace DungeonBuildersGuidebook1Tests
 			Approvals.VerifyAll(traps, "Nested Trap!");
 		}
 
-		[Test]
+		[TestMethod]
 		public void AddNotesToTrap()
 		{
 			DiceCup.SetRandom(new Random(700));
