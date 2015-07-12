@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonBuildersGuidebook1", "DungeonBuildersGuidebook1\DungeonBuildersGuidebook1.csproj", "{2429EA8E-EE16-4FB0-85AF-3EF4C33419AB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonBuildersGuidebook1Tests", "Tests\DungeonBuildersGuidebook1Tests\DungeonBuildersGuidebook1Tests.csproj", "{3FF53D15-F02E-4AD9-823B-491C03353815}"
